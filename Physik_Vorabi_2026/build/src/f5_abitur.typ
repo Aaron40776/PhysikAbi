@@ -64,9 +64,9 @@ Punktangaben und gelegentlichen Kontrollwerten.
   [2025], [gA], [Kapazitive Beschleunigungssensoren], [E/B-Felder], [nein],
   [2025], [gA], [Elektroneninterferenz am Doppelspalt], [Quantenobjekte], [nein],
   [2025], [gA], [Eigenschaften von Licht], [Schwingungen/Wellen], [ja],
-  [2026], [eA], [Blitzdetektor], [Schwingungen/Wellen], [ja],
-  [2026], [gA], [Der Elektrobus – Induktives Laden], [E/B-Felder], [ja],
-  [2026], [gA], [Elektronenstrahlen zur Härtung von Lacken], [E/B-Felder], [ja],
+  [2026], [eA], [Blitzdetektor], [Schwingungen/Wellen], [nein],
+  [2026], [gA], [Der Elektrobus – Induktives Laden], [E/B-Felder], [nein],
+  [2026], [gA], [Elektronenstrahlen zur Härtung von Lacken], [E/B-Felder], [nein],
 )
 
 Vollständige Fassung mit Operatoren und Kompetenzzuordnung:
@@ -120,7 +120,7 @@ dominieren klar vor reinem Rechnen (6). Typisch ist die Kombination „berechnen
   Modellannahmen.
 + Kontrollwerte in eckigen Klammern als Plausibilitätshilfe.
 + Verlangte Skizzen: Feldlinien, Strahlengang, Energieschema, Schaltbild.
-+ Fachpraktischer Anteil in 5 von 12 Aufgaben.
++ Fachpraktischer Anteil in 2 von 12 Aufgaben (2025: Lautsprecher, Eigenschaften von Licht).
 + Bewertungsaufgaben mit Technik-/Gesellschaftsbezug (Deichsicherheit, Telefonsysteme, E-Mobilität).
 
 == Verlangte Mathematik

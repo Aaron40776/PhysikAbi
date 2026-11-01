@@ -39,9 +39,11 @@ den Niveaus kleiner; $E = 0$ ist die Ionisationsgrenze.
 
 #figure(
   image("../fig/energieniveaus_h.svg", width: 86%),
-  caption: [Wasserstoff: Pfeile nach unten sind Emissionen. Die eingezeichneten Linien gehören
-    zur Balmer-Serie ($n = 2$ als Ziel).],
+  caption: [Wasserstoff: Pfeile nach unten sind Emissionen. Eingezeichnet sind vier
+    Balmer-Linien ($n = 2$ als Ziel) und die Lyman-$alpha$-Linie $2 -> 1$.],
 )
+
+Die eingezeichneten Pfeile enden bei $n = 2$; ihre Länge ist die Photonenenergie, und je kürzer der Pfeil, desto größer die Wellenlänge.
 
 #table(
   columns: (1fr, 1.6fr),
@@ -115,6 +117,8 @@ Energie, weil ein Teil als Wärme abgegeben wird (Stokes-Verschiebung).
     $Delta U approx 4","9$ V.],
 )
 
+Die Minima liegen bei 4,9 V, 9,8 V und 14,7 V; der konstante Abstand ist der Beweis, dass die Atome nur feste Energiebeträge aufnehmen.
+
 #herleitung[
   *Anregungsenergie und Emissionswellenlänge* \
   1. Minima liegen bei $U_n = n dot Delta U + U_"K"$ ($U_"K"$: Kontaktspannung).
@@ -155,16 +159,17 @@ Energie, weil ein Teil als Wärme abgegeben wird (Stokes-Verschiebung).
   Hg-UV-Linie.
 
   (3) Ein Teil der Hg-Atome wird durch Stöße angeregt und fällt unter Emission sichtbarer
-  Linien zurück; bei Neon liegt die Anregung im sichtbaren Bereich, dort sieht man die
-  Leuchtschicht direkt.
+  Linien zurück. Bei Neon ist das Leuchten besonders auffällig, weil viele der anschließenden
+  Übergänge im Sichtbaren liegen; dort sieht man die Leuchtschicht direkt.
 ]
 
 #aufgabe(2, punkte: 10)[
   Ein Wasserstoffgas wird mit weißem Licht durchstrahlt.
 
+  #enum(
     [Skizzieren Sie das beobachtete Spektrum.],
     [Berechnen Sie die Grenzwellenlänge der Lyman-Serie.],
-    [Begründen Sie, warum die Balmer-Linien schwächer sind.]
+    [Begründen Sie, warum die Balmer-Linien schwächer sind.],
   )
 ]
 

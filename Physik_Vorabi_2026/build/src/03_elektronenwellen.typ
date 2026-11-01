@@ -55,6 +55,8 @@ $ lambda = frac(h, p) = frac(h, m v) $
     Spannung $U$ gehört die Wellenlänge nach der Formel oben.],
 )
 
+Aus Ringradius und bekanntem Netzebenenabstand lässt sich umgekehrt $lambda$ bestimmen; die beiden Ringe gehören zu verschiedenen Netzebenenscharen desselben Graphits.
+
 #table(
   columns: (auto, auto, auto),
   [$U$], [$lambda$ (nicht relativistisch)], [Kontrolle $1","226 \/ sqrt(U)$],
@@ -86,6 +88,8 @@ Steigung $d$ folgt.
   image("../fig/bragg.svg", width: 52%),
   caption: [Bragg-Bedingung: Die zweite Netzebene liefert den Zusatzweg $2 d sin(theta)$.],
 )
+
+Bei festem Winkel wächst der Zusatzweg $2 d sin(theta)$ mit dem Netzebenenabstand; genau darauf beruht die Auswertung über die Steigung von $r^2$ über $1\/U$.
 
 = Zwei Röhren, zwei Zwecke
 

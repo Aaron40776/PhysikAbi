@@ -42,6 +42,8 @@ $ s(t) = A sin(omega t + phi_0), quad v(t) = A omega cos(omega t + phi_0) $
     $lambda$ bleiben gleich.],
 )
 
+Nach der Zeit $Delta t$ liegt jeder Wellenberg um $c dot Delta t$ weiter rechts; die Form der Kurve ändert sich dabei nicht, nur ihr Ort.
+
 = Zeigermodell und Interferenz
 
 Ein Zeiger der Länge $A$ rotiert mit $omega$; seine Projektion auf die Hochachse ist $s(t)$.
@@ -50,10 +52,18 @@ $delta$:
 
 $ A_"ges" = sqrt(A_1^2 + A_2^2 + 2 A_1 A_2 cos(delta)), quad delta = 2 pi frac(Delta s, lambda) $
 
+#definition[
+  *Kohärenz:* Zwei Wellen sind kohärent, wenn sie dieselbe Frequenz haben und ihre
+  Phasendifferenz über die Beobachtungszeit konstant bleibt. Nur dann ist $delta$ eine feste
+  Größe – und nur dann entsteht ein zeitlich stabiles Interferenzmuster.
+]
+
 #figure(
   image("../fig/zeigerkette.svg", width: 82%),
   caption: [Zeigerkette längs des Weges: gleichmäßige Drehung erzeugt die Welle.],
 )
+
+Ein voller Umlauf des Zeigers entspricht einer Wellenlänge; deshalb liest man den Gangunterschied zweier Wellen direkt als Winkel zwischen ihren Zeigern ab.
 
 #merksatz[
   Konstruktiv: $Delta s = n lambda$, $delta = n dot 2 pi$, $A_"ges" = A_1 + A_2$. \
@@ -114,6 +124,8 @@ Die Amplitude ist ortsfest, die Welle wandert nicht. Knoten bei $x = n lambda\/2
   caption: [Grundschwingung und erste Oberschwingung; Knotenabstand immer $lambda\/2$.],
 )
 
+In der Grundschwingung schwingt die Mitte mit maximaler Amplitude, in der ersten Oberschwingung sitzt dort ein zusätzlicher Knoten; der Abstand zweier Knoten bleibt in beiden Fällen $lambda\/2$.
+
 #table(
   columns: (1fr, 1fr, 1fr),
   [Ränder], [Wellenlängen], [Frequenzen],
@@ -127,6 +139,8 @@ Die Amplitude ist ortsfest, die Welle wandert nicht. Knoten bei $x = n lambda\/2
   image("../fig/doppelspalt_geometrie.svg", width: 84%),
   caption: [Geometrie: $Delta s approx d sin(alpha)$, Schirmabstand $e >> d$.],
 )
+
+Der untere Strahl legt bis zum Schirm das zusätzliche Stück $d sin(alpha)$ zurück; dieser Wegunterschied entscheidet, ob sich die Wellen am Punkt $P$ verstärken oder auslöschen.
 
 #herleitung[
   *Doppelspaltbedingung* \
@@ -144,6 +158,8 @@ Die Amplitude ist ortsfest, die Welle wandert nicht. Knoten bei $x = n lambda\/2
   image("../fig/doppelspalt_intensitaet.svg", width: 86%),
   caption: [Äquidistante Maxima im Abstand $lambda e \/ d$, dazwischen Minima.],
 )
+
+Weil $a_n$ linear mit $n$ wächst, sind die Maxima gleich weit voneinander entfernt; die Minima liegen jeweils genau dazwischen.
 
 = Gitter und Einzelspalt
 
@@ -169,6 +185,8 @@ $ b sin(alpha_m) = m lambda, quad m = 1, 2, dots $
     bei gleicher Breite.],
 )
 
+Der Vergleich zeigt, dass das Einzelspaltbild die Einhüllende des Doppelspaltmusters ist: Alle Streifen liegen unter dem breiten Zentralmaximum des Einzelspalts.
+
 = Bragg-Reflexion
 
 An Netzebenen mit Abstand $d$ ist der Zusatzweg der zweiten Welle $2 d sin(theta)$:
@@ -179,6 +197,8 @@ $ 2 d sin(theta) = n lambda $
   image("../fig/bragg.svg", width: 54%),
   caption: [Strahl 2 läuft zusätzlich $2 d sin(theta)$.],
 )
+
+Der zweite Strahl dringt eine Netzebene tiefer ein und läuft dadurch den Weg $2 d sin(theta)$ länger; nur wenn dieser Weg ein Vielfaches von $lambda$ ist, verstärken sich die reflektierten Wellen.
 
 = Elektromagnetische Wellen
 
@@ -191,6 +211,57 @@ $ frac(sin(alpha), sin(beta)) = frac(c_1, c_2) = frac(n_2, n_1) $
   image("../fig/reflexion_brechung.svg", width: 58%),
   caption: [Brechung: Frequenz konstant, Wellenlänge kleiner, Strahl knickt zum Lot.],
 )
+
+Im Bild knickt der Strahl beim Eintritt ins optisch dichtere Medium zum Lot; die Ursache ist die kleinere Ausbreitungsgeschwindigkeit, nicht eine Änderung der Frequenz.
+
+= Polarisation
+
+Licht ist eine Transversalwelle: Das elektrische Feld schwingt senkrecht zur
+Ausbreitungsrichtung. Bei einer Glühlampe ist diese Schwingungsebene statistisch verteilt, bei
+einem Laser liegt sie fest.
+
+#definition[
+  *Polarisator:* Ein Filter, der nur eine Schwingungsebene durchlässt. *Analysator:* Ein zweiter
+  Filter dahinter; er zeigt, in welcher Ebene das Licht nach dem ersten Filter schwingt.
+]
+
+Stehen Polarisator und Analysator im Winkel $alpha$ zueinander, gilt das Malus-Gesetz
+
+$ I = I_0 cos^2 alpha $
+
+#merksatz[
+  Nur Transversalwellen lassen sich polarisieren. Schall – eine Longitudinalwelle – geht durch
+  einen Polarisator unverändert hindurch. Das ist der experimentelle Unterschied zwischen beiden
+  Wellentypen, und deshalb ist Polarisation der Nachweis, dass Licht transversal schwingt.
+]
+
+= Michelson-Interferometer
+
+Ein Strahlteiler teilt den Laserstrahl in zwei Teilstrahlen. Sie laufen zu je einem Spiegel und
+werden auf einen Schirm zurückgeworfen, wo sie sich überlagern. Ein Arm ist fest, der andere
+beweglich.
+
+Wird der bewegliche Spiegel um $Delta d$ verschoben, ändert sich der Weg dieses Teilstrahls um
+$2 Delta d$ – hin und zurück. Der Gangunterschied ist also
+
+$ Delta s = 2 Delta d $
+
+#figure(
+  image("../fig/michelson.svg", width: 66%),
+  caption: [Aufbau: Der Strahlteiler teilt den Strahl; der bewegliche Spiegel verlängert einen Arm
+    um $Delta d$, der Gangunterschied wächst dadurch um $2 Delta d$.],
+)
+
+Am Schirm treffen beide Teilstrahlen wieder zusammen; verschiebt man den beweglichen Spiegel, wandert das Streifenmuster über den Schirm.
+
+Maxima erscheinen bei $Delta s = k lambda$, Minima bei $Delta s = (2k+1) lambda\/2$. Beim
+Verschieben um $lambda\/2$ wechselt das Bild einmal zwischen hell und dunkel. Zählt man $N$
+Streifen, die am Schirm vorbeiziehen, folgt
+
+$ Delta d = N frac(lambda, 2) $
+
+Damit lassen sich Längenänderungen von Bruchteilen einer Wellenlänge messen – das ist die
+technische Verwendung, die im Kerncurriculum verlangt wird.
 
 = Experiment: Feder-Masse-Pendel
 

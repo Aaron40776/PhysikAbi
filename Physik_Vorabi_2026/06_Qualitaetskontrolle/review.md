@@ -9,20 +9,20 @@ Layout, Abbildungen, Reproduzierbarkeit. Alles hier Genannte wurde geprüft, nic
 
 | Ordner | Inhalt | Größe | Bewertung |
 |---|---|---|---|
-| `03_Lernskripte` | 7 Themen-PDFs | 1,2 MB | **Lernmaterial – das brauchst du wirklich** |
-| `04_Zusatzmaterial` | 8 PDFs inkl. Übungsheft | 1,2 MB | **Lernmaterial** |
-| `05_Grafiken` | 27 SVGs, automatisch aus `build/fig` kopiert | 0,8 MB | Belegmaterial, im PDF ohnehin enthalten |
+| `03_Lernskripte` | 7 Themen-PDFs | 2,0 MB | **Lernmaterial – das brauchst du wirklich** |
+| `04_Zusatzmaterial` | 6 PDFs inkl. Übungsheft | 1,0 MB | **Lernmaterial** |
+| `05_Grafiken` | 21 SVGs, automatisch aus `build/fig` kopiert | 0,8 MB | Belegmaterial, im PDF ohnehin enthalten |
 | `02_Abiturrecherche` | 12 IQB-Aufgaben (PDF + Text), Analyse, CSV | 5,7 MB | **Belegmaterial** – wichtig für die Argumentation, nicht zum Lernen |
 | `01_Schulwebsite` | 113 gespiegelte Unterrichtsseiten | 2,1 MB | **Belegmaterial** – Quellenbasis |
 | `00_Projektverwaltung` | README, PROGRESS, Quellen, Themenstatus | 40 KB | Projektsteuerung |
 | `06_Qualitaetskontrolle` | Prüfbericht, dieses Review | 20 KB | Nachweis der Prüfung |
 | `build` | Typst-Quellen, Figuren-Skripte, Build-Skript | 1,1 MB | **Nötig, wenn du etwas ändern willst** |
 
-Gesamt: 12 MB, 102 Seiten PDF in 16 Dokumenten.
+Gesamt: 13 MB, 113 Seiten PDF.
 
 ### Ehrliche Einordnung
 
-Von den 12 MB sind rund **3 MB das, was du zum Lernen brauchst** (die 16 PDFs).
+Von den 13 MB sind rund **3 MB das, was du zum Lernen brauchst** (die 13 PDFs).
 Der Rest ist Handwerkszeug und Beweismaterial:
 
 - `01_Schulwebsite` ist kein Lernmaterial – es ist der Nachweis, dass die Inhalte aus
@@ -47,7 +47,7 @@ Alle 7 Skripte wurden gegen die von dir vorgegebenen Stichworte geprüft
 
 | Skript | Ergebnis |
 |---|---|
-| 1 Wellen/Interferenz | vollständig – **einzige Lücke: „Resonanzfrequenz“ fehlte als Begriff** (nur „Resonanz“) → **jetzt ergänzt** mit Definition, $f_R \approx f_0 = \frac{1}{2\pi}\sqrt{D/m}$ und Hinweis auf die Verschiebung bei starker Dämpfung |
+| 1 Wellen/Interferenz | vollständig – **einzige Lücke: „Resonanzfrequenz“ fehlte als Begriff** (nur „Resonanz“) → **jetzt ergänzt** mit Definition, $f_R \approx f_0 = 1/(2 \pi) \sqrt{D/m}$ und Hinweis auf die Verschiebung bei starker Dämpfung |
 | 2 Lichtquanten | vollständig |
 | 3 Elektronenwellen | vollständig (inkl. Bragg, Davisson-Germer, Röhrentypen) |
 | 4 Doppelspalt/Quanten | vollständig (inkl. Komplementarität, Welcher-Weg, Wellenfunktion) |
@@ -94,7 +94,7 @@ Keine widersprüchlichen Rundungen, keine Mischung aus 6,63 und 6,626.
 
 ### d) Layout (geprüft, sauber)
 
-- 0 Textüberläufe über den Satzspiegel (alle 102 Seiten)
+- 0 Textüberläufe über den Satzspiegel (alle 113 Seiten)
 - 0 Abbildungen ohne Unterschrift am Seitenende
 - 0 nicht gerenderte Formeln (`{`, `}`, `$`, `\` im extrahierten Text)
 - kein Text, der aus Grafiken herausragt (Bounding-Box-Prüfung)
@@ -155,7 +155,7 @@ Deckt das Auswertungshandwerk ab, das in Prüfungen vorausgesetzt wird:
 - Kette Messgröße → Diagramm → Ausgleichsgerade → Steigung mit Einheit → gesuchte Größe
 - Protokoll in acht Schritten (Tabelle: was tun / was im Heft stehen muss)
 - Zuordnung Auftragung → Gesetz → Bedeutung der Steigung (9 Fälle, u. a. $U_B$ über $f$,
-  $a_n$ über $n$, $T^2$ über $m$, $r^2$ über $1/U$, $\ln s$ über $t$)
+  $a_n$ über $n$, $T^2$ über $m$, $r^2$ über $1/U$, $ln s$ über $t$)
 - Steigung, Achsenabschnitt, $R^2$, Residuen – was sie aussagen und was nicht (Abbildung mit
   Ausgleichsgerade und Residuenplot)
 - vier vollständig durchgerechnete Beispiele (Fotozelle, Doppelspalt, Franck-Hertz, Dämpfung)

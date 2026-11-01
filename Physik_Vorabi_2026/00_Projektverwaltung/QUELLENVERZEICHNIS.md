@@ -78,7 +78,7 @@ der Lernziele.
 
 ## 4. Eigene Erzeugnisse
 
-- Alle 23 Grafiken in `05_Grafiken/` wurden mit matplotlib selbst erzeugt (Skripte
+- Alle 22 Grafiken in `05_Grafiken/` wurden mit matplotlib selbst erzeugt (Skripte
   `make_figures.py`, `mk_map.py` liegen bei).
 - Alle Aufgaben in den Skripten sind eigene Formulierungen im Stil der IQB-Aufgaben.
 

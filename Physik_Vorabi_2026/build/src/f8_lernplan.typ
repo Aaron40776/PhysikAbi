@@ -6,7 +6,7 @@
 #cover(
   "Zusatzmaterial · Planung",
   "Lernfahrplan bis Freitag",
-  "121 Seiten sind ein Nachschlagewerk. Auswendig zu lernen sind etwa acht.",
+  "96 Seiten sind ein Nachschlagewerk. Auswendig zu lernen sind etwa acht.",
   lernziele: (
     "wissen, welche Seiten Erklärung sind und welche Lernstoff",
     "in vier Tagen das Wichtige zuerst bearbeiten",
@@ -21,7 +21,7 @@
 #table(
   columns: (1fr, auto, 1fr),
   [Dokument], [Umfang], [Rolle],
-  [7 Lernskripte], [76 S.], [*Erklärung* – zum Verstehen, nicht zum Auswendiglernen],
+  [7 Lernskripte], [48 S.], [*Erklärung* – zum Verstehen, nicht zum Auswendiglernen],
   [Übungsheft], [13 S.], [*Training* – rechnen, nicht lesen],
   [Regression und Auswertung], [7 S.], [*Handwerk* – einmal durcharbeiten, dann nachschlagen],
   [Experimentesammlung], [5 S.], [*Nachschlagen* – Aufbau und Deutung der Versuche],
@@ -30,7 +30,7 @@
   [Last-Minute-Lernzettel], [4 S.], [*Lernstoff – der Kern*],
 )
 
-Von den insgesamt etwa 60.000 Wörtern sind rund *3.000 Wörter tatsächlicher Lernstoff*
+Von den insgesamt etwa 35.000 Wörtern sind rund *3.000 Wörter tatsächlicher Lernstoff*
 (Formelblatt und Lernzettel zusammen). Alles andere ist Erklärung: Text, den man liest, wenn
 etwas unklar ist – und dann wieder zumacht.
 
@@ -43,16 +43,20 @@ etwas unklar ist – und dann wieder zumacht.
 = Der Kurzweg durch ein Skript
 
 #table(
-  columns: (auto, 1fr, 1fr),
-  [Skript], [Kern (Seiten)], [Nur bei Bedarf],
-  [1 Wellen/Interferenz (15 S.)], [3, 12, 14–15], [4–10 Theorie, 11 Experimente, 13 Aufgaben],
-  [2 Lichtquanten (10 S.)], [3, 7, 9–10], [4–6 Theorie, 8 Aufgaben],
-  [3 Elektronenwellen (10 S.)], [3, 7, 9–10], [4–6 Theorie und Experimente, 8 Aufgaben],
-  [4 Doppelspalt/Quanten (11 S.)], [3, 8, 10–11], [4–7 Experimente, 9 Aufgaben],
-  [5 MZI/QED (9 S.)], [3, 8–9], [4–7 Aufbau, Modelle, Anwendungen],
-  [6 Atommodelle (11 S.)], [3, 10–11], [4–9 Modelle, Orbitale, Experimente],
-  [7 Spektren/Franck-Hertz (11 S.)], [3, 7, 10–11], [4–6 Spektren, Röntgen; 8–9 Versuch],
+  columns: (auto, auto, 1fr),
+  [Skript], [Umfang], [Kern (Abschnitte)],
+  [1 Wellen/Interferenz], [10 S.], [14 Typische Fehler, 15 Wiederholung],
+  [2 Lichtquanten], [6 S.], [8 Typische Fehler, 9 Wiederholung],
+  [3 Elektronenwellen], [7 S.], [8 Typische Fehler, 9 Wiederholung],
+  [4 Doppelspalt/Quanten], [6 S.], [7 Typische Fehler, 8 Wiederholung],
+  [5 MZI/QED], [6 S.], [7 Typische Fehler, 8 Wiederholung],
+  [6 Atommodelle], [7 S.], [7 Typische Fehler, 8 Wiederholung],
+  [7 Spektren/Franck-Hertz], [6 S.], [7 Typische Fehler, 8 Wiederholung],
 )
+
+Die Abschnittsnummern stehen am linken Rand jeder Überschrift. Wer wenig Zeit hat, liest zuerst
+die beiden letzten Abschnitte eines Skripts – dort stehen die Fehler, die Punkte kosten, und die
+Zusammenfassung. Die Formeln selbst stehen im Formelblatt.
 
 In Skript 5 und 6 stehen die Herleitungen in den Kapiteln selbst (Kästen „Herleitung“), es gibt
 dort keinen eigenen Abschnitt.
@@ -77,7 +81,7 @@ Heute ist Sonntag, der 1. November; die Prüfung ist Freitag, der 6. November.
 
 #achtung[
   *Die Aufgaben sind wichtiger als die Skripte.* Wer 20 Aufgaben gerechnet hat, kann die
-  Prüfung; wer 76 Seiten gelesen hat, vielleicht. Wenn die Zeit knapp wird: Skripte nur als
+  Prüfung; wer 48 Seiten gelesen hat, vielleicht. Wenn die Zeit knapp wird: Skripte nur als
   Nachschlagewerk benutzen, wenn eine Aufgabe hakt.
 ]
 

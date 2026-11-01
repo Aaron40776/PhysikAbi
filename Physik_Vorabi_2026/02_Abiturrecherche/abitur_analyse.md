@@ -107,7 +107,7 @@ prüfungsrelevant – sie ist im Vorabi-Skript 6 und 7 vollständig abgedeckt.
 
 - Prozent-/Verhältnisrechnungen, Einheitenumrechnung (eV ↔ J, nm ↔ m)
 - Lineare Regression/Ausgleichsgerade, Steigungsdreieck
-- Trigonometrie ($sin$, $tan$, $arctan$) für Interferenz- und Brechungsaufgaben
+- Trigonometrie ($\sin$, $\tan$, $\arctan$) für Interferenz- und Brechungsaufgaben
 - Exponentielles Abklingen (gedämpfte Schwingung, Entladen)
 - Abschätzungen mit Größenordnungen („Beurteilen Sie mithilfe einer Rechnung …“)
 

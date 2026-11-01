@@ -129,8 +129,10 @@
   [$rho = |Psi|^2$], [Wahrscheinlichkeitsdichte], [Born-Regel],
   [$integral |Psi|^2 dif x = 1$], [Normierung], [gebundene Zustände],
   [$Delta x dot Delta p_x >= h$], [Unbestimmtheit], [Schulnotation],
+  [$Delta x dot Delta p_x >= h\/(4 pi)$], [Unbestimmtheit], [Lehrbuchform],
   [$Delta t dot Delta f >= 1$], [Zeit-Frequenz], [Wellenzug],
-  [$P_"D1" = cos^2(Delta phi\/2)$], [MZI], [gleiche Amplituden],
+  [$P_"D1" = sin^2(Delta phi\/2)$], [MZI, dunkler Ausgang], [D1 dunkel bei $Delta phi = 0$],
+  [$P_"D2" = cos^2(Delta phi\/2)$], [MZI, heller Ausgang], [wie oben],
   [$P_1 + P_2 = 1$], [Normierung], [MZI],
 )
 

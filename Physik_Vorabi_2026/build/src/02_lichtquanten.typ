@@ -50,9 +50,12 @@ $ E_"[eV]" = frac(1239","8, lambda_"[nm]") $
 
 #figure(
   image("../fig/photoeffekt_fE.svg", width: 80%),
-  caption: [Energie eines Photons über der Frequenz: Gerade durch den Ursprung, Steigung
-    $h$. Bei $lambda$ in nm ist $h c\/lambda$ die praktische Form.],
+  caption: [Maximale kinetische Energie der Elektronen über der Frequenz: Gerade mit der Steigung
+    $h$ für jedes Metall, verschoben um die Austrittsarbeit. Die Nullstelle liegt bei der
+    Grenzfrequenz $f_G$.],
 )
+
+Die Gerade schneidet die Frequenzachse bei $f_G$; erst oberhalb dieser Frequenz verlassen Elektronen das Metall, und die Steigung ist für alle Metalle dieselbe.
 
 = Der äußere Photoeffekt
 
@@ -82,9 +85,11 @@ $ E_"[eV]" = frac(1239","8, lambda_"[nm]") $
 ]
 #figure(
   image("../fig/led_hbestimmung.svg", width: 86%),
-  caption: [Gegenfeldmethode: Zwischen Kathode und Anode liegt eine Bremsspannung; erst ab
-    $e U_B = E_"kin,max"$ fließt kein Strom mehr.],
+  caption: [LED-Methode: Einsatzspannung $U_S$ über der Frequenz. Die Steigung der
+    Ausgleichsgeraden ist $h\/e$, der Achsenabschnitt hängt am Kontaktmaterial.],
 )
+
+Trägt man die gemessenen Einsatzspannungen über der Frequenz auf, liegen die Punkte auf einer Geraden; aus der Steigung folgt $h$, aus dem Achsenabschnitt die Austrittsarbeit des Kontaktmaterials.
 
 #achtung[
   Die *Intensität* bestimmt die Zahl der Photonen (den Strom), nicht die Energie der einzelnen

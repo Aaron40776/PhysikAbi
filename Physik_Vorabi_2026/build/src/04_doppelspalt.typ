@@ -30,6 +30,8 @@ Die Minima liegen bei $Delta s = (2n+1) lambda\/2$. Das ist Wellenoptik, kein Qu
   caption: [Klassische Intensitätsverteilung: äquidistante Maxima, dazwischen Nullstellen.],
 )
 
+Die Kurve fällt vom Zentralmaximum zu den Nullstellen bei $Delta s = (2n+1) lambda\/2$ ab; die Lage der Maxima hängt nur vom Verhältnis $d\/lambda$ ab.
+
 = Quanten: ein Quant nach dem anderen
 
 #experiment[
@@ -50,6 +52,13 @@ Die Minima liegen bei $Delta s = (2n+1) lambda\/2$. Das ist Wellenoptik, kein Qu
   Das Muster entsteht *nicht*, weil sich Photonen gegenseitig stören. Es entsteht auch mit
   einzelnen Quanten. Wer „Interferenz = Wechselwirkung zwischen Wellen“ sagt, verfehlt den
   Punkt.
+]
+
+#definition[
+  *Koinzidenzmethode:* Zwei Detektoren werden gleichzeitig ausgelesen. Signale in einem sehr
+  kurzen Zeitfenster heißen Koinzidenz. Ein Photon ist nicht teilbar – an einem Strahlteiler
+  registriert deshalb immer nur *einer* der beiden Detektoren ein Ereignis, nie beide zugleich.
+  Genau darauf beruht der Nachweis einzelner Photonen.
 ]
 
 = Superposition und Wahrscheinlichkeit
@@ -92,17 +101,30 @@ Ort und Impuls sind keine gleichzeitig scharfen Größen:
 
 $ Delta x dot Delta p >= frac(h, 4 pi) $
 
+Das Schulmaterial rechnet mit der Schulnotation
+
+$ Delta x dot Delta p_x >= h $
+
+Lehrbücher schreiben stattdessen $Delta x dot Delta p_x >= (h\/(2 pi))\/2$, also mit dem
+reduzierten Wirkungsquantum $h\/(2 pi)$. Der Faktor hängt davon ab, ob $Delta$
+als Schwankungsbreite oder als Standardabweichung aufgefasst wird. Für Abschätzungen in Aufgaben
+ist die Schulnotation gemeint, für Prinzipaussagen die Lehrbuchform.
+
 #figure(
   image("../fig/unbestimmtheit.svg", width: 88%),
   caption: [Wellenpaket: Je schmaler der Ort, desto breiter die Impulsverteilung. Das ist keine
     Messungenauigkeit, sondern Eigenschaft des Zustands.],
 )
 
+Im Bild ist das Wellenpaket schmal im Ort und breit im Impuls; verkleinert man die Ortsbreite, wird die Impulsverteilung breiter.
+
 #figure(
   image("../fig/wellenfunktion.svg", width: 84%),
   caption: [Wellenfunktion und Betragsquadrat: Nur $|psi|^2$ ist messbar (Aufenthalts­wahr­
     scheinlichkeit).],
 )
+
+Die obere Kurve ist die Wellenfunktion selbst, die untere ihr Betragsquadrat; nur die untere gibt an, wo das Teilchen mit welcher Wahrscheinlichkeit gefunden wird.
 
 #achtung[
   $Delta x$ ist die *Streuung* der Messwerte bei vielen gleichen Präparationen, nicht der Fehler

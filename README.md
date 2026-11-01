@@ -1,48 +1,41 @@
 # PhysikAbi
 
-Lernmaterialien für das **Vorabitur Physik am 06.11.2026**, Gymnasium Westerstede
-(Niedersachsen, erhöhtes Anforderungsniveau). Grundlage: Kerncurriculum 2022,
-Unterrichtsmaterialien der Schule und IQB-Aufgabenpool 2025/2026.
+Lernskripte für das Abitur im Fach Physik, Niedersachsen, erhöhtes Anforderungsniveau
+(Vorabitur 2026, Abitur 2027). **16 PDFs, 103 Seiten**: sieben Themenskripte, zwei Übungshefte (20 Aufgaben,
+Diagrammauswertung), Formelblatt, Experimentesammlung, Abitur-Analyse, Regression,
+Lernfahrplan und Lernzettel.
 
-## Schnellstart
+### [→ Skripte online lesen](https://aaron40776.github.io/PhysikAbi/)
 
-| Wenn du … | dann lies |
+## Inhalt
+
+| Ordner | Was drin ist |
 |---|---|
-| wenig Zeit hast | `04_Zusatzmaterial/Last_Minute_Lernzettel.pdf` (4 S.) |
-| einen Plan brauchst | `04_Zusatzmaterial/Lernfahrplan.pdf` (4 S.) |
-| rechnen üben willst | `04_Zusatzmaterial/Uebungsheft_20_Aufgaben.pdf` (20 Aufgaben mit Lösungen, 13 S.) |
-| ein Thema vertiefen willst | `03_Lernskripte/01…07` (je 6–9 S.) |
-| nur Formeln brauchst | `04_Zusatzmaterial/Formelblatt.pdf` (5 S.) |
+| `Physik_Vorabi_2026/03_Lernskripte/` | 7 Themenskripte: Wellen/Interferenz, Lichtquanten, Elektronenwellen, Doppelspalt, Mach-Zehnder, Atommodelle, Spektren/Franck-Hertz |
+| `Physik_Vorabi_2026/04_Zusatzmaterial/` | Übungsheft (20 Aufgaben mit Lösungen), Formelblatt, Experimentesammlung, Gesamtübersicht, Abitur-Analyse, Regression und Auswertung, Lernfahrplan, Last-Minute-Lernzettel |
+| `Physik_Vorabi_2026/01_Schulwebsite/` | Spiegel der Unterrichtsmaterialien von [physik.gym-wst.de](https://www.physik.gym-wst.de) als Grundlage der Quellenarbeit |
+| `Physik_Vorabi_2026/02_Abiturrecherche/` | Auswertung von 12 Aufgaben aus dem IQB-Pool 2025/2026 |
+| `Physik_Vorabi_2026/06_Qualitaetskontrolle/` | [Prüfbericht](Physik_Vorabi_2026/06_Qualitaetskontrolle/pruefbericht.md) mit allen Befunden, Belegen und offenen Punkten |
+| `Physik_Vorabi_2026/build/` | Typst-Quellen, Layout-Vorlage, Figuren- und Build-Skripte |
 
-## Aufbau
+## Prüfstand
 
-```
-Physik_Vorabi_2026/
-├── 00_Projektverwaltung/   README, PROGRESS, THEMENSTATUS, Quellen
-├── 01_Schulwebsite/        Spiegel der Unterrichtsseiten (Belegmaterial)
-├── 02_Abiturrecherche/     IQB-Aufgaben, Abitur-Analyse (Belegmaterial)
-├── 03_Lernskripte/         7 Themen-PDFs
-├── 04_Zusatzmaterial/      8 Zusatz-PDFs
-├── 05_Grafiken/            22 eigene SVG-Abbildungen
-├── 06_Qualitaetskontrolle/ Prüfbericht, Review
-└── build/                  Typst-Quellen, Figuren-Skripte, Lint, Build, QA
-```
+Jeder Befund im Prüfbericht trägt eine Fundstelle (Datei und Zeile) und ein Zitat. Geprüft
+wurden unter anderem: alle Referenzwerte nachgerechnet (h·c, Rydberg, de Broglie, Bragg,
+Doppelspalt, Franck-Hertz), 27 Abbildungen auf Einbindung und Deutung im Text, Formeldarstellung
+in den gerenderten PDFs, Zahlen in 20 Übungsaufgaben samt Lösungen. Gefundene Fehler sind
+behoben; was nicht geprüft werden konnte — NIBIS-Aufgaben, optische Kontrolle der Grafiken —,
+steht begründet in Abschnitt 12.5 des Prüfberichts.
 
-Stand: **16 PDFs, 102 Seiten, 0 Prüfbefunde.** Details in
-`Physik_Vorabi_2026/06_Qualitaetskontrolle/pruefbericht.md`.
+## Selbst bauen
 
-## Neu bauen
+Voraussetzung: Typst 0.15+ und Python 3 mit matplotlib (nur für neue Grafiken).
 
 ```bash
 cd Physik_Vorabi_2026/build
-./check_all.sh              # Lint, Physik-Check, Build und PDF-QA (Typst 0.15+ über PATH)
+./build_all.sh      # baut alle 16 PDFs nach 03_Lernskripte/ und 04_Zusatzmaterial/
+python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
 ```
 
-Der Build ist reproduzierbar (`SOURCE_DATE_EPOCH` gesetzt); ein unveränderter Stand
-erzeugt byte-identische PDFs.
-
-## Hinweise für Agenten
-
-Die Projekt-Skills für die Dokumenterstellung liegen in `.agents/skills/` (u. a.
-`academic-tikz`, `sympy`, `uncertainty-and-units`, `matplotlib`, `markitdown`).
-Änderungen an Inhalten immer in `build/src/*.typ` vornehmen, nie in den PDFs.
+Die Seite unter `aaron40776.github.io/PhysikAbi` wird bei jedem Push auf `main` automatisch aus
+den PDFs neu gebaut (`.github/workflows/pages.yml`, `build/make_pages.py`).

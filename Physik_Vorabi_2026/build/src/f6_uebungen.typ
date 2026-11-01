@@ -43,20 +43,24 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
 
 == Zeitplan und Punkte
 
-| Block | Aufgaben | Punkte | Zeit |
-|---|---|---|---|
-| A Wellen und Interferenz | 4 | 54 | 55 min |
-| B Lichtquanten | 3 | 40 | 35 min |
-| C Elektronenwellen | 3 | 34 | 35 min |
-| D Quantenobjekte | 4 | 50 | 45 min |
-| E Atome | 3 | 40 | 35 min |
-| F Spektren und Franck-Hertz | 3 | 38 | 35 min |
-| *Summe* | *20* | *256* | *4 h* |
+#table(
+  columns: (1fr, auto, auto, auto),
+  [Block], [Aufgaben], [Punkte], [Zeit],
+  [A Wellen und Interferenz], [4], [54], [55 min],
+  [B Lichtquanten], [3], [40], [35 min],
+  [C Elektronenwellen], [3], [34], [35 min],
+  [D Quantenobjekte], [4], [50], [45 min],
+  [E Atome], [3], [40], [35 min],
+  [F Spektren und Franck-Hertz], [3], [38], [35 min],
+  [*Summe*], [*20*], [*256*], [*4 h*],
+)
 
 #figure(
   image("../fig/doppelspalt_intensitaet.svg", width: 70%),
   caption: [Zur Erinnerung: Die Intensitätsverteilung hinter einem Doppelspalt ist $I tilde cos^2$ – die Streifen sind äquidistant, solange die Kleinwinkelnäherung gilt.],
 )
+
+Wer diese Verteilung einmal im Kopf hat, erkennt sie in jeder Aufgabe wieder: äquidistante Maxima, dazwischen Minima.
 
 = Teil A – Aufgaben
 
@@ -120,8 +124,11 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   Mit einer Fotozelle und der Gegenfeldmethode werden für mehrere Wellenlängen die
   Bremsspannungen gemessen:
 
-  | $lambda$ in nm | 405 | 436 | 546 | 578 |
-  | $U_B$ in V | 1,16 | 0,94 | 0,37 | 0,25 |
+  #table(
+    columns: 5,
+    [$lambda$ in nm], [405], [436], [546], [578],
+    [$U_B$ in V], [1,16], [0,94], [0,37], [0,25],
+  )
 
   #enum(
     [Berechnen Sie zu jeder Wellenlänge die Frequenz und tragen Sie $U_B$ über $f$ auf.],
@@ -406,7 +413,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   (5.1) $f = c\/lambda$:
   405 nm → $7","40 dot 10^14$ Hz; 436 nm → $6","88 dot 10^14$ Hz; 546 nm → $5","49 dot 10^14$ Hz;
   578 nm → $5","19 dot 10^14$ Hz.
-  Auftragung $U_B$ über $f$ ergibt eine steigende Gerade (je größer $f$, desto größer $U_B$).
+  Auftragung $U_B$ über $f$ ergibt eine steigende Gerade: je größer $f$, desto größer $U_B$.
 
   (5.2) Aus $e U_B = h f - W_A$ folgt $U_B = (h\/e) f - W_A\/e$. Die Steigung ist also $h\/e$.
   Aus den Werten: $Delta U_B / Delta f = (1","16 - 0","25)/(7","40 - 5","19) dot 10^14
@@ -535,11 +542,13 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   Phasenverschiebung: $Delta phi = 2 pi Delta s\/lambda = 2 pi dot 500\/633 = 4","96$ rad,
   also $4","96\/(2 pi) = 0","79$ Umläufe.
 
-  (12.2) $P_1 = cos^2(Delta phi\/2) = cos^2(2","48) = 0","62$ (also etwa 62 %);
-  $P_2 = sin^2(2","48) = 0","38$. Kontrolle: $0","62 + 0","38 = 1$.
+  (12.2) Nach der Konvention des Schulmaterials ist D1 bei $Delta phi = 0$ dunkel:
+  $P_1 = sin^2(Delta phi\/2) = sin^2(2","48) = 0","38$ (also etwa 38 %);
+  $P_2 = cos^2(2","48) = 0","62$. Kontrolle: $0","38 + 0","62 = 1$.
 
-  (12.3) $P_1 = 0$ erfordert $Delta phi\/2 = pi\/2$, also $Delta s = lambda\/2 = 317$ nm. Damit
-  $(n-1) d = 317$ nm $=> d = 317\/0","5 = 633$ nm $approx 0","63$ µm.
+  (12.3) $P_1 = 0$ erfordert $Delta phi\/2 = k pi$, also $Delta s = k lambda$. Ohne Glas ist D1
+  ohnehin dunkel; die kleinste Dicke mit $d > 0$ gehört zu $k = 1$: $Delta s = lambda = 633$ nm,
+  also $(n-1) d = 633$ nm $=> d = 633\/0","5 = 1266$ nm $approx 1","27$ µm.
 
   (12.4) Das Photon wird mit Sicherheit in *einem* der beiden Detektoren nachgewiesen (das
   Interferometer hat nur diese beiden Ausgänge). Die Wahrscheinlichkeiten sind daher vollständig
@@ -571,7 +580,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   *Zu D4 (Aufgabe 14).*
   (14.1) $Delta x = b = 50$ µm. Abschätzung $Delta p_x approx h/b
   = 6","626 dot 10^(-34)/5","0 dot 10^(-5) = 1","3 dot 10^(-29)$ kg m/s.
-  Dann $Delta x dot Delta p_x approx 50 dot 10^(-6) dot 1","3 dot 10^(-29)) = 6","6 dot 10^(-34)$
+  Dann $Delta x dot Delta p_x approx 50 dot 10^(-6) dot 1","3 dot 10^(-29) = 6","6 dot 10^(-34)$
   J s $approx h$ – die Relation ist erfüllt.
 
   (14.2) $Delta f approx 1\/Delta t = 1\/(10 dot 10^(-9)) = 1","0 dot 10^8$ Hz $= 100$ MHz.

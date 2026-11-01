@@ -128,31 +128,144 @@ Gesamt 121 -> 95 Seiten, 60.663 -> 33.762 Wörter (-44 %).
 **Geprüft:** 0 Formelreste (`{`, `}`, `$`, `\`), 0 Textüberläufe, alle Figuren eingebunden,
 `build_all.sh` läuft ohne Fehler durch.
 
-## Nachtrag 6 (01.11.2026) – Überarbeitung mit durchgängiger Prüfkette
+## Nachtrag 6 (01.11.2026) – Inhaltliche Qualitätskontrolle, P1 behoben
 
-- [x] Alle 15 Dokumente reproduzierbar neu gebaut (Typst 0.15.1). Vor den inhaltlichen
-      Änderungen waren alle PDFs byte-identisch zum Repo-Stand – Quellen und PDFs sind synchron.
-- [x] 4 Stellen korrigiert, an denen `","` im Fließtext sichtbare Anführungszeichen erzeugte
-      (0,3 %, 1,5 %, 17,5 keV, 0,154 nm).
-- [x] Fremdsprachiges Copy-Paste-Rest „принадлежит“ im Übungsheft durch „gehört“ ersetzt.
-- [x] Sachfehler: `U_B(f)` war als „fallende Gerade“ beschrieben, obwohl `U_B` mit `f` steigt.
-- [x] Recheninkonsistenz in Aufgabe 5 bereinigt: `7,40 − 5,19 = 2,21` (statt 2,22),
-      Steigung `4,12·10⁻¹⁵ V s`, `h = 6,60·10⁻³⁴ J s`.
-- [x] Neue Werkzeuge: `build/check_sources.py` (Quelltext-Lint) und erweitertes
-      `build/qa_pdf.py` (Formelreste, kaputte Zahlen, Exit-Code 1 bei Befunden).
-- [x] `build_all.sh` portabel gemacht: Typst über `PATH` oder `TYPST`, `set -euo pipefail`.
-- [x] Naturkonstanten (`pint`) und alle 20 Aufgabenlösungen nachgerechnet, 22 Abbildungen
-      auf Vollständigkeit und Synchronität geprüft.
-- [x] 23 Formeln in drei Markdown-Dateien von Typst-Syntax auf LaTeX umgestellt
-      (`$c = lambda f$` → `$c = \lambda f$`); GitHub rendert `$...$` als LaTeX, Typst-Syntax
-      erschien dort als Text. Alle 47 Formeln der Dateien rendern fehlerfrei.
-- [x] Neuer Linter `build/check_markdown.py` (122 Dateien: Typst-Syntax, Klammern,
-      Dezimalkomma, Dollar-Bilanz) und `build/check_all.sh` als Ein-Kommando-Gate.
-- [x] 36 abgesetzte Gleichungen auf echten Bruchstrich umgestellt (`\/` → `/`); Fließtext
-      und Exponenten bleiben Schrägstrich. Seitenzahl unverändert, 0 Befunde.
-- [x] Neues Dokument `04_Zusatzmaterial/Uebungsheft_Diagrammauswertung.pdf` (7 S., 40 P.):
-      5 Messreihen (Resonanzrohr, Entladung, Bremsweg, Fadenpendel, Steigungsdeutung) mit
-      Abbildungen aus `build/make_diag_figs.py`, Lösungen und Klausur-Checkliste.
-- [x] Schulspiegel kuratiert: Spalte `Vorabi` in `website_links.csv` (77 ja / 35 nein),
-      Index in `01_Schulwebsite/README.md`. Kein Material gelöscht.
-- Stand: **16 PDFs, 102 Seiten, 17.284 Wörter, 0 Befunde** (Messmethode im Prüfbericht).
+**Prüfbericht neu geschrieben.** `06_Qualitaetskontrolle/pruefbericht.md` enthält jetzt die
+inhaltliche Prüfung (Kurzurteil, Übersicht, 15 P1 / 31 P2 / 22 P3 mit Datei:Zeile und Zitat,
+Kürzungs- und Ergänzungsvorschläge, Maßnahmenplan, Nicht-geprüft-Liste, Nachrechnung aller
+18 Referenzwerte, Abbildungs-Inventar). Die technische Prüfung vom 01./02.11. steht unverändert
+in Anhang A/B.
+
+**Korrektur einer Annahme aus Nachtrag 5.** „Inhaltlich unverändert“ trifft nicht zu: bei der
+Straffung sind die Kohärenz-Definition, Polarisation/Malus und das Michelson-Interferometer aus
+Skript 1 verschwunden. Kohärenz ist wieder definiert (Skript 1, Abschnitt 2). Polarisation und
+Michelson bleiben offen und stehen als Ergänzungsvorschlag im Prüfbericht, Abschnitt 5 –
+`THEMENSTATUS.md` führt sie jetzt als ❌ statt als 🔶.
+
+**Behobene P1-Befunde (15):**
+
+1. `07_spektren.typ`: Aufgabe 2 war ohne `#enum(` gerendert (Rohtext mit eckigen Klammern).
+2. `f6_uebungen.typ`: zwei Markdown-Tabellen (Zeitplan, Messwerte Aufgabe 5) als Rohtext →
+   `#table`.
+3. `f6_uebungen.typ`: russisches Wort „принадлежит“ → „gehört“.
+4. `f6_uebungen.typ`: überzählige Klammer in Lösung 14.1.
+5. `02_lichtquanten.typ`: Bildunterschrift zu `photoeffekt_fE` behauptete eine Gerade durch den
+   Ursprung (falsch für $E_\text{kin,max}$).
+6. `make_figures.py`: Faktor 1000 in `photoeffekt_fE` ließ alle Kurven auf $E=0$ liegen;
+   $W_A$(Cs) an den Skriptwert 1,94 eV angeglichen.
+7. `02_lichtquanten.typ`: Bildunterschrift zu `led_hbestimmung` beschrieb die Gegenfeldmethode
+   statt der LED-Messung.
+8. `make_figures.py`: `franckhertz` hatte 11 V Periode (beschriftet „ΔU ≈ 11 V“) statt 4,9 V.
+9. `07_spektren.typ`: Unterschrift ordnete alle Linien der Balmer-Serie zu, obwohl auch
+   Lyman-α (2→1) eingezeichnet ist.
+10. `07_spektren.typ`: Neon-Erklärung („Anregung im sichtbaren Bereich“) war physikalisch falsch.
+11. `06_atommodelle.typ` + `make_figures.py`: Potenzialtopf-Beschriftung „E_kin – E_pot“ und
+    Unterschrift, die nicht gezeichnete Wellenfunktionen versprach.
+12. `make_figures.py`: Rutherford-Bahnen waren keine Hyperbeln (Ablenkwinkel 0); jetzt
+    Coulomb-Bahnen mit $eps = \sqrt{1+4b^2}$.
+13. `f7_regression.typ`: „253 nm … die man mit Leuchtschirm beobachtet“ – die Linie ist UV.
+14. `f5_abitur.typ` + `untersuchte_aufgaben.csv`: „fachpraktischer Anteil in 5 von 12“ war
+    falsch (2 von 12), drei Tabellenzeilen und der Blitzdetektor (gA → eA) korrigiert.
+15. `f8_lernplan.typ`: alle Seitenangaben stammten aus der Fassung vor der Straffung (Skript 1
+    „15 S.“ statt 9); Tabelle jetzt auf Abschnittsnummern umgestellt, Umfang 95/47 Seiten,
+    34.000 Wörter.
+
+**Stand nach dem Neubau:** 15 PDFs, **95 Seiten**, **33.828 Wörter**, 0 Formelreste,
+0 Textüberläufe, 22 SVGs eingebunden, keine ungerenderten Klammerlisten mehr.
+
+**Offen (P2/P3, Freigabe nötig):** Konvention $I_1 = \sin^2$ vs. $P_\text{D1} = \cos^2$ (Skript 5 vs.
+Formelblatt/Übungsheft), Unbestimmtheit $h/(4 \pi)$ vs. $h$, deutender Satz zu jeder der 26
+Grafiken, Polarisation/Michelson/Pauli ergänzen, „fallende Gerade“ in Übungsheft 5.2.
+
+**Umgebung:** matplotlib 3.11.2 nachinstalliert (Projektabhängigkeit für `make_figures.py`;
+die ausgelieferten SVGs stammen aus derselben Version).
+
+## Nachtrag 7 (01.11.2026) – P2 umgesetzt: Konvention, Abbildungen, Curriculumlücken
+
+**Konvention nach Schulmaterial, nicht nach KC.** Das KC (d13 eA, Z. 19–21) fordert nur
+„Aufbau beschreiben“, „Komplementarität/Nichtlokalität interpretieren“, „delayed choice“ – keine
+Festlegung, welcher Ausgang bei $\Delta \phi = 0$ hell ist. Das Schulmaterial legt es fest
+(`06machzehnderinterferometer/docs.md`, Z. 198): „Wenn der Phasenschieber auf 0 gestellt ist,
+registriert Detektor 1 keine Intensität und Detektor 2 volle Intensität“, begründet mit
+$\pi/2$-Sprung am Strahlteiler und $\pi$ am Spiegel (Z. 202–205). Also gilt
+$P_\text{D1} = \sin^2(\Delta \phi/2)$.
+
+Angepasst: `05_mzi.typ` (Begründung + Merksatz mit Konvention), `f1_formelblatt.typ` (P_D1/P_D2
+getauscht, Gültigkeit benannt), `f6_uebungen.typ` (12.2: 0,38/0,62; 12.3: 1,27 µm statt 0,63 µm).
+
+**Curriculumlücken geschlossen.** Neu in `01_wellen.typ`: Abschnitt 10 „Polarisation“
+(Polarisator/Analysator, Malus-Gesetz) und Abschnitt 11 „Michelson-Interferometer“
+($\Delta s = 2 \Delta d$, $\Delta d = N \lambda/2$) – beide mit KC-Beleg (d12 eA Z. 111–113 und
+115–117). Michelson-Grafik neu erzeugt (`make_figures.py`, `fig/michelson.svg`), Funktion jetzt
+fester Bestandteil des Skripts.
+
+**Abbildungen gedeutet.** 27 deutende Sätze im Fließtext, je einer pro `image()`-Aufruf.
+
+**Stand:** 96 Seiten (Skript 1: 10 statt 9), 34.955 Wörter, 0 Formelreste, 0 Textüberläufe,
+23 SVGs. THEMENSTATUS, README und die Kurzweg-Tabelle im Lernfahrplan nachgezogen
+(Skript 1 jetzt Abschnitte 14/15 statt 12/13).
+
+## Nachtrag 8 (01.11.2026) – letzte belegte Lücken geschlossen
+
+- **Unbestimmtheit:** Skript 4 nennt jetzt beide Formen ($h$ als Schulnotation, $h/(4 \pi)$ als
+  Lehrbuchform) und erklärt den Faktor – genau der Vergleich, den das KC verlangt
+  (`13unbestimmtheit/docs.md`, Z. 6). Formelblatt führt beide Zeilen.
+- **Koinzidenzmethode:** als Definition in Skript 4 ergänzt (KC eA d13
+  `04doppelspaltexperiment/docs.md`, Z. 10), Beleg für „Photon nicht teilbar“ aus
+  `06machzehnderinterferometer/docs.md`, Z. 245.
+- **Pauli-Prinzip:** als Definition in Skript 6 ergänzt (war nur eine Tabellenzelle).
+- **Übungsheft 5.1:** „fallende Gerade“ → „steigende Gerade“ (der Satz widersprach sich selbst;
+  die Rechnung darunter war richtig).
+
+Bewusst offen und im Prüfbericht, Abschnitt 12.5, begründet: Quantenradierer/Bomben-Test (nicht
+im KC), Bindestrich-Extraktion im Übungsheft (nur PDF-Suche betroffen), NIBIS/Bildungsportal
+(kein Zugriff), optische Sichtprüfung der SVGs (kein Betrachter verfügbar).
+
+**Stand:** 96 Seiten, 35.080 Wörter, 0 Formelreste, 0 Textüberläufe, 23 SVGs, 27 von 27
+Abbildungen im Text gedeutet.
+
+## Nachtrag 9 (01.11.2026) – Veröffentlichung
+
+Die Skripte stehen jetzt als Seite bereit: **https://aaron40776.github.io/PhysikAbi/**
+
+- `build/make_pages.py` erzeugt die Übersicht (Titel, Kurzinhalt, Seitenzahl aus den PDFs) und
+  kopiert alle 15 Dateien nach `_site`.
+- `.github/workflows/pages.yml` baut und deployt bei jedem Push auf `main`, sobald sich PDFs,
+  das Skript oder der Workflow ändern. Pages-Quelle: „GitHub Actions“.
+- Geprüft: Startseite HTTP 200 (6,5 kB), alle 15 PDF-Links HTTP 200, Titel und Untertitel
+  („96 Seiten in 15 PDFs“) korrekt ausgeliefert. Die Zahlen im Kopf der Seite werden
+  inzwischen aus den PDFs berechnet (`__ANZAHL__`/`__GESAMT__`), nicht mehr fest eingetragen.
+
+Damit ist die Veröffentlichung automatisiert; nach einem Neubau genügt `git push`.
+
+## Nachtrag 10 (01.11.2026) – Bedienung der Seite
+
+Die Übersicht hat jetzt eine Suche und Navigation:
+
+- Suchfeld in der Sticky-Leiste filtert live über Titel, Kurzinhalt und Dateinamen
+  (Akzente werden normalisiert, „ubungsheft“ findet also auch „Übungsheft“), mit Trefferzähler
+  („1 von 15“) und Leerzustand. Tasten: `/` fokussiert, `Escape` leert.
+- Karten öffnen in einem neuen Tab, die Übersicht bleibt offen – das ersetzt den Zurück-Weg.
+- Sprungmarken „Lernskripte“ / „Zusatzmaterial“ im Kopf, Nach-oben-Pfeil ab 400 px Scrolltiefe.
+- Skip-Link, Fokusringe, `aria-live` am Zähler, `prefers-reduced-motion`, og-Metadaten.
+
+Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nur Skript 1,
+„xyz“ → Leerzustand, Pfeil erscheint beim Scrollen.
+
+## Nachtrag 11 (01.11.2026) – Formeltypografie, Trainingsheft, Seite aktualisiert
+
+- **Bruchstriche:** 36 abgesetzte Gleichungen von `\/` auf `/` umgestellt. In Typst ist
+  `a\/b` ein Schrägstrich, `a/b` ein gestapelter Bruch. Fließtext und Exponenten bleiben
+  Schrägstrich. Seitenzahl unverändert, 0 Befunde.
+- **Einheiten geprüft:** Im Mathemodus müssen sie in Anführungszeichen stehen. Neun
+  Verdachtsfälle, alle Fehlalarm (Variablen `A`, `m`, `s`).
+- **Neues Dokument:** `04_Zusatzmaterial/Uebungsheft_Diagrammauswertung.pdf` (7 S., 40 P.,
+  5 Messreihen, Abbildungen aus `build/make_diag_figs.py`). In `build_all.sh` und
+  `make_pages.py` eingetragen.
+- **Markdown-Formeln:** 193 Formeln in Prüfbericht, Review und PROGRESS von Typst-Syntax auf
+  LaTeX umgestellt; 207 Stichproben rendern fehlerfrei.
+- **Seite:** Kopfzahlen werden jetzt aus den PDFs gezählt (`__ANZAHL__`, `__GESAMT__`) – keine
+  veralteten „15 PDFs“ mehr. Neues Heft erscheint automatisch als Karte im Zusatzmaterial.
+- **Fehler behoben:** `planck.reduce` (ℏ) gibt es in Typst 0.15.1 nicht – Skript 4 brach ab;
+  durch `h\/(2 pi)` ersetzt.
+- **Stand:** 16 PDFs, 103 Seiten, 18.380 Wörter, 0 Befunde.
