@@ -204,7 +204,8 @@ def main():
         (out / name).write_text(text, encoding="utf-8")
 
     print(f"{werte['__GESAMT__']} Seiten, {werte['__ANZAHL__']} PDFs, "
-          f"Index {len(roh) / 1000:.0f} kB, ZIP {werte['__ZIPMB__']} MB -> {out}/index.html")
+          f"Index {len(roh.encode('utf-8')) / 1000:.0f} kB, ZIP {werte['__ZIPMB__']} MB "
+          f"-> {out}/index.html")
 
 
 if __name__ == "__main__":

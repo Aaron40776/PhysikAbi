@@ -9,8 +9,9 @@ BUILD = pathlib.Path(__file__).resolve().parent
 ROOT = BUILD.parent
 DATEIEN = ("index.html", "suche.html", "suche.json", "physik-vorabi-2026.zip",
            "assets/style.css", "assets/suche.js", "assets/index.js", "assets/suche-seite.js",
-           "pdfjs/web/viewer.html", "pdfjs/web/viewer.js", "pdfjs/build/pdf.js",
-           "pdfjs/build/pdf.worker.js", "pdfjs/LICENSE")
+           "pdfjs/web/viewer.html", "pdfjs/web/viewer.js", "pdfjs/web/viewer.css",
+           "pdfjs/web/locale/de/viewer.properties", "pdfjs/web/locale/locale.properties",
+           "pdfjs/build/pdf.js", "pdfjs/build/pdf.worker.js", "pdfjs/LICENSE")
 SEITEN = 103
 
 pruefungen = []
@@ -75,6 +76,23 @@ def main():
         pruefe("Assets mit Versionsstempel", len(stempel) >= 3, stempel)
         pruefe("Suchindex wird geladen",
                "suche.json" in (ziel / "assets" / "suche.js").read_text(encoding="utf-8"))
+
+        viewer_html = (ziel / "pdfjs" / "web" / "viewer.html").read_text(encoding="utf-8")
+        externe = re.findall(r'(?:src|href)="(https?://[^"]+)"', viewer_html)
+        pruefe("PDF.js laedt nichts aus dem Netz", not externe, externe)
+        pruefe("Viewer hat eigenes Favicon (kein 404)",
+               'rel="icon"' in viewer_html)
+
+        def locale_schluessel(name):
+            text = (ziel / "pdfjs" / "web" / "locale" / name / "viewer.properties").read_text(
+                encoding="utf-8")
+            return {m[0] for m in re.findall(r"^([\w.\-]+)=", text, re.M)}
+
+        fehlend = locale_schluessel("en-US") - locale_schluessel("de")
+        pruefe("deutsche Oberfläche vollständig", not fehlend, sorted(fehlend))
+
+        pruefe("Safe-Area im Viewport",
+               all('viewport-fit=cover' in h for h in (index_html, suche_html)))
 
         node = shutil.which("node")
         if node:

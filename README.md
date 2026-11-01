@@ -46,16 +46,17 @@ Website (Übersicht, Volltextindex, PDF-Ansicht):
 
 ```bash
 cd Physik_Vorabi_2026
-python3 build/make_pages.py --out _site   # braucht pymupdf
+python3 build/make_pages.py --out _site   # braucht pymupdf 2.0
 python3 build/test_pages.py               # prüft Index, Links und Suchlogik (node)
 ```
 
 Die Quellen der Seite liegen unter `build/web/`: `index.html`, `suche.html`, `style.css`,
 `suche.js` (Index, Bewertung, Ausschnitte, PDF-Links), `index.js`, `suche-seite.js`.
 `make_pages.py` extrahiert den Text aus den PDFs zu `_site/suche.json` (≈190 kB), kopiert die
-PDFs, das ZIP und den PDF.js-Viewer aus `build/vendor/pdfjs/` (3.11.174, Apache-2.0,
-unverändert bis auf `lang="de"`/`locale=de`). Der Viewer braucht zur Laufzeit kein Netz und
-zeigt die PDF mit Seitensprung und markiertem Suchwort.
+PDFs, das ZIP und den PDF.js-Viewer aus `build/vendor/pdfjs/` (3.11.174, Apache-2.0). Am Viewer
+sind nur Darstellung und Sprache angepasst: `lang="de"`/`locale=de`, eigenes Favicon,
+vervollständigte deutsche Sprachdatei (siehe `build/vendor/pdfjs/VERSION.txt`). Der Viewer
+braucht zur Laufzeit kein Netz und zeigt die PDF mit Seitensprung und markiertem Suchwort.
 
 Die Seite unter `aaron40776.github.io/PhysikAbi` wird bei jedem Push auf `main` automatisch aus
 den PDFs neu gebaut (`.github/workflows/pages.yml`, `build/make_pages.py`).

@@ -26,6 +26,7 @@ See https://github.com/adobe-type-tools/cmap-resources
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="google" content="notranslate">
     <title>PDF.js viewer</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3864'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23fff' font-family='Georgia,serif'%3E%CF%86%3C/text%3E%3C/svg%3E">
 
 <!-- This snippet is used in production (included from viewer.html) -->
 <link rel="resource" type="application/l10n" href="locale/locale.properties">
@@ -36,7 +37,9 @@ See https://github.com/adobe-type-tools/cmap-resources
   <script src="viewer.js"></script>
   <script>
     // PDF.js liest locale erst nach dem DOM-Aufbau; hier vorher auf Deutsch setzen.
+    // disablePreferences verhindert die Warnung "_initializeOptions: The Preferences ...".
     if (window.PDFViewerApplicationOptions) {
+      window.PDFViewerApplicationOptions.set("disablePreferences", true);
       window.PDFViewerApplicationOptions.set("locale", "de");
     }
   </script>

@@ -311,3 +311,29 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   sonst findet die wörtliche PDF-Suche nichts. Der Ausschnitt auf der Seite zeigt weiter alle Wörter.
 - **Grenze:** PDF.js sucht im PDF-Text; bei Formelzeichen (λ) markiert es die Stelle im PDF,
   die Trefferliste bleibt die schnellere Übersicht.
+
+## Nachtrag 15 (01.11.2026) – Endkontrolle der Lernseite: Konsole, Tap-Ziele, Anker, PDF.js
+
+- **Sprungmarken:** `html { scroll-padding-top: 104px }` statt `scroll-margin` nur an `h2`.
+  Gemessen bei 360/390/768/844 px: Abschnittsüberschrift steht jetzt 6–46 px unter der
+  klebenden Kopfzeile (vorher bei 0 px, also verdeckt).
+- **Tap-Ziele:** Textlinks in Sprungliste, Kartenaktionen, Inhaltsverzeichnis, Fußzeile und
+  Marke sind mindestens 32 px hoch (Inhaltsverzeichnis 26 px), „nach oben“ 44 × 44 px.
+  Messung über alle Gerätebreiten: kein Element mehr unter 24 px.
+- **Safe-Area:** `viewport-fit=cover` in beiden Seiten; Kopfzeile, `main` und „nach oben“
+  beachten `env(safe-area-inset-*)` (Notch im Querformat).
+- **Trefferpanel:** Position und Höhe richten sich nach `visualViewport`, damit das Panel bei
+  eingeblendeter Bildschirmtastatur nicht darunter verschwindet; Tastaturhinweise („↑↓ wählen“,
+  `/`) werden auf Touch-Geräten ausgeblendet.
+- **PDF.js-Viewer:** eigenes Favicon als Data-URI (der 404 auf `/favicon.ico` ist weg),
+  `disablePreferences` (Warnung zu AppOptions weg), deutsche Sprachdatei um die zwölf
+  Schlüssel des Alternativtext-Dialogs ergänzt. Konsole im Viewer: 0 Fehler, 0 Warnungen,
+  0 Antworten ≥ 400; Suchwort markiert („2 von 7 Übereinstimmungen“), Zielseite stimmt.
+- **Suche:** Hinweis „ist ein Formelzeichen“ erscheint jetzt auch bei `lambda` (vorher nur bei
+  getipptem λ); Anführungszeichen der Phrasensuche werden in der Trefferübersicht nicht doppelt
+  angezeigt.
+- **Build:** `pymupdf==2.0` im Pages-Workflow festgeschrieben; Indexgröße wird in Bytes
+  gemeldet. Zwei Builds hintereinander sind byte-identisch (`diff -r` leer).
+- **Tests:** `build/test_pages.py` prüft zusätzlich, dass der Viewer nichts aus dem Netz lädt,
+  ein Favicon hat, die deutsche Sprachdatei vollständig ist und beide Seiten `viewport-fit=cover`
+  setzen. 35 von 35 Prüfungen bestanden.

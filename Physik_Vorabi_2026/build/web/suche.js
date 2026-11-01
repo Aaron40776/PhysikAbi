@@ -274,16 +274,22 @@
 
     function positioniere() {
       var r = eingabe.getBoundingClientRect();
-      var breite = Math.min(680, window.innerWidth - 32);
+      var sicht = window.visualViewport;
+      var breite = Math.min(680, (sicht ? sicht.width : window.innerWidth) - 32);
       var links = Math.max(16, Math.min(r.left, window.innerWidth - breite - 16));
+      var unten = sicht ? sicht.offsetTop + sicht.height : window.innerHeight;
       box.style.position = "fixed";
       box.style.left = links + "px";
       box.style.top = (r.bottom + 8) + "px";
       box.style.width = breite + "px";
-      box.style.maxHeight = Math.max(180, Math.min(560, window.innerHeight - r.bottom - 24)) + "px";
+      box.style.maxHeight = Math.max(140, Math.min(560, unten - r.bottom - 16)) + "px";
     }
 
     window.addEventListener("resize", function () { if (!box.hidden) positioniere(); });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", function () { if (!box.hidden) positioniere(); });
+      window.visualViewport.addEventListener("scroll", function () { if (!box.hidden) positioniere(); });
+    }
 
     function schliessen() {
       box.hidden = true;
@@ -318,7 +324,7 @@
       }
       var html = '<div class="panel-kopf"><span><strong>' + ergebnis.anzahl + "</strong> Treffer in " +
         ergebnis.gruppen.length + (ergebnis.gruppen.length === 1 ? " Dokument" : " Dokumenten") +
-        "</span><span>\u2191\u2193 w\u00e4hlen \u00b7 Enter \u00f6ffnet</span></div>";
+        '</span><span class="tasten">\u2191\u2193 w\u00e4hlen \u00b7 Enter \u00f6ffnet</span></div>';
       ergebnis.gruppen.forEach(function (g) {
         html += '<div class="panel-gruppe"><h3>' + escape(g.doc.t) +
           " <span>\u00b7 " + g.gesamt + " Treffer</span></h3>";

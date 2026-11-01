@@ -21,10 +21,11 @@
     }
     var gruppen = ergebnis.gruppen.filter(function (g) { return !gruppe || g.doc.g === gruppe; });
     var anzahl = gruppen.reduce(function (s, g) { return s + g.gesamt; }, 0);
+    var anzeige = q.trim().replace(/^"+|"+$/g, "");
     if (kopf) {
       kopf.innerHTML = "<b>" + anzahl + "</b> Treffer in " + gruppen.length +
         (gruppen.length === 1 ? " Dokument" : " Dokumenten") + " für „" +
-        PhysikSuche.escape(q.trim()) + "“";
+        PhysikSuche.escape(anzeige) + "“";
     }
     if (zaehler) zaehler.textContent = anzahl + " Treffer";
     if (!gruppen.length) {
@@ -33,10 +34,10 @@
     }
     var html = "";
     var nurZeichen = ergebnis.tokens.every(function (t) {
-      return t.varianten.every(function (v) { return v.length <= 2; });
+      return t.varianten.some(function (v) { return v.length <= 2; });
     });
     if (nurZeichen && anzahl > 40) {
-      html += '<p class="lese-hinweis">„' + PhysikSuche.escape(q.trim()) +
+      html += '<p class="lese-hinweis">„' + PhysikSuche.escape(anzeige) +
         "“ ist ein Formelzeichen und steht auf fast jeder Seite. Gezielter suchen: „Wellenlänge“ " +
         "oder ein Thema wie „Photoeffekt“.</p>";
     }

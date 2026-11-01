@@ -30,7 +30,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: PyMuPDF installieren
-        run: pip install --quiet pymupdf
+        run: pip install --quiet "pymupdf==2.0"
       - name: Index, Links und Suche testen
         run: python Physik_Vorabi_2026/build/test_pages.py
       - name: Übersicht und PDFs sammeln
