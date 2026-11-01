@@ -236,3 +236,17 @@ Die Skripte stehen jetzt als Seite bereit: **https://aaron40776.github.io/Physik
   („96 Seiten in 15 PDFs“) korrekt ausgeliefert.
 
 Damit ist die Veröffentlichung automatisiert; nach einem Neubau genügt `git push`.
+
+## Nachtrag 10 (01.11.2026) – Bedienung der Seite
+
+Die Übersicht hat jetzt eine Suche und Navigation:
+
+- Suchfeld in der Sticky-Leiste filtert live über Titel, Kurzinhalt und Dateinamen
+  (Akzente werden normalisiert, „ubungsheft“ findet also auch „Übungsheft“), mit Trefferzähler
+  („1 von 15“) und Leerzustand. Tasten: `/` fokussiert, `Escape` leert.
+- Karten öffnen in einem neuen Tab, die Übersicht bleibt offen – das ersetzt den Zurück-Weg.
+- Sprungmarken „Lernskripte“ / „Zusatzmaterial“ im Kopf, Nach-oben-Pfeil ab 400 px Scrolltiefe.
+- Skip-Link, Fokusringe, `aria-live` am Zähler, `prefers-reduced-motion`, og-Metadaten.
+
+Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nur Skript 1,
+„xyz“ → Leerzustand, Pfeil erscheint beim Scrollen.
