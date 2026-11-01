@@ -223,3 +223,16 @@ im KC), Bindestrich-Extraktion im Übungsheft (nur PDF-Suche betroffen), NIBIS/B
 
 **Stand:** 96 Seiten, 35.080 Wörter, 0 Formelreste, 0 Textüberläufe, 23 SVGs, 27 von 27
 Abbildungen im Text gedeutet.
+
+## Nachtrag 9 (01.11.2026) – Veröffentlichung
+
+Die Skripte stehen jetzt als Seite bereit: **https://aaron40776.github.io/PhysikAbi/**
+
+- `build/make_pages.py` erzeugt die Übersicht (Titel, Kurzinhalt, Seitenzahl aus den PDFs) und
+  kopiert alle 15 Dateien nach `_site`.
+- `.github/workflows/pages.yml` baut und deployt bei jedem Push auf `main`, sobald sich PDFs,
+  das Skript oder der Workflow ändern. Pages-Quelle: „GitHub Actions“.
+- Geprüft: Startseite HTTP 200 (6,5 kB), alle 15 PDF-Links HTTP 200, Titel und Untertitel
+  („96 Seiten in 15 PDFs“) korrekt ausgeliefert.
+
+Damit ist die Veröffentlichung automatisiert; nach einem Neubau genügt `git push`.
