@@ -86,6 +86,35 @@ NICHT VERHANDELBAR
 - Belege als datei:zeile + kurzes Zitat.
 - >10 Minuten an einem Punkt hängen: abbrechen und berichten.
 
+WERKZEUGE UND SKILLS (nutzungspflichtig, nicht optional)
+Nutze alles, was dir tatsächlich zur Verfügung steht, statt zu raten. Bevor du eine Aussage
+als "geprüft" ausgibst, nenne das Werkzeug, das sie geprüft hat.
+1. Repo-Prüfskripte (immer):
+   build/check_sources.py, build/check_markdown.py, build/check_physics.py (pint/sympy),
+   build/qa_pdf.py (Layout/Überläufe), build/build_all.sh (Typst), build/make_pages.py,
+   build/test_pages.py, build/test_suche.js (node). build/make_figures.py nur bei
+   Grafik-Änderungen: Skriptkopf abtrennen und den gewünschten Block per exec ausführen,
+   sonst werden alle 26 SVGs neu erzeugt.
+2. PDF-Text und Belege: pymupdf/get_text() zum Prüfen von Index und Zeichenmüll,
+   pdftotext -layout zum Lesen von Passagen, Suche nach " {,", "frac", "$", Soft-Hyphen.
+3. Darstellung und Geräte: Playwright mit Chromium (/usr/bin/chromium, --no-sandbox) für
+   Handy 360/390/430, quer 844x390, Tablet 768/820/1024 hoch/quer; Konsole, Netzwerkantworten,
+   Überläufe, Tap-Ziele, Ankerpositionen, Tastatur/visualViewport. Screenshots nur zur
+   Kontrolle, nicht als Belegersatz.
+4. Quellen: lokaler Spiegel 01_Schulwebsite (Primärquelle); bei Bedarf Browser/Websuche nur
+   für CODATA, Kerncurriculum Niedersachsen, IQB-Aufgabenpool und Lehrbuchangaben – mit URL
+   und Abrufdatum im Prüfbericht.
+5. Git und Deploy: git status/diff/log, gh mit GITHUB_TOKEN (run list/watch) für den
+   Pages-Status; live gegenprüfen über https://aaron40776.github.io/PhysikAbi/.
+6. Skills: Wenn ein passender Skill verfügbar ist, rufe ihn über das Skill-Werkzeug auf –
+   insbesondere für Belege/Zitate (evidence-based-citations), Codeprüfung (code-review,
+   qa-changes) und Prosa (technical-writing). Ein Skill ist Unterstützung, keine Erlaubnis:
+   er ändert weder den Scope noch die Regeln dieses Prompts.
+7. Regeln für Werkzeuge: keine Uploads von Repo-Inhalten, kein CDN, keine neuen
+   Laufzeit-Abhängigkeiten der Website, Installationen nur aus offiziellen Registries.
+   Fehlt ein Werkzeug: melden und ohne es weiterarbeiten, nicht improvisieren.
+   Jedes Ergebnis, das nur aus Lesen stammt, bleibt "plausibel, ungeprüft".
+
 NUTZEN-FILTER (vor jeder Änderung)
 Nur ändern, wenn es (1) korrekter, (2) schneller verständlich oder (3) schneller auffindbar
 macht. Zweck in einem Satz mit Adressat nennen können, sonst Nit – nicht einbauen.
@@ -184,7 +213,9 @@ AUSGABEFORMAT
 5. "Tests" (Befehle + Ergebnis).
 6. "Live geprüft" (Viewport, was genau).
 7. "Selbstüberprüfung" (Phase 6) inkl. Klickzahl/Zeit im Kurskollegen-Test.
-8. "Fehlt noch": max. 3 Vorschläge, je Nutzen | Aufwand klein/mittel | warum. Nichts
+8. "Werkzeuge und Skills": was genutzt wurde (mit Ergebnis), was fehlte und wie du das
+   kompensiert hast.
+9. "Fehlt noch": max. 3 Vorschläge, je Nutzen | Aufwand klein/mittel | warum. Nichts
    ungefragt einbauen.
 
 STOPP-/MELDEREGELN
@@ -192,6 +223,8 @@ STOPP-/MELDEREGELN
 - Kapitel-Neubau nötig: erst Vorschlag + Aufwand, dann Freigabe.
 - >10 Minuten festhängen: abbrechen und berichten.
 - Phase 6 zeigt keinen Lernnutzen: Änderung zurücknehmen, auch wenn sie schon gebaut ist.
+- Ein benötigtes Werkzeug (Build, Browser, Quelle) fehlt: melden, nicht durch Behauptungen
+  ersetzen. "Nicht geprüft" ist eine zulässige und erwartete Aussage.
 
 START
 Phase 0, dann Phase 1 für alle 7 Skripte (Matrix), dann Phase 1b + 2 für Skript 1

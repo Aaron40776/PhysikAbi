@@ -346,3 +346,13 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   Lückenschluss-Phase und eine verpflichtende Selbstüberprüfung (Revert-, Kurskollegen-,
   Falsifikations-, Verständnis-, Nebenwirkungs-, Ehrlichkeits-Test, Nutzen-Bilanz).
 - Kein Inhalt der Skripte geändert, keine Website-Änderung; Tests unverändert grün.
+
+## Nachtrag 17 (01.11.2026) – Prüf-Prompt: Werkzeug- und Skill-Nutzung verbindlich
+
+- `REVIEW_PROMPT.md` hat jetzt den Abschnitt "Werkzeuge und Skills (nutzungspflichtig)":
+  Repo-Prüfskripte, PDF-Text (pymupdf/pdftotext), Playwright/Chromium über alle Geräte,
+  Quellenrecherche nur für CODATA/Kerncurriculum/IQB, git/gh für den Deploy-Status und
+  passende Skills (u. a. evidence-based-citations, code-review, qa-changes). Regel: Belegt
+  wird nur, was ein Werkzeug tatsächlich geprüft hat; "nicht geprüft" ist zulässig.
+- Ausgabeformat um Punkt "Werkzeuge und Skills" erweitert, Stoppregel bei fehlendem Werkzeug.
+- Keine Inhalte oder Website-Änderungen.
