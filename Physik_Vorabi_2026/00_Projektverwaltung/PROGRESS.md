@@ -102,3 +102,28 @@ mit Schwerpunkt auf Diagrammauswertung.
 - [x] Kern-Lernstoff isoliert: Formelblatt (1.718 W.) + Lernzettel (1.358 W.) ≈ 3.100 Wörter.
 - [x] `Lernfahrplan.pdf` (4 S.): Rollen der Dokumente, Kurzweg-Seiten je Skript (aus den
       tatsächlichen Überschriftenpositionen), Vier-Tage-Plan bis 05.11.
+
+## Nachtrag 5 (02.11.) – Skripte gestrafft, Formeln abgesetzt
+
+**Diagnose.** 304 Formeln mit Bruch/Wurzel standen inline im Fließtext (`1/(2π)√D/m`),
+nur 64 waren abgesetzte Gleichungen. Außerdem enthielten die Herleitungs-Kästen nur den Titel,
+die Rechenschritte standen außerhalb des Kastens (Fehler in `#herleitung[...]`-Nutzung).
+
+**Umbau.** Alle 7 Skripte neu geschrieben: Stichpunkte statt Absätze, jede tragende Formel als
+abgesetzte Gleichung mit `frac`/`sqrt`, Herleitungsschritte im Kasten, Experimente als kompakte
+Blöcke, Wiederholung als Tabelle. Inhaltlich unverändert (alle Themen, alle Figuren erhalten).
+
+| Skript | vorher | jetzt |
+|---|---|---|
+| 1 Wellen | 15 S. / 4.989 W. | 9 S. / 2.585 W. |
+| 2 Lichtquanten | 10 / 5.349 | 6 / 1.923 |
+| 3 Elektronenwellen | 10 / 4.700 | 7 / 1.788 |
+| 4 Doppelspalt | 11 / 5.715 | 6 / 1.637 |
+| 5 MZI | 9 / 5.807 | 6 / 1.810 |
+| 6 Atommodelle | 11 / 5.323 | 7 / 1.666 |
+| 7 Spektren | 11 / 6.321 | 6 / 1.785 |
+
+Gesamt 121 -> 95 Seiten, 60.663 -> 33.762 Wörter (-44 %).
+
+**Geprüft:** 0 Formelreste (`{`, `}`, `$`, `\`), 0 Textüberläufe, alle Figuren eingebunden,
+`build_all.sh` läuft ohne Fehler durch.

@@ -13,21 +13,25 @@ Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 
 | Datei | Thema | Seiten |
 |---|---|---|
-| `01_Wellen_und_Interferenz.pdf` | Schwingungen, Welle, Interferenz, Doppelspalt, Gitter, Bragg | 15 |
-| `02_Lichtquanten_und_Planck.pdf` | Planck, Photon, Photoeffekt, h-Bestimmung, Compton | 10 |
-| `03_Elektronenwellen_und_Beugung.pdf` | de Broglie, Elektronenkanone, Beugungsröhre | 9 |
-| `04_Doppelspalt_und_Quantenphysik.pdf` | Einzelquanten, Amplituden, Komplementarität, Unbestimmtheit, Wellenfunktion | 11 |
-| `05_MZI_Welcher_Weg_Delayed_Choice_QED.pdf` | Mach-Zehnder, Welcher-Weg, Delayed Choice, QED | 9 |
-| `06_Atommodelle_und_Orbitalmodell.pdf` | Rutherford, Bohr, Potenzialtopf, Orbitale | 11 |
-| `07_Spektren_und_Franck_Hertz.pdf` | Spektren, Röntgen, Resonanzabsorption, Franck-Hertz | 10 |
+| `01_Wellen_und_Interferenz.pdf` | Schwingungen, Welle, Interferenz, Doppelspalt, Gitter, Bragg | 9 |
+| `02_Lichtquanten_und_Planck.pdf` | Planck, Photon, Photoeffekt, h-Bestimmung, Compton | 6 |
+| `03_Elektronenwellen_und_Beugung.pdf` | de Broglie, Elektronenkanone, Beugungsröhre | 7 |
+| `04_Doppelspalt_und_Quantenphysik.pdf` | Einzelquanten, Amplituden, Komplementarität, Unbestimmtheit, Wellenfunktion | 6 |
+| `05_MZI_Welcher_Weg_Delayed_Choice_QED.pdf` | Mach-Zehnder, Welcher-Weg, Delayed Choice, QED | 6 |
+| `06_Atommodelle_und_Orbitalmodell.pdf` | Rutherford, Bohr, Potenzialtopf, Orbitale | 7 |
+| `07_Spektren_und_Franck_Hertz.pdf` | Spektren, Röntgen, Resonanzabsorption, Franck-Hertz | 6 |
 
 **8 Zusatzdokumente** (`04_Zusatzmaterial/`): Gesamtübersicht (5 S.), Formelblatt (5 S.),
 Experimentesammlung (5 S.), Abitur-Analyse (5 S.), Last-Minute-Lernzettel (4 S.),
 **Übungsheft mit 20 Aufgaben und Lösungen (13 S.)**, **Regression und Auswertung (7 S.)**, **Lernfahrplan (4 S.)**.
 
-Jedes Skript enthält: Grundlagen, vollständige Theorie, Experimente (Aufbau/Durchführung/
-Beobachtung/Erklärung/Bedeutung), Herleitungen, Grafiken mit Erläuterung, 3 Abituraufgaben mit
-ausführlichen Lösungen, typische Fehler, Wiederholungsteil und Quellenverzeichnis.
+Jedes Skript enthält: Kenngrößen/Grundlagen als Tabelle, Theorie in Stichpunkten, abgesetzte
+Formeln ($frac$ statt Schrägstrich), Herleitungen als nummerierte Schritte im Kasten,
+Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Grafiken mit
+Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
+
+Umfang nach der Straffung (02.11.): **7 Skripte 48 Seiten** statt 77, gesamt **95 Seiten**
+statt 121; Wortzahl 33.762 statt 60.663.
 
 ## Verzeichnisse
 
