@@ -410,8 +410,8 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
 
   (5.2) Aus $e U_B = h f - W_A$ folgt $U_B = (h\/e) f - W_A\/e$. Die Steigung ist also $h\/e$.
   Aus den Werten: $Delta U_B \/ Delta f = (1","16 - 0","25)\/(7","40 - 5","19) dot 10^14
-  = 0","91\/(2","21 dot 10^14) = 4","12 dot 10^(-15)$ V s.
-  Damit $h = 4","12 dot 10^(-15) "V s" dot 1","602 dot 10^(-19) "C" = 6","60 dot 10^(-34)$ J s
+  = 0","91\/(2","22 dot 10^14) = 4","11 dot 10^(-15)$ V s.
+  Damit $h = 4","11 dot 10^(-15) "V s" dot 1","602 dot 10^(-19) "C" = 6","58 dot 10^(-34)$ J s
   – Abweichung zum Literaturwert ($6","626 dot 10^(-34)$ J s) unter 1 %.
   Achsenabschnitt: $U_B = 0$ bei $f_G$. Aus der Geraden folgt $W_A\/e = 1","90$ V, also
   $W_A = 1","90$ eV.
