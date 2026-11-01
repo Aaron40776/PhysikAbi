@@ -43,6 +43,8 @@ den Niveaus kleiner; $E = 0$ ist die Ionisationsgrenze.
     Balmer-Linien ($n = 2$ als Ziel) und die Lyman-$alpha$-Linie $2 -> 1$.],
 )
 
+Die eingezeichneten Pfeile enden bei $n = 2$; ihre Länge ist die Photonenenergie, und je kürzer der Pfeil, desto größer die Wellenlänge.
+
 #table(
   columns: (1fr, 1.6fr),
   [Frage im Abitur], [Vorgehen],
@@ -114,6 +116,8 @@ Energie, weil ein Teil als Wärme abgegeben wird (Stokes-Verschiebung).
   caption: [Franck-Hertz-Kurve: Der Abstand der Minima ist die Anregungsspannung
     $Delta U approx 4","9$ V.],
 )
+
+Die Minima liegen bei 4,9 V, 9,8 V und 14,7 V; der konstante Abstand ist der Beweis, dass die Atome nur feste Energiebeträge aufnehmen.
 
 #herleitung[
   *Anregungsenergie und Emissionswellenlänge* \

@@ -30,6 +30,8 @@ Die Minima liegen bei $Delta s = (2n+1) lambda\/2$. Das ist Wellenoptik, kein Qu
   caption: [Klassische Intensitätsverteilung: äquidistante Maxima, dazwischen Nullstellen.],
 )
 
+Die Kurve fällt vom Zentralmaximum zu den Nullstellen bei $Delta s = (2n+1) lambda\/2$ ab; die Lage der Maxima hängt nur vom Verhältnis $d\/lambda$ ab.
+
 = Quanten: ein Quant nach dem anderen
 
 #experiment[
@@ -98,11 +100,15 @@ $ Delta x dot Delta p >= frac(h, 4 pi) $
     Messungenauigkeit, sondern Eigenschaft des Zustands.],
 )
 
+Im Bild ist das Wellenpaket schmal im Ort und breit im Impuls; verkleinert man die Ortsbreite, wird die Impulsverteilung breiter.
+
 #figure(
   image("../fig/wellenfunktion.svg", width: 84%),
   caption: [Wellenfunktion und Betragsquadrat: Nur $|psi|^2$ ist messbar (Aufenthalts­wahr­
     scheinlichkeit).],
 )
+
+Die obere Kurve ist die Wellenfunktion selbst, die untere ihr Betragsquadrat; nur die untere gibt an, wo das Teilchen mit welcher Wahrscheinlichkeit gefunden wird.
 
 #achtung[
   $Delta x$ ist die *Streuung* der Messwerte bei vielen gleichen Präparationen, nicht der Fehler

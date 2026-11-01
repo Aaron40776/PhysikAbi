@@ -60,6 +60,8 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   caption: [Zur Erinnerung: Die Intensitätsverteilung hinter einem Doppelspalt ist $I tilde cos^2$ – die Streifen sind äquidistant, solange die Kleinwinkelnäherung gilt.],
 )
 
+Wer diese Verteilung einmal im Kopf hat, erkennt sie in jeder Aufgabe wieder: äquidistante Maxima, dazwischen Minima.
+
 = Teil A – Aufgaben
 
 == Block A: Wellen und Interferenz
@@ -540,11 +542,13 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   Phasenverschiebung: $Delta phi = 2 pi Delta s\/lambda = 2 pi dot 500\/633 = 4","96$ rad,
   also $4","96\/(2 pi) = 0","79$ Umläufe.
 
-  (12.2) $P_1 = cos^2(Delta phi\/2) = cos^2(2","48) = 0","62$ (also etwa 62 %);
-  $P_2 = sin^2(2","48) = 0","38$. Kontrolle: $0","62 + 0","38 = 1$.
+  (12.2) Nach der Konvention des Schulmaterials ist D1 bei $Delta phi = 0$ dunkel:
+  $P_1 = sin^2(Delta phi\/2) = sin^2(2","48) = 0","38$ (also etwa 38 %);
+  $P_2 = cos^2(2","48) = 0","62$. Kontrolle: $0","38 + 0","62 = 1$.
 
-  (12.3) $P_1 = 0$ erfordert $Delta phi\/2 = pi\/2$, also $Delta s = lambda\/2 = 317$ nm. Damit
-  $(n-1) d = 317$ nm $=> d = 317\/0","5 = 633$ nm $approx 0","63$ µm.
+  (12.3) $P_1 = 0$ erfordert $Delta phi\/2 = k pi$, also $Delta s = k lambda$. Ohne Glas ist D1
+  ohnehin dunkel; die kleinste Dicke mit $d > 0$ gehört zu $k = 1$: $Delta s = lambda = 633$ nm,
+  also $(n-1) d = 633$ nm $=> d = 633\/0","5 = 1266$ nm $approx 1","27$ µm.
 
   (12.4) Das Photon wird mit Sicherheit in *einem* der beiden Detektoren nachgewiesen (das
   Interferometer hat nur diese beiden Ausgänge). Die Wahrscheinlichkeiten sind daher vollständig

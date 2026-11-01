@@ -22,6 +22,8 @@
   caption: [Landkarte der Themen. Waagerecht: die drei Entwicklungslinien. Senkrecht: die Übergänge, an denen die Gebiete sich berühren.],
 )
 
+Liest man die Karte von links nach rechts, wiederholt sich derselbe Dreischritt – Beobachtung, Modell, Formel – auf jeder Stufe; die senkrechten Pfeile markieren die Stellen, an denen ein Thema das nächste vorbereitet.
+
 = Drei rote Fäden
 
 == Faden 1: Von der Schwingung zur Wellenlängenmessung (Skript 1)

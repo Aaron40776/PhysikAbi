@@ -420,3 +420,47 @@ ax2.set_ylim(-4, 4)
 ax2.grid(alpha=0.25)
 fig.tight_layout()
 save(fig, "regression")
+
+# ------------------------------------------------- Michelson (Skript 1)
+fig, ax = plt.subplots(figsize=(6.4, 3.0))
+ax.set_xlim(0, 10); ax.set_ylim(0, 5); ax.axis("off")
+
+# Laser
+ax.add_patch(Rectangle((0.2, 2.2), 0.9, 0.6, fc=GREY, ec="none"))
+ax.text(0.65, 1.95, "Laser", ha="center", fontsize=8, color=GREY)
+ax.annotate("", xy=(3.2, 2.5), xytext=(1.15, 2.5),
+            arrowprops=dict(arrowstyle="->", color=RED, lw=1.4))
+
+# Strahlteiler (45 Grad)
+ax.plot([3.2, 4.6], [1.5, 2.9], color=BLUE, lw=2.2)
+ax.text(4.05, 1.45, "Strahlteiler", fontsize=8, color=BLUE, ha="center")
+
+# Weg nach oben zum festen Spiegel
+ax.annotate("", xy=(3.2, 4.2), xytext=(3.2, 2.6),
+            arrowprops=dict(arrowstyle="->", color=RED, lw=1.2))
+ax.add_patch(Rectangle((2.75, 4.2), 0.9, 0.18, fc=TEAL, ec="none"))
+ax.text(3.2, 4.55, "fester Spiegel", ha="center", fontsize=8, color=TEAL)
+ax.annotate("", xy=(3.5, 2.75), xytext=(3.5, 4.15),
+            arrowprops=dict(arrowstyle="->", color=RED, lw=1.0, ls=":"))
+
+# Weg nach rechts zum beweglichen Spiegel
+ax.annotate("", xy=(7.6, 2.5), xytext=(4.4, 2.5),
+            arrowprops=dict(arrowstyle="->", color=RED, lw=1.2))
+ax.add_patch(Rectangle((7.6, 1.9), 0.18, 1.2, fc=ORANGE, ec="none"))
+ax.text(8.55, 2.5, "beweglicher\nSpiegel", fontsize=8, color=ORANGE, va="center")
+ax.annotate("", xy=(7.45, 2.85), xytext=(4.5, 2.85),
+            arrowprops=dict(arrowstyle="->", color=RED, lw=1.0, ls=":"))
+
+# Verschiebung Delta d
+ax.annotate("", xy=(7.95, 1.6), xytext=(7.95, 1.0),
+            arrowprops=dict(arrowstyle="<->", color=ORANGE, lw=0.9))
+ax.text(8.15, 1.25, "Δd", fontsize=8, color=ORANGE)
+
+# Schirm
+ax.add_patch(Rectangle((4.9, 3.5), 0.12, 1.3, fc=GREY, ec="none"))
+ax.annotate("", xy=(4.96, 3.4), xytext=(4.3, 2.7),
+            arrowprops=dict(arrowstyle="->", color=RED, lw=1.2))
+ax.text(5.25, 4.15, "Schirm", fontsize=8, color=GREY)
+ax.text(2.0, 0.6, "Gangunterschied  Δs = 2·Δd", fontsize=9, color=BLUE)
+
+save(fig, "michelson")

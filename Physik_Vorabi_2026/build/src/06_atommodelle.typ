@@ -33,6 +33,8 @@
   caption: [Streubahnhänge vom Winkel: große Ablenkung nur bei sehr kleinem Abstand zum Kern.],
 )
 
+Die Bahnen krümmen sich nur bei kleinem Stoßparameter stark; bei großem Abstand zum Kern bleibt die Bahn fast gerade.
+
 #herleitung[
   *Kernradius-Abschätzung aus der Coulomb-Energie* \
   1. Das Alpha-Teilchen wird bis zum minimalen Abstand $r_min$ abgebremst:
@@ -80,6 +82,8 @@
     entspricht $E = 0$ (Ionisation). Pfeile nach unten sind Emissionen.],
 )
 
+Im Termschema rücken die Niveaus nach oben zusammen und laufen gegen $E = 0$; nach unten werden die Abstände größer.
+
 #merksatz[
   Alles Rechnen am Termschema ist eine Zeile:
 
@@ -125,6 +129,8 @@
     oben – das Gegenteil zum Coulomb-Topf.],
 )
 
+Die Abstände zwischen den Niveaus wachsen hier mit $n$, während sie beim Coulomb-Topf kleiner werden – das ist der qualitative Unterschied beider Potenziale.
+
 #table(
   columns: (1fr, 1fr),
   [Bohr], [Quantenmechanik],
@@ -138,6 +144,8 @@
   image("../fig/orbitale.svg", width: 82%),
   caption: [s- und p-Orbital als Wahrscheinlichkeitsflächen; Formen folgen aus $l$.],
 )
+
+Die Formen folgen aus der Quantenzahl $l$: s-Orbitale sind kugelsymmetrisch, p-Orbitale haben zwei Keulen längs einer Achse.
 
 = Aufgaben
 

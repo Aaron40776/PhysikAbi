@@ -24,6 +24,8 @@
     lang; über ein Phasenplättchen lässt sich ein Zusatz $Delta phi$ einstellen.],
 )
 
+Beide Teilstrahlen legen im Bild gleich lange Wege zurück; jede zusätzliche Phasenverschiebung im oberen Arm wirkt sich deshalb eins zu eins auf den Gangunterschied am zweiten Strahlteiler aus.
+
 #table(
   columns: (auto, 1fr),
   [Bauteil], [Funktion],
@@ -36,8 +38,10 @@
 
 = Rechnung mit Amplituden
 
-Jeder Strahlteiler erzeugt Faktoren $1 \/ sqrt(2)$, jede Reflexion an einem Strahlteiler einen
-Phasensprung von $pi$. Die Amplituden am Ausgang sind
+Jeder Strahlteiler halbiert die Amplitude ($1 \/ sqrt(2)$). Bei Reflexion am Strahlteiler springt
+die Phase um $pi\/2$, an den Spiegeln um $pi$ – so modelliert es auch das Schulmaterial. Für die
+beiden Wege zu D1 bleibt damit eine Differenz von $pi$, zu D2 von $0$. Die Amplituden am Ausgang
+sind
 
 $ psi_(D 1) = frac(1, 2) (1 - e^(i Delta phi)), quad psi_(D 2) = frac(i, 2) (1 + e^(i Delta phi)) $
 
@@ -46,9 +50,10 @@ Damit gilt für die Zählraten
 $ I_1 = sin^2 frac(Delta phi, 2), quad I_2 = cos^2 frac(Delta phi, 2) $
 
 #merksatz[
-  Bei $Delta phi = 0$ landet *alles* in D2, bei $Delta phi = pi$ alles in D1. Die beiden
-  Ausgänge sind komplementär: $I_1 + I_2 = 1$. Schon eine kleine Phasenänderung $delta$ (Gas,
-  Glasplatte, Spiegelverschiebung) ist messbar – daher die hohe Empfindlichkeit.
+  *Konvention:* D1 ist der Ausgang, der bei $Delta phi = 0$ dunkel ist, D2 der helle; bei
+  $Delta phi = pi$ ist es umgekehrt. Die beiden Ausgänge sind komplementär: $I_1 + I_2 = 1$.
+  Schon eine kleine Phasenänderung $delta$ (Gas, Glasplatte, Spiegelverschiebung) ist messbar –
+  daher die hohe Empfindlichkeit.
 ]
 
 #figure(
@@ -56,6 +61,8 @@ $ I_1 = sin^2 frac(Delta phi, 2), quad I_2 = cos^2 frac(Delta phi, 2) $
   caption: [Zeigerbild: Die beiden Amplituden schließen den Winkel $Delta phi$ ein; die
     Resultierende bestimmt die Zählrate.],
 )
+
+Im Zeigerbild addieren sich die beiden Amplituden vektoriell; bei $Delta phi = 0$ zeigen sie in entgegengesetzte Richtungen und löschen sich aus – das ist D1.
 
 = Welcher-Weg im MZI
 

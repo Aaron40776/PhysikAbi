@@ -55,6 +55,8 @@ $ E_"[eV]" = frac(1239","8, lambda_"[nm]") $
     Grenzfrequenz $f_G$.],
 )
 
+Die Gerade schneidet die Frequenzachse bei $f_G$; erst oberhalb dieser Frequenz verlassen Elektronen das Metall, und die Steigung ist für alle Metalle dieselbe.
+
 = Der äußere Photoeffekt
 
 #table(
@@ -86,6 +88,8 @@ $ E_"[eV]" = frac(1239","8, lambda_"[nm]") $
   caption: [LED-Methode: Einsatzspannung $U_S$ über der Frequenz. Die Steigung der
     Ausgleichsgeraden ist $h\/e$, der Achsenabschnitt hängt am Kontaktmaterial.],
 )
+
+Trägt man die gemessenen Einsatzspannungen über der Frequenz auf, liegen die Punkte auf einer Geraden; aus der Steigung folgt $h$, aus dem Achsenabschnitt die Austrittsarbeit des Kontaktmaterials.
 
 #achtung[
   Die *Intensität* bestimmt die Zahl der Photonen (den Strom), nicht die Energie der einzelnen

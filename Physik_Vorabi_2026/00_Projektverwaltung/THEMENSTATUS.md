@@ -3,7 +3,7 @@
 Legende: ✅ vollständig · 🔶 im Skript behandelt, aber knapp · ❌ nicht im Skript
 Ort = Abschnittsnummer in der aktuellen Fassung (Stand 01.11.2026, nach der Straffung).
 
-## A. Wellen, Schwingungen, Interferenz → Skript 1 (13 Abschnitte)
+## A. Wellen, Schwingungen, Interferenz → Skript 1 (15 Abschnitte)
 
 | Thema | Ort | Status |
 |---|---|---|
@@ -11,7 +11,7 @@ Ort = Abschnittsnummer in der aktuellen Fassung (Stand 01.11.2026, nach der Stra
 | Transversal-/Longitudinalwellen | 4 | ✅ |
 | Amplitude, Frequenz, Periodendauer, Wellenlänge | 1 | ✅ |
 | Ausbreitungsgeschwindigkeit $c = lambda f$ | 1, 4 | ✅ |
-| Phasenverschiebung, Phasendifferenz | 2, 12 | ✅ |
+| Phasenverschiebung, Phasendifferenz | 2, 14 | ✅ |
 | Harmonische Schwingung, Zeigerdarstellung | 1, 2 | ✅ |
 | Superposition, konstruktiv/destruktiv | 2 | ✅ |
 | Gangunterschied | 2, 6 | ✅ |
@@ -24,8 +24,8 @@ Ort = Abschnittsnummer in der aktuellen Fassung (Stand 01.11.2026, nach der Stra
 | Resonanz, Resonanzfrequenz, Dämpfung | 3 | ✅ |
 | Gitter | 7 | ✅ |
 | Bragg-Reflexion | 8 | ✅ |
-| Polarisation, Malus | – | ❌ nur Formelblatt (Malus) und Schulmaterial |
-| Michelson-Interferometer | – | ❌ nur Experimentesammlung und Formelblatt |
+| Polarisation, Malus | 10 | ✅ |
+| Michelson-Interferometer | 11 | ✅ |
 
 ## B. Lichtquanten und Planck → Skript 2 (9 Abschnitte)
 
@@ -118,9 +118,8 @@ Siehe D: Abschnitte 3 und 5. ✅
 
 ## Zusammenfassung
 
-Sieben Themen sind vollständig abgedeckt (A–H mit Ausnahme der vier ❌-Zeilen). Offen sind
-Polarisation/Malus, Michelson-Interferometer (beide im KC enthalten, nur in Formelblatt,
-Experimentesammlung und Schulmaterial erklärt), Koinzidenzmethode (nur Experimentesammlung) und
-Quantenradierer/Bomben-Test (nur Schulmaterial). Diese vier Lücken sind in
-`06_Qualitaetskontrolle/pruefbericht.md`, Abschnitt 5, als Ergänzungsvorschläge mit Umfang
-gelistet. Atomkern ist nicht Teil der vorgegebenen Themenliste.
+A–H sind abgedeckt. Polarisation/Malus (KC eA Z. 111–112) und das Michelson-Interferometer
+(KC eA Z. 115–117) sind seit dem 01.11. in Skript 1, Abschnitte 10 und 11, enthalten. Offen
+bleiben nur noch die Koinzidenzmethode (nur Experimentesammlung) und Quantenradierer/Bomben-Test
+(nur Schulmaterial) – beide sind im KC nicht als eigenständige Kompetenz ausgewiesen. Atomkern
+ist nicht Teil der vorgegebenen Themenliste.

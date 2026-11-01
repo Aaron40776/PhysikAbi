@@ -28,24 +28,25 @@ nachvollziehbaren Lösungsweg.
 
 | Dokument | Seiten | Wörter | Note | P1 | P2 | P3 | Kürzung (S.) | Ergänzung (Sätze) |
 |---|---|---|---|---|---|---|---|---|
-| 01 Wellen und Interferenz | 9 | 2 613 | B | 1 | 3 | 2 | 0,5 | 12 |
-| 02 Lichtquanten und Planck | 6 | 1 930 | C | 2 | 2 | 2 | 0,3 | 2 |
-| 03 Elektronenwellen und Beugung | 7 | 1 787 | B | 0 | 2 | 2 | 0,2 | 1 |
-| 04 Doppelspalt und Quantenphysik | 6 | 1 637 | B | 0 | 3 | 1 | 0,3 | 3 |
-| 05 MZI / Welcher Weg / QED | 6 | 1 810 | B | 0 | 2 | 1 | 0,2 | 1 |
-| 06 Atommodelle und Orbitalmodell | 7 | 1 673 | C | 1 | 2 | 1 | 0,3 | 4 |
-| 07 Spektren und Franck-Hertz | 6 | 1 797 | D | 3 | 2 | 2 | 0,2 | 1 |
-| Formelblatt | 5 | 1 718 | B | 0 | 3 | 2 | 0,5 | 0 |
+| 01 Wellen und Interferenz | 10 | 3 278 | A | 1 | 3 | 2 | 0,5 | 0 |
+| 02 Lichtquanten und Planck | 6 | 1 980 | B | 2 | 2 | 2 | 0,3 | 0 |
+| 03 Elektronenwellen und Beugung | 7 | 1 829 | A | 0 | 2 | 2 | 0,2 | 0 |
+| 04 Doppelspalt und Quantenphysik | 6 | 1 705 | A | 0 | 3 | 1 | 0,3 | 0 |
+| 05 MZI / Welcher Weg / QED | 6 | 1 898 | A | 0 | 2 | 1 | 0,2 | 0 |
+| 06 Atommodelle und Orbitalmodell | 7 | 1 751 | B | 1 | 2 | 1 | 0,3 | 0 |
+| 07 Spektren und Franck-Hertz | 6 | 1 842 | B | 3 | 2 | 2 | 0,2 | 0 |
+| Formelblatt | 5 | 1 731 | A | 0 | 3 | 2 | 0,5 | 0 |
 | Experimentesammlung | 5 | 3 532 | B | 0 | 2 | 1 | 1,0 | 0 |
-| Gesamtübersicht | 5 | 1 686 | A | 0 | 1 | 1 | 0,5 | 0 |
-| Abitur-Analyse | 5 | 1 831 | C | 1 | 2 | 1 | 0,5 | 0 |
+| Gesamtübersicht | 5 | 1 719 | A | 0 | 1 | 1 | 0,5 | 0 |
+| Abitur-Analyse | 5 | 1 831 | B | 1 | 2 | 1 | 0,5 | 0 |
 | Last-Minute-Lernzettel | 4 | 1 358 | B | 0 | 2 | 2 | 0 | 0 |
-| Übungsheft (20 Aufgaben) | 13 | 6 579 | C | 4 | 2 | 2 | 0 | 1 |
+| Übungsheft (20 Aufgaben) | 13 | 6 624 | B | 4 | 2 | 2 | 0 | 0 |
 | Regression und Auswertung | 7 | 2 770 | B | 1 | 2 | 1 | 0,5 | 0 |
-| Lernfahrplan | 4 | 1 107 | D | 2 | 1 | 1 | 1,0 | 0 |
-| **Summe** | **95** | **33 828** | | **15** | **31** | **22** | **≈5,5** | **≈26** |
+| Lernfahrplan | 4 | 1 107 | B | 2 | 1 | 1 | 1,0 | 0 |
+| **Summe** | **96** | **34 955** | | **15** | **31** | **22** | **≈5,5** | **0** |
 
-Seiten/Wörter aus den gebauten PDFs (`get_text()`), nicht aus den Quellen.
+Seiten/Wörter aus den gebauten PDFs (`get_text()`), nicht aus den Quellen. Stand nach der
+P2-Umsetzung vom 01.11. (Abschnitt 11); die P1/P2/P3-Zahlen sind die der Erstprüfung.
 Noten: A = ohne Befund, B = Kleinigkeiten, C = mehrere inhaltliche Mängel, D = nicht
 gebrauchsfähig, bis die P1 behoben sind.
 
@@ -563,6 +564,84 @@ Alle 15 P1-Befunde sind behoben; der Nachweis ist jeweils im neu gebauten PDF ge
 **Prüfung nach dem Neubau:** 95 Seiten, 33 828 Wörter, 0 Formelreste, 0 Textüberläufe,
 0 ungerenderte Klammerlisten, 22 SVGs eingebunden, `build_all.sh` ohne Fehler.
 Die P2- und P3-Befunde sind **nicht** angefasst; sie stehen in Abschnitt 3 und warten auf Freigabe.
+
+---
+
+## 11. P2-Umsetzung auf Freigabe (01.11.2026)
+
+### 11.1 Detektor-Konvention: was das Kerncurriculum sagt
+
+Die Frage war, ob das KC die Zuordnung „D1 hell oder dunkel bei $Delta phi = 0$“ festlegt.
+**Es tut es nicht.** Die MZI-Kompetenzen der Schule lauten (KC eA d13,
+`01_Schulwebsite/materialien/docs/d13/01infos/kerncurriculumea/docs.md`, Z. 19–21):
+
+> „Ich kann den Aufbau eines Mach-Zehnder-Interferometers beschreiben.“
+> „Ich kann ein Experiment mit dem Mach-Zehnder-Interferometer mit einzelnen Quantenobjekten
+> unter den Gesichtspunkten Komplementarität und Nichtlokalität interpretieren.“
+> „Ich kann ein Experiment mit dem Mach-Zehnder-Interferometer analog zu einem
+> delayed-choice-Experiment beschreiben.“
+
+Kein Satz zur Bezeichnung der Ausgänge. Das KC regelt Kompetenzen, keine Symbolkonventionen.
+
+**Das Schulmaterial legt es aber fest**
+(`01_Schulwebsite/materialien/docs/d13/13quantenobjekte/06machzehnderinterferometer/docs.md`,
+Abschnitt „Beobachtungen“, Z. 198):
+
+> „Wenn der Phasenschieber auf 0 gestellt ist, registriert Detektor 1 **keine Intensität** und
+> Detektor 2 **volle Intensität**.“
+
+Begründung dort (Z. 202–205): am Strahlteiler Phasensprung $pi\/2$ bei Reflexion, am Spiegel $pi$;
+am Detektor 1 ist die Phasendifferenz der Zeiger $pi$, am Detektor 2 null.
+
+**Damit gilt: D1 dunkel bei $Delta phi = 0$**, also $P_"D1" = sin^2(Delta phi\/2)$ und
+$P_"D2" = cos^2(Delta phi\/2)$. Skript 5 hatte das Ergebnis bereits richtig, aber mit einer
+falschen Begründung („jede Reflexion an einem Strahlteiler einen Phasensprung von $pi$“).
+
+### 11.2 Was daraufhin geändert wurde
+
+| Datei | Änderung |
+|---|---|
+| `05_mzi.typ:39` | Begründung auf $pi\/2$ (Strahlteiler) und $pi$ (Spiegel) umgestellt, wie im Schulmaterial |
+| `05_mzi.typ:48` | Merksatz beginnt jetzt mit der Konvention („D1 ist der Ausgang, der bei $Delta phi = 0$ dunkel ist“) |
+| `f1_formelblatt.typ:133` | $P_"D1" = cos^2$ → $P_"D1" = sin^2$, $P_"D2" = cos^2$ ergänzt, Gültigkeit benannt |
+| `f6_uebungen.typ:543` | Lösung 12.2 neu gerechnet: $P_1 = 0,38$, $P_2 = 0,62$ |
+| `f6_uebungen.typ:547` | Lösung 12.3 neu gerechnet: kleinste Dicke $d = lambda\/(n-1) = 1,27$ µm (vorher 0,63 µm, das war die Dunkelstelle von D2) |
+
+### 11.3 Curriculumlücken geschlossen
+
+KC-Belege: Polarisation in `d12/01infos/kerncurriculumea/docs.md`, Z. 111–113 („Polarisierbarkeit
+als Unterscheidungsmerkmal zwischen transversalen und longitudinalen Wellen“, „Winkelabhängigkeit
+der Intensität … bei einem Paar von Polarisatoren“); Michelson ebenda Z. 115–117 („Interferenz-
+phänomene … Michelson-Interferometer“, „technische Verwendung … zum Nachweis kleiner
+Längenänderungen“).
+
+Neu in `01_wellen.typ`:
+
+- Abschnitt 10 „Polarisation“ (Polarisator/Analysator als Definition, Malus-Gesetz, Merksatz zur
+  Unterscheidung transversal/longitudinal).
+- Abschnitt 11 „Michelson-Interferometer“ (Aufbau, $Delta s = 2 Delta d$, $Delta d = N lambda\/2$,
+  neue Grafik `michelson.svg`, Deutung im Text). Die Grafik fehlte im Bestand und wurde mit
+  `make_figures.py` erzeugt; das Skript enthält die Funktion jetzt dauerhaft.
+
+### 11.4 Abbildungen gedeutet
+
+Alle 27 `image()`-Aufrufe haben jetzt einen Satz im Fließtext, der die Aussage der Grafik
+interpretiert (nicht nur die Bildunterschrift wiederholt). Verteilung: Skript 1 neun (inkl.
+Michelson), Skript 2 zwei, Skript 3 zwei, Skript 4 drei, Skript 5 zwei, Skript 6 vier, Skript 7
+zwei, Gesamtübersicht eins, Übungsheft eins. Damit ist Abschnitt 9.3 („keine der 26 Abbildungen
+wird im Text gedeutet“) erledigt.
+
+### 11.5 Stand
+
+96 Seiten, 34 955 Wörter, 0 Formelreste, 0 Textüberläufe, 23 SVGs (22 + Michelson).
+Skript 1 wuchs von 9 auf 10 Seiten, weil zwei Abschnitte hinzukamen; die Abschnittsnummern
+danach (Experiment 12, Aufgaben 13, Fehler 14, Wiederholung 15) sind in `THEMENSTATUS.md` und
+in der Kurzweg-Tabelle des Lernfahrplans nachgezogen.
+
+**Noch offen (P2/P3):** $Delta x Delta p$ als $h\/(4 pi)$ im Skript gegen $h$ im Formelblatt
+(„Schulnotation“), „fallende Gerade“ in Übungsheft 5.2, Pauli/Elektronenkonfiguration nur als
+Tabellenzelle, Koinzidenzmethode nur in der Experimentesammlung, Quantenradierer nur im
+Schulmaterial.
 
 ---
 

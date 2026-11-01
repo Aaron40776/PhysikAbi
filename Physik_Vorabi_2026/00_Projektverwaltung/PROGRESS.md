@@ -179,3 +179,28 @@ Grafiken, Polarisation/Michelson/Pauli ergänzen, „fallende Gerade“ in Übun
 
 **Umgebung:** matplotlib 3.11.2 nachinstalliert (Projektabhängigkeit für `make_figures.py`;
 die ausgelieferten SVGs stammen aus derselben Version).
+
+## Nachtrag 7 (01.11.2026) – P2 umgesetzt: Konvention, Abbildungen, Curriculumlücken
+
+**Konvention nach Schulmaterial, nicht nach KC.** Das KC (d13 eA, Z. 19–21) fordert nur
+„Aufbau beschreiben“, „Komplementarität/Nichtlokalität interpretieren“, „delayed choice“ – keine
+Festlegung, welcher Ausgang bei $Delta phi = 0$ hell ist. Das Schulmaterial legt es fest
+(`06machzehnderinterferometer/docs.md`, Z. 198): „Wenn der Phasenschieber auf 0 gestellt ist,
+registriert Detektor 1 keine Intensität und Detektor 2 volle Intensität“, begründet mit
+$pi\/2$-Sprung am Strahlteiler und $pi$ am Spiegel (Z. 202–205). Also gilt
+$P_"D1" = sin^2(Delta phi\/2)$.
+
+Angepasst: `05_mzi.typ` (Begründung + Merksatz mit Konvention), `f1_formelblatt.typ` (P_D1/P_D2
+getauscht, Gültigkeit benannt), `f6_uebungen.typ` (12.2: 0,38/0,62; 12.3: 1,27 µm statt 0,63 µm).
+
+**Curriculumlücken geschlossen.** Neu in `01_wellen.typ`: Abschnitt 10 „Polarisation“
+(Polarisator/Analysator, Malus-Gesetz) und Abschnitt 11 „Michelson-Interferometer“
+($Delta s = 2 Delta d$, $Delta d = N lambda\/2$) – beide mit KC-Beleg (d12 eA Z. 111–113 und
+115–117). Michelson-Grafik neu erzeugt (`make_figures.py`, `fig/michelson.svg`), Funktion jetzt
+fester Bestandteil des Skripts.
+
+**Abbildungen gedeutet.** 27 deutende Sätze im Fließtext, je einer pro `image()`-Aufruf.
+
+**Stand:** 96 Seiten (Skript 1: 10 statt 9), 34.955 Wörter, 0 Formelreste, 0 Textüberläufe,
+23 SVGs. THEMENSTATUS, README und die Kurzweg-Tabelle im Lernfahrplan nachgezogen
+(Skript 1 jetzt Abschnitte 14/15 statt 12/13).
