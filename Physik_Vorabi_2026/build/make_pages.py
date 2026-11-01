@@ -16,7 +16,8 @@ import pymupdf
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKRIPTE = ROOT / "03_Lernskripte"
 ZUSATZ = ROOT / "04_Zusatzmaterial"
-WEB = pathlib.Path(__file__).resolve().parent / "web"
+BUILD = pathlib.Path(__file__).resolve().parent
+WEB = BUILD / "web"
 GLOSSAR = pathlib.Path(__file__).resolve().parent / "glossar.json"
 VENDOR = pathlib.Path(__file__).resolve().parent / "vendor" / "pdfjs"
 
@@ -145,7 +146,9 @@ def dokument(pdf):
 
 
 def text_url(doc, seite=1):
-    return "lesen.html?doc=" + quote(doc["id"], safe="") + "&seite=" + str(seite)
+    if doc["id"] == "Glossar":
+        return "glossar.html"
+    return "lesen/" + quote(doc["id"], safe="") + ".html"
 
 
 def pdf_url(doc, seite=None, q=None):
@@ -216,8 +219,8 @@ def main():
     (out / "suche.json").write_text(roh, encoding="utf-8")
     stempel = hashlib.sha256(roh.encode())
     stempel.update(GLOSSAR.read_bytes())
-    for name in ("style.css", "suche.js", "index.js", "suche-seite.js", "theme.js",
-                 "glossar.js", "lesen.js"):
+    for name in ("style.css", "lesen.css", "suche.js", "index.js", "suche-seite.js", "theme.js",
+                 "glossar.js", "lesen-static.js"):
         stempel.update((WEB / name).read_bytes())
     version = stempel.hexdigest()[:10]
 
@@ -239,8 +242,8 @@ def main():
         "__ZIPMB__": f"{zip_pfad.stat().st_size / 1e6:.1f}".replace(".", ","),
         "__V__": version,
     }
-    for name in ("style.css", "suche.js", "index.js", "suche-seite.js", "theme.js",
-                 "glossar.js", "lesen.js"):
+    for name in ("style.css", "lesen.css", "suche.js", "index.js", "suche-seite.js", "theme.js",
+                 "glossar.js", "lesen-static.js"):
         shutil.copy2(WEB / name, out / "assets" / name)
 
     if not VENDOR.is_dir():
@@ -255,6 +258,19 @@ def main():
         for k, v in werte.items():
             text = text.replace(k, v)
         (out / name).write_text(text, encoding="utf-8")
+
+    lesen_quelle = BUILD / "lesen"
+    if not lesen_quelle.is_dir():
+        raise SystemExit("Leseseiten fehlen: build/make_lesen.py ausführen")
+    lesen_ziel = out / "lesen"
+    if lesen_ziel.exists():
+        shutil.rmtree(lesen_ziel)
+    lesen_ziel.mkdir()
+    for html_datei in sorted(lesen_quelle.glob("*.html")):
+        text = html_datei.read_text(encoding="utf-8")
+        for k, v in werte.items():
+            text = text.replace(k, v)
+        (lesen_ziel / html_datei.name).write_text(text, encoding="utf-8")
 
     print(f"{werte['__GESAMT__']} Seiten, {werte['__ANZAHL__']} PDFs, "
           f"Index {len(roh.encode('utf-8')) / 1000:.0f} kB, ZIP {werte['__ZIPMB__']} MB "

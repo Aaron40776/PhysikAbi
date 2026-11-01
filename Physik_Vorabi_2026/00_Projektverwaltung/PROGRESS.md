@@ -478,3 +478,23 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Prüfstand:** `qa_pdf.py` 110 Seiten, 21.309 Wörter, 0 Überläufe/Formelreste;
   `check_physics.py` 14/14; `test_pages.py` 48/48; `test_suche.js` 18/18;
   `check_figs.py` 0 Überlappungen, 9 Hinweise „Text außerhalb“.
+
+
+## Nachtrag 25 (01.11.2026) – Mobile HTML-Leseseiten statt PDF-Zoom
+
+- **Neue Lesefassung:** `build/make_lesen.py` exportiert jede Typst-Quelle mit
+  `typst compile --features html` nach `build/lesen/`. Die 16 Seiten enthalten echtes
+  MathML, eingebettete SVGs, Tabellen und ein semantisches Inhaltsverzeichnis; es gibt
+  keine Seitenumbrüche und keinen PDF-Viewer-Zwang.
+- **Mobil:** eigene `lesen.css` mit serifenloser Kopfzeile, 17–18 px Fließtext,
+  68-zeichengerechter Zeilenlänge, lokal scrollbaren Formeln/Tabellen, A−/A+,
+  Darkmode und einblendbarem Inhaltsverzeichnis. Bei 390 und 500 px geprüft: kein
+  horizontaler Seitenüberlauf; breite Formeln und Tabellen scrollen nur in ihrem Kasten.
+- **Verknüpfung:** Startseite/„Als Text lesen“ zeigen auf `lesen/<Dokument>.html`;
+  `lesen.html` ist nur noch Einstieg und leitet alte `?doc=`-Links weiter. Der
+  „Weiterlesen“-Knopf speichert die Scrollposition und springt mit `?weiter=1` zurück.
+- **Prüfstand:** `test_pages.py` 51/51 (inkl. 16 Leseseiten, MathML, Assets, Theme);
+  PDFs unverändert 110 Seiten, 21.309 Wörter; Leseseiten byte-identisch reproduzierbar.
+- **Offen:** Themenumfang prüfen – Quantenradierer (Skript 4 §4, Skript 5 §3),
+  Delayed Choice und QED sind Ergänzungen, keine eigenen KC-Kompetenzen. Sie sollten
+  als Vertiefung markiert oder aus dem Hauptpfad genommen werden; Entscheidung offen.

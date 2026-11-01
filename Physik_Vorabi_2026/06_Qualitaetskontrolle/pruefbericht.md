@@ -1136,3 +1136,17 @@ Farbmasken und Bounding-Boxes im gerenderten Raster; alle Bauteile und Strahlfar
 **Offen:** Die Prüfbericht-Abschnitte 14.5–14.7 beschreiben den Stand vor diesem Nachtrag
 (16 PDFs, 105 Seiten). Die dort genannten Zahlen sind historisch; aktuell gelten die Werte
 in 15.4.
+
+### 15.8 Mobile HTML-Leseseiten (01.11.2026)
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| L4 | `build/lesen/`, `build/make_lesen.py` | Die Textansicht war ein PDF.js-Viewer mit Seitenzoom; auf dem Handy musste man ständig zoomen. | 16 statische Leseseiten aus den Typst-Quellen (`typst --features html`): MathML, eingebettete SVGs, Tabellen, Inhaltsverzeichnis; keine Seitenumbrüche. |
+| L5 | `build/web/lesen.css`, `lesen-static.js` | Keine mobilen Leseeinstellungen. | 17–18 px Fließtext, Zeilenlänge ~68 Zeichen, A−/A+, Darkmode, einklappbares Inhaltsverzeichnis, lokales Scrollen für breite Formeln/Tabellen. |
+| L6 | `build/make_pages.py`, `index.js` | Links zeigten auf `lesen.html?doc=…`; der alte Lesestand passte nicht mehr. | Direkte Links `lesen/<Dokument>.html`; `lesen.html` leitet alte Links weiter; „Weiterlesen“ speichert Scrollposition (`?weiter=1`). |
+
+Prüfungen: `test_pages.py` **51/51**; lokale Linkprüfung **0 kaputte Verweise**;
+Layout bei 390 px und 500 px: `scrollWidth == innerWidth`, kein horizontaler Seitenüberlauf;
+breite Formeln/Tabellen scrollen nur im eigenen Kasten. Leseseiten sind byte-identisch
+reproduzierbar. PDFs unverändert: 110 Seiten, 21.309 Wörter, `qa_pdf.py` 0 Befunde,
+`check_physics.py` 14/14, `check_sources.py` und `check_markdown.py` je 0 Befunde.

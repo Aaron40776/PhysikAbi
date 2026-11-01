@@ -60,7 +60,7 @@ Voraussetzung: Typst 0.15+, Python 3 mit matplotlib (nur für neue Grafiken), py
 ```bash
 cd Physik_Vorabi_2026/build
 python3 make_figures.py     # Grafiken erzeugen (SVG)
-./build_all.sh              # alle 17 PDFs kompilieren (Glossar aus build/glossar.json)
+./build_all.sh              # 17 PDFs + 16 mobile HTML-Leseseiten (build/lesen/)
 python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
 ```
 

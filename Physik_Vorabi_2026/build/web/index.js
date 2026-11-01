@@ -59,10 +59,10 @@
   karten.forEach(function (karte) {
     var link = karte.querySelector(".weiter");
     var stand = weiter[karte.getAttribute("data-doc")];
-    if (link && stand && stand.seite > 1) {
-      link.href = "lesen.html?doc=" + encodeURIComponent(karte.getAttribute("data-doc")) +
-        "&seite=" + stand.seite;
-      link.textContent = "Weiterlesen (S. " + stand.seite + ")";
+    if (link && stand && (stand.seite > 1 || stand.text)) {
+      var id = karte.getAttribute("data-doc");
+      link.href = "lesen/" + encodeURIComponent(id) + ".html" + (stand.text ? "?weiter=1" : "");
+      link.textContent = stand.text ? "Weiterlesen" : "Weiterlesen (S. " + stand.seite + ")";
       link.hidden = false;
     }
   });

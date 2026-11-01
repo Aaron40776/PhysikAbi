@@ -20,4 +20,5 @@ $T compile --root . src/f7_regression.typ ../04_Zusatzmaterial/Regression_und_Au
 $T compile --root . src/f8_lernplan.typ ../04_Zusatzmaterial/Lernfahrplan.pdf
 $T compile --root . src/f9_diagramme.typ ../04_Zusatzmaterial/Uebungsheft_Diagrammauswertung.pdf
 $T compile --root . src/f10_glossar.typ ../04_Zusatzmaterial/Glossar.pdf
+TYPST="$T" python3 make_lesen.py
 echo "alle gebaut"

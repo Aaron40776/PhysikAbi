@@ -10,7 +10,8 @@ ROOT = BUILD.parent
 DATEIEN = ("index.html", "suche.html", "glossar.html", "lesen.html", "suche.json",
            "physik-vorabi-2026.zip",
            "assets/style.css", "assets/suche.js", "assets/index.js", "assets/suche-seite.js",
-           "assets/theme.js", "assets/glossar.js", "assets/lesen.js",
+           "assets/theme.js", "assets/glossar.js", "assets/lesen.css",
+           "assets/lesen-static.js",
            "pdfjs/web/viewer.html", "pdfjs/web/viewer.js", "pdfjs/web/viewer.css",
            "pdfjs/web/locale/de/viewer.properties", "pdfjs/web/locale/locale.properties",
            "pdfjs/build/pdf.js", "pdfjs/build/pdf.worker.js", "pdfjs/LICENSE")
@@ -43,7 +44,10 @@ def main():
         suche_html = (ziel / "suche.html").read_text(encoding="utf-8")
         glossar_html = (ziel / "glossar.html").read_text(encoding="utf-8")
         lesen_html = (ziel / "lesen.html").read_text(encoding="utf-8")
-        reste = re.findall(r"__[A-Z_]+__", index_html + suche_html + glossar_html + lesen_html)
+        lese_seiten = {datei.name: datei.read_text(encoding="utf-8")
+                       for datei in sorted((ziel / "lesen").glob("*.html"))}
+        reste = re.findall(r"__[A-Z_]+__", index_html + suche_html + glossar_html + lesen_html +
+                           "".join(lese_seiten.values()))
         pruefe("keine Platzhalter im HTML", not reste, reste)
 
         daten = json.loads((ziel / "suche.json").read_text(encoding="utf-8"))
@@ -69,12 +73,18 @@ def main():
         pruefe("Inhaltsverzeichnis springt in die PDF-Seite",
                '#page=3' in index_html and 'pagemode=none' in index_html)
         pruefe("Textansicht je Dokument verlinkt",
-               all(f'lesen.html?doc={d["id"]}&seite=1' in index_html for d in docs))
-        pruefe("Textansicht lädt den Seitenindex",
-               "suche.json" in (ziel / "assets" / "lesen.js").read_text(encoding="utf-8"))
+               all((f'href="lesen/{d["id"]}.html"' in index_html if d["id"] != "Glossar"
+                    else 'href="glossar.html"' in index_html) for d in docs))
+        pruefe("16 statische Leseseiten", len(lese_seiten) == 16, len(lese_seiten))
+        pruefe("Leseseiten enthalten Artikel und MathML",
+               all('<article class="lese-text' in h and "<math" in h
+                   for h in lese_seiten.values()))
+        pruefe("Leseseiten sind mobil und ohne Platzhalter",
+               all('viewport-fit=cover' in h and 'assets/lesen.css' in h
+                   and 'assets/lesen-static.js' in h for h in lese_seiten.values()))
         pruefe("Weiterlesen verbindet Lesen und Startseite",
                index_html.count('class="weiter"') == len(docs)
-               and "physik.weiter" in (ziel / "assets" / "lesen.js").read_text(encoding="utf-8")
+               and "physik.weiter" in (ziel / "assets" / "lesen-static.js").read_text(encoding="utf-8")
                and "physik.weiter" in (ziel / "assets" / "index.js").read_text(encoding="utf-8"))
 
         with zipfile.ZipFile(ziel / "physik-vorabi-2026.zip") as z:
@@ -103,7 +113,8 @@ def main():
 
         pruefe("Safe-Area im Viewport",
                all('viewport-fit=cover' in h
-                   for h in (index_html, suche_html, glossar_html, lesen_html)))
+                   for h in (index_html, suche_html, glossar_html, lesen_html))
+               and all('viewport-fit=cover' in h for h in lese_seiten.values()))
         pruefe("Glossar verlinkt", 'glossar.html' in index_html + suche_html + glossar_html)
         pruefe("104 Glossarbegriffe", glossar_html.count('class="glossar-eintrag"') == 104,
                glossar_html.count('class="glossar-eintrag"'))
@@ -113,10 +124,14 @@ def main():
                "glossar-filter" in glossar_html and "glossar.js" in glossar_html)
         pruefe("Design-Umschalter auf allen Seiten",
                all('id="thema"' in h and "assets/theme.js" in h
-                   for h in (index_html, suche_html, glossar_html, lesen_html)))
+                   for h in (index_html, suche_html, glossar_html, lesen_html))
+               and all('id="thema"' in h and "assets/theme.js" in h
+                       for h in lese_seiten.values()))
         pruefe("Theme vor dem Stylesheet", all(
             h.index("assets/theme.js") < h.index("assets/style.css")
-            for h in (index_html, suche_html, glossar_html, lesen_html)))
+            for h in (index_html, suche_html, glossar_html, lesen_html))
+            and all(h.index("assets/theme.js") < h.index("assets/style.css")
+                    for h in lese_seiten.values()))
 
         node = shutil.which("node")
         if node:
