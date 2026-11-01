@@ -356,3 +356,13 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   wird nur, was ein Werkzeug tatsächlich geprüft hat; "nicht geprüft" ist zulässig.
 - Ausgabeformat um Punkt "Werkzeuge und Skills" erweitert, Stoppregel bei fehlendem Werkzeug.
 - Keine Inhalte oder Website-Änderungen.
+
+## Nachtrag 18 (01.11.2026) – Prüf-Prompt: kein stilles Auslassen, Lernpflicht
+
+- Neuer Abschnitt "Kein stilles Auslassen – Lern- und Lösungspflicht": jede Anforderung
+  endet als erledigt, belegt gescheitert oder offen gemeldet. Bei fehlender Fähigkeit:
+  Doku lesen, Minimalbeispiel in /tmp, Alternativweg, zerlegen/delegieren, sonst konkrete
+  Frage mit Optionen. Zeitbudget 10 Minuten pro Blockade, danach Zwischenstand melden.
+- Eine gelernte Fähigkeit zählt nur mit einmaligem Lauf; Ausgabeformat um "Blockaden und
+  Lernschritte" erweitert.
+- Keine Inhalte oder Website-Änderungen.

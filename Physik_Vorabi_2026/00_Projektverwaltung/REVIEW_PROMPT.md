@@ -115,6 +115,30 @@ als "geprüft" ausgibst, nenne das Werkzeug, das sie geprüft hat.
    Fehlt ein Werkzeug: melden und ohne es weiterarbeiten, nicht improvisieren.
    Jedes Ergebnis, das nur aus Lesen stammt, bleibt "plausibel, ungeprüft".
 
+KEIN STILLES AUSLASSEN – LERN- UND LÖSUNGSPFLICHT
+Jede Anforderung (D1–D8 und jeder Befund) endet in genau einem von drei Zuständen:
+erledigt | versucht und belegt gescheitert | offen gemeldet.
+"Nicht erwähnt" ist kein Zustand. Du darfst eine Prüfung nicht als "nicht nötig" einstufen,
+nur weil sie unbequem ist, und eine Lücke nicht aus dem Bericht lassen.
+Wenn du etwas (noch) nicht kannst, überspringe es nicht, sondern suche in dieser Reihenfolge
+eine Lösung:
+  1. Doku lesen: offizielle Dokumentation des Werkzeugs/Formats (Typst, PDF.js, Playwright,
+     GitHub Actions, pymupdf) und für deine eigenen Fähigkeiten docs.openhands.dev.
+  2. Minimalbeispiel bauen und ausführen (in /tmp, nicht im Repo), erst danach anwenden.
+  3. Alternativweg prüfen: anderes Werkzeug, andere Bibliothek, andere Darstellung,
+     notfalls von Hand rechnen/prüfen statt per Skript.
+  4. Zerlegen oder delegieren: Teilaufgabe in kleine Schritte, wenn möglich an einen
+     Subagenten mit klarem Auftrag und Rückgabeformat.
+  5. Fehlt eine Entscheidung oder Erlaubnis: konkrete Frage mit 2–3 Optionen und Aufwand
+     stellen und bis zur Antwort an anderer Stelle weiterarbeiten.
+Zeitbudget: höchstens 10 Minuten pro Blockade für Suchen und Lernen. Danach Zwischenstand
+melden (was probiert, was gelernt, was offen) und weiterarbeiten – die Aufgabe nicht fallen
+lassen.
+Eine neu gelernte Fähigkeit zählt nur, wenn sie einmal gelaufen ist und das Ergebnis vorliegt.
+"Ich weiß jetzt, wie es geht" ohne Lauf ist keine Lösung.
+Im Bericht: Abschnitt "Blockaden und Lernschritte" mit Anforderung | was fehlte | was probiert
+| Ergebnis | offen?
+
 NUTZEN-FILTER (vor jeder Änderung)
 Nur ändern, wenn es (1) korrekter, (2) schneller verständlich oder (3) schneller auffindbar
 macht. Zweck in einem Satz mit Adressat nennen können, sonst Nit – nicht einbauen.
@@ -215,13 +239,17 @@ AUSGABEFORMAT
 7. "Selbstüberprüfung" (Phase 6) inkl. Klickzahl/Zeit im Kurskollegen-Test.
 8. "Werkzeuge und Skills": was genutzt wurde (mit Ergebnis), was fehlte und wie du das
    kompensiert hast.
-9. "Fehlt noch": max. 3 Vorschläge, je Nutzen | Aufwand klein/mittel | warum. Nichts
+9. "Blockaden und Lernschritte": was du nicht konntest, was du dagegen unternommen hast,
+   was daraus geworden ist, was offen bleibt.
+10. "Fehlt noch": max. 3 Vorschläge, je Nutzen | Aufwand klein/mittel | warum. Nichts
    ungefragt einbauen.
 
 STOPP-/MELDEREGELN
 - Widerspruch gym-wst ↔ Skript: beide Stellen zitieren, Empfehlung, entscheiden lassen.
 - Kapitel-Neubau nötig: erst Vorschlag + Aufwand, dann Freigabe.
-- >10 Minuten festhängen: abbrechen und berichten.
+- >10 Minuten ohne Fortschritt: Zwischenstand melden (probiert/gelernt/offen), an anderer
+  Stelle weiterarbeiten; die Anforderung bleibt auf der Liste, bis sie erledigt oder
+  ausdrücklich als offen gemeldet ist.
 - Phase 6 zeigt keinen Lernnutzen: Änderung zurücknehmen, auch wenn sie schon gebaut ist.
 - Ein benötigtes Werkzeug (Build, Browser, Quelle) fehlt: melden, nicht durch Behauptungen
   ersetzen. "Nicht geprüft" ist eine zulässige und erwartete Aussage.
