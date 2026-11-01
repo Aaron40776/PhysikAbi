@@ -165,6 +165,29 @@ $ n lambda = 2 d dot r/(2 a) = d dot r/a quad => quad lambda = (d r)/(n a) $
 Beide Röhren enthalten eine Elektronenkanone – der Unterschied liegt darin, was man mit dem Strahl
 *macht*: ablenken (Teilchenbahn) oder beugen (Welle).
 
+#merksatz[
+  *Querverbindung – Feldformeln, die in Quantenaufgaben trotzdem gebraucht werden.*
+  Auch wenn das Thema „Felder“ hier nicht behandelt wird, setzen Prüfungsaufgaben zu
+  Elektronenwellen häufig eine Ablenkung oder Fokussierung voraus. Es genügt, diese fünf
+  Beziehungen parat zu haben:
+
+  #enum(
+    [*Feld im Plattenkondensator:* $E = U\/d$ – homogene Feldstärke zwischen zwei Platten
+     (Spannung $U$, Abstand $d$).],
+    [*Kraft auf das Elektron:* $F = e E$, daraus $a = e E \/ m_e$ (konstante Beschleunigung
+     quer zum Strahl).],
+    [*Querablenkung* nach Durchlaufen der Länge $l$: $y = 1/2 a (l\/v_x)^2$ – die Bahn ist eine
+     Parabel, weil die Querbewegung gleichmäßig beschleunigt ist und $v_x$ konstant bleibt.],
+    [*Lorentzkraft im Magnetfeld:* $F = e v B$ (senkrecht zu $v$ und $B$). Sie wirkt als
+     Zentripetalkraft, also $e v B = m_e v^2 \/ r$ ⇒ $r = m_e v \/ (e B)$.],
+    [*Wien-Filter:* elektrische und magnetische Kraft heben sich auf, wenn $e E = e v B$, also
+     $v = E\/B$. Damit lässt sich die Geschwindigkeit ohne Kenntnis von $e\/m$ einstellen.]
+  )
+
+  In allen Fällen wird $v$ aus der Beschleunigungsspannung gewonnen:
+  $1/2 m_e v^2 = e U_B$ – dieselbe Gleichung, die auch zur de-Broglie-Wellenlänge führt.
+]
+
 == Weitere Belege: Davisson-Germer und Einzelelektronen
 
 Beim *Davisson-Germer-Experiment* (1927) wurden Elektronen an einer Nickeloberfläche gestreut.

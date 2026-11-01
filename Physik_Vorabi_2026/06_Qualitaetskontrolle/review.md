@@ -107,12 +107,15 @@ Keine widersprüchlichen Rundungen, keine Mischung aus 6,63 und 6,626.
 |---|---|---|
 | Atomkern/Radioaktivität | nicht in deiner Themenliste, aber im KC Jg. 13 | nur lernen, wenn im Unterricht behandelt |
 | Polarisation, Comptoneffekt | in deinem Stoffplan nicht genannt | Skript 2 hat eine Kurzerwähnung, keine Vertiefung |
-| Elektrische/magnetische Felder | 6 von 12 IQB-Aufgaben 2025/26 sind E/B-Feld-Aufgaben! | **größtes Risiko**: falls dein Vorabi auch Felder abfragt, fehlt dafür ein Skript |
+| Elektrische/magnetische Felder | **laut Rückmeldung nicht prüfungsrelevant** für dieses Vorabi | abgehakt – siehe Kasten unten |
 | Landesaufgaben 2016–2024 | NIBIS-Archiv technisch blockiert | nicht rekonstruierbar |
 
-Der Punkt mit den Feldern ist der wichtigste dieser Review: Die IQB-Auswertung zeigt,
-dass Felder der häufigste Aufgabenblock im Pool sind. Deine Themenliste enthält sie
-nicht – wenn dein Kurs sie im Vorabi braucht, ist das eine echte Lücke.
+**Zu den Feldern:** Die IQB-Auswertung zeigt 6 von 12 Aufgaben aus dem Feldbereich – das ist
+viel. Auf Rückfrage ist das Thema für dieses Vorabi aber nicht prüfungsrelevant. Deshalb kein
+eigenes Skript, sondern nur die Formeln, die *innerhalb* von Quantenaufgaben gebraucht werden:
+Skript 3 hat dafür den Kasten „Querverbindung – Feldformeln“ (E = U/d, a = eE/m, Querablenkung,
+Lorentzradius, Wien-Filter). Das reicht für Aufgaben, in denen ein Elektronenstrahl abgelenkt
+oder fokussiert wird, ohne dass eine Feldaufgabe daraus werden muss.
 
 ---
 
@@ -133,6 +136,6 @@ einheitlich, Zahlen konsistent, Layout ohne Befund, Build reproduzierbar.
 Zwei echte Fehler wurden in dieser Runde gefunden und behoben (veraltete Grafiken,
 nicht reproduzierbarer Build), einer inhaltlich geschlossen (Resonanzfrequenz).
 
-Die einzige inhaltliche Unsicherheit ist nicht Qualität, sondern **Umfang**: ob
-Felder/Atomkern im Vorabi vorkommen. Das kann ich nicht aus den Quellen ableiten –
-das weißt nur du aus dem Unterricht.
+Felder sind für dieses Vorabi abgehakt; die nötigen Formeln stehen als Querverbindung in
+Skript 3. Offen bleibt nur der Atomkern (Jg. 13) – er war nicht Teil der Themenliste und ist
+nur relevant, falls er im Unterricht noch behandelt wird.
