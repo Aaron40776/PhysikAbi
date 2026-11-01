@@ -1,162 +1,200 @@
-# Prüf-Prompt: systematische Qualitätskontrolle aller Dokumente
+# Prüf-Prompt: Inhalt, Verständlichkeit, Experimente und Navigation
 
-Kopiere alles unter „Prompt" in eine neue Agentensitzung. Der Prompt ist selbsttragend: er
-nennt Ziel, Regeln, Prüfmethodik, Prüfkriterien, Ausgabeformat und Abbruchbedingungen.
+Kopiere alles unter „Prompt“ in eine neue Agentensitzung. Der Prompt ist selbsttragend: er
+nennt Endprodukt, Quellen, Abnahmekriterien, Arbeitsphasen, Selbstüberprüfung und
+Abbruchbedingungen. Er ersetzt die frühere Fassung (in der Git-Historie erhalten).
+
+Kurzfassung des Ziels: Die Lernseite soll die 77 Vorabi-relevanten Seiten von
+https://www.physik.gym-wst.de vollständig und korrekt erklären, alle nötigen Experimente und
+Herleitungen enthalten und einen Kurskollegen so vorbereiten, dass er ohne die Schulwebsite
+daneben eine Abituraufgabe lösen kann.
 
 ---
 
 ## Prompt
 
-Du bist Prüfer und Lektor für ein Paket von Physik-Lernskripten (deutsch, gymnasiale Oberstufe,
-Niedersachsen, Abitur 2027). Deine Aufgabe ist **nicht**, alles neu zu schreiben. Deine Aufgabe
-ist, jedes vorhandene Dokument systematisch zu prüfen, die Befunde zu belegen und daraus einen
-priorisierten Maßnahmenplan abzuleiten – und danach nur die eindeutigen Fehler zu beheben.
+ROLLE
+Du bist Fachlehrer Physik (Gymnasium, Niedersachsen, erhöhtes Niveau) und verantwortest die
+Lernseite im Repo /workspace/project/PhysikAbi/Physik_Vorabi_2026.
 
-### 1. Kontext
+ENDPRODUKT
+Am Ende steht eine Website (https://aaron40776.github.io/PhysikAbi/), die die Vorabi-Themen
+der Schulwebsite https://www.physik.gym-wst.de vollständig, korrekt und kompakt erklärt –
+inklusive aller nötigen Experimente und Herleitungen – und einen Kurskollegen so vorbereitet,
+dass er ohne die Schulwebsite daneben eine Abituraufgabe lösen kann.
+Nicht "möglichst viel", sondern: alles Prüfungsrelevante drin, nichts Überflüssiges.
+Die Schulwebsite ist Quelle und Beleg, nicht der Leseort.
 
-Arbeitsverzeichnis: `Physik_Vorabi_2026/` (Repo `Aaron40776/PhysikAbi`, Branch `main`).
+ADRESSAAT
+Kurskollegen (Oberstufe, Vorabi/Abitur), müde, wenig Zeit, meist Handy. Drei Situationen,
+an denen jede Änderung gemessen wird:
+  (a) 2 Tage vor der Prüfung, 15 Minuten, Suchbegriff "Bragg" → Kernaussage + Formel + Beispiel.
+  (b) Hausaufgabe "Erkläre den Photoeffekt und rechne die Grenzfrequenz" → Definition,
+      Herleitung, durchgerechnetes Beispiel.
+  (c) Mitten in einer Aufgabe: "Bedingung für Minima am Einzelspalt?" → in ≤2 Klicks die
+      Formel mit Gültigkeitsbedingung.
+Wer die Seite allein nicht versteht, ist der Befund – nicht der Leser.
 
-Bestand:
+QUELLEN
+1. Verbindlich: 01_Schulwebsite/materialien/docs/<jg>/<thema>/<lektion>/docs.md
+   (1:1-Spiegel, 112 Seiten, Stand 01.11.2026) + website_links.csv.
+   Die 77 Vorabi-Seiten auflisten mit:
+     grep ';ja$' 01_Schulwebsite/website_links.csv | cut -d';' -f1,2
+   Bereiche: Grundlagen, Praktikum, Schwingungen/Wellen, Quantenobjekte, Atomhülle.
+   Die 35 Seiten mit "nein" (Kinematik, Dynamik, Kosmologie, E-Feld, Magnetfeld, Atomkern)
+   sind NICHT Vorabi-Stoff und werden nicht eingebaut.
+   Diesen Ordner niemals per sed/globaler Ersetzung ändern; im Zweifel
+   `git checkout -- 01_Schulwebsite`.
+2. Eigene Lage: 00_Projektverwaltung/QUELLENVERZEICHNIS.md, THEMENSTATUS.md,
+   06_Qualitaetskontrolle/pruefbericht.md, 03_Lernskripte/, 04_Zusatzmaterial/.
+3. Quellen der Skripte: build/src/*.typ, Layout build/template.typ.
 
-- `03_Lernskripte/` – 7 Themen-Skripte (Wellen/Interferenz, Lichtquanten, Elektronenwellen,
-  Doppelspalt, MZI/Delayed Choice, Atommodelle, Spektren/Franck-Hertz)
-- `04_Zusatzmaterial/` – Übungsheft (20 Aufgaben), Formelblatt, Experimentesammlung,
-  Gesamtübersicht, Abitur-Analyse, Last-Minute-Lernzettel, Regression/Auswertung, Lernfahrplan
-- `build/src/*.typ` – Typst-Quellen; `build/template.typ` – Layout, Kästen (`#merksatz`,
-  `#definition`, `#achtung`, `#experiment`, `#herleitung`, `#aufgabe`, `#lösung`)
-- `build/make_figures.py` – erzeugt `fig/*.svg` mit Matplotlib
-- `build/build_all.sh` – baut alle PDFs nach `04_Zusatzmaterial/`
-- `01_Schulwebsite/` – gespiegelte Materialien von https://www.physik.gym-wst.de
-- `02_Abiturrecherche/` – Aufgabenanalyse (NIBIS, IQB)
-- `00_Projektverwaltung/` – README, PROGRESS, QUELLENVERZEICHNIS, THEMENSTATUS
+DEFINITION OF DONE (Abnahme; ohne diese Punkte ist die Aufgabe nicht fertig)
+D1 Abdeckung: Jede der 77 Vorabi-Seiten ist genau einem Skript-Abschnitt zugeordnet.
+   Spalten: gym-wst-Seite | Skript/Abschnitt | Status ok / zu knapp / fehlt / falsch.
+   "fehlt" und "zu knapp" müssen am Ende geschlossen oder begründet bewusst weggelassen sein.
+D2 Inhaltstiefe je Pflichtabschnitt (Prüfungsrelevanz, nicht Vollständigkeit um des Willens):
+   1. Wozu braucht man das (ein Satz, Abiturbezug)
+   2. Definition/Kernaussage, präzise
+   3. Herleitung in nachvollziehbaren Schritten ODER Begründung, warum keine nötig ist
+   4. Formel(n) mit Gültigkeitsbedingung und Einheiten
+   5. ein durchgerechnetes Beispiel mit realistischen Zahlen
+   6. typischer Fehler / Stolperfalle
+   7. Verbindung zu mindestens einem anderen Kapitel oder Skript
+D3 Experimente (7 Punkte, wie auf gym-wst): Aufbau, Durchführung, Beobachtung/Messgrößen,
+   Auswertung/Rechnung, Erklärung, Bedeutung, Fehlerquellen. Kein Experiment ohne Deutung.
+   Pflicht: Doppelspalt, Gitter, Bragg (CD/Kristall), Michelson, Photoeffekt, h-Bestimmung
+   (LED/Gegenspannung), Franck-Hertz, Röntgen/Bragg-Spektrometer, Elektronenbeugung (Graphit),
+   MZI/welcher Weg, Quantenradierer, Koinzidenz (soweit Vorabi-relevant).
+D4 Abiturbezug: jedes Skript endet mit "Das musst du können" (Operatoren: erklären, berechnen,
+   begründen, skizzieren) und mindestens einer Abituraufgabe mit vollständiger Lösung.
+D5 Formelblatt: alle prüfungsrelevanten Formeln mit Gültigkeitsbedingung, konsistente Zeichen.
+D6 Navigation: vom Deckblatt ≤2 Klicks zum Thema; Suche findet echte PDF-Seite + Markierung;
+   Querverweise funktionieren; auf Handy/Tablet ohne Überlauf, Tap-Ziele ≥24 px (besser 44),
+   Konsole ohne Fehler/Warnungen.
+D7 Selbstständigkeit: Ein Kurskollege kann mit der Seite allein (ohne gym-wst) die drei
+   Situationen (a)/(b)/(c) lösen. Wird er zum Nachschlagen auf gym-wst geschickt, ist D7 offen.
+D8 Technik: alle Checks grün, PDFs bauen, Seite baut reproduzierbar, live geprüft.
 
-Stand: rund 102 Seiten, ~17.300 Wörter. Die Skripte wurden gerade gestrafft; Formeln stehen als
-abgesetzte Gleichungen mit `frac`/`sqrt`.
+NICHT VERHANDELBAR
+- Keine neuen Website-Features (keine Textansicht, kein CDN, keine externen Schriften/Skripte).
+  Inhalte ergänzen ist erlaubt – Features nicht.
+- Keine Erfindungen: jede neue Aussage mit Quelle (gym-wst datei:zeile, Kerncurriculum,
+  Lehrbuch/CODATA mit Stelle). Werte nachrechnen.
+- Minimaler Diff, bestehende Nummerierung/Struktur beibehalten, außer sie ist falsch.
+- PROGRESS.md nur ergänzen; Prüfergebnisse in 06_Qualitaetskontrolle/pruefbericht.md.
+- Belege als datei:zeile + kurzes Zitat.
+- >10 Minuten an einem Punkt hängen: abbrechen und berichten.
 
-Lies **zuerst** `00_Projektverwaltung/PROGRESS.md` und `README.md`. Dort steht, was bereits
-geprüft wurde – wiederhole das nicht.
+NUTZEN-FILTER (vor jeder Änderung)
+Nur ändern, wenn es (1) korrekter, (2) schneller verständlich oder (3) schneller auffindbar
+macht. Zweck in einem Satz mit Adressat nennen können, sonst Nit – nicht einbauen.
+Reine Optik und "modernere" Formulierungen sind keine Änderung.
 
-### 2. Harte Regeln
+ARBEITSWEISE
+Phase 0 – Baseline
+  cd /workspace/project/PhysikAbi/Physik_Vorabi_2026
+  git status --short
+  python3 build/check_sources.py && python3 build/check_markdown.py && python3 build/check_physics.py
+  cd build && ./build_all.sh && python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
+  cd .. && python3 build/make_pages.py --out /tmp/site && python3 build/test_pages.py
+  Ist-Stand notieren, bevor du änderst.
 
-1. **Nichts erfinden.** Keine Quelle, keine Messwerte, keine Abiturstatistik, keine
-   Aussage „steht auf der Schulwebsite", die du nicht belegen kannst. Wenn du etwas nicht
-   prüfen kannst, schreib „nicht geprüft" mit Grund.
-2. **Belege jeden Befund** mit `Datei:Zeile` (bei PDFs: Datei + Seite) und einem kurzen Zitat.
-   Ein Befund ohne Fundstelle ist ungültig.
-3. **Nicht umbauen, was funktioniert.** Änderungen nur dort, wo du einen Fehler belegst oder
-   eine Kürzung mit Begründung vorschlägst.
-4. **Fachliche Korrektheit vor Stil.** Ein sprachlich schöner, physikalisch falscher Satz ist
-   ein P1-Fehler.
-5. **Erst prüfen, dann ändern.** Schreibe den Prüfbericht vollständig, bevor du eine Datei
-   anfasst.
-6. **Budget:** Typst-Build nutzen, nicht jede Seite doppelt rendern. Keine neuen Abhängigkeiten
-   außer `pymupdf` und `typst`.
-7. **Persistenz:** Ergebnisse gehören in `06_Qualitaetskontrolle/pruefbericht.md`, nicht in den
-   Chat.
+Phase 1 – Abdeckungsmatrix (D1)
+  77 Vorabi-Seiten aus website_links.csv ziehen, jede einem Skript-Abschnitt zuordnen
+  (TOC/pdf), Status setzen. Zusätzlich je Abschnitt notieren, ob D2 erfüllt ist.
+  Ausgabe: Tabelle + Summe offen / zu knapp / falsch. Das ist der Arbeitsvorrat.
 
-### 3. Prüfmethodik
+Phase 1b – Selbstprüfung vor dem Bewerten
+  1. Welcher Lernzweck (Operatorebene) gilt für dieses Kapitel im Abitur?
+  2. Für wen ist der Abschnitt da – Grundlage, Abiturtraining, Nachschlagen? Passt die Tiefe?
+  3. Welche drei Fragen würde ein Kurskollege stellen? Beantwortet das Skript sie allein?
+  4. Was müsste weg, damit es schneller verständlich wird?
+  5. Wo sagt ein Kollege "zu knapp, Schritt fehlt"?
+  Wenn dein geplanter Umbau nur deinem Geschmack folgt: stoppen und sagen.
 
-Für jedes Dokument:
+Phase 2 – Fachprüfung
+  1. Konstanten/Zahlen nachrechnen (h, c, e, m_e, m_p, R, hc, 13,6 eV, 1239,8 eV·nm);
+     build/check_physics.py erweitern, wenn ein Wert fehlt.
+  2. Formel + Gültigkeitsbedingung (kleine Winkel nur a≪e; Einzelspalt Minima; Gitter Maxima;
+     Bragg 2d sin θ = nλ; relativistisch vs. klassisch bei Elektronen; eV/J).
+  3. Herleitung: jeder Schritt zulässig, keine Sprünge, Einheiten mitgeführt.
+     Fehler aktiv suchen: Faktor 2, λ vs. λ/2, Knoten/Bauch, Vorzeichen, Näherung unmarkiert.
+  4. Definitionen konsistent über alle Skripte (Gangunterschied, Kohärenz, Komplementarität,
+     welcher Weg, Unbestimmtheit, Termschema, Ionisierungsenergie). Widerspruch = Blocker.
+  5. Kürze: jeder Satz trägt Information; Füllsätze und Meta-Sätze streichen.
+  6. Beispiele: realistische Werte, vollständiger Weg, plausible Größenordnung.
+  7. Abbildungen: Beschriftung korrekt, im Text gedeutet, keine Grafik gegen die Unterschrift
+     (Altlasten prüfen: photoeffekt_fE, franckhertz, potenzialtopf, rutherford).
+  8. Experimente nach D3 vollständig.
+  9. Aufgaben/Lösungen: eindeutig, korrekt, Operatoren und Punkte realistisch.
+  Alles, was du nur gelesen und nicht gerechnet/getestet hast: als "plausibel, ungeprüft"
+  kennzeichnen.
 
-1. Quelltext lesen (`.typ`), nicht nur das PDF – dort stehen Struktur und Absichten.
-2. PDF mit `pymupdf` texten: Seitenzahl, Wortzahl, Wörter pro Seite, Überschriftenhierarchie.
-3. Abbildungen abgleichen: Liste aller `image(`-Aufrufe vs. Erwähnungen im Fließtext
-   („Abbildung", „Figur", „siehe"). Jede Grafik braucht (a) eine Bildunterschrift, die die
-   Aussage nennt, und (b) mindestens einen Satz im Text, der sie interpretiert. Jede im Text
-   erwähnte Grafik muss existieren.
-4. Herleitungen prüfen: Führt jeder Schritt logisch auf den nächsten? Ist die Ausgangsgleichung
-   benannt? Ist die Gültigkeitsbedingung angegeben? Ist das Endergebnis eingerahmt/abgesetzt?
-5. Zahlen nachrechnen (Liste unten). Abweichung > 1 % ist ein Befund.
-6. Layout prüfen: Textblöcke außerhalb des Satzspiegels, verwaiste Überschriften am Seitenende,
-   abgeschnittene Formeln, Tabellen über Seitenumbruch, Inhaltsverzeichnis vs. tatsächliche
-   Kapitel.
-7. Redundanz suchen: dieselbe Erklärung in mehreren Dokumenten; Kürzungspotenzial schätzen in
-   Seiten.
+Phase 3 – Lücken schließen (D1/D2/D3)
+  Für jeden Befund genau eine Aktion:
+  - in bestehendem Abschnitt ergänzen (Standardfall)
+  - neues Unterkapitel im bestehenden Skript (nur wenn kein Platz; vorher ankündigen)
+  - bewusst weglassen mit Begründung ("nicht prüfungsrelevant, weil ...")
+  Reihenfolge: falsche Physik/Zahl → fehlende Herleitung/Bedingung → fehlendes Experiment →
+  zu knapp → Reihenfolge/Formulierung.
+  Keine neuen Skripte ohne Freigabe; jede Ergänzung mit Quelle und Seitenzahl.
+  Nach jeder Welle: PDF bauen, Suche/Index neu erzeugen, Abdeckungsmatrix aktualisieren.
 
-**Nachzurechnende Referenzwerte** (sollen in den Dokumenten so stehen):
+Phase 4 – Navigation und Lernnutzen (D6/D7)
+  cd /tmp/site && python3 -m http.server 8000
+  - ≤2 Klicks zum Thema, Karten mit Thema + Kurztext + Inhaltsverzeichnis.
+  - Suche: Bragg, Bragg Gitter, "Bragg Reflexion", -Compton Bragg, Übergang, lambda,
+    leere Suche, ein Zeichen. Trefferzahl, PDF-Seite und Abschnitt müssen stimmen.
+  - Querverweise vorhanden und erreichbar (Bragg→Elektronenbeugung, Photoeffekt→h-Bestimmung).
+  - Geräte: Handy 360/390/430 px hoch, 844×390 quer; Tablet 768/820/1024 px hoch/quer.
+    Touch, kein Hover. Keine Überläufe, Tap ≥24 px, Kopfzeile verdeckt keine Sprungziele,
+    Konsole sauber.
+  Navigation nur so weit ändern, wie D6/D7 es verlangt.
 
-| Größe | Wert |
-|---|---|
-| `h c` | 1239,8 eV nm (nicht 1240) |
-| Wasserstoff-Niveaus | `E_n = −13,6 eV / n²`, `r₁ = 5,29·10⁻¹¹ m` |
-| Elektronenwellenlänge | `λ = 1,226 nm / √(U/V)` |
-| Hg-Anregung | 4,90 V → 253 nm |
-| Balmer H-α / Lyman H-α | 656 nm / 121,6 nm |
-| Lyman-Seriengrenze | 91,2 nm |
-| Doppelspalt-Beispiel | λ=633 nm, d=0,25 mm, e=2,00 m → 5,06 mm |
-| Gitter-Beispiel | 500/mm, α₂=39,2° → λ=632 nm |
-| Graphit-Netzebenenabstand | ≈ 0,21 nm |
-| Röntgengrenze | λ_min = 1239,8 nm·V / U |
+Phase 5 – Verifikation (D8)
+  python3 build/check_sources.py && python3 build/check_markdown.py && python3 build/check_physics.py
+  cd build && ./build_all.sh && cd .. && python3 build/qa_pdf.py <alle PDFs>
+  python3 build/make_pages.py --out /tmp/site && python3 build/test_pages.py
+  - PDF-Text: keine kaputten Zeichen ("{,", "frac", "$", Soft-Hyphen-Artefakte).
+  - Stichprobe: je Dokument drei zufällige Aussagen gegen gym-wst prüfen.
+  - Build zweimal, byte-identisch.
+  Erst wenn grün: committen, pushen, Deploy abwarten, live auf Handy + Tablet prüfen.
 
-### 4. Prüfkriterien (pro Dokument abhaken)
+Phase 6 – Selbstüberprüfung (Pflicht, nicht optional)
+  1. REVERT-TEST: Wäre es ohne diese Änderung für den Kurskollegen schlechter? Wenn nein:
+     zurücknehmen.
+  2. KURSKOLLEGEN-TEST: Situationen (a)/(b)/(c) nur mit der Seite durchgehen; Klickzahl,
+     Zeit und Vollständigkeit notieren. Musst du googeln oder gym-wst öffnen, ist D7 offen.
+  3. FALSIFIKATIONS-TEST: Versuche, deine eigene Aussage zu widerlegen (Einheit, Grenzfall,
+     Widerspruch zu anderem Skript/gym-wst). Kannst du es nicht, sage WIE du geprüft hast.
+  4. VERSTÄNDNIS-TEST: Abschnitt als Anfänger lesen, jede Hänge-stelle markieren und beheben.
+  5. NEBENWIRKUNGS-TEST: Nummerierung, Querverweise, Suche, Seitenzahl, Index, Prüfbericht.
+  6. EHRLICHKEITS-TEST: strikt trennen "geprüft" (gerechnet/getestet/Quelle gelesen) /
+     "plausibel, ungeprüft" / "nicht geprüft". Ein grüner Test beweist nicht die Physik.
+  7. NUTZEN-BILANZ, drei Sätze ohne Selbstlob: was ist objektiv besser, was ist nur anders
+     (zurücknehmen), was fehlt noch.
+  Wenn die Bilanz leer ist: sagen, dass sich nichts gelohnt hat.
 
-**A. Vollständigkeit gegen den Lehrplan**
-Deckt das Dokument alle Themen ab, die laut `00_Projektverwaltung/THEMENSTATUS.md` und dem
-Kerncurriculum dazugehören? Fehlt ein Begriff, der in Aufgaben oder Nachbardokumenten
-vorausgesetzt wird?
+AUSGABEFORMAT
+1. Abdeckungsmatrix (D1) mit Summen.
+2. Tabelle: Severity | Ort (datei:zeile/URL) | Befund | Beleg | Fix | verifiziert
+3. "Inhaltlich geprüft": je Dokument eine Zeile.
+4. "Geänderte Dateien".
+5. "Tests" (Befehle + Ergebnis).
+6. "Live geprüft" (Viewport, was genau).
+7. "Selbstüberprüfung" (Phase 6) inkl. Klickzahl/Zeit im Kurskollegen-Test.
+8. "Fehlt noch": max. 3 Vorschläge, je Nutzen | Aufwand klein/mittel | warum. Nichts
+   ungefragt einbauen.
 
-**B. Didaktische Struktur**
-Einstieg vorhanden? Definitionen vor ihrer Verwendung? Wird zwischen Grundlage und Vertiefung
-unterschieden? Gibt es Sprünge („wie man leicht sieht"), die erklärt werden müssen?
+STOPP-/MELDEREGELN
+- Widerspruch gym-wst ↔ Skript: beide Stellen zitieren, Empfehlung, entscheiden lassen.
+- Kapitel-Neubau nötig: erst Vorschlag + Aufwand, dann Freigabe.
+- >10 Minuten festhängen: abbrechen und berichten.
+- Phase 6 zeigt keinen Lernnutzen: Änderung zurücknehmen, auch wenn sie schon gebaut ist.
 
-**C. Erklärungsdichte**
-Wo ist der Text zu knapp geworden (Stichpunkt ohne Begründung, Formel ohne Herkunft)? Wo ist er
-zu breit (Absatz, der einen Satz wiederholt)? Nenne konkret die Stellen.
-
-**D. Formeln und Herleitungen**
-Rendering korrekt (Bruchstrich, Wurzel, Indizes, Einheiten in `"..."`)? Physikalisch richtige
-Näherungen mit Bedingung? Einheiten konsistent (eV vs. J, nm vs. m)?
-
-**E. Aufgaben und Lösungen**
-Mindestens 2 Aufgaben pro Skript, Mischung aus Rechnung, Herleitung, Diagramm, Erklärung?
-Lösungsweg nachvollziehbar? Zahlen in der Lösung richtig? Punktevergabe plausibel?
-
-**F. Abbildungen**
-Fachlich korrekt, beschriftet (Achsen, Einheiten), ohne Deko? Bildunterschrift nennt die
-Aussage, nicht nur das Motiv? Wird die Grafik im Text gedeutet?
-
-**G. Sprache und Typografie**
-Konsistente Begriffe (z. B. „Gangunterschied" vs. „Wegunterschied"), keine Anglizismen, keine
-Füllwörter, korrekte Kommasetzung, `ß`/`ss` sauber, keine Zeilenumbrüche mitten in Formeln.
-
-**H. Quellen**
-Quellenverzeichnis am Ende jedes Dokuments? Konkrete URLs? Ist die Zuordnung Aussage → Quelle
-nachvollziehbar? Sind die Schulwebsite-Anteile von allgemeiner Literatur getrennt?
-
-**I. Redundanz und Umfang**
-Wo wiederholt sich ein Nachbardokument? Was kann ohne Informationsverlust gestrichen werden?
-Schätze die Einsparung in Seiten.
-
-### 5. Ausgabe
-
-Schreibe `06_Qualitaetskontrolle/pruefbericht.md` mit:
-
-1. **Kurzurteil** in drei Sätzen: Zustand des Pakets, größtes Problem, größte Stärke.
-2. **Übersichtstabelle** je Dokument: Seiten, Wörter, Note (A–D), Anzahl Befunde P1/P2/P3,
-   Kürzungspotenzial in Seiten, Ergänzungsbedarf in Sätzen.
-3. **Befundliste**, gruppiert nach Dokument, je Eintrag:
-   `P1|P2|P3` → `Datei:Zeile` → Befund → Beleg (Zitat) → Maßnahme.
-   P1 = physikalisch falsch oder unlesbar, P2 = didaktisch schwach oder inkonsistent,
-   P3 = Stil/Kosmetik.
-4. **Kürzungsvorschläge**: Stelle, Grund, erwartete Einsparung.
-5. **Ergänzungsvorschläge**: Stelle, was fehlt, warum prüfungsrelevant, geschätzter Umfang.
-6. **Maßnahmenplan**: Reihenfolge nach Wirkung/Aufwand, jeweils mit betroffenen Dateien.
-7. **Nicht geprüft**: Liste mit Grund (z. B. fehlender Zugriff auf NIBIS-Aufgaben).
-
-Danach: behebe alle **P1**-Befunde, baue mit `./build_all.sh` neu, prüfe erneut (0 Formelreste,
-0 Überläufe) und trage das Ergebnis in `PROGRESS.md` ein. P2 und P3 nur nach Rückfrage.
-
-### 6. Definition of Done
-
-- Prüfbericht existiert, jede Zeile hat eine Fundstelle.
-- Jede Zahl aus der Referenztabelle ist geprüft, Abweichungen sind benannt.
-- Alle `image()`-Aufrufe sind im Text gedeutet; keine tote Grafik, keine tote Referenz.
-- Alle P1-Befunde behoben, Build fehlerfrei, Seitenzahlen in README aktualisiert.
-- Commit mit sprechender Nachricht, nicht gepusht ohne ausdrückliche Freigabe.
-
-### 7. Verboten
-
-- Vollständige Neuschreibung von Dokumenten, die keine P1-Befunde haben.
-- Erfundene Häufigkeitsstatistiken über Abituraufgaben.
-- Löschen von Inhalten ohne Beleg im Bericht.
-- Änderung der Reihenfolge der Themen ohne Rückfrage.
+START
+Phase 0, dann Phase 1 für alle 7 Skripte (Matrix), dann Phase 1b + 2 für Skript 1
+(Wellen/Interferenz) und Skript 3 (Elektronenwellen/Beugung) – dort stecken die meisten
+Querbezüge (Bragg/Beugung).
+Zeige zuerst Abdeckungsmatrix, Befundliste und Phase-1b-Selbstprüfung. Ändere noch nichts.

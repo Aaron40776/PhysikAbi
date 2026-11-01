@@ -337,3 +337,12 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Tests:** `build/test_pages.py` prüft zusätzlich, dass der Viewer nichts aus dem Netz lädt,
   ein Favicon hat, die deutsche Sprachdatei vollständig ist und beide Seiten `viewport-fit=cover`
   setzen. 35 von 35 Prüfungen bestanden.
+
+## Nachtrag 16 (01.11.2026) – Prüf-Prompt für den nächsten Durchgang neu gefasst
+
+- `00_Projektverwaltung/REVIEW_PROMPT.md` ersetzt die frühere Fassung. Neu: Endprodukt
+  (77 Vorabi-Seiten von physik.gym-wst vollständig abdecken), Abnahmekriterien D1–D8,
+  Inhaltstiefe je Abschnitt, 7-Punkte-Schema für Experimente, Nutzen-Filter,
+  Lückenschluss-Phase und eine verpflichtende Selbstüberprüfung (Revert-, Kurskollegen-,
+  Falsifikations-, Verständnis-, Nebenwirkungs-, Ehrlichkeits-Test, Nutzen-Bilanz).
+- Kein Inhalt der Skripte geändert, keine Website-Änderung; Tests unverändert grün.

@@ -41,7 +41,8 @@ zur Diagrammauswertung.
 
 ```
 Physik_Vorabi_2026/
-├── 00_Projektverwaltung/   README, PROGRESS, QUELLENVERZEICHNIS, RECHERCHEERGEBNISSE, THEMENSTATUS
+├── 00_Projektverwaltung/   README, PROGRESS, QUELLENVERZEICHNIS, RECHERCHEERGEBNISSE,
+│                           THEMENSTATUS, REVIEW_PROMPT (Prompt für den nächsten Prüfdurchgang)
 ├── 01_Schulwebsite/        website_links.csv + vollständiger Mirror der Unterrichtsseiten (Markdown)
 ├── 02_Abiturrecherche/     abitur_analyse.md, untersuchte_aufgaben.csv, iqb_aufgaben/ (12 PDFs + Text)
 ├── 03_Lernskripte/         7 Themen-PDFs
