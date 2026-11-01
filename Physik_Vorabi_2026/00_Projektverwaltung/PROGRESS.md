@@ -286,3 +286,15 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - Tests: `build/test_pages.py` (Index, Links, ZIP) und `build/test_suche.js` (Ranking, Markierung,
   Phrasen) – 23 Prüfungen. Der Pages-Workflow testet vor dem Deploy; Trigger um `build/web/**` ergänzt.
 - Quellen der Seite liegen unter `build/web/`; `_site/` ist in `.gitignore`.
+
+## Nachtrag 13 (01.11.2026) – Lernseite geprüft, Sprungmarken repariert
+
+- **Layoutmessung** bei 390/700/1024 px: kein horizontaler Überlauf, Kartenraster 1/2/3 Spalten,
+  Trefferpanel bleibt vollständig im Viewport, Kontraste 6:1 bis 20:1, Schaltflächen ≥ 24 px.
+- **Fehler behoben:** `scroll-behavior: smooth` am `html` kollidierte mit dem sofortigen `scrollBy`
+  nach `scrollIntoView` – Sprungmarken, `&h=`-Links und „zuletzt gelesen“ landeten bei Position 0.
+  Jetzt rechnet `springeZu()` die Zielposition selbst und scrollt mit `behavior: "instant"`.
+  Geprüft: gewählter Abschnitt steht 72 px unter der Kopfzeile (Kopfzeile 62 px).
+- **Suchtreffer nennen den Abschnitt**, in dem sie stehen (statt nur die Seite); kurze
+  Überschriften-Treffer zeigen den folgenden Absatz als Kontext im Ausschnitt.
+- Textansicht auf 74 Zeichen Zeilenlänge begrenzt, „gelesen“/„zurücksetzen“ auf Tap-Größe gebracht.

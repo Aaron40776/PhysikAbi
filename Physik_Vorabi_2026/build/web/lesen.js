@@ -18,6 +18,17 @@
   var LETZTES = "physik.letztes";
 
   var LABEL = /^(Merksatz|Definition|Achtung(?: – typische Fehlerquelle)?|Experiment|Herleitung|Prüfungsrelevanz|Beobachtung|Aufgabe \d+|Tipp|Hinweis)$/;
+  var leiste = document.querySelector(".leiste");
+
+  function kopfVersatz() {
+    return (leiste ? leiste.getBoundingClientRect().height : 60) + 10;
+  }
+
+  /* scrollIntoView + scrollBy konkurrieren mit scroll-behavior:smooth und landen bei 0. */
+  function springeZu(el) {
+    var y = el.getBoundingClientRect().top + window.scrollY - kopfVersatz();
+    window.scrollTo({ top: Math.max(0, y), behavior: "instant" });
+  }
 
   var params = new URLSearchParams(window.location.search);
   var docId = params.get("doc") || "";
@@ -104,8 +115,7 @@
           ev.preventDefault();
           var el = document.getElementById(ziel.slice(1));
           if (el) {
-            el.scrollIntoView({ behavior: "auto", block: "start" });
-            window.scrollBy(0, -76);
+            springeZu(el);
             history.replaceState(null, "", "#" + ziel.slice(1));
           }
         }
@@ -220,7 +230,7 @@
       zeichne(true);
       if (!q && startSeite > 1) {
         var ziel = document.getElementById("seite-" + startSeite);
-        if (ziel) { ziel.scrollIntoView({ block: "start" }); window.scrollBy(0, -76); }
+        if (ziel) springeZu(ziel);
       }
       if (q) eingabe.select();
       if (wunschTitel) {
@@ -228,14 +238,13 @@
           artikel.querySelectorAll(".ueberschrift, .unterueberschrift"),
           function (knoten) {
             if (knoten.textContent.trim() !== wunschTitel) return false;
-            knoten.scrollIntoView({ block: "start" });
-            window.scrollBy(0, -76);
+            springeZu(knoten);
             return true;
           });
       }
       if (window.location.hash) {
         var marke = document.getElementById(window.location.hash.slice(1));
-        if (marke) { marke.scrollIntoView({ block: "start" }); window.scrollBy(0, -76); }
+        if (marke) springeZu(marke);
       }
 
       var beobachter = new IntersectionObserver(function (eintraege) {

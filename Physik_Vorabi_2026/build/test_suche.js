@@ -80,6 +80,13 @@ S.laden().then((idx) => {
     assert(g.treffer.every((t) => S.ausschnitt(t.text, e.tokens).includes("<mark>")), "jeder Treffer markiert");
   });
 
+  pruefe("Treffer nennt den richtigen Abschnitt", () => {
+    const t = S.suche("Bragg", 3).gruppen[0].treffer[0];
+    assert.strictEqual(t.abschnitt, "8 Bragg-Reflexion");
+    const t2 = S.suche("Rutherford", 3).gruppen[0].treffer[0];
+    assert.strictEqual(t2.abschnitt, "1 Rutherford-Streuversuch");
+  });
+
   pruefe("Mehrere Wörter mit und ohne Bindestrich", () => {
     const mit = S.suche("Franck Hertz");
     const ohne = S.suche("Franck-Hertz");

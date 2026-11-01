@@ -143,7 +143,7 @@ h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 8px; letter-spacing: -.0
 .fortschritt-leiste span { display: block; height: 100%; width: 0; background: var(--akzent); border-radius: 99px; }
 .fortschritt button {
   font: inherit; font-size: .78rem; color: var(--grau); background: none;
-  border: 0; padding: 0; text-decoration: underline; cursor: pointer;
+  border: 0; padding: 4px 2px; text-decoration: underline; cursor: pointer;
 }
 
 .weiter {
@@ -176,7 +176,7 @@ h2 .zahl { color: var(--grau); opacity: .7; font-weight: 400; }
 .meta { color: var(--grau); font-size: .8rem; }
 
 .gelesen {
-  font: inherit; font-size: .74rem; padding: 2px 9px; border-radius: 99px;
+  font: inherit; font-size: .74rem; padding: 4px 10px; border-radius: 99px;
   border: 1px solid var(--linie); background: none; color: var(--grau); cursor: pointer;
 }
 .gelesen:hover { border-color: #2e7d32; color: #2e7d32; }
@@ -231,7 +231,9 @@ footer noscript { display: block; margin-top: 8px; }
 .toc-liste a:hover { background: var(--merk); }
 .toc-liste a.aktiv { color: var(--akzent); border-left-color: var(--akzent); background: var(--merk); }
 .toc-liste .stufe2 a { padding-left: 20px; font-size: .8rem; color: var(--grau); }
-.lese-kopf { border-bottom: 1px solid var(--linie); padding-bottom: 16px; margin-bottom: 20px; }
+.lese-kopf { border-bottom: 1px solid var(--linie); padding-bottom: 16px; margin-bottom: 20px;
+             max-width: 74ch; }
+#artikel { max-width: 74ch; }
 .lese-kopf h1 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin: 0 0 6px; }
 .lese-kopf .meta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .lese-kopf .meta a { text-decoration: none; }
@@ -287,7 +289,7 @@ footer noscript { display: block; margin-top: 8px; }
   font: inherit; font-size: .8rem; padding: 4px 12px; border-radius: 99px;
   border: 1px solid var(--linie); background: var(--karte); color: var(--fg); cursor: pointer;
 }
-.chips button[aria-pressed="true"] { background: var(--akzent); border-color: var(--akzent); color: var(--karte); }
+.chips button[aria-pressed="true"] { background: var(--akzent); border-color: var(--akzent); color: var(--bg); }
 .gruppe-titel {
   display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
   margin: 28px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--linie);

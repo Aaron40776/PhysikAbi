@@ -69,6 +69,12 @@
     return tokens;
   }
 
+  function titelVonSeite(doc, seite) {
+    var treffer = "";
+    doc.toc.forEach(function (e) { if (e[2] <= seite) treffer = e[1]; });
+    return treffer;
+  }
+
   function zaehle(text, v) {
     var c = 0, i = 0;
     while (c < 6) {
@@ -123,8 +129,12 @@
 
       idx.seiten[di].forEach(function (bloecke, pi) {
         if (leer.indexOf(pi + 1) !== -1) return;
+        var abschnitt = titelVonSeite(doc, pi + 1);
         bloecke.forEach(function (text, bi) {
           var n = blockNorm(text);
+          if (text.indexOf("\n") === -1 && text.length < 80 && tocSet.has(norm(text.trim()))) {
+            abschnitt = text.trim();  // Treffer gehoert zum Abschnitt, der hier beginnt
+          }
           var score = 0, start = -1;
           for (var t = 0; t < pos.length; t++) {
             var tok = pos[t], best = 0, bestStart = -1;
@@ -150,13 +160,16 @@
           else if (text.length > 120) score += 2;    // erklärender Absatz
           if (kurzeSuche && text.length > 120) score += 3;
           score += titelGenau ? 12 : metaBonus;      // Dokumentname exakt getroffen
-          eigene.push({ di: di, seite: pi + 1, block: bi, score: score, text: text, pos: start });
+          var kontext = text.length < 120 && bloecke[bi + 1] ? text + " " + bloecke[bi + 1] : text;
+          eigene.push({ di: di, seite: pi + 1, block: bi, score: score, text: text,
+                        kontext: kontext, abschnitt: abschnitt, pos: start });
         });
       });
 
       if (!eigene.length && metaPasst) {
         eigene.push({ di: di, seite: doc.toc.length ? doc.toc[0][2] : 1, block: -1, score: 4,
-                      text: doc.k || doc.t, pos: -1 });
+                      text: doc.k || doc.t, kontext: doc.k || doc.t, abschnitt: "",
+                      pos: -1 });
       }
       if (!eigene.length) return;
       eigene.sort(function (a, b) { return b.score - a.score || a.seite - b.seite; });
@@ -244,6 +257,20 @@
     var liste = null, gewaehlt = -1, aktuell = null, zeit = null;
 
     if (!eingabe || !box) return;
+    document.body.appendChild(box);
+
+    function positioniere() {
+      var r = eingabe.getBoundingClientRect();
+      var breite = Math.min(680, window.innerWidth - 32);
+      var links = Math.max(16, Math.min(r.left, window.innerWidth - breite - 16));
+      box.style.position = "fixed";
+      box.style.left = links + "px";
+      box.style.top = (r.bottom + 8) + "px";
+      box.style.width = breite + "px";
+      box.style.maxHeight = Math.max(180, Math.min(560, window.innerHeight - r.bottom - 24)) + "px";
+    }
+
+    window.addEventListener("resize", function () { if (!box.hidden) positioniere(); });
 
     function schliessen() {
       box.hidden = true;
@@ -270,6 +297,7 @@
       if (!ergebnis || !ergebnis.gruppen.length) {
         box.innerHTML = '<p class="panel-hinweis">Kein Treffer für <b>' + escape(q) + "</b>." +
           "<br>Groß-/Kleinschreibung und Umlaute sind egal; mehrere Wörter werden alle gesucht.</p>";
+        positioniere();
         box.hidden = false;
         eingabe.setAttribute("aria-expanded", "true");
         if (zaehler) zaehler.textContent = "0 Treffer";
@@ -286,14 +314,16 @@
             ' data-ziel="' + escape(ziel(g.doc, t.seite, q)) + '"' +
             ' data-pdf="' + escape(ziel(g.doc, t.seite, q, true)) + '">' +
             '<span class="kopf"><span class="seite">S. ' + t.seite + "</span>" +
-            "<span>" + escape(g.doc.t) + "</span></span>" +
-            '<span class="ausschnitt">' + ausschnitt(t.text, ergebnis.tokens) + "</span></button>";
+            "<span>" + escape(t.abschnitt || g.doc.t) + "</span></span>" +
+            '<span class="ausschnitt">' + ausschnitt(t.kontext || t.text, ergebnis.tokens) +
+            "</span></button>";
         });
         html += "</div>";
       });
       html += '<a class="alle" href="suche.html?q=' + encodeURIComponent(q) + '">Alle ' +
         ergebnis.anzahl + " Treffer anzeigen \u2192</a>";
       box.innerHTML = html;
+      positioniere();
       box.hidden = false;
       eingabe.setAttribute("aria-expanded", "true");
       if (zaehler) zaehler.textContent = ergebnis.anzahl + " Treffer";
@@ -319,6 +349,7 @@
         zeichne(aktuell, q);
       }).catch(function (fehler) {
         box.innerHTML = '<p class="panel-hinweis">' + escape(String(fehler.message || fehler)) + "</p>";
+        positioniere();
         box.hidden = false;
       });
     }
@@ -359,6 +390,7 @@
 
   window.PhysikSuche = {
     laden: laden, suche: suche, markiere: markiere, ausschnitt: ausschnitt,
-    zerlege: zerlege, norm: norm, ziel: ziel, escape: escape, panel: panel, zuKurz: zuKurz
+    zerlege: zerlege, norm: norm, ziel: ziel, escape: escape, panel: panel, zuKurz: zuKurz,
+    titelVonSeite: titelVonSeite
   };
 })();

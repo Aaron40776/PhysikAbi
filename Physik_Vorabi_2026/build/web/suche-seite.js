@@ -47,8 +47,10 @@
       g.treffer.forEach(function (t) {
         html += '<a class="ergebnis" href="' + PhysikSuche.escape(PhysikSuche.ziel(g.doc, t.seite, q.trim())) + '">' +
           '<span class="kopf"><span class="seite">S. ' + t.seite + "</span>" +
-          "<span>" + PhysikSuche.escape(titelVonSeite(g.doc, t.seite)) + "</span></span>" +
-          '<span class="ausschnitt">' + PhysikSuche.ausschnitt(t.text, ergebnis.tokens, 90) + "</span></a>";
+          "<span>" + PhysikSuche.escape(t.abschnitt || PhysikSuche.titelVonSeite(g.doc, t.seite)) +
+          "</span></span>" +
+          '<span class="ausschnitt">' + PhysikSuche.ausschnitt(t.kontext || t.text, ergebnis.tokens, 90) +
+          "</span></a>";
       });
       if (g.gesamt > g.treffer.length) {
         html += '<p class="meta" style="padding:6px 12px">… ' + (g.gesamt - g.treffer.length) +
@@ -57,12 +59,6 @@
       }
     });
     ziel.innerHTML = html;
-  }
-
-  function titelVonSeite(doc, seite) {
-    var treffer = "";
-    doc.toc.forEach(function (e) { if (e[2] <= seite) treffer = e[1]; });
-    return treffer;
   }
 
   function lauf() {

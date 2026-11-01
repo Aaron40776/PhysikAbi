@@ -36,6 +36,8 @@
   im Leser ausgeblendet).
 - Ranking: exakte Abschnittsüberschrift +8 (nur Einzelblock), Fließtext +2, Formelbruchstück −3,
   Titel/Kurztext +4 je Begriff, Dokumentname exakt +12 (auch auf Gruppen-Max).
+- `html{scroll-behavior:smooth}` + `scrollIntoView` + `scrollBy` landet bei 0 → `springeZu()` in
+  `lesen.js` rechnet die Position und nutzt `behavior:"instant"`.
 - Assets tragen `?v=<Hash aus JSON+JS+CSS>`; ohne Änderung des Hashs cacht der Browser alte JS-Dateien.
 - Neues PDF = Karte erscheint automatisch; Kurztext in `BESCHREIBUNG` ergänzen. Kopfzahlen über
   `__ANZAHL__`/`__GESAMT__`.
