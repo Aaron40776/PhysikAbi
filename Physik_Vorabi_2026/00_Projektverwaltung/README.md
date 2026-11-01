@@ -33,7 +33,7 @@ Formeln mit echten Bruchstrichen (statt Schrägstrich), Herleitungen als nummeri
 Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Grafiken mit
 Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
 
-Umfang (01.11.): **7 Skripte 50 Seiten**, gesamt **110 Seiten**, 21.304 Wörter
+Umfang (01.11.): **7 Skripte 50 Seiten**, gesamt **110 Seiten**, 21.309 Wörter
 (vor der Straffung 121 Seiten). Darin enthalten ist das 7-seitige Trainingsheft
 zur Diagrammauswertung.
 

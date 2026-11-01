@@ -1095,7 +1095,7 @@ visuell-ästhetisch.
 | Prüfung | Ergebnis |
 |---|---|
 | `./build_all.sh` | „alle gebaut“, 17 PDFs |
-| `qa_pdf.py` | 110 Seiten, 21.304 Wörter, 0 Textüberläufe, 0 Formelreste |
+| `qa_pdf.py` | 110 Seiten, 21.309 Wörter, 0 Textüberläufe, 0 Formelreste |
 | `check_figs.py` | 9 Hinweise „Text außerhalb“, 0 Überlappungen |
 | `check_physics.py` | 14/14 Prüfungen (Konstanten, Photoeffekt, Compton, Rydberg, Doppelspalt, MZI, Potenzialtopf) |
 | `test_pages.py` | 48/48 Prüfungen (17 Dokumente, 110 Seiten, Textansicht, Glossar, Theme, Suche, ZIP) |
