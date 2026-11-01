@@ -348,58 +348,61 @@ for ax, psi, t in zip(axes, [psi_1s, psi_2s, psi_2p],
 save(fig, "orbitale")
 
 # ---------------------------------------------------------------- 16 MZI
-# Alle vier optischen Elemente stehen parallel ("/"). Ein Strahl von links wird
-# an ST1 nach oben reflektiert bzw. nach rechts durchgelassen; M1 lenkt oben
-# nach rechts, M2 unten nach oben; ST2 überlagert beide Wege.
+# Klarer Aufbau: Quelle -> ST1; Arm 1 über M1 nach ST2, Arm 2 über M2 nach ST2.
+# Strahlteiler sind als Würfel mit Diagonale gezeichnet, Spiegel als Linie.
 fig, ax = plt.subplots(figsize=(6.8, 4.0))
-ax.set_xlim(-0.2, 10.8); ax.set_ylim(-0.5, 6.7); ax.axis("off")
+ax.set_xlim(0, 10.7); ax.set_ylim(0, 6.85); ax.axis("off")
 
-def pfeil(x1, y1, x2, y2, c=ORANGE, lw=1.6):
+def pfeil(x1, y1, x2, y2, c=BLUE, lw=1.7):
     ax.annotate("", xy=(x2, y2), xytext=(x1, y1),
                 arrowprops=dict(arrowstyle="-|>", color=c, lw=lw,
-                                mutation_scale=10, shrinkA=0, shrinkB=0))
+                                mutation_scale=10, shrinkA=0, shrinkB=0), zorder=2)
 
-# Quelle und Strahl zu ST1
-ax.add_patch(Rectangle((0.15, 2.65), 1.2, 0.7, fc="white", ec=BLUE, lw=1.2))
-ax.text(0.75, 3.0, "Quelle", ha="center", va="center", fontsize=8, color=BLUE)
-pfeil(1.35, 3.0, 1.95, 3.0)
+def spiegel(x, y, name, tx, ty, ha="center", va="center"):
+    ax.plot([x-.30, x+.30], [y-.30, y+.30], color=GREY, lw=2.4,
+            solid_capstyle="butt", zorder=4)
+    ax.plot([x-.30, x+.30], [y-.22, y+.38], color="#B8C2CC", lw=.8,
+            solid_capstyle="butt", zorder=3)
+    ax.text(tx, ty, name, fontsize=8, color=GREY, ha=ha, va=va)
 
-# ST1
-ax.plot([1.72, 2.28], [2.72, 3.28], color=GREY, lw=2.8, solid_capstyle="butt")
-ax.text(2.34, 2.72, "ST 1", fontsize=8, color=GREY, ha="left", va="top")
+def teiler(x, y, name, tx, ty):
+    ax.add_patch(Rectangle((x-.28, y-.28), .56, .56, fc="#EAF2F8",
+                           ec=GREY, lw=1.1, zorder=3))
+    ax.plot([x-.28, x+.28], [y-.28, y+.28], color=GREY, lw=1.2, zorder=4)
+    ax.text(tx, ty, name, fontsize=8, color=GREY, ha="center", va="center")
 
-# Arm 1: nach oben zu M1, dann nach rechts zu ST2
-pfeil(2.0, 3.0, 2.0, 4.94)
-ax.plot([1.72, 2.28], [4.72, 5.28], color=GREY, lw=2.8, solid_capstyle="butt")
-ax.text(1.62, 5.42, "Spiegel M1", fontsize=8, color=GREY, ha="right", va="bottom")
-pfeil(2.12, 5.0, 6.95, 5.0)
+# Quelle
+ax.add_patch(Rectangle((.10, 2.65), 1.15, .70, fc="white", ec=BLUE, lw=1.2, zorder=3))
+ax.text(.675, 3.0, "Laser", ha="center", va="center", fontsize=8, color=BLUE)
+pfeil(1.25, 3.0, 1.92, 3.0)
 
-# Arm 2: nach rechts zu M2, dann nach oben zu ST2
-pfeil(2.0, 3.0, 6.94, 3.0)
-ax.plot([6.72, 7.28], [2.72, 3.28], color=GREY, lw=2.8, solid_capstyle="butt")
-ax.text(7.38, 2.72, "Spiegel M2", fontsize=8, color=GREY, ha="left", va="top")
-pfeil(7.0, 3.06, 7.0, 4.94)
+# ST1 und die beiden Arme
+teiler(2.2, 3.0, "ST 1", 2.2, 2.33)
+pfeil(2.2, 3.28, 2.2, 4.68)          # Arm 1 nach oben
+pfeil(2.48, 3.0, 6.92, 3.0)          # Arm 2 nach rechts
+spiegel(2.2, 5.0, "M1", 1.82, 5.28, ha="right")
+pfeil(2.52, 5.0, 6.92, 5.0)          # Arm 1 nach rechts
+spiegel(7.2, 3.0, "M2", 7.2, 2.33)
+pfeil(7.2, 3.32, 7.2, 4.68)          # Arm 2 nach oben
 
-# ST2 und Ausgänge
-ax.plot([6.72, 7.28], [4.72, 5.28], color=GREY, lw=2.8, solid_capstyle="butt")
-ax.text(6.62, 5.42, "ST 2", fontsize=8, color=GREY, ha="right", va="bottom")
-pfeil(7.0, 5.0, 9.55, 5.0)
-pfeil(7.0, 5.12, 7.0, 6.35)
+# ST2, Ausgänge und Detektoren
+teiler(7.2, 5.0, "ST 2", 7.2, 5.58)
+pfeil(7.48, 5.0, 8.55, 5.0)
+pfeil(7.2, 5.28, 7.2, 6.10)
+ax.add_patch(Rectangle((8.55, 4.65), 1.05, .70, fc="white", ec=RED, lw=1.2, zorder=3))
+ax.text(9.075, 5.0, "D1", fontsize=9, color=RED, ha="center", va="center")
+ax.add_patch(Rectangle((6.65, 6.10), 1.10, .55, fc="white", ec=RED, lw=1.2, zorder=3))
+ax.text(7.2, 6.375, "D2", fontsize=9, color=RED, ha="center", va="center")
 
 # Phasenplättchen im oberen Arm
-ax.add_patch(Rectangle((4.05, 4.74), 0.55, 0.52, fc="#EAF2F8", ec=TEAL, lw=1.1))
-ax.text(4.32, 4.55, "Phasen-\nplättchen", fontsize=7.5, color=TEAL, ha="center", va="top")
-
-# Detektoren
-ax.add_patch(Rectangle((9.55, 4.65), 1.05, 0.7, fc="white", ec=RED, lw=1.2))
-ax.text(10.07, 5.0, "D1", fontsize=9, color=RED, ha="center", va="center")
-ax.add_patch(Rectangle((6.5, 6.35), 1.0, 0.55, fc="white", ec=RED, lw=1.2))
-ax.text(7.0, 6.62, "D2", fontsize=9, color=RED, ha="center", va="center")
+ax.add_patch(Rectangle((4.05, 4.70), .55, .60, fc="#EAF2F8", ec=TEAL, lw=1.1, zorder=3))
+ax.text(4.325, 4.55, "Phasen-\nplättchen", fontsize=7.5, color=TEAL,
+        ha="center", va="top")
 
 # Armlängen und Beschriftung
-ax.text(2.12, 3.85, "Arm 1", fontsize=8, color=GREY, rotation=90, va="center")
-ax.text(4.4, 3.15, "Arm 2", fontsize=8, color=GREY, ha="center")
-ax.text(0.2, 6.35, "Beide Arme gleich lang: 2 + 5 = 5 + 2", fontsize=8, color=GREY)
+ax.text(1.82, 3.95, "Arm 1", fontsize=8, color=GREY, rotation=90, va="center")
+ax.text(4.65, 2.55, "Arm 2", fontsize=8, color=GREY, ha="center")
+ax.text(.15, 6.55, "Beide Arme gleich lang: 2 + 5 = 5 + 2", fontsize=8, color=GREY)
 save(fig, "mzi")
 
 # ---------------------------------------------------------------- 17 Unbestimmtheit

@@ -1150,3 +1150,14 @@ Layout bei 390 px und 500 px: `scrollWidth == innerWidth`, kein horizontaler Sei
 breite Formeln/Tabellen scrollen nur im eigenen Kasten. Leseseiten sind byte-identisch
 reproduzierbar. PDFs unverändert: 110 Seiten, 21.309 Wörter, `qa_pdf.py` 0 Befunde,
 `check_physics.py` 14/14, `check_sources.py` und `check_markdown.py` je 0 Befunde.
+
+### 15.9 MZI-Abbildung neu gezeichnet (01.11.2026)
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| F5 | `build/make_figures.py`, `build/fig/mzi.svg` | Die vier optischen Elemente waren nur als gleichartige Schrägstriche gezeichnet; Strahlteiler und Spiegel waren visuell nicht unterscheidbar, die Strahlführung wirkte unklar. | ST1/ST2 als Würfel mit Diagonale, M1/M2 als Spiegel mit Rückseite; Strahlen enden an den Bauteilflächen und beginnen dahinter. Quelle heißt jetzt „Laser“ wie im Text. |
+
+`check_figs.py` beim Neuzeichnen: keine Textüberlappung für `mzi`; nur die bekannten
+9 Hinweise „Text außerhalb“ bei Achsenbeschriftungen anderer Figuren. Die übrigen
+SVGs wurden nach dem Prüflauf bewusst auf den committeten Stand zurückgesetzt, damit
+kein Metadaten-Churn entsteht. PDF 05: 6 Seiten, 1166 Wörter, `qa_pdf.py` 0 Befunde.
