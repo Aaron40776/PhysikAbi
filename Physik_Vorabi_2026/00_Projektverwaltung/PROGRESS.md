@@ -464,6 +464,9 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   21.279 Wörter, 50 Skriptseiten**. Alle aktuellen Stellen (README, 00-README, Prüfbericht,
   Review-Kopf, Lernfahrplan, `test_pages.py`, `test_suche.js`, Memory) sind angeglichen;
   historische Stände in PROGRESS/Review bleiben als solche stehen.
+- **Zeigerkette exakt:** Die Beschriftungen T/4, T/2, 3T/4 lagen bei 72°/168°/265° statt
+  bei 90°/180°/270°. Die 13 Zeiger rotieren jetzt in exakten Zwölftelschritten; die
+  Viertelmarken sitzen genau.
 - **Prüfstand:** `qa_pdf.py` 110 Seiten, 21.279 Wörter, 0 Überläufe/Formelreste;
   `check_physics.py` 14/14; `test_pages.py` 48/48; `test_suche.js` 18/18;
   `check_figs.py` 0 Überlappungen, 9 Hinweise „Text außerhalb“.

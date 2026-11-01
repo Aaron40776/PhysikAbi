@@ -44,12 +44,12 @@ save(fig, "welle_raumzeit")
 
 # ---------------------------------------------------------------- 2 Zeigerkette
 fig, ax = plt.subplots(figsize=(6.0, 2.3))
-for k in range(14):
-    ang = 0.42*k
+for k in range(13):
+    ang = 2*np.pi*k/12
     x0, y0 = k*0.62, 0
     ax.annotate("", xy=(x0+0.55*np.cos(ang), 0.55*np.sin(ang)), xytext=(x0, 0),
                 arrowprops=dict(arrowstyle="->", color=BLUE, lw=1.2))
-for k, t in [(0, "0"), (3, "T/4"), (7, "T/2"), (11, "3T/4")]:
+for k, t in [(0, "0"), (3, "T/4"), (6, "T/2"), (9, "3T/4")]:
     ax.text(k*0.62, -0.3, t, ha="center", color=GREY, fontsize=8)
 ax.axhline(0, color="#AAAAAA", lw=0.6)
 ax.set_xlim(-0.4, 8.6); ax.set_ylim(-0.75, 0.75)
