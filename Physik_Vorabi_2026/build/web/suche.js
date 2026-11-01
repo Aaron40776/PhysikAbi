@@ -241,12 +241,25 @@
     return (von > 0 ? "\u2026 " : "") + markiere(stueck, tokens) + (bis < text.length ? " \u2026" : "");
   }
 
-  function ziel(doc, seite, q, pdf) {
-    if (pdf) {
-      return doc.f + "#page=" + seite + "&search=" + encodeURIComponent(q);
+  /* PDF.js sucht wörtlich; bei "Bragg Gitter" darf nur ein Begriff markiert werden. */
+  function pdfBegriff(q) {
+    var teile = q.match(/"[^"]+"|\S+/g) || [];
+    for (var i = 0; i < teile.length; i++) {
+      var t = teile[i];
+      if (t.charAt(0) === "-") continue;
+      t = t.replace(/^"|"$/g, "").split(/[\s-]+/)[0];
+      if (t) return t;
     }
-    return "lesen.html?doc=" + encodeURIComponent(doc.id) + "&seite=" + seite +
-           "&q=" + encodeURIComponent(q);
+    return "";
+  }
+
+  function ziel(doc, seite, q) {
+    var url = "pdfjs/web/viewer.html?file=../../" + encodeURI(doc.f);
+    var hash = ["page=" + seite];
+    var begriff = pdfBegriff(q || "");
+    if (begriff) hash.push("search=" + encodeURIComponent(begriff));
+    hash.push("pagemode=none");
+    return url + "#" + hash.join("&");
   }
 
   /* ---------- Trefferpanel für die Startseite ---------- */
@@ -311,8 +324,7 @@
           " <span>\u00b7 " + g.gesamt + " Treffer</span></h3>";
         g.treffer.forEach(function (t) {
           html += '<button class="ztreffer" type="button" id="t' + t.di + "-" + t.seite + "-" + t.block + '"' +
-            ' data-ziel="' + escape(ziel(g.doc, t.seite, q)) + '"' +
-            ' data-pdf="' + escape(ziel(g.doc, t.seite, q, true)) + '">' +
+            ' data-ziel="' + escape(ziel(g.doc, t.seite, q)) + '">' +
             '<span class="kopf"><span class="seite">S. ' + t.seite + "</span>" +
             "<span>" + escape(t.abschnitt || g.doc.t) + "</span></span>" +
             '<span class="ausschnitt">' + ausschnitt(t.kontext || t.text, ergebnis.tokens) +
@@ -329,8 +341,8 @@
       if (zaehler) zaehler.textContent = ergebnis.anzahl + " Treffer";
 
       zeilen().forEach(function (z, i) {
-        z.addEventListener("click", function (e) {
-          oeffne(e.shiftKey ? z.getAttribute("data-pdf") : z.getAttribute("data-ziel"));
+        z.addEventListener("click", function () {
+          oeffne(z.getAttribute("data-ziel"));
         });
         z.addEventListener("mousemove", function () { if (gewaehlt !== i) waehlen(i); });
       });
@@ -368,7 +380,7 @@
       else if (e.key === "Enter") {
         var z = zeilen();
         var knoten = z[gewaehlt] || z[0];
-        if (knoten) { e.preventDefault(); oeffne(e.shiftKey ? knoten.getAttribute("data-pdf") : knoten.getAttribute("data-ziel")); }
+        if (knoten) { e.preventDefault(); oeffne(knoten.getAttribute("data-ziel")); }
       } else if (e.key === "Escape") {
         schliessen();
         if (eingabe.value) { eingabe.value = ""; if (zaehler) zaehler.textContent = ""; }

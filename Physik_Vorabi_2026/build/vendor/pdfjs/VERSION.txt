@@ -1,0 +1,5 @@
+PDF.js 3.11.174 (Apache-2.0)
+https://github.com/mozilla/pdf.js/releases/tag/v3.11.174
+Unveraendert uebernommen: build/pdf.js, build/pdf.worker.js, web/viewer.*, web/images, web/locale/{de,en-US}.
+Anpassung: web/viewer.html setzt locale=de und lang="de" (deutsche Oberfläche).
+Nachgetragen: web/locale/locale.properties (Sprachliste).

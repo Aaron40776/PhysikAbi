@@ -8,9 +8,9 @@ Lernfahrplan und Lernzettel.
 ### [→ Skripte online lesen](https://aaron40776.github.io/PhysikAbi/)
 
 Die Seite hat eine Volltextsuche über alle 103 Seiten: Fundstellen werden als Ausschnitt mit
-markiertem Suchwort angezeigt und führen in eine Textansicht, die die Stelle gelb hervorhebt
-und Treffer mit `n`/`p` durchblättert. Dazu Inhaltsverzeichnis je Dokument, Lernstand
-(„gelesen“), zuletzt gelesene Stelle und alle PDFs als ZIP zum Mitnehmen.
+markiertem Suchwort angezeigt. Ein Klick öffnet die **echte PDF** im eingebauten PDF.js-Viewer
+an der richtigen Seite und markiert das Suchwort auch dort. Dazu Inhaltsverzeichnis je Dokument
+(springt direkt in die PDF-Seite), Lernstand („gelesen“) und alle PDFs als ZIP zum Mitnehmen.
 
 ## Inhalt
 
@@ -42,7 +42,7 @@ cd Physik_Vorabi_2026/build
 python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
 ```
 
-Website (Übersicht, Volltextindex, Lesetext):
+Website (Übersicht, Volltextindex, PDF-Ansicht):
 
 ```bash
 cd Physik_Vorabi_2026
@@ -50,10 +50,12 @@ python3 build/make_pages.py --out _site   # braucht pymupdf
 python3 build/test_pages.py               # prüft Index, Links und Suchlogik (node)
 ```
 
-Die Quellen der Seite liegen unter `build/web/`: `index.html`, `lesen.html`, `suche.html`,
-`style.css`, `suche.js` (Index, Bewertung, Ausschnitte), `index.js`, `lesen.js`,
-`suche-seite.js`. `make_pages.py` extrahiert den Text aus den PDFs zu `_site/suche.json`
-(≈190 kB) und kopiert die PDFs sowie ein ZIP.
+Die Quellen der Seite liegen unter `build/web/`: `index.html`, `suche.html`, `style.css`,
+`suche.js` (Index, Bewertung, Ausschnitte, PDF-Links), `index.js`, `suche-seite.js`.
+`make_pages.py` extrahiert den Text aus den PDFs zu `_site/suche.json` (≈190 kB), kopiert die
+PDFs, das ZIP und den PDF.js-Viewer aus `build/vendor/pdfjs/` (3.11.174, Apache-2.0,
+unverändert bis auf `lang="de"`/`locale=de`). Der Viewer braucht zur Laufzeit kein Netz und
+zeigt die PDF mit Seitensprung und markiertem Suchwort.
 
 Die Seite unter `aaron40776.github.io/PhysikAbi` wird bei jedem Push auf `main` automatisch aus
 den PDFs neu gebaut (`.github/workflows/pages.yml`, `build/make_pages.py`).

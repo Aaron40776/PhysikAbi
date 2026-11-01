@@ -138,12 +138,21 @@ S.laden().then((idx) => {
     assert.strictEqual(S.suche("Übungsheft 20 Aufgaben", 3).gruppen[0].doc.id, "Uebungsheft_20_Aufgaben");
   });
 
-  pruefe("Ziel-URLs für Textansicht und PDF", () => {
+  pruefe("Ziel-URLs zeigen in den PDF.js-Viewer", () => {
     const doc = idx.docs[0];
-    assert(S.ziel(doc, 7, "Bragg") ===
-      "lesen.html?doc=01_Wellen_und_Interferenz&seite=7&q=Bragg");
-    assert(S.ziel(doc, 7, "Bragg", true) ===
-      "skripte/01_Wellen_und_Interferenz.pdf#page=7&search=Bragg");
+    const u = S.ziel(doc, 7, "Bragg");
+    assert(u.startsWith("pdfjs/web/viewer.html?file=../../skripte/01_Wellen_und_Interferenz.pdf#"), u);
+    assert(u.includes("page=7"), u);
+    assert(u.includes("search=Bragg"), u);
+    assert(u.endsWith("pagemode=none"), u);
+  });
+
+  pruefe("Mehrwortsuche markiert den ersten Begriff", () => {
+    const doc = idx.docs[0];
+    assert(S.ziel(doc, 7, "Bragg Gitter").includes("search=Bragg"));
+    assert(S.ziel(doc, 7, '"Bragg Reflexion"').includes("search=Bragg"));
+    assert(S.ziel(doc, 7, "-Compton Bragg").includes("search=Bragg"));
+    assert(!S.ziel(doc, 7, "-Compton").includes("search="));
   });
 
   const fehler = pruefungen.filter(([ok]) => !ok);

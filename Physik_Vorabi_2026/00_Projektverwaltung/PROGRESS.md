@@ -298,3 +298,16 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Suchtreffer nennen den Abschnitt**, in dem sie stehen (statt nur die Seite); kurze
   Überschriften-Treffer zeigen den folgenden Absatz als Kontext im Ausschnitt.
 - Textansicht auf 74 Zeichen Zeilenlänge begrenzt, „gelesen“/„zurücksetzen“ auf Tap-Größe gebracht.
+
+## Nachtrag 14 (01.11.2026) – Suchtreffer öffnen die echte PDF
+
+- **Textansicht entfernt.** Sie war eine aus dem PDF extrahierte Kopie und beim Lesen schlechter
+  als das Original. `lesen.html`/`lesen.js` und die zugehörigen Stile sind gelöscht.
+- **PDF.js-Viewer eingebaut** (`build/vendor/pdfjs/`, 3.11.174, Apache-2.0, deutsch). Suchtreffer,
+  Karten, Inhaltsverzeichnisse und die Trefferseite verlinken auf
+  `pdfjs/web/viewer.html?file=…pdf#page=N&search=Begriff`. Geprüft: Klick auf „Bragg“ öffnet
+  Seite 7, markiert „Bragg“, Anzeige „3 von 4 Übereinstimmungen“.
+- **Mehrwortsuche:** an PDF.js geht nur der erste Suchbegriff („Bragg Gitter“ → `search=Bragg`),
+  sonst findet die wörtliche PDF-Suche nichts. Der Ausschnitt auf der Seite zeigt weiter alle Wörter.
+- **Grenze:** PDF.js sucht im PDF-Text; bei Formelzeichen (λ) markiert es die Stelle im PDF,
+  die Trefferliste bleibt die schnellere Übersicht.

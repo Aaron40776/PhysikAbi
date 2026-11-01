@@ -23,21 +23,23 @@
 - `PROGRESS.md` wird nur ergänzt (Nachtrag mit Datum), nicht rückwirkend umgeschrieben.
 
 ## Website (GitHub Pages)
+- Suchtreffer öffnen die **echte PDF** im PDF.js-Viewer (`build/vendor/pdfjs`, 3.11.174,
+  Apache-2.0), nicht mehr eine HTML-Textansicht: `pdfjs/web/viewer.html?file=../../skripte/x.pdf#page=N&search=Wort`.
+- PDF.js sucht wörtlich; bei Mehrwortanfragen nur den ersten Begriff übergeben (`pdfBegriff`).
 - Pages läuft als **Workflow** (`.github/workflows/pages.yml`), Trigger u. a. `build/web/**`; testet
   vor dem Deploy. `_site/` ist ignoriert.
 - Bauen: `cd Physik_Vorabi_2026 && python3 build/make_pages.py --out _site` (pymupdf);
   testen: `python3 build/test_pages.py` (baut temporär, prüft Index/Links/ZIP und ruft
   `node build/test_suche.js` für Ranking/Markierung/Phrasen).
-- Quellen: `build/web/{index,lesen,suche}.html`, `style.css`, `suche.js` (Normalisierung, Bewertung,
-  Ausschnitte, Panel), `index.js` (Lernstand, Weiterlesen), `lesen.js` (Textansicht),
-  `suche-seite.js`. `make_pages.py` erzeugt `suche.json` (~185 kB) + ZIP.
+- Quellen: `build/web/{index,suche}.html`, `style.css`, `suche.js` (Normalisierung, Bewertung,
+  Ausschnitte, Panel, PDF-Links), `index.js` (Lernstand), `suche-seite.js`; Viewer in
+  `build/vendor/pdfjs/`. `make_pages.py` erzeugt `suche.json` (~185 kB) + ZIP.
 - Index: Text je Seite blockweise; Kopf-/Fußzeilen und `\xad`-Trennungen entfernt; NFKC macht
-  𝜆→λ und ℎ→h. Deckblatt und gedrucktes Inhaltsverzeichnis stehen in `doc.leer` (nicht durchsucht,
-  im Leser ausgeblendet).
+  𝜆→λ und ℎ→h. Deckblatt und gedrucktes Inhaltsverzeichnis stehen in `doc.leer` (nur Metadaten).
 - Ranking: exakte Abschnittsüberschrift +8 (nur Einzelblock), Fließtext +2, Formelbruchstück −3,
   Titel/Kurztext +4 je Begriff, Dokumentname exakt +12 (auch auf Gruppen-Max).
-- `html{scroll-behavior:smooth}` + `scrollIntoView` + `scrollBy` landet bei 0 → `springeZu()` in
-  `lesen.js` rechnet die Position und nutzt `behavior:"instant"`.
+- PDF.js ignoriert `pagemode=none`; die Seitenleiste bleibt offen (auf schmalen Schirmen
+  überlagert sie, kein horizontaler Überlauf).
 - Assets tragen `?v=<Hash aus JSON+JS+CSS>`; ohne Änderung des Hashs cacht der Browser alte JS-Dateien.
 - Neues PDF = Karte erscheint automatisch; Kurztext in `BESCHREIBUNG` ergänzen. Kopfzahlen über
   `__ANZAHL__`/`__GESAMT__`.

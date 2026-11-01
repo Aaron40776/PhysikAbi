@@ -7,9 +7,10 @@ import json, pathlib, re, shutil, subprocess, sys, tempfile, zipfile
 
 BUILD = pathlib.Path(__file__).resolve().parent
 ROOT = BUILD.parent
-DATEIEN = ("index.html", "lesen.html", "suche.html", "suche.json", "physik-vorabi-2026.zip",
-           "assets/style.css", "assets/suche.js", "assets/index.js", "assets/lesen.js",
-           "assets/suche-seite.js")
+DATEIEN = ("index.html", "suche.html", "suche.json", "physik-vorabi-2026.zip",
+           "assets/style.css", "assets/suche.js", "assets/index.js", "assets/suche-seite.js",
+           "pdfjs/web/viewer.html", "pdfjs/web/viewer.js", "pdfjs/build/pdf.js",
+           "pdfjs/build/pdf.worker.js", "pdfjs/LICENSE")
 SEITEN = 103
 
 pruefungen = []
@@ -36,9 +37,8 @@ def main():
             pruefe(name, (ziel / name).is_file())
 
         index_html = (ziel / "index.html").read_text(encoding="utf-8")
-        lesen_html = (ziel / "lesen.html").read_text(encoding="utf-8")
         suche_html = (ziel / "suche.html").read_text(encoding="utf-8")
-        reste = re.findall(r"__[A-Z_]+__", index_html + lesen_html + suche_html)
+        reste = re.findall(r"__[A-Z_]+__", index_html + suche_html)
         pruefe("keine Platzhalter im HTML", not reste, reste)
 
         daten = json.loads((ziel / "suche.json").read_text(encoding="utf-8"))
@@ -58,9 +58,13 @@ def main():
 
         fehlende_karten = [d["id"] for d in docs
                            if f'data-doc="{d["id"]}"' not in index_html
-                           or f'lesen.html?doc={d["id"]}"' not in index_html
+                           or f'pdfjs/web/viewer.html?file=../../{d["f"]}' not in index_html
                            or not (ziel / d["f"]).is_file()]
-        pruefe("Karte, Textansicht-Link und PDF je Dokument", not fehlende_karten, fehlende_karten)
+        pruefe("Karte, PDF-Link und PDF je Dokument", not fehlende_karten, fehlende_karten)
+        pruefe("Inhaltsverzeichnis springt in die PDF-Seite",
+               '#page=3' in index_html and 'pagemode=none' in index_html)
+        pruefe("keine Textansicht mehr verlinkt",
+               "lesen.html" not in index_html + suche_html)
 
         with zipfile.ZipFile(ziel / "physik-vorabi-2026.zip") as z:
             namen = z.namelist()

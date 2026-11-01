@@ -8,6 +8,7 @@ on:
       - "Physik_Vorabi_2026/04_Zusatzmaterial/**"
       - "Physik_Vorabi_2026/build/make_pages.py"
       - "Physik_Vorabi_2026/build/web/**"
+      - "Physik_Vorabi_2026/build/vendor/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 

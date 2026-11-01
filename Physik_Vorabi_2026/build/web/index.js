@@ -1,9 +1,8 @@
-/* Startseite: Volltextsuche, Lernstand, zuletzt gelesen. */
+/* Startseite: Volltextsuche und Lernstand. */
 (function () {
   "use strict";
 
   var GELESEN = "physik.gelesen";
-  var LETZTES = "physik.letztes";
 
   function lies(schluessel, vorgabe) {
     try {
@@ -48,10 +47,6 @@
       schreib(GELESEN, gelesen);
       lernstandZeichnen();
     });
-    var titel = karte.querySelector(".titel");
-    if (titel) titel.addEventListener("click", function () {
-      schreib(LETZTES, { id: karte.getAttribute("data-doc"), t: titel.textContent, seite: 1 });
-    });
   });
 
   if (fortschrittReset) fortschrittReset.addEventListener("click", function () {
@@ -59,15 +54,6 @@
     schreib(GELESEN, []);
     lernstandZeichnen();
   });
-
-  var weiter = document.getElementById("weiter");
-  var letztes = lies(LETZTES, null);
-  if (weiter && letztes && letztes.id) {
-    weiter.href = "lesen.html?doc=" + encodeURIComponent(letztes.id) + "&seite=" + (letztes.seite || 1);
-    weiter.innerHTML = "Weiterlesen: <b>" + PhysikSuche.escape(letztes.t || letztes.id) + "</b>" +
-      " <span>S. " + (letztes.seite || 1) + "</span>";
-    weiter.hidden = false;
-  }
 
   lernstandZeichnen();
   PhysikSuche.panel({ input: "q", panel: "panel", zaehler: "treffer" });

@@ -3,9 +3,9 @@
 
 Ergebnis in _site/:
   index.html        Übersicht mit Volltextsuche, Lernstand und Inhaltsverzeichnissen
-  lesen.html        Textansicht eines Dokuments mit markierten Suchtreffern
   suche.html        alle Suchtreffer einer Anfrage
   suche.json        Volltextindex (Seiten, Blöcke, Inhaltsverzeichnisse)
+  pdfjs/            PDF.js-Viewer (Seitensprung + markiertes Suchwort in der echten PDF)
   skripte/, zusatz/ die PDFs
   physik-vorabi-2026.zip   alle PDFs zum Mitnehmen
 """
@@ -17,6 +17,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKRIPTE = ROOT / "03_Lernskripte"
 ZUSATZ = ROOT / "04_Zusatzmaterial"
 WEB = pathlib.Path(__file__).resolve().parent / "web"
+VENDOR = pathlib.Path(__file__).resolve().parent / "vendor" / "pdfjs"
 
 BESCHREIBUNG = {
     "01_Wellen_und_Interferenz": ("Wellen und Interferenz", "Schwingung, Zeiger, Doppelspalt, Gitter, Bragg, Polarisation, Michelson"),
@@ -103,25 +104,34 @@ def dokument(pdf):
     }, seiten
 
 
+def pdf_url(doc, seite=None, q=None):
+    """PDF.js-Viewer: echte PDF, richtige Seite, Suchwort markiert."""
+    datei = "pdfjs/web/viewer.html?file=../../" + quote(doc["f"], safe="/")
+    teile = [f"page={seite}"] if seite else []
+    if q:
+        teile.append("search=" + quote(q, safe=""))
+    teile.append("pagemode=none")
+    return datei + "#" + "&".join(teile)
+
+
 def karte(doc):
     stamm = doc["id"]
     toc = "".join(
-        f'<li><a href="lesen.html?doc={stamm}&amp;seite={seite}&amp;h={quote(titel)}">'
-        f'{html.escape(titel)}</a></li>'
+        f'<li><a href="{pdf_url(doc, seite)}">{html.escape(titel)}</a></li>'
         for _, titel, seite in doc["toc"][:8]
     )
     rest = len(doc["toc"]) - 8
-    mehr = (f'<li><a class="mehr" href="lesen.html?doc={stamm}">… {rest} weitere Abschnitte</a></li>'
+    mehr = (f'<li><a class="mehr" href="{pdf_url(doc)}">… {rest} weitere Abschnitte</a></li>'
             if rest > 0 else "")
     return f"""      <article class="karte" data-doc="{stamm}">
-        <a class="titel" href="{doc['f']}" target="_blank" rel="noopener">{html.escape(doc['t'])}</a>
+        <a class="titel" href="{pdf_url(doc)}">{html.escape(doc['t'])}</a>
         <p class="text">{html.escape(doc['k'])}</p>
         <div class="zeile">
           <span class="meta">{doc['n']} Seiten · PDF</span>
           <button class="gelesen" type="button" aria-pressed="false" title="Als gelesen markieren">gelesen</button>
         </div>
         <div class="aktionen">
-          <a href="lesen.html?doc={stamm}">Textansicht</a>
+          <a href="{pdf_url(doc)}">Im PDF lesen</a>
           <details class="toc">
             <summary>Inhalt</summary>
             <ol>{toc}{mehr}</ol>
@@ -159,7 +169,7 @@ def main():
     roh = json.dumps({"docs": docs, "seiten": seiten}, ensure_ascii=False, separators=(",", ":"))
     (out / "suche.json").write_text(roh, encoding="utf-8")
     stempel = hashlib.sha256(roh.encode())
-    for name in ("style.css", "suche.js", "index.js", "lesen.js", "suche-seite.js"):
+    for name in ("style.css", "suche.js", "index.js", "suche-seite.js"):
         stempel.update((WEB / name).read_bytes())
     version = stempel.hexdigest()[:10]
 
@@ -177,9 +187,17 @@ def main():
         "__ZIPMB__": f"{zip_pfad.stat().st_size / 1e6:.1f}".replace(".", ","),
         "__V__": version,
     }
-    for name in ("style.css", "suche.js", "index.js", "lesen.js", "suche-seite.js"):
+    for name in ("style.css", "suche.js", "index.js", "suche-seite.js"):
         shutil.copy2(WEB / name, out / "assets" / name)
-    for name in ("index.html", "lesen.html", "suche.html"):
+
+    if not VENDOR.is_dir():
+        raise SystemExit(f"PDF.js fehlt: {VENDOR}")
+    ziel_viewer = out / "pdfjs"
+    if ziel_viewer.exists():
+        shutil.rmtree(ziel_viewer)
+    shutil.copytree(VENDOR, ziel_viewer)
+
+    for name in ("index.html", "suche.html"):
         text = (WEB / name).read_text(encoding="utf-8")
         for k, v in werte.items():
             text = text.replace(k, v)
