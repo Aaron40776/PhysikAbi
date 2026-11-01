@@ -41,8 +41,20 @@
 - PDF.js ignoriert `pagemode=none`; die Seitenleiste bleibt offen (auf schmalen Schirmen
   überlagert sie, kein horizontaler Überlauf).
 - Assets tragen `?v=<Hash aus JSON+JS+CSS>`; ohne Änderung des Hashs cacht der Browser alte JS-Dateien.
+- Kopfzeile ist auf Handys 98 px hoch (Marke + Suche umbrechen) → `html{scroll-padding-top:104px}`;
+  `scroll-margin` an `h2` allein reicht nicht, weil `#skripte` die Section ist.
+- PDF.js-Viewer-Patches stehen in `build/vendor/pdfjs/VERSION.txt`: Favicon als Data-URI
+  (sonst 404 auf /favicon.ico), `disablePreferences`, fehlende `editor_alt_text_*`-Keys in
+  `web/locale/de/viewer.properties` (sonst Konsolenwarnungen). `#page=N&search=Wort` markiert,
+  öffnet aber die Findbar nicht (PDF.js-Standard).
+- `pymupdf==2.0` ist im Pages-Workflow gepinnt; zwei Builds sind byte-identisch.
 - Neues PDF = Karte erscheint automatisch; Kurztext in `BESCHREIBUNG` ergänzen. Kopfzahlen über
   `__ANZAHL__`/`__GESAMT__`.
+
+## Prüfwerkzeug
+- Layout/Konsole live prüfen: `pip install playwright`, Chromium liegt unter `/usr/bin/chromium`
+  (`chromium.launch(executable_path="/usr/bin/chromium", args=["--no-sandbox"])`); Viewports
+  360/390/430 hoch, 844×390 quer, 768/820/1024 hoch und quer. Kein `npm i` nötig.
 
 ## Fallen (teuer gelernt)
 - Typst 0.15.1 kennt **kein** `planck.reduce`/`hbar` → `h\/(2 pi)` schreiben.
