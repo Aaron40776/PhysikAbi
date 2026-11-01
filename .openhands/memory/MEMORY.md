@@ -22,6 +22,9 @@
   „nicht möglich“ sagen. Erst Alternativen prüfen (Rendering, OCR/OpenCV, Screenshot-Datei,
   ASCII, geometrische Konstruktionsdaten), dann Grenzen benennen.
 - Keine echten Sonderrechte nötig; Sicherheits- und Rechtegrenzen der Umgebung bleiben bestehen.
+- Skills aktiv nutzen: bei wiederkehrenden Aufgaben vorhandene Skills prüfen und einsetzen;
+  fehlt eine passende Fähigkeit, mit `skill-creator` eine neue erstellen oder mit `add-skill`
+  aus einem Repository importieren. Neue Skills so ablegen, dass sie später wiederverwendbar sind.
 - Browser-Screenshots werden nur als Datei gespeichert und nicht als Bild in den Kontext
   gespielt. Pixelprüfung daher programmatisch (Farbmasken, Bounding-Boxes, CV), nicht visuell.
 
