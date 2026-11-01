@@ -1,0 +1,546 @@
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2025 
+Aufgaben für das Fach Physik 
+Kurzbeschreibung 
+Aufgabentitel 
+Sicherheit von Deichen 
+Anforderungsniveau 
+erhöht 
+Inhaltsbereiche 
+♦ Elektrische und magnetische Felder 
+♦ Das Feldkonzept zur Beschreibung von Wechselwirkungen 
+♦ Begriff des Feldes am Beispiel von elektrischen und magne-
+tischen Feldern 
+♦ Elektrische Feldstärke 
+♦ Körper in statischen Feldern 
+♦ Kräfte auf Körper in homogenen elektrischen und magneti-
+schen Feldern, Bahnformen (qualitativ) 
+Materialien 
+♦ M 1 Querschnitt des Deichkörpers 
+♦ M 2 Spezifischer elektrischer Widerstand 
+♦ M 3 Messwerte zur Bestimmung des spezifischen Widerstands 
+♦ M 4 Leserbrief und Sicherheitsaspekte 
+Quellenangaben 
+♦ M 1 in Anlehnung an: GGU Gesellschaft für Geophysikalische 
+Untersuchungen mbH, WID11-C.LWP (2011). Die Widerstands-
+geoelektrik. Verfügbar unter: https://web.ar-
+chive.org/web/20210420050044/ggukarlsruhe.de/GGU_Geo-
+physik_Verfahren_WiderstandsGeoelektrik.html (Zugriff am 
+20.10.2023) 
+♦ M 1, M3 in Anlehnung an: Flathe, H., Leibold, W. (1976). The 
+smooth sounding graph – A Manual for Field Work in Direct 
+Current Resistivity Sounding, Hannover, Verfügbar unter: 
+https://www.bgr.bund.de/EN/Themen/GG_Geophysik/Bodengeo
+physik/Downloads/Flathe-
+Leibold.pdf;jsessionid=F6B5C4C43CFF4BE32FF7E879878A99
+35.2_cid331?__blob=publicationFile&v=2 (Zugriff am 
+14.03.2022) 
+♦ M 2 in Anlehnung an: Bundesanstalt für Geowissenschaften und 
+Rohstoffe. Leitfähigkeiten von Gesteinen und Fluiden. Verfügbar 
+unter: 
+
+0  Kurzbeschreibung 
+ 
+ 
+2 
+https://www.bgr.bund.de/DE/Themen/GG_Geophysik/Aerogeo-
+physik/Bilder/material_leitfaehigkeiten_g.html;jsessio-
+nid=A64BA0B8837C13D469D0D73EBF911A59.2_cid284?nn=1
+563426) (Zugriff am: 14.03.22) 
+♦ M 3 in Anlehnung an: GGU Gesellschaft für Geophysikalische 
+Untersuchungen mbH, WID11-C.LWP (2011). Die Widerstands-
+geoelektrik. Verfügbar unter: https://web.ar-
+chive.org/web/20210420050044/ggukarlsruhe.de/GGU_Geo-
+physik_Verfahren_WiderstandsGeoelektrik.html (Zugriff am 
+20.10.2023) 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat1 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+fachpraktischer Anteil nein 
+ 
+Hinweise: 
+ 
+ 
+ 
+ 
+1 siehe „Hinweise zur Verwendung von Hilfsmitteln“ 
+
+1  Aufgabe 
+ 
+ 
+3 
+1 
+Aufgabe 
+Sicherheit von Deichen 
+Deiche dienen zum Schutz vor Überflutungen. Ihre Stabilität muss regelmäßig überprüft wer-
+den. Messungen des elektrischen Widerstands ermöglichen dabei Rückschlüsse darauf, ob 
+Meerwasser in einen Deich eingedrungen ist. 
+  
+BE 
+1 Bei dem in Material 1 beschriebenen Aufbau wird durch die Elektroden P1 und P2 ein 
+zeitlich konstantes elektrisches Feld im Deich erzeugt. Nehmen Sie im Folgenden 
+an, dass der Deichkörper überall dieselbe stoffliche Zusammensetzung besitzt. Ver-
+nachlässigen Sie elektrische Ströme, die aufgrund des elektrischen Feldes im Deich-
+körper entstehen. 
+a Skizzieren Sie in Abbildung 1 die elektrischen Feldlinien durch die Punkte A und 
+B. 
+b Nehmen Sie an, dass von jeder der beiden Elektroden P1 und P2 im Punkt Z je-
+weils ein elektrisches Feld mit dem Betrag 
+3 V
+m
+1,0 10−
+⋅
+ erzeugt wird. 
+Bestimmen Sie zeichnerisch in Abbildung 1 den Betrag E der Gesamtfeldstärke 
+im Punkt Z. Geben Sie den verwendeten Maßstab an. 
+[Kontrollwert: 
+V
+m
+3
+1,7 10−
+⋅
+] 
+Im Punkt Z des Deiches (siehe Abb. 1 in M 1) befindet sich ein einfach positiv gela-
+denes Natriumion der Masse 
+26
+3,8 10
+kg
+−
+⋅
+. 
+c Bestimmen Sie mit dem Ergebnis aus Aufgabe 1b den Betrag der elektrischen 
+Kraft auf dieses Ion. 
+Begründen Sie mithilfe einer Rechnung, dass die Gewichtskraft gegenüber den 
+wirkenden elektrischen Feldkräften vernachlässigt werden kann. 
+4 
+8 
+4 
+2 Zur Untersuchung, ob in einen Deich Meerwasser eingedrungen ist, wird der spezifi-
+sche elektrische Widerstand ρ des Deichmaterials bestimmt (siehe M 2). 
+a Erklären Sie mithilfe des Zusammenhangs aus Material 3 die Veränderung der 
+elektrischen Stromstärke I, falls Meerwasser in den Deichkörper eindringt. Gehen 
+Sie von der Annahme einer konstanten Spannung UM zwischen M1 und M2 aus. 
+b Ermitteln Sie unter Verwendung aller geeigneten Messwerte aus Tabelle 1 in Ma-
+terial 3 den spezifischen elektrischen Widerstand ρ des Deichkörpers (siehe 
+M 2). 
+[Kontrollwert: 60 Ω·m] 
+c Beurteilen Sie mithilfe von Material 1 und 2, ob bei dem spezifischen Widerstand 
+von 60 Ω·m Meerwasser in den Deichkörper eingedrungen sein könnte. 
+4 
+6 
+6 
+3 Während der Messung soll der Deich für die Zeitdauer der Überprüfung für Anwoh-
+ner und Urlauber gesperrt werden. Die Sperrung wird daher in der Lokalzeitung an-
+gekündigt. Deren Redaktion erhält daraufhin einen Leserbrief, der in Material 4 aus-
+schnittsweise abgedruckt ist. 
+Verfassen Sie im Namen der für die Messungen verantwortlichen Person ein Ant-
+wortschreiben, in welchem Sie auf die in Material 4 angesprochenen Risiken einge-
+hen und physikalisch begründen, dass keine Gefährdung für diese Tiere vorliegt. 
+8 
+
+2  Material 
+ 
+ 
+4 
+2 
+Material 
+Material 1: Querschnitt des Deichkörpers 
+Für eine geoelektrische Messung werden zwei Elektroden P1 und P2 im Abstand L wenige 
+Zentimeter tief in den Deich aus Sand und Kies gesteckt. Eine äußere Spannung Uaußen erzeugt 
+im Deichkörper ein elektrisches Feld. 
+Material 2: Spezifischer elektrischer Wi-
+derstand 
+Der spezifische elektrische Widerstand ρ 
+ist eine Materialkonstante. Je besser ein 
+Material den elektrischen Strom leitet, desto 
+kleiner ist der spezifische Widerstand. 
+Der spezifische elektrische Widerstand ρ 
+hat die Einheit 
+2
+Ω m
+1
+1Ω m
+m
+⋅
+=
+⋅
+. 
+ 
+ 
+Abb. 1: Schematische Darstellung des Deiches im Querschnitt mit der äußeren angelegten Spannung. 
+Abb. 2: Spezifischer elektrischer Widerstand ρ für verschiedene 
+Materialien 
+
+2  Material 
+ 
+ 
+5 
+Material 3: Messwerte zur Bestimmung des spezifischen Widerstands 
+Mithilfe der 
+sogenannten 
+Schlumberger-
+Anordnung kann 
+der spezifische 
+Widerstand des 
+Deichmaterials 
+ermittelt werden. 
+Die Spannung 
+Uaußen zwischen 
+P1 und P2 führt 
+zu einem 
+elektrischen 
+Strom, dessen 
+Stärke I gemessen 
+wird. 
+Zusätzlich wird zwischen den inneren Elektroden M1 und M2 eine Spannung UM gemessen 
+(vergl. Abb. 3). 
+Der Abstand a zwischen den Elektroden M1 und M2 bleibt gleich, der Abstand L der äußeren 
+Elektroden wird variiert. 
+Unter folgender Bedingung lässt sich der spezifische Widerstand des Deichmaterials 
+bestimmen: L ≥ 10 a 
+L ist hierbei der Abstand der äußeren Elektroden und a der Abstand der 
+inneren Messelektroden zwischen  M1 und M2 (vergl. Abb. 3). 
+Gilt diese Bedingung, so kann der spezifische elektrische Widerstand ρ des 
+dazwischenliegenden Materials mit folgendem Zusammenhang bestimmt werden: 
+M
+2
+4a
+π
+U
+ρ
+I
+L
+=
+⋅
+ 
+ 
+Bei einem konstanten Abstand von a = 10 m wurden folgende Messwerte erfasst: 
+ 
+Messung Nummer 
+1 
+2 
+3 
+L in m 
+40 
+100 
+120 
+UM in mV 
+106 
+10 
+5,0 
+I in mA 
+208 
+129 
+95 
+ 
+Material 4: Leserbrief und Sicherheitsaspekte 
+Leserbrief 
+Sicherheitsaspekte bei der Durchfüh-
+rung der Messung 
+„[ …] Natürlich ist auch für mich die Über-
+prüfung der Deichsicherheit wichtig. 
+Die beiden Elektroden P1 und P2 werden 
+durch Zelte abgedeckt, so dass kein Tier 
+Tab. 1: Messbeispiele; zu Prüfungszwecken erstellt 
+Abb. 3. Schematische Darstellung der Messung an der Deichoberfläche in der 
+Schlumberger-Anordnung 
+
+2  Material 
+ 
+ 
+6 
+Allerdings scheint mir das Vorhaben sehr 
+gefährlich, denn hier werden gefährliche 
+Stromstärken in den Deich eingespeist. Das 
+kann für Tiere, die sich zufällig dort aufhal-
+ten, tödlich sein. Ich appelliere daher an 
+den Leiter der Messungen, dass er sicher-
+stellt, dass sich während der Messungen 
+auf dem gesamten Deichkörper auch keine 
+Schafe, Hunde oder Katzen aufhalten. […]“ 
+diese berühren kann. Weiter stellt man si-
+cher, dass die elektrische Feldstärke im zu-
+gänglichen Bereich unter dem Wert 
+V
+m
+10
+ 
+bleibt. 
+Bei Gleichspannungen unter 60 V kann 
+gänzlich auf einen Schutz gegen Berühren 
+verzichtet werden; diese Spannungen gel-
+ten auch für Tiere und Kinder als ungefähr-
+lich. 
+ 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+7 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 a  
+ 
+4 
+ 
+ 
+ 
+b  
+Maßstab im Bild (zum Bsp.): 
+3 V
+2,0 cm
+1,0 10
+m
+−
+⋅
+
+ 
+Gesamtfeldstärke: 
+3 V
+  1,7 10
+m
+E
+−
+=
+⋅
+ 
+c 
+3
+22
+el
+V
+1,7 10
+2,7 10
+N
+m
+F
+e E
+e
+−
+−
+=
+⋅
+=
+⋅
+⋅
+=
+⋅
+ 
+26
+25
+G
+3,8 10
+kg 
+3,7 10
+N
+F
+m g
+g
+−
+−
+=
+⋅
+=
+⋅
+⋅
+=
+⋅
+ 
+Es folgt also, dass 
+G
+el
+F
+F
+
+ ist. 
+1 
+1 
+4 
+6 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+8 
+2 a Meerwasser hat einen kleinen spezifischen Widerstand. Dringt Meer-
+wasser in den Deich ein, so wird der spezifische Widerstand des 
+Deichmaterials kleiner werden. Dies führt mit  
+2
+M
+π  
+ 
+4 a
+U
+L
+I
+ρ
+⋅
+=
+⋅
+ zu einer Erhöhung der Stromstärke (falls UM, L und a 
+konstant bleiben). 
+ 
+4 
+ 
+ 
+b Messung 1 kann nicht verwendet werden, da L ≥ 10a nicht erfüllt ist. 
+2
+M
+π
+4
+U
+L
+ρ
+I
+a
+⋅
+=
+⋅
+ liefert mit den Messungen 2 und 3 die Werte 
+60,9 Ω m
+⋅
+ und 59,5 Ω m
+⋅
+, die Mittelwertbildung liefert ca. 60 Ω m
+⋅
+. 
+2 
+4 
+ 
+ 
+c Der Deichkörper besteht hauptsächlich aus Sand und Kies (vgl. 
+M 1). Deshalb kann es sich aufgrund von Material 2 nur um nassen 
+Sand oder nassen Kies handeln. Ein trockener Sandboden und ein 
+trockener Kiesboden können definitiv ausgeschlossen werden. 
+Der spezifische Widerstand ist sogar kleiner als bei nassem Kies. 
+Dies könnte ein Hinweis darauf sein, dass Meerwasser eingedrun-
+gen ist und den Widerstand reduziert hat. 
+ 
+ 
+6 
+3 z. B.: 
+Sehr geehrter Leser, sehr geehrte Leserin, 
+herzlichen Dank für das Vorbingen Ihrer Sorge in dem Leserbrief. Im 
+Folgenden wollen wir darlegen, dass keine Gefährdung der Tiere be-
+steht. Durch die Abdeckungen der Elektroden mit der äußeren Versor-
+gungsspannung wird sichergestellt, dass kein Tier diese berühren kann. 
+Die Stromstärken im Deich sind nicht gefährlich für die Tiere. Die Span-
+nungen zwischen ihren Beinen bewirken in den Körper der Tieren 
+Ströme. Spannungen zwischen ihren Beinen können den Grenzwert 
+von 60 V nicht erreichen. 
+Das kann ich Ihnen gerne noch begründen: Die Spannung zwischen 
+den Beinen errechnet sich hierbei als elektrische Feldstärke multipliziert 
+mit dem Beinabstand. Da die elektrische Feldstärke überall unter 
+V
+m
+10
+ 
+bleibt und Tiere wie zum Beispiel Schafe einen Beinabstand von ange-
+nommenen 1 m besitzen, liegt an den Tieren eine Spannung von weni-
+ger als 10 V an. Das ist als völlig ungefährlich anzusehen. Selbst Tiere 
+mit einem größeren Beinabstand bleiben sicher unter dem Wert von 
+60 V, der zu einer Gefährdung führen könnte. 
+Deshalb ist auch das Tierwohl nicht gefährdet. 
+Mit freundlichen Grüßen, Ihr Messteam. 
+ 
+4 
+4 
+ 
+Summe2 
+12 
+18 
+10 
+ 
+2 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+
+4  Standardbezug 
+ 
+ 
+9 
+4 
+Standardbezug 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1 a 
+3 
+ 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+ c  
+3 
+ 
+ 
+ 
+2 a 
+ 
+4 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+ c 
+ 
+ 
+3 
+ 
+3 
+ 
+ 
+5 
+6 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster3 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+ 
+3 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 

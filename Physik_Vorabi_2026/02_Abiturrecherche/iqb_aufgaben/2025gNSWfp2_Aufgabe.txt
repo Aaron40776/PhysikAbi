@@ -1,0 +1,541 @@
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2025 
+Aufgaben für das Fach Physik 
+Kurzbeschreibung 
+Aufgabentitel 
+Eigenschaften von Licht 
+Anforderungsniveau 
+grundlegend 
+Inhaltsbereiche 
+♦ Mechanische und elektromagnetische Schwingungen und Wellen 
+♦ Eigenschaften und Ausbreitung von Wellen 
+♦ Spektrum elektromagnetischer Wellen 
+♦ Überlagerung von Wellen 
+♦ Interferenz am Doppelspalt auch mit polychromatischem 
+Licht 
+Materialien 
+♦ M1 Experiment von Young 
+♦ M2 Hinweise zur Durchführung des Versuchs in Aufgabe 2 
+♦ M3 Optisches Gitter 
+Quellenangaben 
+♦ M1 IPN (Hg.) (2011). Material zur Hauptstudie des Photonics Ex-
+plorer Programms / Modul M07 „Diffraction and Interferenz“ / 
+Kommentar für Lehrkräfte, S. 5. 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat1 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+fachpraktischer Anteil ja 
+Zeitzuschlag: nein 
+Hinweise: 
+ 
+ 
+ 
+ 
+1 siehe „Hinweise zur Verwendung von Hilfsmitteln“ 
+
+1  Aufgabe 
+ 
+ 
+2 
+1 
+Aufgabe 
+Eigenschaften von Licht 
+Thomas Young veröffentlichte 1804 im Journal „The philosophical transactions of the Royal 
+Society of London“ ein Experiment, mit dem er die Wellennatur des Lichts zeigen wollte. 
+  
+BE 
+1 In Material 1 wird das von Thomas Young durchgeführte Experiment dargestellt. 
+Erklären Sie die in Material 1 genannten Beobachtungen mithilfe eines Modells. 
+4 
+2 Fachpraktischer Teil 
+Das Experiment von Thomas Young gilt als Vorläufer späterer Doppelspaltexperi-
+mente. 
+a Erzeugen Sie unter Verwendung von Material 2 ein Interferenzbild mit dem Dop-
+pelspalt auf dem Schirm. 
+Dokumentieren Sie ihr Vorgehen, indem Sie eine beschriftete Skizze des Ver-
+suchsaufbaus mit seinen genauen Maßen anfertigen. 
+b Tauschen Sie den Doppelspalt gegen das zur Verfügung gestellte Gitter aus, des-
+sen prinzipieller Aufbau in Material 3 beschrieben ist. 
+Fertigen Sie eine Skizze des Interferenzbildes in geeignetem Maßstab an. 
+Beschreiben Sie die zu beobachtenden Unterschiede im Vergleich zum Doppel-
+spalt. 
+c Bestimmen Sie mithilfe des Gitters die Wellenlänge des Lasers. 
+Dokumentieren Sie hierbei ihre Vorgehensweise. 
+Hinweis: 
+Sollte Ihnen der Aufbau des Versuchs oder die Durchführung in 2c nicht gelingen, so 
+können Sie bei der Lehrkraft Material anfordern. Den nicht erbrachten Leistungen 
+entsprechend werden 5 Bewertungseinheiten nicht erteilt. 
+6 
+6 
+7 
+3 Beschreiben Sie einen Unterschied zwischen dem Aufbau des Experimentes von  
+Young und dem von Ihnen in Aufgabe 2 durchgeführten Interferenzexperiment am 
+Doppelspalt und welche Auswirkung dieser Unterschied auf das jeweils zu beobach-
+tende Interferenzbild hat. 
+3 
+4 Erklären Sie die Bedeutung des Experimentes von Young für die physikalische Be-
+schreibung von Licht, indem Sie auf die Grenzen des Lichtstrahlmodells eingehen. 
+4 
+ 
+ 
+
+2  Material 
+ 
+ 
+3 
+2 
+Material 
+Material 1: Experiment von Young 
+In einer Fachzeitschrift findet sich der folgende Artikel:  
+Youngs Idee war ein Experiment, „das, 
+wenn die Sonne scheint, mit Leichtigkeit 
+und ohne jede Vorrichtung, die nicht je-
+dermann zur Verfügung steht, wiederholt 
+werden kann“. Es ist ein gutes Beispiel 
+dafür, wie mit einfachen Mitteln große 
+wissenschaftliche Fortschritte erzielt wer-
+den können. Young schreibt: „Ich machte 
+ein kleines Loch in einen Fensterladen 
+und bedeckte es mit einem dicken Stück 
+Papier, das ich mit einer feinen Nadel 
+durchstach.“ Dann hielt er eine Spielkarte 
+in den Sonnenstrahl und teilte so das 
+Lichtbündel in zwei Teile. Auf der gegen-
+überliegenden Wand sah er Interferenz-
+streifen, die verschwanden, wenn er das 
+Licht auf einer der beiden Seiten der 
+Spielkarte verdeckte. 
+ 
+Material 2: Hinweise zur Durchführung des Versuchs in Aufgabe 2 
+Geräte: 
+♦ Laser (rot, Wellenlänge λunbekannt) 
+♦ Doppelspalt 
+♦ optisches Gitter  
+♦ Schirm 
+♦ Lineal / Maßstab 
+♦ optische Bank 
+♦ Halter, Befestigungsmaterial 
+Beachten Sie die Sicherheitshinweise im Umgang mit Lasern. 
+Material 3: Optisches Gitter 
+Optische Bauteile, bei denen viele lichtdurchlässige und licht-
+undurchlässige Bereiche in Form von Strichen nebeneinan-
+der angeordnet sind, heißen optische Gitter.  
+Vereinfacht gesagt sind es viele Doppelspalte nebeneinan-
+der. 
+ 
+Wenn ein Gitter 500 Striche (also 500 lichtdurchlässige Be-
+reiche) pro mm besitzt, hat es einen Spaltmittenabstand 
+(auch Gitterkonstante genannt) von 
+6
+1
+mm
+2,00 10
+m
+500
+−
+=
+=
+⋅
+g
+. 
+ 
+ 
+Abb. 1: Prinzip des Aufbaus von Young 
+Abb. 2: Gitter 
+
+2  Material 
+ 
+ 
+4 
+Für konstruktive Interferenz am Gitter gelten analog zum Doppelspalt die Bedingungen: 
+( )
+tan
+k
+α
+a
+=  
+( )
+sin
+k λ
+g
+α
+⋅
+=
+ 
+ 
+k
+a : Abstand zwischen dem Maximum nullter und dem Maximum k-ter 
+Ordnung auf dem Beobachtungsschirm; 
+: Abstand Gitter-Schirm; 
+k : Ordnung; 
+λ : Wellenlänge; 
+g : Gitterkonstante (Spaltmittenabstand) 
+α : Winkel unter dem das Maximum k-ter Ordnung erscheint 
+ 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+5 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 Mögliche Lösung (mit dem Wellenmodell): 
+Die Spielkarte erzeugt zwei getrennte Wellenzentren. Die davon ausge-
+henden Elementarwellen interferieren auf dem Weg bis zur gegenüber-
+liegenden Wand und legen bis zum Beobachtungspunkt unterschiedli-
+che Wege zurück. Je nach Wegunterschied ergibt sich konstruktive (bei 
+ganzzahligen Vielfachen der Wellenlänge) oder destruktive Interferenz 
+(bei ungeradzahligen Vielfachen der halben Wellenlänge). Folglich sind 
+auf dem Schirm abwechselnd helle und dunkle Bereiche (Interferenz-
+streifen) zu erkennen. Wird ein Teilstrahl abgedeckt, gibt es keine Inter-
+ferenz der von den beiden Wellenzentren ausgehenden Elementarwel-
+len mehr und die Interferenzstreifen verschwinden. 
+4 
+ 
+ 
+2 a Erzeugung des Interferenzbildes: 
+♦ Aufbau von Laser, Doppelspalt und Schirm in geeigneten Abstän-
+den 
+♦ Anfertigen eine Skizze mit Bemaßung 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Die dem realen Versuchsaufbau entsprechenden Maße sind anzu-
+geben. 
+3 
+3 
+ 
+ 
+b Beobachtung nach dem Austausch des Doppelspalts durch ein Git-
+ter: 
+♦ Skizze des Schirmbildes in geeignetem Maßstab 
+3 
+3 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+6 
+♦ Beschreibung der Unterschiede (Beim Gitter sind die Maxima im 
+Gegensatz zum Doppelspalt deutlich weiter auseinander, heller 
+und schärfer) 
+ 
+c Bestimmung der Wellenlänge des Lasers: 
+♦ Messung des Abstandes Gitter-Schirm  
+♦ Bestimmung des Abstandes 
+k
+a (z. B. durch Messen des Abstan-
+des zwischen den beiden Maxima k. Ordnung) 
+♦ Berechnung der Wellenlänge durch Zusammenführung der gege-
+benen Formeln zu: 
+1
+sin tan
+k
+a
+k λ
+g
+−
+
+
+
+
+⋅
+=
+⋅
+
+
+
+
+
+
+
+
+
+ 
+♦ Lösung für 
+6
+2,00 10
+m
+−
+=
+⋅
+g
+, 
+48,0 cm
+=
+
+, 
+1
+16,5 cm
+=
+a
+: 
+6
+1 16,5 cm
+m
+sin tan
+650 n
+1
+2,00 10
+m
+48,0 cm
+−
+−
+
+
+
+
+⋅
+
+
+
+
+
+
+
+
+⋅
+=
+=
+λ
+ 
+ 
+7 
+ 
+3 Mögliche Unterschiede und ihre Auswirkungen auf das Interferenzbild: 
+♦ Young benutzte einen Strahl des Sonnenlichts, im Experiment wurde 
+ein Laser verwendet. Young müsste farbige Streifen anstelle der ro-
+ten Flecke im Experiment gesehen haben. 
+♦ Anstelle des Doppelspaltes verwendete Young eine in den Strahl ge-
+haltene Spielkarte. Die Abstände der Interferenzstreifen könnten sich 
+ändern. 
+ 
+3 
+ 
+4 Mögliche Erklärung: 
+Licht aus zwei Öffnungen, das sich ausbreitet und auf einen Schirm 
+fällt, lässt nach dem Lichtstrahlmodell zwei Lichtflecke auf dem Schirm 
+erwarten. Es gibt keine Interferenz zwischen den beiden Teilstrahlen. 
+Das Experiment von Young zeigt dagegen viele helle und dunkle Stel-
+len (Interferenz). Folglich ist eine Erklärung mit dem Lichtstrahlmodell 
+nicht möglich, sondern das Wellenmodell erforderlich. 
+ 
+ 
+4 
+ 
+Summe2 
+10 
+16 
+4 
+ 
+ 
+ 
+2 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+
+4  Standardbezug 
+ 
+ 
+7 
+4 
+Standardbezug 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1  
+1 
+ 
+3 
+ 
+2 a 
+4 
+ 
+ 
+ 
+ b 
+4 
+ 
+ 
+ 
+ c 
+ 
+5 
+ 
+ 
+3 
+ 
+4 
+ 
+ 
+4 
+ 
+ 
+4 
+ 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster3 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+6 
+Hinweise für Lehrkräfte bei Aufgabenvorschlägen mit fachprakti-
+schem Anteil 
+6.1 
+Hinweise zur Durchführung der fachpraktischen Aufgabe 
+Geräte und Materialien: 
+♦ Laser (rot, die Wellenlänge wird den Prüf-
+lingen nicht mitgeteilt) 
+♦ Stromversorgung für Laser 
+♦ Doppelspalt (0,125 bis 0,5 mm) 
+♦ optisches Gitter (etwa 500 Striche/mm) 
+♦ Schirm zur Darstellung des Interferenzbil-
+des 
+♦ Maßstab (Lineal, Zollstock oder Maßband 
+mit geeigneter Länge von ca. 1 m) 
+♦ optische Bank 
+♦ Halter, Befestigungsmaterial 
+Aufgabe und Aufbau: 
+♦ Erzeugen Sie unter Verwendung von Material 2 ein Interferenzbild mit dem Doppelspalt auf 
+dem Schirm. 
+ 
+3 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 
+
+6  Hinweise für Lehrkräfte bei Aufgabenvorschlägen mit 
+fachpraktischem Anteil 
+ 
+ 
+8 
+Dokumentieren Sie ihr Vorgehen, indem Sie eine beschriftete Skizze des Versuchsaufbaus 
+mit seinen genauen Maßen anfertigen. 
+♦ Tauschen Sie den Doppelspalt gegen das zur Verfügung gestellte Gitter aus, dessen prin-
+zipieller Aufbau in Material 3 beschrieben ist. 
+Fertigen Sie eine Skizze des Interferenzbildes in geeignetem Maßstab an. 
+Beschreiben Sie die zu beobachtenden Unterschiede im Vergleich zum Doppelspalt. 
+♦ Bestimmen Sie mithilfe des Gitters die Wellenlänge des Lasers. 
+Dokumentieren Sie hierbei ihre Vorgehensweise. 
+Die folgende Abbildung zeigt exemplarisch den Versuchsaufbau. Der Versuch ist vom Prüfling 
+selbst aufzubauen. 
+Hinweis: Die Daten der konkret gewählten Exemplare von Doppelspalt und Gitter müssen den 
+Schülern ergänzend zu Material M 2 mitgeteilt werden. 
+Entsprechend ändern sich auch die Messwerte und die zu erwartenden Ergebnisse. 
+ 
+ 
+ 
+Die Schülerarbeitsplätze sollten gegeneinander durch Sichtschutze abgegrenzt werden, damit 
+es bei Tausch von Doppelspalt gegen Gitter nicht zur Gefährdung kommt, weil die Maxima 
+erster Ordnung bei Benutzung des Gitters ggf. nicht mehr auf den Schirm fallen. 
+6.2 
+Beobachtungsbogen 
+Die Aufsicht führende Fachlehrkraft protokolliert für jeden Prüfling wichtige Informationen, die 
+für die Bewertung der Prüfungsleistung von Bedeutung sind, z. B. 
+♦ das Aufbauen der Versuchsanordnung, 
+♦ das Anfordern eines fertigen Versuchsaufbaus, 
+♦ die Anforderung von Ersatzmesswerten. 
+Für das Erfassen dieser Informationen können auf der Grundlage der landesrechtlichen Best-
+immungen Beobachtungsbögen durch die prüfende Fachlehrkraft vorbereitet werden. 
+ 
+ 
+Abb. 3: Beispielaufbau 
+
+6  Hinweise für Lehrkräfte bei Aufgabenvorschlägen mit 
+fachpraktischem Anteil 
+ 
+ 
+9 
+6.3 
+Ersatzergebnisse 
+Aufgabenteil 2c: Ersatzmesswerte 
+Gitter 
+6
+2,00 10
+m
+−
+=
+⋅
+g
+ 
+Abstand Gitter - Schirm 
+48,0 cm
+=
+
+ 
+Abstand Maximum 1. Ordnung zum Maxi-
+mum 0. Ordnung 
+1
+16,5 cm
+=
+a
+ 
+6.4 
+Gefährdungsbeurteilung 
+Für die Vollständigkeit und Richtigkeit dieser Muster-Gefährdungsbeurteilung wird keine Haf-
+tung übernommen. Jede Nutzerin/jeder Nutzer muss die aufgeführten Inhalte auf der Grund-
+lage der länderspezifischen Regelungen eigenverantwortlich prüfen und an die tatsächlichen 
+Gegebenheiten anpassen. 
+ 
+Beschreibung des Experiments: 
+Interferenzbilder werden von den Schülerinnen und Schülern mithilfe eines Lasers sowie ei-
+nes Doppelspalts erzeugt und quantitativ ausgewertet. 
+ 
+Gefährdungsarten: 
+IR-, optische, UV-Strahlung 
+ 
+konkrete Gefährdungen 
+Schutzmaßnahmen (z. B. gerätebezogen, baulich,  
+bei der Durchführung des Experiments)  
+Schädigung des Auges (die 
+Lehrkraft, Schülerinnen und 
+Schüler oder eine in den Ex-
+perimentierraum eintretende 
+Person könnten betroffen sein) 
+Auf sinnvolle Strahlrichtungen unter den Schülergruppen 
+und auf Türen achten (ggf. Blenden verwenden); Arbeits-
+plätze ggf. mit zusätzlichen Blenden zur Abschirmung aus-
+statten; Reflexionen vermeiden; Laserpointer der Klasse 2 
+(P < 1 mW Kennzeichnung) verwenden; Aufstellen des 
+Warnschilds Laser im Unterrichtsraum 
+ 

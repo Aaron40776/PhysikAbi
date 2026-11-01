@@ -1,0 +1,653 @@
+ 
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2026 
+Aufgaben für das Fach Physik 
+Aufgabentitel 
+Der Elektrobus – Induktives Laden in der E-Mobilität 
+Anforderungsniveau 
+grundlegend 
+Inhaltsbereiche 
+♦ Elektrische und magnetische Felder 
+♦ Das Feldkonzept zur Beschreibung von Wechselwirkungen 
+♦ Begriff des Feldes am Beispiel von elektrischen und mag-
+netischen Feldern 
+♦ Magnetische Flussdichte 
+♦ Veränderliche elektromagnetische Felder 
+♦ Induktion durch Änderung des magnetischen Flusses 
+Materialien 
+♦ M 1 Induktives Laden eines Elektrobusses 
+♦ M 2 Verbesserungsvorschläge der Ingenieure zum Elektrobus 
+2.0 
+♦ M 3 Idealisierte Annahmen zum Laden von Elektrobussen 
+♦ M 4 Daten zur Planung der Ladestellen eines Elektrobusses 
+Quellenangaben 
+♦ M 3 in Anlehnung an: Wikipedia. Biot-Savart-Gesetz. 
+https://de.wikipedia.org/wiki/Biot-Savart-Gesetz (Zugriff am: 
+03.12.24) 
+♦ M 4 in Anlehnung an: 
+♦ BSVG, emil - Elektromobilität mittels induktiver Ladung. 
+https://www.bsvg.net/unternehmen/elektrobusse-emil.html 
+(Zugriff am: 09.09.24) 
+♦ BSVG, Elektrobusse. https://www.bsvg.net/unterneh-
+men/elektrobusse-emil/elektrobus.html (Zugriff am: 09.09.24) 
+♦ Abb. 4: Argue, C. / Geotab (2023). Wie wirkt sich die Tempe-
+ratur auf die Reichweite des Elektrofahrzeugs aus? 
+https://www.geotab.com/de/blog/elektrofahrzeuge-batterie-
+temperatur/ (Zugriff am: 01.12.24) 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+fachpraktischer Anteil ja ☐ 
+nein ☒ 
+Zeitzuschlag: –– 
+Hinweise 
+ 
+ 
+ 
+
+1  Aufgabe 
+ 
+ 
+2 
+1 
+Aufgabe 
+Der Elektrobus – Induktives Laden in der E-Mobilität 
+Die Elektromobilität schreitet voran. Im Jahre 2024 fuhren bereits über 2000 Elektrobusse auf 
+deutschen Straßen. In einigen Städten werden die an Haltestellen stehenden Elektrobusse 
+induktiv geladen. 
+  
+BE 
+1 Die Technik des induktiven Ladens von stehenden Elektrobussen an Ladestationen 
+ist in Material 1 beschrieben. 
+a Erklären Sie das Zustandekommen der Induktionsspannung in der Sekundär-
+spule. 
+b Der Bereich innerhalb der Primärspule soll mit Eisenplatten ausgefüllt werden. 
+Erklären Sie, dass damit eine höhere Induktionsspannung in der Sekundärspule 
+am Bus erreicht werden kann. 
+c Begründen Sie anhand physikalischer Zusammenhänge mit Material 2, dass der 
+dort geschilderte Verbesserungsvorschlag korrekt ist. 
+4 
+3 
+4 
+2 a Berechnen Sie mit den Daten aus Material 3 den maximalen Wert der magneti-
+schen Flussdichte 
+Mitte
+B
+ der Primärspule mittig im Abstand von 14 cm über der 
+Primärspule. 
+[Kontrollwert: 
+=
+Mitte
+0,57 mT
+B
+] 
+b Ermitteln Sie unter Berücksichtigung von Abbildung 3 (M 3) den maximalen Wert 
+der induzierten Spannung an der Sekundärspule. Nehmen Sie an, dass die maxi-
+male magnetische Flussdichte in der Sekundärspule Bmax der magnetischen 
+Flussdichte 
+Mitte
+B
+aus Teilaufgabe 2a entspricht. 
+c Stellen Sie passend zu Abbildung 3 den zeitlichen Verlauf der induzierten Span-
+nung, welche an der Sekundärspule gemessen werden würde, im Zeitintervall 
+0
+t
+T
+≤
+≤
+ quantitativ in einem Diagramm dar. 
+Hinweis: Wenn Sie kein Ergebnis bei Teilaufgabe 2b erhalten haben, nutzen Sie 
+ersatzweise 
+ind
+500 V
+U
+=
+ als maximalen Wert der induzierten Spannung. 
+3 
+5 
+3 
+3 a Begründen Sie mithilfe einer Rechnung anhand der Daten aus Tabelle 2, dass 
+der Ladepunkt an der Endhaltestelle ausreicht, um den Bus den gesamten Tag 
+fahren zu lassen. 
+b Diskutieren Sie unter Berücksichtigung von Material 4, ob die Maßnahme, eine 
+weitere Ladestelle an einer Zwischenhaltestelle zu bauen, sinnvoll ist. Berücksich-
+tigen Sie dabei zwei Argumente für und zwei Argumente gegen dieses Vorhaben. 
+3 
+5 
+ 
+ 
+
+2  Material 
+ 
+ 
+3 
+2 
+Material 
+Material 1: Induktives Laden eines Elektrobusses 
+Fährt ein Bus an eine Ladestelle, dann positioniert er sich über der im Asphalt eingelassenen 
+flachen, runden Primärspule, die mit einer Wechselspannung betrieben wird (Abb. 1). 
+Zum Laden senkt sich die runde Sekundärspule bis auf eine Distanz von 14 cm zur Mitte der 
+Primärspule in der Straßenoberfläche herab. Der Vorgang ist hier vereinfacht dargestellt, da 
+üblicherweise mehrere Primär- und Sekundärspulen genutzt werden. 
+ 
+ 
+Abb. 1: Positionierung eines Elektrobusses zum Laden 
+Material 2: Verbesserungsvorschlag der Ingenieure zum Elektrobus 2.0 
+Beim Bau der nächsten Generation der Elektrobusse könnten deutliche Verbesserungen vor-
+genommen werden. Wenn die Sekundärspule auch nur 1 oder 2 Zentimeter mehr abgesenkt 
+wird, dann erhöht sich die Energieübertragung pro Zeit, das heißt, die elektrische Leistung. 
+Die auf die Sekundärspule übertragene elektrische Leistung P kann mit 
+ind
+P
+U
+I
+=
+⋅ berechnet 
+werden. Noch effektiver wäre eine direkte Absenkung der Sekundärspule auf den Erdboden. 
+Diese zweite Möglichkeit würde aber zu einer Abnutzung der Sekundärspule führen und Un-
+ebenheiten, wie z. B. Steine, könnten zu Problemen, wie dem Kippen der Sekundärspule, füh-
+ren. 
+Hinweis: Vereinfachend soll davon ausgegangen werden, dass der Widerstand im Stromkreis 
+der Sekundärspule konstant ist. 
+Material 3: Idealisierte Annahmen zum Laden von Elektrobussen 
+Die magnetische Flussdichte B mittig über einer flachen 
+Kreisspule mit dem Radius R sowie der Windungszahl N kann 
+mithilfe der folgenden Formel berechnet werden: 
+(
+)
+2
+0
+3
+2
+2 2
+2
+μ
+N I R
+B
+R
+x
+⋅
+⋅⋅
+=
+⋅
++
+ 
+Die Größe I beschreibt dabei die elektrische Stromstärke des 
+durch die Spule fließenden Stroms und x ist der Abstand von 
+der Spulenebene mittig über der Spule (siehe Abb. 2). 
+ 
+ 
+ 
+ 
+ 
+Abb. 2: flache Kreisspule mit einer Windung 
+
+2  Material 
+ 
+ 
+4 
+Tab. 1: technische Daten zum Laden 
+ 
+ 
+Abb. 3: vereinfachter zeitlicher Verlauf der magneti-
+schen Flussdichte im Inneren der Sekundärspule in-
+nerhalb einer Periodendauer 
+Maximale Stromstärke in 
+der Primärspule 
+max
+170 A
+I
+=
+ 
+Maximale Spannung an 
+der Primärspule 
+max
+400 V
+U
+=
+ 
+Frequenz der Wechsel-
+spannung 
+85 kHz
+f =
+ 
+Windungsanzahl der Pri-
+mär-/ Sekundärspule 
+= 3
+N
+ 
+Radius der Primär-/ Se-
+kundärspule 
+= 0,50 m
+R
+ 
+Abstand der Spulenmit-
+telpunkte (beim Laden) 
+14 cm 
+Material 4: Daten zur Planung der Ladestellen eines Elektrobusses 
+Der Elektrobus soll nachts einmal maximal geladen werden und dann tagsüber im Dauerbe-
+trieb fahren, wobei der Bus nach jeder Runde kurz zum Zwischenladen an der Endhaltestelle 
+hält. 
+1 kWh entspricht 3,6 MJ. 
+ 
+ 
+Die Reichweite eines Elekt-
+rofahrzeugs wird unter an-
+derem durch das Heizen 
+bzw. Kühlen des Fahrzeu-
+ginnenraums und der Batte-
+rie beeinflusst. 
+Lithium-Ionen-Batterien 
+werden bei niedrigen Tem-
+peraturen beheizt, um sie im 
+optimalen 
+Temperaturbe-
+reich zu halten. 
+Es kann angenommen wer-
+den, dass sich die Reich-
+weite von Elektrobussen wie 
+in Abb. 4 verhält. 
+ 
+ 
+ 
+Fahrtstrecke einer Runde 
+13 km 
+Fahrtdauer einer Runde 
+39 Minuten 
+Ladezeit am Ende einer Runde an der Endhaltestelle 
+ca. 11 Minuten 
+Ladeleistung an der Endhaltestelle 
+180 kW 
+Maximale Energie in der Lithium-Ionen-Batterie 
+90 kWh 
+Benötigte Energie pro Kilometer (Jahresmittelwert) 
+1,6 kWh  
+Tab. 2: Daten eines konkreten Elektrobusses, der bisher nur an der Endhaltestelle induktiv geladen werden 
+soll 
+Abb. 4: Temperatur-Verhältnis-Diagramm, in dem die durchschnittlichen 
+Werte aus Fahrten von 4200 Elektroautos verschiedener Marken, Modelle 
+und Baujahre berücksichtigt sind. Die angegebene Reichweite wurde vom 
+Hersteller beziffert, die reale Reichweite von Nutzenden. 
+
+3  Erwartungshorizont 
+ 
+ 
+5 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. 
+Werden im Erwartungshorizont in Rechnungen Werte verwendet, die Resultat einer vorange-
+gangenen Berechnung sind, so gehen sie in Taschenrechner-Genauigkeit in die jeweilige Be-
+rechnung ein, sind aber mit einer sinnvollen Genauigkeit angegeben. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 a Die Primärspule wird mit einer Wechselspannung betrieben. Die 
+Stromstärke in der Primärspule verändert sich somit auch perio-
+disch. Damit ändert sich die magnetische Flussdichte B der Primär-
+spule periodisch. 
+Also ändert sich in der Sekundärspule auch der magnetische Fluss 
+periodisch, da das Magnetfeld der Primärspule die Sekundärspule 
+durchsetzt und der magnetische Fluss proportional zur Flussdichte 
+ist. Damit wird in der Sekundärspule laut dem Induktionsgesetz eine 
+Spannung induziert. 
+4 
+ 
+ 
+ 
+b Wenn der Bereich innerhalb der Primärspule mit Eisenplatten ausge-
+legt wird, dann wird bei gleicher Wechselspannung das Magnetfeld 
+stärker, so dass der magnetische Fluss und somit auch die Magnet-
+feldänderung in der Sekundärspule größer ist. 
+Damit ist auch die Induktionsspannung in der Sekundärspule am 
+Bus größer. 
+3 
+ 
+ 
+ 
+c Ein tieferes Absenken der Sekundärspule trägt dazu bei, dass die 
+magnetische Flussdichte, die die Sekundärspule durchsetzt, an-
+steigt, da die magnetische Flussdichte der Primärspule tendenziell 
+mit dem Abstand abnimmt. Damit wird eine größere Induktionsspan-
+nung in der Sekundärspule erreicht, da so eine stärkere Änderung 
+der magnetischen Flussdichte vorliegt. Wenn die induzierte Span-
+nung in der Sekundärspule ansteigt, steigt auch die daraus resultie-
+rende Stromstärke. Mit 
+ind
+P
+U
+I
+=
+⋅ergibt sich entsprechend, dass die 
+Energieübertragung pro Zeit (Leistung) zunimmt. 
+ 
+4 
+ 
+2 
+a 
+(
+)
+2
+0
+max
+Mitte
+3
+2
+2 2
+2
+μ
+N I
+R
+B
+R
+x
+⋅
+⋅
+⋅
+=
+⋅
++
+ 
+(
+)
+(
+)
+(
+)
+(
+)
+⋅
+⋅
+⋅
+=
+⋅
++
+2
+0
+Mitte
+3
+2
+2 2
+3 170 A
+0,50 m
+2
+0,50 m
+0,14m
+μ
+B
+ 
+=
+Mitte
+0,57 mT
+B
+ 
+3 
+ 
+ 
+ 
+b 
+⊥
+= −
+⋅
+⋅
+max
+ind
+Δ
+ 
+Δt
+B
+U
+N A
+ 
+In der Abbildung 3 ist erkennbar, dass der Unterschied der magneti-
+schen Flussdichte -
+max
+2B
+ während der Zeitspanne 1
+2T ist. 
+ 
+5 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+6 
+⊥
+⋅
+=
+⋅
+⋅
+⋅
+max
+ind
+1
+2
+2
+ 
+B
+U
+N A
+T
+ 
+⊥
+⋅
+=
+⋅
+⋅
+max
+ind
+1
+2
+2
+ 
+f
+B
+U
+N A
+, da 
+1
+T
+f
+=
+ 
+(
+)
+−
+⋅
+⋅
+⋅
+=
+⋅
+⋅
+⋅
+=
+3
+2
+ind
+1
+2 85000 Hz
+ind
+2 0,57 10
+T
+3 π
+0,50m
+0,46 kV
+U
+U
+ 
+ 
+Der maximale Wert der induzierten Spannung an der Sekundärspule 
+beträgt etwa 0,46 kV. 
+ 
+c  
+ 
+Eine Einteilung der Zeitachse in T/2 und T ist ebenso als vollstän-
+dige Lösung zu bewerten. 
+ 
+3 
+ 
+3 a Wenn nur für 11 Minuten nachgeladen wird, kann der Bus ca. 21 Ki-
+lometer weit fahren:
+kJ
+s
+kJ
+km
+180
+11 60 s
+21km
+1,6 3600
+⋅
+⋅
+=
+⋅
+, was für eine Fahrtstre-
+cke von 13 km ausreicht. Somit ist kein weiterer Ladepunkt nötig. 
+ 
+3 
+ 
+ 
+b Mögliche Argumente für den Bau der Zwischenladestation: 
+♦ Da unplanbare Ereignisse (wie Stau oder erhöhter Energiebedarf 
+für Klimaanlagen) eintreten können, wäre eine Zwischenladesta-
+tion eine Absicherung. 
+♦ Bei niedrigeren Temperaturen sinkt die Reichweite von Elektro-
+bussen deutlich, so dass z. B. bei –10 °C die reale Reichweite der 
+Zwischenladung dann nur bei etwa 12,6 km (60 % von 21 km) lie-
+gen würde. (So könnte während des Tages die Nachtladung im-
+mer weiter sinken.) 
+♦ Um den Zeitplan einzuhalten, kann es sein, dass aufgrund von un-
+vorhergesehenen Ereignissen das Zwischenladen an der Endhal-
+testelle entfallen muss, und so könnte die nächtliche Ladung der 
+Batterie schnell aufgebraucht sein.  
+Mögliche Argumente gegen den Bau der Zwischenladestation: 
+♦ Der Ausbau ist kostenintensiv. 
+♦ Die nächtliche Vollladung ist so groß, dass die Ladung der Batterie 
+selbst bei unplanbaren Ereignissen ausreichen sollte. 
+ 
+ 
+5 
+
+4  Standardbezug 
+ 
+ 
+7 
+Wenn die Batterie vollgeladen ist, kann der Bus  
+ca. 
+=
+kWh
+km
+90 kWh
+56km
+1,6
+ weit fahren. 
+♦ Das Zwischenladen verlängert ggf. die Haltezeit. 
+ 
+Eine mögliche Abwägung der Argumente: 
+In weiten Teilen von Deutschland sinken die Temperaturen im Win-
+ter eher selten unter –10 °C, so dass für diese wenigen Tage statt ei-
+ner Zwischenhaltestelle auch eine weitere längere Ladung an der 
+Endhaltestelle im Tagesverlauf eingeplant werden könnte. Bei den 
+restlichen unvorhergesehenen Ereignissen scheint eine Zwischenla-
+destation kaum notwendig, da zusätzlich zur Ladung an der Endhal-
+testelle noch die nächtliche Vollladung einen gewissen „Puffer“ bie-
+tet. Die Zusatzkosten können somit eingespart werden. 
+ 
+Summe1 
+10 
+15 
+5 
+ 
+4 
+Standardbezug 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1 a 
+1 
+ 
+ 
+ 
+ b 
+1 
+ 
+ 
+ 
+ c 
+ 
+8 
+ 
+ 
+2 a 
+3 
+ 
+ 
+ 
+ b 
+3 
+ 
+3 
+ 
+ c 
+7 
+ 
+ 
+ 
+3 a 
+3 
+ 
+ 
+ 
+ b 
+ 
+ 
+ 
+6 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+ 
+1 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+
+5  Bewertungshinweise 
+ 
+ 
+8 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster2 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+ 
+2 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 

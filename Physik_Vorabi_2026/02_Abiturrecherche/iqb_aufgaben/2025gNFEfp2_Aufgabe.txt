@@ -1,0 +1,710 @@
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2025 
+Aufgaben für das Fach Physik 
+Kurzbeschreibung 
+Aufgabentitel 
+Der dynamische Lautsprecher 
+Anforderungsniveau 
+grundlegend 
+Inhaltsbereiche 
+♦ Elektrische und magnetische Felder 
+♦ Das Feldkonzept zur Beschreibung von Wechselwirkungen 
+♦ Begriff des Feldes am Beispiel von elektrischen und mag-
+netischen Feldern 
+♦ magnetische Flussdichte 
+♦ Körper in statischen Feldern 
+♦ Kräfte auf Körper in homogenen elektrischen und magneti-
+schen Feldern, Bahnformen (qualitativ) 
+Materialien 
+♦ M 1 Schematischer Aufbau eines Lautsprechers 
+♦ M 2 Aufbau und Durchführung des fachpraktischen Teils 
+♦ M 3 Verwendung von Neodym und Ferrit in Lautsprechern 
+Quellenangaben 
+♦ M 3 
+♦ Institut für seltene Erden und Metalle AG (Hg.). Neodym. Ver-
+fügbar unter: https://institut-seltene-erden.de/seltene-erden-
+und-metalle/seltene-erden/neodym/ (Zugriff am 23.01.2024) 
+♦ Lautsprecher Teufel GmbH (Hg.) (2023). Neodym-Magnete in 
+Lautsprechern: Was sie so besonders macht. Verfügbar unter: 
+https://blog.teufel.de/lautsprecher-innereien-alles-neodym-
+oder-was/ (Zugriff am 23.01.2024) 
+♦ CORDIS Forschungsergebnisse der EU (Hg.). Anisometric 
+permanent hybrid magnets based on inexpensive and non-
+critical materials. Verfügbar unter: https://cordis.eu-
+ropa.eu/project/id/720853 (Zugriff am 15.02.2024) 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat1 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+fachpraktischer Anteil ja 
+Zeitzuschlag: nein 
+ 
+1 siehe „Hinweise zur Verwendung von Hilfsmitteln“ 
+
+1  Aufgabe 
+ 
+ 
+ 
+2 
+ 
+1 
+Aufgabe 
+Der dynamische Lautsprecher 
+In dynamischen Lautsprechern führt die Kraft zwischen einer stromdurchflossenen Schwing-
+spule und einem Dauermagneten zu einer Bewegung der mit der Schwingspule fest verbun-
+denen Lautsprechermembran. 
+  
+BE 
+1 Material 1 zeigt den schematischen Aufbau eines dynamischen Lautsprechers. In 
+der stromdurchflossenen Schwingspule des Lautsprechers baut sich ein Magnetfeld 
+auf. 
+a Skizzieren Sie in Abbildung 1b des Materials 1 das Feldlinienbild des Magnetfel-
+des der stromdurchflossenen Spule in der Zeichenebene. 
+Kennzeichnen Sie in diesem Feld den Nordpol der Spule. 
+Geben Sie die Richtung der Kraft auf diese Spule im Magnetfeld des Dauermag-
+neten an. 
+b Begründen Sie qualitativ, dass sowohl der Betrag der Stromstärke als auch die 
+Richtung des Stroms einen Einfluss auf die Kraft haben, die auf die Spule im 
+Magnetfeld wirkt. 
+c Für größere Lautstärken soll die Wirkung dieser Kraft vergrößert werden. 
+Beschreiben Sie zwei mögliche bauliche Veränderungen an der Spule, die bei 
+gleicher Stromstärke jeweils zu einer größeren magnetischen Flussdichte in 
+Punkt P (M 1, Abb. 1b) führen würden. 
+4 
+3 
+2 
+2 Fachpraktischer Teil 
+Vereinfachend wird zur Untersuchung der Kraft zwischen Magnet und Schwingspule, 
+der in Material 2 dargestellte Versuchsaufbau verwendet. 
+a Bauen Sie die Versuchsanordnung gemäß Abbildung 2 des Materials 2 auf. 
+Ermitteln Sie die Gewichtskraft FG des Stabmagneten und die wirkende Kraft FS 
+für insgesamt fünf verschiedene Stromstärken I. 
+Hinweis: 
+Sollten Sie keine verwertbaren Messwerte aufnehmen können, ist es möglich, dass 
+Sie Ersatzmesswerte anfordern. Den nicht erbrachten Leistungen entsprechend wer-
+den fünf Bewertungseinheiten nicht erteilt. 
+b Begründen Sie mithilfe aller geeigneter Messwerte den Zusammenhang 
+k
+=
+⋅
+F
+I 
+zwischen dem Betrag der betrachteten Kraft und der Stromstärke, wobei k eine 
+Proportionalitätskonstante ist. 
+c Formulieren Sie eine Hypothese zur Änderung dieses Zusammenhangs, wenn bei 
+sonst gleichem Vorgehen die Polarität der Spannungsquelle umgekehrt wird. 
+8 
+4 
+2 
+3 In dynamischen Lautsprechern werden statt der konventionellen Ferritmagnete zu-
+nehmend Magnete aus Neodym zum Einsatz gebracht (siehe M 3). 
+a Begründen Sie, dass durch Ersetzen des Ferritmagneten durch einen Neodym-
+Magneten für die gleiche Kraftwirkung auf die Schwingspule eine geringere 
+Stromstärke notwendig ist. 
+2 
+ 
+ 
+ 
+ 
+
+1  Aufgabe 
+ 
+ 
+ 
+3 
+ 
+b Bewerten Sie anhand jeweils eines für Sie bedeutsam erscheinenden inner- und 
+außerphysikalischen Aspekts den Einsatz von Neodym-Magneten in Lautspre-
+chern unter Verwendung von Material 3. 
+5 
+ 
+ 
+
+2  Material 
+ 
+ 
+ 
+4 
+ 
+2 
+Material 
+Material 1: Schematischer Aufbau eines dynamischen Lautsprechers 
+Beim dynamischen Lautsprecher kann die Membran von einer mittig angebrachten, fest mit 
+der Membran verbundenen Schwingspule in Bewegung versetzt werden, wenn diese im Mag-
+netfeld eines Dauermagneten schwingt. Dadurch erzeugt die Lautsprechermembran Schall-
+wellen und gibt so Informationen in Form von Tönen ab. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Material 2: Aufbau und Durchführung des fachpraktischen Teils 
+Geräte und Materialien: 
+♦ Spannungsversorgungsgerät mit der Ein-
+stellmöglichkeit für verschiedene Gleich-
+spannungen 
+♦ Stromstärkemessgerät  
+♦ Kabelmaterial 
+♦ Spule 
+♦ Kraftmesser 
+♦ Stabmagnet 
+♦ Stativmaterial 
+Hinweise zur Durchführung: 
+Die Polarität der Spannungsquelle ist so zu wählen, dass sich die vom Kraftmesser ange-
+zeigte Kraft FS beim Erhöhen der Stromstärke vergrößert. 
+ 
+Achten Sie darauf, dass der Stabmagnet während jeder Messung exakt zur Hälfte in die Spule 
+eintaucht. Nutzen Sie hierzu die Mittelpunktmarkierung des Stabmagneten und nutzen Sie die 
+Kreuzmuffe zur Regulierung der Höhe. 
+ 
+ 
+Hinweis: 
+Der Dauermagnet ist fest mit 
+dem Gehäuse verbunden. 
+Die Schwingspule schwingt in 
+horizontaler Richtung. 
+Abb. 1a: 
+schematischer Aufbau des Lautsprechers 
+Abb. 1b: Vergrößerte Darstellung der Schwingspule. 
+Der Punkt P liegt im Inneren der Spule. 
+
+2  Material 
+ 
+ 
+ 
+5 
+ 
+Die Stromstärken sind so zu wählen, 
+dass der Messbereich des Kraftmessers 
+bestmöglich ausgenutzt wird. Dabei darf 
+die maximale Stromstärke der Spule 
+nicht überschritten werden. Die maxi-
+male Stromstärke wird Ihnen von der 
+aufsichtführenden Lehrkraft mitgeteilt. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Material 3: Verwendung von Neodym und Ferrit in Lautsprechern 
+In dynamischen Lautsprechern können sowohl Dauermagnete aus Ferrit als auch aus Neodym 
+verwendet werden. 
+Neodym zählt zu den Metallen der seltenen Erden und wird vor allem für starke Magnete ver-
+wendet. Das Metall kommt zumeist nur in sehr kleinen Mengen und in natürlicher Form nur in 
+chemischen Verbindungen vor. Der wichtigste Lieferant mit 97 % der Weltproduktion ist China. 
+Das führt dort zu erheblichen Umweltproblemen. „Bei der Trennung des Neodyms vom geför-
+derten Gestein entstehen giftige Abfallprodukte, außerdem wird radioaktives Uran und Tho-
+rium beim Abbauprozess freigesetzt. Diese Stoffe gelangen zumindest teilweise ins Grund-
+wasser, kontaminieren so Fauna und Flora erheblich und werden für den Menschen als ge-
+sundheitsschädlich eingestuft.“ Berichtet das ARD-Fernsehmagazin Panorama. 
+Ferrite sind magnetische Werkstoffe aus Metalloxiden, die als kostengünstige und robuste 
+Dauermagnete verwendet werden. Die zur Herstellung von Ferritmagneten notwendigen Ei-
+senoxide sind im Vergleich leichter verfügbar, nachhaltiger, kostengünstiger mit höherer Wie-
+derverwertbarkeit als Metalle der seltenen Erden. Neben dem Einsatz in Lautsprechern finden 
+Ferritmagnete auch in Kühlschrankmagneten oder als Magnete für Schultafeln Verwendung. 
+Im Vergleich zu einem konventionellen Magneten aus Ferrit zeichnet einen Neodym-Magneten 
+aus, dass er bei gleichen Abmessungen deutlich höhere Flussdichten besitzt. Er eignet sich 
+sehr gut für die Lautsprecherherstellung, da durch die Verwendung von Neodym der im Laut-
+sprecher verbaute Magnet sowohl leichter als auch kleiner als ein Dauermagnet aus Ferrit sein 
+kann, ohne dass man dabei Abstriche im Klang hinnehmen müsste. 
+Auch in kabellosen, akkubetriebenen Kopfhörern wird Neodym bereits verwendet. Durch ihre 
+hohe Flussdichten erlauben es Neodym-Magneten, mehr Schalldruck bei gleicher elektrischer 
+Leistung zu erzeugen. Es muss also weniger Energie aufgewendet werden, um gleiche Laut-
+stärken zu erreichen. 
+ 
+Abb. 2: schematischer Versuchsaufbau 
+
+3  Erwartungshorizont 
+ 
+ 
+ 
+6 
+ 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 a  
+Die Kraft auf die Spule wirkt nach links. 
+3 
+1 
+ 
+ 
+b Das Magnetfeld einer stromdurchflossenen Spule ist abhängig von 
+der Stromstärke des Stroms durch die Spule. Größere Stromstärken 
+führen z. B. im Punkt P zu größeren Beträgen der Flussdichte. Eine 
+Umpolung des Stroms ruft die gegensätzliche Orientierung des Mag-
+netfelds hervor. 
+Im dynamischen Lautsprecher resultiert die Kraft auf die Schwing-
+spule aus der Wechselwirkung der Magnetfelder von Schwingspule 
+und Dauermagnet. Da das Feld des Dauermagneten zeitlich kon-
+stant ist, wirkt sich eine Variation der Stromstärke der Schwingspule 
+unmittelbar auf Betrag und Richtung der Kraft zwischen Dauermag-
+net und Spule aus. 
+2 
+1 
+ 
+ 
+c  
+♦ Bei konstanter Länge der Spule und konstanter Stromstärke ist die 
+magnetische Flussdichte umso größer, je mehr Windungen die 
+stromdurchflossene Spule besitzt oder 
+♦ Bei konstanter Windungszahl der Spule und konstanter Strom-
+stärke ist die magnetische Flussdichte umso kleiner, je länger die 
+stromdurchflossene Spule ist. 
+2 
+ 
+ 
+2 a Aufbauen der Versuchsanordnung, Erfassen und Protokollieren der 
+Messwerte (siehe Kapitel 6) 
+Messbeispiel für eine Spule mit folgenden Parametern: 
+♦ 800 Windungen 
+♦ R = 8 Ω 
+♦ L = 12 mH 
+♦ I = 0,75 A 
+♦ für Eisenkerne mit 20 mm ⋅ 20 mm Querschnittsfläche 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+ 
+7 
+ 
+ 
+FG in N 
+0,64 
+I in A 
+0 
+0,026 
+0,044 
+0,069 
+0,085 
+0,155 
+FS in N  
+0,64 
+0,74 
+0,79 
+0,88 
+0,94 
+1,20 
+ 
+ 
+ 
+1 
+ 
+ 
+ 
+ 
+ 
+5 
+ 
+b  
+Quotientengleichheit untersuchen: k = F
+I 
+ 
+I in A 
+0 
+0,026 
+0,044 
+0,069 
+0,085 
+0,155 
+F in N 
+0 
+0,10 
+0,15 
+0,24 
+0,30 
+0,56 
+k in N
+A  
+- 
+3,8 
+3,4 
+3,5 
+3,5 
+3,6 
+k
+k
+ 
+- 
+1,06 
+0,94 
+0,97 
+0,97 
+1,00 
+arithmetisches Mittel: 
+N
+k
+3,6 A
+=
+ 
+Folgerung: F ~ I, da die Quotienten entsprechend genähert gleich sind. 
+Gleichung: 
+( )
+N
+3,6 A
+=
+⋅
+F I
+I 
+ 
+4 
+ 
+ 
+c Die Orientierung des magnetischen Feldes der Spule ist abhängig 
+von der Stromrichtung und kehrt sich durch die Umpolung der 
+Spannungsquelle um. Dadurch wird die betrachtete Kraft F auf den 
+Magneten nicht wie im Experiment untersucht nach unten, sondern 
+genau entgegengesetzt gerichtet sein. Der Betrag dieser Kraft ist 
+direkt proportional zur Stromstärke. 
+ 
+2 
+ 
+3 a Die Kraftwirkung auf die Spule im Magnetfeld lässt sich auf die Kraft 
+zurückführen, die ein Leiter im Magnetfeld erfährt und ist unter sonst 
+gleichen Bedingungen umso größer, je größer die Flussdichte des 
+Magnetfelds ist oder je größer die Stromstärke des Stroms durch die 
+Spule ist. Neodym-Magnete sind bei gleichen Flussdichten deutlich 
+kleiner als Ferritmagnete. Bei gleichen Abmessungen ist somit die 
+erzeugte Flussdichte größer und folglich genügen bei einem Neo-
+dym-Magneten kleinere Stromstärken in der Spule für die gleiche 
+Kraftwirkung, die ein Ferritmagnet hervorruft. 
+2 
+ 
+ 
+ 
+b  
+♦ Erfassen möglicher Aspekte, z. B. 
+Aufgrund der größeren Flussdichten bei gleichen Abmessungen, 
+können dynamische Lautsprecher, die einen Neodym- statt eines 
+Ferritmagneten verwenden, energiesparender betrieben werden. 
+Dadurch ist es möglich, kabellose akkubetriebene Lautsprecher 
+zum Beispiel in Form eines Kopfhörers zu realisieren, die eine nut-
+zerfreundliche Akkulaufzeit besitzen. 
+Die Bestände zur Neodymgewinnung sind klein, weshalb die Er-
+schließung der Abbaugebiete wirtschaftlich möglicherweise nicht 
+rentabel ist oder die Bereitstellung Neodyms mit entsprechenden 
+Kosten verbunden sein kann. 
+ 
+ 
+5 
+
+3  Erwartungshorizont 
+ 
+ 
+ 
+8 
+ 
+♦ Gewichten der jeweils tangierten Werte (z. B. Energieerhaltung, 
+Nachhaltigkeit, wirtschaftliche Abhängigkeitsverhältnisse sowie 
+Natur- und Gesundheitsschutz) z. B.: 
+Durch die Verwendung von Neodym-Magneten können Lautspre-
+cher zwar praktikabler als herkömmliche sein und auch energie-
+sparender betrieben werden, dennoch muss die Gefährdung der 
+Umwelt im Zuge der Bereitstellung von Neodym kritisch beleuchtet 
+werden. 
+♦ Fällen eines Werturteils z. B.: 
+Auch wenn Dauermagnete aus Neodym gegenüber denen aus 
+Ferrit aufgrund ihrer bei gleichen Abmessungen größeren magne-
+tischen Flussdichten überlegen sind, so ist von der Verwendung 
+von Neodym in Massenprodukten wie dynamischen Lautsprechern 
+aus Gründen der Wirtschaftlichkeit sowie des Natur- und Umwelt-
+schutzes eher abzusehen. 
+Mögliche weitere innerphysikalische Aspekte: 
+♦ kompaktere Bauform der Lautsprecher mit Neodym-Magneten bei 
+gleicher Lautstärke 
+♦ kleinere Masse der Lautsprecher mit Neodym-Magneten aufgrund 
+des geringeren Materialeinsatzes und dadurch erhöhte Praktikabi-
+lität 
+Mögliche weitere außerphysikalische Aspekte: 
+♦ mögliche Gefährdung von Mensch, Flora und Fauna durch die 
+Freisetzung gesundheitsschädlicher Materialien bei der Bereitstel-
+lung von Neodym  
+♦ Gefahr der wirtschaftlichen Abhängigkeit durch Bezug von Neo-
+dym aus überwiegend einem Land 
+♦ größere Berücksichtigung des Umweltschutzes bei der Verwen-
+dung von Ferritmagneten, da die zur Herstellung notwendigen Ma-
+terialien leichter und nachhaltiger bereitgestellt werden können. 
+ 
+Summe2 
+10 
+15 
+5 
+ 
+ 
+ 
+2 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+
+4  Standardbezug 
+ 
+ 
+ 
+9 
+ 
+4 
+Standardbezug 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1 a 
+3 
+ 
+3 
+ 
+ b 
+3 
+ 
+ 
+ 
+ c 
+3 
+ 
+ 
+ 
+2 a 
+4 
+ 
+ 
+ 
+ b 
+6 
+4 
+ 
+ 
+ c 
+ 
+2 
+ 
+ 
+3 a 
+1 
+ 
+ 
+ 
+ b 
+ 
+ 
+ 
+4 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster3 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+6 
+Hinweise für Lehrkräfte bei Aufgabenvorschlägen mit fachprakti-
+schem Anteil 
+ 
+Hinweise zur Durchführung der fachpraktischen Aufgabe 
+Geräte und Materialien: 
+♦ Spannungsversorgungsgerät mit der Ein-
+stellmöglichkeit für verschiedene Gleich-
+spannungen 
+♦ Stromstärkemessgerät  
+♦ Kabelmaterial 
+♦ Spule 
+♦ Kraftmesser 
+♦ Stabmagnet 
+♦ Stativmaterial 
+Die maximal zulässige Stromstärke ist dem Prüfling mitzuteilen. 
+ 
+3 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 
+
+6  Hinweise für Lehrkräfte bei Aufgabenvorschlägen mit 
+fachpraktischem Anteil 
+ 
+ 
+ 
+10 
+ 
+Aufgabe und Aufbau: 
+Bauen Sie die Versuchsanordnung gemäß Abbildung 2, Ma-
+terial 2 auf. 
+Ermitteln Sie die Gewichtskraft FG des Stabmagneten sowie 
+die durch den Stromfluss der Spule auf den Stabmagneten 
+wirkende Kraft FS für insgesamt fünf verschiedene Stromstär-
+ken I. 
+ 
+ 
+ 
+ 
+ 
+Messreihe für den Zusammenhang zwischen I und FS 
+I in A 
+0 
+0,026 
+0,044 
+0,069 
+0,085 
+0,155 
+FS in N  
+0,64 
+0,74 
+0,79 
+0,88 
+0,94 
+1,20 
+ 
+Das gegebene Messbeispiel wurde mit einer Spule durchgeführt, die die folgenden Parameter 
+besitzt: 
+♦ 800 Windungen 
+♦ R = 8 Ω 
+♦ L = 12 mH 
+♦ I = 0,75 A 
+♦ für Eisenkerne mit 20 mm   20 mm Querschnittsfläche 
+Es wurde ein Federkraftmesser mit einem Messbereich von 3 N verwendet. Der quader- oder 
+zylinderförmige Stabmagnet soll sich reibungsfrei im Innern der Spule bewegen können und 
+bis zur Hälfte in die Spule eintauchen können. Häufig ist eine Mittelpunktmarkierung des Stab-
+magneten durch die Kennzeichnung der magnetischen Pole bereits vorgegeben. Falls nicht, 
+ist sie z. B. mit einem Permanentmarker zu kennzeichnen. 
+Für das Verbinden des Stabmagneten mit dem Federkraftmesser kann eine kleine Schlaufe 
+mithilfe von einem dünnen Faden und Klebeband an einem Ende des Stabmagneten befestigt 
+werden. Die Schlaufe wird den Haken des Federkraftmessers eingehängt. 
+ 
+ 
+
+6  Hinweise für Lehrkräfte bei Aufgabenvorschlägen mit 
+fachpraktischem Anteil 
+ 
+ 
+ 
+11 
+ 
+ 
+Beobachtungsbogen 
+Die Aufsicht führende Fachlehrkraft protokolliert für jeden Prüfling wichtige Informationen, die 
+für die Bewertung der Prüfungsleistung von Bedeutung sind, z. B. 
+♦ das Aufbauen der Versuchsanordnung, 
+♦ das Anfordern eines fertigen Versuchsaufbaus, 
+♦ die Anforderung von Ersatzmesswerten. 
+Für das Erfassen dieser Informationen können auf der Grundlage der landesrechtlichen Best-
+immungen Beobachtungsbögen durch die prüfende Fachlehrkraft vorbereitet werden. 
+ 
+Ersatzergebnisse 
+Ersatzmesswerte für die Aufgabe 2a 
+Messreihe für den Zusammenhang zwischen I und FS 
+I in A 
+0 
+0,026 
+0,044 
+0,069 
+0,085 
+0,155 
+FS in N  
+0,64 
+0,74 
+0,79 
+0,88 
+0,94 
+1,20 
+ 
+Gefährdungsbeurteilung 
+Für die Vollständigkeit und Richtigkeit dieser Muster-Gefährdungsbeurteilung wird keine Haf-
+tung übernommen. Jede Nutzerin/jeder Nutzer muss die aufgeführten Inhalte auf der Grund-
+lage der länderspezifischen Regelungen eigenverantwortlich prüfen und an die tatsächlichen 
+Gegebenheiten anpassen. 
+ 
+Beschreibung des Experiments: 
+Messung der Kraft auf einen Magneten im Feld eines Elektromagneten bei variablem Spulen-
+strom. 
+ 
+Gefährdungsarten: 
+Mechanisch, elektrisch, thermisch 
+ 
+konkrete Gefährdungen 
+Schutzmaßnahmen (z. B. gerätebezogen, baulich, 
+bei der Durchführung des Experiments)  
+Umfallen der Gerätschaften 
+Geeignete Befestigungsmöglichkeiten zur Verfügung stel-
+len 
+ggf. berührungsgefährliche  
+Spannung U > 25 V 
+Verwendung von Sicherheitstrenntransformatoren als 
+Netzteile, Spannung begrenzen 
+Erwärmung 
+Bei Wahl der angegebenen Spulen tritt keine Leistung auf, 
+die eine starke Erwärmung zur Folge hat. Messzeit be-
+grenzen. 
+ 

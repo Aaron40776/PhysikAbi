@@ -1,0 +1,600 @@
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2025 
+Aufgaben für das Fach Physik 
+Kurzbeschreibung 
+Aufgabentitel 
+DECT-Telefon 
+Anforderungsniveau 
+erhöht 
+Inhaltsbereiche 
+♦ Mechanische und elektromagnetische Schwingungen und Wel-
+len 
+♦ Eigenschaften und Ausbreitung von Wellen 
+♦ harmonische Welle: charakteristische Größen und ihre Zu-
+sammenhänge 
+♦ Longitudinal- und Transversalwelle, lineare Polarisation  
+♦ Überlagerung von Wellen 
+♦ Interferenz am Doppelspalt auch mit polychromatischem 
+Licht 
+♦ stehende Wellen 
+Materialien 
+♦ M 1 DECT 
+♦ M 2 Reflexion von Strahlung an einer Metallplatte 
+♦ M 3 Modellhafte Strahlungsbelastung beim Telefonieren 
+♦ M 4 Vergleich zwischen zwei angebotenen Telefonsystemen 
+Quellenangaben 
+♦ M 1 - M 3 Klein, U. (2020). DECT Funkstandard – alle Infos zum 
+Telefon-Funkprotokoll. Verfügbar unter: https://www.homeands-
+mart.de/dect-funkstandard (Zugriff am: 12.03.2024) 
+♦ M 3, Abb. 5 in Anlehnung an: Uniklinik RWTH Aachen, EMF-
+Portal, https://www.emf-portal.org/de/cms/page/home/effects/ra-
+dio-frequency (Zugriff am 12.03.2024) 
+♦ M 4 Eidgenössisches Departement des Innern EDI, Bundesamt 
+für Gesundheit BAG (2021). WLAN. Verfügbar unter: 
+https://www.bag.admin.ch/bag/de/home/gesund-leben/umwelt-
+und-gesundheit/strahlung-radioaktivitaet-schall/elektromagneti-
+sche-felder-emf-uv-laser-licht/emf.html (Zugriff am 12.03.2024) 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat1 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+ 
+1 siehe „Hinweise zur Verwendung von Hilfsmitteln“ 
+
+0  Kurzbeschreibung 
+ 
+ 
+2 
+fachpraktischer Anteil nein 
+ 
+Hinweise: 
+ 
+ 
+ 
+
+1  Aufgabe 
+ 
+ 
+3 
+1 
+Aufgabe 
+DECT-Telefon 
+Als Festnetz-Telefon wird in vielen Haushalten ein DECT-Telefon (Digital Enhanced Cordless 
+Telecommunications) bestehend aus einer Basisstation und mindestens einem Mobilteil ver-
+wendet. Basisstation und Mobilteile kommunizieren mittels elektromagnetischer Wellen mitei-
+nander. 
+  
+BE 
+1 Geräte, die mittels elektromagnetischer Wellen kommunizieren, können sich bei Nut-
+zung der gleichen Frequenz gegenseitig beeinflussen. 
+Begründen Sie, dass es bei einem der in Material 1 genannten DECT-Frequenzbe-
+reiche zur Beeinflussung von Bluetooth-Geräten (elektromagnetische Wellen, Wel-
+lenlängenbereich 12,1 cm bis 12,5 cm) kommen kann. 
+5 
+2 Ist die Frequenz eines DECT-Telefons unbekannt, so kann diese mithilfe des in Ma-
+terial 2 beschriebenen Versuchsaufbaus ermittelt werden. 
+a Erklären Sie, dass in Versuch 1 (M 2) Minima und Maxima registriert werden. 
+b Begründen Sie mithilfe der im Material genannten Messergebnisse aus Versuch 1 
+(M 2) den mutmaßlich verwendeten Frequenzbereich (M 1). 
+c Geben Sie den korrekten Intensitätsverlauf in Versuch 2 (M 2) an. Begründen Sie 
+für jeden der anderen Verläufe, dass er nicht in Frage kommt. 
+3 
+5 
+7 
+3 Eine Kenngröße für die Belastung durch elektromagnetische Strahlung ist die spezi-
+fische Absorptionsrate (SAR). 
+a Beurteilen Sie durch eine modellhafte Abschätzung mit den Angaben aus den 
+Materialen 1 und 3, ob der zum Schutz der Gesundheit empfohlene SAR-Höchst-
+wert von 
+W
+kg
+2,0
+ im Kopf in diesem exemplarischen Fall eingehalten wird. 
+b Auch bei eingehaltenem Grenzwert sollte die Belastung durch elektromagnetische 
+Strahlung möglichst geringgehalten werden. 
+Beschreiben Sie je eine Möglichkeit für den Hersteller und eine für den Benutzer 
+eines DECT-Telefons, die Belastung bei unveränderten Gesprächsdauern zu ver-
+ringern. 
+8 
+4 
+4 Ein Haushalt steht vor der Wahl, DECT- oder WLAN-Telefonie zu nutzen. Die Haus-
+haltsmitglieder erstellen für zwei angebotene Systeme die Übersicht in Material 4. 
+Geben Sie unter Berücksichtigung aller in Material 4 genannten Kategorien eine be-
+gründete Empfehlung für eine der beiden Telefonsysteme ab. 
+8 
+ 
+ 
+
+2  Material 
+ 
+ 
+4 
+2 
+Material 
+Material 1: DECT 
+DECT (Digital Enhanced Cordless Telecommunications) ist ein Funk-Standard, der vor allem 
+für die Telefonie innerhalb von Gebäuden ausgelegt ist. Für DECT wird in Europa in der Regel 
+der Frequenzbereich von 1880-1900 MHz genutzt. Es sind aber auch die folgenden Bereiche 
+möglich (wenn auch selten angewendet): 1900-1980 MHz, 2010-2025 MHz und 2400-
+2480 MHz. 
+Material 2: Reflexion von Strahlung an einer Metallplatte 
+Der Sender S ist die Basisstation des Telefons, die kontinuierlich eine elektromagnetische 
+Welle aussendet. Der Empfänger E kann die Empfangsintensität an einem Ort messen und 
+anzeigen. Im Abstand x wird hinter dem Empfänger E eine Metallplatte positioniert. An der 
+Metallplatte wird die elektromagnetische Welle reflektiert. 
+ 
+Versuch 1: 
+Durch langsames Verschieben des Empfängers (Abb. 1) wird der Ab-
+stand x zwischen Empfänger und Metallplatte vergrößert. Sender und 
+Metallplatte bleiben ortsfest. Man registriert ausgeprägte Minima und 
+Maxima der Empfangsintensität, wobei die ersten beiden Maxima bei 
+x1 = 3,9 cm und x2 = 11,8 cm auftreten. 
+ 
+ 
+Versuch 2: 
+Im Gegensatz zu Versuch 1 wird der Abstand x zwischen Empfän-
+ger E und Metallplatte M kontinuierlich vergrößert, indem Sender und 
+Empfänger ortsfest bleiben und die Metallplatte nach rechts verscho-
+ben wird (Abb. 2). 
+In Abb. 3 werden vier Diagramme dargestellt, von denen eines den bei 
+diesem Versuch zu erwartenden Intensitätsverlauf der elektromagne-
+tischen Welle qualitativ richtig beschreibt. 
+Hinweis: Gehen Sie vereinfa-
+chend davon aus, dass sich die 
+Sendeleistung gleichmäßig über 
+alle Raumrichtungen verteilt. 
+ 
+ 
+ 
+ 
+ 
+Abb. 3: Zur Auswahl stehende Verläufe für die vom Empfänger ge-
+messene Intensität in Abhängigkeit vom Abstand x. 
+ 
+Abb. 1: Versuch 1 
+Abb. 2: Versuch 2 
+
+2  Material 
+ 
+ 
+5 
+Material 3: Modellhafte Strahlungsbelastung beim Telefonieren 
+Beim Telefonieren mit einem DECT-Mobilteil befindet sich die im 
+Gerät eingebaute Sendeantenne nahe am Ohr des Benutzers 
+(Abb. 4). Die Sendeleistung während eines Gesprächs beträgt 
+bei üblichen Geräten im zeitlichen Mittel 10 mW, wovon bauart-
+bedingt etwa ein Drittel zum Kopf hin abgegeben wird. Die elekt-
+romagnetische Strahlung des Telefons wirkt am Kopf auf das Ge-
+webe, welches sich in starker Näherung innerhalb einer Halbku-
+gel befindet (Abb. 4). 
+Abb. 5 beschreibt die Frequenzabhängigkeit der Eindringtiefe 
+elektromagnetischer Wellen in unterschiedliche Gewebearten. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Gehen Sie für die Ermittlung der Masse der in der Kopfregion betroffenen Gewebearten von 
+einer Dichte* des Körpers von 
+3
+g
+cm
+1,0
+ aus. 
+*Hinweise: Die Dichte ρ ist der Quotient aus der Masse m und dem Volumen V (
+= m
+V
+ρ
+). Der 
+SAR-Wert ist der Quotient aus der von einem Körper der Masse m absorbierten Leistung P 
+und dieser Masse m ( P
+m ). 
+Material 4: Vergleich zwischen zwei angebotenen Telefonsystemen 
+ 
+ 
+ 
+DECT-Telefonsystem 
+WLAN-Telefonsystem 
+Anschaffungspreis 
+50 € 
+110 € 
+Abhörsicherheit 
+Hoch  
+niedrig bis sehr hoch (hängt 
+von den Einstellungen ab, die 
+der Anwender vornimmt) 
+Akkulaufzeit Telefonieren 
+18 h 
+6 h 
+SAR-Wert* 
+<0,1 W/kg 
+0,5 W/kg 
+Eindringtiefe in cm 
+Frequenz in GHz 
+Abb. 5: Eindringtiefe hochfrequenter Felder in Körpergewebe in Abhängigkeit von der Frequenz und
+der Gewebeart (logarithmische Skalen) 
+in 
+Anlehnung 
+an: 
+Uniklinik 
+RWTH 
+Aachen, 
+EMF-Portal, 
+https://www.emf-por-
+tal.org/de/cms/page/home/effects/radio-frequency (Zugriff am 12.03.2024) 
+Abb. 4: Modellhafte Darstellung des Eindringens 
+elektromagnetischer Strahlung in den Kopf 
+Tabelle 1: Gegenüberstellender Vergleich DECT-WLAN 
+
+2  Material 
+ 
+ 
+6 
+in der EU maximal er-
+laubte Sendeleistung 
+250 mW 
+200 mW 
+*Erläuterung des SAR-Werts in Material 3. 
+ 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+7 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 Im Aufgabentext ist ein Wellenlängenbereich von 12,1 cm bis 12,5 cm 
+angegeben. 
+Berechnung des zugehörigen Frequenzbereichs: 
+v
+λ f
+=
+⋅
+ 
+1
+1
+2,48 GHz
+0,121 m
+=
+=
+=
+v
+c
+f
+λ
+ 
+2
+2
+2,40 GHz
+0,125 m
+=
+=
+=
+v
+c
+f
+λ
+ 
+Durch Abgleich mit den in Material 1 dargestellten Frequenzbereichen 
+kann geschlussfolgert werden, dass es bei dem DECT-Frequenzbe-
+reich 2400 - 2480 MHz zur Beeinflussung kommen kann. 
+5 
+ 
+ 
+2 a Die vom Sender ausgehende elektromagnetische Welle breitet sich 
+im Raum aus und gelangt zur Metallplatte. An der Metallplatte wird 
+die elektromagnetische Welle reflektiert. Einlaufende und reflektierte 
+Welle überlagern sich, es bildet sich eine stehende Welle. 
+An den Orten konstruktiver Interferenz ist das Signal maximal 
+(Bauch, Maximum) und an den Stellen destruktiver Interferenz mini-
+mal (Knoten, Minimum). 
+3 
+ 
+ 
+ 
+b Laut Material 2 liegen zwei benachbarte Maxima bei 3,9 cm sowie 
+11,8 cm. Somit gilt bei einer stehenden Welle für die Wellenlänge: 
+11,8 cm
+3,9 cm
+2
+λ =
+−
+ 
+15,8  cm
+λ =
+ 
+Und für die Frequenz: 
+v
+λ f
+=
+⋅
+ 
+1,90 GHz
+0,158 m
+=
+=
+=
+v
+c
+f
+λ
+ 
+Das DECT-Telefon nutzt somit vermutlich eine Frequenz im Fre-
+quenzbereich 1880 - 1900 MHz. 
+ 
+5 
+ 
+ 
+c Mit zunehmendem Abstand x wird die Intensität der an der Metall-
+platte M reflektierten Welle am Ort des Empfängers kleiner, da sich 
+die Sendeleistung bei Vergrößerung des Abstands auf einer größe-
+ren Kugeloberfläche verteilt. 
+Deswegen ist keine vollständige Auslöschung von einfallender und 
+reflektierter Welle am Empfänger möglich. Die Intensitätsverläufe ① 
+und ② scheiden daher aus. 
+Da sich im Versuch die Frequenz nicht ändert, bleiben die Abstände 
+zwischen den Maxima konstant. Deshalb kann ④ ausgeschlossen 
+werden; ③ ist der zutreffende Intensitätsverlauf. 
+ 
+3 
+4 
+
+3  Erwartungshorizont 
+ 
+ 
+8 
+3 a Berechnung der in Kopfrichtung abgestrahlten Leistung im Modell: 
+1 10 mW
+3,33 mW
+3
+P =
+⋅
+=
+ 
+Ermittlung der Eindringtiefe: 
+Als Frequenz des DECT-Telefons wird 1,90 GHz angenommen (Er-
+gebnis Aufgabe 2b, alternativ eine andere Frequenz aus Material 1). 
+ 
+Aus dem Diagramm (Abb. 5) erhält man bei der Frequenz 1,90 GHz 
+für Knochen eine ungefähre Eindringtiefe von 7 cm, für Hirn von 
+etwa 1,5 cm. Da die Dicke des Schädelknochens deutlich weniger 
+als 7 cm beträgt, ist es sinnvoll, mit einer Eindringtiefe von etwa 
+1,5 cm in das Gehirn zu arbeiten. 
+Hinweis: Auch abgeschätzte Eindringtiefen zwischen 1,5 cm und 
+7 cm sind erlaubt, insofern der Prüfling diese Wahl hinreichend be-
+gründet (z. B. 2 cm, wenn man davon ausgeht, dass die Strahlung 
+zunächst in abgeschätzte 1 cm Schädelknochen eindringt und da-
+nach noch in abgeschätzte 1 cm Hirn (≤1,5 cm Hirn)). 
+Gleichungen aus dem Material entnehmen: 
+= m
+ρ
+V 
+SAR-Wert: P
+m 
+Berechnung des abgeschätzten SAR-Werts: 
+(
+)
+3
+3
+3
+1
+4
+g
+1
+4
+π
+1
+1,5 cm
+π
+7,1g
+2
+3
+2
+3
+cm
+m
+ρ V
+ρ
+r
+=
+⋅
+=
+⋅
+⋅
+⋅
+⋅
+=
+⋅
+⋅
+⋅
+⋅
+=
+ 
+3
+3
+3,3 10
+ W
+W
+0,47  kg
+7,1 10
+ kg
+P
+m
+−
+−
+⋅
+=
+=
+⋅
+ 
+Beurteilung: 
+W
+W
+0,47
+2 
+kg
+kg
+<
+ 
+Der Grenzwert wird eingehalten. 
+ 
+4 
+4 
+ 
+b Möglichkeiten des Herstellers sind z. B.: 
+♦ Mobilteil so konstruieren, dass eine Abschirmung der elektromag-
+netischen Strahlung in Richtung des Körpers erfolgt. 
+♦ Angepasste Sendeleistung, die verringert wird, sobald die Entfer-
+nung zur Basisstation gering ist. 
+Möglichkeiten des Benutzers sind z. B.: 
+♦ Bei Gesprächen Mobilteil nicht direkt ans Ohr halten und z. B. die 
+Freisprechfunktion oder ein kabelgebundenes Headset nutzen. 
+♦ Mobilteil nicht nahe am Körper haben, wenn man gar nicht telefo-
+niert. 
+ 
+4 
+ 
+4 ♦ Pro DECT: Bei Vergleich der beiden Angebote fällt das DECT-Sys-
+tem durch einen geringeren Anschaffungspreis sowie eine lange 
+4 
+4 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+9 
+Gesprächsdauer positiv auf. Des Weiteren ist der SAR-Wert deutlich 
+geringer als bei dem angebotenen WLAN-Telefonsystem, was besser 
+für die Gesundheit des Nutzers ist. 
+♦ Pro WLAN: Wenn man die Sicherheitseinstellungen geeignet wählt, 
+dann ist mit dem WLAN-System eine höhere Sicherheit zu erreichen.  
+♦ Umgang mit der Kategorie „in der EU maximal erlaubte Sendeleis-
+tung“: Da hier keine Aussage über die tatsächliche Sendeleistung ge-
+troffen wird, spricht diese Kategorie für keines der beiden angebote-
+nen Telefonsysteme. 
+ 
+Abwägung und daraus resultierende Handlungsoption z. B.: 
+♦ Das DECT-Telefon weist eine Vielzahl von Vorteilen gegenüber dem 
+WLAN-Telefon auf (längere Akkulaufzeit beim Telefonieren, geringe-
+rer SAR-Wert, geringerer Preis). Insbesondere muss ein Haushalt auf 
+seine Ausgaben achten und das WLAN-System kostet mehr als das 
+Doppelte des DECT-Systems. 
+♦ Da ich bei einem normalen Haushalt von einem eher geringen Risiko 
+des Abhörens ausgehe, halte ich die angegebene „hohe“ Sicherheit 
+für völlig ausreichend. 
+♦ Ich würde daher die Anschaffung des DECT-Systems empfehlen. 
+ 
+Summe2 
+12 
+20 
+8 
+ 
+ 
+ 
+2 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+
+4  Standardbezug2F 
+ 
+ 
+10 
+4 
+Standardbezug3 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1 a 
+3 
+ 
+ 
+ 
+2 a 
+1 
+ 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+ c 
+ 
+6 
+ 
+ 
+3 a 
+3 
+ 
+3 
+ 
+ b 
+ 
+ 
+ 
+3 
+4 
+ 
+ 
+ 
+3 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster4 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+ 
+3 Zu jeder Teilaufgabe sind zu jedem Kompetenzbereich die Nummern der Standards gemäß den Bildungsstan-
+dards für die Allgemeine Hochschulreife zu nennen, die zur Bearbeitung der Teilaufgabe erforderlich sind. 
+4 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 

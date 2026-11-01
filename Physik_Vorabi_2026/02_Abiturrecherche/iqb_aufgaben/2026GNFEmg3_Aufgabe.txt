@@ -1,0 +1,365 @@
+ 
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2026 
+Aufgaben für das Fach Physik 
+Aufgabentitel 
+Elektronenstrahlen zur Härtung von Lacken 
+Anforderungsniveau 
+grundlegend 
+Inhaltsbereiche 
+♦ Inhaltsbereich: Elektrische und magnetische Felder 
+♦ Körper in statischen Feldern 
+♦ Energiebetrachtungen von Körpern in homogenen elektri-
+schen Feldern 
+Materialien 
+♦ M 1 Erzeugung eines Elektronenstrahls 
+♦ M 2 Leistungsdaten des Lackierprozesses 
+♦ M 3 Aufweitung des Elektronenstrahls 
+Quellenangaben 
+♦ M 2, Abb. 2 in Anlehnung an: Asis (Hg.). Härtung flüssiger Be-
+schichtungen auf Formteilen. https://www.asis-gmbh.de/wp-con-
+tent/uploads/2021/05/ASIS_Whitepaper_Haertung-fluessiger-
+Beschichtungen_2103V7_de.pdf (Zugriff am: 30.10.2023) 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+fachpraktischer Anteil ja ☐ 
+nein ☒ 
+Zeitzuschlag: –– 
+Hinweise 
+ 
+ 
+ 
+
+1  Aufgabe 
+ 
+ 
+2 
+1 
+Aufgabe 
+Elektronenstrahlen zur Härtung von Lacken 
+Viele Lacke trocknen durch den Eintrag von Wärme. Es gibt jedoch auch Verfahren, bei denen 
+Lacke durch Elektronenbeschuss aushärten. Die kinetische Energie der Elektronen wird auf 
+die Moleküle im flüssigen Lack übertragen, sodass diese sich miteinander vernetzen und einen 
+festen Lack bilden. 
+  
+BE 
+1 Zunächst soll der Elektronenstrahl näher betrachtet werden. 
+a Erklären Sie mithilfe von Material 1 den Beschleunigungsvorgang von Elektronen 
+innerhalb der Elektronenkanone. 
+b Erklären Sie mithilfe von Material 1 jeweils den Einfluss der Heiz- und Beschleuni-
+gungsspannung auf die Leistung des Elektronenstrahls. 
+4 
+4 
+2 Die betriebswirtschaftliche Abteilung eines Lackierbetriebes kalkuliert die Betriebs-
+kosten der Anlage unter anderem in Abhängigkeit von der Bestrahlungszeit eines 
+Bauteils, die sich nach der Dicke der Lackschicht und den Energiekosten richtet. 
+a Begründen Sie mithilfe von Abbildung 2 die optimale Beschleunigungsspannung 
+für den in Material 2 beschriebenen Lackierprozess unter Berücksichtigung der 
+Konsequenzen einer zu hohen bzw. zu niedrigen Beschleunigungsspannung. 
+b Bestimmen Sie die Bestrahlungszeit pro Fläche für den in Material 2 beschriebe-
+nen Lackierprozess, um eine vollständige Aushärtung zu erzielen. 
+c Erläutern Sie den Mitarbeitenden der betriebswirtschaftlichen Abteilung die Kalku-
+lation der Höhe der Energiekosten pro m² am Beispiel des in Material 2 beschrie-
+benen Lackierprozesses. 
+3 
+4 
+6 
+3 Vor Durchführung wurde das Bauteil nicht geerdet, sodass der Lackierprozess feh-
+lerhaft ist (M 3). 
+a Beschreiben Sie das sich ausbildende elektrische Feld zwischen der Lochanode 
+und der Lackschicht und dessen Änderung bei zunehmender Aufladung der Ober-
+fläche. 
+b Erklären Sie die mit Aufladung der Oberfläche zunehmende Aufweitung des 
+Elektronenstrahls mithilfe einer Argumentationskette unter Berücksichtigung der 
+Geschwindigkeiten in x- und y-Richtung. 
+4 
+5 
+ 
+ 
+
+2  Material 
+ 
+ 
+3 
+2 
+Material 
+Material 1: Erzeugung eines Elektronenstrahls 
+Zur Erzeugung eines Elektronenstrahls wird eine sogenannte Elektronenkanone verwendet. 
+Aus einem Glühdraht können Elektronen austreten, wenn dieser beheizt ist. Diese Elektronen 
+befinden sich zwischen dem Glühdraht und einer Lochanode in einem elektrischen Feld, wel-
+ches durch eine zwischen diesen Bauteilen angelegte Spannung entsteht. Die beiden Span-
+nungen UH (Heizspannung) und UB (Beschleunigungsspannung) bestimmen die Leistung des 
+Elektronenstrahls. Diese gibt die Summe der Energiebeträge aller je Zeitspanne emittierten 
+Elektronen dividiert durch diese Zeitspanne an. Durch den Betrag der Heizspannung kann die 
+Anzahl der freigesetzten Elektronen pro Sekunde gesteuert werden. Vereinfachend wird an-
+genommen, dass der gesamte Lackierprozess im Vakuum stattfindet. 
+ 
+ 
+Material 2: Leistungsdaten des Lackierprozesses 
+Die Beschleunigungsspannung des Elektronenstrahls muss an die Dicke der Lackschicht an-
+gepasst werden. So wird sichergestellt, dass eine Aushärtung in der gesamten Schicht erfolgt, 
+jedoch keine weitere unnötige Energieaufnahme des darunter liegenden Bauteils erfolgt. 
+Die Leistung des Elektronenstrahls beträgt 1,0 kW. Pro Gramm des aufgetragenen Lacks 
+muss insgesamt eine Energie von 5,0 kJ zugeführt werden. Pro 1 kWh zugeführte Energie ist 
+mit Energiekosten von 20 Cent zu rechnen.  
+Bei dem hier betrachteten Lackierprozess wird eine Schicht mit 
+2
+g
+m
+80
+ Lack aufgetragen. Ab-
+bildung 2 zeigt den Zusammenhang zwischen der kinetischen Energie der einzelnen Elektro-
+nen im Strahl und der damit erreichten prozentualen Aushärtung dieser Lackschicht bei aus-
+reichender Bestrahlungszeit. 
+Abb. 1: Bestrahlung der Lackschicht mit Elektronen aus einer Elektronenkanone 
+
+2  Material 
+ 
+ 
+4 
+ 
+Material 3: Aufweitung des Elektronenstrahls 
+Damit der Elektronenstrahl nicht nur punktuell die Lackschicht bestrahlt, wird dieser 
+aufgeweitet. Dabei erhalten die Elektronen jeweils eine konstante Geschwindigkeit in x-
+Richtung. Wechselwirkungen der Elektronen im Elektronenstrahl untereinander werden 
+vernachlässigt. Die Elektronen müssen durch eine Erdung des Bauteils nach Auftreffen 
+abgeführt werden. 
+Die Erdung des Bauteils wurde in der Vorbereitung des Lackierprozesses vergessen. Dadurch 
+werden die Elektronen beim Lackierprozess nicht abgeführt und es bildet sich ein homogenes 
+elektrisches Feld im Bereich zwischen der Lochanode und der Lackschicht aus. Dadurch wird 
+der Elektronenstrahl noch weiter aufgeweitet. 
+ 
+ 
+ 
+Abb. 2: Aushärtung einer Schicht mit 80 g/m² Lack in Abhängigkeit von der Energie der Elektronen bei ausrei-
+chender Bestrahlungszeit 
+Abb. 3: Ansammlung von Elektronen auf der Oberfläche der Lackschicht 
+
+3  Erwartungshorizont 
+ 
+ 
+5 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. Werden im Erwartungshorizont in 
+Rechnungen Werte verwendet, die Resultat einer vorangegangenen Berechnung sind, so ge-
+hen sie in Taschenrechner-Genauigkeit in die jeweilige Berechnung ein, sind aber mit einer 
+sinnvollen Genauigkeit angegeben. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 a Zwischen dem Glühdraht und der Lochanode ist eine Beschleuni-
+gungsspannung angelegt. Daraus resultiert ein elektrisches Feld 
+zwischen Glühdraht und Lochanode. Die elektrische Kraft auf die 
+ausgetretenen Elektronen zeigt in Richtung der Lochanode, sodass 
+diese in diese Richtung beschleunigt werden. 
+4 
+ 
+ 
+ 
+b Die Höhe der Heizspannung bestimmt die Anzahl der freigesetzten 
+Elektronen pro Sekunde. Mit Hilfe der Beschleunigungsspannung 
+wird auf diese eine Energie übertragen. Durch mehr freigesetzte 
+Elektronen wird die übertragene Energie und somit auch die Leis-
+tung des Elektronenstrahls erhöht. Eine erhöhte Heizspannung er-
+höht somit die Leistung des Elektronenstrahls. 
+Die freigesetzten Elektronen durchlaufen das elektrische Feld zwi-
+schen dem Glühdraht und der Lochanode, sodass diese beschleu-
+nigt werden. Je höher die Beschleunigungsspannung, desto höher 
+ist auch die Energie der einzelnen Elektronen. Somit wird durch eine 
+höhere Beschleunigungsspannung die Leistung des Elektronen-
+strahls erhöht. 
+ 
+4 
+ 
+2 a Die Darstellung in Material 3 zeigt, dass die Elektronen eine Energie 
+von etwa 145 keV benötigen, um eine vollständige Aushärtung der 
+Lackschicht zu erreichen. Eine Energie von mindestens 145 keV be-
+sitzen die Elektronen, wenn eine Beschleunigungsspannung von 
+145 kV angelegt wird, da 
+kin
+B
+E
+U
+e
+⋅
+=
+ gilt. 
+Haben die Elektronen eine geringere Energie, dann wird keine voll-
+ständige Aushärtung erzielt. Wenn sie eine größere Energie besitzen 
+gibt es einen unnötig hohen Energieeintrag in das Bauteil. Die Be-
+schleunigungsspannung sollte daher 145 kV betragen. 
+3 
+ 
+ 
+ 
+b Pro Gramm aufgetragenen Lacks muss eine Energie von 5,0 kJ zu-
+geführt werden. Die Leistung des Elektronenstrahls beträgt 
+1 kW = 1 kJ/s. Daraus ergibt sich eine Bestrahlungszeit von 
+kJ
+s
+5
+J
+1
+,0 k
+5 s
+=
+. Bei einer Lackschicht mit 80 g/m² beträgt die Bestrah-
+lungszeit 
+2
+2
+g
+s
+s
+g
+m
+m
+5
+80
+400
+⋅
+=
+. 
+ 
+4 
+ 
+ 
+c Die Energiekosten richten sich nach der Menge des aufgetragenen 
+Lackes. Pro Gramm Lack müssen 5,0 kJ durch den Elektronenstrahl 
+der Lackschicht zugeführt werden. Dieser Wert ist immer gleich und 
+wird mit der vorgegebenen Menge an Lack multipliziert. In diesem 
+ 
+6 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+6 
+Beispiel sind dies 80 g pro m². Es ergeben sich somit 80 ∙ 5 kJ pro 
+m² = 400 kJ pro m². Dieser errechnete Wert muss in kWh pro m² an-
+gegeben werden, indem durch 3600 geteilt wird, also 
+400 : 3600 kWh pro m ²= 0,111 kWh pro m². Um die Energiekosten 
+pro m² zu erhalten, muss dieser Wert mit dem Strompreis multipli-
+ziert werden, also 0,111 ⋅ 20 Cent pro m² = 2,22 Cent pro m². 
+3 a Die Feldlinien des elektrischen Feldes verlaufen senkrecht zu der 
+Oberfläche. Die Feldlinienrichtung zeigt zu der Oberfläche. Bei zu-
+nehmender Aufladung der Oberfläche wird die Feldliniendichte er-
+höht. 
+4 
+ 
+ 
+ 
+b  
+♦ Auf die Elektronen des Elektronenstrahls wirkt eine Kraft in dem 
+entstehenden elektrischen Feld zwischen Lochanode und Lack-
+schicht. Diese wirkt in y-Richtung mit Orientierung zur Lochanode. 
+♦ Durch die wirkende Kraft werden die Elektronen in y-Richtung ge-
+bremst. 
+♦ Die Geschwindigkeit der Elektronen in y-Richtung wird reduziert. 
+♦ In dem sich ausbildenden elektrischen Feld wirken in x-Richtung 
+keine Kräfte auf die Elektronen. Die Geschwindigkeit der Elektronen 
+in x-Richtung bleibt konstant. 
+♦ Der Geschwindigkeitsanteil in y-Richtung hat sich gegenüber dem 
+Geschwindigkeitsanteil in x-Richtung verkleinert. 
+♦ Die resultierende Bewegungsrichtung zeigt weiter nach außen. 
+Der Elektronenstrahl weitet sich auf. 
+ 
+ 
+5 
+ 
+Summe1 
+11 
+14 
+5 
+ 
+ 
+ 
+1 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+
+4  Standardbezug 
+ 
+ 
+7 
+4 
+Standardbezug 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1 a 
+3 
+ 
+3 
+ 
+ b 
+3 
+ 
+ 
+ 
+2 a 
+3 
+ 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+ c 
+ 
+ 
+6 
+ 
+3 a 
+3 
+ 
+ 
+ 
+ b 
+1 
+ 
+8 
+ 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster2 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+ 
+2 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 

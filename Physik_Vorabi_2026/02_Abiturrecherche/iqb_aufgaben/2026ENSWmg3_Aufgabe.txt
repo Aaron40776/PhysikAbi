@@ -1,0 +1,648 @@
+ 
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2026 
+Aufgaben für das Fach Physik 
+Aufgabentitel 
+Blitzdetektor 
+Anforderungsniveau 
+erhöht 
+Inhaltsbereiche 
+♦ Mechanische und elektromagnetische Schwingungen und Wellen 
+♦ Schwingungen 
+♦ Mechanische und elektromagnetische harmonische 
+Schwingungen: charakteristische Größen und ihre Zusam-
+menhänge 
+♦ gedämpfte Schwingungen 
+♦ Resonanz bei erzwungenen Schwingungen 
+Materialien 
+♦ M 1 Der elektromagnetische Schwingkreis 
+♦ M 2 Messdaten eines Blitzdetektors 
+♦ M 3 Formeln für den gedämpften harmonischen Schwingkreis 
+♦ M 4 Mitschrift aus dem Unterricht 
+♦ M 5 Vorschlag von Anna zur Entfernungsbestimmung von Blit-
+zen 
+Quellenangaben 
+♦ M 2 in Anlehnung an: Blitzbeobachtung und Messergebnisse. 
+https://www.elektronik-labor.de/Projekte/Blitzwarner9.html (Zu-
+griff am: 29.11.2024) 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+fachpraktischer Anteil ja ☐ 
+nein ☒ 
+Zeitzuschlag: –– 
+Hinweise 
+ 
+ 
+ 
+
+1  Aufgabe 
+ 
+ 
+2 
+1 
+Aufgabe 
+Blitzdetektor 
+Blitze sind gefährliche Naturereignisse. Um Blitze zu detektieren, kann man Blitzdetektoren 
+verwenden. Manche besitzen als zentrales Bauelement einen elektromagnetischen Schwing-
+kreis. 
+  
+BE 
+1 Da die Energie des Blitzes einen Schwingkreis anregen kann, werden zunächst die 
+Energieumwandlungen in einem idealisierten ungedämpften Schwingkreis betrachtet 
+(siehe M 1). 
+a Beschreiben Sie die während der ersten Viertel-Periodendauer stattfindenden 
+Energieumwandlungen. 
+b Skizzieren Sie in Material 1 Abbildung 1 zu den dargestellten Zeitpunkten pas-
+sende Feldlinien sowohl für die elektrischen als auch für die magnetischen Felder. 
+Begründen Sie jeweils die Orientierung der von Ihnen eingezeichneten Feldlinien. 
+c Erläutern Sie qualitativ die Veränderung der maximalen Stromstärke im Schwing-
+kreis, falls die anfängliche Aufladung zum Zeitpunkt t = t0 des Kondensators 
+gleich zu der in Material 1 Abbildung 1 ist, sich jedoch ein Eisenkern in der Spule 
+befindet. 
+4 
+5 
+5 
+2 In einem Forum, in dem Blitzdetektoren diskutiert werden, findet man das in Mate-
+rial 2 dargestellte Diagramm. 
+a Bestimmen Sie anhand der Abbildung 2 möglichst genau die Periodendauer T der 
+gedämpften Schwingung im Schwingkreis. 
+[Kontrollwert: T = 3,6 µs]. 
+b Zeigen Sie, dass die theoretisch zu erwartende Periodendauer eines ungedämpf-
+ten Schwingkreises mit den Daten von Material 2 kaum vom Ergebnis in Teilauf-
+gabe a abweicht. 
+c Begründen Sie mit den Beziehungen aus Material 3, ob der Wert aus Teilaufgabe 
+b größer oder kleiner als der Wert von Teilaufgabe a ist. 
+Erklären Sie, dass man mit dieser Veränderung der Periodendauer den Wider-
+stand dieses Schwingkreises nur sehr ungenau bestimmen könnte. 
+d Erläutern Sie einem Schüler, der am Tag der Mitschrift (M 4) krank war, die 
+Schritte (i) und (ii) unter Verwendung von Material 3. 
+Bestimmen Sie auf diesem Weg den Widerstand des Schwingkreises. 
+3 
+3 
+8 
+8 
+3 Anna unterbreitet in Material 5 einen Vorschlag zur Entfernungsbestimmung von Blit-
+zen und einen Vorschlag zu einer Sicherheitsmaßnahme. 
+Beurteilen Sie die Vorschläge von Anna hinsichtlich der Zuverlässigkeit der Entfer-
+nungsbestimmung und der getroffenen Sicherheitsmaßnahme. 
+4 
+ 
+ 
+
+2  Material 
+ 
+ 
+3 
+2 
+Material 
+Material 1: Der elektromagnetische Schwingkreis 
+Anregung eines Schwingkreises durch einen Blitz 
+Bei jedem Blitz wird elektromagnetische Strahlung emittiert. 
+Zur Detektion dieser elektromagnetischen Strahlung kann man einen Schwingkreis verwen-
+den, dessen Kondensator als Folge der elektromagnetischen Strahlung geladen wird. 
+Modell des ungedämpften elektromagnetischen Schwingkreises 
+In einem ungedämpften elektromagnetischen Schwingkreis können sowohl der Ohm’sche Wi-
+derstand als auch die Abstrahlung von Energie vernachlässigt werden. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Material 2: Messdaten eines Blitzdetektors 
+Ein einfacher Blitzdetektor besteht nur aus einem Schwingkreis. Dieser wird durch die Energie 
+eines Blitzes zu einer Schwingung angeregt. Abbildung 2 zeigt den zeitlichen Verlauf der 
+Spannung am Kondensator dieses Schwingkreises. 
+ 
+Daten des Schwingkreises: 
+C = 69 pF 
+L = 4,7 mH 
+ 
+t = t0 
+t = t0 + ¼ T 
+t = t0 + ½ T 
+Abb. 1: ungedämpfter Schwingkreis zu drei Zeitpunkten 
+Abb. 2: Spannung am Kondensator des Schwingkreises in Abhängigkeit von der Zeit  
+
+2  Material 
+ 
+ 
+4 
+Material 3: Formeln für den gedämpften harmonischen Schwingkreis 
+( )
+(
+)
+max
+D
+cos
+t
+δ t
+U t
+U
+e
+ω
+−⋅⋅
+=
+⋅
+⋅
+ 
+Kreisfrequenz der gedämpften Schwingung: 
+2
+2
+D
+ω
+ω
+δ
+
+
+ mit 
+1
+ω
+C L
+
+
+ 
+Für die Dämpfungskonstante δ gilt: 
+2
+R
+δ
+L
+
+
+ 
+Material 4: Mitschrift aus dem Unterricht 
+Auswertung von Abbildung 2 (M 2): 
+(i) 
+72 μs
+max
+max
+1
+3
+δ
+U
+U
+e
+
+
+ 
+(ii) 
+4 1
+s
+1,53 10
+δ 
+
+ 
+Material 5: Vorschlag von Anna zur Entfernungsbestimmung von Blitzen 
+Ein Blitzdetektor wie in M 2, wird um eine Elektronik erweitert. Diese zählt die Schwingungen 
+bis zur dauerhaften Unterschreitung eines fest vorgegeben Schwellenwertes der Spannung 
+am Kondensator. Diese Anzahl N wird von der Elektronik angegeben. 
+Anna formuliert folgende Vorschläge: 
+Befindet sich der Blitzdetektor nahe des Hauses, so liefert der Zählwert N die Entfernung des 
+Blitzes zum Haus. 
+Überschreitet man einen gewissen Zählwert N, so werden automatisiert zum Schutz des Hau-
+ses vor Unwetter alle Fenster geschlossen. 
+ 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+5 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. 
+Werden im Erwartungshorizont in Rechnungen Werte verwendet, die Resultat einer vorange-
+gangenen Berechnung sind, so gehen sie in Taschenrechner-Genauigkeit in die jeweilige Be-
+rechnung ein, sind aber mit einer sinnvollen Genauigkeit angegeben. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 a Bei einem ungedämpften elektromagnetischen Schwingkreis liegt die 
+Energie in Form von elektrischer Feldenergie im Kondensator und 
+magnetischer Feldenergie in der Spule vor. 
+Der Kondensator ist zum Zeitpunkt t = t0 maximal geladen, wodurch 
+die gesamte Energie in Form von elektrischer Feldenergie vorliegt. 
+Der Kondensator entlädt sich, die elektrische Feldenergie des Kon-
+densators wird in magnetische Feldenergie der Spule umgewandelt. 
+Zum Zeitpunkt 
+0
+4
+=
++ T
+t
+t
+ ist der Kondensator vollständig entladen 
+und besitzt keine elektrische Feldenergie mehr. Der Entladestrom 
+durch die Spule hat seine größte Stärke erreicht, die magnetische 
+Feldenergie ist maximal. 
+2 
+2 
+ 
+ 
+ 
+b  
+ 
+Mag. Feld 
+El. Feld 
+ 
+der Spule 
+des Kondensators 
+ 
+Die Feldrichtung des magnetischen Feldes im mittleren Bild ergibt 
+sich mit der linken-Faust-Regel aus der eingezeichneten Elektronen-
+stromrichtung I. 
+Die Feldrichtung des elektrischen Feldes im rechten Bild ist von un-
+ten nach oben gerichtet, da der Kondensator nun unten positiv und 
+oben negativ geladen ist. 
+1 
+3 
+1 
+ 
+ 
+c Es gilt der Energieerhaltungssatz: 
+2
+2
+1
+1
+max
+max
+2
+2
+C U
+L I
+
+
+
+
+ 
+Hieraus folgt: max
+max
+C
+I
+U
+L
+
+
+ 
+Durch das Einbringen eines Eisenkernes vergrößert man L. Da 
+max
+U
+ am Kondensator und die Kapazität C gleich bleiben, verklei-
+nert sich die maximale Stromstärke im Schwingkreis. 
+ 
+5 
+ 
+2 a In 50 µs erreicht die Spannung am Kondensator 14-mal ihren Maxi-
+malwert. Hieraus erhält man für die Periodendauer 
+50 µs
+3,6 µs
+14
+T 
+
+ 
+3 
+ 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+6 
+ 
+b Für den idealen ungedämpften Schwingkreis gilt: 
+2 π
+T
+C L
+
+
+
+
+ 
+Somit 
+2 π
+69 pF 4,7 mH
+3,6 µs
+T 
+
+
+
+
+, im Rahmen der möglichen 
+Genauigkeit also wie in Teilaufgabe a. 
+3 
+ 
+ 
+ 
+c Aus 
+2
+2
+D
+ω
+ω
+δ
+
+
+ folgt, dass 
+D
+ω
+ω
+
+ gilt. 
+Aus 
+1
+2 π
+T
+ω 
+
+
+ folgt, dass D
+ideal
+T
+T
+
+ gilt. 
+Die Periodendauer des gedämpften Schwingkreises ist somit größer 
+als die des ungedämpften Schwingkreises. 
+ 
+Zur Berechnung des Widerstandwertes müsste man die Gleichung 
+2
+2
+D
+ω
+ω
+δ
+
+
+ nach δ auflösen und dann mit 
+2
+R
+δ
+L
+
+
+ den Wider-
+standswert R berechnen. 
+Um 
+2
+2
+D
+ω
+ω
+δ
+
+
+ zu bestimmen, müsste - da 
+D
+ω sehr nahe an ω 
+liegt - eine sehr hohe Genauigkeit vorliegen. Dies ist hier nicht gege-
+ben, sodass die Differenz 
+2
+2
+D
+ω
+ω
+
+ einen sehr ungenauen Wert lie-
+fert. Folglich wird die Bestimmung von δ und damit die von R sehr 
+ungenau. 
+ 
+4 
+4 
+ 
+d  
+(i) 
+Im M 2 Abb. 2 ist 
+max
+150 V
+U
+
+. Nach etwa 72 µs erhält man 
+maximalen Wert von 
+1
+max
+3
+50 V
+U
+
+
+. 
+Der Wert für 
+(
+)
+D
+cos
+t
+ω ⋅
+ ist zu diesem Zeitpunkt des Maxi-
+mums 1. 
+Einsetzen in die Beziehung für die Spannung am Kondensator 
+in M 3 liefert: 
+72 µs
+1
+max
+max
+3
+δ
+U
+U
+e
+
+
+
+. 
+ 
+Bem.: Eine Argumentation über die Einhüllende ist ebenso 
+ 
+möglich. 
+(ii) 
+Aus 
+72 µs
+1
+max
+max
+3
+δ
+U
+U
+e
+
+
+
+ folgt 
+72 µs
+1
+3
+δ
+e
+
+  
+Hieraus ergibt sich 
+
+1
+3
+72 µs
+ln
+δ
+
+
+ 
+und 
+
+1
+3
+4
+ln
+1
+1,53 10
+72 µs
+s
+δ 
+
+
+  
+Hieraus folgt aus 
+2
+R
+δ
+L
+
+
+: 
+4 1
+2
+1,53 10
+2 4,7 mH
+0,14 kΩ
+s
+R
+δ
+L
+
+
+
+
+
+
+ 
+2 
+2 
+4 
+3 Der Zählwert N der Schwingungen bis zum Unterschreiten des Schwel-
+lenwertes liefert keinen verlässlichen Wert für die Entfernung eines Blit-
+ 
+4 
+ 
+
+4  Standardbezug 
+ 
+ 
+7 
+zes. Ein ferner Blitz kann sehr stark sein und somit mehr Energie aus-
+senden als ein naher Blitz, der nur schwach ist. Der ferne Blitz würde 
+somit evtl. einen höheren Zählwert liefern als der schon nahe Blitz. 
+Ein naher, jedoch schwacher Blitz würde umgekehrt evtl. zu weit weg 
+angezeigt werden. 
+Eine verlässliche Aussage zur Entfernungsbestimmung ist mithilfe des 
+Schwingkreises nicht möglich. 
+Sich mit der fehlerhaften Entfernungsbestimmung bei dieser Methode 
+auf das automatische Schließen der Fenster zu verlassen, wäre sicher-
+lich falsch, zumal diese Methode nur als Folge eines Blitzes Werte liefert. 
+Unwetter können schon vor einem oder ohne einen Blitz auftreten. 
+ 
+Summe1 
+13 
+19 
+8 
+4 
+Standardbezug 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1 a 
+1 
+ 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+ c 
+3 
+ 
+ 
+ 
+2 a 
+3 
+ 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+ c 
+3 
+7 
+ 
+ 
+ d 
+ 
+ 
+3 
+ 
+3 
+ 
+ 
+ 
+6 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster2 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+ 
+1 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+2 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 

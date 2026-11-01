@@ -1,0 +1,437 @@
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2025 
+Aufgaben für das Fach Physik 
+Kurzbeschreibung 
+Aufgabentitel 
+Elektroneninterferenz am Doppelspalt 
+Anforderungsniveau 
+grundlegend 
+Inhaltsbereiche 
+♦ Quantenphysik und Materie 
+♦ Quantenobjekte 
+♦ Grundlegende Aspekte der Quantentheorie: 
+Stochastische Vorhersagbarkeit, Interferenz und Superposi-
+tion, Determiniertheit der Zufallsverteilung, Komplementari-
+tät 
+♦ Zusammenhänge der Größen Energie, Impuls, Frequenz 
+und Wellenlänge zur Beschreibung von Quantenobjekten 
+♦ Quantenphysikalisches Weltbild hinsichtlich der Begriffe 
+Realität, Lokalität, Kausalität, Determinismus 
+♦ Mechanische und elektromagnetische Schwingungen und Wel-
+len 
+♦ Überlagerung von Wellen 
+♦ Interferenz am Doppelspalt auch mit polychromatischem 
+Licht 
+Materialien 
+♦ M 1 Ausschnitt aus „Elektronenbeugung an mehreren künstlich 
+hergestellten Feinspalten“ von C. Jönsson 
+♦ M 2 Elektronenbeugungsaufnahme am Doppelspalt von C. Jöns-
+son 
+♦ M 3 Elektronenbeugung am Doppelspalt von A. Tonomura 
+♦ M 4 Zitat von Richard Feynman 
+Quellenangaben 
+♦ M 1, M 2 Jönsson, C. (1961). Elektroneninterferenz an mehre-
+ren künstlich hergestellten Feinspalten. Z. Physik, 161, 454-474. 
+https://doi.org/10.1007/BF01342460 
+♦ M 3 Tonomura, A. et al. (1989). Demonstration of single-electron 
+buildup of an interference pattern. Am. J. Phys, 57 (2), 117-120. 
+https://doi.org/10.1119/1.16104 
+♦ M 4 Feynman, R., Leighton, R., Sands, M. (2015). Feynman 
+Vorlesungen über Physik, Band 5 (S. 13). München: Oldenbourg 
+Verlag. 
+
+0  Kurzbeschreibung 
+ 
+ 
+2 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat1 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+fachpraktischer Anteil nein 
+ 
+Hinweise: 
+ 
+ 
+ 
+ 
+1 siehe „Hinweise zur Verwendung von Hilfsmitteln“ 
+
+1  Aufgabe 
+ 
+ 
+3 
+1 
+Aufgabe 
+Elektroneninterferenz am Doppelspalt 
+Im Jahr 1923 postulierte Louis de Broglie, dass Materieteilchen auch Welleneigenschaften 
+zugeordnet werden können. Im Jahr 1961 wurde von Claus Jönsson eine experimentelle Ar-
+beit zur Beugung von Elektronen am Doppelspalt veröffentlicht. 
+  
+BE 
+1 Material 1 zeigt einen Ausschnitt aus der Originalveröffentlichung von C. Jönsson 
+zur Beugung von Elektronen an einem Doppelspalt. In Material 2 ist eines der Mess-
+ergebnisse abgebildet. 
+a Erklären Sie, dass die Elektronenbeugungsaufnahme in Material 2 als Nachweis 
+für die Welleneigenschaften von Elektronen gedeutet werden kann. 
+b Berechnen Sie den Beugungswinkel 
+1
+α des Maximums 1. Ordnung, welcher unter 
+den von C. Jönsson in Material 1 beschriebenen Versuchsbedingungen zu erwar-
+ten ist. 
+[Kontrollwert: 
+1
+0,00014
+α =
+° ] 
+6 
+6 
+2 C. Jönsson nennt in der Veröffentlichung einen Wert für die Beschleunigungsspan-
+nung, mit der die Elektronen auf eine einheitliche Geschwindigkeit gebracht werden. 
+a Begründen Sie schrittweise und kausal korrekt strukturiert, in welcher Weise sich 
+das Interferenzmuster aus Material 2 verändert, wenn die Beschleunigungsspan-
+nung vergrößert wird. 
+b Begründen Sie, dass das Interferenzmuster auf dem Leuchtschirm im Beugungs-
+experiment von C. Jönsson unscharf wird, wenn es mit einem Elektronenstrahl 
+durchgeführt wird, in dem die Elektronen viele unterschiedliche Geschwindigkei-
+ten haben. 
+6 
+4 
+3 Das in Material 3 beschriebene Experiment von A. Tonomura ist eine Weiterentwick-
+lung des Doppelspaltexperimentes mit Elektronen. 
+a Interpretieren Sie die gezeigten Messergebnisse in Material 3 hinsichtlich der Fra-
+gestellung, inwiefern diese die Wellen- bzw. Teilcheneigenschaften der Elektro-
+nen zeigen. 
+b Erläutern Sie Feynmans Aussage zur Quantentheorie, dass es unmöglich ist, Er-
+eignisse genau vorherzusagen (M 4), am Beispiel des Experimentes von To-
+nomura (M 3). 
+4 
+4 
+ 
+ 
+
+2  Material 
+ 
+ 
+4 
+2 
+Material 
+Material 1: Ausschnitt aus „Elektroneninterferenzen an mehreren künstlich hergestell-
+ten Feinspalten“ von C. Jönsson 
+„Der aus solchen Überlegungen folgende naheliegende Versuch, Elektronenbeugung am 
+künstlich hergestellten Spalt […] zu machen, stößt auf einige technische Schwierigkeiten, die 
+seine Verwirklichung bisher verhindert haben. Hier wurden stets auf 50 kV beschleunigte 
+Elektronen verwendet, deren de Broglie-Wellenlänge etwa 
+12
+5 10
+m
+−
+⋅
+ beträgt.“ 
+(Die Rechtschreibung und die Verwendung von Fachbegriffen folgt dem Original.) 
+Die im Versuch von C. Jönsson verwendeten Spalte hatten eine Breite von jeweils 0,5 µm und 
+einen Spaltmittenabstand von 2 µm. Der Leuchtschirm, auf dem das Interferenzmuster in 
+Abb.1 beobachtet wurde, hatte einen Abstand von 350 mm von den Spalten. 
+Material 2: Elektronenbeugungsaufnahme am Doppelspalt von C. Jönsson 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Material 3: Elektronenbeugung am Doppelspalt von A. Tonomura 
+Im American Journal of Physics 57, 117 (1989) berichtet A. Tonomura von einem Experiment, 
+bei dem Elektronen mit einer Beschleunigungsspannung von 50 kV beschleunigt und auf eine 
+wie ein Doppelspalt wirkende Anordnung gesendet wurden. Es handelt sich um eine Weiter-
+entwicklung des Experimentes von C. Jönsson, in der die Anzahl der Elektronen im Elektro-
+nenstrahl so weit reduziert wurde, dass sich zu jedem Zeitpunkt nur noch ein einziges Elektron 
+zwischen Quelle und Schirm befindet. 
+ 
+ 
+ 
+Abb. 1: Interferenzmuster auf einem Leuchtschirm hinter einem mit Elektronen beschossenen Doppelspalt. 
+Je mehr Elektronen an einem Ort des Schirms auftreffen, desto heller leuchtet er dort. 
+Hinweis: Diese Abbildung wurde stark vergrößert dargestellt und entspricht nicht den in der Aufgabe ange-
+gebenen Abmessungen. 
+
+2  Material 
+ 
+ 
+5 
+ 
+  
+ 
+ 
+Material 4: Zitat von Richard Feynman zum Doppelspaltexperiment 
+„Wir möchten einen sehr wichtigen Unterschied zwischen der klassischen Mechanik und der 
+Quantenmechanik hervorheben. [...] Wir haben dabei stillschweigend vorausgesetzt, dass es 
+in unserem experimentellen Aufbau (und selbst in dem bestmöglichen) unmöglich sein würde, 
+genau vorherzusagen, was passiert. Wir können nur die Wahrscheinlichkeit vorhersagen! [...] 
+Wir wissen nicht, wie man vorhersagen könnte, was unter vorgegebenen Umständen passie-
+ren würde, und wir glauben heute, dass es unmöglich ist und dass das Einzige, was vorher-
+gesagt werden kann, die Wahrscheinlichkeit verschiedener Ereignisse ist.“ 
+ 
+ 
+Abb. 2: schematischer Versuchsaufbau von A. Tonomura 
+Abb. 3 a bis e: Aufgenommene Schirmbilder mit a) 11 Elektronen, b) 200 Elektronen, c) 6000 Elektronen, d) 
+40000 Elektronen, e) 140000 Elektronen 
+Reprinted with permission from Tonomura, A. et al. (1989). Demonstration of single-electron buildup of an 
+interference pattern. Am. J. Phys, 57 (2), 117-120. Copyright 1989, AIP Publishing. This article may be down-
+loaded for personal use only. Any other use requires prior permission of the author and the AIP Publishing 
+
+3  Erwartungshorizont 
+ 
+ 
+6 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 a Das Experiment von Jönsson mit Elektronen am Doppelspalt zeigt 
+ein Interferenzmuster, wie es bei der Überlagerung von zwei Wellen 
+entsteht: Die hellen und dunklen Streifen entstehen im Wellenmodell 
+dadurch, dass sich die beiden Wellen an unterschiedlichen Orten 
+konstruktiv oder destruktiv überlagern und damit verstärken oder ab-
+schwächen. 
+Das Interferenzmuster in M 2 kann daher als Nachweis des Wel-
+lencharakters von Elektronen gedeutet werden. 
+6 
+ 
+ 
+ 
+b Nach Formelsammlung gilt: 
+(
+)
+sin
+⋅
+=
+⋅
+k
+k λ
+g
+α
+ 
+Hieraus folgt für 
+1
+=
+k
+: 
+1
+1
+sin
+λ
+α
+g
+−
+
+=
+
+
+
+
+ 
+Mit den gegebenen Werten 
+12
+5 10
+m
+λ
+−
+=
+⋅
+ und 
+6
+2 10
+m
+g
+−
+=
+⋅
+ ergibt 
+sich 
+12
+1
+1
+6
+5 10
+sin
+0,00014
+2 10
+m
+m
+α
+−
+−
+−
+
+
+⋅
+=
+=
+°
+
+
+
+
+⋅
+
+
+ 
+4 
+2 
+ 
+2 a Für die de Broglie Wellenlänge gilt: 
+= h
+λ
+p . 
+Bei einer größeren Beschleunigungsspannung wirkt eine größere 
+Beschleunigung auf die Elektronen. Dadurch wird ihre Geschwindig-
+keit größer und damit auch ihr Impuls am Ort der Spalte. Je größer 
+der Elektronenimpuls, desto kleiner wird die Wellenlänge. 
+Der Beugungswinkel und somit auch die Abstände der beobachteten 
+Maxima hängen gemäß der Formel aus Aufgabenteil 1b von der 
+Wellenlänge ab. Eine kleinere Wellenlänge führt zu einem kleineren 
+Abstand der Maxima. 
+Bei größerer Beschleunigungsspannung werden die Streifenab-
+stände also enger. 
+ 
+6 
+ 
+ 
+b Bei unterschiedlichen Elektronengeschwindigkeiten besitzen die 
+Elektronen verschiedene Wellenlängen. Die Maxima unterschiedlich 
+schneller Elektronen liegen daher an unterschiedlichen Orten. Die 
+Interferenzbilder für Elektronen verschiedener Geschwindigkeiten 
+überlagern sich, so dass das Muster unscharf wird. 
+ 
+2 
+2 
+3 a In jeder der in M 3 gezeigten Messungen sind einzelne Auftreff-
+punkte der Elektronen zu erkennen, die Elektronen zeigen hier deut-
+lich die Eigenschaft eines Teilchens. 
+ 
+4 
+ 
+
+4  Standardbezug 
+ 
+ 
+7 
+In den Abbildungen (a) und (b) ist noch keine deutliche Struktur zu 
+erkennen, jedes Teilchen scheint zufällig auf dem Beobachtungs-
+schirm aufzutreffen. 
+Mit zunehmender Anzahl der Elektronen ist jedoch ein klares Muster 
+in den Messungen (vgl. (d) und (e)) zu erkennen, welches dem Inter-
+ferenzbild zweier Wellen gleicht. Somit können den Elektronen 
+gleichzeitig auch Welleneigenschaften zugeschrieben werden. 
+ 
+b Aus der heutigen Sicht der Quantentheorie kann im Doppelspaltex-
+periment das Ergebnis einer Ortsmessung von einzelnen Elektronen 
+nicht exakt vorhergesagt werden. Feynmans Aussage bezüglich ei-
+nes „bestmöglichen Experimentes“ bezieht sich darauf, dass es nicht 
+an den begrenzten technischen Möglichkeiten der heutigen Experi-
+mentalphysik liegt, sondern dass es auch mit einem idealen Experi-
+ment prinzipiell nicht möglich ist, den Auftreffort eines bestimmten 
+Elektrons auf dem Schirm im Doppelspaltexperiment vorherzusagen. 
+Lediglich die Zufallsverteilung und damit die Wahrscheinlichkeit für 
+das Messen eines Elektrons an einem bestimmten Ort kann vorher-
+gesagt werden. 
+ 
+ 
+4 
+ 
+Summe2 
+10 
+14 
+6 
+4 
+Standardbezug 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1 a 
+1 
+ 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+2 a 
+ 
+ 
+4 
+ 
+ b 
+1 
+ 
+ 
+ 
+3 a 
+ 
+6 
+ 
+ 
+ b 
+ 
+ 
+3 
+ 
+ 
+2 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+
+5  Bewertungshinweise 
+ 
+ 
+8 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster3 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+ 
+3 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 
