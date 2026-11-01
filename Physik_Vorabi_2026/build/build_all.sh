@@ -1,6 +1,8 @@
 #!/bin/bash
 T=/tmp/typst-x86_64-unknown-linux-musl/typst
 set -e
+export SOURCE_DATE_EPOCH=1700000000   # reproduzierbare PDFs (kein Byte-Churn im Repo)
+cp fig/*.svg ../05_Grafiken/   # Grafiken fürs Repo synchronisieren
 $T compile --root . src/01_wellen.typ ../03_Lernskripte/01_Wellen_und_Interferenz.pdf
 $T compile --root . src/02_lichtquanten.typ ../03_Lernskripte/02_Lichtquanten_und_Planck.pdf
 $T compile --root . src/03_elektronenwellen.typ ../03_Lernskripte/03_Elektronenwellen_und_Beugung.pdf
@@ -13,4 +15,5 @@ $T compile --root . src/f2_experimente.typ ../04_Zusatzmaterial/Experimentesamml
 $T compile --root . src/f3_uebersicht.typ ../04_Zusatzmaterial/Gesamtuebersicht.pdf
 $T compile --root . src/f4_lastminute.typ ../04_Zusatzmaterial/Last_Minute_Lernzettel.pdf
 $T compile --root . src/f5_abitur.typ ../04_Zusatzmaterial/Abitur_Analyse.pdf
+$T compile --root . src/f6_uebungen.typ ../04_Zusatzmaterial/Uebungsheft_20_Aufgaben.pdf
 echo "alle gebaut"

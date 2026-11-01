@@ -160,9 +160,11 @@ ring = (np.exp(-((r-0.18)/0.02)**2) + 0.8*np.exp(-((r-0.36)/0.025)**2)
         + 0.5*np.exp(-((r-0.55)/0.03)**2) + 0.3*np.exp(-((r-0.78)/0.035)**2))
 ring += 0.35*np.exp(-(r/0.05)**2)
 img = np.clip(ring, 0, 1)
-ax.imshow(img, cmap="inferno", origin="lower", extent=[-1, 1, -1, 1])
+ax.imshow(1 - 0.82*img, cmap="gray", origin="lower", extent=[-1, 1, -1, 1], vmin=0, vmax=1)
 ax.set_xticks([]); ax.set_yticks([])
 ax.set_title("Beugungsbild (schematisch)", fontsize=8)
+ax.text(0.5, -0.04, "Ringmuster (schematisch, invertiert)", transform=ax.transAxes,
+        fontsize=7, color=GREY, ha="center", va="top")
 save(fig, "elektronenbeugung_bild")
 
 # ---------------------------------------------------------------- 9 Photoeffekt f-E-Diagramm

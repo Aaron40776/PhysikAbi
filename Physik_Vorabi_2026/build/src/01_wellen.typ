@@ -118,6 +118,15 @@ Wird ein System von außen mit der Frequenz $f_E$ angeregt, so antwortet es mit 
 Amplitude. *Resonanz* tritt auf, wenn die Erregerfrequenz nahe der Eigenfrequenz $f_0$ liegt:
 $f_E approx f_0$. Je schwächer die Dämpfung, desto höher und schmaler die Resonanzkurve.
 
+#definition[
+  *Resonanzfrequenz* $f_R$: die Erregerfrequenz, bei der die Amplitude der erzwungenen Schwingung
+  maximal wird. Für das Feder-Masse-Pendel ist bei schwacher Dämpfung
+  $f_R approx f_0 = 1\/(2 pi) sqrt(D\/m)$;
+  für den elektromagnetischen Schwingkreis $f_R approx f_0 = 1\/(2 pi sqrt(L C))$.
+  Bei starker Dämpfung liegt das Amplitudenmaximum etwas unterhalb von $f_0$ – die Kurve wird
+  flacher und breiter, im Grenzfall verschwindet das ausgeprägte Maximum ganz (Kriechfall).
+]
+
 #prüfung[
   Resonanz ist ein beliebtes Prüfungsthema im Kontext *elektromagnetischer Schwingkreis*:
   $f_0 = 1\/(2 pi sqrt(L C))$ (thomsonsche Schwingungsgleichung). Die Begründung „Resonanz bei
