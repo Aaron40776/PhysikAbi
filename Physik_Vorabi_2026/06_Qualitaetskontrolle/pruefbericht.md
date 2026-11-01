@@ -717,8 +717,9 @@ Bremsweg, Fadenpendel, Steigungsdeutung), Abbildungen aus `build/make_diag_figs.
 Lösungen und Klausur-Checkliste. Prüfung mit `build/qa_pdf.py`: 0 Befunde.
 
 **Markdown.** Die Formeln in diesem Bericht und in `review.md` standen in Typst-Syntax
-(`$lambda$`, `$frac(a, b)$`) und wären auf GitHub als Text erschienen; 193 Formeln wurden
-nach LaTeX überführt, 207 Stichproben rendern fehlerfrei.
+(`$lambda$`, `$frac(a, b)$`) und wären auf GitHub als Text erschienen; 202 Formeln in sechs
+Dateien wurden nach LaTeX überführt, die Stichprobe über 207 Formeln in Prüfbericht und
+Review rendert fehlerfrei.
 
 **Stand nach dem Nachtrag** (`python3 build/qa_pdf.py`): 16 Dokumente, 103 Seiten,
 18.380 Wörter, 177.913 Zeichen, 5.259 Vektorobjekte, 0 Befunde.

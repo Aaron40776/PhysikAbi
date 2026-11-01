@@ -262,8 +262,9 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Neues Dokument:** `04_Zusatzmaterial/Uebungsheft_Diagrammauswertung.pdf` (7 S., 40 P.,
   5 Messreihen, Abbildungen aus `build/make_diag_figs.py`). In `build_all.sh` und
   `make_pages.py` eingetragen.
-- **Markdown-Formeln:** 193 Formeln in Prüfbericht, Review und PROGRESS von Typst-Syntax auf
-  LaTeX umgestellt; 207 Stichproben rendern fehlerfrei.
+- **Markdown-Formeln:** 202 Formeln in sechs Dateien von Typst-Syntax auf LaTeX umgestellt
+  (Prüfbericht 163, Review 18, PROGRESS 12, übrige 9); Stichprobe über 207 Formeln rendert
+  fehlerfrei.
 - **Seite:** Kopfzahlen werden jetzt aus den PDFs gezählt (`__ANZAHL__`, `__GESAMT__`) – keine
   veralteten „15 PDFs“ mehr. Neues Heft erscheint automatisch als Karte im Zusatzmaterial.
 - **Fehler behoben:** `planck.reduce` (ℏ) gibt es in Typst 0.15.1 nicht – Skript 4 brach ab;
