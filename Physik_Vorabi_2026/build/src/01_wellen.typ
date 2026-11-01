@@ -78,6 +78,10 @@ $ A(t) = A_0 e^(-k t), quad delta = ln frac(A(t), A(t+T)) = k T $
   *Resonanz:* Die Amplitude der erzwungenen Schwingung ist maximal, wenn die Erregerfrequenz
   $f_E$ nahe der Eigenfrequenz $f_0$ liegt. Je schwächer die Dämpfung, desto höher und
   schmaler der Peak; bei starker Dämpfung liegt das Maximum etwas unterhalb von $f_0$.
+
+  Die Erregerfrequenz am Maximum heißt *Resonanzfrequenz* $f_R$. Für schwache Dämpfung gilt
+  $f_R approx f_0 = frac(1, 2 pi) sqrt(frac(D, m))$; mit wachsender Dämpfung wandert $f_R$ nach
+  unten.
 ]
 
 #table(
@@ -213,6 +217,40 @@ $ frac(sin(alpha), sin(beta)) = frac(c_1, c_2) = frac(n_2, n_1) $
 )
 
 Im Bild knickt der Strahl beim Eintritt ins optisch dichtere Medium zum Lot; die Ursache ist die kleinere Ausbreitungsgeschwindigkeit, nicht eine Änderung der Frequenz.
+
+= Messung der Lichtgeschwindigkeit
+
+Dass Licht sich nicht unendlich schnell ausbreitet, erkannte Ole Rømer 1676 an den
+Jupitermonden: Der Schattenaustritt des Mondes Io verspätet sich im Lauf eines Jahres um bis
+zu 17 Minuten, weil die Erde auf ihrer Bahn unterschiedlich weit von Jupiter entfernt ist.
+
+Im Labor lässt sich $c$ mit einer stehenden Welle messen. In der Mikrowelle (Frequenz
+$f = 2","45$ GHz) bilden sich zwischen den Wänden Maxima im Abstand $lambda\/2$. Bei einem
+Abstand von 6,4 cm folgt $lambda = 2 dot 6","4$ cm $= 12","8$ cm und damit
+
+$ c = lambda f = 0","128 "m" dot 2","45 dot 10^9 "Hz" = 3","14 dot 10^8 "m/s" $
+
+#achtung[
+  Der Abstand zweier erhitzter Stellen ist $lambda\/2$, nicht $lambda$: Zwischen zwei Maxima
+  liegt ein Minimum. Wer ihn als Wellenlänge einsetzt, erhält den doppelten Wert.
+]
+
+Aus den Maxwell-Gleichungen folgt, dass $c$ allein aus Naturkonstanten bestimmt ist:
+
+$ c_0 = frac(1, sqrt(mu_0 epsilon_0)) = 2","998 dot 10^8 "m/s" $
+
+Michelson und Morley fanden 1887 keine Abweichung von diesem Wert, obwohl die Erde sich relativ
+zum damals postulierten Äther bewegen sollte. Einstein machte daraus 1905 ein Postulat: In allen
+Inertialsystemen misst jeder Beobachter im Vakuum denselben Wert $299 792 458$ m/s. Deshalb
+hängt $c$ in $c = lambda f$ nicht davon ab, wer die Welle beobachtet.
+
+Das sichtbare Licht ($lambda approx 380$–780 nm) ist nur ein schmaler Ausschnitt des
+elektromagnetischen Spektrums. Nach steigender Frequenz geordnet: Radiowellen, Mikrowellen,
+Infrarot, sichtbares Licht, Ultraviolett, Röntgen- und Gammastrahlung.
+
+Verbindung: Dasselbe Interferenzprinzip wie in der Mikrowelle nutzt das
+Michelson-Interferometer (Abschnitt 12) für Längenmessungen; die Photonenenergie $E = h f$
+behandelt Skript 2.
 
 = Polarisation
 
@@ -356,6 +394,16 @@ technische Verwendung, die im Kerncurriculum verlangt wird.
 *Verstehen, nicht auswendig:* warum $delta$ und $Delta s$ dasselbe beschreiben; warum Kohärenz
 nötig ist; warum die Kleinwinkelnäherung beim Doppelspalt zulässig ist, beim Gitter hoher
 Ordnung nicht.
+
+#prüfung[
+  *Das musst du können:*
+  - *erklären*, warum nur kohärente Wellen ein stabiles Interferenzmuster ergeben;
+  - *herleiten*, warum beim Doppelspalt $a_n = n lambda e \/ d$ gilt;
+  - *berechnen*: Wellenlänge aus Gitterwinkel, Ringabstand oder Mikrowellen-Maxima;
+  - *begründen*, warum die Kleinwinkelnäherung beim Doppelspalt zulässig ist und beim Gitter
+    hoher Ordnung nicht;
+  - *skizzieren*: Zeigerbild für konstruktive und destruktive Interferenz.
+]
 
 #quelle[
   *Quellen.*

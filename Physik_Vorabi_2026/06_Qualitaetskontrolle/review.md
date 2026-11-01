@@ -9,25 +9,25 @@ Layout, Abbildungen, Reproduzierbarkeit. Alles hier Genannte wurde geprüft, nic
 
 | Ordner | Inhalt | Größe | Bewertung |
 |---|---|---|---|
-| `03_Lernskripte` | 7 Themen-PDFs | 2,0 MB | **Lernmaterial – das brauchst du wirklich** |
-| `04_Zusatzmaterial` | 6 PDFs inkl. Übungsheft | 1,0 MB | **Lernmaterial** |
-| `05_Grafiken` | 21 SVGs, automatisch aus `build/fig` kopiert | 0,8 MB | Belegmaterial, im PDF ohnehin enthalten |
+| `03_Lernskripte` | 7 Themen-PDFs | 1,2 MB | **Lernmaterial – das brauchst du wirklich** |
+| `04_Zusatzmaterial` | 9 PDFs inkl. 2 Übungshefte | 1,4 MB | **Lernmaterial** |
+| `05_Grafiken` | 28 SVGs, automatisch aus `build/fig` kopiert | 1,0 MB | Belegmaterial, im PDF ohnehin enthalten |
 | `02_Abiturrecherche` | 12 IQB-Aufgaben (PDF + Text), Analyse, CSV | 5,7 MB | **Belegmaterial** – wichtig für die Argumentation, nicht zum Lernen |
-| `01_Schulwebsite` | 113 gespiegelte Unterrichtsseiten | 2,1 MB | **Belegmaterial** – Quellenbasis |
-| `00_Projektverwaltung` | README, PROGRESS, Quellen, Themenstatus | 40 KB | Projektsteuerung |
-| `06_Qualitaetskontrolle` | Prüfbericht, dieses Review | 20 KB | Nachweis der Prüfung |
-| `build` | Typst-Quellen, Figuren-Skripte, Build-Skript | 1,1 MB | **Nötig, wenn du etwas ändern willst** |
+| `01_Schulwebsite` | 112 gespiegelte Unterrichtsseiten | 2,1 MB | **Belegmaterial** – Quellenbasis |
+| `00_Projektverwaltung` | README, PROGRESS, Quellen, Themenstatus | 80 KB | Projektsteuerung |
+| `06_Qualitaetskontrolle` | Prüfbericht, dieses Review | 76 KB | Nachweis der Prüfung |
+| `build` | Typst-Quellen, Figuren-Skripte, PDF.js, Build-Skripte | 4,7 MB | **Nötig, wenn du etwas ändern willst** |
 
-Gesamt: 13 MB, 113 Seiten PDF.
+Gesamt: 16 MB, 105 Seiten PDF.
 
 ### Ehrliche Einordnung
 
-Von den 13 MB sind rund **3 MB das, was du zum Lernen brauchst** (die 13 PDFs).
+Von den 16 MB sind rund **3 MB das, was du zum Lernen brauchst** (die 16 PDFs).
 Der Rest ist Handwerkszeug und Beweismaterial:
 
 - `01_Schulwebsite` ist kein Lernmaterial – es ist der Nachweis, dass die Inhalte aus
   deinem Unterricht stammen. Für das Lernen sind die Skripte destilliert daraus.
-  Die 113 Seiten enthalten auch Themen, die **nicht** zu deiner Vorabi-Liste gehören:
+  Die 112 Seiten enthalten auch Themen, die **nicht** zu deiner Vorabi-Liste gehören:
   Kinematik (4), Dynamik (3), Kosmologie (9), elektrisches Feld (6), Magnetfeld (7),
   Atomkern (6) – zusammen 35 Seiten.
 - `02_Abiturrecherche/iqb_aufgaben` enthält jede Aufgabe doppelt (PDF + extrahierter
@@ -56,11 +56,11 @@ Alle 7 Skripte wurden gegen die von dir vorgegebenen Stichworte geprüft
 | 7 Spektren/FH | vollständig (inkl. Bremsspektrum, Kontaktspannung) |
 
 **Struktur jedes Skripts geprüft:** Einleitung, Theorie, Experimente (Aufbau/Durchführung/
-Beobachtung/Erklärung/Bedeutung), Herleitungen, Grafiken, 3 Abituraufgaben mit Lösung,
+Beobachtung/Erklärung/Bedeutung), Herleitungen, Grafiken, 2 Abituraufgaben mit Lösung,
 typische Fehler, Wiederholung, Quellen – in allen 7 vorhanden, keine Ausnahme.
 Keine Platzhalter, kein „TODO“, keine Textreste.
 
-**Aufgabenumfang:** 3 je Skript (21) + 20 im Übungsheft = **41 Aufgaben mit Lösung**.
+**Aufgabenumfang:** 2 je Skript (14) + 20 im Übungsheft = **34 Aufgaben mit Lösung**.
 
 ---
 
@@ -94,7 +94,7 @@ Keine widersprüchlichen Rundungen, keine Mischung aus 6,63 und 6,626.
 
 ### d) Layout (geprüft, sauber)
 
-- 0 Textüberläufe über den Satzspiegel (alle 113 Seiten)
+- 0 Textüberläufe über den Satzspiegel (alle 105 Seiten)
 - 0 Abbildungen ohne Unterschrift am Seitenende
 - 0 nicht gerenderte Formeln (`{`, `}`, `$`, `\` im extrahierten Text)
 - kein Text, der aus Grafiken herausragt (Bounding-Box-Prüfung)
@@ -146,9 +146,11 @@ nur relevant, falls er im Unterricht noch behandelt wird.
 
 **Konstanten auf CODATA-Werte geprüft.** $h$, $c$, $e$, $m_e$, $m_p$, $k$, $r_1$, $R$ standen
 bereits in der genauen Form (6,626 / 2,998 / 1,602 / 9,109 / 1,673 / 8,99 / 5,29 / 1,097).
-Einziger gerundeter Wert war $h c = 1240$ eV nm. Jetzt überall $h c = 1239{,}8$ eV nm mit
+Einziger gerundeter Wert war $h c = 1240$ eV nm. Jetzt einheitlich $h c = 1239{,}8$ eV nm mit
 ausdrücklichem Hinweis, dass 1240 die gerundete Rechenform ist (Abweichung 0,02 %, bei drei
 gültigen Ziffern folgenlos). Geändert: Formelblatt, Last-Minute-Zettel, Skript 2 (Herleitung).
+Das Übungsheft rechnet bewusst weiter mit 1240, weil alle dortigen Ergebnisse auf drei gültige
+Ziffern gerundet sind.
 
 **Neues Dokument `04_Zusatzmaterial/Regression_und_Auswertung.pdf` (7 Seiten).**
 Deckt das Auswertungshandwerk ab, das in Prüfungen vorausgesetzt wird:
@@ -165,3 +167,22 @@ Alle Regressionswerte im Dokument wurden mit `numpy.polyfit` berechnet und gegen
 Fotozelle $m = 4{,}11 \cdot 10^{-15}$ V s, $b = -1{,}88$ V, $R^2 = 0{,}99997$;
 Doppelspalt $m = 5{,}062$ mm, $\lambda = 633$ nm; Franck-Hertz $m = 4{,}90$ V, $b = 5{,}50$ V;
 Dämpfung $k = 0{,}200$ 1/s; Übungsaufgaben $D = 9{,}9$ N/m bzw. $d = 0{,}212$ nm.
+
+## Nachtrag 4 – Prüfdurchgang 01.11.2026
+
+Dieses Review war in vier Punkten veraltet; die Zahlen sind oben korrigiert:
+
+- **16 PDFs, 105 Seiten** (nicht 13/113). Davon 50 Seiten in den sieben Skripten.
+- **28 SVGs** (nicht 21), **34 Aufgaben** (2 je Skript plus 20 im Übungsheft, nicht 41).
+- **Resonanzfrequenz** fehlte trotz anderslautender Behauptung; jetzt in Skript 1 §3.
+- **Verschränkung/Nichtlokalität** fehlte trotz ✅ in `THEMENSTATUS.md`; jetzt Skript 5 §5.
+
+Zusätzlich ergänzt: Lichtgeschwindigkeit und Messinvarianz (Skript 1 §10, zwei bisher
+unversorgte Vorabi-Seiten) und „Das musst du können“ mit Operatoren in allen sieben Skripten.
+Die vollständige Abdeckungsmatrix der 77 Vorabi-Seiten und alle Prüfergebnisse stehen in
+`pruefbericht.md`, Abschnitt 14.
+
+Die zwei Textkollisionen in `energieniveaus_h` und `unbestimmtheit` sind behoben; `check_figs.py`
+meldet nur noch Achsentitel außerhalb der Zeichenfläche, die der Tight-Bbox-Lauf mit ausgibt.
+Die übrigen Neufassungen in `redraw_figs.py` bleiben bewusst ungenutzt, weil sie den Stil aller
+Abbildungen ändern würden.

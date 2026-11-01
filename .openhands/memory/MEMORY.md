@@ -23,38 +23,22 @@
 - `PROGRESS.md` wird nur ergänzt (Nachtrag mit Datum), nicht rückwirkend umgeschrieben.
 
 ## Website (GitHub Pages)
-- Suchtreffer öffnen die **echte PDF** im PDF.js-Viewer (`build/vendor/pdfjs`, 3.11.174,
-  Apache-2.0), nicht mehr eine HTML-Textansicht: `pdfjs/web/viewer.html?file=../../skripte/x.pdf#page=N&search=Wort`.
-- PDF.js sucht wörtlich; bei Mehrwortanfragen nur den ersten Begriff übergeben (`pdfBegriff`).
 - Pages läuft als **Workflow** (`.github/workflows/pages.yml`), Trigger u. a. `build/web/**`; testet
   vor dem Deploy. `_site/` ist ignoriert.
 - Bauen: `cd Physik_Vorabi_2026 && python3 build/make_pages.py --out _site` (pymupdf);
   testen: `python3 build/test_pages.py` (baut temporär, prüft Index/Links/ZIP und ruft
   `node build/test_suche.js` für Ranking/Markierung/Phrasen).
-- Quellen: `build/web/{index,suche}.html`, `style.css`, `suche.js` (Normalisierung, Bewertung,
-  Ausschnitte, Panel, PDF-Links), `index.js` (Lernstand), `suche-seite.js`; Viewer in
-  `build/vendor/pdfjs/`. `make_pages.py` erzeugt `suche.json` (~185 kB) + ZIP.
+- Quellen: `build/web/{index,lesen,suche}.html`, `style.css`, `suche.js` (Normalisierung, Bewertung,
+  Ausschnitte, Panel), `index.js` (Lernstand, Weiterlesen), `lesen.js` (Textansicht),
+  `suche-seite.js`. `make_pages.py` erzeugt `suche.json` (~185 kB) + ZIP.
 - Index: Text je Seite blockweise; Kopf-/Fußzeilen und `\xad`-Trennungen entfernt; NFKC macht
-  𝜆→λ und ℎ→h. Deckblatt und gedrucktes Inhaltsverzeichnis stehen in `doc.leer` (nur Metadaten).
+  𝜆→λ und ℎ→h. Deckblatt und gedrucktes Inhaltsverzeichnis stehen in `doc.leer` (nicht durchsucht,
+  im Leser ausgeblendet).
 - Ranking: exakte Abschnittsüberschrift +8 (nur Einzelblock), Fließtext +2, Formelbruchstück −3,
   Titel/Kurztext +4 je Begriff, Dokumentname exakt +12 (auch auf Gruppen-Max).
-- PDF.js ignoriert `pagemode=none`; die Seitenleiste bleibt offen (auf schmalen Schirmen
-  überlagert sie, kein horizontaler Überlauf).
 - Assets tragen `?v=<Hash aus JSON+JS+CSS>`; ohne Änderung des Hashs cacht der Browser alte JS-Dateien.
-- Kopfzeile ist auf Handys 98 px hoch (Marke + Suche umbrechen) → `html{scroll-padding-top:104px}`;
-  `scroll-margin` an `h2` allein reicht nicht, weil `#skripte` die Section ist.
-- PDF.js-Viewer-Patches stehen in `build/vendor/pdfjs/VERSION.txt`: Favicon als Data-URI
-  (sonst 404 auf /favicon.ico), `disablePreferences`, fehlende `editor_alt_text_*`-Keys in
-  `web/locale/de/viewer.properties` (sonst Konsolenwarnungen). `#page=N&search=Wort` markiert,
-  öffnet aber die Findbar nicht (PDF.js-Standard).
-- `pymupdf==2.0` ist im Pages-Workflow gepinnt; zwei Builds sind byte-identisch.
 - Neues PDF = Karte erscheint automatisch; Kurztext in `BESCHREIBUNG` ergänzen. Kopfzahlen über
   `__ANZAHL__`/`__GESAMT__`.
-
-## Prüfwerkzeug
-- Layout/Konsole live prüfen: `pip install playwright`, Chromium liegt unter `/usr/bin/chromium`
-  (`chromium.launch(executable_path="/usr/bin/chromium", args=["--no-sandbox"])`); Viewports
-  360/390/430 hoch, 844×390 quer, 768/820/1024 hoch und quer. Kein `npm i` nötig.
 
 ## Fallen (teuer gelernt)
 - Typst 0.15.1 kennt **kein** `planck.reduce`/`hbar` → `h\/(2 pi)` schreiben.
@@ -63,3 +47,14 @@
 - `01_Schulwebsite/materialien/**` ist ein 1:1-Spiegel der Schulhomepage: **nie** per sed
   verändern, nach globalen Ersetzungen `git checkout -- <Pfad>`.
 - `.agents/` (lokale Skills, ~5 MB) ist per .gitignore ausgeschlossen.
+
+## Review-Stand 01.11.2026
+- 16 PDFs, 105 Seiten (7 Skripte 50), 19.144 Wörter; Prüfbericht §14, review.md Nachtrag 4.
+- Abdeckung 77/77: 55 ✅, 2 🔶, 13 ❌ (12 Praktikumsseiten E-/B-Feld/Halbleiter/Solarzelle, He-Ne).
+- Ergänzt: Resonanzfrequenz (Skript 1 §3), Lichtgeschwindigkeit (1 §10), Verschränkung (5 §5).
+- `check_figs.py` regeneriert **alle** `build/fig/*.svg` (nur Zeitstempel/IDs ändern sich):
+  vorher gewünschte Dateien nach /tmp kopieren, danach `git checkout -- fig` und zurückkopieren.
+- `check_markdown.py` hält `sqrt`/`\/`/`mu` in `$...$` für Typst-Reste → in Markdown LaTeX
+  (`\sqrt{}`) schreiben.
+- `check_sources.py` muss aus `build/` laufen, sonst `template.typ` nicht gefunden.
+- Typst bricht bei `\Delta` in Formeln ab („unknown variable: elta“) → `Delta` ohne Backslash.

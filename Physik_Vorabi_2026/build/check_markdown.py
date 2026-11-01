@@ -18,9 +18,29 @@ INLINE_CODE = re.compile(r"`[^`\n]*`")
 MATH = re.compile(r"\$\$(.+?)\$\$|\$([^$\n]+?)\$", re.S)
 
 
+def strip_indented_code(text):
+    """Entfernt Codeblöcke mit vier Leerzeichen, die auf eine Leerzeile folgen.
+
+    Eingerückte Listenfortsetzungen bleiben stehen: Sie folgen einer nicht leeren Zeile.
+    """
+    lines = []
+    in_code = False
+    for line in text.splitlines():
+        indented = line.startswith("    ") or line.startswith("\t")
+        if indented:
+            if in_code or not lines or not lines[-1].strip():
+                in_code = True
+                lines.append("")
+                continue
+        if line.strip():
+            in_code = False
+        lines.append(line)
+    return "\n".join(lines)
+
+
 def lint(path):
     raw = path.read_text(errors="replace")
-    text = INLINE_CODE.sub("", CODE_FENCE.sub("", raw))
+    text = strip_indented_code(INLINE_CODE.sub("", CODE_FENCE.sub("", raw)))
     problems = []
     for match in MATH.finditer(text):
         body = match.group(1) or match.group(2)

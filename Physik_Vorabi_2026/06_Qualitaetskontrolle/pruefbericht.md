@@ -857,3 +857,193 @@ den ausgelieferten SVGs enthalten. `fig/*.svg` stammt nachweislich aus `make_fig
 `fig/rutherford.svg` = „Rutherford-Streuung: je kleiner b, desto …“,
 `fig/energieniveaus_h.svg` mit sechs Niveaus). Die Korrekturen aus `redraw_figs.py` müssen also
 erneut angewendet werden; die Folgen sind in Abschnitt 9 und in den Befunden 3.6/3.7 behandelt.
+
+## 14. Prüfdurchgang nach REVIEW_PROMPT (01.11.2026)
+
+Auftrag: `00_Projektverwaltung/REVIEW_PROMPT.md`, Phasen 0–2 und Abnahme D1–D8. Dieser
+Abschnitt dokumentiert Baseline, Abdeckungsmatrix, Befunde, Änderungen und die Wiederholung
+der Prüfungen. Frühere Abschnitte bleiben als Verlauf stehen.
+
+### 14.1 Baseline (Phase 0)
+
+| Prüfung | Befehl | Ergebnis vor den Änderungen |
+|---|---|---|
+| Quellen | `python3 build/check_sources.py` | 19 Dateien, 0 Befunde |
+| Markdown | `python3 build/check_markdown.py` | 123 Dateien, 1 Befund (Fehlalarm, s. 14.4) |
+| Physik | `python3 build/check_physics.py` | `pint` fehlte; nach Installation 8 Prüfungen, 0 Befunde |
+| Build | `cd build && ./build_all.sh` | 16 PDFs, 103 Seiten |
+| Layout | `python3 build/qa_pdf.py …` | 0 Überläufe, 0 Formelreste |
+| Website | `python3 build/test_pages.py` | 35/35 Prüfungen |
+| Reproduzierbarkeit | zwei Builds, `md5sum` | identisch |
+| Werkzeug | `typst --version` | 0.15.1 |
+
+Der Vergleich mit `review.md` ergab vier falsche Angaben: die Zahl der PDFs (13 statt 16),
+die Seitenzahl (113 statt 103), die Grafiken (21 statt 28) und der Aufgabenumfang
+(41 statt 34). Außerdem behauptete das Review, die Resonanzfrequenz sei ergänzt und
+Verschränkung/Nichtlokalität behandelt; beides fehlte im gebauten PDF.
+
+### 14.2 D1 – Abdeckung der 77 Vorabi-Seiten
+
+Quelle: `01_Schulwebsite/website_links.csv` (Spalte `Vorabi` = `ja`), 77 Datensätze.
+Status: ✅ behandelt, 🔶 nur Randnotiz, ❌ bewusst weggelassen (Begründung unten),
+„Rahmen“ = Curriculum-/Organisationsseite ohne Lehrinhalt.
+
+Summe: **55 ✅, 2 🔶, 13 ❌, 7 Rahmen**. Die 13 Auslassungen sind zwölf Praktikumsseiten
+zu E- und B-Feld, Halbleitern und Solarzelle sowie der He-Ne-Laser. E- und B-Feld sind laut
+`REVIEW_PROMPT.md` nicht Vorabi-Stoff; der He-Ne-Laser wird im gespiegelten Material nicht mehr
+im Kerncurriculum genannt (`docs/d13/14atomhuelle/09henelaser/docs.md:1–7`). Keine Seite bleibt
+unzugeordnet.
+
+| # | Seite | Ort im Material | Status |
+|---|---|---|---|
+| 1 | `docs/d11/01infos/kerncurriculum` | Rahmen: Projektumfang/THEMENSTATUS | Rahmen |
+| 2 | `docs/d12/01infos/organisation` | Rahmen: Projektumfang/THEMENSTATUS | Rahmen |
+| 3 | `docs/d12/01infos/kerncurriculumga` | Rahmen: Projektumfang/THEMENSTATUS | Rahmen |
+| 4 | `docs/d12/01infos/kerncurriculumea` | Rahmen: Projektumfang/THEMENSTATUS | Rahmen |
+| 5 | `docs/d12/02grundlagen/01messwert` | Regression §1–6 | ✅ |
+| 6 | `docs/d12/02grundlagen/02modellierung` | Regression §1–5 | ✅ |
+| 7 | `docs/d12/02grundlagen/03grundannahmen` | Skripte 2/6/7 + Regression | 🔶 |
+| 8 | `docs/d12/12schwingungenwellen/01schwingungen` | Skript 1 §1–3 | ✅ |
+| 9 | `docs/d12/12schwingungenwellen/02federmassependel` | Skript 1 §3, §13 | ✅ |
+| 10 | `docs/d12/12schwingungenwellen/03resonanz` | Skript 1 §3 | ✅ |
+| 11 | `docs/d12/12schwingungenwellen/04wellen` | Skript 1 §1, 4, 9 | ✅ |
+| 12 | `docs/d12/12schwingungenwellen/05wellengleichung` | Skript 1 §4 | ✅ |
+| 13 | `docs/d12/12schwingungenwellen/06polarisation` | Skript 1 §11 | ✅ |
+| 14 | `docs/d12/12schwingungenwellen/07polarisationvonlicht` | Skript 1 §11 | ✅ |
+| 15 | `docs/d12/12schwingungenwellen/08interferenz` | Skript 1 §2, 5, 6 | ✅ |
+| 16 | `docs/d12/12schwingungenwellen/09stehendewellen` | Skript 1 §5 | ✅ |
+| 17 | `docs/d12/12schwingungenwellen/10michelsoninterferometer` | Skript 1 §12 | ✅ |
+| 18 | `docs/d12/12schwingungenwellen/11doppelspalt` | Skript 1 §6 | ✅ |
+| 19 | `docs/d12/12schwingungenwellen/12doppelspaltgitter` | Skript 1 §7 | ✅ |
+| 20 | `docs/d12/12schwingungenwellen/13bragginterferometer` | Skript 1 §8, Skript 3 §3 | ✅ |
+| 21 | `docs/d12/12schwingungenwellen/14messunglichtgeschw` | Skript 1 §10 | ✅ |
+| 22 | `docs/d12/12schwingungenwellen/15messinvarianzvonc` | Skript 1 §10 | ✅ |
+| 23 | `docs/d12/12schwingungenwellen/20herleitungen` | Skript 1 §2, 6, 7, 9 | ✅ |
+| 24 | `docs/d13/01infos/organisation` | Rahmen: Projektumfang/THEMENSTATUS | Rahmen |
+| 25 | `docs/d13/01infos/kerncurriculumga` | Rahmen: Projektumfang/THEMENSTATUS | Rahmen |
+| 26 | `docs/d13/01infos/kerncurriculumea` | Rahmen: Projektumfang/THEMENSTATUS | Rahmen |
+| 27 | `docs/d13/13quantenobjekte/01physikkrise` | Skript 2 §1 | ✅ |
+| 28 | `docs/d13/13quantenobjekte/02lichtquanten` | Skript 2 §2–4, 6 | ✅ |
+| 29 | `docs/d13/13quantenobjekte/03elektronenwellen` | Skript 3 §1–3 | ✅ |
+| 30 | `docs/d13/13quantenobjekte/04doppelspaltexperiment` | Skript 4 §1–3 | ✅ |
+| 31 | `docs/d13/13quantenobjekte/05planckkonstante` | Skript 2 §6 | ✅ |
+| 32 | `docs/d13/13quantenobjekte/06machzehnderinterferometer` | Skript 5 §1–3 | ✅ |
+| 33 | `docs/d13/13quantenobjekte/07mzilabor` | Skript 5 §2, Aufgaben | ✅ |
+| 34 | `docs/d13/13quantenobjekte/08welcherweg` | Skript 5 §3 | ✅ |
+| 35 | `docs/d13/13quantenobjekte/09qed` | Skript 5 §6 | ✅ |
+| 36 | `docs/d13/13quantenobjekte/10delayedchoice` | Skript 5 §4 | ✅ |
+| 37 | `docs/d13/13quantenobjekte/11verschraenkung` | Skript 5 §5 | ✅ |
+| 38 | `docs/d13/13quantenobjekte/12quantenradierer` | Skript 4 §4, Skript 5 §3 | ✅ |
+| 39 | `docs/d13/13quantenobjekte/13unbestimmtheit` | Skript 4 §5 | ✅ |
+| 40 | `docs/d13/13quantenobjekte/14wellenfunktion` | Skript 4 §3 | ✅ |
+| 41 | `docs/d13/14atomhuelle/01rutherfordmodell` | Skript 6 §1 | ✅ |
+| 42 | `docs/d13/14atomhuelle/02bohrmodell` | Skript 6 §2 | ✅ |
+| 43 | `docs/d13/14atomhuelle/03quantenmodell` | Skript 6 §4 | ✅ |
+| 44 | `docs/d13/14atomhuelle/04orbitalmodell` | Skript 6 §4 | ✅ |
+| 45 | `docs/d13/14atomhuelle/05emissionsspektren` | Skript 7 §1–2 | ✅ |
+| 46 | `docs/d13/14atomhuelle/06absorptionsspektren` | Skript 7 §1, 4 | ✅ |
+| 47 | `docs/d13/14atomhuelle/07franckhertz` | Skript 7 §5 | ✅ |
+| 48 | `docs/d13/14atomhuelle/08roentgenspektrum` | Skript 7 §3 | ✅ |
+| 49 | `docs/d13/14atomhuelle/09henelaser` | – | ❌ |
+| 50 | `docs/d12/03praktikum/01efeld/01ga_stromkreise` | – | ❌ |
+| 51 | `docs/d12/03praktikum/01efeld/02ga_aufentlkondensator` | – | ❌ |
+| 52 | `docs/d12/03praktikum/02bfeld/01ga_induktion` | – | ❌ |
+| 53 | `docs/d12/03praktikum/03suw/01ga_periodendauer` | Skript 1 §3, §13 | ✅ |
+| 54 | `docs/d12/03praktikum/03suw/02ga_ultraschall` | Skript 1 §2, 6 | ✅ |
+| 55 | `docs/d12/03praktikum/03suw/03ga_doppelspalt` | Skript 1 §6, Skript 4 §1 | ✅ |
+| 56 | `docs/d12/03praktikum/03suw/04ga_gitterled` | Skript 1 §7, Skript 2 §6 | ✅ |
+| 57 | `docs/d12/03praktikum/03suw/05ga_solarpanel` | – | ❌ |
+| 58 | `docs/d12/03praktikum/04qp/01ga_hbestimmungled` | Skript 2 §6 | ✅ |
+| 59 | `docs/d12/03praktikum/01efeld/11ea_stromkreise` | – | ❌ |
+| 60 | `docs/d12/03praktikum/01efeld/12ea_halbleiter` | – | ❌ |
+| 61 | `docs/d12/03praktikum/01efeld/13ea_efeld` | – | ❌ |
+| 62 | `docs/d12/03praktikum/01efeld/14ea_estrahlroehre` | Skript 3 §4 | ✅ |
+| 63 | `docs/d12/03praktikum/01efeld/15ea_aufentlkondensator` | – | ❌ |
+| 64 | `docs/d12/03praktikum/02bfeld/11ea_teilchenimbfeld` | Skript 3 §3 (Feldformeln) | 🔶 |
+| 65 | `docs/d12/03praktikum/02bfeld/12ea_induktion` | – | ❌ |
+| 66 | `docs/d12/03praktikum/03suw/12ea_periodendauer` | Skript 1 §3, §13 | ✅ |
+| 67 | `docs/d12/03praktikum/03suw/13ea_magnetschwingung` | – | ❌ |
+| 68 | `docs/d12/03praktikum/03suw/14ea_stehendewelle` | Skript 1 §5 | ✅ |
+| 69 | `docs/d12/03praktikum/03suw/15ea_interferenzultraschall` | Skript 1 §2 | ✅ |
+| 70 | `docs/d12/03praktikum/03suw/16ea_doppelspalt` | Skript 1 §6 | ✅ |
+| 71 | `docs/d12/03praktikum/03suw/17ea_gitterled` | Skript 1 §7, Skript 2 §6 | ✅ |
+| 72 | `docs/d12/03praktikum/03suw/18ea_polarisation` | Skript 1 §11 | ✅ |
+| 73 | `docs/d12/03praktikum/03suw/19ea_solarpanel` | – | ❌ |
+| 74 | `docs/d12/03praktikum/03suw/20ea_michelson` | Skript 1 §12 | ✅ |
+| 75 | `docs/d12/03praktikum/04qp/11ea_hbestimmungled` | Skript 2 §6 | ✅ |
+| 76 | `docs/d12/03praktikum/04qp/12ea_photoeffekt` | Skript 2 §3 | ✅ |
+| 77 | `docs/d12/03praktikum/04qp/13ea_knallertest` | – | ❌ |
+
+### 14.3 Befunde und Behebung
+
+| Priorität | Ort | Befund | Beleg | Behebung |
+|---|---|---|---|---|
+| P1 | `build/src/01_wellen.typ` | Resonanz war nur als „maximale Amplitude“ definiert; der Begriff Resonanzfrequenz fehlte, obwohl `review.md` ihn als erledigt meldete. | `01_wellen.typ:77–86` | Definition mit $f_R = f_0\sqrt{1 - 2D^2}$ und Dämpfungshinweis ergänzt (`:82`). |
+| P1 | `build/src/01_wellen.typ` | Die Seiten `14messunglichtgeschw` und `15messinvarianzvonc` (zwei von 77 Vorabi-Seiten) hatten keinen Ort im Material; $c$ kam in keinem Skript vor. | `grep -ri "299\|Lichtgeschwindigkeit"` in `build/src/*.typ` vor der Änderung: 0 Treffer; Quelle `docs/d12/12schwingungenwellen/14messunglichtgeschw/docs.md:6`, `15messinvarianzvonc/docs.md:176` | Neuer Abschnitt 10 mit Mikrowellenmessung, $c = 1/\sqrt{\mu_0 \varepsilon_0}$, Postulat und Längenkontraktion (`01_wellen.typ:221–262`). |
+| P1 | `build/src/05_mzi.typ` | `THEMENSTATUS.md` führte „Verschränkung, Nichtlokalität“ als ✅, im Skript fehlte das Thema. | `grep -ri "verschr\|nichtlokal" build/src/*.typ` vor der Änderung: 0 Treffer; Quelle `docs/d13/13quantenobjekte/11verschraenkung/docs.md:33–35` | Abschnitt „Nichtlokalität und Verschränkung“ mit Bell-Annahmen, Korrelation und Abgrenzung zur Signalübertragung (`05_mzi.typ:101–128`). |
+| P2 | `00_Projektverwaltung/THEMENSTATUS.md` | Drei Statusangaben waren veraltet: Koinzidenz stand auf 🔶, obwohl Skript 4 §2 sie erklärt; Pauli stand auf 🔶, obwohl die Definition in Skript 6 §4 steht; der Quantenradierer stand auf ❌, obwohl Skript 4 §4 und Skript 5 §3 ihn behandeln. | `04_doppelspalt.typ:64`, `06_atommodelle.typ:143`, `04_doppelspalt.typ:174` | Status auf ✅ gesetzt und Orte ergänzt (`THEMENSTATUS.md:68, 108, 89`). |
+| P2 | `06_Qualitaetskontrolle/review.md` | Bestandsangaben falsch: 13 statt 16 PDFs, 113 statt 104 Seiten, 21 statt 28 SVGs, 3 statt 2 Aufgaben je Skript (41 statt 34). | `ls 03_Lernskripte/*.pdf 04_Zusatzmaterial/*.pdf`, `grep -c '^#aufgabe'`, `qa_pdf.py` | Tabelle und Summen korrigiert; Aufgabenumfang auf 34 berichtigt. |
+| P2 | `00_Projektverwaltung/REVIEW_PROMPT.md` | `check_markdown.py` meldete eine ungerade Zahl `$` außerhalb von Code. Ursache: ein eingerückter Shell-Befehl mit `';ja$'` wurde als Listenfortsetzung, nicht als Code erkannt. Kein Inhaltsfehler. | `check_markdown.py` vorher: 1 Befund | Befehl als Inline-Code gesetzt (`REVIEW_PROMPT.md:42`); `strip_indented_code()` unterscheidet jetzt echte Codeblöcke von Listenfortsetzungen. |
+| P2 | alle 7 Skripte | D4 verlangt am Ende „Das musst du können“ mit Operatoren. Vorhanden war nur „Verstehen, nicht auswendig“, ohne Operatoren. | `grep -rn "Das musst" build/src/*.typ` vorher: 0 Treffer | Je Skript ein `#prüfung`-Kasten mit 4–5 Operatoren ergänzt (`01_wellen.typ:399`, `02_lichtquanten.typ:218`, `03_elektronenwellen.typ:206`, `04_doppelspalt.typ:207`, `05_mzi.typ:216`, `06_atommodelle.typ:224`, `07_spektren.typ:216`). |
+| P3 | `build/test_pages.py`, `build/test_suche.js` | Seitenzahl 103 war hart codiert; nach den Ergänzungen schlugen zwei Tests fehl. | `test_pages.py:15`, `test_suche.js:33–35` | Auf 105 aktualisiert. |
+| P3 | Dokumente | D2 ist nicht in jedem Unterabschnitt vollständig: „Wozu“ steht gebündelt in den Lernzielen und Kapitelanfängen; durchgerechnete Beispiele stehen in den Kernabschnitten und Aufgaben, nicht unter jeder Überschrift. | Sichtprüfung der 7 Skripte | Nicht umgebaut (würde den 50-Seiten-Rahmen sprengen); als offener Punkt 14.7 geführt. |
+| P3 | `04_Zusatzmaterial/Experimentesammlung.pdf` | D3 verlangt sieben Punkte je Experiment; die Sammlung nutzt fünf bis sechs, „Fehlerquellen“ steht meist als „Grenzen“ in der Bedeutung. | `f2_experimente.typ:36–40` | Als Konvention belassen, im Bericht offengelegt. |
+| P2 | `build/src/f8_lernplan.typ` | Nach den Ergänzungen waren Seitenzahlen und Abschnittsnummern im Lernfahrplan veraltet: 96 statt 105 Seiten, 48 statt 50 Skriptseiten, 35.000 statt 19.144 Wörter, Skript 1 mit 10 S. und „§14/15“, Skript 5 mit 6 S. und „§7/8“. | `f8_lernplan.typ:9, 24, 33, 48, 52, 84`; `grep -n "^= " src/01_wellen.typ` | Werte auf 105/50/19.000, 11 S./§15+16 und 7 S./§8+9 gesetzt; PDF neu gebaut. |
+| P2 | `build/make_figures.py` | `check_figs.py` meldete 16 Geometriewarnungen, darunter zwei echte Textüberlappungen: `energieniveaus_h` (−0,54/−0,38 eV und n = 5/6) und `unbestimmtheit` (40/−40 am Mittelsteg). | `check_figs.py` vorher: `Ueberlappung ... (75 %)`, `(76 %)`, `(56 %)` | Niveaus 5/6 nur noch als Linien beschriftet, Abstand der Teilbilder auf 0,3 erhöht. Danach 9 Hinweise „Text außerhalb“, 0 Überlappungen. |
+
+### 14.4 Änderungen an Quellen und Prüfwerkzeugen
+
+- `build/src/01_wellen.typ`: Resonanzdefinition, neuer Abschnitt 10 (Lichtgeschwindigkeit),
+  Prüfungskasten.
+- `build/src/05_mzi.typ`: Abschnitt Nichtlokalität/Verschränkung, Prüfungskasten.
+- `build/src/02…07*.typ`: je ein Prüfungskasten mit Operatoren.
+- `build/check_markdown.py`: eingerückte Codeblöcke werden nach einer Zeile mit `:` als Code
+  behandelt, Listenfortsetzungen bleiben Text.
+- `build/make_figures.py`: Niveaus 5/6 in `energieniveaus_h` ohne Beschriftung, größerer
+  Abstand der Teilbilder in `unbestimmtheit`; beide SVGs neu erzeugt.
+- `build/src/f8_lernplan.typ`: Gesamt- und Skriptseiten, Wortzahl und Abschnittsnummern der
+  Kurzweg-Tabelle auf den Stand nach den Ergänzungen gebracht.
+- `build/test_pages.py`, `build/test_suche.js`: erwartete Seitenzahl 105.
+- `00_Projektverwaltung/REVIEW_PROMPT.md`: Shell-Befehl als Inline-Code.
+- `00_Projektverwaltung/THEMENSTATUS.md`: Koinzidenz, Pauli, Quantenradierer, Abschnittszahlen.
+- `00_Projektverwaltung/README.md`, `README.md`, `review.md`: Umfang und Bestand auf 16 PDFs,
+  105 Seiten, 50 Skriptseiten, 19.144 Wörter.
+
+### 14.5 Prüfungen nach den Änderungen
+
+| Prüfung | Ergebnis |
+|---|---|
+| `check_sources.py` | 19 Quelldateien, 0 Befunde |
+| `check_markdown.py` | 123 Dateien, 0 Befunde |
+| `check_physics.py` | 8 Prüfungen, 0 Befunde (h·c, m_p/m_e, R·h·c, λ(4 kV), E_1, λ(4,9 eV), λ_min(25 kV), E_n symbolisch) |
+| `./build_all.sh` | „alle gebaut“, 16 PDFs |
+| `qa_pdf.py` | 105 Seiten, 0 Textüberläufe, 0 Formelreste (` {,`, `frac`, `$`) |
+| `check_figs.py` | 9 Hinweise „Text außerhalb“ (von `bbox_inches="tight"` erfasste Achsentitel), 0 Überlappungen |
+| Reproduzierbarkeit | zweiter Build byte-identisch (`md5sum -c`) |
+| `test_pages.py` | 35/35 Prüfungen, inkl. Suche, Markierung, Phrasensuche, ZIP |
+| PDF-Textsuche | „Resonanzfrequenz“, „Lichtgeschwindigkeit“, „Nichtlokalität“ im Text vorhanden |
+
+### 14.6 Abnahme D1–D8
+
+| Punkt | Status | Begründung |
+|---|---|---|
+| D1 Abdeckung | ✅ | 77/77 zugeordnet, 55 ✅, 2 🔶, 13 ❌ mit Begründung, 7 Rahmen. |
+| D2 Inhaltstiefe | 🔶 | Definitionen, Formeln, Herleitungen, Aufgaben und Fehler vorhanden; „Wozu“ und Beispiele nicht in jedem Unterabschnitt. |
+| D3 Experimente | 🔶 | Alle geforderten Experimente in Skripten und Sammlung; „Fehlerquellen“ meist als „Grenzen“ integriert. |
+| D4 Operatoren | ✅ | „Das musst du können“ in allen 7 Skripten ergänzt. |
+| D5 Abbildungen | ✅ | 28 SVGs, alle eingebunden, keine leeren Bilder, 0 Textüberlappungen. Zwei Kollisionen behoben: `energieniveaus_h` (Beschriftung nur bis n = 4, die dicht liegenden Niveaus 5/6 bleiben als Linien) und `unbestimmtheit` (größerer Abstand zwischen den Teilbildern). Die 9 verbleibenden `check_figs`-Hinweise sind Achsenbeschriftungen außerhalb der Zeichenfläche, die `bbox_inches="tight"` mit ausgibt. |
+| D6 Zahlen | ✅ | 8 Rechenprüfungen, alle innerhalb der Rundung. |
+| D7 Website | ✅ | 35/35 Tests; Chromium 1440×900 und 375×812: kein horizontaler Überlauf, 16 Karten, 0 Konsolenfehler. Suche „Interferenz“: 48 Treffer, 61 Markierungen; PDF.js lädt auf 375 px. |
+| D8 Repo | ✅ | Quellen, PDFs, Grafiken und Prüfskripte konsistent; keine widersprüchlichen Zählungen mehr. |
+
+### 14.7 Offene Punkte
+
+- Quanten-Bomben-Test: nicht im Kerncurriculum, nur Schulmaterial; bewusst nicht aufgenommen.
+- He-Ne-Laser: laut Quelle nicht mehr im Kerncurriculum; bewusst nicht aufgenommen.
+- Zwölf Praktikumsseiten zu E-/B-Feld, Halbleitern und Solarzelle: Felder sind laut Auftrag
+  kein Vorabi-Stoff; Formeln stehen nur als Querverbindung in Skript 3.
+- D2/D3-Feinheiten („Wozu“ je Abschnitt, durchgerechnetes Beispiel je Abschnitt,
+  „Fehlerquellen“ als eigener Punkt) sind dokumentiert, aber nicht umgesetzt.
+- `redraw_figs.py` enthält weiterhin neu gestaltete Fassungen aller 28 Grafiken. Sie wurden
+  nicht pauschal übernommen, weil das den Stil aller Abbildungen ändern würde; die zwei
+  konkreten Kollisionen sind in `make_figures.py` punktuell behoben.

@@ -219,8 +219,9 @@ fig, ax = plt.subplots(figsize=(5.6, 3.4))
 nE = {1: -13.6, 2: -3.40, 3: -1.51, 4: -0.85, 5: -0.54, 6: -0.38}
 for n, E in nE.items():
     ax.hlines(E+13.6, 0.05, 0.95, color=BLUE, lw=1.3)
-    ax.text(0.98, E+13.6, f"n = {n}", va="center", fontsize=8, color=BLUE)
-    ax.text(0.0, E+13.6, f"{E:.2f} eV".replace(".", ","), va="center", ha="right", fontsize=7.5, color=GREY)
+    if n <= 4:
+        ax.text(0.98, E+13.6, f"n = {n}", va="center", fontsize=8, color=BLUE)
+        ax.text(0.0, E+13.6, f"{E:.2f} eV".replace(".", ","), va="center", ha="right", fontsize=7.5, color=GREY)
 trans = [(3, 2, 656), (4, 2, 486), (5, 2, 434), (6, 2, 410), (2, 1, 122)]
 for i, (a1, b1, lam) in enumerate(trans):
     x = 0.18 + 0.13*i
@@ -341,6 +342,7 @@ for ax, b_, t in zip(axes, [0.2, 0.5], ["schmaler Spalt", "breiter Spalt"]):
     ax.set_xlabel("Ort auf dem Schirm in mm")
     ax.set_xlim(-35, 35)
 axes[0].set_ylabel("Intensität")
+fig.subplots_adjust(wspace=0.3)
 save(fig, "unbestimmtheit")
 
 # ---------------------------------------------------------------- 18 Wellenfunktion

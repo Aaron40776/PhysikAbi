@@ -15,11 +15,11 @@ Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 
 | Datei | Thema | Seiten |
 |---|---|---|
-| `01_Wellen_und_Interferenz.pdf` | Schwingungen, Welle, Interferenz, Doppelspalt, Gitter, Bragg, Polarisation, Michelson | 10 |
+| `01_Wellen_und_Interferenz.pdf` | Schwingungen, Welle, Interferenz, Doppelspalt, Gitter, Bragg, Polarisation, Michelson, Lichtgeschwindigkeit | 11 |
 | `02_Lichtquanten_und_Planck.pdf` | Planck, Photon, Photoeffekt, h-Bestimmung, Compton | 6 |
 | `03_Elektronenwellen_und_Beugung.pdf` | de Broglie, Elektronenkanone, Beugungsröhre | 7 |
 | `04_Doppelspalt_und_Quantenphysik.pdf` | Einzelquanten, Amplituden, Komplementarität, Unbestimmtheit, Wellenfunktion | 6 |
-| `05_MZI_Welcher_Weg_Delayed_Choice_QED.pdf` | Mach-Zehnder, Welcher-Weg, Delayed Choice, QED | 6 |
+| `05_MZI_Welcher_Weg_Delayed_Choice_QED.pdf` | Mach-Zehnder, Welcher-Weg, Delayed Choice, Verschränkung, QED | 7 |
 | `06_Atommodelle_und_Orbitalmodell.pdf` | Rutherford, Bohr, Potenzialtopf, Orbitale | 7 |
 | `07_Spektren_und_Franck_Hertz.pdf` | Spektren, Röntgen, Resonanzabsorption, Franck-Hertz | 6 |
 
@@ -33,8 +33,8 @@ Formeln mit echten Bruchstrichen (statt Schrägstrich), Herleitungen als nummeri
 Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Grafiken mit
 Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
 
-Umfang nach der Straffung (01.11.): **7 Skripte 48 Seiten** statt 77, gesamt **103 Seiten**
-statt 121; Wortzahl 35.080 statt 60.663. Die 7 zusätzlichen Seiten sind das Trainingsheft
+Umfang (01.11.): **7 Skripte 50 Seiten**, gesamt **105 Seiten**, 19.144 Wörter
+(vor der Straffung 121 Seiten). Darin enthalten ist das 7-seitige Trainingsheft
 zur Diagrammauswertung.
 
 ## Verzeichnisse
@@ -46,8 +46,8 @@ Physik_Vorabi_2026/
 ├── 01_Schulwebsite/        website_links.csv + vollständiger Mirror der Unterrichtsseiten (Markdown)
 ├── 02_Abiturrecherche/     abitur_analyse.md, untersuchte_aufgaben.csv, iqb_aufgaben/ (12 PDFs + Text)
 ├── 03_Lernskripte/         7 Themen-PDFs
-├── 04_Zusatzmaterial/      8 Zusatz-PDFs (Übungsheft, Regression, Lernfahrplan)
-├── 05_Grafiken/            23 eigene SVG-Grafiken (automatisch aus build/fig kopiert)
+├── 04_Zusatzmaterial/      9 Zusatz-PDFs (Übungshefte, Formelblatt, Sammlung, Analysen, Lernfahrplan)
+├── 05_Grafiken/            28 eigene SVG-Grafiken (automatisch aus build/fig kopiert)
 ├── 06_Qualitaetskontrolle/ pruefbericht.md, review.md
 └── build/                  Typst-Template, Quelltexte, Figuren-Skripte, Build- und Prüfskripte
                             (reproduzierbar: SOURCE_DATE_EPOCH ist gesetzt)

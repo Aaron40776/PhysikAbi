@@ -214,6 +214,14 @@ das Licht.
 *Verstehen, nicht auswendig:* warum die Intensität die Energie nicht ändert; warum $U_B$ gegen
 $f$ eine Gerade ist; warum der Photoeffekt sofort einsetzt.
 
+#prüfung[
+  *Das musst du können:*
+  - *erklären*, warum die klassische Wellentheorie den Photoeffekt nicht erklärt;
+  - *berechnen*: Grenzfrequenz, Austrittsarbeit und $h$ aus der $U_B$-$f$-Geraden;
+  - *begründen*, warum die Steigung dieser Geraden nicht vom Kathodenmaterial abhängt;
+  - *skizzieren*: $U_B$ über $f$ und die Energiebilanz am Photon.
+]
+
 #quelle[
   *Quellen.*
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12,

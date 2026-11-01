@@ -12,7 +12,7 @@ DATEIEN = ("index.html", "suche.html", "suche.json", "physik-vorabi-2026.zip",
            "pdfjs/web/viewer.html", "pdfjs/web/viewer.js", "pdfjs/web/viewer.css",
            "pdfjs/web/locale/de/viewer.properties", "pdfjs/web/locale/locale.properties",
            "pdfjs/build/pdf.js", "pdfjs/build/pdf.worker.js", "pdfjs/LICENSE")
-SEITEN = 103
+SEITEN = 105
 
 pruefungen = []
 
@@ -46,7 +46,7 @@ def main():
         docs, seiten = daten["docs"], daten["seiten"]
 
         pruefe("16 Dokumente", len(docs) == 16, len(docs))
-        pruefe("Seitenzahl 103", sum(d["n"] for d in docs) == SEITEN,
+        pruefe("Seitenzahl 105", sum(d["n"] for d in docs) == SEITEN,
                sum(d["n"] for d in docs))
         pruefe("Seitenlisten vollständig", all(len(seiten[i]) == d["n"] for i, d in enumerate(docs)))
         pruefe("Blöcke vorhanden", all(any(s) for s in seiten))

@@ -39,7 +39,7 @@ QUELLEN
 1. Verbindlich: 01_Schulwebsite/materialien/docs/<jg>/<thema>/<lektion>/docs.md
    (1:1-Spiegel, 112 Seiten, Stand 01.11.2026) + website_links.csv.
    Die 77 Vorabi-Seiten auflisten mit:
-     grep ';ja$' 01_Schulwebsite/website_links.csv | cut -d';' -f1,2
+     `grep ';ja$' 01_Schulwebsite/website_links.csv | cut -d';' -f1,2`
    Bereiche: Grundlagen, Praktikum, Schwingungen/Wellen, Quantenobjekte, Atomhülle.
    Die 35 Seiten mit "nein" (Kinematik, Dynamik, Kosmologie, E-Feld, Magnetfeld, Atomkern)
    sind NICHT Vorabi-Stoff und werden nicht eingebaut.

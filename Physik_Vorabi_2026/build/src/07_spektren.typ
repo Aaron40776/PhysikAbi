@@ -212,6 +212,15 @@ Die Minima liegen bei 4,9 V, 9,8 V und 14,7 V; der konstante Abstand ist der Bew
 *Verstehen, nicht auswendig:* warum die Minima periodisch sind; warum die Emission langwelliger
 als die Absorption sein kann; warum Linien diskret sind.
 
+#prüfung[
+  *Das musst du können:*
+  - *erklären*, wie Emissions-, Absorptions- und kontinuierliche Spektren entstehen;
+  - *erklären*, warum der Franck-Hertz-Strom periodische Einbrüche zeigt;
+  - *berechnen*: Übergangsenergie, Wellenlänge, Seriengrenze und $lambda_min$ im Röntgenspektrum;
+  - *begründen*, warum die Linien diskret sind und die Bremsstrahlung kontinuierlich;
+  - *skizzieren*: Franck-Hertz-Kurve und Röntgenspektrum mit Grenzwellenlänge.
+]
+
 #quelle[
   *Quellen.*
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 13.

@@ -6,7 +6,7 @@
 #cover(
   "Zusatzmaterial · Planung",
   "Lernfahrplan bis Freitag",
-  "96 Seiten sind ein Nachschlagewerk. Auswendig zu lernen sind etwa acht.",
+  "105 Seiten sind ein Nachschlagewerk. Auswendig zu lernen sind etwa acht.",
   lernziele: (
     "wissen, welche Seiten Erklärung sind und welche Lernstoff",
     "in vier Tagen das Wichtige zuerst bearbeiten",
@@ -21,7 +21,7 @@
 #table(
   columns: (1fr, auto, 1fr),
   [Dokument], [Umfang], [Rolle],
-  [7 Lernskripte], [48 S.], [*Erklärung* – zum Verstehen, nicht zum Auswendiglernen],
+  [7 Lernskripte], [50 S.], [*Erklärung* – zum Verstehen, nicht zum Auswendiglernen],
   [Übungsheft], [13 S.], [*Training* – rechnen, nicht lesen],
   [Regression und Auswertung], [7 S.], [*Handwerk* – einmal durcharbeiten, dann nachschlagen],
   [Experimentesammlung], [5 S.], [*Nachschlagen* – Aufbau und Deutung der Versuche],
@@ -30,7 +30,7 @@
   [Last-Minute-Lernzettel], [4 S.], [*Lernstoff – der Kern*],
 )
 
-Von den insgesamt etwa 35.000 Wörtern sind rund *3.000 Wörter tatsächlicher Lernstoff*
+Von den insgesamt etwa 19.000 Wörtern sind rund *3.000 Wörter tatsächlicher Lernstoff*
 (Formelblatt und Lernzettel zusammen). Alles andere ist Erklärung: Text, den man liest, wenn
 etwas unklar ist – und dann wieder zumacht.
 
@@ -45,11 +45,11 @@ etwas unklar ist – und dann wieder zumacht.
 #table(
   columns: (auto, auto, 1fr),
   [Skript], [Umfang], [Kern (Abschnitte)],
-  [1 Wellen/Interferenz], [10 S.], [14 Typische Fehler, 15 Wiederholung],
+  [1 Wellen/Interferenz], [11 S.], [15 Typische Fehler, 16 Wiederholung],
   [2 Lichtquanten], [6 S.], [8 Typische Fehler, 9 Wiederholung],
   [3 Elektronenwellen], [7 S.], [8 Typische Fehler, 9 Wiederholung],
   [4 Doppelspalt/Quanten], [6 S.], [7 Typische Fehler, 8 Wiederholung],
-  [5 MZI/QED], [6 S.], [7 Typische Fehler, 8 Wiederholung],
+  [5 MZI/QED], [7 S.], [8 Typische Fehler, 9 Wiederholung],
   [6 Atommodelle], [7 S.], [7 Typische Fehler, 8 Wiederholung],
   [7 Spektren/Franck-Hertz], [6 S.], [7 Typische Fehler, 8 Wiederholung],
 )
@@ -81,7 +81,7 @@ Heute ist Sonntag, der 1. November; die Prüfung ist Freitag, der 6. November.
 
 #achtung[
   *Die Aufgaben sind wichtiger als die Skripte.* Wer 20 Aufgaben gerechnet hat, kann die
-  Prüfung; wer 48 Seiten gelesen hat, vielleicht. Wenn die Zeit knapp wird: Skripte nur als
+  Prüfung; wer 50 Seiten gelesen hat, vielleicht. Wenn die Zeit knapp wird: Skripte nur als
   Nachschlagewerk benutzen, wenn eine Aufgabe hakt.
 ]
 

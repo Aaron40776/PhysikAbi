@@ -220,6 +220,14 @@ Die Formen folgen aus der Quantenzahl $l$: s-Orbitale sind kugelsymmetrisch, p-O
 auseinander; warum $E = 0$ die Ionisationsgrenze ist; warum Bohrs Modell trotzdem nützlich
 bleibt.
 
+#prüfung[
+  *Das musst du können:*
+  - *erklären*, was Rutherford aus den Streuwinkeln schließt und was Bohr daraus macht;
+  - *berechnen*: Bahnradien, Energien und Übergangswellenlängen im Wasserstoffatom;
+  - *begründen*, warum das Bohr-Modell beim Mehrelektronenatom und bei Feinstruktur versagt;
+  - *skizzieren*: Termschema und die Form eines s- und p-Orbitals.
+]
+
 #quelle[
   *Quellen.*
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12/13.

@@ -203,6 +203,14 @@ Die obere Kurve ist die Wellenfunktion selbst, die untere ihr Betragsquadrat; nu
 *Verstehen, nicht auswendig:* warum einzelne Treffer und ein Muster zusammenpassen; warum
 Weginformation die Streifen löscht, ohne das Quant zu „treffen“.
 
+#prüfung[
+  *Das musst du können:*
+  - *erklären*, was Komplementarität bedeutet und warum Welcher-Weg-Information die Interferenz zerstört;
+  - *begründen*, warum ein einzelnes Quant trotzdem ein Interferenzmuster aufbaut;
+  - *berechnen*: Wahrscheinlichkeiten aus Amplituden und die Unbestimmtheit $Delta x Delta p$;
+  - *skizzieren*: Intensitätsverteilung mit und ohne Welcher-Weg-Markierung.
+]
+
 #quelle[
   *Quellen.*
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12/13.

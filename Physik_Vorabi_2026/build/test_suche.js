@@ -30,9 +30,9 @@ function pruefe(name, fn) {
 S.laden().then((idx) => {
   const dok = (id) => idx.docs.findIndex((d) => d.id === id);
 
-  pruefe("16 Dokumente, 103 Seiten", () => {
+  pruefe("16 Dokumente, 105 Seiten", () => {
     assert.strictEqual(idx.docs.length, 16);
-    assert.strictEqual(idx.docs.reduce((s, d) => s + d.n, 0), 103);
+    assert.strictEqual(idx.docs.reduce((s, d) => s + d.n, 0), 105);
     idx.docs.forEach((d) => {
       assert.strictEqual(idx.seiten[dok(d.id)].length, d.n, "Seitenzahl " + d.id);
     });

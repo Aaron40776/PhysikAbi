@@ -98,6 +98,35 @@ dass „später“ physikalisch später ist.
   Experiment legt fest, welche Eigenschaft sichtbar wird.
 ]
 
+= Nichtlokalität und Verschränkung
+
+Zwei gleiche nichtlineare Kristalle, um 90° gegeneinander verdreht, erzeugen aus einem blauen
+Laser Photonenpaare, deren Polarisation *verschränkt* ist. Welcher Kristall ein Paar erzeugt
+hat, lässt sich bei sehr dünnen Kristallen nicht mehr entscheiden.
+
+#definition[
+  *Verschränkung:* Zwei Quantenobjekte bilden einen gemeinsamen Zustand, der sich nicht als
+  Produkt zweier Einzelzustände schreiben lässt. Die Polarisation ist vor der Messung
+  unbestimmt; erst die Messung legt sie fest – für beide Photonen gleich.
+]
+
+Die Detektoren auf beiden Seiten reagieren synchron: Misst man an einem Photon „horizontal“,
+zeigt auch das andere „horizontal“. Das gilt auch dann, wenn die Messungen weit voneinander
+entfernt sind.
+
+#achtung[
+  Damit lassen sich keine Nachrichten übertragen. Jedes Messergebnis ist für sich zufällig;
+  die Korrelation wird erst sichtbar, wenn man beide Messreihen über einen klassischen Kanal
+  vergleicht. Die Relativitätstheorie bleibt unverletzt.
+]
+
+Weil eine Messung die Eigenschaft des anderen Photons festlegt, spricht man von *nichtlokaler
+Kausalität*. Die Photonen werden an zwei Orten gemessen, bilden aber ein gemeinsames
+Quantensystem.
+
+Verbindung: Dieselbe Komplementarität wie beim Welcher-Weg-Experiment (Abschnitt 3) und in
+Skript 4, Abschnitt 4; die Koinzidenzmethode aus Skript 4, Abschnitt 2 wertet solche Paare aus.
+
 = QED in einem Satz
 
 Die Quantenelektrodynamik beschreibt Licht-Materie-Wechselwirkung mit Wahrscheinlichkeits-
@@ -182,6 +211,15 @@ bilden, über nicht beobachtete Möglichkeiten summieren.
 
 *Verstehen, nicht auswendig:* warum $I_1 + I_2 = 1$ gilt; warum Markieren und Löschen dieselbe
 Information betrifft; warum „später entscheiden“ keine Kausalitätsverletzung ist.
+
+#prüfung[
+  *Das musst du können:*
+  - *erklären*, wie Strahlteiler und Spiegel die Phase ändern und warum D1 bei $Delta phi = 0$ dunkel ist;
+  - *berechnen*: Detektorwahrscheinlichkeiten aus Phasendifferenz und Amplituden;
+  - *begründen*, warum Delayed Choice die Vergangenheit nicht ändert;
+  - *erklären*, warum verschränkte Photonen korreliert sind, ohne Nachrichten zu übertragen;
+  - *skizzieren*: Zeigerdiagramm für beide Wege und beide Detektoren.
+]
 
 #quelle[
   *Quellen.*

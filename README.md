@@ -1,13 +1,13 @@
 # PhysikAbi
 
 Lernskripte für das Abitur im Fach Physik, Niedersachsen, erhöhtes Anforderungsniveau
-(Vorabitur 2026, Abitur 2027). **16 PDFs, 103 Seiten**: sieben Themenskripte, zwei Übungshefte (20 Aufgaben,
-Diagrammauswertung), Formelblatt, Experimentesammlung, Abitur-Analyse, Regression,
-Lernfahrplan und Lernzettel.
+(Vorabitur 2026, Abitur 2027). **16 PDFs, 105 Seiten**: sieben Themenskripte, zwei Übungshefte (20 Aufgaben,
+Diagrammauswertung), Formelblatt, Experimentesammlung, Abitur-Analyse, Gesamtübersicht,
+Regression, Lernfahrplan und Lernzettel.
 
 ### [→ Skripte online lesen](https://aaron40776.github.io/PhysikAbi/)
 
-Die Seite hat eine Volltextsuche über alle 103 Seiten: Fundstellen werden als Ausschnitt mit
+Die Seite hat eine Volltextsuche über alle 105 Seiten: Fundstellen werden als Ausschnitt mit
 markiertem Suchwort angezeigt. Ein Klick öffnet die **echte PDF** im eingebauten PDF.js-Viewer
 an der richtigen Seite und markiert das Suchwort auch dort. Dazu Inhaltsverzeichnis je Dokument
 (springt direkt in die PDF-Seite), Lernstand („gelesen“) und alle PDFs als ZIP zum Mitnehmen.
@@ -17,7 +17,7 @@ an der richtigen Seite und markiert das Suchwort auch dort. Dazu Inhaltsverzeich
 | Ordner | Was drin ist |
 |---|---|
 | `Physik_Vorabi_2026/03_Lernskripte/` | 7 Themenskripte: Wellen/Interferenz, Lichtquanten, Elektronenwellen, Doppelspalt, Mach-Zehnder, Atommodelle, Spektren/Franck-Hertz |
-| `Physik_Vorabi_2026/04_Zusatzmaterial/` | Übungsheft (20 Aufgaben mit Lösungen), Formelblatt, Experimentesammlung, Gesamtübersicht, Abitur-Analyse, Regression und Auswertung, Lernfahrplan, Last-Minute-Lernzettel |
+| `Physik_Vorabi_2026/04_Zusatzmaterial/` | Zwei Übungshefte (20 Aufgaben, Diagrammauswertung), Formelblatt, Experimentesammlung, Gesamtübersicht, Abitur-Analyse, Regression und Auswertung, Lernfahrplan, Last-Minute-Lernzettel |
 | `Physik_Vorabi_2026/01_Schulwebsite/` | Spiegel der Unterrichtsmaterialien von [physik.gym-wst.de](https://www.physik.gym-wst.de) als Grundlage der Quellenarbeit |
 | `Physik_Vorabi_2026/02_Abiturrecherche/` | Auswertung von 12 Aufgaben aus dem IQB-Pool 2025/2026 |
 | `Physik_Vorabi_2026/06_Qualitaetskontrolle/` | [Prüfbericht](Physik_Vorabi_2026/06_Qualitaetskontrolle/pruefbericht.md) mit allen Befunden, Belegen und offenen Punkten |
@@ -27,10 +27,10 @@ an der richtigen Seite und markiert das Suchwort auch dort. Dazu Inhaltsverzeich
 
 Jeder Befund im Prüfbericht trägt eine Fundstelle (Datei und Zeile) und ein Zitat. Geprüft
 wurden unter anderem: alle Referenzwerte nachgerechnet (h·c, Rydberg, de Broglie, Bragg,
-Doppelspalt, Franck-Hertz), 27 Abbildungen auf Einbindung und Deutung im Text, Formeldarstellung
+Doppelspalt, Franck-Hertz), 28 Abbildungen auf Einbindung und Deutung im Text, Formeldarstellung
 in den gerenderten PDFs, Zahlen in 20 Übungsaufgaben samt Lösungen. Gefundene Fehler sind
 behoben; was nicht geprüft werden konnte — NIBIS-Aufgaben, optische Kontrolle der Grafiken —,
-steht begründet in Abschnitt 12.5 des Prüfberichts.
+steht begründet in Abschnitt 14.7 des Prüfberichts.
 
 ## Selbst bauen
 

@@ -366,3 +366,30 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - Eine gelernte Fähigkeit zählt nur mit einmaligem Lauf; Ausgabeformat um "Blockaden und
   Lernschritte" erweitert.
 - Keine Inhalte oder Website-Änderungen.
+
+## Nachtrag 19 (01.11.2026) – Review nach REVIEW_PROMPT, Abdeckung und Layout
+
+- Alle 16 PDFs neu gebaut: **105 Seiten** (7 Skripte 50 Seiten), 19.144 Wörter, 0 Überläufe,
+  0 Formelreste; zweiter Build byte-identisch.
+- Abdeckung der 77 Vorabi-Seiten erstmals vollständig tabelliert: 55 ✅, 2 🔶, 13 ❌
+  (12 Praktikumsseiten zu E-/B-Feld/Halbleitern/Solarzelle, He-Ne-Laser), 7 Rahmen.
+- Fehlende Inhalte ergänzt: Resonanzfrequenz (Skript 1 §3), Lichtgeschwindigkeit und
+  Messinvarianz (Skript 1 §10), Nichtlokalität/Verschränkung (Skript 5 §5).
+- „Das musst du können“ mit Operatoren in allen 7 Skripten ergänzt.
+- `review.md`-Bestand korrigiert (16 PDFs, 105 Seiten, 28 SVGs, 34 Aufgaben) und
+  `THEMENSTATUS.md` (Koinzidenz, Pauli, Quantenradierer) aktualisiert.
+- Offen: `check_figs.py` meldet 16 Geometriewarnungen, darunter zwei echte Überlappungen
+  (`energieniveaus_h`, `unbestimmtheit`); `redraw_figs.py` weiterhin nicht ausgeliefert.
+
+## Nachtrag 20 (01.11.2026) – Abbildungskollisionen behoben
+
+- `energieniveaus_h`: Die Niveaus n = 5 und n = 6 liegen nur 0,16 eV auseinander; ihre
+  Beschriftungen überlappten zu 75 %. Beschriftet werden jetzt nur n = 1–4, die Niveaus
+  selbst bleiben als Linien sichtbar.
+- `unbestimmtheit`: Die Teilbilder haben jetzt `wspace=0,3`; die Überlappung der
+  Achsenzahlen am Mittelsteg ist weg.
+- `check_figs.py`: 16 Warnungen → 9, davon 0 Überlappungen (Rest sind Achsentitel außerhalb
+  der Zeichenfläche, die `bbox_inches="tight"` mit ausgibt).
+- `f8_lernplan.typ`: 96→105 Seiten, 48→50 Skriptseiten, 35.000→19.000 Wörter; Skript 1
+  11 S. mit Fehler §15/Wiederholung §16, Skript 5 7 S. mit §8/§9; PDF neu gebaut.
+- PDFs neu gebaut, weiterhin 105 Seiten, 0 Befunde, reproduzierbar; Website-Tests 35/35.

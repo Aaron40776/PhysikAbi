@@ -202,6 +202,15 @@ Bei festem Winkel wächst der Zusatzweg $2 d sin(theta)$ mit dem Netzebenenabsta
 Elektron punktförmig auftrifft und trotzdem interferiert; warum die Formel nur bis etwa 10 kV
 gilt.
 
+#prüfung[
+  *Das musst du können:*
+  - *erklären*, warum ein Elektron eine Wellenlänge hat und wann Beugung beobachtbar wird;
+  - *herleiten*: $lambda = h\/sqrt(2 m_e e U)$ aus Energie- und Impulsbilanz;
+  - *berechnen*: Wellenlänge aus $U$, Ringradius aus $lambda$ und umgekehrt $d$ aus $r^2$-$1\/U$;
+  - *begründen*, warum höhere Spannung kleinere Ringe ergibt;
+  - *skizzieren*: Bragg-Geometrie an zwei Netzebenen.
+]
+
 #quelle[
   *Quellen.*
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12,
