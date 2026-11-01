@@ -5,6 +5,10 @@ Westerstede (Niedersachsen), erhöhtes Anforderungsniveau.
 
 **Online: <https://aaron40776.github.io/PhysikAbi/>** (wird bei jedem Push automatisch neu gebaut)
 
+Die Website hat **einen** Leser: Die Karten öffnen direkt die mobile Textfassung mit MathML,
+eingebetteten Abbildungen und Tabellen. Es gibt keinen PDF-Editor und keinen zweiten
+„Im PDF / als Text“-Weg; die PDFs bleiben nur als Offline-Archiv erreichbar.
+
 Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 (https://www.physik.gym-wst.de), Kerncurriculum Physik Niedersachsen 2022, Aufgabenpool der Länder
 (IQB) 2025/2026, Hinweise zur schriftlichen Abiturprüfung 2027.

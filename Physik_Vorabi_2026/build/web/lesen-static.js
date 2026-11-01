@@ -37,6 +37,46 @@
     }
   });
 
+  function markiereSuchwort(roh) {
+    var begriff = (roh || "").trim().replace(/^"+|"+$/g, "").split(/\s+/)[0];
+    if (begriff.length < 2) return;
+    var suche = begriff.toLocaleLowerCase("de");
+    var walker = document.createTreeWalker(text, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (knoten) {
+        var eltern = knoten.parentElement;
+        if (!eltern || !knoten.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        if (eltern.closest("nav, math, svg, script, style, mark")) return NodeFilter.FILTER_REJECT;
+        return knoten.nodeValue.toLocaleLowerCase("de").indexOf(suche) === -1
+          ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var knoten = [];
+    while (walker.nextNode()) knoten.push(walker.currentNode);
+    knoten.forEach(function (knoten) {
+      var rest = knoten.nodeValue;
+      var stelle = rest.toLocaleLowerCase("de").indexOf(suche);
+      if (stelle === -1) return;
+      var fragment = document.createDocumentFragment();
+      while (stelle !== -1) {
+        if (stelle > 0) fragment.appendChild(document.createTextNode(rest.slice(0, stelle)));
+        var marke = document.createElement("mark");
+        marke.className = "suchtreffer";
+        marke.textContent = rest.slice(stelle, stelle + begriff.length);
+        fragment.appendChild(marke);
+        rest = rest.slice(stelle + begriff.length);
+        stelle = rest.toLocaleLowerCase("de").indexOf(suche);
+      }
+      if (rest) fragment.appendChild(document.createTextNode(rest));
+      knoten.parentNode.replaceChild(fragment, knoten);
+    });
+    var erster = text.querySelector("mark.suchtreffer");
+    if (erster) {
+      window.requestAnimationFrame(function () {
+        erster.scrollIntoView({ block: "center" });
+      });
+    }
+  }
+
   function maxScroll() {
     return Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
   }
@@ -85,6 +125,8 @@
   var groesser = document.getElementById("groesser");
   if (kleiner) kleiner.addEventListener("click", function () { scale = Math.max(0.85, scale - 0.08); setzeScale(); });
   if (groesser) groesser.addEventListener("click", function () { scale = Math.min(1.4, scale + 0.08); setzeScale(); });
+
+  if (params.get("q")) markiereSuchwort(params.get("q"));
 
   if (params.get("weiter") === "1") {
     try {

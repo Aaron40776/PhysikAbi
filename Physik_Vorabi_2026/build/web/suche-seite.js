@@ -44,7 +44,7 @@
     gruppen.forEach(function (g) {
       html += '<div class="gruppe-titel"><h2>' + PhysikSuche.escape(g.doc.t) +
         "</h2><span>" + g.gesamt + " Treffer" +
-        ' · <a href="' + PhysikSuche.escape(PhysikSuche.ziel(g.doc, 1)) + '">PDF</a></span></div>';
+        ' · <a href="' + PhysikSuche.escape(PhysikSuche.ziel(g.doc, 1)) + '">Dokument</a></span></div>';
       g.treffer.forEach(function (t) {
         html += '<a class="ergebnis" href="' + PhysikSuche.escape(PhysikSuche.ziel(g.doc, t.seite, q.trim())) + '">' +
           '<span class="kopf"><span class="seite">S. ' + t.seite + "</span>" +
@@ -56,7 +56,7 @@
       if (g.gesamt > g.treffer.length) {
         html += '<p class="meta" style="padding:6px 12px">… ' + (g.gesamt - g.treffer.length) +
           " weitere Treffer – <a href=\"" + PhysikSuche.escape(PhysikSuche.ziel(g.doc, 1, q.trim())) +
-          "\">im PDF suchen →</a></p>";
+          "\">im Dokument suchen →</a></p>";
       }
     });
     ziel.innerHTML = html;

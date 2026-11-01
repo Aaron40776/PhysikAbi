@@ -5,8 +5,8 @@ Ergebnis in _site/:
   index.html        Übersicht mit Volltextsuche, Lernstand und Inhaltsverzeichnissen
   suche.html        alle Suchtreffer einer Anfrage
   suche.json        Volltextindex (Seiten, Blöcke, Inhaltsverzeichnisse)
-  pdfjs/            PDF.js-Viewer (Seitensprung + markiertes Suchwort in der echten PDF)
-  skripte/, zusatz/ die PDFs
+  lesen/            mobile Lesefassungen mit MathML und eingebetteten SVGs
+  skripte/, zusatz/ die PDFs als Archiv
   physik-vorabi-2026.zip   alle PDFs zum Mitnehmen
 """
 import argparse, hashlib, html, json, pathlib, re, shutil, unicodedata, zipfile
@@ -19,7 +19,6 @@ ZUSATZ = ROOT / "04_Zusatzmaterial"
 BUILD = pathlib.Path(__file__).resolve().parent
 WEB = BUILD / "web"
 GLOSSAR = pathlib.Path(__file__).resolve().parent / "glossar.json"
-VENDOR = pathlib.Path(__file__).resolve().parent / "vendor" / "pdfjs"
 
 BESCHREIBUNG = {
     "01_Wellen_und_Interferenz": ("Wellen und Interferenz", "Schwingung, Zeiger, Doppelspalt, Gitter, Bragg, Polarisation, Michelson"),
@@ -145,41 +144,41 @@ def dokument(pdf):
     }, seiten
 
 
-def text_url(doc, seite=1):
+def text_url(doc, anker=None, q=None):
     if doc["id"] == "Glossar":
         return "glossar.html"
-    return "lesen/" + quote(doc["id"], safe="") + ".html"
-
-
-def pdf_url(doc, seite=None, q=None):
-    """PDF.js-Viewer: echte PDF, richtige Seite, Suchwort markiert."""
-    datei = "pdfjs/web/viewer.html?file=../../" + quote(doc["f"], safe="/")
-    teile = [f"page={seite}"] if seite else []
+    url = "lesen/" + quote(doc["id"], safe="") + ".html"
     if q:
-        teile.append("search=" + quote(q, safe=""))
-    teile.append("pagemode=none")
-    return datei + "#" + "&".join(teile)
+        url += "?q=" + quote(q, safe="")
+    if anker:
+        url += "#" + anker
+    return url
+
+
+def toc_url(doc, nummer):
+    if doc["id"] == "Glossar":
+        return "glossar.html#glossar-" + quote(doc["toc"][nummer - 1][1], safe="")
+    return text_url(doc, f"loc-{nummer}")
 
 
 def karte(doc):
     stamm = doc["id"]
     toc = "".join(
-        f'<li><a href="{pdf_url(doc, seite)}">{html.escape(titel)}</a></li>'
-        for _, titel, seite in doc["toc"][:8]
+        f'<li><a href="{toc_url(doc, i + 1)}">{html.escape(titel)}</a></li>'
+        for i, (_, titel, _) in enumerate(doc["toc"][:8])
     )
     rest = len(doc["toc"]) - 8
-    mehr = (f'<li><a class="mehr" href="{pdf_url(doc)}">… {rest} weitere Abschnitte</a></li>'
+    mehr = (f'<li><a class="mehr" href="{text_url(doc)}">… {rest} weitere Abschnitte</a></li>'
             if rest > 0 else "")
     return f"""      <article class="karte" data-doc="{stamm}">
-        <a class="titel" href="{pdf_url(doc)}">{html.escape(doc['t'])}</a>
+        <a class="titel" href="{text_url(doc)}">{html.escape(doc['t'])}</a>
         <p class="text">{html.escape(doc['k'])}</p>
         <div class="zeile">
-          <span class="meta">{doc['n']} Seiten · PDF</span>
+          <span class="meta">{doc['n']} Seiten</span>
           <button class="gelesen" type="button" aria-pressed="false" title="Als gelesen markieren">gelesen</button>
         </div>
         <div class="aktionen">
-          <a href="{pdf_url(doc)}">Im PDF lesen</a>
-          <a href="{text_url(doc)}">Als Text lesen</a>
+          <a class="lesen" href="{text_url(doc)}">Lesen</a>
           <a class="weiter" href="{text_url(doc)}" hidden>Weiterlesen</a>
           <details class="toc">
             <summary>Inhalt</summary>
@@ -245,13 +244,13 @@ def main():
     for name in ("style.css", "lesen.css", "suche.js", "index.js", "suche-seite.js", "theme.js",
                  "glossar.js", "lesen-static.js"):
         shutil.copy2(WEB / name, out / "assets" / name)
+    altes_lesen = out / "assets" / "lesen.js"
+    if altes_lesen.exists():
+        altes_lesen.unlink()
 
-    if not VENDOR.is_dir():
-        raise SystemExit(f"PDF.js fehlt: {VENDOR}")
     ziel_viewer = out / "pdfjs"
     if ziel_viewer.exists():
         shutil.rmtree(ziel_viewer)
-    shutil.copytree(VENDOR, ziel_viewer)
 
     for name in ("index.html", "suche.html", "glossar.html", "lesen.html"):
         text = (WEB / name).read_text(encoding="utf-8")

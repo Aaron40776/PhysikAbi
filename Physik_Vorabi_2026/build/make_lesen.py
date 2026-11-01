@@ -89,21 +89,19 @@ def ausgabe(source: str, tmp: pathlib.Path):
 
 def seite(doc_id: str, gruppe: str, titel: str,
           stile: str, body: str, vorher, nachher) -> str:
-    pdf = f"../{gruppe}/{doc_id}.pdf"
     nav = []
     if vorher:
         nav.append(f'<a href="{vorher[0]}.html">← {html.escape(vorher[1])}</a>')
     else:
         nav.append("<span></span>")
-    nav.append(f'<a href="../{gruppe}/{doc_id}.pdf">PDF</a>')
     if nachher:
         nav.append(f'<a href="{nachher[0]}.html">{html.escape(nachher[1])} →</a>')
     else:
         nav.append("<span></span>")
     fuss = (
         '<footer class="lese-fuss">\n'
-        f'  <p>Textfassung von <strong>{html.escape(titel)}</strong>. '
-        f'<a href="{pdf}">PDF mit Satz und Abbildungen öffnen</a>.</p>\n'
+        f'  <p>Textfassung von <strong>{html.escape(titel)}</strong> – '
+        'alle Abbildungen, Tabellen und Formeln sind enthalten.</p>\n'
         '  <div class="lese-nav">' + "".join(nav) + "</div>\n"
         '</footer>'
     )

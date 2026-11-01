@@ -11,10 +11,7 @@ DATEIEN = ("index.html", "suche.html", "glossar.html", "lesen.html", "suche.json
            "physik-vorabi-2026.zip",
            "assets/style.css", "assets/suche.js", "assets/index.js", "assets/suche-seite.js",
            "assets/theme.js", "assets/glossar.js", "assets/lesen.css",
-           "assets/lesen-static.js",
-           "pdfjs/web/viewer.html", "pdfjs/web/viewer.js", "pdfjs/web/viewer.css",
-           "pdfjs/web/locale/de/viewer.properties", "pdfjs/web/locale/locale.properties",
-           "pdfjs/build/pdf.js", "pdfjs/build/pdf.worker.js", "pdfjs/LICENSE")
+           "assets/lesen-static.js")
 SEITEN = 110
 
 pruefungen = []
@@ -67,11 +64,21 @@ def main():
 
         fehlende_karten = [d["id"] for d in docs
                            if f'data-doc="{d["id"]}"' not in index_html
-                           or f'pdfjs/web/viewer.html?file=../../{d["f"]}' not in index_html
+                           or (f'href="lesen/{d["id"]}.html"' not in index_html
+                               if d["id"] != "Glossar" else 'href="glossar.html"' not in index_html)
                            or not (ziel / d["f"]).is_file()]
-        pruefe("Karte, PDF-Link und PDF je Dokument", not fehlende_karten, fehlende_karten)
-        pruefe("Inhaltsverzeichnis springt in die PDF-Seite",
-               '#page=3' in index_html and 'pagemode=none' in index_html)
+        pruefe("Karte, Leselink und PDF-Archiv je Dokument", not fehlende_karten, fehlende_karten)
+        pruefe("Inhaltsverzeichnis springt in den Text",
+               'href="lesen/01_Wellen_und_Interferenz.html#loc-1"' in index_html)
+        pruefe("genau ein Leseweg pro Karte",
+               index_html.count('class="lesen"') == len(docs)
+               and "Im PDF lesen" not in index_html
+               and "Als Text lesen" not in index_html)
+        pruefe("kein PDF.js mehr im Build",
+               not (ziel / "pdfjs").exists()
+               and not (ziel / "assets" / "lesen.js").exists()
+               and "pdfjs" not in index_html + suche_html + lesen_html
+               and "pdfjs" not in (ziel / "assets" / "suche.js").read_text(encoding="utf-8"))
         pruefe("Textansicht je Dokument verlinkt",
                all((f'href="lesen/{d["id"]}.html"' in index_html if d["id"] != "Glossar"
                     else 'href="glossar.html"' in index_html) for d in docs))
@@ -96,20 +103,6 @@ def main():
         pruefe("Assets mit Versionsstempel", len(stempel) >= 3, stempel)
         pruefe("Suchindex wird geladen",
                "suche.json" in (ziel / "assets" / "suche.js").read_text(encoding="utf-8"))
-
-        viewer_html = (ziel / "pdfjs" / "web" / "viewer.html").read_text(encoding="utf-8")
-        externe = re.findall(r'(?:src|href)="(https?://[^"]+)"', viewer_html)
-        pruefe("PDF.js laedt nichts aus dem Netz", not externe, externe)
-        pruefe("Viewer hat eigenes Favicon (kein 404)",
-               'rel="icon"' in viewer_html)
-
-        def locale_schluessel(name):
-            text = (ziel / "pdfjs" / "web" / "locale" / name / "viewer.properties").read_text(
-                encoding="utf-8")
-            return {m[0] for m in re.findall(r"^([\w.\-]+)=", text, re.M)}
-
-        fehlend = locale_schluessel("en-US") - locale_schluessel("de")
-        pruefe("deutsche Oberfläche vollständig", not fehlend, sorted(fehlend))
 
         pruefe("Safe-Area im Viewport",
                all('viewport-fit=cover' in h

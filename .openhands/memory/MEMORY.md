@@ -79,3 +79,8 @@
 - `.agents/` (lokale Skills, ~5 MB) ist per .gitignore ausgeschlossen.
 - Typst-Binary: `/tmp/typst-x86_64-unknown-linux-musl/typst` (0.15.1); `pymupdf`,
   `matplotlib`, `cairosvg`, `pint`, `sympy` ggf. per pip nachinstallieren.
+## Neu 01.11.2026
+- HTML-Leser: `build/make_lesen.py` (Typst-HTML) + `build/lesen/`; `make_pages.py` kopiert nach `_site/lesen/`.
+- MZI-Grafik korrigiert (Würfel-Strahlteiler, Spiegel); `check_figs.py` regeneriert **alle** SVGs → danach nicht geänderte zurücksetzen.
+- `check_sources.py`/`check_markdown.py` aus `build/` starten.
+

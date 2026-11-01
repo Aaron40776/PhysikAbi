@@ -241,8 +241,8 @@
     return (von > 0 ? "\u2026 " : "") + markiere(stueck, tokens) + (bis < text.length ? " \u2026" : "");
   }
 
-  /* PDF.js sucht wörtlich; bei "Bragg Gitter" darf nur ein Begriff markiert werden. */
-  function pdfBegriff(q) {
+  /* Im Text darf pro Suche nur ein Begriff markiert werden; der erste reicht. */
+  function suchBegriff(q) {
     var teile = q.match(/"[^"]+"|\S+/g) || [];
     for (var i = 0; i < teile.length; i++) {
       var t = teile[i];
@@ -254,12 +254,20 @@
   }
 
   function ziel(doc, seite, q) {
-    var url = "pdfjs/web/viewer.html?file=../../" + encodeURI(doc.f);
-    var hash = ["page=" + seite];
-    var begriff = pdfBegriff(q || "");
-    if (begriff) hash.push("search=" + encodeURIComponent(begriff));
-    hash.push("pagemode=none");
-    return url + "#" + hash.join("&");
+    var basis = doc.id === "Glossar"
+      ? "glossar.html"
+      : "lesen/" + encodeURIComponent(doc.id) + ".html";
+    var begriff = suchBegriff(q || "");
+    var anker = "";
+    if (doc.id !== "Glossar" && doc.toc && doc.toc.length) {
+      var ziel = -1;
+      for (var i = 0; i < doc.toc.length; i++) {
+        if (doc.toc[i][2] >= (seite || 1)) { ziel = i; break; }
+      }
+      if (ziel < 0) ziel = doc.toc.length - 1;
+      anker = "#loc-" + (ziel + 1);
+    }
+    return basis + (begriff ? "?q=" + encodeURIComponent(begriff) : "") + anker;
   }
 
   /* ---------- Trefferpanel für die Startseite ---------- */

@@ -75,11 +75,12 @@
   margin: .75em 0; padding: .2em 0 .3em;
 }
 .lese-text table {
-  display: block; width: 100%; overflow-x: auto; margin: 1em 0;
-  border-collapse: collapse; font-size: .84em; line-height: 1.4;
+  display: block; width: 100%; max-width: 100%; overflow-x: auto; margin: 1em 0;
+  border-collapse: collapse; table-layout: fixed; font-size: .84em; line-height: 1.4;
 }
 .lese-text th, .lese-text td {
   padding: 5px 8px; border: 1px solid var(--linie); text-align: left; vertical-align: top;
+  overflow-wrap: anywhere;
 }
 .lese-text th { background: var(--merk); font-weight: 700; }
 .lese-text figure { margin: 1.5em 0; }
@@ -89,6 +90,12 @@
 }
 .lese-text figcaption {
   margin-top: .55em; font-size: .78em; line-height: 1.45; color: var(--grau);
+}
+.lese-text mark.suchtreffer {
+  background: #ffe08a; color: inherit; padding: 0 .08em; border-radius: 2px;
+}
+[data-theme="dark"] .lese-text mark.suchtreffer {
+  background: #8a6a12; color: #fff;
 }
 
 /* Typst gibt Inhaltsverzeichnis und Kästen ohne Klassen aus. */
@@ -138,9 +145,9 @@
 /* Auf schmalen Geräten bleibt die Kopfzeile flach und ohne Suchfeld. */
 @media (max-width: 520px) {
   .leser { padding: 16px env(safe-area-inset-right) 56px env(safe-area-inset-left); }
-  .lese-leiste .leiste-inner { padding-top: 7px; padding-bottom: 7px; flex-wrap: nowrap; }
+  .lese-leiste .leiste-inner { padding-top: 7px; padding-bottom: 7px; flex-wrap: wrap; }
   .lese-leiste .marke { font-size: .78rem; }
-  .lese-leiste .seiten-nav { gap: 7px; }
+  .lese-leiste .seiten-nav { gap: 6px; flex-wrap: wrap; }
   .lese-leiste .seiten-nav a { font-size: .74rem; }
   .lese-schrift { margin-left: 0; }
   .lese-text > p:nth-of-type(2) { font-size: 1.75rem; }

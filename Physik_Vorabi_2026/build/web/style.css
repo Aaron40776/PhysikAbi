@@ -252,13 +252,13 @@ footer noscript { display: block; margin-top: 8px; }
 .chips button[aria-pressed="true"] { background: var(--akzent); border-color: var(--akzent); color: var(--bg); }
 .gruppe-titel {
   display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
-  margin: 28px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--linie);
+  flex-wrap: wrap; margin: 28px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--linie);
 }
-.gruppe-titel h2 { margin: 0; font-size: .95rem; text-transform: none; letter-spacing: 0; color: var(--fg); }
+.gruppe-titel h2 { margin: 0; font-size: .95rem; text-transform: none; letter-spacing: 0; color: var(--fg); overflow-wrap: anywhere; }
 .gruppe-titel span { font-size: .78rem; color: var(--grau); white-space: nowrap; }
 .ergebnis {
   display: block; padding: 9px 12px; border-radius: 8px; text-decoration: none; color: inherit;
-  border: 1px solid transparent;
+  border: 1px solid transparent; overflow-wrap: anywhere;
 }
 .ergebnis:hover { background: var(--merk); border-color: var(--linie); }
 .ergebnis .kopf { font-size: .76rem; color: var(--grau); display: flex; gap: 8px; align-items: baseline; }

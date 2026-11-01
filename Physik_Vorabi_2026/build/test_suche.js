@@ -138,21 +138,21 @@ S.laden().then((idx) => {
     assert.strictEqual(S.suche("Übungsheft 20 Aufgaben", 3).gruppen[0].doc.id, "Uebungsheft_20_Aufgaben");
   });
 
-  pruefe("Ziel-URLs zeigen in den PDF.js-Viewer", () => {
+  pruefe("Ziel-URLs zeigen in die Lesefassung", () => {
     const doc = idx.docs[0];
     const u = S.ziel(doc, 7, "Bragg");
-    assert(u.startsWith("pdfjs/web/viewer.html?file=../../skripte/01_Wellen_und_Interferenz.pdf#"), u);
-    assert(u.includes("page=7"), u);
-    assert(u.includes("search=Bragg"), u);
-    assert(u.endsWith("pagemode=none"), u);
+    assert(u.startsWith("lesen/01_Wellen_und_Interferenz.html?"), u);
+    assert(u.includes("q=Bragg"), u);
+    assert(u.includes("#loc-8"), u);
+    assert(S.ziel(idx.docs[dok("Glossar")], 2, "Bragg").startsWith("glossar.html"));
   });
 
   pruefe("Mehrwortsuche markiert den ersten Begriff", () => {
     const doc = idx.docs[0];
-    assert(S.ziel(doc, 7, "Bragg Gitter").includes("search=Bragg"));
-    assert(S.ziel(doc, 7, '"Bragg Reflexion"').includes("search=Bragg"));
-    assert(S.ziel(doc, 7, "-Compton Bragg").includes("search=Bragg"));
-    assert(!S.ziel(doc, 7, "-Compton").includes("search="));
+    assert(S.ziel(doc, 7, "Bragg Gitter").includes("q=Bragg"));
+    assert(S.ziel(doc, 7, '"Bragg Reflexion"').includes("q=Bragg"));
+    assert(S.ziel(doc, 7, "-Compton Bragg").includes("q=Bragg"));
+    assert(!S.ziel(doc, 7, "-Compton").includes("q="));
   });
 
   const fehler = pruefungen.filter(([ok]) => !ok);

@@ -498,3 +498,20 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Offen:** Themenumfang prüfen – Quantenradierer (Skript 4 §4, Skript 5 §3),
   Delayed Choice und QED sind Ergänzungen, keine eigenen KC-Kompetenzen. Sie sollten
   als Vertiefung markiert oder aus dem Hauptpfad genommen werden; Entscheidung offen.
+
+## Nachtrag 26 (01.11.2026) – Ein einziger Leser, kein PDF-Editor mehr
+
+- **Doppelweg entfernt:** Karten hatten „Im PDF lesen“ und „Als Text lesen“, Suchtreffer und
+  Inhaltsverzeichnis öffneten den PDF.js-Viewer. Jetzt führen Titel, „Lesen“ und Inhaltsverzeichnis
+  nur noch in `lesen/<Dokument>.html`; das Inhaltsverzeichnis springt über `#loc-N` zum Abschnitt.
+- **Suche bleibt präzise:** Treffer öffnen die Lesefassung mit `?q=Begriff`; der Leser markiert
+  das Suchwort und scrollt zur ersten Fundstelle. Kein PDF-Werkzeugleisten-Look mehr.
+- **PDF.js raus:** Der 3,3-MB-Viewer wird nicht mehr nach `_site/pdfjs` kopiert; vorhandene
+  Altlasten werden beim Build entfernt. PDFs bleiben als Offline-Archiv im ZIP.
+- **Schmale Geräte:** Tabellen bekommen feste Spaltenbreiten und Umbruch, die Lesekopfzeile und
+  Suchtreffer brechen um. 320/390 px: kein horizontaler Überlauf auf allen 16 Leseseiten,
+  Startseite, Suche, Glossar und `lesen.html`; 768/1024/1440 px geprüft.
+- **Prüfstand:** `test_pages.py` 42/42, `test_suche.js` 18/18; 510 lokale Links und 341 Anker
+  ohne Fehler; `check_all.sh` grün (20 Quellen, 123 Markdown, 14/14 Physik, 17 PDFs/110 Seiten,
+  0 Befunde). Die 28 SVG-Prüfungen bleiben bei 0 Überlappungen und den bekannten 9
+  `bbox_inches="tight"`-Hinweisen.

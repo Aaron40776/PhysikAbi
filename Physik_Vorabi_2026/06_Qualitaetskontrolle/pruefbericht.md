@@ -1046,9 +1046,8 @@ unzugeordnet.
   kein Vorabi-Stoff; Formeln stehen nur als Querverbindung in Skript 3.
 - D2/D3-Feinheiten („Wozu“ je Abschnitt, durchgerechnetes Beispiel je Abschnitt,
   „Fehlerquellen“ als eigener Punkt) sind dokumentiert, aber nicht umgesetzt.
-- `redraw_figs.py` enthält weiterhin neu gestaltete Fassungen aller 28 Grafiken. Sie wurden
-  nicht pauschal übernommen, weil das den Stil aller Abbildungen ändern würde; die zwei
-  konkreten Kollisionen sind in `make_figures.py` punktuell behoben.
+- `redraw_figs.py` wurde entfernt; `make_figures.py` ist die einzige Quelle der 28 Grafiken.
+  Die zwei konkreten Kollisionen sind dort punktuell behoben.
 
 ## 15. Nachtrag (01.11.2026) – Darkmode, Glossar und Abbildungen
 
@@ -1161,3 +1160,21 @@ reproduzierbar. PDFs unverändert: 110 Seiten, 21.309 Wörter, `qa_pdf.py` 0 Bef
 9 Hinweise „Text außerhalb“ bei Achsenbeschriftungen anderer Figuren. Die übrigen
 SVGs wurden nach dem Prüflauf bewusst auf den committeten Stand zurückgesetzt, damit
 kein Metadaten-Churn entsteht. PDF 05: 6 Seiten, 1166 Wörter, `qa_pdf.py` 0 Befunde.
+
+### 15.10 Einheitlicher Leser statt PDF-und-Text-Doppelweg (01.11.2026)
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| V1 | `build/make_pages.py:164-188` | Jede Karte zeigte „Im PDF lesen“ und „Als Text lesen“; Suchtreffer und Inhaltsverzeichnis sprangen in den PDF.js-Viewer mit Werkzeugleiste. Auf dem Handy wirkte das wie zwei verschiedene Produkte. | Karte, Titel und Inhaltsverzeichnis führen nur noch in `lesen/<Dokument>.html`; pro Karte genau ein „Lesen“-Weg. Inhaltsverzeichnis springt über `#loc-N` direkt zum Abschnitt. |
+| V2 | `build/web/suche.js:244-270` | Suchtreffer bauten eine PDF.js-URL (`page=…&search=…`). | Treffer führen in die Lesefassung; `?q=Begriff` markiert das Suchwort im Text und scrollt zur ersten Fundstelle. |
+| V3 | `build/make_lesen.py:90-107` | Der Leser verlinkte am Fuß wieder auf die PDF. | Fußtext nennt die enthaltenen Abbildungen/Tabellen/Formeln; Navigation nur noch vor/zurück. |
+| V4 | `build/make_pages.py:248-250` | PDF.js wurde bei jedem Build mit 3,3 MB ausgeliefert. | PDF.js wird nicht mehr kopiert; ein vorhandenes `_site/pdfjs` wird entfernt. PDFs bleiben als Download-Archiv erhalten. |
+| V5 | `build/web/lesen.css:77-84,146-151` | Tabellen und die Kopfzeile erzwangen bei 320 px eine breitere Layout-Viewport (404 px). | `table-layout: fixed`, `overflow-wrap: anywhere`; Kopfzeile und Seitennavigation brechen auf schmalen Geräten um. `Bilder` behalten weißen Hintergrund. |
+| V6 | `build/web/style.css:253-262` | Lange Suchausschnitte schoben die Trefferseite bei 320 px auf 355 px. | Treffer und Gruppentitel brechen um; `overflow-wrap: anywhere`. |
+
+Prüfungen: `test_pages.py` **42/42**, `test_suche.js` **18/18**; lokale Linkprüfung
+**510 Ziele, 0 kaputt**, Anker **341, 0 kaputt**. Chromium: 320 px und 390 px für Startseite,
+Suche, Glossar, `lesen.html` und alle 16 Leseseiten ohne horizontalen Überlauf; 768/1024/1440 px
+stichprobenartig ohne Überlauf. Alle MathML-Elemente haben Breite > 0, alle Bilder sind geladen;
+Darkmode schaltet auf `rgb(20,22,26)`, Abbildungen bleiben auf Weiß. `check_all.sh` grün:
+20 Quellen, 123 Markdown-Dateien, 14/14 Physikprüfungen, 17 PDFs/110 Seiten mit 0 Befunden.
