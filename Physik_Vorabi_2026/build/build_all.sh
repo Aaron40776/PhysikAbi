@@ -1,6 +1,6 @@
 #!/bin/bash
-T=/tmp/typst-x86_64-unknown-linux-musl/typst
-set -e
+T="${TYPST:-$(command -v typst || echo /tmp/typst-x86_64-unknown-linux-musl/typst)}"
+set -euo pipefail
 export SOURCE_DATE_EPOCH=1700000000   # reproduzierbare PDFs (kein Byte-Churn im Repo)
 cp fig/*.svg ../05_Grafiken/   # Grafiken fürs Repo synchronisieren
 $T compile --root . src/01_wellen.typ ../03_Lernskripte/01_Wellen_und_Interferenz.pdf
@@ -18,4 +18,5 @@ $T compile --root . src/f5_abitur.typ ../04_Zusatzmaterial/Abitur_Analyse.pdf
 $T compile --root . src/f6_uebungen.typ ../04_Zusatzmaterial/Uebungsheft_20_Aufgaben.pdf
 $T compile --root . src/f7_regression.typ ../04_Zusatzmaterial/Regression_und_Auswertung.pdf
 $T compile --root . src/f8_lernplan.typ ../04_Zusatzmaterial/Lernfahrplan.pdf
+$T compile --root . src/f9_diagramme.typ ../04_Zusatzmaterial/Uebungsheft_Diagrammauswertung.pdf
 echo "alle gebaut"

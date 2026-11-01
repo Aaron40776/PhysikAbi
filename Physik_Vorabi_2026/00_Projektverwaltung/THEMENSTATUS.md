@@ -9,7 +9,7 @@ Legende: ✅ vollständig · 🔶 im Skript behandelt, aber knapp · ❌ nicht b
 | Mechanische/elektromagnetische Wellen | 1.3, 1.5 | ✅ |
 | Transversal-/Longitudinalwellen | 1.3.1 | ✅ |
 | Amplitude, Frequenz, Periodendauer, Wellenlänge | 1.2 | ✅ |
-| Ausbreitungsgeschwindigkeit $c = lambda f$ | 1.3.3 | ✅ |
+| Ausbreitungsgeschwindigkeit $c = \lambda f$ | 1.3.3 | ✅ |
 | Phasenverschiebung, Phasendifferenz | 1.3.3, 1.4.1 | ✅ |
 | Harmonische Schwingung, Zeigerdarstellung | 1.2 | ✅ |
 | Superposition, konstruktiv/destruktiv | 1.4 | ✅ |
@@ -106,7 +106,7 @@ Siehe D: Abschnitte 4.6 und 4.7. ✅
 | Thema | Ort | Status |
 |---|---|---|
 | Kontinuierliche Spektren, Linien-, Emissions-, Absorptionsspektren | 7.2 | ✅ |
-| Energieniveaus, Photonemission, $Delta E = h c\/lambda$ | 7.3 | ✅ |
+| Energieniveaus, Photonemission, $\Delta E = h c/\lambda$ | 7.3 | ✅ |
 | Balmer-Serie, Serien | 7.3.2 | ✅ |
 | Franck-Hertz: Aufbau, Durchführung, Beobachtung | 7.5 | ✅ |
 | Interpretation der Messkurve, Anregungsenergie | 7.5.3 | ✅ |

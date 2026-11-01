@@ -44,7 +44,7 @@ $ lambda = frac(h, p) = frac(h, m v) $
 
   4. Zahlenwert einsetzen ($h$, $m_e$, $e$):
 
-  $ lambda = frac(1","226 "nm", sqrt(U \/ "V")) $
+  $ lambda = frac(1","226 "nm", sqrt(U / "V")) $
 
   5. Gültig für $U$ bis etwa 10 kV; darüber wird der relativistische Impuls messbar größer.
 
@@ -144,7 +144,7 @@ Steigung $d$ folgt.
 #lösung[
   (1) $lambda = frac(1","226 "nm", sqrt(4","0)) = 0","613$ nm.
 
-  (2) $E = e U = 4","0$ keV, also $f = E \/ h = 9","7 dot 10^17$ Hz und $lambda = c \/ f =
+  (2) $E = e U = 4","0$ keV, also $f = E \/ h = 9","7 dot 10^17$ Hz und $lambda = c / f =
   0","31$ nm. Das Photon hätte die halbe Wellenlänge: Die Energie eines Elektrons ist
   $p^2\/(2 m_e)$, die eines Photons $p c$ – bei gleichem Impuls also verschieden.
 ]

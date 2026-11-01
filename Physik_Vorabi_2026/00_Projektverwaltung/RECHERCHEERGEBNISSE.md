@@ -36,9 +36,9 @@ Die Schule verwendet konsequent:
   die **QED** (Feynman: alle Wege, Zeiger addieren) ersetzt. Das ist ein Alleinstellungsmerkmal
   gegenüber vielen Schulbüchern und wurde in Skript 5 genau so übernommen.
 - **Potenzialtopf** als Begründung der Quantisierung (statt nur Bohrs Postulate).
-- Schreibweise der Unbestimmtheit: $Delta x dot Delta p_x >= h$ (nicht $hbar\/2$).
-- Doppelspalt in der exakten Form $n lambda = g sin(arctan(a_n\/e))$.
-- Elektronenbeugung mit der schulischen Arbeitsgleichung $lambda = d r\/(n a)$.
+- Schreibweise der Unbestimmtheit: $\Delta x \cdot \Delta p_x \geq h$ (nicht $\hbar/2$).
+- Doppelspalt in der exakten Form $n\lambda = g\sin(\arctan(a_n/e))$.
+- Elektronenbeugung mit der schulischen Arbeitsgleichung $\lambda = d r/(n a)$.
 
 Diese Konventionen wurden in allen Skripten beibehalten, damit die Unterlagen zur
 Unterrichtssprache passen.

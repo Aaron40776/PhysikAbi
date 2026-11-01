@@ -169,7 +169,7 @@ Der Achsenabschnitt ist mit 0,016 mm praktisch null – das bestätigt den Urspr
 gutes Argument im Aufsatz („die Gerade läuft innerhalb der Messgenauigkeit durch den
 Nullpunkt“).
 
-$ lambda = m dot g \/ e = 5","062 dot 10^(-3) "m" dot 0","250 dot 10^(-3) "m" \/ 2","00 "m" = 633 "nm" $
+$ lambda = m dot g / e = 5","062 dot 10^(-3) "m" dot 0","250 dot 10^(-3) "m" / 2","00 "m" = 633 "nm" $
 
 Vergleich mit dem Literaturwert des He-Ne-Lasers: 632,8 nm.
 
@@ -188,7 +188,7 @@ $m = 4","90$ V, $b = 5","50$ V, $R^2 = 1","0000$.
 Damit ist die Anregungsenergie $Delta E = e dot 4","90$ V $= 4","90$ eV (Quecksilber) und die
 Kontaktspannung $U_"K" = 5","50$ V. Die Photonenwellenlänge der zugehörigen Emission:
 
-$ lambda = h c \/ Delta E = 1239","8 "eV nm" \/ 4","90 "eV" = 253 "nm" $
+$ lambda = h c / Delta E = 1239","8 "eV nm" / 4","90 "eV" = 253 "nm" $
 
 Genau diese 253 nm sind die ultraviolette Quecksilberlinie, die man beim Versuch mit
 Leuchtschirm beobachtet.
@@ -209,7 +209,7 @@ $ ln s = ln s_0 - k t $
 
 Regression: $m = -0","1996$ 1/s, $b = -2","302$, $R^2 = 0","99999$.
 
-$ k = -m = 0","200 "1"\/"s" quad tau = 1\/k = 5","0 "s" quad s_0 = e^b = 0","100 "m" $
+$ k = -m = 0","200 "1"/"s" quad tau = 1/k = 5","0 "s" quad s_0 = e^b = 0","100 "m" $
 
 Der Achsenabschnitt ist hier keine Nebensache: $e^b$ liefert die Anfangsamplitude.
 
@@ -260,9 +260,9 @@ Der Achsenabschnitt ist hier keine Nebensache: $e^b$ liefert die Anfangsamplitud
 
   Regression von $T^2$ gegen $m$:
 
-  $ m_"Reg" = 3","98 "s"^2\/"kg" quad b = -0","003 "s"^2 quad R^2 = 0","99999 $
+  $ m_"Reg" = 3","98 "s"^2/"kg" quad b = -0","003 "s"^2 quad R^2 = 0","99999 $
 
-  $ D = 4 pi^2 \/ m_"Reg" = 39","48 \/ 3","98 "s"^2\/"kg" = 9","9 "N"\/"m" $
+  $ D = 4 pi^2 / m_"Reg" = 39","48 / 3","98 "s"^2/"kg" = 9","9 "N"/"m" $
 
   Der Achsenabschnitt ist innerhalb der Messgenauigkeit null – die Gerade geht durch den
   Ursprung, wie es die Theorie verlangt. Die Residuen sind kleiner als 0,01 s², das Modell ist
@@ -290,14 +290,14 @@ Der Achsenabschnitt ist hier keine Nebensache: $e^b$ liefert die Anfangsamplitud
 #lösung[
   Aus $r = lambda a \/ d$ und $lambda = h\/sqrt(2 m_e e U)$ folgt
 
-  $ r^2 = (h a \/ d)^2 \/ (2 m_e e) dot 1\/U $
+  $ r^2 = (h a / d)^2 / (2 m_e e) dot 1/U $
 
   Also ist $r^2$ linear in $1\/U$ mit der Steigung $M = (h a \/ d)^2 \/ (2 m_e e)$; daraus
   $d = h a \/ sqrt(2 m_e e M)$.
 
   Regression: $M = 0","6086 "m"^2 "V"$, $R^2 = 0","99995$.
 
-  $ d = 1","226 dot 10^(-9) "m V"^(1\/2) dot 0","135 "m" \/ sqrt(0","6086 "m"^2 "V") = 2","12 dot 10^(-10) "m" $
+  $ d = 1","226 dot 10^(-9) "m V"^(1\/2) dot 0","135 "m" / sqrt(0","6086 "m"^2 "V") = 2","12 dot 10^(-10) "m" $
 
   $d approx 0","212$ nm. Das ist der für Graphit erwartete Wert (etwa 0,21 nm), womit die
   de-Broglie-Beziehung bestätigt ist.

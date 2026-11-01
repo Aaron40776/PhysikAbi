@@ -83,7 +83,7 @@ $ A(t) = A_0 e^(-k t), quad delta = ln frac(A(t), A(t+T)) = k T $
 Der Erreger bei $x = 0$ schwingt mit $A sin(omega t)$. Am Ort $x$ kommt die Bewegung nach der
 Laufzeit $x \/ c$ an:
 
-$ s(x,t) = A sin(omega (t - x\/c)) = A sin(2 pi (frac(t, T) - frac(x, lambda))) $
+$ s(x,t) = A sin(omega (t - x/c)) = A sin(2 pi (frac(t, T) - frac(x, lambda))) $
 
 $lambda$ gehört zum Ort, $T$ zur Zeit, und $c = lambda \/ T$.
 

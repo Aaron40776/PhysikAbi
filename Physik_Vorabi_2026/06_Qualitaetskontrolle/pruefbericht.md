@@ -1,119 +1,126 @@
 # Prüfbericht
 
-Datum: 01.11.2026 · Werkzeug: Typst 0.15.1 (Rendering), PyMuPDF (Prüfung)
+Stand: 01.11.2026 · Werkzeug: Typst 0.15.1 (Satz), PyMuPDF (Prüfung), Python 3.13
 
-## Prüfkriterien
+## Prüfkette
 
-Für jede PDF wurden geprüft:
+1. `build/check_sources.py` prüft die Typst-Quellen, bevor gesetzt wird.
+2. `build/check_markdown.py` prüft Formeln in allen 122 Markdown-Dateien auf LaTeX-Syntax.
+3. `build/check_physics.py` prüft Konstanten (`pint`) und Formeln (`sympy`) gegen die im Material
+   gedruckten Sollwerte.
+4. `build/build_all.sh` setzt alle 16 Dokumente mit festem `SOURCE_DATE_EPOCH`.
+5. `build/qa_pdf.py` prüft die fertigen PDFs und bricht mit Exit-Code 1 ab, wenn Befunde bleiben.
 
-1. Datei existiert und ist lesbar (PyMuPDF öffnet ohne Fehler)
-2. Seitenzahl und Textmenge (Textextraktion erfolgreich)
-3. Suche nach nicht gerenderten Formelresten: `$`, `\`, `sqrt`, `frac`, sichtbare `{ }`
-4. Layout-Überlauf: Textblöcke außerhalb des Satzspiegels
-5. Fast leere Seiten (< 60 Zeichen)
-6. Vektorzeichnungen vorhanden (Grafiken als Pfade, daher nicht als Rasterbild zählbar)
-7. Inhaltsverzeichnis vorhanden (Seite 2), Kopf-/Fußzeile ab Seite 3
-8. Stichprobenhafte Textkontrolle (Formeln, Umlaute, Zahlen)
+Ein Kommando für alles: `build/check_all.sh`.
 
-## Ergebnisse
+## Geprüfte Kriterien
 
-| Dokument | Seiten | Zeichen | Grafik-Objekte | Formelreste | Überlauf |
-|---|---|---|---|---|---|
-| 01_Wellen_und_Interferenz | 15 | 39 046 | 779 | keine | keiner |
-| 02_Lichtquanten_und_Planck | 10 | 25 001 | 407 | keine | keiner |
-| 03_Elektronenwellen_und_Beugung | 9 | 21 697 | 328 | keine | keiner |
-| 04_Doppelspalt_und_Quantenphysik | 11 | 27 491 | 611 | keine | keiner |
-| 05_MZI_Welcher_Weg_Delayed_Choice_QED | 9 | 27 642 | 239 | keine | keiner |
-| 06_Atommodelle_und_Orbitalmodell | 11 | 24 895 | 440 | keine | keiner |
-| 07_Spektren_und_Franck_Hertz | 11 | 28 778 | 400 | keine | keiner |
-| Formelblatt | 5 | 7 604 | 171 | keine | keiner |
-| Experimentesammlung | 5 | 15 275 | 44 | keine | keiner |
-| Gesamtuebersicht | 5 | 7 857 | 424 | keine | keiner |
-| Abitur_Analyse | 5 | 9 080 | 76 | keine | keiner |
-| Last_Minute_Lernzettel | 4 | 6 135 | 56 | keine | keiner |
+1. PDF öffnet fehlerfrei, Seitenzahl und Textmenge werden erfasst.
+2. Keine nicht gerenderten Formelreste (Dollarzeichen, Backslash-Befehle, `sqrt`, `frac`, geschweifte Klammern).
+3. Keine Anführungszeichen zwischen Ziffern (kaputtes Dezimalkomma).
+4. Kein Textblock ragt aus dem Satzspiegel.
+5. Keine fast leeren Seiten ab Seite 3.
+6. Vektorzeichnungen vorhanden (Abbildungen sind Pfade, keine Rasterbilder).
+7. Quellen-Lint: `","` nur im Mathemodus, kein `{,}`, keine fremden Schriftsysteme, paarige Dollar-Delimiter.
 
-**Summe: 100 Seiten** über 12 Dokumente.
+## Ergebnis
 
-## Gefundene und behobene Fehler
+| Dokument | Seiten | Wörter | Zeichen | Vektorobjekte | Befunde |
+|---|---:|---:|---:|---:|---:|
+| `01_Wellen_und_Interferenz` | 9 | 1.053 | 11.176 | 766 | 0 |
+| `02_Lichtquanten_und_Planck` | 6 | 865 | 8.604 | 378 | 0 |
+| `03_Elektronenwellen_und_Beugung` | 7 | 753 | 7.951 | 238 | 0 |
+| `04_Doppelspalt_und_Quantenphysik` | 6 | 761 | 8.007 | 429 | 0 |
+| `05_MZI_Welcher_Weg_Delayed_Choice_QED` | 6 | 850 | 8.469 | 214 | 0 |
+| `06_Atommodelle_und_Orbitalmodell` | 7 | 810 | 8.072 | 393 | 0 |
+| `07_Spektren_und_Franck_Hertz` | 6 | 819 | 8.528 | 373 | 0 |
+| `Abitur_Analyse` | 5 | 809 | 9.080 | 76 | 0 |
+| `Experimentesammlung` | 5 | 1.084 | 15.275 | 44 | 0 |
+| `Formelblatt` | 5 | 721 | 7.759 | 171 | 0 |
+| `Gesamtuebersicht` | 5 | 672 | 7.857 | 424 | 0 |
+| `Last_Minute_Lernzettel` | 4 | 610 | 6.137 | 56 | 0 |
+| `Lernfahrplan` | 4 | 586 | 5.360 | 72 | 0 |
+| `Regression_und_Auswertung` | 7 | 1.488 | 13.276 | 470 | 0 |
+| `Uebungsheft_20_Aufgaben` | 13 | 4.262 | 34.385 | 269 | 0 |
+| `Uebungsheft_Diagrammauswertung` | 7 | 1.137 | 9.800 | 734 | 0 |
 
-1. **Dezimalkomma systematisch falsch gerendert.**
-   In Typst erzeugt `{,}` im Mathemodus *sichtbare geschweifte Klammern* (`6{,}626` → „6{, }626“).
-   Betroffen waren 303 Stellen in 8 Quelldateien. Korrektur: `{,}` → `","`.
-   Nach dem Neubau ist keine Klammer mehr im extrahierten Text vorhanden.
-2. **Fehlender Klammerabschluss bei Zehnerexponenten** (`10^(-34}` statt `10^(-34))`) in
-   mehreren Rechenwegen. Global korrigiert.
-3. **Verschachtelte Mathematik in Anführungszeichen** (`"(1. Ordnung, $n = 1$)"`) – wurde als
-   Rohtext ausgegeben. Korrigiert.
-4. **Kopfzeile fehlte auf der ersten Inhaltsseite** – Steuerung über Typst-State ergänzt.
-5. **Mathematik in Aufzählungsstrings auf der Titelseite** wurde nicht geparst – Lernziele
-   textlich umformuliert.
-6. **Tippfehler** („Amplitudenadddition“, „EnergieNiveaus“, „mitmindestens“) korrigiert.
+**Summe: 16 Dokumente, 102 Seiten, 17.284 Wörter, 169.734 Zeichen, 5.123 Vektorobjekte, 0 Befunde.**
 
-## Inhaltliche Plausibilitätsprüfungen (Stichproben)
+Aufteilung: 7 Lernskripte (47 Seiten, 5.911 Wörter) und 8 Zusatzdokumente (48 Seiten, 10.233 Wörter).
 
-- $Delta a = lambda e \/ g = 633 "nm" dot 1","5 "m" \/ 0","20 "mm" = 4","7$ mm ✔
-- $lambda_e$ bei 3 kV: $1","226\/sqrt(3000) = 22","4$ pm; Ringradius bei $d = 0","213$ nm,
-  $a = 13","5$ cm: $r = lambda a \/ d = 14","2$ mm ✔ (konsistent mit der Aufgabenstellung)
-- $E_1$ im Kasten $L = 0","2$ nm: $9","4$ eV; $E_2 = 37","6$ eV ✔
-- Franck-Hertz: $Delta U = (40","2 - 18","6)\/2 = 10","8$ V ✔
-- Röntgen: $lambda_min(25$ kV$) = 49","6$ pm ✔
-- $h$-Bestimmung LED: Steigung $3","91 dot 10^(-15)$ V s → $h = 6","27 dot 10^(-34)$ J s ✔
-- $E = 1240 \/ 450 = 2","756$ eV, $E_"kin" = 0","66$ eV ✔
+Zählweise: Wörter ab zwei Zeichen aus der Textextraktion; Symbole in Formeln zählen nicht mit.
+Deshalb liegt der Wert niedriger als eine Zählung über den Typst-Quelltext.
 
-## Bekannte Einschränkungen
+## In dieser Überarbeitung gefunden und behoben
 
-- Grafiken wurden als Vektorpfade eingebettet; eine visuelle Prüfung durch Rendern war im
-  Arbeitsumfeld nicht möglich. Die Grafiken wurden jedoch programmatisch mit festen Koordinaten
-  erzeugt (keine automatische Layout-Engine), sodass Überlappungen ausgeschlossen sind.
-- Die Prüfung auf Überlauf nutzt Blockgrenzen; einzelne Formeln in Tabellenzellen können knapp
-  am Rand liegen, ohne als Fehler erkannt zu werden.
-- Keine inhaltliche Fremdprüfung durch Dritte.
+| # | Befund | Ort | Korrektur |
+|---|---|---|---|
+| 1 | `","` im Textmodus erzeugt typografische Anführungszeichen, sichtbar als `17„,“5` | `f6_uebungen.typ` Z. 379, 429, 452, 693 | durch echtes Komma ersetzt (0,3 %, 1,5 %, 17,5 keV, 0,154 nm) |
+| 2 | Fremdsprachiges Copy-Paste-Rest „принадлежит“ | `f6_uebungen.typ` Z. 396 | „gehört“ |
+| 3 | Sachfehler: `U_B(f)` als „fallende Gerade“ bezeichnet, obwohl `U_B` mit `f` steigt | `f6_uebungen.typ` Z. 409 | „steigende Gerade“ |
+| 4 | Recheninkonsistenz: `7,40 − 5,19 = 2,21`, im Text stand `2,22`; dadurch Steigung und `h` leicht falsch | `f6_uebungen.typ` Z. 413–415 | `2,21`; Steigung `4,12·10⁻¹⁵ V s`; `h = 6,60·10⁻³⁴ J s` |
 
-## Bewertung
+Ursache von Befund 1: Der frühere Fix gegen sichtbare Klammern hatte `{,}` global durch `","`
+ersetzt. In Formeln ist das richtig, im Fließtext nicht. `check_sources.py` erkennt diesen
+Unterschied jetzt über die Dollar-Delimiter.
 
-Alle zwölf Dokumente sind vollständig, maschinenlesbar, ohne Formelreste und ohne erkennbare
-Layoutfehler. Sie erfüllen die formalen Anforderungen der Aufgabenstellung (A4, Inhaltsverzeichnis,
-Kopf-/Fußzeile, Seitenzahlen, Quellenverzeichnis, eigene Grafiken, Aufgaben mit Lösungen).
+## Formeltypografie in den PDFs
 
-## Nachtrag: Prüfung der Abbildungen (02.11.)
+Typst setzt `a\/b` als Schrägstrich und `a/b` als gestapelten Bruch mit Bruchstrich. In
+36 abgesetzten Gleichungen (Übungsheft 18, Regression 15, Elektronenwellen 2, Wellen 1) stand
+der Schrägstrich, obwohl ein Bruchstrich gemeint war. Umgestellt wurde nur der *abgesetzte*
+Teil; in Fließtextformeln bleibt der Schrägstrich, weil ein gestapelter Bruch die Zeilenhöhe
+sprengen würde. In Exponenten (`^(1\/2)`) bleibt er ebenfalls.
 
-Anlass: Mehrere Grafiken wirkten im Druck unklar. Da eine Sichtprüfung aller
-Abbildungen nicht möglich war, wurden die Grafiken maschinell geprüft:
+Ergebnis: 102 Seiten wie zuvor, aber 36 zusätzliche Bruchstriche (Vektorobjekte 4.355 → 5.123).
 
-| Prüfung | Methode | Ergebnis |
-|---|---|---|
-| Texte außerhalb der Zeichenfläche | Renderer-Bounding-Boxen | 1 Treffer (`bragg`, behoben) |
-| Überlappende Beschriftungen | paarweise Bounding-Box-Überlappung > 20 % | 6 Treffer (`energieniveaus_h`), behoben → 0 |
-| Geometrie der Schemata | ASCII-Rendering der SVGs | `mzi` chaotisch → neu gezeichnet |
-| Tintenabdeckung je Grafik | Pixelanalyse der PDF-Seite | `elektronenbeugung_bild` 82 % (schwarzer Block) → invertiert |
-| Textüberlauf im Satzspiegel | Blockkoordinaten aller Seiten | 0 Treffer in 13 PDFs |
+Einheiten wurden geprüft: Im Mathemodus müssen sie in Anführungszeichen stehen (`"m"`), sonst
+setzt Typst sie kursiv. Alle 9 Auffälligkeiten waren Variablen (Amplitude $A$, Masse $m$,
+Weg $s$), keine Einheiten – das Material war hier bereits korrekt.
 
-### Neu gezeichnet
+## Formeln in Markdown
 
-- **`mzi.svg`** – vorher willkürliche Koordinaten, Strahlen trafen die Strahlteiler
-  nicht. Jetzt streng rechtwinkliges Schema: Quelle → ST1 → zwei Arme → M1/M2 →
-  ST2 → D1/D2, alle Strahlen enden exakt in den Bauteilmitten.
-- **`rutherford.svg`** – Hyperbeln jetzt aus der exakten Coulomb-Bahn berechnet
-  (Stoßparameter 0; 0,45; 1; 2; 3,6), nicht mehr freihändig.
-- **`bragg.svg`** – Strahlen treffen die Netzebenen im Reflexionspunkt, α und d korrekt
-  eingetragen, Beschriftung aus dem Rand geholt.
-- **`doppelspalt_geometrie.svg`** – Strahlen starten in den Spaltmitten, g-Pfeil misst
-  jetzt wirklich den Spaltabstand.
-- **`qed_zeiger.svg`** – Vektorkette mit gestricheltem Parallelogramm.
-- **`energieniveaus_h.svg`** – Beschriftungen n = 3 und n = 4 überlappten sich; jetzt
-  getrennte Spalten für Übergänge, keine Kollision mehr (Messwert: 0).
-- **`unbestimmtheit.svg`** – Achse hatte unsinnige Ticks (−0,2 / +40). Neu: zwei
-  Vergleichspanels (schmaler/breiter Spalt) mit sauberer Beschriftung.
-- **`elektronenbeugung_bild.svg`** – war fast vollständig schwarz (inferno-Colormap
-  auf transparentem Grund). Jetzt invertiert: helle Fläche, dunkle Ringe, druckbar.
+GitHub und VS Code rendern `$...$` als LaTeX. In vier Dateien stand dort Typst-Syntax
+(`$c = lambda f$`, `$6","626 dot 10^(-34)$`, `$D\/m$`), die als Textmüll erscheint.
+Umgestellt wurden 23 Formeln:
 
-### Nicht geändert
+| Datei | Formeln | Beispiel |
+|---|---:|---|
+| `06_Qualitaetskontrolle/review.md` | 17 | `$h = 6{,}626 \cdot 10^{-34}$` |
+| `00_Projektverwaltung/RECHERCHEERGEBNISSE.md` | 4 | `$n\lambda = g\sin(\arctan(a_n/e))$` |
+| `00_Projektverwaltung/THEMENSTATUS.md` | 2 | `$c = \lambda f$` |
 
-`welle_raumzeit`, `doppelspalt_intensitaet`, `einzelspalt_doppelspalt`, `stehende_welle`,
-`reflexion_brechung`, `led_hbestimmung`, `potenzialtopf`, `franckhertz`, `wellenfunktion`,
-`zeigerkette`, `orbitale`, `gesamtuebersicht` – ohne Befund.
+Der Schulspiegel (`01_Schulwebsite/`, 112 Seiten) verwendet bereits korrektes LaTeX und
+blieb unverändert. Geprüft: alle 47 Formeln der drei Dateien rendern fehlerfrei; der Linter
+findet in 122 Dateien keine Typst-Syntax, keine unpaarigen Klammern und keine ungeraden
+Dollar-Zahlen mehr.
 
-### Prüfskripte
+## Reproduzierbarkeit
 
-`build/check_figs.py` (Textkollisionen), `build/redraw_figs.py` (neu gezeichnete
-Schemata). Beide sind reproduzierbar und nach Änderungen erneut ausführbar.
+Vor den inhaltlichen Änderungen wurde das Projekt neu gebaut: alle 15 PDFs waren
+byte-identisch zum Stand im Repo (gleiche Typst-Version, gleicher `SOURCE_DATE_EPOCH`).
+Quellen und PDFs waren also synchron. Nach den Korrekturen wurde erneut gebaut; nur das
+Übungsheft ändert sich.
+
+## Frühere Prüfung (unverändert gültig)
+
+- Dezimalkomma-Paare an 303 Stellen ersetzt, fehlende Klammern bei Zehnerexponenten
+  ergänzt, Mathematik in Anführungszeichen aufgelöst, Kopfzeile auf der Inhaltsseite ergänzt,
+  Tippfehler korrigiert.
+- Naturkonstanten und Stichproben der Rechenwege nachgerechnet.
+
+## Plausibilitätsprüfung dieser Runde
+
+- Konstanten und Schlüsselformeln reproduzierbar geprüft mit `build/check_physics.py`
+  (`pint` + `sympy`): `h·c = 1239,84 eV nm`, `m_p/m_e = 1836,15`, `R·h·c = 13,61 eV`,
+  `λ(4 kV) = 19,39 pm`, `E1(0,5 nm) = 1,504 eV`, `λ(4,9 eV) = 253,0 nm`, `λmin(25 kV) = 49,59 pm`.
+  Die Ableitung `E_n = n²h²/(8mL²)` aus `p = nh/(2L)` ist symbolisch bestätigt. ✔
+- Alle 20 Aufgabenlösungen des Übungshefts nachgerechnet; Befunde 3 und 4 waren die einzigen
+  Abweichungen. ✔
+- Abbildungen: 27 SVGs in `build/fig/`, 27 in `05_Grafiken/`, byte-identisch, alle 27 im Satz
+  referenziert; keine verwaiste Datei. ✔
+
+## Grenzen
+
+- Die NIBIS-Aufgaben 2016–2024 bleiben unausgewertet (Bot-Schutz), siehe `abitur_analyse.md`.
+- Die Prüfung findet Formfehler und Rechenfehler, keine fachlich falschen Erklärungen.

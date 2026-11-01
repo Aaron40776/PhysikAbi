@@ -326,7 +326,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
 
 #lösung[
   *Zu A1 (Aufgabe 1).*
-  (1.1) $Delta a = lambda e \/ g = (632","8 dot 10^(-9) "m" dot 2","00 "m")\/(0","250 dot 10^(-3) "m")
+  (1.1) $Delta a = lambda e / g = (632","8 dot 10^(-9) "m" dot 2","00 "m")/(0","250 dot 10^(-3) "m")
   = 5","06 dot 10^(-3)$ m $approx 5","1$ mm.
   Abstand zwischen den beiden Maxima 1. Ordnung: $2 Delta a = 10","1$ mm (denn das Maximum
   0. Ordnung liegt in der Mitte).
@@ -376,7 +376,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   (3.2) $lambda = 2 Delta x = 2 dot 4","3$ mm $= 8","6$ mm;
   $c = lambda f = 8","6 dot 10^(-3) "m" dot 40","0 dot 10^3 "Hz" = 344$ m/s.
 
-  (3.3) Die Abweichung zum Literaturwert (343 m/s) beträgt etwa 0","3 %, also weniger als die
+  (3.3) Die Abweichung zum Literaturwert (343 m/s) beträgt etwa 0,3 %, also weniger als die
   Messunsicherheit der Positionen (die Maxima sind breit). Das Ergebnis ist gut verträglich; die
   verbleibende Abweichung lässt sich durch Temperatur (Schallgeschwindigkeit steigt mit $T$) und
   die Ablesegenauigkeit von $Delta x$ erklären.
@@ -384,7 +384,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
 
 #lösung[
   *Zu A4 (Aufgabe 4).*
-  (4.1) Minima bei $b sin alpha = n lambda$. Für das 1. Minimum: $sin alpha = 500 "nm"\/(0","10 "mm")
+  (4.1) Minima bei $b sin alpha = n lambda$. Für das 1. Minimum: $sin alpha = 500 "nm"/(0","10 "mm")
   = 5","0 dot 10^(-3)$; $a_1 = e tan alpha approx e sin alpha = 2","0 dot 5","0 dot 10^(-3)
   = 10$ mm. Das zentrale Maximum reicht von $-10$ mm bis $+10$ mm, ist also $20$ mm breit.
 
@@ -393,7 +393,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   Winkelbreite. Physikalisch: Ein schmalerer Spalt legt den Ort genauer fest und vergrößert damit
   die Impulsunbestimmtheit quer zur Ausbreitung – die Beugungsfigur wird breiter.
 
-  (4.3) Skizze: Zwei Kurven mit gleicher Höhe, die breitere Kurve принадлежит zu $b = 0","05$ mm.
+  (4.3) Skizze: Zwei Kurven mit gleicher Höhe, die breitere Kurve gehört zu $b = 0","05$ mm.
   Beschriftung: Ordinate $I\/I_0$, Abszisse Ort $a$; Markierungen bei $plus.minus 10$ mm und
   $plus.minus 20$ mm für die ersten Minima; Bezeichnung „Zentralmaximum“ in der Mitte,
   „1. Nebenmaximum“ beidseitig.
@@ -406,17 +406,17 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   (5.1) $f = c\/lambda$:
   405 nm → $7","40 dot 10^14$ Hz; 436 nm → $6","88 dot 10^14$ Hz; 546 nm → $5","49 dot 10^14$ Hz;
   578 nm → $5","19 dot 10^14$ Hz.
-  Auftragung $U_B$ über $f$ ergibt eine fallende Gerade (je größer $f$, desto größer $U_B$).
+  Auftragung $U_B$ über $f$ ergibt eine steigende Gerade (je größer $f$, desto größer $U_B$).
 
   (5.2) Aus $e U_B = h f - W_A$ folgt $U_B = (h\/e) f - W_A\/e$. Die Steigung ist also $h\/e$.
-  Aus den Werten: $Delta U_B \/ Delta f = (1","16 - 0","25)\/(7","40 - 5","19) dot 10^14
-  = 0","91\/(2","22 dot 10^14) = 4","11 dot 10^(-15)$ V s.
-  Damit $h = 4","11 dot 10^(-15) "V s" dot 1","602 dot 10^(-19) "C" = 6","58 dot 10^(-34)$ J s
+  Aus den Werten: $Delta U_B / Delta f = (1","16 - 0","25)/(7","40 - 5","19) dot 10^14
+  = 0","91/(2","21 dot 10^14) = 4","12 dot 10^(-15)$ V s.
+  Damit $h = 4","12 dot 10^(-15) "V s" dot 1","602 dot 10^(-19) "C" = 6","60 dot 10^(-34)$ J s
   – Abweichung zum Literaturwert ($6","626 dot 10^(-34)$ J s) unter 1 %.
   Achsenabschnitt: $U_B = 0$ bei $f_G$. Aus der Geraden folgt $W_A\/e = 1","90$ V, also
   $W_A = 1","90$ eV.
 
-  (5.3) $f_G = W_A\/h = (1","90 dot 1","602 dot 10^(-19) "J")\/(6","626 dot 10^(-34) "J s")
+  (5.3) $f_G = W_A/h = (1","90 dot 1","602 dot 10^(-19) "J")/(6","626 dot 10^(-34) "J s")
   = 4","59 dot 10^14$ Hz;
   $lambda_G = c\/f_G = 6","53 dot 10^(-7)$ m $approx 653$ nm.
 ]
@@ -425,8 +425,8 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   *Zu B2 (Aufgabe 6).*
   (6.1) $E = h c\/lambda = 1240 "eV nm"\/470 "nm" = 2","64$ eV.
 
-  (6.2) $h = e U_S lambda \/ c = (1","602 dot 10^(-19) dot 2","60 dot 470 dot 10^(-9))
-  \/(2","998 dot 10^8) = 6","53 dot 10^(-34)$ J s. Das sind etwa 1","5 % unter dem Literaturwert.
+  (6.2) $h = e U_S lambda / c = (1","602 dot 10^(-19) dot 2","60 dot 470 dot 10^(-9))
+  /(2","998 dot 10^8) = 6","53 dot 10^(-34)$ J s. Das sind etwa 1,5 % unter dem Literaturwert.
 
   (6.3) Nein, nicht ohne Weiteres. Der Einsatzpunkt ist visuell schwer zu bestimmen (die LED
   leuchtet allmählich), die Wellenlänge hat eine spektrale Breite von einigen Nanometern, und der
@@ -449,7 +449,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   Targetatome; ihre Energie ist eine Materialeigenschaft (Ordnungszahl).
 
   (7.4) 12 kV liefern Elektronen mit höchstens 12 keV. Die $K_alpha$-Linie von Molybdän benötigt
-  aber 17","5 keV. Die Linie kann also *nicht* angeregt werden – man sieht nur das Bremsspektrum
+  aber 17,5 keV. Die Linie kann also *nicht* angeregt werden – man sieht nur das Bremsspektrum
   (mit $lambda_min = 1240\/12000 = 0","103$ nm).
 ]
 
@@ -461,7 +461,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   $= 19","4$ pm.
 
   (8.2) Aus $lambda = d r\/(n a)$ mit $n = 1$:
-  $d = lambda a \/ r = (0","0194 dot 10^(-9) dot 0","135)\/(12","3 dot 10^(-3))
+  $d = lambda a / r = (0","0194 dot 10^(-9) dot 0","135)/(12","3 dot 10^(-3))
   = 2","13 dot 10^(-10)$ m $approx 0","213$ nm. Das ist der typische Netzebenenabstand von
   Graphit.
 
@@ -569,14 +569,14 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
 
 #lösung[
   *Zu D4 (Aufgabe 14).*
-  (14.1) $Delta x = b = 50$ µm. Abschätzung $Delta p_x approx h\/b
-  = 6","626 dot 10^(-34)\/5","0 dot 10^(-5) = 1","3 dot 10^(-29)$ kg m/s.
+  (14.1) $Delta x = b = 50$ µm. Abschätzung $Delta p_x approx h/b
+  = 6","626 dot 10^(-34)/5","0 dot 10^(-5) = 1","3 dot 10^(-29)$ kg m/s.
   Dann $Delta x dot Delta p_x approx 50 dot 10^(-6) dot 1","3 dot 10^(-29)) = 6","6 dot 10^(-34)$
   J s $approx h$ – die Relation ist erfüllt.
 
   (14.2) $Delta f approx 1\/Delta t = 1\/(10 dot 10^(-9)) = 1","0 dot 10^8$ Hz $= 100$ MHz.
   Die Energieunschärfe ist $Delta E = h Delta f = 6","6 dot 10^(-26)$ J $approx 4 dot 10^(-7)$
-  eV. Für eine Linie bei 500 nm ($f = 6","0 dot 10^14$ Hz) ist $Delta f\/f approx 1","7 dot
+  eV. Für eine Linie bei 500 nm ($f = 6","0 dot 10^14$ Hz) ist $Delta f/f approx 1","7 dot
   10^(-7)$, die Linie ist also extrem scharf (natürliche Linienbreite). Nur bei sehr kurzen
   Lebensdauern wird die Linie merklich breit.
 ]
@@ -606,7 +606,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   *Zu E2 (Aufgabe 16).*
   (16.1) Bei zentralem Stoß wird die gesamte kinetische Energie in potenzielle Energie umgewandelt:
   $E_"kin" = (1\/(4 pi epsilon_0)) dot (2 e dot 79 e)\/r_min$, also
-  $ r_min = (8","99 dot 10^9 dot 2 dot 79 dot (1","602 dot 10^(-19))^2)\/(5","0 dot 10^6 dot
+  $ r_min = (8","99 dot 10^9 dot 2 dot 79 dot (1","602 dot 10^(-19))^2)/(5","0 dot 10^6 dot
   1","602 dot 10^(-19)) $.
   Zähler: $8","99 dot 10^9 dot 158 dot 2","566 dot 10^(-38) = 3","64 dot 10^(-26)$;
   Nenner: $8","01 dot 10^(-13)$. Ergebnis $r_min approx 4","5 dot 10^(-14)$ m $= 45$ fm.
@@ -629,8 +629,8 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   mit $L = n lambda\/2$. Mit $p = h\/lambda = n h\/(2L)$ folgt
   $E_n = p^2\/(2 m_e) = n^2 h^2\/(8 m_e L^2)$.
 
-  (17.2) Vorfaktor: $h^2\/(8 m_e L^2) =
-  (6","626 dot 10^(-34))^2\/(8 dot 9","109 dot 10^(-31) dot (5","0 dot 10^(-10))^2)$.
+  (17.2) Vorfaktor: $h^2/(8 m_e L^2) =
+  (6","626 dot 10^(-34))^2/(8 dot 9","109 dot 10^(-31) dot (5","0 dot 10^(-10))^2)$.
   Zähler $4","39 dot 10^(-67)$; Nenner $8 dot 9","109 dot 10^(-31) dot 2","5 dot 10^(-19)
   = 1","82 dot 10^(-48)$. Vorfaktor $2","41 dot 10^(-19)$ J $= 1","50$ eV.
   Also $E_1 = 1","50$ eV, $E_2 = 6","02$ eV, $E_3 = 13","5$ eV.
@@ -690,7 +690,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   (20.3) Skizze: Abszisse $lambda$ (nach rechts zunehmend), Ordinate Intensität. Kontinuierliche
   Kurve, die bei $lambda_min = 0","0354$ nm beginnt, ein Maximum durchläuft und zu großen
   Wellenlängen abfällt; darüber zwei bis drei scharfe Peaks (die $K$-Linien von Kupfer, z. B.
-  $K_alpha$ bei 0","154 nm). Beschriftung: „Bremsspektrum“ (Kontinuum), „charakteristische Linien“,
+  $K_alpha$ bei 0,154 nm). Beschriftung: „Bremsspektrum“ (Kontinuum), „charakteristische Linien“,
   „$lambda_min$“.
 
   (20.4) Eine Linie bei 0,25 nm entspricht $E = 1240\/0","25 = 4","96$ keV. Diese Energie ist

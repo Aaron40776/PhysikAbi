@@ -127,3 +127,32 @@ Gesamt 121 -> 95 Seiten, 60.663 -> 33.762 Wörter (-44 %).
 
 **Geprüft:** 0 Formelreste (`{`, `}`, `$`, `\`), 0 Textüberläufe, alle Figuren eingebunden,
 `build_all.sh` läuft ohne Fehler durch.
+
+## Nachtrag 6 (01.11.2026) – Überarbeitung mit durchgängiger Prüfkette
+
+- [x] Alle 15 Dokumente reproduzierbar neu gebaut (Typst 0.15.1). Vor den inhaltlichen
+      Änderungen waren alle PDFs byte-identisch zum Repo-Stand – Quellen und PDFs sind synchron.
+- [x] 4 Stellen korrigiert, an denen `","` im Fließtext sichtbare Anführungszeichen erzeugte
+      (0,3 %, 1,5 %, 17,5 keV, 0,154 nm).
+- [x] Fremdsprachiges Copy-Paste-Rest „принадлежит“ im Übungsheft durch „gehört“ ersetzt.
+- [x] Sachfehler: `U_B(f)` war als „fallende Gerade“ beschrieben, obwohl `U_B` mit `f` steigt.
+- [x] Recheninkonsistenz in Aufgabe 5 bereinigt: `7,40 − 5,19 = 2,21` (statt 2,22),
+      Steigung `4,12·10⁻¹⁵ V s`, `h = 6,60·10⁻³⁴ J s`.
+- [x] Neue Werkzeuge: `build/check_sources.py` (Quelltext-Lint) und erweitertes
+      `build/qa_pdf.py` (Formelreste, kaputte Zahlen, Exit-Code 1 bei Befunden).
+- [x] `build_all.sh` portabel gemacht: Typst über `PATH` oder `TYPST`, `set -euo pipefail`.
+- [x] Naturkonstanten (`pint`) und alle 20 Aufgabenlösungen nachgerechnet, 22 Abbildungen
+      auf Vollständigkeit und Synchronität geprüft.
+- [x] 23 Formeln in drei Markdown-Dateien von Typst-Syntax auf LaTeX umgestellt
+      (`$c = lambda f$` → `$c = \lambda f$`); GitHub rendert `$...$` als LaTeX, Typst-Syntax
+      erschien dort als Text. Alle 47 Formeln der Dateien rendern fehlerfrei.
+- [x] Neuer Linter `build/check_markdown.py` (122 Dateien: Typst-Syntax, Klammern,
+      Dezimalkomma, Dollar-Bilanz) und `build/check_all.sh` als Ein-Kommando-Gate.
+- [x] 36 abgesetzte Gleichungen auf echten Bruchstrich umgestellt (`\/` → `/`); Fließtext
+      und Exponenten bleiben Schrägstrich. Seitenzahl unverändert, 0 Befunde.
+- [x] Neues Dokument `04_Zusatzmaterial/Uebungsheft_Diagrammauswertung.pdf` (7 S., 40 P.):
+      5 Messreihen (Resonanzrohr, Entladung, Bremsweg, Fadenpendel, Steigungsdeutung) mit
+      Abbildungen aus `build/make_diag_figs.py`, Lösungen und Klausur-Checkliste.
+- [x] Schulspiegel kuratiert: Spalte `Vorabi` in `website_links.csv` (77 ja / 35 nein),
+      Index in `01_Schulwebsite/README.md`. Kein Material gelöscht.
+- Stand: **16 PDFs, 102 Seiten, 17.284 Wörter, 0 Befunde** (Messmethode im Prüfbericht).

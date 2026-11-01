@@ -9,20 +9,20 @@ Layout, Abbildungen, Reproduzierbarkeit. Alles hier Genannte wurde geprüft, nic
 
 | Ordner | Inhalt | Größe | Bewertung |
 |---|---|---|---|
-| `03_Lernskripte` | 7 Themen-PDFs | 2,0 MB | **Lernmaterial – das brauchst du wirklich** |
-| `04_Zusatzmaterial` | 6 PDFs inkl. Übungsheft | 1,0 MB | **Lernmaterial** |
-| `05_Grafiken` | 21 SVGs, automatisch aus `build/fig` kopiert | 0,8 MB | Belegmaterial, im PDF ohnehin enthalten |
+| `03_Lernskripte` | 7 Themen-PDFs | 1,2 MB | **Lernmaterial – das brauchst du wirklich** |
+| `04_Zusatzmaterial` | 8 PDFs inkl. Übungsheft | 1,2 MB | **Lernmaterial** |
+| `05_Grafiken` | 27 SVGs, automatisch aus `build/fig` kopiert | 0,8 MB | Belegmaterial, im PDF ohnehin enthalten |
 | `02_Abiturrecherche` | 12 IQB-Aufgaben (PDF + Text), Analyse, CSV | 5,7 MB | **Belegmaterial** – wichtig für die Argumentation, nicht zum Lernen |
 | `01_Schulwebsite` | 113 gespiegelte Unterrichtsseiten | 2,1 MB | **Belegmaterial** – Quellenbasis |
 | `00_Projektverwaltung` | README, PROGRESS, Quellen, Themenstatus | 40 KB | Projektsteuerung |
 | `06_Qualitaetskontrolle` | Prüfbericht, dieses Review | 20 KB | Nachweis der Prüfung |
 | `build` | Typst-Quellen, Figuren-Skripte, Build-Skript | 1,1 MB | **Nötig, wenn du etwas ändern willst** |
 
-Gesamt: 13 MB, 113 Seiten PDF.
+Gesamt: 12 MB, 102 Seiten PDF in 16 Dokumenten.
 
 ### Ehrliche Einordnung
 
-Von den 13 MB sind rund **3 MB das, was du zum Lernen brauchst** (die 13 PDFs).
+Von den 12 MB sind rund **3 MB das, was du zum Lernen brauchst** (die 16 PDFs).
 Der Rest ist Handwerkszeug und Beweismaterial:
 
 - `01_Schulwebsite` ist kein Lernmaterial – es ist der Nachweis, dass die Inhalte aus
@@ -47,7 +47,7 @@ Alle 7 Skripte wurden gegen die von dir vorgegebenen Stichworte geprüft
 
 | Skript | Ergebnis |
 |---|---|
-| 1 Wellen/Interferenz | vollständig – **einzige Lücke: „Resonanzfrequenz“ fehlte als Begriff** (nur „Resonanz“) → **jetzt ergänzt** mit Definition, $f_R approx f_0 = 1\/(2 pi) sqrt(D\/m)$ und Hinweis auf die Verschiebung bei starker Dämpfung |
+| 1 Wellen/Interferenz | vollständig – **einzige Lücke: „Resonanzfrequenz“ fehlte als Begriff** (nur „Resonanz“) → **jetzt ergänzt** mit Definition, $f_R \approx f_0 = \frac{1}{2\pi}\sqrt{D/m}$ und Hinweis auf die Verschiebung bei starker Dämpfung |
 | 2 Lichtquanten | vollständig |
 | 3 Elektronenwellen | vollständig (inkl. Bragg, Davisson-Germer, Röhrentypen) |
 | 4 Doppelspalt/Quanten | vollständig (inkl. Komplementarität, Welcher-Weg, Wellenfunktion) |
@@ -83,18 +83,18 @@ Binärdateien. Mit `SOURCE_DATE_EPOCH` im Build-Skript ist der Build jetzt
 
 | Konstante | Vorkommen | geprüft |
 |---|---|---|
-| $h = 6","626 dot 10^(-34)$ J s | 21× | einheitlich |
-| $c = 2","998 dot 10^8$ m/s | 7× | einheitlich |
-| $e = 1","602 dot 10^(-19)$ C | 19× | einheitlich |
+| $h = 6{,}626 \cdot 10^{-34}$ J s | 21× | einheitlich |
+| $c = 2{,}998 \cdot 10^8$ m/s | 7× | einheitlich |
+| $e = 1{,}602 \cdot 10^{-19}$ C | 19× | einheitlich |
 | $h c = 1240$ eV nm | 35× | einheitlich |
-| $lambda_e = 1","226$ nm/√V | 14× | einheitlich |
-| $13","6$ eV (H-Grundzustand) | 27× | einheitlich |
+| $\lambda_e = 1{,}226$ nm/√V | 14× | einheitlich |
+| $13{,}6$ eV (H-Grundzustand) | 27× | einheitlich |
 
 Keine widersprüchlichen Rundungen, keine Mischung aus 6,63 und 6,626.
 
 ### d) Layout (geprüft, sauber)
 
-- 0 Textüberläufe über den Satzspiegel (alle 113 Seiten)
+- 0 Textüberläufe über den Satzspiegel (alle 102 Seiten)
 - 0 Abbildungen ohne Unterschrift am Seitenende
 - 0 nicht gerenderte Formeln (`{`, `}`, `$`, `\` im extrahierten Text)
 - kein Text, der aus Grafiken herausragt (Bounding-Box-Prüfung)
@@ -146,7 +146,7 @@ nur relevant, falls er im Unterricht noch behandelt wird.
 
 **Konstanten auf CODATA-Werte geprüft.** $h$, $c$, $e$, $m_e$, $m_p$, $k$, $r_1$, $R$ standen
 bereits in der genauen Form (6,626 / 2,998 / 1,602 / 9,109 / 1,673 / 8,99 / 5,29 / 1,097).
-Einziger gerundeter Wert war $h c = 1240$ eV nm. Jetzt überall $h c = 1239","8$ eV nm mit
+Einziger gerundeter Wert war $h c = 1240$ eV nm. Jetzt überall $h c = 1239{,}8$ eV nm mit
 ausdrücklichem Hinweis, dass 1240 die gerundete Rechenform ist (Abweichung 0,02 %, bei drei
 gültigen Ziffern folgenlos). Geändert: Formelblatt, Last-Minute-Zettel, Skript 2 (Herleitung).
 
@@ -155,13 +155,13 @@ Deckt das Auswertungshandwerk ab, das in Prüfungen vorausgesetzt wird:
 - Kette Messgröße → Diagramm → Ausgleichsgerade → Steigung mit Einheit → gesuchte Größe
 - Protokoll in acht Schritten (Tabelle: was tun / was im Heft stehen muss)
 - Zuordnung Auftragung → Gesetz → Bedeutung der Steigung (9 Fälle, u. a. $U_B$ über $f$,
-  $a_n$ über $n$, $T^2$ über $m$, $r^2$ über $1\/U$, $ln s$ über $t$)
+  $a_n$ über $n$, $T^2$ über $m$, $r^2$ über $1/U$, $\ln s$ über $t$)
 - Steigung, Achsenabschnitt, $R^2$, Residuen – was sie aussagen und was nicht (Abbildung mit
   Ausgleichsgerade und Residuenplot)
 - vier vollständig durchgerechnete Beispiele (Fotozelle, Doppelspalt, Franck-Hertz, Dämpfung)
 - Fehlertabelle, zwei Übungsaufgaben mit Lösung
 
 Alle Regressionswerte im Dokument wurden mit `numpy.polyfit` berechnet und gegengeprüft:
-Fotozelle $m = 4","11 dot 10^(-15)$ V s, $b = -1","88$ V, $R^2 = 0","99997$;
-Doppelspalt $m = 5","062$ mm, $lambda = 633$ nm; Franck-Hertz $m = 4","90$ V, $b = 5","50$ V;
-Dämpfung $k = 0","200$ 1/s; Übungsaufgaben $D = 9","9$ N/m bzw. $d = 0","212$ nm.
+Fotozelle $m = 4{,}11 \cdot 10^{-15}$ V s, $b = -1{,}88$ V, $R^2 = 0{,}99997$;
+Doppelspalt $m = 5{,}062$ mm, $\lambda = 633$ nm; Franck-Hertz $m = 4{,}90$ V, $b = 5{,}50$ V;
+Dämpfung $k = 0{,}200$ 1/s; Übungsaufgaben $D = 9{,}9$ N/m bzw. $d = 0{,}212$ nm.

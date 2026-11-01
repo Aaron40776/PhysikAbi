@@ -30,7 +30,7 @@ Bestand:
 - `02_Abiturrecherche/` – Aufgabenanalyse (NIBIS, IQB)
 - `00_Projektverwaltung/` – README, PROGRESS, QUELLENVERZEICHNIS, THEMENSTATUS
 
-Stand: rund 95 Seiten, ~33.700 Wörter. Die Skripte wurden gerade gestrafft; Formeln stehen als
+Stand: rund 102 Seiten, ~17.300 Wörter. Die Skripte wurden gerade gestrafft; Formeln stehen als
 abgesetzte Gleichungen mit `frac`/`sqrt`.
 
 Lies **zuerst** `00_Projektverwaltung/PROGRESS.md` und `README.md`. Dort steht, was bereits
