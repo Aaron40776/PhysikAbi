@@ -1,0 +1,604 @@
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2025 
+Aufgaben für das Fach Physik 
+Kurzbeschreibung 
+Aufgabentitel 
+Interferenzen bei Bluetooth-Signalen 
+Anforderungsniveau 
+erhöht 
+Inhaltsbereiche 
+♦ Mechanische und elektromagnetische Schwingungen und Wellen 
+♦ Schwingungen 
+♦ mechanische und elektromagnetische harmonische 
+Schwingungen: charakteristische Größen und ihre Zusam-
+menhänge 
+♦ Eigenschaften und Ausbreitung von Wellen 
+♦ harmonische Wellen: charakteristische Größen und ihre Zu-
+sammenhänge 
+♦ Überlagerung von Wellen 
+♦ stehende Wellen 
+♦ Interferenz am Doppelspalt auch mit polychromatischem 
+Licht 
+Materialien 
+♦ M 1 Bluetooth-Signale 
+♦ M 2 Experiment zur Bestimmung der Wellenlänge 
+♦ M 3 Verwendung von zwei Antennen zur Verstärkung des Signals 
+(Beamforming) 
+♦ M 4 Gesundheitsrisiken von Bluetooth 
+Quellenangaben 
+♦ M 1, M4 in Anlehnung an: Bundesamt für Strahlenschutz (2019). 
+Sprach- und Datenübertragung per Funk: Bluetooth und WLAN. 
+Verfügbar unter: https://www.bfs.de/SharedDocs/Down-
+loads/BfS/DE/broschueren/emf/info-bluethooth-und-
+wlan.pdf;jsessio-
+nid=8417BC304F73D47669FB8DE695812FA3.1_cid374?__blo
+b=publicationFile&v=7 (Zugriff am 30.11.2023) 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat1 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+fachpraktischer Anteil nein 
+ 
+1 siehe „Hinweise zur Verwendung von Hilfsmitteln“ 
+
+1  Aufgabe 
+ 
+ 
+2 
+1 
+Aufgabe 
+Interferenzen bei Bluetooth-Signalen 
+Heutzutage ist es problemlos möglich, mit Hilfe von Funkübertragung viele elektronische Ge-
+räte drahtlos miteinander zu verbinden. Anstelle von Kabeln werden zum Datenaustausch 
+elektromagnetische Wellen genutzt. Ein weit verbreiteter Funkstandard wird als „Bluetooth“ 
+bezeichnet und ermöglicht diese Übertragung auf besonders komfortable Weise. 
+  
+BE 
+1 Ein Sender soll Bluetooth-Signale aussenden (siehe M 1). 
+Ordnen Sie den Wellenlängenbereich dem elektromagnetischen Spektrum zu. 
+4 
+2 Zur Untersuchung eines bestimmten Bluetooth-Signals wird eine Anordnung wie in 
+Material 2 verwendet. 
+a Begründen Sie, dass es bei einer wie in Material 2 zu Abbildung 1 beschriebenen 
+Anordnung zur Ausbildung einer stehenden Welle kommt. 
+b Bestimmen Sie aus der Abbildung 2 die Frequenz des verwendeten Senders. 
+3 
+5 
+3 Ein guter Empfang erfordert eine hohe Intensität. Um das Signal in einer bestimmten 
+Richtung zu verstärken und so die Reichweite zu erhöhen, wird eine zweite Sende-
+antenne an den Sender angeschlossen wie in Material 3 beschrieben. 
+a Begründen Sie die beiden folgenden Beobachtungen: 
+♦ Längs der Symmetrieachse kann ein besserer Empfang erreicht werden.  
+♦ An anderen Orten kann eine deutliche Abschwächung der Intensität auftreten. 
+b Bestätigen Sie die Gleichung für die Bestimmung der Winkel minimaler Intensität 
+aus Material 3 unter Zuhilfenahme der Abbildung. 
+5 
+5 
+4 Die im Material 3 beschriebene Anordnung ergibt eine Verteilung der Intensität in der 
+Zeichenebene. 
+a Zeigen Sie für eine Wellenlänge von 12 cm, dass in Richtung der beiden Winkel 
+von etwa -37° und etwa +37° die Intensität in großer Entfernung zu den Antennen 
+nahezu Null ist. 
+Zeigen Sie, dass außer der Symmetrieachse keine weitere solche Verstärkungs-
+richtung existiert. 
+b In der Realität muss man den Winkel maximaler Intensität variieren können. 
+Stellen Sie eine Hypothese auf, wie dies technisch erreicht werden könnte. 
+6 
+4 
+5 Die Übertragung von Energie durch Bluetooth auf menschliches Gewebe macht 
+manchen Menschen Sorgen. Eine Schule überlegt, ihre 1000 Lernenden mit Tablets 
+auszustatten. Zur besseren Wartung sollen die Geräte dauerhaft mit Bluetooth ver-
+bunden sein.  
+Verfassen Sie einen Artikel für die Schulzeitung zur Frage der oben genannten An-
+schaffung der Tablets und ihrer Bluetooth-Wartung. Berücksichtigen Sie dabei Mate-
+rial 4 und auch mögliche Bedenken der Menschen und kommen Sie zu einer klaren 
+Position für oder gegen die Anschaffung. 
+8 
+
+2  Material 
+ 
+ 
+3 
+2 
+Material 
+Material 1: Bluetooth-Signale 
+Bluetooth ist ein Standard für die kabellose Verbindung von Geräten über kurze Entfernungen, 
+mit dem z. B. Musik und Sprache übertragen werden. Derartige Bluetooth-Signale nutzen 
+Funkfrequenzen im Bereich von etwa 2,40 bis 2,50 GHz. 
+Für eine funktionierende Übertragung muss die Intensität für den Empfänger ausreichend groß 
+sein. Die Intensität ist dabei eine zum Quadrat der Amplitude der elektrischen Feldstärke E 
+proportionale physikalische Größe. 
+Material 2: Experiment zur Bestimmung der Wellenlänge 
+Um die Frequenz der vom Sender S ausge-
+henden Strahlung im Experiment zu überprü-
+fen, wird der Sender auf eine etwa 1 m ent-
+fernte, senkrecht zur Ausbreitungsrichtung 
+der Welle stehende Metallplatte M gerichtet, 
+an der die Welle reflektiert wird. Mit einem ent-
+lang der Ausbreitungsrichtung beweglichen 
+Empfänger E zwischen Sender und Platte 
+wird die Intensität an verschiedenen Orten ge-
+messen (Abb. 1) 
+Abbildung 2 zeigt schematisch den Verlauf 
+der relativen Intensität abhängig vom Ort des 
+Empfängers, also seine Verschiebung um den 
+Weg s (in cm) längs der Ausbreitungsrichtung. 
+Eine Intensitätsabnahme kann im gemesse-
+nen Bereich vernachlässigt werden. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Abb. 2: relative Intensität vor einer Metallplatte 
+Abb. 1: Versuchsaufbau 
+
+2  Material 
+ 
+ 
+4 
+Material 3: Nutzung von zwei Antennen zur räumlichen Ausrichtung des Signals (Beam-
+forming) 
+Anstatt ein Signal von einer Sendeantenne in alle Richtungen auszustrahlen, nutzt Beamfor-
+ming mehrere Antennen, um das gleiche Signal auf ein einzelnes Empfangsgerät auszurichten 
+und zu senden. Eine zuverlässigere drahtlose Datenübertragung, bei der in einer gewünschten 
+Richtung die Reichweite erhöht werden kann, ist die Folge. Werden zwei baugleiche Sende-
+antennen so angeregt, dass sie gleichphasig dasselbe Signal aussenden, ist die Intensität in 
+bestimmten Bereichen erhöht und in anderen deutlich verringert. Im hier betrachteten Fall sol-
+len zwei Antennen S1 und S2 parallel nebeneinander im Abstand a = 10 cm stehen. S1 und 
+S2 sind in der Draufsicht in Abbildung 3 als Punkte zu sehen, die Zeichenebene verläuft durch 
+die Mittelpunkte der Antennen. 
+In bestimmten Richtungen, gekennzeichnet durch den Winkel α in Abbildung 3 kommt es dabei 
+zu fast vollständiger Auslöschung oder zu einer deutlichen Verstärkung des Signals: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Winkel mit minimaler Intensität: 
+(
+)
+(
+)
+min,
+2
+1
+sin
+2
+k
+k
+λ
+α
+a
+−
+=
+ 
+1, 2, 3,...
+=
+k
+ 
+Winkel mit maximaler Intensität: 
+(
+)
+max,
+sin
+k
+kλ
+α
+a
+=
+ 
+0,1, 2,...
+=
+k
+ 
+Dabei wird vorausgesetzt, dass die Interferenz in einer Entfernung deutlich weiter als a von 
+den Antennen entfernt betrachtet wird, so dass die Verbindungslinien von S1 und S2 zu dem 
+betrachteten Ort näherungsweise als parallel angesehen werden können. 
+ 
+ 
+ 
+ 
+ 
+Abb. 3: Anordnung mit zwei Sendeantennen S1 und S2 
+
+2  Material 
+ 
+ 
+5 
+Material 4: Gesundheitsrisiken von Bluetooth 
+Es gibt drei Sendeleistungsklassen, die abhängig von weiteren Parametern unterschiedliche 
+Reichweiten ermöglichen: 
+ 
+Klasse 
+3 
+2 
+1 
+Sendeleistung 
+bis 1,0 mW 
+bis 2,5 mW 
+bis 100 mW 
+Reichweite 
+bis höchstens 10 m 
+zwischen 10 m und 
+50 m 
+bis 100 m 
+Die meisten der auf dem Markt befindlichen Geräte gehören den Klassen 2 und 3 an. 
+Je höher die Sendeleistung ist, desto stärker sind die elektromagnetischen Felder eines Ge-
+räts. Im Alltag liegt die Leistung meistens unter der maximalen Sendeleistung der jeweiligen 
+Klasse und ist im Standby am niedrigsten. 
+Der zum Schutz der Gesundheit empfohlene Höchstwert an aufgenommener Leistung be-
+trägt 0,08 Watt pro Kilogramm ( W
+kg ) gemittelt über den ganzen Körper. 
+Die Belastung durch Funkwellen einzelner Bluetooth- oder WLAN-Geräte bleiben in der Regel 
+und besonders bei körperfernem Betrieb deutlich unterhalb der empfohlenen Höchstwerte.  
+In ungünstigen Situationen (z. B. Laptop auf dem Schoß und Sender unmittelbar über dem 
+Oberschenkel) können Werte in der Größenordnung des empfohlenen Höchstwerts auftreten. 
+Bluetooth-Sender der Klassen 2 und 3 halten die empfohlenen Höchstwerte aufgrund der nied-
+rigen Sendeleistung immer ein. 
+ 
+ 
+Tab. 1: Sendeleistung und Reichweite für unterschiedliche Bluetooth-Klassen 
+
+3  Erwartungshorizont 
+ 
+ 
+6 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 Die Frequenzen der Bluetooth-Signale liegen gemäß Material 1 zwi-
+schen 2,4 GHz und 2,5 GHz. 
+Damit folgt für die Wellenlängen: 1
+9
+12,5 cm
+2,40 10 Hz
+=
+=
+=
+⋅
+c
+c
+λ
+f
+ bzw. 
+2
+9
+12,0 cm
+2,50 10 Hz
+=
+=
+=
+⋅
+c
+c
+λ
+f
+ 
+Dies ist der Bereich der Radiowellen. 
+4 
+ 
+ 
+2 a Vom Sender geht eine elektromagnetische Welle aus. Es kommt zu 
+einer Reflexion an der Metallplatte. Durch die Überlagerung von hin- 
+und rücklaufender (reflektierter) elektromagnetischer Welle kommt 
+es zur Ausbildung einer stehenden elektromagnetischen Welle. 
+3 
+ 
+ 
+ 
+b Da die Knotenpunkte im Abstand von einer halben Wellenlänge auf-
+treten, kann zunächst λ bestimmt werden: Durch Ablesen aus dem 
+Diagramm erhält man 
+12,0cm
+λ =
+. 
+Für die Frequenz des Senders erhält man damit  
+9
+2,50 10 Hz
+0,120m
+c
+c
+f
+λ
+=
+=
+=
+⋅
+. 
+ 
+5 
+ 
+3 a Es kommt zur Interferenz zweier elektromagnetischer Wellen, daher 
+treten Bereiche mit konstruktiver Interferenz, also Verstärkung auf 
+und Bereiche mit destruktiver Interferenz, also Abschwächung. 
+Konstruktiv ist die Interferenz dann, wenn der Gangunterschied ein 
+ganzzahliges Vielfaches der Wellenlänge ist, also insbesondere 
+dann, wenn kein Gangunterschied auftritt, was entlang der Symmet-
+rieachse der Fall ist. 
+ 
+3 
+2 
+ 
+b Herleitung der Gleichung anhand des Gangunterschiedes von einer 
+halben Wellenlänge: 
+ 
+Destruktive Interferenz liegt vor, wenn der Gangunterschied ein unge-
+radzahliges Vielfaches der halben Wellenlänge, also: 
+(
+)
+2
+1
+Δ
+ 
+ 
+2
+−
+=
+k
+λ
+s
+ 
+Im rechtwinkligen Dreieck ergibt sich: 
+ 
+5 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+7 
+(
+)
+min,
+Δ
+sin
+=
+k
+s
+α
+a 
+Einsetzen liefert: 
+(
+)
+(
+)
+min,
+2
+1
+sin
+ 
+ 
+2
+−
+=
+k
+k
+λ
+α
+a
+ 
+Das ist die gesuchte Gleichung. 
+4 a Bestimmung des Winkels für das erste Minimum aus 
+(
+)
+min
+12cm
+sin
+0,6
+2
+20cm
+λ
+α
+a
+=
+=
+=
+ liefert 
+min
+37
+=
+°
+α
+ passend zur ersten 
+Aussage über die Verteilung. Aus Symmetriegründen gilt dies auch 
+für den Winkel 37
+−
+°. 
+Eine weitere maximale Verstärkungszone existiert nicht, da schon 
+für 
+1
+=
+k
+ in der Gleichung für 
+(
+)
+max,1
+sin
+1,2
+1
+α
+=
+> ist, also kein sol-
+cher Winkel existiert. 
+4 
+ 
+2 
+ 
+b Um einen Gangunterschied von nahezu Null auch bei anderen Win-
+keln zu erhalten, könnte man beispielsweise die beiden Sender so 
+schwingen lassen, dass sie eine Phasendifferenz in ihren Schwin-
+gungen aufweisen. Diese Phasendifferenz könnte so gewählt wer-
+den, dass beliebige Winkel einer maximalen Verstärkung des Sig-
+nals erreicht werden können. Die Phasendifferenz würde demzu-
+folge für den erwünschten Gangunterschied sorgen. 
+Hinweis: Auch andere Lösungen, etwas über eine Änderung der ge-
+ometrischen Anordnung der Sender, sind zulässig. 
+ 
+ 
+4 
+5 Der Artikel für die Schulzeitung soll 
+♦ einen Titel, 
+♦ einen Hauptteil mit einer Argumentation, 
+♦ sowie eine klare Positionierung am Ende des Textes aufweisen. 
+Gesundheitliche Argumente sind dem Material entnehmbar. 
+Andere Argumente können von den Lernenden geliefert werden, z. B. 
+♦ vielfältige Einsatzmöglichkeiten (Recherchen im Internet, für die Auf-
+nahme von experimentellen Daten, als Wörterbücher oder Taschen-
+rechner…), 
+♦ Stärkung digitaler Fähigkeiten, 
+♦ Erleichterung von Kommunikation und online Unterricht in Lock-down 
+Zeiten. 
+ 
+Beispielartikel: 
+Tablets für unsere Schule? Gefahr oder Chance? 
+Unsere Schulleitung überlegt, ob sie uns Lernende mit Tablets ausstat-
+ten möchte. 
+Seitens der Eltern, aber auch einiger meiner Mitschülerinnen und Mit-
+schüler, gibt es Bedenken, was die gesundheitliche Gefährdung durch 
+Strahlung bei der Nutzung von Bluetooth angeht. 
+Das Bundesamt für Strahlenschutz gibt auf seiner Webseite an, dass 
+die meisten auf dem Markt befindlichen Geräte den Klassen 2 und 3 
+angehören. Sie haben also eine Strahlungsleistung von maximal 
+2,5 mW. Die empfohlenen Höchstwerte bei körpernahem Betrieb liegen 
+2 
+6 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+8 
+bei 80 mW/kg. Diese Werte werden von Geräten der Klasse 2 und 3 im-
+mer eingehalten. Gesundheitsgefährdung kann also auch in Klassen 
+von 30 Lernenden nicht auftreten. 
+Auf der anderen Seite gibt es vielfältige Anwendungen für die Tablets 
+(Recherchen im Internet, Aufnahme von experimentellen Daten, Wör-
+terbücher oder Taschenrechner…). 
+Ich möchte mich daher klar für die Anschaffung dieser Tablets einset-
+zen. 
+ 
+Summe2 
+13 
+19 
+8 
+ 
+ 
+ 
+2 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+
+4  Standardbezug 
+ 
+ 
+9 
+4 
+Standardbezug 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1 
+3 
+ 
+ 
+ 
+2 a 
+1 
+ 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+3 a 
+1 
+ 
+ 
+ 
+ b 
+7 
+ 
+ 
+ 
+4 a 
+3 
+ 
+ 
+ 
+ b 
+ 
+2 
+ 
+ 
+5 
+ 
+ 
+3 
+6 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster3 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+ 
+3 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 

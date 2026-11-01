@@ -1,0 +1,625 @@
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2025 
+Aufgaben für das Fach Physik 
+Kurzbeschreibung 
+Aufgabentitel 
+3D-Metalldruck mit Elektronenstrahlen 
+Anforderungsniveau 
+erhöht 
+Inhaltsbereiche 
+♦ Elektrische und magnetische Felder 
+♦ Das Feldkonzept zur Beschreibung von Wechselwirkungen 
+♦ Begriff des Feldes am Beispiel von elektrischen und magne-
+tischen Feldern 
+♦ Elektrische Feldstärke 
+♦ Körper in statischen Feldern 
+♦ Kräfte auf Körper in homogenen elektrischen und magneti-
+schen Feldern, Bahnformen (qualitativ) 
+♦ Energiebetrachtungen von Körpern in homogenen elektri-
+schen Feldern 
+♦ Quantitative Betrachtung von Bahnformen in homogenen 
+Feldern 
+Materialien 
+♦ M 1 Aufbau des Geräts zum Elektronenstrahlschmelzen 
+♦ M 2 Elektrostatische Linse mit Detailvergrößerung  
+♦ M 3 Ablenkung des Elektronenstrahls 
+♦ M 4 Technische Daten der Elektronenschmelzanlage ARCAM 
+Q20plus 
+Quellenangaben 
+♦ M 2 in Anlehnung an: 
+♦ Spektrumredaktion (2022). Elektronenlinsen. Verfügbar unter: 
+https://www.spektrum.de/lexikon/physik/elektronenlinsen/4102 
+(Zugriff am: 06.08.2023). 
+♦ Braun, T. (2009). Entwicklung und Charakterisierung einer 
+Elektronenlinse für abbildende Photoelektronenspektroskopie. 
+Verfügbar unter: https://pure.mpg.de/rest/items/i-
+tem_736370_3/component/file_736369/content (Zugriff am 
+06.08.2023) 
+♦ Hinterberger, F. (2008). Physik der Teilchenbeschleuniger 
+und Ionenoptik. Berlin, Heidelberg: Springer-Verlag. 
+♦ Girwidz, R. (Hg.). E-Feld. Verfügbar unter: https://www.didak-
+tikonline.physik.uni-muenchen.de/pro-
+gramme/e_feld/E_Feld.html (Zugriff am 06.08.2023) 
+
+0  Kurzbeschreibung 
+ 
+ 
+2 
+♦ M 4 in Anlehnung an: 
+♦ GE Addditive, Arcam EBM Q20plus. Verfügbar unter: 
+https://www.ge.com/additive/sites/default/files/2020-
+07/EBM_QPlus20_Bro_A4_EN_v1.pdf (Zugriff am: 
+21.11.2023)  
+♦ Fraunhofer IFAM. Elektronenstrahlschmelzanlage ARCAM 
+Q20plus. Verfügbar unter: https://www.ifam.fraunhofer.de/con-
+tent/dam/ifam/de/documents/dd/Datenblaetter_Technolo-
+gien_Neu/ICAM_Elektronenstrahlschmelzanlage%20Ar-
+cam%20Q20plus.pdf (Zugriff am 21.11.2023) 
+♦ Kahnert, M. (2015). Scanstrategien zur verbesserten Prozess-
+führung beim Elektronenstrahlschmelzen (EBM). Verfügbar 
+unter: https://www.mec.ed.tum.de/fileadmin/w00cbp/iwb/Insti-
+tut/Dissertationen/293_Kahnert_M.pdf (Zugriff am 21.11.2023) 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat1 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+fachpraktischer Anteil nein 
+Hinweise: 
+ 
+ 
+ 
+ 
+1 siehe „Hinweise zur Verwendung von Hilfsmitteln“ 
+
+1  Aufgabe 
+ 
+ 
+3 
+1 
+Aufgabe 
+3D-Metalldruck mit Elektronenstrahlen 
+Das Elektronenstrahlschmelzen (electron beam melting, EBM) ist ein Verfahren, welches u. a. 
+zur Herstellung von metallischen Bauteilen für die Luft- und Raumfahrt oder von orthopädi-
+schen Metallprothesen für die Medizin verwendet wird. 
+Dabei wird wiederholt eine dünne Schicht Metallpulver mittels Elektronenstrahlen punktuell 
+geschmolzen. Beim Abkühlen bilden sich daraus feste Metallstrukturen. Es handelt sich also 
+um eine Form des 3D-Metalldrucks. 
+  
+BE 
+1 Der Aufbau eines Gerätes zum Elektronenstrahlschmelzen ist in Material 1 darge-
+stellt.  
+a Geben Sie die Polung der Spannungsquelle an den Stellen A und B an, siehe Ab-
+bildung 2 in Material 1. 
+Begründen Sie, dass der Wehneltzylinder zur Bündelung der Elektronenstrahlen 
+negativ geladen sein muss. 
+b Berechnen Sie die Spannung für den Beschleunigungsabschnitt, welche für die 
+Beschleunigung der Elektronen aus der Ruhe auf die Geschwindigkeit 
+7
+1
+m
+1,25 10
+s
+v =
+⋅
+ erforderlich ist. 
+c Erklären Sie, dass das Verfahren nicht funktioniert, wenn in das evakuierte Gerät 
+Luft eindringt. 
+3 
+2 
+2 
+2 Zur Bündelung der Elektronenstrahlen wird eine elektrostatische Linse verwendet, 
+siehe Material 2. 
+a Erklären Sie anhand der Abbildung 3 in Material 2, dass die Wirkung der elektri-
+schen Kraft in P1 den Elektronenstrahl zur Symmetrieachse S hin und in P2 weg 
+von ihr lenkt. 
+b Bei der elektrostatischen Linse überwiegt die Ablenkung der Elektronenstrahlen 
+zur Symmetrieachse S hin. 
+Stellen Sie die wirkenden elektrischen Kräfte F1 und F2, welche auf Elektronen in 
+P1 und in P2 wirken, in Abbildung 3 als Kraftpfeile dar. 
+Begründen Sie die Ablenkung des Elektronenstrahls qualitativ anhand der elektri-
+schen Kräfte F1 und F2 und der Aufenthaltszeit der Elektronen in den Bereichen 
+um P1 und um P2. 
+4 
+6 
+3 Die Ablenkung des Elektronenstrahls wird mithilfe eines homogenen magnetischen 
+Feldes gesteuert. 
+a Ermitteln Sie die erforderliche magnetische Flussdichte für die im Material 3 be-
+schriebene Ablenkung. 
+[Kontrollwert: r = 0,47 m] 
+b Erklären Sie, dass statische magnetische Felder den Elektronen keine Energie 
+zuführen können. 
+6 
+3 
+
+1  Aufgabe 
+ 
+ 
+4 
+4 Für den Schmelzvorgang werden Elektronen mit Geschwindigkeiten benötigt, die 
+größer als die bisher betrachteten Geschwindigkeiten sind. Um den Schmelzvorgang 
+mit einem fokussierten Strahl aus so energiereichen Elektronen durchführen zu kön-
+nen, sind in den drei Abschnitten 
+I) Elektronenstrahlsystem, 
+II) elektrostatische Linse, 
+III) Ablenkmagnet, 
+Änderungen notwendig. 
+Stellen Sie für jeden der drei Abschnitte eine Hypothese darüber auf, welche Ände-
+rung dort erforderlich ist. Effekte der speziellen Relativitätstheorie sind nicht zu be-
+rücksichtigen. 
+8 
+5 In Material 4 sind Gerätedaten einer Elektronenstrahlschmelzanlage dargestellt. 
+Beim Betrieb des Gerätes müssen Gefahren für die Gesundheit von Menschen, die 
+sich in unmittelbarer Nähe der Anlage aufhalten, ausgeschlossen werden. 
+Analysieren Sie zwei Angaben aus den technischen Gerätedaten der Tabelle in Ma-
+terial 4 unter physikalischen Gesichtspunkten hinsichtlich möglicher Risiken für die 
+Gesundheit von Menschen und nennen Sie Sicherheitsmaßnahmen zur Verringe-
+rung dieser Risiken. 
+6 
+ 
+ 
+
+2  Material 
+ 
+ 
+5 
+2 
+Material 
+Material 1: Aufbau des Geräts zum Elektronenstrahlschmelzen 
+Beim Herstellungsprozess eines Bauteils wird 
+das Metallpulver in der Arbeitsebene dadurch 
+geschmolzen, dass durch einen Elektronen-
+strahl Energie übertragen wird. Nach dem 
+Schmelzvorgang kühlt das Pulver ab und bildet 
+feste Metallstrukturen. 
+ 
+Der Weg des Elektronenstrahlbündels ist in Ab-
+bildung 1 schematisch dargestellt. 
+Im Abschnitt I des Elektronenstrahlsystems wird 
+die Geschwindigkeit der Elektronen erhöht. 
+Die elektrostatische Linse im Abschnitt II dient 
+dazu, den Elektronenstrahl in einem Punkt der 
+Arbeitsebene zu konzentrieren. 
+Durch den Ablenkmagneten im Abschnitt III 
+kann der Auftreffort der Elektronenstrahlen in 
+der Arbeitsebene verschoben werden. 
+ 
+ 
+ 
+ 
+Im Elektronenstrahlsystem treten Elektronen 
+am Ende des Beschleunigungsabschnittes als 
+Elektronenstrahlbündel aus der kreisförmigen 
+Öffnung aus, siehe Abbildung 2. Der soge-
+nannte Wehneltzylinder ist eine zylinderför-
+mige Röhre, welche die Elektronenquelle um-
+schließt. In Abbildung 2 ist der Wehneltzylinder 
+räumlich dargestellt.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Abb. 1: Weg des Elektronenstrahls 
+Abb. 2: Schematische Darstellung des Beschleunigungsab-
+schnitts des Elektronenstrahlsystems 
+
+2  Material 
+ 
+ 
+6 
+Material 2: Elektrostatische Linse 
+ 
+ 
+Im linken Teil der Abbildung 3 ist der Aufbau und die Funktion der elektrostatischen Linse 
+dargestellt. Sie besteht aus zwei Metallröhren als Elektroden mit gemeinsamer Symmetrie-
+achse S, die durch einen Spalt getrennt sind und sich auf unterschiedlichem elektrischem 
+Potenzial befinden. Die elektrostatische Linse dient zur Bündelung der Elektronenstrahlen. 
+Der rechte Teil der Abbildung 3 zeigt eine Detailvergrößerung des Spaltbereichs. Die elektri-
+schen Feldlinien sind im Inneren des Zylinders schematisch dargestellt. Der Spaltbereich 
+wird durch eine gestrichelte Linie in eine obere und untere Hälfte unterteilt. Der Verlauf des 
+Elektronenstrahls vom Bereich P1 zum Bereich P2 ist idealisiert abgebildet. 
+ 
+ 
+Abb. 3: Schematischer Längsschnitt einer elektrostatischen Linse 
+
+2  Material 
+ 
+ 
+7 
+Material 3: Ablenkung des Elektronenstrahls 
+Zur Ablenkung des Elektronenstrahls 
+wird ein homogenes magnetisches 
+Feld mit der Breite 
+9,0 cm
+=
+b
+ verwen-
+det, dessen Feldlinien senkrecht aus 
+der Zeichenebene heraus gerichtet 
+sind, siehe Abbildung 4. 
+Die Elektronen treten mit einer Ge-
+schwindigkeit von 
+7 m
+s
+2,4 10
+⋅
+ in das 
+Magnetfeld ein und werden um einen 
+Winkel von 
+11
+=
+°
+α
+ aus ihrer ursprüng-
+lichen Bewegungsrichtung abgelenkt. 
+Die Abbildung ist nicht maßstäblich. 
+ 
+ 
+ 
+ Material 4: Technische Daten einer Elektronenschmelzanlage 
+ 
+Prinzip Pulverbettverfahren: Aufbringen dünner Schichten eines fließfähigen Pulvers 
+mit der Korngröße 15 – 50 μm. 
+Werkstoffe 
+ 
+u.a. Titan, Kupfer, Stahl 
+max. Größe des gefertigten Teils 
+Ø 350 mm, h 380 mm 
+Beschleunigungsspannung 
+60 kV 
+Stromstärke und Leistung des Elektro-
+nenstrahls 
+50 mA, 3 kW 
+Pulverbetttemperatur 
+bis 800° C  
+Masse 
+2900 kg 
+ 
+ 
+Tab. 1: Technische Daten der Elektronenschmelzanlage ARCAM Q20plus 
+Abb. 4: Ablenkung des Elektronenstrahls 
+
+3  Erwartungshorizont 
+ 
+ 
+8 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 a A: negative Polung 
+B: positive Polung 
+Gleichnamige Ladungen üben wechselseitig Kräfte aufeinander aus 
+und stoßen sich ab. Elektronen werden durch den negativ geladenen 
+Zylinder von diesem abgestoßen und somit zur Zylindermitte hinge-
+lenkt. 
+1 
+2 
+ 
+ 
+b  
+2
+1
+1
+2
+E
+m v
+e U
+=
+⋅
+⋅
+=
+⋅
+ 
+2
+7
+1
+m
+1,25 10
+1
+²
+1
+s
+444 V
+2
+2
+
+
+⋅
+⋅
+
+
+⋅
+
+
+=
+⋅
+=
+⋅
+=
+e
+m
+m v
+U
+e
+e
+ 
+2 
+ 
+ 
+ 
+c Ohne Vakuum findet eine Wechselwirkung der Elektronen mit den 
+Gasmolekülen der Atmosphäre statt. Dabei können die Elektronen 
+abgelenkt werden und geben Energie an die Gasmoleküle ab. 
+2 
+ 
+ 
+2 a Die elektrische Kraft im elektrischen Feld ist tangential zu den Feldli-
+nien gerichtet. Die Kraft, die auf die Elektronen wirkt, weist in die ent-
+gegengesetzte Richtung wie die Feldlinien, bei P1 also nach links un-
+ten und damit zur Elektronenstrahlmitte hin, bei P2 nach rechts unten 
+und damit von der Elektronenstrahlmitte weg. 
+ 
+4 
+ 
+ 
+b Gründe, weshalb die ablenkende Wirkung zur Symmetrieachse hin 
+überwiegt: 
+Um P1 ist die Feldliniendichte größer als um 
+P2, weshalb auch die Feldstärke und damit 
+die Kraft F1 größer ist als die Kraft F2. In der 
+elektrostatischen Linse werden die Elektro-
+nen zur positiv geladenen Röhre hin be-
+schleunigt. Deshalb sind sie im Bereich um 
+P2 schneller als im Bereich um P1, weshalb 
+die elektrische Kraft in P2 eine geringere 
+Zeit wirkt als die elektrische Kraft in P1. 
+ 
+4 
+2 
+3 a  
+7 m
+0,090m;
+2,4 10
+;
+11
+s
+sin
+sin
+b
+v
+α
+b
+b
+α
+r
+r
+α
+=
+=
+⋅
+=
+°
+=
+→
+=
+ 
+Alternativ: Bestimmung von r = 0,47 m mithilfe einer Konstruktion 
+ 
+6 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+9 
+2
+2
+L
+Z
+e
+e
+7 m
+e
+e
+s
+sin
+2,4 10
+sin11
+sin
+0,29mT
+0,09 m
+⋅
+=
+→
+⋅
+⋅
+=
+⋅
+→
+⋅
+⋅
+=
+⋅
+⋅
+⋅
+⋅
+°
+⋅
+⋅
+=
+=
+=
+⋅
+⋅
+v
+v
+α
+F
+F
+e v B
+m
+e v B
+m
+r
+b
+m
+m
+v
+α
+B
+b e
+e
+ 
+ 
+b Auf bewegte elektrische Ladungen im Magnetfeld wirkt die Lorentz-
+kraft. 
+Da diese stets senkrecht zur Bewegungsrichtung wirkt, kann sie nur 
+die Richtung, nicht aber den Betrag der Geschwindigkeit verändern.  
+Die kinetische Energie der Elektronen bleibt somit konstant. 
+3 
+ 
+ 
+4 ♦ Beschleunigungsabschnitt: Größere Beschleunigungsspannung, um 
+schnellere Elektronen zu erhalten. 
+♦ Elektrostatische Linse: Größere Spannung, um dieselbe Fokussie-
+rung zu erreichen, da sich die Elektronen kürzere Zeit in der elektro-
+statischen Linse aufhalten. 
+♦ Ablenkmagnet: Größere magnetische Flussdichte B, um dieselbe Ab-
+lenkung zu erreichen, da B proportional zur Geschwindigkeit der 
+Elektronen ist. 
+2 
+3 
+3 
+5 ♦ Aufgrund der hohen Beschleunigungsspannungen entsteht Röntgen-
+strahlung durch das Abbremsen der energiereichen Elektronen an 
+der Bearbeitungsoberfläche. Als Schutzmaßnahmen werden ein 
+Strahlenmessgerät und eine Bleiabschirmung gegen ionisierende 
+Strahlen empfohlen, um die Strahlenbelastung zu minimieren. 
+♦ Beim Schmelzvorgang entstehen Temperaturen am Bauteil von über 
+800 °C. Schutzkleidung und hitzebeständige Handschuhe verringern 
+die Verbrennungsgefahr beim Umgang mit den noch nicht abgekühl-
+ten Bauteilen. 
+Weitere mögliche Lösungen: 
+Die Pulvergröße beträgt 15 μm. Feinstäube sind für die Atemwege ge-
+fährlich. Lüftungsanlagen und Atemmasken verringern die Risiken einer 
+Atemwegserkrankung. 
+Beim Schmelzvorgang treten hohe Temperaturen auf, deshalb ist der 
+Schmelzpunkt sehr hell und intensiv. Getönte Sichtfenster und Schutz-
+brillen verringern das Risiko, die Augen zu schädigen. 
+3 
+ 
+3 
+ 
+Summe2 
+13 
+19 
+8 
+ 
+ 
+ 
+2 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+
+4  Standardbezug 
+ 
+ 
+10 
+4 
+Standardbezug 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1 a 
+3 
+ 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+ c 
+1 
+ 
+ 
+ 
+2 a 
+ 
+ 
+3 
+ 
+ b 
+1 
+ 
+6 
+ 
+3 a 
+7 
+ 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+4 
+ 
+2 
+ 
+ 
+5 
+ 
+ 
+3 
+6 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster3 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+ 
+3 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 

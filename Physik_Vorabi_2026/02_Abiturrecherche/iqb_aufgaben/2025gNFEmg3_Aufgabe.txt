@@ -1,0 +1,637 @@
+ 
+ 
+Gemeinsame Aufgabenpools der Länder 
+Pool für das Jahr 2025 
+Aufgaben für das Fach Physik 
+Kurzbeschreibung 
+Aufgabentitel 
+Kapazitive Beschleunigungssensoren 
+Anforderungsniveau 
+grundlegend 
+Inhaltsbereiche 
+♦ Elektrische und magnetische Felder 
+♦ Das Feldkonzept zur Beschreibung von Wechselwirkungen 
+♦ Kondensator als Energiespeicher; Kapazität 
+Materialien 
+♦ M 1 Kapazitives Messen von Beschleunigungen 
+♦ M 2 Erste Messreihe mit einem kapazitiven Sensor 
+♦ M 3 Weitere Untersuchung an einem kapazitiven Sensor 
+♦ M 4 Zeitlicher Verlauf der Kapazität während einer Aufzugfahrt 
+Quellenangaben 
+ 
+Hilfsmittel 
+♦ digitales Hilfsmittel, das mindestens die Funktionalität eines WTR 
+hat1 
+♦ mathematisch-naturwissenschaftliche Formelsammlung 
+fachpraktischer Anteil nein 
+Hinweise: 
+ 
+ 
+ 
+ 
+1 siehe „Hinweise zur Verwendung von Hilfsmitteln“ 
+
+1  Aufgabe 
+ 
+ 
+2 
+1 
+Aufgabe 
+Kapazitive Beschleunigungssensoren 
+In vielen technischen Anwendungen messen Sensoren Beschleunigungen. Häufig funktionie-
+ren diese Sensoren mithilfe von Kondensatoren. 
+  
+BE 
+1 Kapazitive Beschleunigungssensoren können modellhaft wie in Material 1 beschrie-
+ben aufgefasst werden. 
+a Berechnen Sie die Kapazität eines luftgefüllten Plattenkondensators mit quadrati-
+schen Platten der Seitenlänge ℓ = 400 µm und dem Plattenabstand d = 0,100 µm. 
+b Erklären Sie, dass beim Beschleunigungsvorgang die Feder gestaucht wird und 
+sich dadurch die Kapazität des Kondensators ändert. 
+3 
+4 
+2 a Begründen Sie mithilfe der in Material 2 gegebenen Messwerte, dass der Zusam-
+menhang 
+k
+C
+a
+=
+ erfüllt wird und zeigen Sie unter Berücksichtigung aller Mess-
+werte, dass sich für die Konstante k der Wert 
+2
+pF m
+s
+k
+16,7
+⋅
+=
+ergibt. 
+b Berechnen Sie die Beschleunigungen, die sich nach der Gleichung 
+k
+C
+a
+=
+ für die 
+Kapazitäten 
+1
+3,50 pF
+=
+C
+ und 
+2
+14,0 pF
+=
+C
+ergeben. 
+c Ergänzen Sie in der Abbildung 2 (M 3) die Messwerte aus Material 2 sowie die 
+Wertepaare aus Aufgabe 2b und verbinden Sie diese Datenpunkte auf eine ge-
+eignete Weise. 
+d Beurteilen Sie mithilfe des in Aufgabe 2c vervollständigten Diagramms, ob die An-
+nahme des Zusammenhangs 
+k
+C
+a
+=
+ zur Beschreibung der Messwerte der zwei-
+ten Messreihe geeignet ist. 
+Berücksichtigen Sie dabei die folgenden Fälle: 
+♦ den Bereich von Beschleunigungen 
+2
+m
+s
+10
+>
+a
+ 
+♦ den Bereich von Beschleunigungen 
+2
+2
+m
+m
+s
+s
+0
+10
+<
+<
+a
+ 
+♦ Beschleunigung 
+2
+m
+s
+0
+=
+a
+ 
+4 
+2 
+3 
+4 
+3 Für die Verwendung in einem Aufzug wird der Sensor wie Material 4 beschrieben, 
+verwendet. 
+a Erläutern Sie, dass sich bei Stillstand des Aufzugs durch die Drehung die gemes-
+sene Kapazität verändert. 
+Begründen Sie, dass der gemessene Wert in diesem Fall C = 1,69 pF beträgt. 
+b Typische Beschleunigungswerte von Aufzügen liegen in der Größenordnung von 
+2
+m
+s
+0,5
+. 
+3 
+4 
+ 
+
+1  Aufgabe 
+ 
+ 
+3 
+Begründen Sie, dass die in Aufgabe 2 erwähnte Modellierung 
+k
+=
+a
+C zur 
+Bestimmung der Beschleunigung eines Aufzugs genutzt werden kann. 
+c Abbildung 3 (M 4) zeigt eine aus der Ruhe heraus beginnende Aufzugsfahrt. 
+Entscheiden Sie mit Blick auf den Abschnitt zwischen 8,1 s und 11,0 s ob der Auf-
+zug im Gebäude auf- oder abwärts fährt. Begründen Sie Ihre Entscheidung. 
+ 
+3 
+ 
+ 
+
+2  Material 
+ 
+ 
+4 
+2 
+Material 
+Material 1: Kapazitives Messen von Beschleunigungen 
+Material 2: Erste Messreihe mit einem kapazitiven Sensor 
+Bei einem Versuch wird die Kapazität eines Beschleunigungssensors für verschiedene Be-
+schleunigungen gemessen (siehe Tab. 1). 
+Vereinfacht soll für den Zusammenhang zwischen der Kapazität und der Beschleunigung zu-
+nächst der Zusammenhang 
+k
+C
+a
+=
+ angenommen werden, wobei k eine Konstante ist. 
+ 
+ 
+ 
+ 
+ 
+Der hier betrachtete kapazitive Be-
+schleunigungssensor basiert auf ei-
+nem Plattenkondensator. Zur Mes-
+sung der Beschleunigung ist eine 
+Masse (schraffierter Bereich) an ei-
+ner Feder beweglich und reibungsfrei 
+aufgehängt. Die Feder kann als ide-
+ale Feder aufgefasst werden, die 
+Dehnung bzw. Stauchung der Feder 
+erfolgt also proportional zur Kraftein-
+wirkung. Die rechte Kondensator-
+platte ist fest mit dem Gehäuse ver-
+bunden, die linke Platte ist mit der 
+Masse verbunden, welche über eine 
+Feder am Gehäuse hängt. 
+ 
+Beschleunigung 
+2
+m
+in
+s
+a
+ 
+9,0 
+12,0 
+15,0 
+18,0 
+Kapazität 
+in pF
+C
+ 
+1,88 
+1,39 
+1,10 
+0,93 
+Abb. 1: prinzipieller Aufbau eines kapazitiven Beschleunigungssensors 
+Tab. 1: Messwerte von Kapazitäten im Beschleunigungssensor bei unterschiedlichen Beschleunigungen. 
+Beschleunigung 
+nach rechts 
+in Ruhe 
+
+2  Material 
+ 
+ 
+5 
+Material 3: Weitere Untersuchung an einem kapazitiven Sensor 
+Zur Überprüfung des angenommenen Zusammenhangs zwischen Kapazität und Beschleuni-
+gung werden weitere Werte für einen größeren Bereich der Beschleunigung aufgenommen. 
+Die Ergebnisse sind im Kurvenverlauf in Abbildung 2 dargestellt. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Material 4: Zeitlicher Verlauf der Kapazität während einer Aufzugfahrt 
+Um die vertikale Bewegung eines Aufzugs zu messen, wird der Sensor aus Material 1 bei 
+stillstehendem Aufzug um 90° in der Zeichenebene gegen den Uhrzeigersinn gedreht und an 
+der Decke der Aufzugskabine befestigt. Die in Abbildung 1 rechte Gehäuseseite befindet 
+sich nun an der Decke. Die Werte des Diagramms der Abbildung 3 wurden bei einer aus der 
+Ruhe heraus beginnenden Aufzugsfahrt aufgenommen. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Abb. 3: Messung der Kapazität des 
+Sensors bei einer Aufzugfahrt 
+Abb. 2: Diagramm der Werte der zweiten Messreihe 
+
+3  Erwartungshorizont 
+ 
+ 
+6 
+3 
+Erwartungshorizont 
+Der Erwartungshorizont stellt für jede Teilaufgabe eine mögliche Lösung dar. Nicht dargestellte 
+korrekte Lösungen sind als gleichwertig zu akzeptieren. 
+ 
+ 
+BE/AFB 
+I 
+II 
+III 
+1 
+a 
+7
+2
+11
+0 r
+0 r
+6
+1,60 10
+m
+1,42 10
+F
+0,100 10
+m
+−
+−
+−
+⋅
+=
+=
+=
+⋅
+⋅
+A
+C
+ε ε
+ε ε
+d
+ 
+3 
+ 
+ 
+ 
+b  
+♦ Wird der Sensor beschleunigt, so wirkt die beschleunigende Kraft 
+auf das Gehäuse und die damit verbundene rechte Platte. Diese 
+verändert ihre Lage relativ zur Masse und der damit verbundenen 
+linken Platte so, dass der Abstand beider Platten zueinander zu-
+nimmt. Dadurch wird die Feder zunehmend gestaucht. 
+♦ Das Gehäuse verschiebt die rechte Kondensatorplatte, wodurch 
+sich der Plattenabstand verändert, was gemäß dem Zusammen-
+hang 
+1
+
+C
+d die Kondensatorkapazität ändert. 
+2 
+2 
+ 
+2 a Nachweis beispielsweise durch Prüfung der Produktgleichheit. 
+Beschleunigung 
+2
+m
+s
+in
+a
+ 
+9,0 
+12,0 
+15,0 
+18,0 
+Kapazität 
+in pF
+C
+ 
+1,88 
+1,39 
+1,10 
+0,93 
+Konstante k =
+⋅
+C a in 
+2
+pF m
+s
+⋅
+ 
+16,9 
+16,7 
+16,5 
+16,7 
+Mittelwertbildung: 
+Der Mittelwert beträgt 
+2
+pF m
+k
+16,7 
+s
+⋅
+=
+. 
+2 
+2 
+ 
+ 
+b  
+2
+2
+pF m
+s
+1
+2
+pF m
+s
+2
+2
+k
+16,7
+m
+4,77
+3,50 pF
+s
+16,7
+m
+1,19
+14,0 pF
+s
+⋅
+⋅
+=
+=
+=
+=
+=
+a
+C
+a
+a
+ 
+ 
+2 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+7 
+ 
+c  
+3 
+ 
+ 
+ 
+d  
+♦ Beschleunigungen 
+2
+m
+s
+10
+>
+a
+: Die Messwerte der ersten Messreihe 
+passen im Rahmen der Zeichengenauigkeit zu denen der zweiten 
+Messreihe. 
+♦ Beschleunigungen 
+2
+2
+m
+m
+s
+s
+0
+10
+<
+<
+a
+: Die in Aufgabe 2b berechneten 
+Kapazitätswerte weichen von den korrespondierenden der zweiten 
+Messreihe ab. In Richtung kleinerer Beschleunigungswerte wächst 
+die Abweichung zur zweiten Messreihe. 
+♦ Beschleunigung 
+2
+m
+s
+0
+=
+a
+: Die Gleichung liefert keinen Wert für die 
+Kapazität. Die zweite Messreihe zeigt dagegen einen Wert von ca. 
+14 pF für die Kapazität bei der Beschleunigung Null an. 
+Folgerung: Für Beschleunigungswerte, die größer als 
+2
+m
+s
+10
+ sind, 
+passen die sich aus der Gleichung ergebenden Werte und die zweite 
+Messreihe gut zusammen. Je kleiner die Beschleunigung ist, desto 
+weniger gut passen die Werte aus der Gleichung und die zweite 
+Messreihe zusammen. Entgegen dem Modell lässt sich auch für die 
+Beschleunigung Null eine Kapazität bestimmen. 
+ 
+3 
+1 
+3 a Durch die Drehung des Sensors aus M 1 um 90° (gegen den Uhrzei-
+gersinn), bewirkt die Gewichtskraft auf das Massestück eine Vergrö-
+ßerung des Plattenabstands, welche zu einer messbaren Kapazitäts-
+änderung führt. 
+Begründung durch Rechnung: 
+Für die genannte Kapazität ergibt sich eine Beschleunigung von
+2
+pF m
+s
+2
+16,7
+k
+m
+9,88
+1,69pF
+s
+⋅
+=
+=
+=
+a
+C
+, welche auf die Gewichtskraft zurückzu-
+führen ist.  
+ 
+3 
+ 
+ 
+b Durch die Drehung und die damit verbundene Kapazitätsänderung 
+(siehe 3a) ergibt sich auch bei Stillstand des Aufzugs ein 
+ 
+4 
+ 
+
+3  Erwartungshorizont 
+ 
+ 
+8 
+Kapazitätswert von C = 1,69 pF. Durch diese Nullpunktverschiebung 
+ist man im Bereich, bei dem eine gute Übereinstimmung der gemes-
+senen Werte und dem Modell vorliegt. Obwohl nur Beschleunigungs-
+änderungen im Bereich von 
+2
+m
+s
+0,5
+±
+vorliegen, kann die Modellierung 
+zur Beschreibung genutzt werden. 
+ 
+c Der Sensor ist so orientiert, dass er im stehenden Aufzug die Fallbe-
+schleunigung 9,81 m/s2 misst, was sich in einem Kapazitätswert von 
+ca. 1,69 pF zeigt. Im Zeitraum zwischen ca. 8,1 s und 11,0 s liegt ein 
+mit ca. 1,61 pF geringerer Kapazitätswert vor. Eine kleinere Kapazi-
+tät bedeutet einen größeren Plattenabstand. Bei einer Orientierung 
+des Sensors wie in Aufgabe 3 folgt, dass die Beschleunigung nach 
+oben erfolgt, der Aufzug also aufwärtsfährt. 
+ 
+ 
+3 
+ 
+Summe2 
+10 
+16 
+4 
+ 
+ 
+ 
+2 Bei jeder Aufgabe liegen die Anzahlen der Bewertungseinheiten – abhängig vom Anforderungsniveau – in den 
+Bereichen, die der folgenden Tabelle zu entnehmen sind: 
+Anforderungsniveau 
+erhöht 
+grundlegend 
+Anforderungsbereich 
+I 
+II 
+III 
+I 
+II 
+III 
+Anzahl der BE 
+11 - 13 
+17 - 21 
+8 - 10 
+10 - 12 
+13 - 16 
+4 - 6 
+ 
+
+4  Standardbezug 
+ 
+ 
+9 
+4 
+Standardbezug 
+Teilauf-
+gabe 
+Kompetenzbereich 
+S 
+E 
+K 
+B 
+1 a 
+3 
+ 
+ 
+ 
+ b 
+1 
+ 
+3 
+ 
+2 a 
+3 
+4 
+ 
+ 
+ b 
+3 
+ 
+ 
+ 
+ c 
+7 
+ 
+ 
+ 
+ d 
+2 
+ 
+ 
+ 
+3 a 
+1 
+ 
+ 
+ 
+ b 
+ 
+8 
+ 
+ 
+ c 
+ 
+ 
+3 
+ 
+5 
+Bewertungshinweise 
+Die Bewertung der erbrachten Prüfungsleistungen hat sich für jede Teilaufgabe nach der am 
+rechten Rand der Aufgabenstellung angegebenen Anzahl maximal erreichbarer Bewertungs-
+einheiten (BE) zu richten. 
+Für die Bewertung der Gesamtleistung eines Prüflings ist ein Bewertungsraster3 vorgesehen, 
+das angibt, wie die in den drei Prüfungsteilen insgesamt erreichten Bewertungseinheiten in 
+Notenpunkte umgesetzt werden. 
+ 
+3 Das Bewertungsraster ist Teil des Dokuments „Beschreibung der Struktur“, das auf den Internetseiten des IQB 
+zum Download bereitsteht. 
