@@ -170,12 +170,12 @@ save(fig, "elektronenbeugung_bild")
 # ---------------------------------------------------------------- 9 Photoeffekt f-E-Diagramm
 f = np.linspace(0, 15, 300)
 fig, ax = plt.subplots(figsize=(5.6, 3.0))
-for Wa, c, lab in [(2.1, BLUE, "Caesium, W$_A$ = 2,1 eV"),
+for Wa, c, lab in [(1.94, BLUE, "Caesium, W$_A$ = 1,94 eV"),
                    (4.7, ORANGE, "Kupfer, W$_A$ = 4,7 eV"),
                    (2.3, TEAL, "Natrium, W$_A$ = 2,3 eV")]:
-    E = 4.1357*f/1000 - Wa
+    E = 4.1357*f/10 - Wa
     ax.plot(f, np.maximum(E, 0), color=c, lw=1.4, label=lab)
-    ax.plot([Wa/4.1357*1000], [0], "o", color=c, ms=4)
+    ax.plot([Wa/4.1357*10], [0], "o", color=c, ms=4)
 ax.axhline(0, color="#333333", lw=0.8)
 ax.set_xlabel("Frequenz f in 10$^{14}$ Hz"); ax.set_ylabel("E$_{kin,max}$ in eV")
 ax.set_xlim(0, 15); ax.set_ylim(0, 4.6)
@@ -207,7 +207,7 @@ for n in range(1, 4):
     ax.text(-0.06, E, f"n = {n}", ha="right", va="center", color=BLUE, fontsize=8)
 ax.annotate("", xy=(1.0, 0.33), xytext=(1.0, 2.97),
             arrowprops=dict(arrowstyle="<->", color=ORANGE, lw=1))
-ax.text(1.04, 1.6, "E$_{kin}$ – E$_{pot}$", color=ORANGE, fontsize=7.5, rotation=90, va="center")
+ax.text(1.04, 1.6, "E", color=ORANGE, fontsize=9, rotation=90, va="center")
 ax.text(0.5, 3.1, "L", ha="center", color=GREY)
 ax.annotate("", xy=(1.0, 3.05), xytext=(0, 3.05),
             arrowprops=dict(arrowstyle="<->", color=GREY, lw=0.8))
@@ -234,36 +234,53 @@ save(fig, "energieniveaus_h")
 
 # ---------------------------------------------------------------- 13 Franck-Hertz
 U = np.linspace(0, 30, 1200)
-I = 1 + 0.055*U - 0.9*(1 - np.exp(-((U % 11.0)/1.1)**8)) * (U > 0)
+I = 1 + 0.055*U - 0.9*(1 - np.exp(-(((U - 4.9) % 4.9)/0.55)**8)) * (U > 1.0)
 I = np.clip(I, 0.06, None)
 I = I * (1 - 0.004*U)
 fig, ax = plt.subplots(figsize=(5.8, 3.0))
-ax.plot(U+1.8, I, color=BLUE, lw=1.4)
-for u in [1.8+11, 1.8+22]:
+ax.plot(U, I, color=BLUE, lw=1.4)
+for u in [4.9, 9.8, 14.7]:
     ax.annotate("", xy=(u, 0.2), xytext=(u, 1.35),
                 arrowprops=dict(arrowstyle="->", color=ORANGE, lw=1))
-ax.text(13.3, 1.45, "ΔU ≈ 11 V", color=ORANGE, fontsize=8.5)
+ax.text(11.0, 1.45, "ΔU ≈ 4,9 V", color=ORANGE, fontsize=8.5)
 ax.set_xlabel("Beschleunigungsspannung U$_B$ in V")
 ax.set_ylabel("Auffängerstrom I (a. E.)")
-ax.set_xlim(0, 34); ax.set_ylim(0, 1.9)
-ax.set_xticks([0, 11.8, 22.8, 33.8])
-ax.set_xticklabels(["0", "11,8", "22,8", "33,8"])
+ax.set_xlim(0, 30); ax.set_ylim(0, 1.9)
+ax.set_xticks([0, 5, 10, 15, 20, 25, 30])
+ax.set_xticklabels(["0", "5", "10", "15", "20", "25", "30"])
 ax.grid(alpha=0.2, lw=0.5)
 save(fig, "franckhertz")
 
 # ---------------------------------------------------------------- 14 Rutherford
-fig, ax = plt.subplots(figsize=(5.4, 3.0))
-ax.add_patch(Circle((0, 0), 0.10, color=RED, zorder=5))
-ax.text(0.13, 0.10, "Kern", color=RED, fontsize=8)
-for y0, col in [(0.9, BLUE), (0.5, TEAL), (0.2, ORANGE), (1.4, "#8E44AD")]:
-    b = y0
-    t = np.linspace(-4.0, 4.0, 800)
-    x = (b**2*t)/(b**2+t**2)*0.9
-    y = (-b*t**2)/(b**2+t**2)*0.9 + b*0.9/2
-    ax.plot(x, y, color=col, lw=1.1)
-ax.plot([], [], color=BLUE, lw=1, label="Streuparameter b")
-ax.set_xlim(-2.4, 2.4); ax.set_ylim(-0.4, 1.7); ax.axis("off")
-ax.set_title("Rutherford-Streuung: je kleiner b, desto größer der Ablenkwinkel", fontsize=8, color=GREY)
+fig, ax = plt.subplots(figsize=(6.0, 3.2))
+ax.set_xlim(-7, 9); ax.set_ylim(-5.2, 5.2); ax.axis("off")
+ax.add_patch(Circle((0, 0), 0.28, fc=ORANGE, ec="#7a3512", lw=0.8, zorder=5))
+ax.text(0, -0.75, "Kern", ha="center", va="top", fontsize=8.5, color="#7a3512")
+
+def orbit(b, col):
+    # Coulomb-Bahn: Hyperbel mit Exzentrizität eps = sqrt(1 + 4b²), Apside auf der y-Achse
+    eps = np.sqrt(1 + 4*b*b)
+    phi = np.linspace(-np.arccos(1/eps) + 1e-4, np.arccos(1/eps) - 1e-4, 400)
+    r = 2*b*b/(eps*np.cos(phi) - 1)
+    x, y = r*np.sin(phi), r*np.cos(phi)
+    m = r < 9
+    ax.plot(x[m], y[m], color=col, lw=1.2)
+    ax.annotate("", xy=(x[m][12], y[m][12]), xytext=(x[m][6], y[m][6]),
+                arrowprops=dict(arrowstyle="-|>", color=col, lw=1.2, shrinkA=0, shrinkB=0))
+
+for b, col in [(0.0, ORANGE), (0.45, ORANGE), (1.0, BLUE), (2.0, BLUE), (3.6, BLUE)]:
+    if b == 0:
+        ax.plot([-7, 0], [0, 0], color=ORANGE, lw=1.2)
+        ax.plot([0.35, 7], [0, 0], color=ORANGE, lw=1.2)
+        ax.annotate("", xy=(5.2, 0), xytext=(4.0, 0),
+                    arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=1.2))
+        continue
+    orbit(b, col)
+ax.text(-6.9, 3.9, "Alpha-Teilchen", fontsize=8.5, color=BLUE, ha="left")
+ax.annotate("", xy=(-5.3, 3.55), xytext=(-6.6, 3.55),
+            arrowprops=dict(arrowstyle="-|>", color=BLUE, lw=1.1))
+ax.text(-6.9, -4.6, "kleiner Stoßparameter $\\rightarrow$ große Ablenkung",
+        fontsize=8, color=GREY)
 save(fig, "rutherford")
 
 # ---------------------------------------------------------------- 15 Orbitale

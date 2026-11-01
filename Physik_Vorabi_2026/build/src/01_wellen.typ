@@ -50,6 +50,12 @@ $delta$:
 
 $ A_"ges" = sqrt(A_1^2 + A_2^2 + 2 A_1 A_2 cos(delta)), quad delta = 2 pi frac(Delta s, lambda) $
 
+#definition[
+  *Kohärenz:* Zwei Wellen sind kohärent, wenn sie dieselbe Frequenz haben und ihre
+  Phasendifferenz über die Beobachtungszeit konstant bleibt. Nur dann ist $delta$ eine feste
+  Größe – und nur dann entsteht ein zeitlich stabiles Interferenzmuster.
+]
+
 #figure(
   image("../fig/zeigerkette.svg", width: 82%),
   caption: [Zeigerkette längs des Weges: gleichmäßige Drehung erzeugt die Welle.],

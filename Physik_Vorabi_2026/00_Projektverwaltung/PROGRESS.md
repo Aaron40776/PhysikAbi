@@ -127,3 +127,55 @@ Gesamt 121 -> 95 Seiten, 60.663 -> 33.762 Wörter (-44 %).
 
 **Geprüft:** 0 Formelreste (`{`, `}`, `$`, `\`), 0 Textüberläufe, alle Figuren eingebunden,
 `build_all.sh` läuft ohne Fehler durch.
+
+## Nachtrag 6 (01.11.2026) – Inhaltliche Qualitätskontrolle, P1 behoben
+
+**Prüfbericht neu geschrieben.** `06_Qualitaetskontrolle/pruefbericht.md` enthält jetzt die
+inhaltliche Prüfung (Kurzurteil, Übersicht, 15 P1 / 31 P2 / 22 P3 mit Datei:Zeile und Zitat,
+Kürzungs- und Ergänzungsvorschläge, Maßnahmenplan, Nicht-geprüft-Liste, Nachrechnung aller
+18 Referenzwerte, Abbildungs-Inventar). Die technische Prüfung vom 01./02.11. steht unverändert
+in Anhang A/B.
+
+**Korrektur einer Annahme aus Nachtrag 5.** „Inhaltlich unverändert“ trifft nicht zu: bei der
+Straffung sind die Kohärenz-Definition, Polarisation/Malus und das Michelson-Interferometer aus
+Skript 1 verschwunden. Kohärenz ist wieder definiert (Skript 1, Abschnitt 2). Polarisation und
+Michelson bleiben offen und stehen als Ergänzungsvorschlag im Prüfbericht, Abschnitt 5 –
+`THEMENSTATUS.md` führt sie jetzt als ❌ statt als 🔶.
+
+**Behobene P1-Befunde (15):**
+
+1. `07_spektren.typ`: Aufgabe 2 war ohne `#enum(` gerendert (Rohtext mit eckigen Klammern).
+2. `f6_uebungen.typ`: zwei Markdown-Tabellen (Zeitplan, Messwerte Aufgabe 5) als Rohtext →
+   `#table`.
+3. `f6_uebungen.typ`: russisches Wort „принадлежит“ → „gehört“.
+4. `f6_uebungen.typ`: überzählige Klammer in Lösung 14.1.
+5. `02_lichtquanten.typ`: Bildunterschrift zu `photoeffekt_fE` behauptete eine Gerade durch den
+   Ursprung (falsch für $E_"kin,max"$).
+6. `make_figures.py`: Faktor 1000 in `photoeffekt_fE` ließ alle Kurven auf $E=0$ liegen;
+   $W_A$(Cs) an den Skriptwert 1,94 eV angeglichen.
+7. `02_lichtquanten.typ`: Bildunterschrift zu `led_hbestimmung` beschrieb die Gegenfeldmethode
+   statt der LED-Messung.
+8. `make_figures.py`: `franckhertz` hatte 11 V Periode (beschriftet „ΔU ≈ 11 V“) statt 4,9 V.
+9. `07_spektren.typ`: Unterschrift ordnete alle Linien der Balmer-Serie zu, obwohl auch
+   Lyman-α (2→1) eingezeichnet ist.
+10. `07_spektren.typ`: Neon-Erklärung („Anregung im sichtbaren Bereich“) war physikalisch falsch.
+11. `06_atommodelle.typ` + `make_figures.py`: Potenzialtopf-Beschriftung „E_kin – E_pot“ und
+    Unterschrift, die nicht gezeichnete Wellenfunktionen versprach.
+12. `make_figures.py`: Rutherford-Bahnen waren keine Hyperbeln (Ablenkwinkel 0); jetzt
+    Coulomb-Bahnen mit $eps = sqrt(1+4b^2)$.
+13. `f7_regression.typ`: „253 nm … die man mit Leuchtschirm beobachtet“ – die Linie ist UV.
+14. `f5_abitur.typ` + `untersuchte_aufgaben.csv`: „fachpraktischer Anteil in 5 von 12“ war
+    falsch (2 von 12), drei Tabellenzeilen und der Blitzdetektor (gA → eA) korrigiert.
+15. `f8_lernplan.typ`: alle Seitenangaben stammten aus der Fassung vor der Straffung (Skript 1
+    „15 S.“ statt 9); Tabelle jetzt auf Abschnittsnummern umgestellt, Umfang 95/47 Seiten,
+    34.000 Wörter.
+
+**Stand nach dem Neubau:** 15 PDFs, **95 Seiten**, **33.828 Wörter**, 0 Formelreste,
+0 Textüberläufe, 22 SVGs eingebunden, keine ungerenderten Klammerlisten mehr.
+
+**Offen (P2/P3, Freigabe nötig):** Konvention $I_1 = sin^2$ vs. $P_"D1" = cos^2$ (Skript 5 vs.
+Formelblatt/Übungsheft), Unbestimmtheit $h\/(4 pi)$ vs. $h$, deutender Satz zu jeder der 26
+Grafiken, Polarisation/Michelson/Pauli ergänzen, „fallende Gerade“ in Übungsheft 5.2.
+
+**Umgebung:** matplotlib 3.11.2 nachinstalliert (Projektabhängigkeit für `make_figures.py`;
+die ausgelieferten SVGs stammen aus derselben Version).

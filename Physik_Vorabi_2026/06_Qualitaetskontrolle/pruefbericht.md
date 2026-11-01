@@ -1,8 +1,581 @@
-# Prüfbericht
+# Prüfbericht – inhaltliche Kontrolle
+
+Datum: 01.11.2026 · Prüfer: systematische Dokumentprüfung (Quelltext + PDF)
+Gegenstand: 7 Lernskripte, 8 Zusatzdokumente, Projektverwaltung (`00_…`), Abiturrecherche (`02_…`)
+Werkzeuge: Typst 0.13.1 (Build), PyMuPDF 2.0 (Text-/Layout-/Pfadanalyse), `build/qa_pdf.py`
+
+**Abgrenzung.** Die rein technische Prüfung (Formelreste, Dezimalkomma, Textüberläufe) wurde am
+01.11.2026 durchgeführt und steht unverändert in **Anhang A**; die Abbildungsprüfung vom 02.11. in
+**Anhang B**. Beides wird hier **nicht wiederholt**. Dieser Bericht prüft Inhalt: Physik,
+Didaktik, Zahlen, Abbildungsaussagen, Quellen, Redundanz.
+
+---
+
+## 1. Kurzurteil
+
+Die 15 Dokumente sind formal sauber gebaut (0 Textüberläufe, 0 Formelreste, alle 22 Grafiken
+eingebunden) und in der Mehrzahl fachlich korrekt; die Straffung hat den Umfang halbiert, ohne
+den Stoff zu verlieren. Das größte Problem sind **falsche oder fehlende Bezüge zwischen Text und
+Abbildung**: vier Grafiken zeigen etwas anderes, als die Bildunterschrift behauptet
+(`photoeffekt_fE` ist sogar leer, `franckhertz` zeigt 11 V statt 4,9 V), und **keine** der 26
+Abbildungen wird im Fließtext gedeutet. Die größte Stärke ist die konsequente Rechenkultur: alle
+18 Referenzwerte der Prüfliste stimmen bis auf eine 1,2-%-Rundung, und jede Aufgabe hat einen
+nachvollziehbaren Lösungsweg.
+
+---
+
+## 2. Übersicht
+
+| Dokument | Seiten | Wörter | Note | P1 | P2 | P3 | Kürzung (S.) | Ergänzung (Sätze) |
+|---|---|---|---|---|---|---|---|---|
+| 01 Wellen und Interferenz | 9 | 2 613 | B | 1 | 3 | 2 | 0,5 | 12 |
+| 02 Lichtquanten und Planck | 6 | 1 930 | C | 2 | 2 | 2 | 0,3 | 2 |
+| 03 Elektronenwellen und Beugung | 7 | 1 787 | B | 0 | 2 | 2 | 0,2 | 1 |
+| 04 Doppelspalt und Quantenphysik | 6 | 1 637 | B | 0 | 3 | 1 | 0,3 | 3 |
+| 05 MZI / Welcher Weg / QED | 6 | 1 810 | B | 0 | 2 | 1 | 0,2 | 1 |
+| 06 Atommodelle und Orbitalmodell | 7 | 1 673 | C | 1 | 2 | 1 | 0,3 | 4 |
+| 07 Spektren und Franck-Hertz | 6 | 1 797 | D | 3 | 2 | 2 | 0,2 | 1 |
+| Formelblatt | 5 | 1 718 | B | 0 | 3 | 2 | 0,5 | 0 |
+| Experimentesammlung | 5 | 3 532 | B | 0 | 2 | 1 | 1,0 | 0 |
+| Gesamtübersicht | 5 | 1 686 | A | 0 | 1 | 1 | 0,5 | 0 |
+| Abitur-Analyse | 5 | 1 831 | C | 1 | 2 | 1 | 0,5 | 0 |
+| Last-Minute-Lernzettel | 4 | 1 358 | B | 0 | 2 | 2 | 0 | 0 |
+| Übungsheft (20 Aufgaben) | 13 | 6 579 | C | 4 | 2 | 2 | 0 | 1 |
+| Regression und Auswertung | 7 | 2 770 | B | 1 | 2 | 1 | 0,5 | 0 |
+| Lernfahrplan | 4 | 1 107 | D | 2 | 1 | 1 | 1,0 | 0 |
+| **Summe** | **95** | **33 828** | | **15** | **31** | **22** | **≈5,5** | **≈26** |
+
+Seiten/Wörter aus den gebauten PDFs (`get_text()`), nicht aus den Quellen.
+Noten: A = ohne Befund, B = Kleinigkeiten, C = mehrere inhaltliche Mängel, D = nicht
+gebrauchsfähig, bis die P1 behoben sind.
+
+---
+
+## 3. Befundliste
+
+Format: `P1|P2|P3` → Datei:Zeile → Befund → Beleg → Maßnahme.
+P1 = physikalisch falsch oder unlesbar · P2 = didaktisch schwach/inkonsistent · P3 = Stil/Kosmetik.
+
+### 3.1 Skript 1 – Wellen und Interferenz (`build/src/01_wellen.typ`, 9 S.)
+
+Struktur (A–I): Kenngrößen → Zeiger → Dämpfung/Resonanz → Welle → stehende Welle → Doppelspalt →
+Gitter/Einzelspalt → Bragg → EM-Welle → Experiment → Aufgaben → Fehler → Wiederholung. Ein
+phänomenologischer Einstieg fehlt; die Tabelle „Kenngrößen“ tritt an seine Stelle. Zwei Aufgaben
+(10 + 10 P.), Mischung Rechnung/Begründung ist gegeben.
+
+- **P1** → `01_wellen.typ:263` und `01_wellen.typ:285` → *Kohärenz wird verwendet, aber nirgends
+  definiert; das Nachbardokument verweist ausdrücklich auf eine Definition in Skript 1.* →
+  Beleg: „nur bei Kohärenz: feste Phasenbeziehung, gleiche Frequenz“ (263), „warum Kohärenz nötig
+  ist“ (285); `f3_uebersicht.typ:93`: „Die *Kohärenz* (Skript 1) ist Voraussetzung für alle
+  Interferenzexperimente“. → *Maßnahme: Definitionskasten „Kohärenz“ in Abschnitt 2 einfügen
+  (2 Sätze, Inhalt = die bereits in der Fehlertabelle genannte Bedingung).*
+- **P2** → `01_wellen.typ:19-43` → *Der Abschnitt „Kenngrößen“ springt von der Tabelle in die
+  Wellengleichung; der Unterschied zwischen Auslenkung, Schnelle und Wellengeschwindigkeit wird
+  erst vier Abschnitte später erklärt.* → Beleg: „$c$ ist die *Phasengeschwindigkeit*, nicht die
+  Geschwindigkeit der Teilchen“ (Z. 91 f.). → *Maßnahme: den Satz nach Abschnitt 1 ziehen
+  (Verschiebung, kein Umbau).*
+- **P2** → `01_wellen.typ:40, 54, 113, 127, 144, 167, 179, 191` → *Alle acht Grafiken haben eine
+  Bildunterschrift, aber keine wird im Fließtext erwähnt oder gedeutet (0 Treffer für
+  „Abbildung“/„Figur“ in allen 15 Quelldateien).* → Beleg: „Abbildung 1: Momentaufnahme zu zwei
+  Zeiten …“ (PDF S. 3), im Text davor/danach kein Bezug. → *Maßnahme: je ein deutender Satz
+  („Abb. 1 zeigt, dass …“); 8 Sätze.*
+- **P2** → `01_wellen.typ:148-170` → *Der Einzelspalt erscheint als Unterabschnitt von „Gitter und
+  Einzelspalt“, obwohl die Einzelspaltbreite $b$ in keiner Aufgabe vorkommt; Abituraufgabe 2 prüft
+  nur das Gitter.* → Beleg: „Beim Einzelspalt (Breite $b$) interferieren Elementarwellen *eines*
+  Spalts“ (Z. 157 f.). → *Maßnahme: eine Aufgabe mit Einzelspalt oder Verweis auf Übungsheft A4.*
+- **P3** → `01_wellen.typ:179-181` → *Symbolwechsel: Text und Formel nutzen $theta$, die Grafik
+  beschriftet mit $alpha$.* → Beleg: „$2 d sin(theta) = n lambda$“ (179) vs. Grafiktext
+  `d·sin α` (`fig/bragg.svg`). → *Maßnahme: Grafikbeschriftung oder Formel vereinheitlichen.*
+- **P3** → `01_wellen.typ:246` → *Lösungstext nutzt „0,632“ ohne Symbolbezug.* → Beleg:
+  „$frac(2","00 dot 10^(-6) "m" dot 0","632, 2)$“ → *Maßnahme: „$sin alpha_2 = 0,632$“
+  davorsetzen.*
+
+### 3.2 Skript 2 – Lichtquanten und Planck (`02_lichtquanten.typ`, 6 S.)
+
+- **P1** → `02_lichtquanten.typ:51-55` + `build/make_figures.py:176-181` → *Die Grafik
+  `photoeffekt_fE.svg` ist leer: alle drei Kurven liegen auf $E=0$, weil der Faktor 1000 zu viel
+  ist ($4,1357 f/1000$ bei $f$ in $10^14$ Hz). Die Bildunterschrift behauptet zusätzlich eine
+  Gerade durch den Ursprung, was für $E_"kin,max"$ falsch ist.* → Beleg Quelltext:
+  „`E = 4.1357*f/1000 - Wa`“ (make_figures.py:179); Beleg SVG: die drei Datenpfade lauten
+  `M 32.928359 173.52 L 345.408359 173.52 L 345.408359 173.52` – eine Waagerechte auf der
+  Nulllinie; Unterschrift: „Energie eines Photons über der Frequenz: Gerade durch den Ursprung,
+  Steigung $h$.“ (Z. 53 f.). → *Maßnahme: Faktor auf $4,1357 f/10$ korrigieren, Grafik neu
+  erzeugen, Unterschrift auf „$E_"kin,max"$ über $f$: Gerade mit Steigung $h$, Nullstelle bei
+  $f_G$“ umstellen.*
+- **P1** → `02_lichtquanten.typ:83-87` → *Bildunterschrift beschreibt einen Versuchsaufbau
+  (Gegenfeld), die Grafik zeigt aber eine LED-Messreihe $U_S(f)$.* → Beleg: „Gegenfeldmethode:
+  Zwischen Kathode und Anode liegt eine Bremsspannung; erst ab $e U_B = E_"kin,max"$ fließt kein
+  Strom mehr.“ vs. Grafikachsen „Frequenz f in 10^14 Hz“ / „Spannung U_S in V“
+  (`fig/led_hbestimmung.svg`, `make_figures.py:194`). → *Maßnahme: Unterschrift auf die
+  LED-Methode umschreiben (Steigung $h\/e$).*
+- **P2** → `02_lichtquanten.typ:52, 84` → *Keine der beiden Grafiken wird im Text gedeutet; die
+  $f$-$E$-Grafik ist die einzige Stelle, an der die Steigung $h$ visuell begründet würde.* →
+  Beleg: nach der Abbildung folgt direkt „= Der äußere Photoeffekt“ (Z. 57). → *Maßnahme: zwei
+  deutende Sätze.*
+- **P2** → `02_lichtquanten.typ:119-124` → *Die LED-Methode steht als „Experiment“ ohne
+  Fehlerdiskussion der Steigung; die zugehörige Grafik (Z. 84) zeigt vier Punkte, deren Ausgleich
+  $h$ um 6 % zu groß ergibt (Steigung 4,40 statt 4,14 · 10⁻¹⁵ V s).* → Beleg: Daten
+  `f = [4.62, 5.10, 5.49, 5.83]e14`, `U = [1.90, 2.10, 2.28, 2.43]`
+  (`make_figures.py:186-187`). → *Maßnahme: entweder Punkte auf $h$ exakt ziehen oder in der
+  Unterschrift „schematisch“ schreiben.*
+- **P3** → `02_lichtquanten.typ:133` → *Rundung außerhalb der 1-%-Toleranz.* → Beleg: „Bei
+  $U_B = 35$ kV folgt $lambda_min = 35$ pm.“ – exakt 1239,8/35 000 nm = **35,4 pm** (1,2 %). →
+  *Maßnahme: „35,4 pm“.*
+- **P3** → `02_lichtquanten.typ:53-54` → *Eine Unterschrift mischt zwei Aussagen (Steigung $h$ und
+  Rechenform $h c\/lambda$).* → Beleg: „… Steigung $h$. Bei $lambda$ in nm ist $h c\/lambda$ die
+  praktische Form.“ → *Maßnahme: zweiten Satz streichen (steht in Abschnitt 2).*
+
+### 3.3 Skript 3 – Elektronenwellen und Beugung (`03_elektronenwellen.typ`, 7 S.)
+
+- **P2** → `03_elektronenwellen.typ:52-56, 85-88` → *Beide Grafiken ohne Textbezug; die
+  Bragg-Grafik ist identisch mit der aus Skript 1 und wird hier nicht neu gedeutet.* → Beleg:
+  „Abbildung 2: Bragg-Bedingung: Die zweite Netzebene liefert den Zusatzweg $2 d sin(theta)$.“,
+  im Text kein Verweis. → *Maßnahme: ein Satz „Abb. 2 macht die Herleitung oben anschaulich“.*
+- **P2** → `03_elektronenwellen.typ:90-104` → *Die Abgrenzung Strahlröhre/Beugungsröhre steht nur
+  als Tabelle; der Merksatz wiederholt sie, ohne den physikalischen Grund (Ladungsträger vs.
+  Welle) zu nennen.* → Beleg: „Nur die Beugungsröhre zeigt Interferenz.“ (Z. 102). →
+  *Maßnahme: Halbsatz „weil nur dort die Wellenlänge in der Größenordnung der
+  Netzebenenabstände liegt“.*
+- **P3** → `03_elektronenwellen.typ:165` → *Vier Nachkommastellen bei drei Messpunkten.* →
+  Beleg: „Steigung $M = 0","6086$ m²V“. → *Maßnahme: „0,61 m²V“.*
+- **P3** → `03_elektronenwellen.typ:95-98` → *Tabellenzelle „Ablenkplatten, Leuchtschirm; kein
+  Beugungsbild“ steht in der Spalte „Kennzeichen“ und beginnt mit einem Bauteil.* → Beleg:
+  Z. 96. → *Maßnahme: „Leuchtschirm statt Folie; kein Beugungsbild“.*
+
+### 3.4 Skript 4 – Doppelspalt und Quantenphysik (`04_doppelspalt.typ`, 6 S.)
+
+- **P2** → `04_doppelspalt.typ:93` gegen `f1_formelblatt.typ:131` und `f4_lastminute.typ:30, 47`
+  → *Die Unbestimmtheitsrelation steht in zwei Fassungen: $h\/(4 pi)$ (Skript 4, Lernfahrplan)
+  und $>= h$ (Formelblatt, Lernzettel).* → Beleg: „$Delta x dot Delta p >= frac(h, 4 pi)$“ vs.
+  „$Delta x dot Delta p_x >= h$ … Schulnotation“. → *Maßnahme: eine Fassung wählen; die
+  $h$-Form als „übliche Schulabschätzung“ kennzeichnen und die $h\/(4 pi)$-Form als exakte
+  Schranke.*
+- **P2** → `04_doppelspalt.typ:95-105` → *Zwei Grafiken hintereinander, keine im Text erwähnt;
+  die Unbestimmtheitsgrafik zeigt Beugungsbilder, die Unterschrift spricht von einem Wellenpaket.*
+  → Beleg: „Wellenpaket: Je schmaler der Ort, desto breiter die Impulsverteilung.“ vs.
+  Achsenbeschriftung „Ort auf dem Schirm in mm“ / „Intensität“ (`fig/unbestimmtheit.svg`). →
+  *Maßnahme: Unterschrift auf „Beugungsbild eines schmalen und eines breiten Spalts“ umstellen
+  oder die neuere Fassung aus `redraw_figs.py:180-201` verwenden.*
+- **P2** → `04_doppelspalt.typ:128-130` → *Zahlenbehauptung ohne Herleitung.* → Beleg: „Bei 100
+  Treffern verteilen sich im Mittel etwa 5 auf ein Maximum – zu wenig für ein erkennbares Bild.“
+  – die Zahl 5 hängt vom Verhältnis Streifenbreite/Ausdehnung ab und ist nicht belegt. →
+  *Maßnahme: Zahl streichen, qualitativ argumentieren.*
+- **P3** → `04_doppelspalt.typ:59` → *Normierungsfaktor $1\/sqrt(2)$ ohne Begründung, obwohl der
+  Doppelspalt vorher mit $E_1 + E_2$ beschrieben wurde.* → Beleg: „$psi = frac(1, sqrt(2))
+  (psi_1 + psi_2)$“. → *Maßnahme: „gleiche Amplituden“ ergänzen.*
+
+### 3.5 Skript 5 – MZI / Delayed Choice / QED (`05_mzi.typ`, 6 S.)
+
+- **P2** → `05_mzi.typ:42-52` gegen `f1_formelblatt.typ:133` und `f6_uebungen.typ:541` →
+  *Die Zuordnung Detektor → Formel widerspricht sich: Skript 5 gibt D1 $sin^2$, Formelblatt und
+  Übungsheft geben D1 $cos^2$.* → Beleg: „$I_1 = sin^2 frac(Delta phi, 2), quad I_2 = cos^2 …“;
+  „$P_"D1" = cos^2(Delta phi\/2)$“; „$P_1 = cos^2(Delta phi\/2) = cos^2(2","48) = 0","62$“. →
+  *Maßnahme: Konvention in Skript 5 explizit machen („D1 ist der Ausgang, der bei $Delta phi = 0$
+  dunkel ist“); Zahlen nicht ändern.*
+- **P2** → `05_mzi.typ:21-25, 54-58` → *Aufbau- und Zeigerbild ohne Textbezug; das Zeigerbild ist
+  die einzige visuelle Erklärung der Amplitudenaddition.* → Beleg: Abschnitt „= Aufbau“ besteht
+  nur aus Grafik und Tabelle; danach „= Rechnung mit Amplituden“ ohne Rückgriff. → *Maßnahme:
+  je ein Satz.*
+- **P3** → `05_mzi.typ:32` → *„Phasensprung $pi$ an Spiegeln“ gilt für metallische Spiegel; im
+  symmetrischen MZI heben sich die beiden Spiegelphasen auf.* → Beleg: „[Spiegel],
+  [Richtungsänderung, Phasensprung $pi$]“. → *Maßnahme: „(hebt sich im symmetrischen Aufbau
+  auf)“ ergänzen.*
+
+### 3.6 Skript 6 – Atommodelle und Orbitalmodell (`06_atommodelle.typ`, 7 S.)
+
+- **P1** → `06_atommodelle.typ:122-125` + `make_figures.py:203-213` → *Die Potenzialtopf-Grafik
+  trägt die physikalisch sinnlose Beschriftung „E_kin – E_pot“, und die Unterschrift verspricht
+  Wellenfunktionen, die nicht gezeichnet sind.* → Beleg Quelltext: „`ax.text(1.04, 1.6,
+  "E$_{kin}$ – E$_{pot}$" …)`“; Unterschrift: „Potenzialtopf: Wellenfunktionen mit $n$
+  Halbwellen, Energien wachsen mit $n^2$.“; im Bild nur drei waagerechte Niveaus. → *Maßnahme:
+  Beschriftung auf „$E$“ ändern und Unterschrift auf „Energieniveaus $E_n tilde n^2$ im Kasten
+  der Breite $L$“ umstellen.*
+- **P2** → `06_atommodelle.typ:127-134` → *Elektronenkonfiguration und Pauli-Prinzip kommen nur
+  als halbe Tabellenzelle vor, obwohl `THEMENSTATUS.md` sie als eigenständigen Punkt (6.4.3 ✅)
+  führt.* → Beleg: „[stabile Bahn], [stationärer Zustand, Pauli-Prinzip füllt Orbitale]“
+  (Z. 133). → *Maßnahme: drei Sätze zu Schalenbesetzung/$2n^2$ (Formel steht im Formelblatt,
+  Z. 152).*
+- **P2** → `06_atommodelle.typ:77-81` → *Unterschrift sagt „$n -> infinity$ entspricht $E = 0$“,
+  die Grafik ist aber auf „Energie über dem Grundzustand“ skaliert (Grenze bei 13,6).* → Beleg:
+  `make_figures.py:223` (`E+13.6`), Achsentext „Energie über dem Grundzustand in eV“. →
+  *Maßnahme: Halbsatz „in der Darstellung liegt die Ionisationsgrenze bei 13,6 eV“.*
+- **P3** → `06_atommodelle.typ:24` → *„etwa 1 von 8000“ ohne Quellenangabe; die Zahl ist
+  Lehrbuchkonvention, nicht Messwert dieses Aufbaus.* → Beleg: „etwa 1 von 8000 wird um mehr als
+  90° gestreut“. → *Maßnahme: „(Lehrbuchwert)“ ergänzen.*
+
+### 3.7 Skript 7 – Spektren und Franck-Hertz (`07_spektren.typ`, 6 S.)
+
+- **P1** → `07_spektren.typ:162-169` → *Aufgabe 2 ist syntaktisch zerstört: der `#enum(`-Aufruf
+  fehlt, die Teilaufgaben erscheinen als Rohtext mit eckigen Klammern und einer überzähligen
+  Klammer.* → Beleg (PDF S. 6): „[Skizzieren Sie das beobachtete Spektrum.], [Berechnen Sie die
+  Grenzwellenlänge der Lyman-Serie.], [Begründen Sie, warum die Balmer-Linien schwächer sind.] )“.
+  → *Maßnahme: `#enum(` vor die Liste setzen, Klammer schließen.*
+- **P1** → `07_spektren.typ:112-116` + `make_figures.py:238-247` → *Die Franck-Hertz-Grafik zeigt
+  eine Periode von 11 V und ist mit „ΔU ≈ 11 V“ beschriftet; Text und Unterschrift sagen 4,9 V
+  (Quecksilber).* → Beleg Quelltext: „`I = 1 + 0.055*U - 0.9*(1 - np.exp(-((U % 11.0)/1.1)**8))`“
+  und „`ax.text(13.3, 1.45, "ΔU ≈ 11 V" …)`“; Unterschrift: „Der Abstand der Minima ist die
+  Anregungsspannung $Delta U approx 4","9$ V.“; Text: „fällt bei etwa 4,9 V, 9,8 V, 14,7 V“. →
+  *Maßnahme: Grafik auf 4,9 V umrechnen und neu erzeugen.*
+- **P1** → `07_spektren.typ:157-159` → *Falsche Begründung für das Leuchten: bei Neon liegt die
+  Anregungsenergie (16,7 eV) im UV, nicht im Sichtbaren.* → Beleg: „bei Neon liegt die Anregung im
+  sichtbaren Bereich, dort sieht man die Leuchtschicht direkt.“ → *Maßnahme: „bei Neon liegen
+  viele der anschließenden Übergänge im Sichtbaren, daher die helle Leuchtschicht“.*
+- **P1** → `07_spektren.typ:42-44` → *Die Unterschrift ordnet alle eingezeichneten Linien der
+  Balmer-Serie zu; die Grafik enthält zusätzlich $2 -> 1$ (Lyman-$alpha$, 122 nm).* → Beleg:
+  „Die eingezeichneten Linien gehören zur Balmer-Serie ($n = 2$ als Ziel).“;
+  `make_figures.py:226`: „`trans = [(3, 2, 656), (4, 2, 486), (5, 2, 434), (6, 2, 410),
+  (2, 1, 122)]`“. → *Maßnahme: „vier Balmer-Linien und die Lyman-$alpha$-Linie $2 -> 1$“.*
+- **P2** → `07_spektren.typ:56, 88, 200-201` → *Einheiten in drei Schreibweisen derselben Formel:
+  $lambda_"min" = 1239","8 \/ |E_"Ziel"|$ (ohne Einheit), $= frac(1239","8 "eV nm", U_B)$
+  (dimensioniert falsch: eV·nm durch Volt), $= 1239","8 \/ U_B$ (ohne Einheit).* → Beleg: Z. 88
+  „$lambda_min = frac(h c, e U_B) = frac(1239","8 "eV nm", U_B)$“. → *Maßnahme: einheitlich
+  $lambda_min = 1239","8 "nm" dot "V" \/ U_B$ bzw. $1239","8 "eV nm" \/ Delta E$.*
+- **P2** → `07_spektren.typ:40-44, 112-116` → *Beide Grafiken ohne Textbezug.* → Beleg: Abschnitt
+  „= Energieniveaus lesen“ beginnt mit Prosa, die die Grafik nicht nennt. → *Maßnahme: je ein
+  Satz.*
+- **P3** → `07_spektren.typ:104-105` → *Beobachtung nennt nur Hg-Zahlen, Erklärung springt zu Ne.*
+  → Beleg: „bei Ne leuchtet das Gas in einer orangeroten Schicht“. → *Maßnahme: eigenen Satz für
+  Ne, nicht im Hg-Satz.*
+- **P3** → `07_spektren.typ:165-167` → *Teilaufgaben in Aufgabe 2 sind inhaltlich nicht an die
+  Aufgabe gebunden (Lyman-Grenze vs. weißes Licht).* → *Maßnahme: nach dem Syntaxfix prüfen, ob
+  (1)–(3) zusammenpassen; sonst (2) streichen.*
+
+### 3.8 Formelblatt (`f1_formelblatt.typ`, 5 S.)
+
+- **P2** → `f1_formelblatt.typ:131` → *Unbestimmtheit als $>= h$ ohne Hinweis, dass Skript 4
+  $h\/(4 pi)$ verwendet (siehe 3.4).* → Beleg: „[$Delta x dot Delta p_x >= h$],
+  [Unbestimmtheit], [Schulnotation]“. → *Maßnahme: beide Formen nebeneinander, mit Zuordnung.*
+- **P2** → `f1_formelblatt.typ:133` → *$P_"D1" = cos^2(Delta phi\/2)$ widerspricht Skript 5
+  ($I_1 = sin^2$).* → Beleg: s. 3.5. → *Maßnahme: Konvention angleichen.*
+- **P2** → `f1_formelblatt.typ:88` → *Gültigkeitsbedingung an der falschen Zeile: $e >> g$ gehört
+  zur Kleinwinkelnäherung, nicht zur Gitterformel.* → Beleg: „[$n lambda = g sin(alpha)$],
+  [Doppelspalt/Gitter], [$e >> g$]“. → *Maßnahme: Bedingung „Kleinwinkel $a << e$“ nennen.*
+- **P3** → `f1_formelblatt.typ:122` → *$U_B$ wird doppelt belegt (Beschleunigungs- und
+  Bremsspannung).* → Beleg: „[$e U_B = 1\/2 m_e v^2$], [Elektronenkanone]“ vs.
+  „[$e U_B = E_"kin,max"$], [Gegenfeld]“. → *Maßnahme: $U_"B"$/$U_"G"$ trennen.*
+- **P3** → `f1_formelblatt.typ:77` → *„$lambda = 2 Delta x$“ ohne Bezug, was $Delta x$ ist.* →
+  Beleg: „[$lambda = 2 Delta x$], [stehende Welle], [Knoten-/Bauchabstand $lambda\/2$]“. →
+  *Maßnahme: „$Delta x$ = Abstand zweier Knoten“.*
+
+### 3.9 Experimentesammlung (`f2_experimente.typ`, 5 S.)
+
+- **P2** → `f2_experimente.typ:199` → *Spreizt die Fachsprache: Skript 7 und Regression sprechen
+  von Minima, hier von Maxima – ohne Hinweis, dass der Abstand gleich ist.* → Beleg:
+  „Periodische Maxima im Abstand $Delta U$“. → *Maßnahme: „Maxima (bzw. Minima)“.*
+- **P2** → `f2_experimente.typ:82` → *„Linearer Abfall“ beschreibt die $I$-$U$-Kennlinie falsch:
+  sie fällt bis zum Knick, dann folgt ein Sockel; „linear“ gilt nur für den ersten Teil.* →
+  Beleg: „Linearer Abfall; Knickpunkte liegen auf einer Geraden über $f$.“ → *Maßnahme: „Der
+  Strom fällt mit steigender Gegenspannung und verschwindet am Knick“.*
+- **P3** → `f2_experimente.typ:166` → *Formelzeile $h = e U_B\/f + W_A\/f$ ist korrekt, aber als
+  Summe zweier Brüche schwer lesbar.* → *Maßnahme: $h = (e U_B + W_A)\/f$.*
+
+### 3.10 Gesamtübersicht (`f3_uebersicht.typ`, 5 S.)
+
+- **P2** → `f3_uebersicht.typ:20-23` → *Die Landkarte ist die einzige Grafik des Dokuments und
+  wird im Text nicht gedeutet; die folgenden Abschnitte zählen die Fäden auf, ohne auf sie zu
+  verweisen.* → Beleg: „Abbildung 1: Landkarte der Themen …“, danach „= Drei rote Fäden“. →
+  *Maßnahme: ein Satz „Abb. 1 ordnet die drei Fäden einander zu“.*
+- **P3** → `f3_uebersicht.typ:111-122` → *„Lernreihenfolge (Empfehlung)“ wiederholt die Tabelle aus
+  `f8_lernplan.typ:45-55` und die README-Tabelle.* → *Maßnahme: auf den Lernfahrplan verweisen
+  (Einsparung ≈ 0,5 S.).*
+
+### 3.11 Abitur-Analyse (`f5_abitur.typ`, 5 S.)
+
+- **P1** → `f5_abitur.typ:123` und `f5_abitur.typ:58-69` → *Die Angabe „fachpraktischer Anteil in
+  5 von 12 Aufgaben“ ist falsch; nach den Aufgaben-PDFs sind es 2 von 12. Drei Zeilen der Tabelle
+  sind falsch markiert.* → Beleg: `2026ENSWmg3_Aufgabe.txt:43 f.`: „fachpraktischer Anteil ja ☐ /
+  nein ☒“ (ebenso `2026GNFEmg1`, `2026GNFEmg3`); nur `2025gNFEfp2` und `2025gNSWfp2` tragen
+  „fachpraktischer Anteil ja“. → *Maßnahme: Tabelle (Blitzdetektor, Elektrobus,
+  Elektronenstrahlen) auf „nein“ setzen, Satz auf „2 von 12“.*
+- **P2** → `02_Abiturrecherche/untersuchte_aufgaben.csv:11` → *Der Blitzdetektor ist dort als
+  „gA“ geführt; das Aufgaben-PDF sagt „Anforderungsniveau erhöht“.* → Beleg:
+  `2026ENSWmg3_Aufgabe.txt:9 f.`: „Anforderungsniveau / erhöht“. → *Maßnahme: CSV auf „eA“
+  korrigieren (die Tabelle in `f5_abitur.typ:67` ist bereits richtig).*
+- **P2** → `f5_abitur.typ:141-152` → *Die Empfehlung „Experimente beschreiben … wegen der
+  fachpraktischen Anteile“ stützt sich auf die falsche Zählung.* → Beleg: „*Experimente
+  beschreiben:* … wegen der fachpraktischen Anteile“ (Z. 149 f.). → *Maßnahme: Begründung auf die
+  eA-Variante „mit Experimentieren“ stützen (in den Hinweisen 2027 belegt), nicht auf die
+  Stichprobe.*
+- **P3** → `f5_abitur.typ:112-113` → *Prozentangabe bei n = 94 Nennungen; 46/94 = 48,9 %, also
+  korrekt, aber die Bezugsgröße „Nennungen“ ist unklar.* → *Maßnahme: „46 von 94
+  Operatornennungen“.*
+
+### 3.12 Last-Minute-Lernzettel (`f4_lastminute.typ`, 4 S.)
+
+- **P2** → `f4_lastminute.typ:30, 47` → *Unbestimmtheit als $>= h$ (Widerspruch zu Skript 4,
+  s. 3.4).* → Beleg: „Weginformation zerstört Interferenz – Komplementarität; $Delta x dot Delta
+  p_x >= h$.“ → *Maßnahme: wie 3.4.*
+- **P2** → `f4_lastminute.typ:91` → *Unbelegte Häufigkeitsangabe über Abituraufgaben.* → Beleg:
+  „1. Doppelspalt/Gitter-Rechnung mit Auswertung (kommt am häufigsten).“ – die eigene Analyse
+  (`f5_abitur.typ:77-86`) zeigt 4 von 12 Aufgaben im Bereich Schwingungen/Wellen, davon 1 mit
+  Gitter. → *Maßnahme: „kommt häufig vor“ ohne Superlativ.*
+- **P3** → `f4_lastminute.typ:72` → *„Strommaxima“ vs. „Minima“ in Skript 7 (gleicher Versuch).*
+  → *Maßnahme: „Maxima (Minima im gleichen Abstand)“.*
+- **P3** → `f4_lastminute.typ:82` → *Neben $h c = 1239","8$ wird hier wieder 1240 empfohlen, ohne
+  die 0,02 % zu nennen (im Formelblatt steht es).* → *Maßnahme: Klammer „(1240 gerundet)“.*
+
+### 3.13 Übungsheft (`f6_uebungen.typ`, 13 S.)
+
+- **P1** → `f6_uebungen.typ:46-54` → *Die Punkte-/Zeitplan-Tabelle ist als Markdown-Tabelle
+  geschrieben und erscheint im PDF als Rohtext mit senkrechten Strichen.* → Beleg (PDF S. 3):
+  „| Block | Aufgaben | Punkte | Zeit | |—|—|—|—| | A Wellen und Interferenz | 4 | 54 | 55 min | …“.
+  → *Maßnahme: in `#table(...)` überführen.*
+- **P1** → `f6_uebungen.typ:123-124` → *Messwerttabelle in Aufgabe 5 aus demselben Grund
+  unlesbar.* → Beleg (PDF S. 4): „| 𝜆 in nm | 405 | 436 | 546 | 578 | | 𝑈𝐵 in V | 1,16 | …“. →
+  *Maßnahme: `#table(...)`.*
+- **P1** → `f6_uebungen.typ:396` → *Fremdsprachiges Wort im Lösungstext (russisch
+  „принадлежит“).* → Beleg (PDF S. 9): „die breitere Kurve принадлежит zu $b = 0","05$ mm“. →
+  *Maßnahme: „gehört“.*
+- **P1** → `f6_uebungen.typ:574` → *Überzählige Klammer in der Rechnung, im PDF sichtbar.* →
+  Beleg (PDF S. 11): „Δ𝑥⋅Δ𝑝𝑥≈50 ⋅10−6 ⋅1,3 ⋅10−29) = 6,6 ⋅10−34 J s“. → *Maßnahme: Klammer
+  entfernen.*
+- **P2** → `f6_uebungen.typ:409` → *Satz widerspricht sich selbst: „fallende Gerade“ und
+  „je größer $f$, desto größer $U_B$“.* → Beleg: „Auftragung $U_B$ über $f$ ergibt eine fallende
+  Gerade (je größer $f$, desto größer $U_B$).“ – die Daten (405 nm → 1,16 V; 578 nm → 0,25 V)
+  ergeben eine **steigende** Gerade. → *Maßnahme: „steigende Gerade“.*
+- **P2** → `f6_uebungen.typ:541` → *$P_1 = cos^2$ widerspricht Skript 5 ($I_1 = sin^2$); siehe
+  3.5.* → Beleg: „$P_1 = cos^2(Delta phi\/2) = cos^2(2","48) = 0","62$“. → *Maßnahme: nach
+  Klärung der Konvention angleichen.*
+- **P3** → `f6_uebungen.typ:432` → *Rhetorische Selbstfrage in einer Lösung.* → Beleg: „Diese
+  Linie liegt deutlich über der Grenzenergie des Bremsspektrums? – Nein: …“ → *Maßnahme: Frage
+  streichen.*
+- **P3** → `f6_uebungen.typ:123` → *Spaltenkopf „$lambda$ in nm“ – nach dem Tabellenfix prüfen,
+  ob Einheit im Kopf und in den Zellen zusammenpassen.* → *Maßnahme: mit P1 zusammen.*
+- **P3** → ganzes Dokument → *Bindestriche werden als Soft-Hyphen (U+2010) gesetzt und extrahieren
+  sich als `\x1d`: „Franck-Hertz“ wird zu „FranckHertz“ (71 Treffer, dagegen 1 echter
+  Bindestrich; Skript 1 hat 21 echte). Optisch korrekt, aber die PDF-Suche findet
+  „Franck-Hertz“ nicht.* → Beleg: `rawdict` der Tabellenzelle liefert
+  `'F Spektren und Franck\x1dHertz'`. → *Maßnahme: im Satz `#set text(hyphenate: false)` für
+  Tabellenzellen prüfen oder Bindestrich als `\-` schreiben; kein P1, das Dokument ist lesbar.*
+
+### 3.14 Regression und Auswertung (`f7_regression.typ`, 7 S.)
+
+- **P1** → `f7_regression.typ:193-194` → *Die 253-nm-Linie ist UV und auf einem Leuchtschirm nicht
+  sichtbar; Skript 7 sagt das Gegenteil (sichtbare Linien anderer Übergänge).* → Beleg: „Genau
+  diese 253 nm sind die ultraviolette Quecksilberlinie, die man beim Versuch mit Leuchtschirm
+  beobachtet.“ → *Maßnahme: „… die im UV liegt; das sichtbare Leuchten der Röhre stammt von
+  anderen Übergängen.“*
+- **P2** → `f7_regression.typ:84-85` → *Das Symbol $D$ bedeutet in zwei aufeinanderfolgenden
+  Zeilen Schirmabstand und Federkonstante.* → Beleg: „[$s_n = n lambda D\/g$ (Gitter)]“ und
+  „[$T^2 = (4 pi^2)\/D dot m$]“. → *Maßnahme: Schirmabstand $e$ nennen (wie in Skript 1).*
+- **P2** → `f7_regression.typ:180-186` → *Das Franck-Hertz-Beispiel verwendet Maxima, Skript 7
+  Minima – gleiche Zahlen, zwei Begriffe, ohne Hinweis.* → Beleg: „Die Maxima liegen bei
+  $U_n = n dot Delta U + U_"K"$“. → *Maßnahme: Klammer „(Minima liefern denselben Abstand)“.*
+- **P3** → `f7_regression.typ:102-105` → *Bildunterschrift deutet die Grafik korrekt, aber der
+  Text danach zählt nur die vier Regressionsgrößen auf, ohne den Bezug zur Abbildung zu halten.*
+  → *Maßnahme: ein Satz „Abb. 1 zeigt beides“.*
+
+### 3.15 Lernfahrplan (`f8_lernplan.typ`, 4 S.)
+
+- **P1** → `f8_lernplan.typ:48-54` → *Alle Seitenangaben stammen aus der Fassung vor der
+  Straffung und zeigen auf Seiten, die es nicht mehr gibt (Skript 1 hat 9 statt 15 Seiten;
+  „12, 14–15“ existiert nicht).* → Beleg: „[1 Wellen/Interferenz (15 S.)], [3, 12, 14–15]“ –
+  tatsächlich 9 Seiten. → *Maßnahme: Tabelle aus den gebauten PDFs neu ableiten.*
+- **P1** → `f8_lernplan.typ:9, 24, 33, 80` → *Umfangsangaben sind veraltet (121 Seiten, 76 Seiten
+  Skripte, 60 000 Wörter).* → Beleg: „121 Seiten sind ein Nachschlagewerk“; „[7 Lernskripte],
+  [76 S.]“; „Von den insgesamt etwa 60.000 Wörtern“; gemessen: **95 Seiten, 47 Seiten Skripte,
+  33 828 Wörter**. → *Maßnahme: Zahlen aktualisieren.*
+- **P2** → `f8_lernplan.typ:57-58` → *Aussage über Skript 5/6 („kein eigener Abschnitt
+  Herleitung“) ist richtig, hilft aber ohne Seitenzahl nicht.* → *Maßnahme: mit dem Umbau der
+  Tabelle miterledigen.*
+- **P3** → `f8_lernplan.typ:62` → *Datumsangabe „Heute ist Sonntag, der 1. November“ ist korrekt
+  (geprüft), wird aber nach dem Prüfungstermin falsch.* → *Maßnahme: „Stand 01.11.2026“
+  formulieren.*
+
+### 3.16 Projektverwaltung (kein PDF, aber prüfungsrelevant)
+
+- **P1** → `00_Projektverwaltung/THEMENSTATUS.md:8-27` → *Alle Ortsangaben für Skript 1 verweisen
+  auf eine Gliederung, die es nicht mehr gibt (1.2.3, 1.4.1, 1.5.4, 1.6, 1.7, 1.8.4); Skript 1 hat
+  heute 13 durchnummerierte Abschnitte.* → Beleg: „| Resonanz, Resonanzfrequenz, Dämpfung |
+  1.2.3 | ✅ |“ – Resonanz steht in Abschnitt 3. → *Maßnahme: Spalte „Ort“ auf die aktuelle
+  Gliederung umstellen.*
+- **P1** → `00_Projektverwaltung/THEMENSTATUS.md:24-25` → *Polarisation/Malus und
+  Michelson-Interferometer sind als „🔶 im Skript behandelt“ geführt, kommen in Skript 1 aber
+  nicht vor.* → Beleg: „| Polarisation, Malus | 1.7 | 🔶 (kurz; vertieft in Schulmaterial) |“;
+  Gegenprobe: `grep -n "Polarisation\|Malus\|Michelson" src/01_wellen.typ` → 0 Treffer. →
+  *Maßnahme: Status auf ❌ mit Begründung; Inhalt als Ergänzung vorschlagen (Abschnitt 5).*
+- **P2** → `00_Projektverwaltung/THEMENSTATUS.md:39-49` (Skript 4) → *„Koinzidenzmethode“ als ✅
+  geführt; in Skript 4 nicht vorhanden (nur in `f2_experimente.typ:140`).* → *Maßnahme: Status
+  korrigieren.*
+- **P2** → `00_Projektverwaltung/README.md:22` → *„7 Skripte 48 Seiten“ – tatsächlich 47
+  (9+6+7+6+6+7+6).* → *Maßnahme: 47.*
+- **P3** → `00_Projektverwaltung/QUELLENVERZEICHNIS.md:75` → *„Alle 23 Grafiken in
+  `05_Grafiken/`“ – dort liegen 22 SVGs plus README.* → *Maßnahme: 22.*
+- **P3** → `00_Projektverwaltung/QUELLENVERZEICHNIS.md:83-87` → *„Dort ist angegeben, welche
+  Aussagen aus Schulmaterial, welche aus dem Kerncurriculum und welche aus dem Aufgabenpool
+  stammen.“ Die Quellenkästen nennen nur die Quelle insgesamt, keine Zuordnung je Aussage.* →
+  *Maßnahme: Anspruch abschwächen oder Zuordnung nachtragen.*
+
+---
+
+## 4. Kürzungsvorschläge
+
+| Stelle | Grund | Einsparung |
+|---|---|---|
+| `f2_experimente.typ` gesamt | wiederholt die Experiment-Kästen der Skripte 1–7 nahezu wörtlich (z. B. Franck-Hertz `f2:194-203` vs. `07:100-110`) | ≈ 1,0 S. |
+| `f3_uebersicht.typ:111-122` | Lernreihenfolge doppelt zu `f8_lernplan.typ:45-55` und README | ≈ 0,5 S. |
+| `f8_lernplan.typ:19-41` | „Die ehrliche Rechnung“ und Rollentabelle wiederholen `f3_uebersicht` | ≈ 0,7 S. |
+| `f1_formelblatt.typ:157-170` | „Typische Umformungen“ sind fünf Zeilen, die in den Skripten als Herleitung stehen | ≈ 0,3 S. |
+| `01_wellen.typ:269-283` | Wiederholungstabelle dupliziert Formelblatt Abschnitte 2–4 | ≈ 0,3 S. |
+| `f5_abitur.typ:115-124` | „Wiederkehrende Aufgabenformate“ wiederholt die Empfehlungen (Z. 141-152) | ≈ 0,3 S. |
+| **Summe** | | **≈ 3 S. ohne Informationsverlust** |
+
+Nicht zur Kürzung empfohlen: Übungsheft (jede Aufgabe deckt einen anderen Operator ab),
+Last-Minute-Lernzettel (Kern-Lernstoff), Regression (eigenständige Methode).
+
+---
+
+## 5. Ergänzungsvorschläge
+
+| Stelle | Was fehlt | Warum prüfungsrelevant | Umfang |
+|---|---|---|---|
+| `01_wellen.typ`, nach Abschnitt 7 | Polarisation: Transversalwellen-Kriterium, Polarisator/Analysator, Malus $I = I_0 cos^2 alpha$ | Kerncurriculum-Kompetenz laut Schulseite `d12/12schwingungenwellen/06polarisation/docs.md` („Polarisierbarkeit als Unterscheidungsmerkmal“, „Winkelabhängigkeit der Intensität“); IQB-Aufgabe „DECT-Telefon“ prüft Polarisation; Formelblatt Z. 76 führt Malus ohne Erklärung | ≈ 6 Sätze + 1 Abb. |
+| `01_wellen.typ`, nach Abschnitt 8 | Michelson-Interferometer: $N lambda = 2 Delta d$ | von `THEMENSTATUS.md:25` behauptet, in `f2_experimente.typ:60-66` und `f1_formelblatt.typ:94 f.` vorausgesetzt | ≈ 4 Sätze |
+| `01_wellen.typ:45-61` | Definition „Kohärenz“ (feste Phasenbeziehung, gleiche Frequenz) | wird in Z. 263/285 verwendet; `f3_uebersicht.typ:93` verweist auf Skript 1 | 2 Sätze |
+| `06_atommodelle.typ`, nach Abschnitt 4 | Schalenbesetzung, Pauli-Prinzip, $2n^2$ | `THEMENSTATUS.md:63` führt es als ✅; Formelblatt Z. 152 hat die Formel ohne Text | 4 Sätze |
+| `04_doppelspalt.typ:35-47` | Koinzidenzmethode (wie wird „ein Photon gleichzeitig“ sichergestellt?) | `THEMENSTATUS.md:45` führt sie als ✅; Methodenfrage in Aufgaben | 2 Sätze |
+| alle Dokumente mit Grafik (26 Stellen) | je ein deutender Satz im Fließtext | Kriterium F; derzeit 0 Verweise auf „Abbildung“ in allen Quellen | 26 Sätze |
+
+---
+
+## 6. Maßnahmenplan
+
+Reihenfolge nach Wirkung/Aufwand. P1 wird umgesetzt, P2/P3 nach Freigabe.
+
+| # | Maßnahme | Dateien | Aufwand | Wirkung |
+|---|---|---|---|---|
+| 1 | Syntaxfehler in Aufgabe 2 beheben | `src/07_spektren.typ:162-169` | 2 min | Skript 7 wieder lesbar |
+| 2 | Markdown-Tabellen → `#table`, Fremdwort, Klammer | `src/f6_uebungen.typ:46-54, 123-124, 396, 574` | 15 min | Übungsheft wieder benutzbar |
+| 3 | `photoeffekt_fE` reparieren (Faktor 1000) + Unterschrift | `make_figures.py:176-181`, `src/02_lichtquanten.typ:51-55` | 10 min | zentrale Grafik Skript 2 |
+| 4 | `franckhertz` auf 4,9 V | `make_figures.py:238-247` | 10 min | Widerspruch Grafik/Text weg |
+| 5 | `potenzialtopf`-Beschriftung + Unterschrift | `make_figures.py:203-213`, `src/06_atommodelle.typ:122-125` | 10 min | sinnlose Achsenbeschriftung weg |
+| 6 | `rutherford` mit korrekter Coulomb-Bahn | `make_figures.py:250-266` | 15 min | Grafik zeigt jetzt Streuung |
+| 7 | LED-Unterschrift, Balmer-Unterschrift, Ne-Satz, 253-nm-Satz | `src/02_lichtquanten.typ:83-87`, `src/07_spektren.typ:42-44, 157-159`, `src/f7_regression.typ:193-194` | 10 min | vier falsche Aussagen weg |
+| 8 | Abitur-Statistik korrigieren (2 von 12) | `src/f5_abitur.typ:58-69, 123`, `untersuchte_aufgaben.csv` | 10 min | keine falsche Prüfungsstatistik |
+| 9 | Lernfahrplan auf aktuelle Seitenzahlen | `src/f8_lernplan.typ:9, 24, 33, 48-54, 80` | 20 min | Plan wieder benutzbar |
+| 10 | THEMENSTATUS/README/Quellenverzeichnis auf Ist-Stand | `00_Projektverwaltung/*.md` | 20 min | Steuerungsdokumente stimmen |
+| 11 | (P2) Konvention $I_1/I_2$ klären, Unbestimmtheit vereinheitlichen | `src/05_mzi.typ`, `f1_formelblatt.typ`, `f4_lastminute.typ`, `f6_uebungen.typ` | 20 min | Widerspruch zwischen Dokumenten weg |
+| 12 | (P2) je ein deutender Satz pro Grafik | 15 Dateien | 60 min | Kriterium F erfüllt |
+| 13 | (P2) Polarisation + Michelson + Pauli ergänzen | `src/01_wellen.typ`, `src/06_atommodelle.typ` | 45 min | Curriculum-Lücke geschlossen |
+
+---
+
+## 7. Nicht geprüft
+
+| Gegenstand | Grund |
+|---|---|
+| NIBIS-ZA-Archiv (Landesaufgaben 2016–2024) | Formular-POST liefert HTTP 302, kein Zugriff (dokumentiert in `02_Abiturrecherche/abitur_analyse.md`) |
+| Bildungsportal Niedersachsen, Zentralabitur 2027 | HTTP 403 |
+| Inhalt der 12 IQB-Aufgaben im Detail | nur Kopfangaben (Niveau, Inhaltsbereich, fachpraktischer Anteil) maschinell ausgewertet; eine fachliche Prüfung der Aufgaben selbst war nicht Teil des Auftrags |
+| Optische Wirkung der 22 SVGs im Druck | keine Sichtprüfung möglich (kein Bildbetrachter); geprüft wurden Pfadkoordinaten, Textanker und Kollisionen – eine echte Sichtkontrolle bleibt offen |
+| Kerncurriculum im Volltext | nur die von der Schule gespiegelten Auszüge (`01_Schulwebsite/.../kerncurriculum*.md`); das amtliche PDF von cuvo.nibis.de wurde nicht erneut geladen |
+| „Hinweise zur schriftlichen Abiturprüfung 2027“ | geprüft gegen den Spiegel `max-emden.de` (4 Aufgaben/3 wählen, eA-Varianten, Experimentierkästen 2026 – bestätigt); ein amtliches Original lag nicht vor |
+| Rechtschreibung/Grammatik vollständig | stichprobenhaft; keine vollständige Duden-Korrektur |
+---
+
+## 8. Nachrechnung der Referenzwerte
+
+| Referenz | Soll | gefunden in | Ist | Abweichung |
+|---|---|---|---|---|
+| $h c$ | 1239,8 eV nm | `f1:25`, `02:46`, `06:86`, `07:50`, `f4:56` | 1239,8 | 0 |
+| $h c$ gerundet | 1240 (0,02 %) | `f1:40 f.`, `f6` (6.1) | 1240 | 0,02 % ✔ |
+| $E_n$ | −13,6/n² eV | `06:72`, `f1:146` | −13,6/n² | 0 |
+| $r_1$ | 5,29·10⁻¹¹ m | `06:66`, `f1:31` | 5,29·10⁻¹¹ | 0 |
+| $lambda(U)$ | 1,226 nm/√(U/V) | `03:47`, `f1:125`, `f4:45` | 1,226 | 0 |
+| Hg 4,90 V → λ | 253 nm | `07:125`, `f7:192` | 253,0 | 0 |
+| Balmer H-α | 656 nm | `07:67`, `06:89` | 656,3 | 0 |
+| Lyman H-α | 121,6 nm | `06:89`, `f6` (15.2) | 121,5–122 | 0,4 % ✔ |
+| Lyman-Grenze | 91,2 nm | `07:175` | 91,2 | 0 |
+| Doppelspalt 633 nm/0,25 mm/2 m | 5,06 mm | `01:246`, `f6` (A1) | 5,06 | 0 |
+| Gitter 500/mm, 39,2° | 632 nm | `01:250` | 632,0 | 0 |
+| Graphit $d$ | ≈ 0,21 nm | `03:168`, `f6` (C1) | 0,212/0,213 | 0 |
+| Röntgengrenze | 1239,8 nm·V/U | `07:88`, `f6` (7.1/20.1) | 0,031/0,0354 nm | 0 |
+| Röntgen 35 kV | 35,4 pm | `02:133` | **35 pm** | **1,2 % ✗ (P3)** |
+| Compton $lambda_C$ | 2,43 pm | `02:100` | 2,43 | 0 |
+| $h$ aus IQB-Messreihe | 6,626·10⁻³⁴ J s | `02:177`, `f7:140` | 6,59·10⁻³⁴ | 0,6 % ✔ |
+| $W_A$ Cs | 1,94 eV | `02:139` | 1,94 | 0 |
+| $U_S$-Steigung (LED-Grafik) | 4,14·10⁻¹⁵ V s | `make_figures.py:186` | 4,40·10⁻¹⁵ | 6 % (P2, s. 3.2) |
+
+---
+
+## 9. Abbildungs-Inventar
+
+26 `image()`-Aufrufe, 22 verschiedene Dateien, keine tote Datei, keine tote Referenz.
+
+| Datei | verwendet in | Unterschrift nennt Aussage? | im Text gedeutet? | fachlich korrekt? |
+|---|---|---|---|---|
+| welle_raumzeit | `01:40` | ja | nein | ja |
+| zeigerkette | `01:54` | ja | nein | ja |
+| stehende_welle | `01:113` | ja | nein | ja |
+| doppelspalt_geometrie | `01:127` | ja | nein | ja ($a_n$-Pfeil endet zu tief) |
+| doppelspalt_intensitaet | `01:144`, `04:29`, `f6:57` | ja | nein | ja (Pfeil „Δa“ hat Länge ≈ 0, `make_figures.py:103 f.`) |
+| einzelspalt_doppelspalt | `01:167` | ja | nein | ja |
+| bragg | `01:179`, `03:86` | ja | nein | ja (Symbol α statt θ) |
+| reflexion_brechung | `01:191` | ja | nein | ja |
+| photoeffekt_fE | `02:52` | **nein** | nein | **nein – leer** |
+| led_hbestimmung | `02:84` | **nein** | nein | Daten ja, Unterschrift falsch |
+| elektronenbeugung_bild | `03:53` | ja | nein | ja (schematisch) |
+| unbestimmtheit | `04:96` | **nein** | nein | Grafik ja, Unterschrift falsch |
+| wellenfunktion | `04:102` | ja | nein | ja |
+| mzi | `05:22` | ja | nein | ja |
+| qed_zeiger | `05:55` | ja | nein | ja |
+| rutherford | `06:32` | ja | nein | **nein – Bahnen sind keine Hyperbeln** |
+| energieniveaus_h | `06:78`, `07:41` | teils | nein | ja (Unterschrift in 07 falsch) |
+| potenzialtopf | `06:123` | **nein** | nein | **nein – Beschriftung „E_kin – E_pot“** |
+| orbitale | `06:137` | ja | nein | ja (schematisch) |
+| franckhertz | `07:113` | **nein** | nein | **nein – 11 V statt 4,9 V** |
+| gesamtuebersicht | `f3:21` | ja | nein | ja |
+| regression | `f7:101` | ja | nein | ja |
+
+Zur Rutherford-Grafik im Einzelnen: `make_figures.py:255-260` parametrisiert mit
+`x = (b²t)/(b²+t²)·0,9` und `y = (−bt²)/(b²+t²)·0,9 + 0,45b`. Für $t -> plus.minus infinity$
+gehen beide Äste gegen **dieselbe** Waagerechte ($y -> −0,45b$, $x -> 0$): die Kurven sind
+symmetrische Beulen mit Ablenkwinkel 0, nicht Hyperbeln. Die Unterschrift behauptet aber „große
+Ablenkung nur bei sehr kleinem Abstand zum Kern“. Die korrekte Fassung liegt bereits in
+`redraw_figs.py:66-83` und wurde nie angewendet (Beleg: `fig/rutherford.svg` enthält den Titel
+„Rutherford-Streuung: je kleiner b, desto …“, den nur `make_figures.py:266` setzt).
+
+---
+
+## 10. Umsetzung der P1-Befunde (01.11.2026)
+
+Alle 15 P1-Befunde sind behoben; der Nachweis ist jeweils im neu gebauten PDF geführt
+(`build_all.sh`, danach `get_text()`).
+
+| Befund | Datei | Status | Nachweis im PDF |
+|---|---|---|---|
+| 3.1 Kohärenz ohne Definition | `01_wellen.typ` | behoben | „Definition / Kohärenz: Zwei Wellen sind kohärent …“ (S. 3) |
+| 3.2 `photoeffekt_fE` leer | `make_figures.py`, `02_lichtquanten.typ` | behoben | Kurven steigen ab $f_G$; Unterschrift nennt $E_"kin,max"$ und $f_G$ (S. 3) |
+| 3.2 LED-Unterschrift falsch | `02_lichtquanten.typ` | behoben | „LED-Methode: Einsatzspannung $U_S$ über der Frequenz …“ (S. 4) |
+| 3.6 Potenzialtopf-Beschriftung | `make_figures.py`, `06_atommodelle.typ` | behoben | Achse „E“; Unterschrift „Energieniveaus im Kasten …“ (S. 5) |
+| 3.7 Aufgabe 2 zerstört | `07_spektren.typ` | behoben | „1. Skizzieren Sie … 2. Berechnen Sie … 3. Begründen Sie …“ (S. 6) |
+| 3.7 Franck-Hertz 11 V | `make_figures.py` | behoben | Grafik „ΔU ≈ 4,9 V“, Minima bei 4,9/9,8/14,7 V (S. 4) |
+| 3.7 Neon-Erklärung falsch | `07_spektren.typ` | behoben | „… weil viele der anschließenden Übergänge im Sichtbaren liegen“ (S. 5) |
+| 3.7 Balmer-Unterschrift | `07_spektren.typ` | behoben | „vier Balmer-Linien … und die Lyman-$alpha$-Linie $2 -> 1$“ (S. 3) |
+| 3.11 „5 von 12“ fachpraktisch | `f5_abitur.typ`, CSV | behoben | „Fachpraktischer Anteil in 2 von 12 Aufgaben“ (S. 4) |
+| 3.13 Zeitplan-Tabelle Rohtext | `f6_uebungen.typ` | behoben | gerenderte Tabelle, keine `|` mehr (S. 3) |
+| 3.13 Messwerttabelle Rohtext | `f6_uebungen.typ` | behoben | gerenderte Tabelle (S. 4) |
+| 3.13 „принадлежит“ | `f6_uebungen.typ` | behoben | „die breitere Kurve gehört zu $b = 0,05$ mm“ (S. 9) |
+| 3.13 Klammer in 14.1 | `f6_uebungen.typ` | behoben | „… = 6,6 · 10⁻³⁴ J s“ ohne überzählige Klammer (S. 11) |
+| 3.14 253 nm auf Leuchtschirm | `f7_regression.typ` | behoben | „Sie ist unsichtbar; das Leuchten … stammt von anderen Übergängen“ (S. 6) |
+| 3.15/3.16 Seitenzahlen, THEMENSTATUS | `f8_lernplan.typ`, `THEMENSTATUS.md` | behoben | Kurzweg-Tabelle auf Abschnittsnummern; THEMENSTATUS auf Ist-Stand |
+
+**Prüfung nach dem Neubau:** 95 Seiten, 33 828 Wörter, 0 Formelreste, 0 Textüberläufe,
+0 ungerenderte Klammerlisten, 22 SVGs eingebunden, `build_all.sh` ohne Fehler.
+Die P2- und P3-Befunde sind **nicht** angefasst; sie stehen in Abschnitt 3 und warten auf Freigabe.
+
+---
+
+## Anhang A/B – Technische Prüfung und Abbildungsprüfung (unverändert übernommen)
+
+Die folgenden Abschnitte sind der Stand vom 01./02.11.2026 vor der inhaltlichen Prüfung. Sie
+bleiben gültig; ihre Seitenzahlen beziehen sich auf die Fassung vor der Straffung.
+
+### Prüfbericht
 
 Datum: 01.11.2026 · Werkzeug: Typst 0.15.1 (Rendering), PyMuPDF (Prüfung)
 
-## Prüfkriterien
+#### Prüfkriterien
 
 Für jede PDF wurden geprüft:
 
@@ -15,7 +588,7 @@ Für jede PDF wurden geprüft:
 7. Inhaltsverzeichnis vorhanden (Seite 2), Kopf-/Fußzeile ab Seite 3
 8. Stichprobenhafte Textkontrolle (Formeln, Umlaute, Zahlen)
 
-## Ergebnisse
+#### Ergebnisse
 
 | Dokument | Seiten | Zeichen | Grafik-Objekte | Formelreste | Überlauf |
 |---|---|---|---|---|---|
@@ -34,7 +607,7 @@ Für jede PDF wurden geprüft:
 
 **Summe: 100 Seiten** über 12 Dokumente.
 
-## Gefundene und behobene Fehler
+#### Gefundene und behobene Fehler
 
 1. **Dezimalkomma systematisch falsch gerendert.**
    In Typst erzeugt `{,}` im Mathemodus *sichtbare geschweifte Klammern* (`6{,}626` → „6{, }626“).
@@ -49,7 +622,7 @@ Für jede PDF wurden geprüft:
    textlich umformuliert.
 6. **Tippfehler** („Amplitudenadddition“, „EnergieNiveaus“, „mitmindestens“) korrigiert.
 
-## Inhaltliche Plausibilitätsprüfungen (Stichproben)
+#### Inhaltliche Plausibilitätsprüfungen (Stichproben)
 
 - $Delta a = lambda e \/ g = 633 "nm" dot 1","5 "m" \/ 0","20 "mm" = 4","7$ mm ✔
 - $lambda_e$ bei 3 kV: $1","226\/sqrt(3000) = 22","4$ pm; Ringradius bei $d = 0","213$ nm,
@@ -60,7 +633,7 @@ Für jede PDF wurden geprüft:
 - $h$-Bestimmung LED: Steigung $3","91 dot 10^(-15)$ V s → $h = 6","27 dot 10^(-34)$ J s ✔
 - $E = 1240 \/ 450 = 2","756$ eV, $E_"kin" = 0","66$ eV ✔
 
-## Bekannte Einschränkungen
+#### Bekannte Einschränkungen
 
 - Grafiken wurden als Vektorpfade eingebettet; eine visuelle Prüfung durch Rendern war im
   Arbeitsumfeld nicht möglich. Die Grafiken wurden jedoch programmatisch mit festen Koordinaten
@@ -69,13 +642,13 @@ Für jede PDF wurden geprüft:
   am Rand liegen, ohne als Fehler erkannt zu werden.
 - Keine inhaltliche Fremdprüfung durch Dritte.
 
-## Bewertung
+#### Bewertung
 
 Alle zwölf Dokumente sind vollständig, maschinenlesbar, ohne Formelreste und ohne erkennbare
 Layoutfehler. Sie erfüllen die formalen Anforderungen der Aufgabenstellung (A4, Inhaltsverzeichnis,
 Kopf-/Fußzeile, Seitenzahlen, Quellenverzeichnis, eigene Grafiken, Aufgaben mit Lösungen).
 
-## Nachtrag: Prüfung der Abbildungen (02.11.)
+#### Nachtrag: Prüfung der Abbildungen (02.11.)
 
 Anlass: Mehrere Grafiken wirkten im Druck unklar. Da eine Sichtprüfung aller
 Abbildungen nicht möglich war, wurden die Grafiken maschinell geprüft:
@@ -117,3 +690,12 @@ Abbildungen nicht möglich war, wurden die Grafiken maschinell geprüft:
 
 `build/check_figs.py` (Textkollisionen), `build/redraw_figs.py` (neu gezeichnete
 Schemata). Beide sind reproduzierbar und nach Änderungen erneut ausführbar.
+
+### Nachtrag zur Abbildungsprüfung (Ergebnis dieser Prüfung)
+
+Die in Anhang B als „neu gezeichnet“ gemeldeten Fassungen (`redraw_figs.py`) sind **nicht** in
+den ausgelieferten SVGs enthalten. `fig/*.svg` stammt nachweislich aus `make_figures.py`
+(Titeltexte und Beschriftungsreihenfolgen stimmen mit `make_figures.py` überein, z. B.
+`fig/rutherford.svg` = „Rutherford-Streuung: je kleiner b, desto …“,
+`fig/energieniveaus_h.svg` mit sechs Niveaus). Die Korrekturen aus `redraw_figs.py` müssen also
+erneut angewendet werden; die Folgen sind in Abschnitt 9 und in den Befunden 3.6/3.7 behandelt.

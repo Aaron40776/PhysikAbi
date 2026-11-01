@@ -39,8 +39,8 @@ den Niveaus kleiner; $E = 0$ ist die Ionisationsgrenze.
 
 #figure(
   image("../fig/energieniveaus_h.svg", width: 86%),
-  caption: [Wasserstoff: Pfeile nach unten sind Emissionen. Die eingezeichneten Linien gehören
-    zur Balmer-Serie ($n = 2$ als Ziel).],
+  caption: [Wasserstoff: Pfeile nach unten sind Emissionen. Eingezeichnet sind vier
+    Balmer-Linien ($n = 2$ als Ziel) und die Lyman-$alpha$-Linie $2 -> 1$.],
 )
 
 #table(
@@ -155,16 +155,17 @@ Energie, weil ein Teil als Wärme abgegeben wird (Stokes-Verschiebung).
   Hg-UV-Linie.
 
   (3) Ein Teil der Hg-Atome wird durch Stöße angeregt und fällt unter Emission sichtbarer
-  Linien zurück; bei Neon liegt die Anregung im sichtbaren Bereich, dort sieht man die
-  Leuchtschicht direkt.
+  Linien zurück. Bei Neon ist das Leuchten besonders auffällig, weil viele der anschließenden
+  Übergänge im Sichtbaren liegen; dort sieht man die Leuchtschicht direkt.
 ]
 
 #aufgabe(2, punkte: 10)[
   Ein Wasserstoffgas wird mit weißem Licht durchstrahlt.
 
+  #enum(
     [Skizzieren Sie das beobachtete Spektrum.],
     [Berechnen Sie die Grenzwellenlänge der Lyman-Serie.],
-    [Begründen Sie, warum die Balmer-Linien schwächer sind.]
+    [Begründen Sie, warum die Balmer-Linien schwächer sind.],
   )
 ]
 

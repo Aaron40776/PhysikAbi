@@ -190,8 +190,8 @@ Kontaktspannung $U_"K" = 5","50$ V. Die Photonenwellenlänge der zugehörigen Em
 
 $ lambda = h c \/ Delta E = 1239","8 "eV nm" \/ 4","90 "eV" = 253 "nm" $
 
-Genau diese 253 nm sind die ultraviolette Quecksilberlinie, die man beim Versuch mit
-Leuchtschirm beobachtet.
+Genau diese 253 nm sind die ultraviolette Quecksilberlinie. Sie ist unsichtbar; das Leuchten,
+das man in der Röhre sieht, stammt von anderen Übergängen des Quecksilbers.
 
 = Durchgerechnetes Beispiel: Dämpfung
 

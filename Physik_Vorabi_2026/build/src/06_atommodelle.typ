@@ -121,7 +121,8 @@
 
 #figure(
   image("../fig/potenzialtopf.svg", width: 66%),
-  caption: [Potenzialtopf: Wellenfunktionen mit $n$ Halbwellen, Energien wachsen mit $n^2$.],
+  caption: [Energieniveaus im Kasten der Breite $L$: $E_n tilde n^2$, die Abstände wachsen nach
+    oben – das Gegenteil zum Coulomb-Topf.],
 )
 
 #table(

@@ -43,15 +43,17 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
 
 == Zeitplan und Punkte
 
-| Block | Aufgaben | Punkte | Zeit |
-|---|---|---|---|
-| A Wellen und Interferenz | 4 | 54 | 55 min |
-| B Lichtquanten | 3 | 40 | 35 min |
-| C Elektronenwellen | 3 | 34 | 35 min |
-| D Quantenobjekte | 4 | 50 | 45 min |
-| E Atome | 3 | 40 | 35 min |
-| F Spektren und Franck-Hertz | 3 | 38 | 35 min |
-| *Summe* | *20* | *256* | *4 h* |
+#table(
+  columns: (1fr, auto, auto, auto),
+  [Block], [Aufgaben], [Punkte], [Zeit],
+  [A Wellen und Interferenz], [4], [54], [55 min],
+  [B Lichtquanten], [3], [40], [35 min],
+  [C Elektronenwellen], [3], [34], [35 min],
+  [D Quantenobjekte], [4], [50], [45 min],
+  [E Atome], [3], [40], [35 min],
+  [F Spektren und Franck-Hertz], [3], [38], [35 min],
+  [*Summe*], [*20*], [*256*], [*4 h*],
+)
 
 #figure(
   image("../fig/doppelspalt_intensitaet.svg", width: 70%),
@@ -120,8 +122,11 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   Mit einer Fotozelle und der Gegenfeldmethode werden für mehrere Wellenlängen die
   Bremsspannungen gemessen:
 
-  | $lambda$ in nm | 405 | 436 | 546 | 578 |
-  | $U_B$ in V | 1,16 | 0,94 | 0,37 | 0,25 |
+  #table(
+    columns: 5,
+    [$lambda$ in nm], [405], [436], [546], [578],
+    [$U_B$ in V], [1,16], [0,94], [0,37], [0,25],
+  )
 
   #enum(
     [Berechnen Sie zu jeder Wellenlänge die Frequenz und tragen Sie $U_B$ über $f$ auf.],
@@ -393,7 +398,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   Winkelbreite. Physikalisch: Ein schmalerer Spalt legt den Ort genauer fest und vergrößert damit
   die Impulsunbestimmtheit quer zur Ausbreitung – die Beugungsfigur wird breiter.
 
-  (4.3) Skizze: Zwei Kurven mit gleicher Höhe, die breitere Kurve принадлежит zu $b = 0","05$ mm.
+  (4.3) Skizze: Zwei Kurven mit gleicher Höhe, die breitere Kurve gehört zu $b = 0","05$ mm.
   Beschriftung: Ordinate $I\/I_0$, Abszisse Ort $a$; Markierungen bei $plus.minus 10$ mm und
   $plus.minus 20$ mm für die ersten Minima; Bezeichnung „Zentralmaximum“ in der Mitte,
   „1. Nebenmaximum“ beidseitig.
@@ -571,7 +576,7 @@ Das Heft enthält *20 Aufgaben* in zwei Teilen:
   *Zu D4 (Aufgabe 14).*
   (14.1) $Delta x = b = 50$ µm. Abschätzung $Delta p_x approx h\/b
   = 6","626 dot 10^(-34)\/5","0 dot 10^(-5) = 1","3 dot 10^(-29)$ kg m/s.
-  Dann $Delta x dot Delta p_x approx 50 dot 10^(-6) dot 1","3 dot 10^(-29)) = 6","6 dot 10^(-34)$
+  Dann $Delta x dot Delta p_x approx 50 dot 10^(-6) dot 1","3 dot 10^(-29) = 6","6 dot 10^(-34)$
   J s $approx h$ – die Relation ist erfüllt.
 
   (14.2) $Delta f approx 1\/Delta t = 1\/(10 dot 10^(-9)) = 1","0 dot 10^8$ Hz $= 100$ MHz.

@@ -30,7 +30,7 @@ Formeln ($frac$ statt Schrägstrich), Herleitungen als nummerierte Schritte im K
 Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Grafiken mit
 Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
 
-Umfang nach der Straffung (02.11.): **7 Skripte 48 Seiten** statt 77, gesamt **95 Seiten**
+Umfang nach der Straffung (02.11.): **7 Skripte 47 Seiten** statt 77, gesamt **95 Seiten**
 statt 121; Wortzahl 33.762 statt 60.663.
 
 ## Verzeichnisse
