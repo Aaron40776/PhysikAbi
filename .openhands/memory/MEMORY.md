@@ -21,3 +21,19 @@
 - Belege immer als `datei:zeile` + Zitat; Prüfergebnisse gehören in
   `06_Qualitaetskontrolle/pruefbericht.md`, nicht in den Chat.
 - `PROGRESS.md` wird nur ergänzt (Nachtrag mit Datum), nicht rückwirkend umgeschrieben.
+
+## Website (GitHub Pages)
+- Pages läuft als **Workflow** (`.github/workflows/pages.yml`), Quelle main, Trigger: Änderungen an
+  `03_Lernskripte/**`, `04_Zusatzmaterial/**`, `build/make_pages.py`.
+- `build/make_pages.py` erzeugt `_site/index.html`; Titel/Kurztext je PDF aus dem dict
+  `BESCHREIBUNG` (fehlender Schlüssel → Dateiname). Kopfzahlen über `__ANZAHL__`/`__GESAMT__`.
+- Lokal testen: `python3 make_pages.py --out /tmp/site`.
+- Neues PDF = Karte erscheint automatisch; nur Kurztext im dict ergänzen.
+
+## Fallen (teuer gelernt)
+- Typst 0.15.1 kennt **kein** `planck.reduce`/`hbar` → `h\/(2 pi)` schreiben.
+- Regex-Lookbehind wirkt nicht auf `s[i:]`-Slices (Lookbehind sieht Stringanfang) →
+  `pattern.match(s, i)` benutzen, sonst werden `\lambda` verdoppelt.
+- `01_Schulwebsite/materialien/**` ist ein 1:1-Spiegel der Schulhomepage: **nie** per sed
+  verändern, nach globalen Ersetzungen `git checkout -- <Pfad>`.
+- `.agents/` (lokale Skills, ~5 MB) ist per .gitignore ausgeschlossen.
