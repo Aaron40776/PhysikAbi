@@ -87,11 +87,12 @@ ax.annotate("", xy=(e, -1.55), xytext=(0, -1.55),
 ax.text(e/2, -1.72, "e", color=GREY, fontsize=9, ha="center", va="top")
 ax.annotate("", xy=(-0.18, -g/2), xytext=(-0.18, g/2),
             arrowprops=dict(arrowstyle="<->", color="#333333", lw=0.9, shrinkA=0, shrinkB=0))
-ax.text(-0.28, 0, "g", color="#333333", fontsize=9, ha="right", va="center")
+ax.text(-0.28, 0, "d", color="#333333", fontsize=9, ha="right", va="center")
 
-winkel = np.arctan((a_n - g/2)/e)
-ax.add_patch(Arc((0, g/2), 3.0, 3.0, theta1=0, theta2=np.degrees(winkel), color=TEAL, lw=1))
-ax.text(1.35, g/2 + 0.22, "α", color=TEAL, fontsize=9)
+winkel = np.arctan(a_n/e)
+ax.plot([0, e], [0, a_n], color=GREY, lw=0.7, ls=":")
+ax.add_patch(Arc((0, 0), 2.4, 2.4, theta1=0, theta2=np.degrees(winkel), color=TEAL, lw=1))
+ax.text(1.32, 0.20, "α", color=TEAL, fontsize=9)
 
 ax.text(e - 1.5, a_n + 0.25, "Maximum n-ter Ordnung", color=ORANGE, fontsize=7.5)
 ax.set_xlim(-0.7, e + 0.7); ax.set_ylim(-1.8, 3.2); ax.axis("off")
@@ -112,7 +113,7 @@ ax.grid(alpha=0.25, lw=0.5)
 da_mm = lam * e / g * 1e3
 ax.annotate("", xy=(da_mm, 0.55), xytext=(0, 0.55),
             arrowprops=dict(arrowstyle="<->", color=ORANGE, lw=1))
-ax.text(da_mm + 0.6, 0.62, "Δa = λ·e/g", color=ORANGE, fontsize=8.5)
+ax.text(da_mm + 0.6, 0.62, "Δa = λ·e/d", color=ORANGE, fontsize=8.5)
 save(fig, "doppelspalt_intensitaet")
 
 # ---------------------------------------------------------------- 5 Einzelspalt vs. Doppelspalt
@@ -122,7 +123,7 @@ u = np.pi*b*np.sin(alpha)/lam
 I_single = np.sinc(u/np.pi)**2
 fig, ax = plt.subplots(figsize=(6.2, 2.5))
 ax.plot(a*1000, I_single, color=TEAL, lw=1.2, label="Einzelspalt (b = 50 µm)")
-ax.plot(a*1000, I, color=BLUE, lw=0.9, alpha=0.8, label="Doppelspalt (g = 300 µm, b = 50 µm)")
+ax.plot(a*1000, I, color=BLUE, lw=0.9, alpha=0.8, label="Doppelspalt (d = 300 µm, b = 50 µm)")
 ax.plot(a*1000, np.cos(np.pi*ds/lam)**2*I_single, color=ORANGE, lw=0.7, ls="--",
         label="Doppelspalt mit Beugungshülle")
 ax.set_xlabel("Ort auf dem Schirm a in mm"); ax.set_ylabel("Intensität (normiert)")
