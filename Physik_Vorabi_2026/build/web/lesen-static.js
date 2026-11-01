@@ -9,6 +9,8 @@
   if (!text) return;
 
   var nav = text.querySelector('nav[role="doc-toc"]');
+  var inhaltLinks = [];
+  var abschnitte = [];
   if (nav) {
     var davor = nav.previousElementSibling;
     if (davor && davor.tagName === "P" && davor.textContent.trim() === "Inhalt") {
@@ -22,6 +24,8 @@
     nav.parentNode.insertBefore(details, nav);
     details.appendChild(nav);
     if (window.innerWidth >= 900) details.open = true;
+    inhaltLinks = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#loc-"]'));
+    abschnitte = Array.prototype.slice.call(text.querySelectorAll("h2[id]"));
   }
 
   var kasten = /^(Definition|Merksatz|Herleitung|Achtung|Experiment|Prüfungsrelevanz|Aufgabe|Lösung|Quellen)/;
@@ -72,9 +76,75 @@
     var erster = text.querySelector("mark.suchtreffer");
     if (erster) {
       window.requestAnimationFrame(function () {
-        erster.scrollIntoView({ block: "center" });
+        erster.scrollIntoView({ block: "center", behavior: sanft() });
       });
     }
+  }
+
+  var ruhig = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function sanft() {
+    return ruhig ? "auto" : "smooth";
+  }
+
+  /* Abbildungen antippen oder mit Enter öffnen: lesbar ohne Pinch-Zoom. */
+  var dialog = document.createElement("dialog");
+  dialog.className = "bild-dialog";
+  dialog.setAttribute("aria-label", "Abbildung in voller Größe");
+  dialog.innerHTML = '<button type="button" class="bild-schliessen" aria-label="Schließen">×</button><img alt=""><p></p>';
+  document.body.appendChild(dialog);
+  var dialogBild = dialog.querySelector("img");
+  var dialogText = dialog.querySelector("p");
+  var schliessen = dialog.querySelector(".bild-schliessen");
+
+  function zeigeBild(img) {
+    var fig = img.closest("figure");
+    var cap = fig ? fig.querySelector("figcaption") : null;
+    dialogBild.src = img.currentSrc || img.src;
+    dialogBild.alt = img.alt || (cap ? cap.textContent.trim() : "Abbildung");
+    dialogText.textContent = cap ? cap.textContent.trim() : "";
+    if (typeof dialog.showModal === "function") dialog.showModal();
+  }
+
+  Array.prototype.forEach.call(text.querySelectorAll("figure img"), function (img) {
+    img.setAttribute("role", "button");
+    img.setAttribute("tabindex", "0");
+    img.setAttribute("aria-label", "Abbildung vergrößern");
+    img.addEventListener("click", function () { zeigeBild(img); });
+    img.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        zeigeBild(img);
+      }
+    });
+  });
+  schliessen.addEventListener("click", function () { dialog.close(); });
+  dialog.addEventListener("click", function (e) {
+    if (e.target === dialog) dialog.close();
+  });
+
+  /* Zurück nach oben, sobald man tiefer im Dokument ist. */
+  var oben = document.createElement("button");
+  oben.type = "button";
+  oben.className = "lese-oben";
+  oben.setAttribute("aria-label", "Nach oben");
+  oben.title = "Nach oben";
+  oben.textContent = "↑";
+  document.body.appendChild(oben);
+  oben.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: sanft() });
+  });
+
+  function aktualisiereInhalt() {
+    if (!inhaltLinks.length || !abschnitte.length) return;
+    var grenze = window.scrollY + 120;
+    var aktiv = abschnitte[0] ? abschnitte[0].id : "";
+    abschnitte.forEach(function (h) {
+      if (h.getBoundingClientRect().top + window.scrollY <= grenze) aktiv = h.id;
+    });
+    inhaltLinks.forEach(function (a) {
+      a.classList.toggle("aktiv", a.getAttribute("href") === "#" + aktiv);
+    });
   }
 
   function maxScroll() {
@@ -104,14 +174,20 @@
     if (balken) balken.style.width = (max > 0 ? Math.min(100, 100 * (window.scrollY || 0) / max) : 0) + "%";
   }
 
+  function obenSichtbar() {
+    var an = (window.scrollY || 0) > 520;
+    oben.classList.toggle("sichtbar", an);
+    oben.tabIndex = an ? 0 : -1;
+  }
+
   var tick = 0;
   window.addEventListener("scroll", function () {
     if (tick) return;
     tick = window.requestAnimationFrame(function () {
-      tick = 0; fortschritt(); merken();
+      tick = 0; fortschritt(); merken(); aktualisiereInhalt(); obenSichtbar();
     });
   }, { passive: true });
-  fortschritt();
+  fortschritt(); aktualisiereInhalt(); obenSichtbar();
 
   var scale = 1;
   try { scale = parseFloat(localStorage.getItem("physik.schrift") || "1") || 1; } catch (e) {}

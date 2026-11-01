@@ -95,6 +95,7 @@ ax.add_patch(Arc((0, 0), 2.4, 2.4, theta1=0, theta2=np.degrees(winkel), color=TE
 ax.text(1.32, 0.20, "α", color=TEAL, fontsize=9)
 
 ax.text(e - 1.5, a_n + 0.25, "Maximum n-ter Ordnung", color=ORANGE, fontsize=7.5)
+ax.text(e + 0.12, a_n - 0.16, "P", color=ORANGE, fontsize=9, ha="left", va="top")
 ax.set_xlim(-0.7, e + 0.7); ax.set_ylim(-1.8, 3.2); ax.axis("off")
 save(fig, "doppelspalt_geometrie")
 
@@ -192,14 +193,13 @@ save(fig, "bragg")
 fig, ax = plt.subplots(figsize=(3.0, 3.0))
 xx, yy = np.meshgrid(np.linspace(-1, 1, 600), np.linspace(-1, 1, 600))
 r = np.hypot(xx, yy)
-ring = (np.exp(-((r-0.18)/0.02)**2) + 0.8*np.exp(-((r-0.36)/0.025)**2)
-        + 0.5*np.exp(-((r-0.55)/0.03)**2) + 0.3*np.exp(-((r-0.78)/0.035)**2))
-ring += 0.35*np.exp(-(r/0.05)**2)
+ring = (np.exp(-((r-0.24)/0.022)**2) + 0.72*np.exp(-((r-0.50)/0.030)**2))
+ring += 0.40*np.exp(-(r/0.05)**2)
 img = np.clip(ring, 0, 1)
 ax.imshow(1 - 0.82*img, cmap="gray", origin="lower", extent=[-1, 1, -1, 1], vmin=0, vmax=1)
 ax.set_xticks([]); ax.set_yticks([])
-ax.set_title("Beugungsbild (schematisch)", fontsize=8)
-ax.text(0.5, -0.04, "Ringmuster (schematisch, invertiert)", transform=ax.transAxes,
+ax.set_title("Beugungsbild (schematisch): zwei Ringe", fontsize=8)
+ax.text(0.5, -0.04, "Graphit, invertiert", transform=ax.transAxes,
         fontsize=7, color=GREY, ha="center", va="top")
 save(fig, "elektronenbeugung_bild")
 
@@ -241,9 +241,6 @@ for n in range(1, 4):
     E = 0.33*n**2
     ax.plot([0, 1], [E, E], color=BLUE, lw=1.2)
     ax.text(-0.06, E, f"n = {n}", ha="right", va="center", color=BLUE, fontsize=8)
-ax.annotate("", xy=(1.0, 0.33), xytext=(1.0, 2.97),
-            arrowprops=dict(arrowstyle="<->", color=ORANGE, lw=1))
-ax.text(1.04, 1.6, "E", color=ORANGE, fontsize=9, rotation=90, va="center")
 ax.text(0.5, 3.1, "L", ha="center", color=GREY)
 ax.annotate("", xy=(1.0, 3.05), xytext=(0, 3.05),
             arrowprops=dict(arrowstyle="<->", color=GREY, lw=0.8))
@@ -413,7 +410,7 @@ for ax, b_, t in zip(axes, [0.2, 0.5], ["schmaler Spalt", "breiter Spalt"]):
     I2 = np.sinc(u/np.pi)**2
     ax.plot(th*1000, I2, color=BLUE if b_ == 0.2 else TEAL, lw=1.2)
     ax.set_title(t, fontsize=8)
-    ax.set_xlabel("Ort auf dem Schirm in mm")
+    ax.set_xlabel("Ort auf dem Schirm in mm (e = 1 m)")
     ax.set_xlim(-35, 35)
 axes[0].set_ylabel("Intensität")
 fig.subplots_adjust(wspace=0.3)

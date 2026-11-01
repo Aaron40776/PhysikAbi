@@ -20,8 +20,9 @@
 
 #figure(
   image("../fig/mzi.svg", width: 88%),
-  caption: [Zwei Strahlteiler ($"ST"_1$, $"ST"_2$) und zwei Spiegel. Beide Wege sind gleich
-    lang; über ein Phasenplättchen lässt sich ein Zusatz $Delta phi$ einstellen.],
+  caption: [Mach-Zehnder-Aufbau von oben: Laser → ST1; oberer Arm über M1, unterer Arm über M2;
+    beide treffen sich an ST2. D1 sitzt rechts, D2 oben. Das Phasenplättchen im oberen Arm stellt
+    $Delta phi$ ein; die Armlängen sind $2+5=5+2$.],
 )
 
 Beide Teilstrahlen legen im Bild gleich lange Wege zurück; jede zusätzliche Phasenverschiebung im oberen Arm wirkt sich deshalb eins zu eins auf den Gangunterschied am zweiten Strahlteiler aus.
@@ -35,6 +36,17 @@ Beide Teilstrahlen legen im Bild gleich lange Wege zurück; jede zusätzliche Ph
   [Strahlteiler 2], [überlagert die beiden Teilwellen],
   [Detektoren D1, D2], [zählen Photonen],
 )
+
+#experiment[
+  *Aufbau.* Ein Laserstrahl trifft auf Strahlteiler ST1. Der eine Teilstrahl läuft senkrecht nach
+  oben über Spiegel M1, der andere waagerecht nach rechts über Spiegel M2; an ST2 werden beide
+  wieder überlagert. Hinter ST2 stehen die Detektoren D1 (geradeaus) und D2 (senkrecht). Ein
+  Phasenplättchen im oberen Arm verändert $Delta phi$. \
+  *Durchführung.* Zähle die Photonen an D1 und D2 für verschiedene Phasenverschiebungen. \
+  *Beobachtung.* D1 und D2 sind komplementär: Bei $Delta phi = 0$ ist D1 dunkel und D2 hell, bei
+  $Delta phi = pi$ umgekehrt. \
+  *Auswertung.* $I_1 = sin^2(Delta phi\/2)$, $I_2 = cos^2(Delta phi\/2)$; die Summe ist 1.
+]
 
 = Rechnung mit Amplituden
 

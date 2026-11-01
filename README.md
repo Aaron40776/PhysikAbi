@@ -1,18 +1,18 @@
 # PhysikAbi
 
 Lernskripte für das Abitur im Fach Physik, Niedersachsen, erhöhtes Anforderungsniveau
-(Vorabitur 2026, Abitur 2027). **17 PDFs, 110 Seiten**: sieben Themenskripte, zwei Übungshefte (20 Aufgaben,
+(Vorabitur 2026, Abitur 2027). **17 PDFs, 112 Seiten**: sieben Themenskripte, zwei Übungshefte (20 Aufgaben,
 Diagrammauswertung), Formelblatt, Experimentesammlung, Abitur-Analyse, Gesamtübersicht,
 Regression, Lernfahrplan, Lernzettel und Glossar.
 
 ### [→ Skripte online lesen](https://aaron40776.github.io/PhysikAbi/)
 
-Die Seite hat eine Volltextsuche über alle 110 Seiten: Fundstellen werden als Ausschnitt mit
-markiertem Suchwort angezeigt. Ein Klick öffnet die **echte PDF** im eingebauten PDF.js-Viewer
-an der richtigen Seite und markiert das Suchwort auch dort. Dazu Inhaltsverzeichnis je Dokument
-(springt direkt in die PDF-Seite), eine Textansicht mit Blättern und „Weiterlesen“, Lernstand
-(„gelesen“), ein durchsuchbares Glossar mit 104 Begriffen, ein Hell-/Dunkel-Umschalter und alle
-PDFs als ZIP zum Mitnehmen.
+Die Seite hat eine Volltextsuche über alle 112 Seiten: Fundstellen werden als Ausschnitt mit
+markiertem Suchwort angezeigt. Ein Klick öffnet die **HTML-Lesefassung** an der richtigen Stelle
+und markiert das Suchwort im Text. Dazu Inhaltsverzeichnis je Dokument (springt direkt zum
+Abschnitt), eine mobile Leseansicht mit einheitlicher Typografie, Abbildungen zum Vergrößern,
+„Weiterlesen“, Lernstand („gelesen“), ein durchsuchbares Glossar mit 104 Begriffen, ein
+Hell-/Dunkel-Umschalter und alle PDFs als ZIP zum Mitnehmen.
 
 ## Inhalt
 
@@ -54,15 +54,14 @@ python3 build/test_pages.py               # prüft Index, Links und Suchlogik (n
 ```
 
 Die Quellen der Seite liegen unter `build/web/`: `index.html`, `suche.html`, `glossar.html`,
-`style.css`, `theme.js` (Hell/Dunkel), `suche.js` (Index, Bewertung, Ausschnitte, PDF-Links),
-`glossar.js` (Filter), `lesen.html`/`lesen.js` (Textansicht), `index.js`, `suche-seite.js`. Die Glossarbegriffe stehen einmal in
+`style.css`, `theme.js` (Hell/Dunkel), `suche.js` (Index, Bewertung, Ausschnitte, Links in den
+Leser), `glossar.js` (Filter), `lesen.css`/`lesen-static.js` (mobile Lesefassung), `index.js`,
+`suche-seite.js`. Die Glossarbegriffe stehen einmal in
 `build/glossar.json`; daraus entstehen sowohl `glossar.html` als auch das PDF
 `Glossar.pdf` (Typst-Quelle `build/src/f10_glossar.typ`).
-`make_pages.py` extrahiert den Text aus den PDFs zu `_site/suche.json` (≈215 kB), kopiert die
-PDFs, das ZIP und den PDF.js-Viewer aus `build/vendor/pdfjs/` (3.11.174, Apache-2.0). Am Viewer
-sind nur Darstellung und Sprache angepasst: `lang="de"`/`locale=de`, eigenes Favicon,
-vervollständigte deutsche Sprachdatei (siehe `build/vendor/pdfjs/VERSION.txt`). Der Viewer
-braucht zur Laufzeit kein Netz und zeigt die PDF mit Seitensprung und markiertem Suchwort.
+`make_pages.py` extrahiert den Text aus den PDFs zu `_site/suche.json` (≈218 kB), kopiert die
+PDFs und das ZIP und erzeugt die statischen Leseseiten. Die Suche öffnet keine PDF mehr, sondern
+die HTML-Lesefassung mit markiertem Suchwort; die PDFs bleiben als Offline-Archiv im ZIP.
 
 Die Seite unter `aaron40776.github.io/PhysikAbi` wird bei jedem Push auf `main` automatisch aus
 den PDFs neu gebaut (`.github/workflows/pages.yml`, `build/make_pages.py`).

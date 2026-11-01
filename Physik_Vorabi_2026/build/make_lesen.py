@@ -3,7 +3,7 @@
 
 Typst 0.15 kann HTML mit MathML und eingebetteten SVGs exportieren. Die
 Ausgabe wird hier mit einer schlanken Lese-Hülle (Kopfzeile, Fortschritt,
-PDF-Verweis) umschlossen. Die Dateien liegen unter build/lesen/ und werden
+Inhaltsnavigation) umschlossen. Die Dateien liegen unter build/lesen/ und werden
 von make_pages.py unverändert in die Seite kopiert.
 """
 import html

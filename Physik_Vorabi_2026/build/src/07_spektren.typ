@@ -91,6 +91,16 @@ $ lambda_min = frac(h c, e U_B) = frac(1239","8 "eV nm", U_B) $
 
 Mit der Moseley-Beziehung $sqrt(f) tilde (Z - 1)$ lässt sich das Anodenmaterial bestimmen.
 
+#experiment[
+  *Aufbau.* Röntgenröhre mit Glühkathode und Metallanode, regelbare Hochspannung $U_B$,
+  Kristall-Spektrometer und Detektor. \
+  *Durchführung.* $U_B$ verändern und das Intensitätsspektrum über der Wellenlänge aufnehmen. \
+  *Beobachtung.* Kontinuierliches Bremsspektrum mit scharfer Grenzwellenlänge $lambda_min$ und
+  zusätzliche charakteristische Linien des Anodenmaterials. \
+  *Auswertung.* $lambda_min = h c\/(e U_B)$; die Linien folgen den Energieniveaus der
+  Anodenatome.
+]
+
 = Resonanzabsorption und Fluoreszenz
 
 Ein Gas absorbiert genau die Wellenlängen, die es auch emittieren kann (Energieerhaltung,

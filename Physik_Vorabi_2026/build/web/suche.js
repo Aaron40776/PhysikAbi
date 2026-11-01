@@ -262,9 +262,10 @@
     if (doc.id !== "Glossar" && doc.toc && doc.toc.length) {
       var ziel = -1;
       for (var i = 0; i < doc.toc.length; i++) {
-        if (doc.toc[i][2] >= (seite || 1)) { ziel = i; break; }
+        if (doc.toc[i][2] <= (seite || 1)) ziel = i;
+        else break;
       }
-      if (ziel < 0) ziel = doc.toc.length - 1;
+      if (ziel < 0) ziel = 0;
       anker = "#loc-" + (ziel + 1);
     }
     return basis + (begriff ? "?q=" + encodeURIComponent(begriff) : "") + anker;

@@ -2,9 +2,9 @@
 
 Datum: 01.11.2026 · Prüfer: systematische Dokumentprüfung (Quelltext + PDF)
 Gegenstand: 7 Lernskripte, 10 Zusatzdokumente, Projektverwaltung (`00_…`), Abiturrecherche (`02_…`)
-Aktueller Nachtrag (01.11.2026): 10 Zusatzdokumente, 17 PDFs, 110 Seiten, 104 Glossarbegriffe;
+Aktueller Nachtrag (01.11.2026): 10 Zusatzdokumente, 17 PDFs, 112 Seiten, 21.751 Wörter, 104 Glossarbegriffe;
 Abbildungen, Glossar und Darkmode in **Abschnitt 15**.
-Werkzeuge: Typst 0.13.1 (Build), PyMuPDF 2.0 (Text-/Layout-/Pfadanalyse), `build/qa_pdf.py`
+Werkzeuge: Typst 0.15.1 (Build), PyMuPDF 2.0 (Text-/Layout-/Pfadanalyse), `build/qa_pdf.py`
 
 **Abgrenzung.** Die rein technische Prüfung (Formelreste, Dezimalkomma, Textüberläufe) wurde am
 01.11.2026 durchgeführt und steht unverändert in **Anhang A**; die Abbildungsprüfung vom 02.11. in
@@ -1178,3 +1178,32 @@ Suche, Glossar, `lesen.html` und alle 16 Leseseiten ohne horizontalen Überlauf;
 stichprobenartig ohne Überlauf. Alle MathML-Elemente haben Breite > 0, alle Bilder sind geladen;
 Darkmode schaltet auf `rgb(20,22,26)`, Abbildungen bleiben auf Weiß. `check_all.sh` grün:
 20 Quellen, 123 Markdown-Dateien, 14/14 Physikprüfungen, 17 PDFs/110 Seiten mit 0 Befunden.
+
+### 15.11 Vollständigkeit, Abbildungssinn und Leser-Design (01.11.2026)
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| W1 | `build/check_lesen_vollstaendig.py` | Die Vollständigkeit war nur stichprobenartig geprüft; ein dauerhaftes Kriterium fehlte. | Neuer Prüfer vergleicht je Dokument Bilder, `#figure`, `caption`, `#table`, TOC-Ziele und den PDF-Fließtext mit der HTML-Lesefassung. Deckblatt, gedrucktes Inhaltsverzeichnis, Kopf-/Fußzeilen und Formelbestandteile werden begründet ausgenommen. Ergebnis: **16/16 Leseseiten vollständig**. |
+| W2 | `build/src/03_elektronenwellen.typ:52-56`, `build/fig/elektronenbeugung_bild.svg` | Das Bild zeigte vier Ringe, der Text und die Quelle nennen beim Graphit zwei Ringe (innere und äußere Netzebenenschar). | Bild auf zwei Ringe plus Zentralfleck reduziert; Titel „zwei Ringe“. Quelle: LEIFIphysik, *Elektronenbeugungsröhre* (polykristalline Graphitschicht, innerer Ring mit \(d_1=2{,}13\cdot10^{-10}\,\mathrm{m}\)). |
+| W3 | `build/src/01_wellen.typ:125-129` | Die Unterschrift sagte „Grundschwingung und erste Oberschwingung“, das Bild zeigt aber drei Momentaufnahmen derselben stehenden Welle. | Unterschrift korrigiert: drei Zeiten, feste Knoten im Abstand \(\lambda/2\). |
+| W4 | `build/src/01_wellen.typ:185-190` | Die Unterschrift sprach von „oben“ und „unten“, die drei Kurven liegen aber übereinander. | Unterschrift nennt die Überlagerung ausdrücklich; Aussage zu Einzelspalt, Doppelspalt und Beugungshülle bleibt. |
+| W5 | `build/src/04_doppelspalt.typ:113-125` | Die Unterschrift sprach vom „Wellenpaket“, das Bild zeigte aber die Einzelspalt-Geometrie. | Bild und Text auf den Einzelspalt umgestellt: schmaler Spalt → breite Verteilung → große Impulsunschärfe; breiter Spalt umgekehrt. Das entspricht der Schuldarstellung bei LEIFIphysik, *Die HEISENBERGsche Unbestimmtheitsrelation*. |
+| W6 | `build/src/01_wellen.typ:194-205`, `276-305`; `build/src/05_mzi.typ:19-45` | Aufbau war teils nur in der Unterschrift oder Tabelle erklärt; für eine freie Experimentbeschreibung fehlten Durchführung und Beobachtung. | Für Bragg, Michelson, MZI, Polarisation und Röntgenspektrum je ein Kasten **Aufbau / Durchführung / Beobachtung / Auswertung** ergänzt. |
+| W7 | `build/src/01_wellen.typ`, `07_spektren.typ`, `f9_diagramme.typ` | Einige Unterschriften nannten keine Achsen, Größen oder Steigungsbedeutung. | Unterschriften für Doppelspalt-Geometrie, Bragg, Reflexion, Michelson, Wellenfunktion und alle Diagrammfiguren um Achsen, Kurven und Steigungsdeutung ergänzt. |
+| W8 | `build/web/lesen-static.js`, `build/web/lesen.css` | Der Leser hatte keine Vergrößerung, keine aktive TOC-Markierung und keinen Nach-oben-Knopf. | Abbildungen öffnen per Klick/Enter in einem nativen Dialog mit Unterschrift; TOC markiert den aktuellen Abschnitt; Nach-oben-Knopf erscheint ab 520 px; Suchtreffer pulsiert kurz. Alle Animationen respektieren `prefers-reduced-motion`. |
+| W9 | `build/test_pages.py`, `build/check_all.sh` | Glossar und Bedienhilfen wurden nicht dauerhaft geprüft. | Glossartest vergleicht **104 Begriffe und Definitionen** aus `glossar.json` mit `glossar.html`; vier Tests für Dialog, TOC, Nach-oben und reduzierte Bewegung; `check_lesen_vollstaendig.py` ist Teil von `check_all.sh`. |
+
+**Prüfstand nach dem Durchgang.** `qa_pdf.py`: **17 PDFs, 112 Seiten, 21.751 Wörter,
+0 Textüberläufe, 0 Formelreste**. `check_lesen_vollstaendig.py`: **16/16**.
+`test_pages.py`: **46/46** (inkl. Glossar und Reader-Interaktion), `test_suche.js`: **18/18**.
+`check_physics.py`: 14/14. Die 28 SVG-Dateien wurden nur dort neu erzeugt, wo sich Inhalt
+änderte (`elektronenbeugung_bild`, `unbestimmtheit`, `potenzialtopf`, `doppelspalt_geometrie`);
+die übrigen behalten ihre Metadaten. Die MZI-Grafik wurde visuell erneut geprüft: Strahlteiler
+sind Würfel mit Diagonale, M1/M2 getrennte Spiegel, die Strahlen laufen ST1→M1→ST2 bzw.
+ST1→M2→ST2 und enden an D1/D2; die Armlängen sind 2+5 und 5+2.
+
+**Externe Referenz für die beiden geänderten Figurenaussagen:** LEIFIphysik,
+[Elektronenbeugungsröhre](https://www.leifiphysik.de/quantenphysik/quantenobjekt-elektron/versuche/elektronenbeugungsroehre)
+(polykristalline Graphitschicht, Ringe, innerer Ring \(d_1=2{,}13\cdot10^{-10}\,\mathrm{m}\)) und
+[Die HEISENBERGsche Unbestimmtheitsrelation](https://www.leifiphysik.de/quantenphysik/wesenszuege-quantenphysik/grundwissen/die-heisenbergsche-unbestimmtheitsrelation)
+(schmaler Spalt → große Impulsunbestimmtheit, breiter Spalt → kleine).

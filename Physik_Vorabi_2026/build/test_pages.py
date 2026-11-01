@@ -12,7 +12,7 @@ DATEIEN = ("index.html", "suche.html", "glossar.html", "lesen.html", "suche.json
            "assets/style.css", "assets/suche.js", "assets/index.js", "assets/suche-seite.js",
            "assets/theme.js", "assets/glossar.js", "assets/lesen.css",
            "assets/lesen-static.js")
-SEITEN = 110
+SEITEN = 112
 
 pruefungen = []
 
@@ -51,7 +51,7 @@ def main():
         docs, seiten = daten["docs"], daten["seiten"]
 
         pruefe("17 Dokumente", len(docs) == 17, len(docs))
-        pruefe("Seitenzahl 110", sum(d["n"] for d in docs) == SEITEN,
+        pruefe("Seitenzahl 112", sum(d["n"] for d in docs) == SEITEN,
                sum(d["n"] for d in docs))
         pruefe("Seitenlisten vollständig", all(len(seiten[i]) == d["n"] for i, d in enumerate(docs)))
         pruefe("Blöcke vorhanden", all(any(s) for s in seiten))
@@ -93,6 +93,17 @@ def main():
                index_html.count('class="weiter"') == len(docs)
                and "physik.weiter" in (ziel / "assets" / "lesen-static.js").read_text(encoding="utf-8")
                and "physik.weiter" in (ziel / "assets" / "index.js").read_text(encoding="utf-8"))
+        lese_js = (ziel / "assets" / "lesen-static.js").read_text(encoding="utf-8")
+        lese_css = (ziel / "assets" / "lesen.css").read_text(encoding="utf-8")
+        pruefe("Leser: Abbildungen zoombar",
+               "bild-dialog" in lese_js and "bild-dialog" in lese_css
+               and "figure img" in lese_js and "showModal" in lese_js)
+        pruefe("Leser: Inhaltsverzeichnis markiert den Abschnitt",
+               "aktualisiereInhalt" in lese_js and "a.aktiv" in lese_css)
+        pruefe("Leser: Nach-oben-Knopf",
+               "lese-oben" in lese_js and "lese-oben" in lese_css)
+        pruefe("Leser respektiert reduzierte Bewegung",
+               "prefers-reduced-motion" in lese_js and "prefers-reduced-motion" in lese_css)
 
         with zipfile.ZipFile(ziel / "physik-vorabi-2026.zip") as z:
             namen = z.namelist()

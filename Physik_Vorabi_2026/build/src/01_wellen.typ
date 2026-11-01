@@ -125,7 +125,8 @@ Die Amplitude ist ortsfest, die Welle wandert nicht. Knoten bei $x = n lambda\/2
 
 #figure(
   image("../fig/stehende_welle.svg", width: 84%),
-  caption: [Grundschwingung und erste Oberschwingung; Knotenabstand immer $lambda\/2$.],
+  caption: [Stehende Welle zu drei Zeiten (blau, orange, türkis); die roten Punkte sind Knoten,
+    ihr Abstand ist immer $lambda\/2$, dazwischen liegen die Bäuche.],
 )
 
 In der Grundschwingung schwingt die Mitte mit maximaler Amplitude, in der ersten Oberschwingung sitzt dort ein zusätzlicher Knoten; der Abstand zweier Knoten bleibt in beiden Fällen $lambda\/2$.
@@ -141,7 +142,9 @@ In der Grundschwingung schwingt die Mitte mit maximaler Amplitude, in der ersten
 
 #figure(
   image("../fig/doppelspalt_geometrie.svg", width: 84%),
-  caption: [Geometrie: $Delta s approx d sin(alpha)$, Schirmabstand $e >> d$.],
+  caption: [Doppelspalt von oben: Die beiden Spaltmitten haben den Abstand $d$, der Schirm steht
+    im Abstand $e$. Die Strahlen laufen zum Punkt $P$; der untere Weg ist um
+    $Delta s approx d sin(alpha)$ länger.],
 )
 
 Der untere Strahl legt bis zum Schirm das zusätzliche Stück $d sin(alpha)$ zurück; dieser Wegunterschied entscheidet, ob sich die Wellen am Punkt $P$ verstärken oder auslöschen.
@@ -185,8 +188,9 @@ $ b sin(alpha_m) = m lambda, quad m = 1, 2, dots $
 
 #figure(
   image("../fig/einzelspalt_doppelspalt.svg", width: 88%),
-  caption: [Oben Einzelspalt (breites Zentralmaximum), unten Doppelspalt (schmale Streifen)
-    bei gleicher Breite.],
+  caption: [Einzelspalt (breites Zentralmaximum), Doppelspalt (schmale Streifen) und Doppelspalt
+    mit Beugungshülle bei gleicher Spaltbreite. Die Kurven sind überlagert, nicht untereinander
+    gestapelt.],
 )
 
 Der Vergleich zeigt, dass das Einzelspaltbild die Einhüllende des Doppelspaltmusters ist: Alle Streifen liegen unter dem breiten Zentralmaximum des Einzelspalts.
@@ -199,8 +203,17 @@ $ 2 d sin(theta) = n lambda $
 
 #figure(
   image("../fig/bragg.svg", width: 54%),
-  caption: [Strahl 2 läuft zusätzlich $2 d sin(theta)$.],
+  caption: [Bragg-Reflexion an zwei benachbarten Netzebenen im Abstand $d$: Strahl 2 läuft
+    gegenüber Strahl 1 zusätzlich $2 d sin(theta)$; $theta$ ist der Glanzwinkel zur Netzebene.],
 )
+
+#experiment[
+  *Aufbau.* Röntgenröhre, Kristall mit bekanntem Netzebenenabstand und drehbarer Detektor. \
+  *Durchführung.* Den Glanzwinkel $theta$ verändern und die Intensität der reflektierten Strahlung
+  messen. \
+  *Beobachtung.* Nur bei bestimmten Winkeln entsteht ein scharfes Maximum. \
+  *Auswertung.* $2 d sin(theta) = n lambda$; bei bekanntem $d$ folgt die Wellenlänge.
+]
 
 Der zweite Strahl dringt eine Netzebene tiefer ein und läuft dadurch den Weg $2 d sin(theta)$ länger; nur wenn dieser Weg ein Vielfaches von $lambda$ ist, verstärken sich die reflektierten Wellen.
 
@@ -213,7 +226,8 @@ $ frac(sin(alpha), sin(beta)) = frac(c_1, c_2) = frac(n_2, n_1) $
 
 #figure(
   image("../fig/reflexion_brechung.svg", width: 58%),
-  caption: [Brechung: Frequenz konstant, Wellenlänge kleiner, Strahl knickt zum Lot.],
+  caption: [Einfallender (blau), reflektierter (türkis) und gebrochener Strahl (orange). $alpha$
+    wird gegen das Lot gemessen, $beta$ im optisch dichteren Medium; dort ist $beta < alpha$.],
 )
 
 Im Bild knickt der Strahl beim Eintritt ins optisch dichtere Medium zum Lot; die Ursache ist die kleinere Ausbreitungsgeschwindigkeit, nicht eine Änderung der Frequenz.
@@ -263,6 +277,15 @@ einem Laser liegt sie fest.
   Filter dahinter; er zeigt, in welcher Ebene das Licht nach dem ersten Filter schwingt.
 ]
 
+#experiment[
+  *Aufbau.* Lampe oder Laser, Polarisator, drehbarer Analysator und eine Photodiode als
+  Intensitätsmesser. \
+  *Durchführung.* Den Analysator schrittweise drehen und die Intensität messen. \
+  *Beobachtung.* Bei paralleler Stellung ist die Intensität maximal, bei gekreuzter Stellung
+  praktisch null. \
+  *Auswertung.* $I(alpha) = I_0 cos^2(alpha)$ (Malus-Gesetz).
+]
+
 Stehen Polarisator und Analysator im Winkel $alpha$ zueinander, gilt das Malus-Gesetz
 
 $ I = I_0 cos^2 alpha $
@@ -286,9 +309,19 @@ $ Delta s = 2 Delta d $
 
 #figure(
   image("../fig/michelson.svg", width: 66%),
-  caption: [Aufbau: Der Strahlteiler teilt den Strahl; der bewegliche Spiegel verlängert einen Arm
-    um $Delta d$, der Gangunterschied wächst dadurch um $2 Delta d$.],
+  caption: [Michelson-Aufbau von oben: Laser → Strahlteiler → fester und beweglicher Spiegel →
+    Schirm. Der bewegliche Spiegel verlängert einen Arm um $Delta d$; der Gangunterschied wächst
+    dadurch um $2 Delta d$.],
 )
+
+#experiment[
+  *Aufbau.* Laser, 45°-Strahlteiler, fester Spiegel M1, auf einer Schiene verschiebbarer Spiegel
+  M2 und ein Schirm. Der Strahlteiler erzeugt zwei Teilstrahlen; M1 und M2 werfen sie zurück. \
+  *Durchführung.* M2 langsam verschieben und die am Schirm vorbeiziehenden hellen Streifen zählen. \
+  *Beobachtung.* Das Streifenmuster wandert; eine Verschiebung um $lambda\/2$ ergibt einen
+  Hell-Dunkel-Wechsel. \
+  *Auswertung.* $Delta s = 2 Delta d$ und $Delta d = N lambda\/2$.
+]
 
 Am Schirm treffen beide Teilstrahlen wieder zusammen; verschiebt man den beweglichen Spiegel, wandert das Streifenmuster über den Schirm.
 

@@ -515,3 +515,26 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   ohne Fehler; `check_all.sh` grün (20 Quellen, 123 Markdown, 14/14 Physik, 17 PDFs/110 Seiten,
   0 Befunde). Die 28 SVG-Prüfungen bleiben bei 0 Überlappungen und den bekannten 9
   `bbox_inches="tight"`-Hinweisen.
+
+## Nachtrag 27 (01.11.2026) – Vollständigkeit, Abbildungssinn und Leser-Feinschliff
+
+- **Vollständigkeit dauerhaft geprüft:** `build/check_lesen_vollstaendig.py` vergleicht je
+  Dokument die erzeugten Bilder, Abbildungen, Unterschriften und Tabellen mit der Quelle und
+  den PDF-Fließtext mit der HTML-Lesefassung. 16/16 Leseseiten sind vollständig; Glossar
+  104/104 in HTML und PDF. Der Prüfer läuft in `check_all.sh`.
+- **Abbildungen fachlich korrigiert:** Elektronenbeugung zeigt jetzt zwei Graphit-Ringe
+  (statt vier); die Stehwellen-Unterschrift beschreibt drei Momentaufnahmen statt zweier
+  Schwingungsformen; die Einzelspalt-Abbildung und ihre Unterschrift passen zusammen
+  (schmaler Spalt → breite Verteilung); Doppelspalt-Geometrie, Bragg, Reflexion, Michelson,
+  Wellenfunktion und Diagrammfiguren nennen Achsen, Kurven und die Bedeutung der Steigung.
+  Das MZI wurde erneut geprüft: getrennte Würfel-Strahlteiler, getrennte Spiegel, klare
+  Strahlführung, Armlängen 2+5 = 5+2.
+- **Experimente beschreibbar:** Aufbau/Durchführung/Beobachtung/Auswertung ergänzt für Bragg,
+  Michelson, MZI, Polarisation und Röntgenspektrum. Die Kapitel sind damit ohne Rückgriff auf
+  die Experimentesammlung beschreibbar.
+- **Leser-Design:** Klick auf Abbildungen öffnet einen Dialog mit Unterschrift; Inhaltsverzeichnis
+  markiert den aktuellen Abschnitt; Nach-oben-Knopf; Suchtreffer pulsiert; alles respektiert
+  `prefers-reduced-motion`.
+- **Prüfstand:** `qa_pdf.py` 17 PDFs/112 Seiten/21.751 Wörter/0 Befunde;
+  `check_lesen_vollstaendig.py` 16/16; `test_pages.py` 46/46; `test_suche.js` 18/18;
+  `check_physics.py` 14/14; Darkmode und Dialog im Chromium geprüft.

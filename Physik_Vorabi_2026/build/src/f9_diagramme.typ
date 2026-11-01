@@ -45,7 +45,8 @@ geübt: fünf Messreihen, jede nach demselben Muster.
 
   #figure(
     image("../fig/diag_resonanz.svg", width: 78%),
-    caption: [Rohrlängen der Resonanzen bei $f = 1","00$ kHz mit Ausgleichsgeraden.],
+    caption: [Rohrlänge $L$ gegen die Ordnung $n$ der Resonanz bei $f = 1","00$ kHz. Die
+      Steigung ist $lambda\/2$; daraus folgt $c = 2 f dot m$.],
   )
 
   #enum(
@@ -68,7 +69,9 @@ geübt: fünf Messreihen, jede nach demselben Muster.
 
   #figure(
     image("../fig/diag_entladung.svg", width: 96%),
-    caption: [Entladung linear (links) und halblogarithmisch (rechts) aufgetragen.],
+    caption: [Entladung: links $U(t)$ linear, rechts $ln(U\/U_0)$ gegen $t$. Im
+      halblogarithmischen Bild ist die Steigung $-1\/(R C)$; eine Gerade bestätigt das
+      Exponentialgesetz.],
   )
 
   #enum(
@@ -92,8 +95,9 @@ geübt: fünf Messreihen, jede nach demselben Muster.
 
   #figure(
     image("../fig/diag_residuen.svg", width: 100%),
-    caption: [Links: Ausgleichsgerade $s$ über $v$. Mitte: Residuen dieser Geraden.
-      Rechts: linearisierte Auftragung $s$ über $v^2$.],
+    caption: [Links: Ausgleichsgerade $s$ über $v$ (falsches Modell). Mitte: Residuen zeigen
+      ein systematisches Muster. Rechts: linearisierte Auftragung $s$ über $v^2$; die Steigung
+      ist $1\/(2a)$.],
   )
 
   #enum(
@@ -118,8 +122,8 @@ geübt: fünf Messreihen, jede nach demselben Muster.
 
   #figure(
     image("../fig/diag_g.svg", width: 76%),
-    caption: [Fadenlänge über dem Quadrat der Periodendauer, mit Fehlerbalken aus der
-      Unsicherheit von $T$.],
+    caption: [Fadenlänge $L$ über $T^2$ mit Fehlerbalken aus der Unsicherheit von $T$. Die
+      Steigung ist $g\/(4 pi^2)$; daraus folgt $g$.],
   )
 
   #enum(
@@ -136,7 +140,8 @@ geübt: fünf Messreihen, jede nach demselben Muster.
 
   #figure(
     image("../fig/diag_steigungen.svg", width: 100%),
-    caption: [Drei Ausgleichsgeraden mit unterschiedlichen Achsengrößen.],
+    caption: [Drei Ausgleichsgeraden mit unterschiedlichen Achsengrößen. Die Einheit der
+      Steigung ist immer (Einheit der y-Achse) pro (Einheit der x-Achse).],
   )
 
   #enum(

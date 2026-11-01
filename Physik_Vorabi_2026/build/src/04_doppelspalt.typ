@@ -112,16 +112,17 @@ ist die Schulnotation gemeint, für Prinzipaussagen die Lehrbuchform.
 
 #figure(
   image("../fig/unbestimmtheit.svg", width: 88%),
-  caption: [Wellenpaket: Je schmaler der Ort, desto breiter die Impulsverteilung. Das ist keine
+  caption: [Einzelspalt: Ein schmaler Spalt (kleine Ortsunschärfe $Delta x$) erzeugt eine breite
+    Intensitätsverteilung (große Impulsunschärfe $Delta p$) – und umgekehrt. Das ist keine
     Messungenauigkeit, sondern Eigenschaft des Zustands.],
 )
 
-Im Bild ist das Wellenpaket schmal im Ort und breit im Impuls; verkleinert man die Ortsbreite, wird die Impulsverteilung breiter.
+Die Spaltbreite entspricht der Ortsunschärfe $Delta x$. Je schmaler der Spalt, desto breiter wird die Beugungsfigur und damit die Impulsunschärfe $Delta p$; bei einem breiten Spalt ist es umgekehrt.
 
 #figure(
   image("../fig/wellenfunktion.svg", width: 84%),
-  caption: [Wellenfunktion und Betragsquadrat: Nur $|psi|^2$ ist messbar (Aufenthalts­wahr­
-    scheinlichkeit).],
+  caption: [Wellenfunktion $Psi(x)$ (blau) und Betragsquadrat $|Psi(x)|^2$ (orange Fläche):
+    Nur das Betragsquadrat ist als Aufenthaltswahrscheinlichkeit messbar.],
 )
 
 Die obere Kurve ist die Wellenfunktion selbst, die untere ihr Betragsquadrat; nur die untere gibt an, wo das Teilchen mit welcher Wahrscheinlichkeit gefunden wird.
