@@ -95,3 +95,10 @@ mit Schwerpunkt auf Diagrammauswertung.
       Steigungsdeutung, $R^2$/Residuen, vier Beispiele, zwei Übungsaufgaben.
 - [x] Alle Regressionswerte mit numpy nachgerechnet.
 - [x] Gesamtumfang 121 Seiten in 14 PDFs.
+
+## Nachtrag 4 (02.11.) – Umfangsanalyse und Lernfahrplan
+
+- [x] Wortzahlen je Dokument gemessen: 121 S., 60.663 Wörter (501 Wörter/Seite).
+- [x] Kern-Lernstoff isoliert: Formelblatt (1.718 W.) + Lernzettel (1.358 W.) ≈ 3.100 Wörter.
+- [x] `Lernfahrplan.pdf` (4 S.): Rollen der Dokumente, Kurzweg-Seiten je Skript (aus den
+      tatsächlichen Überschriftenpositionen), Vier-Tage-Plan bis 05.11.

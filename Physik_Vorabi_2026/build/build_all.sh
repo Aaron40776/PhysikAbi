@@ -17,4 +17,5 @@ $T compile --root . src/f4_lastminute.typ ../04_Zusatzmaterial/Last_Minute_Lernz
 $T compile --root . src/f5_abitur.typ ../04_Zusatzmaterial/Abitur_Analyse.pdf
 $T compile --root . src/f6_uebungen.typ ../04_Zusatzmaterial/Uebungsheft_20_Aufgaben.pdf
 $T compile --root . src/f7_regression.typ ../04_Zusatzmaterial/Regression_und_Auswertung.pdf
+$T compile --root . src/f8_lernplan.typ ../04_Zusatzmaterial/Lernfahrplan.pdf
 echo "alle gebaut"
