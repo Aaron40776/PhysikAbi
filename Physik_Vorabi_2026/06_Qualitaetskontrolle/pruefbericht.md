@@ -43,7 +43,7 @@ nachvollziehbaren Lösungsweg.
 | Übungsheft (20 Aufgaben) | 13 | 6 624 | B | 4 | 2 | 2 | 0 | 0 |
 | Regression und Auswertung | 7 | 2 770 | B | 1 | 2 | 1 | 0,5 | 0 |
 | Lernfahrplan | 4 | 1 107 | B | 2 | 1 | 1 | 1,0 | 0 |
-| **Summe** | **96** | **34 955** | | **15** | **31** | **22** | **≈5,5** | **0** |
+| **Summe** | **96** | **35 080** | | **15** | **31** | **22** | **≈5,5** | **0** |
 
 Seiten/Wörter aus den gebauten PDFs (`get_text()`), nicht aus den Quellen. Stand nach der
 P2-Umsetzung vom 01.11. (Abschnitt 11); die P1/P2/P3-Zahlen sind die der Erstprüfung.
@@ -633,7 +633,7 @@ wird im Text gedeutet“) erledigt.
 
 ### 11.5 Stand
 
-96 Seiten, 34 955 Wörter, 0 Formelreste, 0 Textüberläufe, 23 SVGs (22 + Michelson).
+96 Seiten, 35 080 Wörter, 0 Formelreste, 0 Textüberläufe, 23 SVGs (22 + Michelson).
 Skript 1 wuchs von 9 auf 10 Seiten, weil zwei Abschnitte hinzukamen; die Abschnittsnummern
 danach (Experiment 12, Aufgaben 13, Fehler 14, Wiederholung 15) sind in `THEMENSTATUS.md` und
 in der Kurzweg-Tabelle des Lernfahrplans nachgezogen.
@@ -642,6 +642,59 @@ in der Kurzweg-Tabelle des Lernfahrplans nachgezogen.
 („Schulnotation“), „fallende Gerade“ in Übungsheft 5.2, Pauli/Elektronenkonfiguration nur als
 Tabellenzelle, Koinzidenzmethode nur in der Experimentesammlung, Quantenradierer nur im
 Schulmaterial.
+
+---
+
+## 12. Restbefunde geschlossen (01.11.2026)
+
+Nach der Freigabe „alles sollte richtig und gut sein“ sind auch die letzten belegten Punkte aus
+Abschnitt 3 und 5 abgearbeitet.
+
+### 12.1 Unbestimmtheitsrelation: beide Notationen, mit Beleg
+
+Das Schulmaterial rechnet mit $Delta x dot Delta p_x >= h$
+(`d13/13quantenobjekte/13unbestimmtheit/docs.md`, Z. 220 und 225: „Damit das Produkt
+$Delta x dot Delta p_x$ größer als $h$ ist …“). Die KC-Kompetenz verlangt ausdrücklich den
+Vergleich (ebenda Z. 6): „Ich kann das Erlernte mit der Lehrbuch-Notierung der
+Unbestimmtheitsrelation für Ort und Impuls vergleichen.“
+
+Das Skript hatte nur $h\/(4 pi)$ und das Formelblatt nur $h$ („Schulnotation“) – der Vergleich
+fehlte also, obwohl er im KC steht. Jetzt:
+
+- `04_doppelspalt.typ:104` nennt beide Formen und erklärt den Faktor (Schwankungsbreite vs.
+  Standardabweichung).
+- `f1_formelblatt.typ:131` führt beide Zeilen mit Gültigkeitsangabe.
+
+### 12.2 Koinzidenzmethode ergänzt
+
+KC eA d13 (`04doppelspaltexperiment/docs.md`, Z. 10): „Ich kann die Koinzidenzmethode zum
+Nachweis einzelner Photonen erläutern.“ Die Methode stand nur in der Experimentesammlung.
+Neu in `04_doppelspalt.typ:57` (Definition), gestützt auf
+`06machzehnderinterferometer/docs.md`, Z. 245: „Ein Photon ist nicht teilbar, weswegen man
+**niemals** eine Koinzidenz … beobachtet.“
+
+### 12.3 Pauli-Prinzip ergänzt
+
+Stand nur als Zelle in der Vergleichstabelle Bohr/Quantenmechanik. Neu in
+`06_atommodelle.typ:143` als Definition (Besetzungsverbot, Schalen 2/8/18, Periodensystem).
+
+### 12.4 „fallende Gerade“ korrigiert
+
+`f6_uebungen.typ:416` sagte „eine fallende Gerade (je größer $f$, desto größer $U_B$)“ – der Satz
+widersprach sich selbst. Richtig ist eine *steigende* Gerade; die Rechnung darunter war bereits
+korrekt ($Delta U_B \/ Delta f = +4,11 dot 10^(-15)$ V s).
+
+### 12.5 Was bewusst offen bleibt
+
+| Punkt | Grund |
+|---|---|
+| Quantenradierer, Bomben-Test | im KC nicht als eigene Kompetenz; nur Schulmaterial |
+| Bindestrich-Extraktion (`\x1d`) im Übungsheft | optisch korrekt, nur die PDF-Suche leidet |
+| NIBIS-Aufgaben, Bildungsportal | HTTP 302 bzw. 403, kein Zugriff (Abschnitt 7) |
+| Optische Sichtprüfung der SVGs | kein Bildbetrachter in der Umgebung; geprüft wurden Einbindung, Seitenzahl und Beschriftungstext |
+
+**Stand:** 96 Seiten, 35 080 Wörter, 0 Formelreste, 0 Textüberläufe, 23 SVGs, alle 27
+`image()`-Aufrufe im Text gedeutet.
 
 ---
 

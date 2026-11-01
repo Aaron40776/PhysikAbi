@@ -54,6 +54,13 @@ Die Kurve fällt vom Zentralmaximum zu den Nullstellen bei $Delta s = (2n+1) lam
   Punkt.
 ]
 
+#definition[
+  *Koinzidenzmethode:* Zwei Detektoren werden gleichzeitig ausgelesen. Signale in einem sehr
+  kurzen Zeitfenster heißen Koinzidenz. Ein Photon ist nicht teilbar – an einem Strahlteiler
+  registriert deshalb immer nur *einer* der beiden Detektoren ein Ereignis, nie beide zugleich.
+  Genau darauf beruht der Nachweis einzelner Photonen.
+]
+
 = Superposition und Wahrscheinlichkeit
 
 Der Zustand „durch Spalt 1 oder Spalt 2“ wird als Summe der beiden Möglichkeiten beschrieben:
@@ -93,6 +100,14 @@ Wird an den Spalten gemessen, durch welchen Spalt das Quant ging, verschwindet d
 Ort und Impuls sind keine gleichzeitig scharfen Größen:
 
 $ Delta x dot Delta p >= frac(h, 4 pi) $
+
+Das Schulmaterial rechnet mit der Schulnotation
+
+$ Delta x dot Delta p_x >= h $
+
+Lehrbücher schreiben stattdessen $h\/(4 pi) = planck.reduce\/2$. Der Faktor hängt davon ab, ob $Delta$
+als Schwankungsbreite oder als Standardabweichung aufgefasst wird. Für Abschätzungen in Aufgaben
+ist die Schulnotation gemeint, für Prinzipaussagen die Lehrbuchform.
 
 #figure(
   image("../fig/unbestimmtheit.svg", width: 88%),

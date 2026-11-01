@@ -31,7 +31,7 @@ Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Gra
 Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
 
 Umfang nach der Straffung (02.11.): **7 Skripte 48 Seiten** statt 77, gesamt **96 Seiten**
-statt 121; Wortzahl 34.955 statt 60.663.
+statt 121; Wortzahl 35.080 statt 60.663.
 
 ## Verzeichnisse
 

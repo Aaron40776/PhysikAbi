@@ -140,6 +140,12 @@ Die Abstände zwischen den Niveaus wachsen hier mit $n$, während sie beim Coulo
   [stabile Bahn], [stationärer Zustand, Pauli-Prinzip füllt Orbitale],
 )
 
+#definition[
+  *Pauli-Prinzip:* Kein Zustand $(n, l, m_l, m_s)$ ist doppelt besetzt; jedes Orbital fasst
+  höchstens zwei Elektronen mit entgegengesetztem Spin. Daraus folgt die Besetzung der Schalen
+  (2, 8, 18 …) und der Aufbau des Periodensystems.
+]
+
 #figure(
   image("../fig/orbitale.svg", width: 82%),
   caption: [s- und p-Orbital als Wahrscheinlichkeitsflächen; Formen folgen aus $l$.],

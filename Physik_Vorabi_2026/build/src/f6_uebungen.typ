@@ -413,7 +413,7 @@ Wer diese Verteilung einmal im Kopf hat, erkennt sie in jeder Aufgabe wieder: ä
   (5.1) $f = c\/lambda$:
   405 nm → $7","40 dot 10^14$ Hz; 436 nm → $6","88 dot 10^14$ Hz; 546 nm → $5","49 dot 10^14$ Hz;
   578 nm → $5","19 dot 10^14$ Hz.
-  Auftragung $U_B$ über $f$ ergibt eine fallende Gerade (je größer $f$, desto größer $U_B$).
+  Auftragung $U_B$ über $f$ ergibt eine steigende Gerade: je größer $f$, desto größer $U_B$.
 
   (5.2) Aus $e U_B = h f - W_A$ folgt $U_B = (h\/e) f - W_A\/e$. Die Steigung ist also $h\/e$.
   Aus den Werten: $Delta U_B \/ Delta f = (1","16 - 0","25)\/(7","40 - 5","19) dot 10^14

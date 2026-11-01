@@ -204,3 +204,22 @@ fester Bestandteil des Skripts.
 **Stand:** 96 Seiten (Skript 1: 10 statt 9), 34.955 Wörter, 0 Formelreste, 0 Textüberläufe,
 23 SVGs. THEMENSTATUS, README und die Kurzweg-Tabelle im Lernfahrplan nachgezogen
 (Skript 1 jetzt Abschnitte 14/15 statt 12/13).
+
+## Nachtrag 8 (01.11.2026) – letzte belegte Lücken geschlossen
+
+- **Unbestimmtheit:** Skript 4 nennt jetzt beide Formen ($h$ als Schulnotation, $h\/(4 pi)$ als
+  Lehrbuchform) und erklärt den Faktor – genau der Vergleich, den das KC verlangt
+  (`13unbestimmtheit/docs.md`, Z. 6). Formelblatt führt beide Zeilen.
+- **Koinzidenzmethode:** als Definition in Skript 4 ergänzt (KC eA d13
+  `04doppelspaltexperiment/docs.md`, Z. 10), Beleg für „Photon nicht teilbar“ aus
+  `06machzehnderinterferometer/docs.md`, Z. 245.
+- **Pauli-Prinzip:** als Definition in Skript 6 ergänzt (war nur eine Tabellenzelle).
+- **Übungsheft 5.1:** „fallende Gerade“ → „steigende Gerade“ (der Satz widersprach sich selbst;
+  die Rechnung darunter war richtig).
+
+Bewusst offen und im Prüfbericht, Abschnitt 12.5, begründet: Quantenradierer/Bomben-Test (nicht
+im KC), Bindestrich-Extraktion im Übungsheft (nur PDF-Suche betroffen), NIBIS/Bildungsportal
+(kein Zugriff), optische Sichtprüfung der SVGs (kein Betrachter verfügbar).
+
+**Stand:** 96 Seiten, 35.080 Wörter, 0 Formelreste, 0 Textüberläufe, 23 SVGs, 27 von 27
+Abbildungen im Text gedeutet.
