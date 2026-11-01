@@ -74,3 +74,46 @@ Für jede PDF wurden geprüft:
 Alle zwölf Dokumente sind vollständig, maschinenlesbar, ohne Formelreste und ohne erkennbare
 Layoutfehler. Sie erfüllen die formalen Anforderungen der Aufgabenstellung (A4, Inhaltsverzeichnis,
 Kopf-/Fußzeile, Seitenzahlen, Quellenverzeichnis, eigene Grafiken, Aufgaben mit Lösungen).
+
+## Nachtrag: Prüfung der Abbildungen (02.11.)
+
+Anlass: Mehrere Grafiken wirkten im Druck unklar. Da eine Sichtprüfung aller
+Abbildungen nicht möglich war, wurden die Grafiken maschinell geprüft:
+
+| Prüfung | Methode | Ergebnis |
+|---|---|---|
+| Texte außerhalb der Zeichenfläche | Renderer-Bounding-Boxen | 1 Treffer (`bragg`, behoben) |
+| Überlappende Beschriftungen | paarweise Bounding-Box-Überlappung > 20 % | 6 Treffer (`energieniveaus_h`), behoben → 0 |
+| Geometrie der Schemata | ASCII-Rendering der SVGs | `mzi` chaotisch → neu gezeichnet |
+| Tintenabdeckung je Grafik | Pixelanalyse der PDF-Seite | `elektronenbeugung_bild` 82 % (schwarzer Block) → invertiert |
+| Textüberlauf im Satzspiegel | Blockkoordinaten aller Seiten | 0 Treffer in 13 PDFs |
+
+### Neu gezeichnet
+
+- **`mzi.svg`** – vorher willkürliche Koordinaten, Strahlen trafen die Strahlteiler
+  nicht. Jetzt streng rechtwinkliges Schema: Quelle → ST1 → zwei Arme → M1/M2 →
+  ST2 → D1/D2, alle Strahlen enden exakt in den Bauteilmitten.
+- **`rutherford.svg`** – Hyperbeln jetzt aus der exakten Coulomb-Bahn berechnet
+  (Stoßparameter 0; 0,45; 1; 2; 3,6), nicht mehr freihändig.
+- **`bragg.svg`** – Strahlen treffen die Netzebenen im Reflexionspunkt, α und d korrekt
+  eingetragen, Beschriftung aus dem Rand geholt.
+- **`doppelspalt_geometrie.svg`** – Strahlen starten in den Spaltmitten, g-Pfeil misst
+  jetzt wirklich den Spaltabstand.
+- **`qed_zeiger.svg`** – Vektorkette mit gestricheltem Parallelogramm.
+- **`energieniveaus_h.svg`** – Beschriftungen n = 3 und n = 4 überlappten sich; jetzt
+  getrennte Spalten für Übergänge, keine Kollision mehr (Messwert: 0).
+- **`unbestimmtheit.svg`** – Achse hatte unsinnige Ticks (−0,2 / +40). Neu: zwei
+  Vergleichspanels (schmaler/breiter Spalt) mit sauberer Beschriftung.
+- **`elektronenbeugung_bild.svg`** – war fast vollständig schwarz (inferno-Colormap
+  auf transparentem Grund). Jetzt invertiert: helle Fläche, dunkle Ringe, druckbar.
+
+### Nicht geändert
+
+`welle_raumzeit`, `doppelspalt_intensitaet`, `einzelspalt_doppelspalt`, `stehende_welle`,
+`reflexion_brechung`, `led_hbestimmung`, `potenzialtopf`, `franckhertz`, `wellenfunktion`,
+`zeigerkette`, `orbitale`, `gesamtuebersicht` – ohne Befund.
+
+### Prüfskripte
+
+`build/check_figs.py` (Textkollisionen), `build/redraw_figs.py` (neu gezeichnete
+Schemata). Beide sind reproduzierbar und nach Änderungen erneut ausführbar.

@@ -56,6 +56,19 @@ Formelresten (`$`, `\`, `sqrt`, Klammern), Layout-Überlaufprüfung, Zählung de
 Ein gefundener systematischer Fehler (`{,}` als Dezimalkomma wurde als sichtbare Klammern
 gerendert) wurde behoben und alle Dokumente neu gebaut.
 
+## Nachtrag (02.11.) – Übungsheft und Abbildungskorrektur
+
+- [x] `04_Zusatzmaterial/Uebungsheft_20_Aufgaben.pdf` erstellt (13 S.):
+      20 Aufgaben in 6 Blöcken, 256 Punkte, vollständige Lösungen mit Rechenweg,
+      Fehlerblatt-Vorlage, Punkte-Einschätzung.
+- [x] Alle Zahlenwerte der Aufgaben vorab in Python berechnet (Kontrollwerte geprüft).
+- [x] Abbildungen maschinell geprüft; 8 von 21 neu gezeichnet bzw. korrigiert
+      (Details: `06_Qualitaetskontrolle/pruefbericht.md`, Abschnitt „Prüfung der Abbildungen“).
+- [x] Gesamtumfang jetzt 113 Seiten in 13 PDFs.
+
+Offen: keine inhaltlichen Lücken; optionale Erweiterung wäre ein zweites Übungsheft
+mit Schwerpunkt auf Diagrammauswertung.
+
 ## Offene Punkte / Grenzen
 
 1. **NIBIS-Archiv nicht ausgewertet** (technisch blockiert). Ältere Landesaufgaben (2016–2024)

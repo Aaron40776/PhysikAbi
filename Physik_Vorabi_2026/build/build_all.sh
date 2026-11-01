@@ -13,4 +13,5 @@ $T compile --root . src/f2_experimente.typ ../04_Zusatzmaterial/Experimentesamml
 $T compile --root . src/f3_uebersicht.typ ../04_Zusatzmaterial/Gesamtuebersicht.pdf
 $T compile --root . src/f4_lastminute.typ ../04_Zusatzmaterial/Last_Minute_Lernzettel.pdf
 $T compile --root . src/f5_abitur.typ ../04_Zusatzmaterial/Abitur_Analyse.pdf
+$T compile --root . src/f6_uebungen.typ ../04_Zusatzmaterial/Uebungsheft_20_Aufgaben.pdf
 echo "alle gebaut"
