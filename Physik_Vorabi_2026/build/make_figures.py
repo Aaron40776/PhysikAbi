@@ -58,34 +58,43 @@ ax.set_title("Zeigerkette: gleichmäßig rotierende Zeiger längs der Ausbreitun
 save(fig, "zeigerkette")
 
 # ---------------------------------------------------------------- 3 Doppelspalt-Geometrie
-fig, ax = plt.subplots(figsize=(6.0, 3.0))
-ax.plot([0, 0], [1.0, 2.2], color="#333333", lw=2)
-ax.plot([0, 0], [-0.2, 0.8], color="#333333", lw=2)
-ax.plot([0, 0], [2.35, 2.9], color="#333333", lw=2)
-ax.plot([0, 0], [-0.9, -0.35], color="#333333", lw=2)
-ax.text(-0.15, 2.55, "Doppelspalt", rotation=90, va="center", fontsize=8, color=GREY)
+# Zwei echte Spalte (Mitte bei y = ±g/2), Strahlen starten exakt in den
+# Spaltmitten und treffen sich im Punkt P auf dem Schirm.
+g, e, a_n = 0.70, 5.5, 1.50
+fig, ax = plt.subplots(figsize=(6.4, 3.2))
+for y0, y1 in [(-1.75, -g/2 - 0.1), (-g/2 + 0.1, g/2 - 0.1), (g/2 + 0.1, 1.75)]:
+    ax.plot([0, 0], [y0, y1], color="#333333", lw=2.4, solid_capstyle="butt")
+ax.text(-0.12, 1.45, "Doppelspalt", rotation=90, va="center", ha="right",
+        fontsize=8, color=GREY)
+
 # Schirm
-ax.plot([6, 6], [-1.6, 3.4], color=BLUE, lw=3)
-ax.text(6.15, 3.2, "Schirm", color=BLUE, fontsize=8)
-# Strahlen
-ax.plot([0, 6], [0.15, 1.55], color=ORANGE, lw=1.2)
-ax.plot([0, 6], [1.85, 1.55], color=ORANGE, lw=1.2)
-ax.plot([0, 6], [0.15, 0.0], color="#BDBDBD", lw=0.9, ls=":")
-ax.plot([0, 6], [1.85, 0.0], color="#BDBDBD", lw=0.9, ls=":")
-ax.plot([0.1, 6.1], [1.0, 1.0], color=GREY, lw=0.8, ls="--")
-ax.text(3.0, 1.08, "e", color=GREY, fontsize=9)
-ax.annotate("", xy=(5.6, 0.0), xytext=(5.6, 1.0),
-            arrowprops=dict(arrowstyle="<->", color=TEAL, lw=0.9))
-ax.text(5.7, 0.45, "a$_n$", color=TEAL)
-ax.plot([4.2, 4.9], [0.0, 0.0], color="k", lw=0)
-ax.text(4.35, 0.12, "Maximum n-ter Ordnung", color=ORANGE, fontsize=7.5)
-ax.text(-0.05, 1.0, "g", ha="right", color="#333333")
-ax.annotate("", xy=(0.22, 1.85), xytext=(0.22, 0.15),
-            arrowprops=dict(arrowstyle="<->", color="#333333", lw=0.9))
-# Winkel
-ax.add_patch(Arc((0, 0.15), 3.2, 3.2, theta1=0, theta2=14, color=TEAL, lw=1))
-ax.text(1.85, 0.42, "α", color=TEAL, fontsize=9)
-ax.set_xlim(-0.7, 7.0); ax.set_ylim(-1.8, 3.6); ax.axis("off")
+ax.plot([e, e], [-1.6, 3.0], color=BLUE, lw=3)
+ax.text(e + 0.15, 2.9, "Schirm", color=BLUE, fontsize=8)
+
+# Strahlen von den Spaltmitten zum Maximum n-ter Ordnung
+for y0 in (-g/2, g/2):
+    ax.annotate("", xy=(e, a_n), xytext=(0, y0),
+                arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=1.2,
+                                mutation_scale=9, shrinkA=0, shrinkB=0))
+
+# Achse, Abstand e, Abstand a_n, Spaltabstand g und Winkel alpha
+ax.plot([0, e], [0, 0], color=GREY, lw=0.8, ls="--")
+ax.annotate("", xy=(e, 0), xytext=(e, a_n),
+            arrowprops=dict(arrowstyle="<->", color=TEAL, lw=1, shrinkA=0, shrinkB=0))
+ax.text(e + 0.15, a_n/2, "a$_n$", color=TEAL, fontsize=9, va="center")
+ax.annotate("", xy=(e, -1.55), xytext=(0, -1.55),
+            arrowprops=dict(arrowstyle="<->", color=GREY, lw=0.9, shrinkA=0, shrinkB=0))
+ax.text(e/2, -1.72, "e", color=GREY, fontsize=9, ha="center", va="top")
+ax.annotate("", xy=(-0.18, -g/2), xytext=(-0.18, g/2),
+            arrowprops=dict(arrowstyle="<->", color="#333333", lw=0.9, shrinkA=0, shrinkB=0))
+ax.text(-0.28, 0, "g", color="#333333", fontsize=9, ha="right", va="center")
+
+winkel = np.arctan((a_n - g/2)/e)
+ax.add_patch(Arc((0, g/2), 3.0, 3.0, theta1=0, theta2=np.degrees(winkel), color=TEAL, lw=1))
+ax.text(1.35, g/2 + 0.22, "α", color=TEAL, fontsize=9)
+
+ax.text(e - 1.5, a_n + 0.25, "Maximum n-ter Ordnung", color=ORANGE, fontsize=7.5)
+ax.set_xlim(-0.7, e + 0.7); ax.set_ylim(-1.8, 3.2); ax.axis("off")
 save(fig, "doppelspalt_geometrie")
 
 # ---------------------------------------------------------------- 4 Doppelspalt-Intensität
@@ -135,21 +144,46 @@ ax.set_ylim(-1.45, 1.5)
 save(fig, "stehende_welle")
 
 # ---------------------------------------------------------------- 7 Bragg
-fig, ax = plt.subplots(figsize=(4.9, 2.9))
-for y in [0.0, 0.9, 1.8]:
-    ax.plot([0, 4.2], [y, y], color=GREY, lw=0.9)
-    for xx in np.arange(0.1, 4.2, 0.4):
-        ax.add_patch(Circle((xx, y), 0.07, color="#9AA5B1"))
-ax.plot([0.7, 2.5], [2.6, 0.9], color=BLUE, lw=1.5)
-ax.plot([2.5, 4.3], [0.9, 2.6], color=BLUE, lw=1.5)
-ax.plot([2.5, 2.5], [0.9, 2.15], color=TEAL, ls="--", lw=1)
-ax.plot([2.5, 3.15], [2.15, 2.15], color=ORANGE, ls="--", lw=1)
-ax.text(2.6, 1.45, "d", color=TEAL)
-ax.text(2.85, 2.22, "d·sin α", color=ORANGE, fontsize=8)
-ax.add_patch(Arc((0.7, 2.6), 1.6, 1.6, theta1=270, theta2=326, color="#333333", lw=0.8))
-ax.text(1.15, 2.05, "α", fontsize=9)
-ax.text(4.25, 1.75, "Netzebenen", color=GREY, fontsize=8, rotation=90, va="center")
-ax.set_xlim(0.2, 4.8); ax.set_ylim(-0.2, 2.9); ax.axis("off")
+# Zwei parallele Strahlen reflektieren an benachbarten Netzebenen. Die
+# Projektionen der Strecke d auf die Strahlrichtung ergeben zweimal d·sin α,
+# zusammen also den Gangunterschied 2·d·sin α.
+d, alpha = 1.20, np.deg2rad(38)
+A = np.array([2.30, 0.0])          # Reflexionspunkt obere Ebene
+B = A + np.array([0.0, -d])        # Reflexionspunkt untere Ebene
+u = np.array([np.cos(alpha), -np.sin(alpha)])   # einfallende Richtung
+v = np.array([np.cos(alpha),  np.sin(alpha)])   # reflektierte Richtung
+L = 1.35
+fig, ax = plt.subplots(figsize=(5.4, 3.4))
+for y in (0.0, -d):
+    ax.plot([-0.4, 5.2], [y, y], color=GREY, lw=1.0)
+    for xx in np.arange(-0.25, 5.2, 0.45):
+        ax.add_patch(Circle((xx, y), 0.055, color="#9AA5B1", zorder=3))
+# Einfallende und reflektierte Strahlen
+for P in (A, B):
+    ax.plot([P[0] - L*u[0], P[0] + L*v[0]], [P[1] - L*u[1], P[1] + L*v[1]],
+            color=ORANGE, lw=1.4)
+    ax.annotate("", xy=(P[0] - 0.08*u[0], P[1] - 0.08*u[1]),
+                xytext=(P[0] - 0.55*u[0], P[1] - 0.55*u[1]),
+                arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=1.1,
+                                mutation_scale=8, shrinkA=0, shrinkB=0))
+# Zusatzwege d·sin alpha auf der unteren Strahlbahn
+Pp = B - d*np.sin(alpha)*u
+Qq = B + d*np.sin(alpha)*v
+ax.plot([A[0], Pp[0]], [A[1], Pp[1]], color=TEAL, ls="--", lw=0.9)
+ax.plot([A[0], Qq[0]], [A[1], Qq[1]], color=TEAL, ls="--", lw=0.9)
+ax.plot([B[0], Pp[0]], [B[1], Pp[1]], color=RED, lw=2.2)
+ax.plot([B[0], Qq[0]], [B[1], Qq[1]], color=RED, lw=2.2)
+ax.text((B[0]+Pp[0])/2 - 0.30, (B[1]+Pp[1])/2 - 0.16, "d·sin α", color=RED, fontsize=8)
+ax.text((B[0]+Qq[0])/2 + 0.04, (B[1]+Qq[1])/2 + 0.10, "d·sin α", color=RED, fontsize=8)
+# Schichtabstand d
+ax.annotate("", xy=(4.82, A[1]), xytext=(4.82, B[1]),
+            arrowprops=dict(arrowstyle="<->", color=TEAL, lw=1, shrinkA=0, shrinkB=0))
+ax.text(4.92, -d/2, "d", color=TEAL, fontsize=9, ha="left", va="center")
+# Winkel alpha zwischen Strahl und Netzebene
+ax.add_patch(Arc(A, 1.5, 1.5, theta1=180-np.degrees(alpha), theta2=180, color="#333333", lw=0.9))
+ax.text(A[0]-1.05, A[1]+0.10, "α", fontsize=9, color="#333333")
+ax.text(5.25, -d/2, "Netzebenen", color=GREY, fontsize=8, rotation=90, va="center")
+ax.set_xlim(-0.4, 5.6); ax.set_ylim(-1.45, 1.55); ax.axis("off")
 save(fig, "bragg")
 
 # ---------------------------------------------------------------- 8 Elektronenbeugung (Bild)
@@ -234,19 +268,26 @@ ax.set_xlim(-0.45, 1.25); ax.set_ylim(-0.4, 15.4); ax.axis("off")
 save(fig, "energieniveaus_h")
 
 # ---------------------------------------------------------------- 13 Franck-Hertz
-U = np.linspace(0, 30, 1200)
-I = 1 + 0.055*U - 0.9*(1 - np.exp(-(((U - 4.9) % 4.9)/0.55)**8)) * (U > 1.0)
-I = np.clip(I, 0.06, None)
-I = I * (1 - 0.004*U)
+# Rampenförmiger Anstieg mit Einbrüchen bei 4,9 V, 9,8 V, 14,7 V ...;
+# die Minima liegen exakt bei den Vielfachen der Anregungsenergie.
+U = np.linspace(0, 30, 2400)
+I = 0.12 + 0.045*U
+for n in range(1, 7):
+    I -= 0.30*np.exp(-((U - 4.9*n)/0.48)**2)
+I = np.clip(I, 0.03, None)
 fig, ax = plt.subplots(figsize=(5.8, 3.0))
-ax.plot(U, I, color=BLUE, lw=1.4)
-for u in [4.9, 9.8, 14.7]:
-    ax.annotate("", xy=(u, 0.2), xytext=(u, 1.35),
-                arrowprops=dict(arrowstyle="->", color=ORANGE, lw=1))
-ax.text(11.0, 1.45, "ΔU ≈ 4,9 V", color=ORANGE, fontsize=8.5)
+ax.plot(U, I, color=BLUE, lw=1.5)
+for u in [4.9, 9.8, 14.7, 19.6, 24.5]:
+    y = 0.12 + 0.045*u
+    ax.annotate("", xy=(u, y - 0.22), xytext=(u, y + 0.38),
+                arrowprops=dict(arrowstyle="->", color=ORANGE, lw=1,
+                                shrinkA=0, shrinkB=0))
+ax.annotate("", xy=(9.8, 0.42), xytext=(4.9, 0.42),
+            arrowprops=dict(arrowstyle="<->", color=TEAL, lw=1, shrinkA=0, shrinkB=0))
+ax.text(7.35, 0.50, "ΔU ≈ 4,9 V", color=TEAL, fontsize=8.5, ha="center")
 ax.set_xlabel("Beschleunigungsspannung U$_B$ in V")
 ax.set_ylabel("Auffängerstrom I (a. E.)")
-ax.set_xlim(0, 30); ax.set_ylim(0, 1.9)
+ax.set_xlim(0, 30); ax.set_ylim(0, 1.75)
 ax.set_xticks([0, 5, 10, 15, 20, 25, 30])
 ax.set_xticklabels(["0", "5", "10", "15", "20", "25", "30"])
 ax.grid(alpha=0.2, lw=0.5)
@@ -271,10 +312,16 @@ def orbit(b, col):
 
 for b, col in [(0.0, ORANGE), (0.45, ORANGE), (1.0, BLUE), (2.0, BLUE), (3.6, BLUE)]:
     if b == 0:
-        ax.plot([-7, 0], [0, 0], color=ORANGE, lw=1.2)
-        ax.plot([0.35, 7], [0, 0], color=ORANGE, lw=1.2)
-        ax.annotate("", xy=(5.2, 0), xytext=(4.0, 0),
-                    arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=1.2))
+        # Kopfstoß: das Alpha-Teilchen kehrt am Kern um (Rückstreuung).
+        ax.plot([-7, -0.35], [0, 0], color=ORANGE, lw=1.2)
+        ax.annotate("", xy=(-0.55, 0), xytext=(-1.7, 0),
+                    arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=1.2,
+                                    shrinkA=0, shrinkB=0))
+        ax.plot([-0.35, -7], [0.22, 0.22], color=ORANGE, lw=1.2, ls="--")
+        ax.annotate("", xy=(-6.8, 0.22), xytext=(-5.7, 0.22),
+                    arrowprops=dict(arrowstyle="-|>", color=ORANGE, lw=1.2,
+                                    shrinkA=0, shrinkB=0))
+        ax.text(-6.9, 0.48, "Kopfstoß ($b = 0$): Rückstreuung", fontsize=7.5, color=ORANGE)
         continue
     orbit(b, col)
 ax.text(-6.9, 3.9, "Alpha-Teilchen", fontsize=8.5, color=BLUE, ha="left")
@@ -299,36 +346,58 @@ for ax, psi, t in zip(axes, [psi_1s, psi_2s, psi_2p],
 save(fig, "orbitale")
 
 # ---------------------------------------------------------------- 16 MZI
-fig, ax = plt.subplots(figsize=(6.4, 2.9))
-# Strahlteiler 1 links, ST2 rechts, Spiegel oben/unten
-ax.plot([1.0, 1.9], [1.4, 1.4], color=ORANGE, lw=2)
-ax.plot([1.4, 1.85], [0.95, 1.35], color="#555555", lw=3)
-ax.text(1.62, 0.75, "ST 1", fontsize=8, ha="center", color="#555555")
-ax.plot([1.9, 4.6], [1.4, 1.4], color=ORANGE, lw=1.6)
-ax.plot([1.9, 4.6], [1.4, 2.55], color=ORANGE, lw=1.6)
-ax.plot([1.85, 1.85], [2.55, 3.0], color="#555555", lw=3, alpha=0)
-# Spiegel
-ax.plot([2.4, 3.0], [3.05, 2.55], color="#555555", lw=3)
-ax.text(2.72, 3.18, "Spiegel M1", fontsize=8, ha="center", color="#555555")
-ax.plot([2.4, 3.0], [-0.25, 0.25], color="#555555", lw=3)
-ax.text(2.72, -0.45, "Spiegel M2", fontsize=8, ha="center", color="#555555")
-# Strahlengänge oben / unten
-ax.plot([1.9, 1.9], [1.4, 2.55], color=ORANGE, lw=1.6)
-ax.plot([2.7, 4.6], [2.75, 1.65], color=ORANGE, lw=1.6)
-ax.plot([2.7, 4.6], [0.0, 1.15], color=ORANGE, lw=1.6)
-ax.plot([1.9, 1.9], [1.4, 0.15], color=ORANGE, lw=1.6)
-ax.plot([1.9, 2.7], [0.15, 0.0], color=ORANGE, lw=1.6)
-ax.plot([4.6, 5.1], [1.4, 1.4], color="#555555", lw=3)
-ax.text(4.85, 1.12, "ST 2", fontsize=8, ha="center", color="#555555")
-ax.plot([4.9, 6.4], [1.4, 1.4], color=ORANGE, lw=1.6)
-ax.plot([5.1, 6.4], [1.4, 2.5], color=ORANGE, lw=1.6)
-ax.add_patch(Rectangle((6.4, 1.25), 0.3, 0.3, color=RED))
-ax.add_patch(Rectangle((6.4, 2.35), 0.3, 0.3, color=RED))
-ax.text(6.35, 1.0, "D1", fontsize=8, color=RED)
-ax.text(6.35, 2.75, "D2", fontsize=8, color=RED)
-ax.plot([0.4, 0.95], [1.4, 1.4], color=ORANGE, lw=2)
-ax.text(0.2, 1.55, "Quelle", fontsize=8)
-ax.set_xlim(0, 7.2); ax.set_ylim(-0.7, 3.5); ax.axis("off")
+# Alle vier optischen Elemente stehen parallel ("/"). Ein Strahl von links wird
+# an ST1 nach oben reflektiert bzw. nach rechts durchgelassen; M1 lenkt oben
+# nach rechts, M2 unten nach oben; ST2 überlagert beide Wege.
+fig, ax = plt.subplots(figsize=(6.8, 4.0))
+ax.set_xlim(-0.2, 10.8); ax.set_ylim(-0.5, 6.7); ax.axis("off")
+
+def pfeil(x1, y1, x2, y2, c=ORANGE, lw=1.6):
+    ax.annotate("", xy=(x2, y2), xytext=(x1, y1),
+                arrowprops=dict(arrowstyle="-|>", color=c, lw=lw,
+                                mutation_scale=10, shrinkA=0, shrinkB=0))
+
+# Quelle und Strahl zu ST1
+ax.add_patch(Rectangle((0.15, 2.65), 1.2, 0.7, fc="white", ec=BLUE, lw=1.2))
+ax.text(0.75, 3.0, "Quelle", ha="center", va="center", fontsize=8, color=BLUE)
+pfeil(1.35, 3.0, 1.95, 3.0)
+
+# ST1
+ax.plot([1.72, 2.28], [2.72, 3.28], color=GREY, lw=2.8, solid_capstyle="butt")
+ax.text(2.34, 2.72, "ST 1", fontsize=8, color=GREY, ha="left", va="top")
+
+# Arm 1: nach oben zu M1, dann nach rechts zu ST2
+pfeil(2.0, 3.0, 2.0, 4.94)
+ax.plot([1.72, 2.28], [4.72, 5.28], color=GREY, lw=2.8, solid_capstyle="butt")
+ax.text(1.62, 5.42, "Spiegel M1", fontsize=8, color=GREY, ha="right", va="bottom")
+pfeil(2.12, 5.0, 6.95, 5.0)
+
+# Arm 2: nach rechts zu M2, dann nach oben zu ST2
+pfeil(2.0, 3.0, 6.94, 3.0)
+ax.plot([6.72, 7.28], [2.72, 3.28], color=GREY, lw=2.8, solid_capstyle="butt")
+ax.text(7.38, 2.72, "Spiegel M2", fontsize=8, color=GREY, ha="left", va="top")
+pfeil(7.0, 3.06, 7.0, 4.94)
+
+# ST2 und Ausgänge
+ax.plot([6.72, 7.28], [4.72, 5.28], color=GREY, lw=2.8, solid_capstyle="butt")
+ax.text(6.62, 5.42, "ST 2", fontsize=8, color=GREY, ha="right", va="bottom")
+pfeil(7.0, 5.0, 9.55, 5.0)
+pfeil(7.0, 5.12, 7.0, 6.35)
+
+# Phasenplättchen im oberen Arm
+ax.add_patch(Rectangle((4.05, 4.74), 0.55, 0.52, fc="#EAF2F8", ec=TEAL, lw=1.1))
+ax.text(4.32, 4.55, "Phasen-\nplättchen", fontsize=7.5, color=TEAL, ha="center", va="top")
+
+# Detektoren
+ax.add_patch(Rectangle((9.55, 4.65), 1.05, 0.7, fc="white", ec=RED, lw=1.2))
+ax.text(10.07, 5.0, "D1", fontsize=9, color=RED, ha="center", va="center")
+ax.add_patch(Rectangle((6.5, 6.35), 1.0, 0.55, fc="white", ec=RED, lw=1.2))
+ax.text(7.0, 6.62, "D2", fontsize=9, color=RED, ha="center", va="center")
+
+# Armlängen und Beschriftung
+ax.text(2.12, 3.85, "Arm 1", fontsize=8, color=GREY, rotation=90, va="center")
+ax.text(4.4, 3.15, "Arm 2", fontsize=8, color=GREY, ha="center")
+ax.text(0.2, 6.35, "Beide Arme gleich lang: 2 + 5 = 5 + 2", fontsize=8, color=GREY)
 save(fig, "mzi")
 
 # ---------------------------------------------------------------- 17 Unbestimmtheit
@@ -360,19 +429,35 @@ ax.spines[["top", "right", "left"]].set_visible(False)
 save(fig, "wellenfunktion")
 
 # ---------------------------------------------------------------- 19 QED-Zeiger
-fig, ax = plt.subplots(figsize=(4.4, 2.6))
-for ang, c, lab in [(0.0, BLUE, "Weg 1"), (2.0, ORANGE, "Weg 2")]:
-    ax.annotate("", xy=(np.cos(ang), np.sin(ang)), xytext=(0, 0),
-                arrowprops=dict(arrowstyle="-|>", color=c, lw=1.8))
-res = np.array([np.cos(0)+np.cos(2.0), np.sin(0)+np.sin(2.0)])
-ax.annotate("", xy=tuple(res), xytext=(0, 0),
-            arrowprops=dict(arrowstyle="-|>", color=TEAL, lw=2.2))
-ax.text(1.02, 0.08, "Zeiger 1", color=BLUE, fontsize=8)
-ax.text(-0.35, 1.0, "Zeiger 2", color=ORANGE, fontsize=8)
-ax.text(res[0]*0.55, res[1]+0.13, "Summe", color=TEAL, fontsize=8)
-ax.add_patch(Arc((0, 0), 0.9, 0.9, theta1=0, theta2=115, color=GREY, lw=0.7, ls="--"))
-ax.set_xlim(-1.0, 1.6); ax.set_ylim(-0.2, 1.6); ax.axis("off")
-ax.set_title("Wahrscheinlichkeitsamplituden addieren sich als Zeiger", fontsize=8, color=GREY)
+# Links: Δφ = 0, die Zeiger zeigen gegeneinander -> D1 bleibt dunkel.
+# Rechts: beliebige Phasendifferenz, die Resultierende bestimmt die Zählrate.
+fig, axes = plt.subplots(1, 2, figsize=(6.4, 2.7))
+for k, (ax, delta, titel) in enumerate(zip(
+        axes, [0.0, np.pi/2],
+        ["Δφ = 0: Zeiger heben sich auf (D1 dunkel)", "Δφ = 90°: Resultierende"])):
+    z1 = np.array([1.0, 0.0])
+    z2 = np.array([np.cos(np.pi - delta), np.sin(np.pi - delta)])
+    for z, c in ((z1, BLUE), (z2, ORANGE)):
+        ax.annotate("", xy=tuple(z), xytext=(0, 0),
+                    arrowprops=dict(arrowstyle="-|>", color=c, lw=1.9,
+                                    mutation_scale=11, shrinkA=0, shrinkB=0))
+    res = z1 + z2
+    if np.hypot(*res) > 0.05:
+        ax.annotate("", xy=tuple(res), xytext=(0, 0),
+                    arrowprops=dict(arrowstyle="-|>", color=TEAL, lw=2.2,
+                                    mutation_scale=11, shrinkA=0, shrinkB=0))
+        ax.text(res[0]*0.5, res[1]*0.5 + 0.12, "Summe", color=TEAL, fontsize=8,
+                ha="center")
+    else:
+        ax.text(0, -0.28, "Summe = 0", color=TEAL, fontsize=8, ha="center")
+    ax.text(1.02, 0.06, "Zeiger 1", color=BLUE, fontsize=7.5, ha="left", va="bottom")
+    ax.text(-1.02, 0.06, "Zeiger 2", color=ORANGE, fontsize=7.5, ha="right", va="bottom")
+    ax.add_patch(Arc((0, 0), 0.7, 0.7, theta1=180, theta2=180 - np.degrees(delta),
+                     color=GREY, lw=0.7, ls="--"))
+    ax.set_xlim(-1.15, 1.55); ax.set_ylim(-0.45, 1.45)
+    ax.set_aspect("equal"); ax.axis("off")
+    ax.set_title(titel, fontsize=8, color=GREY)
+fig.tight_layout()
 save(fig, "qed_zeiger")
 
 # ---------------------------------------------------------------- 20 Reflexion/Brechung
@@ -424,45 +509,47 @@ fig.tight_layout()
 save(fig, "regression")
 
 # ------------------------------------------------- Michelson (Skript 1)
-fig, ax = plt.subplots(figsize=(6.4, 3.0))
-ax.set_xlim(0, 10); ax.set_ylim(0, 5); ax.axis("off")
+# Strahlteiler in der Mitte: ein Teil nach oben zum festen, ein Teil nach rechts
+# zum beweglichen Spiegel. Beide laufen zurück und werden nach unten zum Schirm
+# überlagert. Elemente und Strahlen treffen sich exakt in den Bauteilen.
+fig, ax = plt.subplots(figsize=(6.4, 3.8))
+ax.set_xlim(0, 9.6); ax.set_ylim(0, 5.6); ax.axis("off")
 
-# Laser
-ax.add_patch(Rectangle((0.2, 2.2), 0.9, 0.6, fc=GREY, ec="none"))
-ax.text(0.65, 1.95, "Laser", ha="center", fontsize=8, color=GREY)
-ax.annotate("", xy=(3.2, 2.5), xytext=(1.15, 2.5),
-            arrowprops=dict(arrowstyle="->", color=RED, lw=1.4))
+def mpfeil(x1, y1, x2, y2, c=RED, lw=1.4, ls="-"):
+    ax.annotate("", xy=(x2, y2), xytext=(x1, y1),
+                arrowprops=dict(arrowstyle="-|>", color=c, lw=lw, ls=ls,
+                                mutation_scale=9, shrinkA=0, shrinkB=0))
 
-# Strahlteiler (45 Grad)
-ax.plot([3.2, 4.6], [1.5, 2.9], color=BLUE, lw=2.2)
-ax.text(4.05, 1.45, "Strahlteiler", fontsize=8, color=BLUE, ha="center")
+# Laser links
+ax.add_patch(Rectangle((0.2, 2.55), 1.0, 0.55, fc=GREY, ec="none"))
+ax.text(0.7, 2.3, "Laser", ha="center", fontsize=8, color=GREY)
+mpfeil(1.2, 2.82, 3.96, 2.82)
 
-# Weg nach oben zum festen Spiegel
-ax.annotate("", xy=(3.2, 4.2), xytext=(3.2, 2.6),
-            arrowprops=dict(arrowstyle="->", color=RED, lw=1.2))
-ax.add_patch(Rectangle((2.75, 4.2), 0.9, 0.18, fc=TEAL, ec="none"))
-ax.text(3.2, 4.55, "fester Spiegel", ha="center", fontsize=8, color=TEAL)
-ax.annotate("", xy=(3.5, 2.75), xytext=(3.5, 4.15),
-            arrowprops=dict(arrowstyle="->", color=RED, lw=1.0, ls=":"))
+# Strahlteiler bei (4.0, 2.82), 45°
+ax.plot([3.32, 4.68], [2.14, 3.50], color=BLUE, lw=2.4, solid_capstyle="butt")
+ax.text(4.82, 2.0, "Strahlteiler", fontsize=8, color=BLUE, ha="left", va="top")
 
-# Weg nach rechts zum beweglichen Spiegel
-ax.annotate("", xy=(7.6, 2.5), xytext=(4.4, 2.5),
-            arrowprops=dict(arrowstyle="->", color=RED, lw=1.2))
-ax.add_patch(Rectangle((7.6, 1.9), 0.18, 1.2, fc=ORANGE, ec="none"))
-ax.text(8.55, 2.5, "beweglicher\nSpiegel", fontsize=8, color=ORANGE, va="center")
-ax.annotate("", xy=(7.45, 2.85), xytext=(4.5, 2.85),
-            arrowprops=dict(arrowstyle="->", color=RED, lw=1.0, ls=":"))
+# Arm 1: nach oben zum festen Spiegel und zurück
+mpfeil(4.0, 2.95, 4.0, 4.45)
+ax.add_patch(Rectangle((3.45, 4.45), 1.1, 0.18, fc=TEAL, ec="none"))
+ax.text(4.0, 4.8, "fester Spiegel", ha="center", fontsize=8, color=TEAL)
+mpfeil(4.18, 4.35, 4.18, 3.0, ls=":")
 
-# Verschiebung Delta d
-ax.annotate("", xy=(7.95, 1.6), xytext=(7.95, 1.0),
-            arrowprops=dict(arrowstyle="<->", color=ORANGE, lw=0.9))
-ax.text(8.15, 1.25, "Δd", fontsize=8, color=ORANGE)
+# Arm 2: nach rechts zum beweglichen Spiegel und zurück
+mpfeil(4.15, 2.82, 7.55, 2.82)
+ax.add_patch(Rectangle((7.55, 2.2), 0.16, 1.24, fc=ORANGE, ec="none"))
+ax.text(7.85, 3.75, "beweglicher\nSpiegel", fontsize=8, color=ORANGE, va="bottom")
+mpfeil(7.4, 3.05, 4.3, 3.05, ls=":")
 
-# Schirm
-ax.add_patch(Rectangle((4.9, 3.5), 0.12, 1.3, fc=GREY, ec="none"))
-ax.annotate("", xy=(4.96, 3.4), xytext=(4.3, 2.7),
-            arrowprops=dict(arrowstyle="->", color=RED, lw=1.2))
-ax.text(5.25, 4.15, "Schirm", fontsize=8, color=GREY)
-ax.text(2.0, 0.6, "Gangunterschied  Δs = 2·Δd", fontsize=9, color=BLUE)
+# Verschiebung Δd am beweglichen Spiegel
+ax.annotate("", xy=(7.95, 3.0), xytext=(7.95, 2.2),
+            arrowprops=dict(arrowstyle="<->", color=ORANGE, lw=0.9, shrinkA=0, shrinkB=0))
+ax.text(8.1, 2.6, "Δd", fontsize=8, color=ORANGE, va="center")
+
+# Ausgang nach unten zum Schirm
+mpfeil(3.88, 2.7, 3.88, 1.05)
+ax.plot([3.2, 4.6], [1.05, 1.05], color=GREY, lw=2.4, solid_capstyle="butt")
+ax.text(4.75, 1.05, "Schirm", fontsize=8, color=GREY, va="center")
+ax.text(0.25, 0.35, "Gangunterschied  Δs = 2·Δd", fontsize=9, color=BLUE)
 
 save(fig, "michelson")

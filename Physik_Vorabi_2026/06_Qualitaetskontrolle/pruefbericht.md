@@ -2,6 +2,8 @@
 
 Datum: 01.11.2026 · Prüfer: systematische Dokumentprüfung (Quelltext + PDF)
 Gegenstand: 7 Lernskripte, 9 Zusatzdokumente, Projektverwaltung (`00_…`), Abiturrecherche (`02_…`)
+Aktueller Nachtrag (01.11.2026): 10 Zusatzdokumente, 17 PDFs, 109 Seiten, 104 Glossarbegriffe;
+Abbildungen, Glossar und Darkmode in **Abschnitt 15**.
 Werkzeuge: Typst 0.13.1 (Build), PyMuPDF 2.0 (Text-/Layout-/Pfadanalyse), `build/qa_pdf.py`
 
 **Abgrenzung.** Die rein technische Prüfung (Formelreste, Dezimalkomma, Textüberläufe) wurde am
@@ -1047,3 +1049,55 @@ unzugeordnet.
 - `redraw_figs.py` enthält weiterhin neu gestaltete Fassungen aller 28 Grafiken. Sie wurden
   nicht pauschal übernommen, weil das den Stil aller Abbildungen ändern würde; die zwei
   konkreten Kollisionen sind in `make_figures.py` punktuell behoben.
+
+## 15. Nachtrag (01.11.2026) – Darkmode, Glossar und Abbildungen
+
+### 15.1 Abbildungen: Befunde und Maßnahmen
+
+| # | Datei/Stelle | Befund (vorher) | Maßnahme | Prüfung |
+|---|---|---|---|---|
+| A1 | `build/make_figures.py:301-332` (HEAD) | MZI: Strahlen trafen die Bauteile nicht. Der „obere“ Strahl lief von `(1.9,1.4)` nach `(4.6,2.55)`, M1 lag aber bei `x=2.4…3.0, y=3.05…2.55`; ST2 bei `(4.6…5.1, 1.4)`, der Ausgang nach oben startete bei `(5.1,1.4)`. | Neuaufbau: ST1/ST2/M1/M2 alle parallel (45°), Strahlen enden in den Bauteilmitten, Armlängen 2 + 5 = 5 + 2, Phasenplättchen im oberen Arm, D1 rechts und D2 oben. | `make_figures.py:348-412`; `check_figs.py` 0 Überlappungen; PDF neu gebaut. |
+| A2 | `build/make_figures.py:426-468` (HEAD) | Michelson: Strahlteiler von `(3.2,1.5)` bis `(4.6,2.9)`, der Laserstrahl endete aber bei `(3.2,2.5)` und traf die Linie nicht; Schirm und Rückwege lagen neben dem Strahlteiler. | Strahlteiler bei `(4.0,2.82)`, Laserstrahl endet dort, Spiegel oben/rechts, Rückwege gestrichelt versetzt, Ausgang nach unten zum Schirm, Δd am beweglichen Spiegel. | `make_figures.py:511-555`; PDF neu gebaut. |
+| A3 | `build/make_figures.py:60-89` (HEAD) | Doppelspalt: Spalte lagen bei `y≈-0.35…-0.2` und `0.8…1.0`, die Strahlen starteten aber bei `y=0.15` und `1.85`; sie kamen nicht aus den Spaltmitten. | Spaltmitten bei `y=±g/2`, Strahlen von dort zum Schirmpunkt, `g` zwischen den Spaltmitten, `a_n` am Schirm, Winkel α aus der Strahlrichtung. | `make_figures.py:60-98`; PDF neu gebaut. |
+| A4 | `build/make_figures.py:137-153` (HEAD) | Bragg: `d·sin α` war als horizontale Strecke gezeichnet, ohne Bezug zur Strahlrichtung; der Winkelbogen saß am Strahleintritt, nicht an der Netzebene. | Exakte Konstruktion: zwei parallele Strahlen an benachbarten Ebenen, Lote von A auf die untere Strahlbahn, beide Zusatzwege `d·sin α`, Gesamtgang `2·d·sin α`. | `make_figures.py:146-187`; PDF neu gebaut. |
+| A5 | `build/make_figures.py:236-253` (HEAD) | Franck-Hertz: Die Modulo-Formel erzeugte Einbrüche bei etwa 5,9/10,8/15,7 V, die Pfeile zeigten aber auf 4,9/9,8/14,7 V; an 4,9 V sprang die Kurve. | Rampenanstieg minus Gauß-Einbrüche exakt bei `n·4,9 V`; Pfeile und ΔU-Markierung sitzen an den Minima. | `make_figures.py:270-294`; PDF neu gebaut. |
+| A6 | `build/make_figures.py:255-299` (HEAD) | Rutherford: Der Fall `b = 0` war als gerader Strahl durch den Kern gezeichnet, physikalisch ist es Rückstreuung. | Kopfstoß als hinlaufender Strahl und gestrichelter Rückweg, als „Rückstreuung“ beschriftet. | `make_figures.py:315-324`; PDF neu gebaut. |
+| A7 | `build/make_figures.py:362-382` (HEAD) | QED-Zeiger zeigte nur einen allgemeinen Winkel; der Text erklärt die Auslöschung bei Δφ = 0, das Bild zeigte sie nicht. | Zwei Panels: Δφ = 0 (entgegengesetzte Zeiger, Summe 0, D1 dunkel) und Δφ = 90° (Resultierende). | `make_figures.py:431-461`; PDF neu gebaut. |
+| A8 | `build/redraw_figs.py` | Der nie ausgelieferte zweite Figurensatz enthielt dieselbe falsche M1-Orientierung (`[1.72,2.28],[4.78,4.22]` reflektiert oben nach links, gezeichnet war rechts) und ein drittes Spaltpaar. | Datei entfernt, damit keine widersprüchliche Quelle bleibt. | `git status`; `make_figures.py` ist einzige Quelle. |
+
+`check_figs.py` meldet weiterhin 9 Hinweise „Text außerhalb“ (Achsentitel und einzelne
+Tick-Labels, die `bbox_inches="tight"` mit ausgibt), aber **0 echte Überlappungen**.
+Eine pixelgenaue Sichtprüfung war in der Umgebung nicht möglich; geprüft wurden die
+Konstruktionsdaten, die Textgeometrie und die Einbindung in die neu gebauten PDFs.
+
+### 15.2 Glossar
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| G1 | `build/glossar.json` | Es gab kein Glossar. | 104 Begriffe von Amplitude bis Zählrate, je mit Kurzerklärung und Stichworten; einzige Quelle. |
+| G2 | `build/make_pages.py:54-91` | Website hatte keine Glossarseite. | `glossar.html` wird aus `glossar.json` erzeugt: alphabetische Gruppen, Filterfeld, Zähler, Link in die Volltextsuche. |
+| G3 | `build/src/f10_glossar.typ` | Kein PDF-Glossar. | Typst liest `../glossar.json` und setzt 104 Einträge zweispaltig; `Glossar.pdf`, 5 Seiten. |
+| G4 | `build/build_all.sh:22` | Build kannte das Glossar nicht. | `f10_glossar.typ` wird mitgebaut. |
+
+### 15.3 Darkmode
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| D1 | `build/web/style.css:17-49` | Darkmode folgte nur `prefers-color-scheme`; manuell umschalten ging nicht. | `:root[data-theme="dark"]` plus Media-Query für „System“, `color-scheme` mitgesetzt. |
+| D2 | `build/web/theme.js` | Kein Umschalter. | Setzt gespeichertes Design vor dem Stylesheet, Knopf in der Kopfzeile aller drei Seiten, `meta[name=theme-color]` wird angepasst. |
+| D3 | `index.html`, `suche.html`, `glossar.html` | Kein Einstieg. | `theme.js` vor `style.css`, `#thema`-Knopf mit `aria-pressed` und wechselnder Beschriftung. |
+
+### 15.4 Prüfstand nach dem Nachtrag
+
+| Prüfung | Ergebnis |
+|---|---|
+| `./build_all.sh` | „alle gebaut“, 17 PDFs |
+| `qa_pdf.py` | 109 Seiten, 21.232 Wörter, 0 Textüberläufe, 0 Formelreste |
+| `check_figs.py` | 9 Hinweise „Text außerhalb“, 0 Überlappungen |
+| `test_pages.py` | 44/44 Prüfungen (17 Dokumente, 109 Seiten, Glossar, Theme, Suche, ZIP) |
+| `node test_suche.js` | 18/18 Prüfungen |
+| Glossar-PDF | 104 Einträge, 5 Seiten, keine ungerenderten Zeichen (`$`, `\`, `#`, `[]{}`) |
+
+**Offen:** Die Prüfbericht-Abschnitte 14.5–14.7 beschreiben den Stand vor diesem Nachtrag
+(16 PDFs, 105 Seiten). Die dort genannten Zahlen sind historisch; aktuell gelten die Werte
+in 15.4.

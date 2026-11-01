@@ -23,17 +23,17 @@ Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 | `06_Atommodelle_und_Orbitalmodell.pdf` | Rutherford, Bohr, Potenzialtopf, Orbitale | 7 |
 | `07_Spektren_und_Franck_Hertz.pdf` | Spektren, Röntgen, Resonanzabsorption, Franck-Hertz | 6 |
 
-**9 Zusatzdokumente** (`04_Zusatzmaterial/`): Gesamtübersicht (5 S.), Formelblatt (5 S.),
+**10 Zusatzdokumente** (`04_Zusatzmaterial/`): Gesamtübersicht (5 S.), Formelblatt (5 S.),
 Experimentesammlung (5 S.), Abitur-Analyse (5 S.), Last-Minute-Lernzettel (4 S.),
 **Übungsheft mit 20 Aufgaben und Lösungen (13 S.)**, **Regression und Auswertung (7 S.)**,
-**Übungsheft Diagrammauswertung (7 S.)**, **Lernfahrplan (4 S.)**.
+**Übungsheft Diagrammauswertung (7 S.)**, **Lernfahrplan (4 S.)**, **Glossar (5 S., 104 Begriffe)**.
 
 Jedes Skript enthält: Kenngrößen/Grundlagen als Tabelle, Theorie in Stichpunkten, abgesetzte
 Formeln mit echten Bruchstrichen (statt Schrägstrich), Herleitungen als nummerierte Schritte im Kasten,
 Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Grafiken mit
 Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
 
-Umfang (01.11.): **7 Skripte 50 Seiten**, gesamt **105 Seiten**, 19.144 Wörter
+Umfang (01.11.): **7 Skripte 50 Seiten**, gesamt **109 Seiten**, 21.232 Wörter
 (vor der Straffung 121 Seiten). Darin enthalten ist das 7-seitige Trainingsheft
 zur Diagrammauswertung.
 
@@ -46,7 +46,7 @@ Physik_Vorabi_2026/
 ├── 01_Schulwebsite/        website_links.csv + vollständiger Mirror der Unterrichtsseiten (Markdown)
 ├── 02_Abiturrecherche/     abitur_analyse.md, untersuchte_aufgaben.csv, iqb_aufgaben/ (12 PDFs + Text)
 ├── 03_Lernskripte/         7 Themen-PDFs
-├── 04_Zusatzmaterial/      9 Zusatz-PDFs (Übungshefte, Formelblatt, Sammlung, Analysen, Lernfahrplan)
+├── 04_Zusatzmaterial/      10 Zusatz-PDFs (Übungshefte, Formelblatt, Sammlung, Analysen, Lernfahrplan, Glossar)
 ├── 05_Grafiken/            28 eigene SVG-Grafiken (automatisch aus build/fig kopiert)
 ├── 06_Qualitaetskontrolle/ pruefbericht.md, review.md
 └── build/                  Typst-Template, Quelltexte, Figuren-Skripte, Build- und Prüfskripte
@@ -55,12 +55,12 @@ Physik_Vorabi_2026/
 
 ## Neu bauen
 
-Voraussetzung: Typst 0.15+, Python 3 mit matplotlib (nur für neue Grafiken).
+Voraussetzung: Typst 0.15+, Python 3 mit matplotlib (nur für neue Grafiken), pymupdf, cairosvg, pint und sympy für die Prüfskripte.
 
 ```bash
 cd Physik_Vorabi_2026/build
 python3 make_figures.py     # Grafiken erzeugen (SVG)
-./build_all.sh              # alle 16 PDFs kompilieren
+./build_all.sh              # alle 17 PDFs kompilieren (Glossar aus build/glossar.json)
 python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
 ```
 

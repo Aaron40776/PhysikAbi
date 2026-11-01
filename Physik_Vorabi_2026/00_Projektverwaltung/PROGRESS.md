@@ -393,3 +393,22 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - `f8_lernplan.typ`: 96→105 Seiten, 48→50 Skriptseiten, 35.000→19.000 Wörter; Skript 1
   11 S. mit Fehler §15/Wiederholung §16, Skript 5 7 S. mit §8/§9; PDF neu gebaut.
 - PDFs neu gebaut, weiterhin 105 Seiten, 0 Befunde, reproduzierbar; Website-Tests 35/35.
+
+## Nachtrag 21 (01.11.2026) – Darkmode, Glossar und Abbildungen
+
+- **Abbildungen:** `mzi` neu aufgebaut (alle vier Elemente parallel, Strahlen treffen
+  Strahlteiler und Spiegel in der Mitte, Armlängen 2 + 5 = 5 + 2, Phasenplättchen ergänzt);
+  `michelson` ebenso neu (Strahlteiler, Spiegel, Schirm und Rückwege treffen sich);
+  `doppelspalt_geometrie` mit echten Spaltmitten und Strahlen vom Spalt zum Schirmpunkt;
+  `bragg` mit exakter Konstruktion 2·d·sin α; `franckhertz` mit Minima bei 4,9/9,8/14,7 V;
+  `rutherford` mit Rückstreuung für b = 0; `qed_zeiger` als Zweipanelbild (Δφ = 0 und 90°).
+  `redraw_figs.py` (nie ausgeliefert, mit falscher M1-Orientierung) entfernt.
+- **Glossar:** `build/glossar.json` mit 104 Begriffen als einzige Quelle; daraus entstehen
+  `glossar.html` (Filter, Alphabet, Volltextlink) und `04_Zusatzmaterial/Glossar.pdf`
+  (5 Seiten, Typst `src/f10_glossar.typ`).
+- **Darkmode:** `build/web/theme.js` setzt das gespeicherte Design vor dem Stylesheet,
+  Umschalter in der Kopfzeile aller Seiten; Systemeinstellung bleibt Standard.
+- **Stand:** 17 PDFs, 109 Seiten, 21.232 Wörter, `qa_pdf.py` 0 Befunde, Website-Tests 44/44.
+- **Grenze:** Die SVGs wurden anhand ihrer Konstruktionsdaten und der erzeugten
+  Text-/Geometrieprüfung kontrolliert; eine pixelgenaue Sichtprüfung war in der
+  Arbeitsumgebung nicht möglich.

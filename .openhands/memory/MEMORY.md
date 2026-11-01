@@ -28,9 +28,13 @@
 - Bauen: `cd Physik_Vorabi_2026 && python3 build/make_pages.py --out _site` (pymupdf);
   testen: `python3 build/test_pages.py` (baut temporär, prüft Index/Links/ZIP und ruft
   `node build/test_suche.js` für Ranking/Markierung/Phrasen).
-- Quellen: `build/web/{index,lesen,suche}.html`, `style.css`, `suche.js` (Normalisierung, Bewertung,
-  Ausschnitte, Panel), `index.js` (Lernstand, Weiterlesen), `lesen.js` (Textansicht),
-  `suche-seite.js`. `make_pages.py` erzeugt `suche.json` (~185 kB) + ZIP.
+- Quellen: `build/web/{index,suche,glossar}.html`, `style.css`, `suche.js`, `index.js`,
+  `suche-seite.js`, `theme.js` (Hell/Dunkel, `physik.theme`), `glossar.js` (Filter).
+  `make_pages.py` erzeugt `suche.json` (~220 kB), `glossar.html` und ZIP.
+- Glossar: einzige Quelle `build/glossar.json` (104 Begriffe); daraus `glossar.html` und
+  `04_Zusatzmaterial/Glossar.pdf` über `build/src/f10_glossar.typ` (Typst liest das JSON).
+- Darkmode: `theme.js` setzt `data-theme` vor dem Stylesheet; CSS hat `:root[data-theme="dark"]`
+  und eine Media-Query nur für `:root:not([data-theme="light"])`.
 - Index: Text je Seite blockweise; Kopf-/Fußzeilen und `\xad`-Trennungen entfernt; NFKC macht
   𝜆→λ und ℎ→h. Deckblatt und gedrucktes Inhaltsverzeichnis stehen in `doc.leer` (nicht durchsucht,
   im Leser ausgeblendet).
@@ -38,7 +42,16 @@
   Titel/Kurztext +4 je Begriff, Dokumentname exakt +12 (auch auf Gruppen-Max).
 - Assets tragen `?v=<Hash aus JSON+JS+CSS>`; ohne Änderung des Hashs cacht der Browser alte JS-Dateien.
 - Neues PDF = Karte erscheint automatisch; Kurztext in `BESCHREIBUNG` ergänzen. Kopfzahlen über
-  `__ANZAHL__`/`__GESAMT__`.
+  `__ANZAHL__`/`__GESAMT__`. Stand: 17 PDFs, 109 Seiten. `test_pages.py`/`test_suche.js`
+  enthalten die Seitenzahl hart (SEITEN, `idx.docs.length`), bei neuen PDFs mitziehen.
+
+## Figuren
+- `build/make_figures.py` ist die einzige Quelle; `redraw_figs.py` wurde entfernt (falsche
+  M1-Orientierung). Einzelne Figuren mit dem Kopf der Datei und `exec(head + block)` erzeugen.
+- MZI/Michelson: 45°-Elemente als `/` zeichnen; `/` reflektiert links→oben und oben→rechts.
+  Strahlen müssen in den Bauteilmitten enden, sonst wirkt der Aufbau falsch.
+- `check_figs.py` meldet Achsentitel außerhalb der Zeichenfläche als Fehlalarm
+  (`bbox_inches="tight"`); echte Überlappungen zählen.
 
 ## Fallen (teuer gelernt)
 - Typst 0.15.1 kennt **kein** `planck.reduce`/`hbar` → `h\/(2 pi)` schreiben.
@@ -47,14 +60,5 @@
 - `01_Schulwebsite/materialien/**` ist ein 1:1-Spiegel der Schulhomepage: **nie** per sed
   verändern, nach globalen Ersetzungen `git checkout -- <Pfad>`.
 - `.agents/` (lokale Skills, ~5 MB) ist per .gitignore ausgeschlossen.
-
-## Review-Stand 01.11.2026
-- 16 PDFs, 105 Seiten (7 Skripte 50), 19.144 Wörter; Prüfbericht §14, review.md Nachtrag 4.
-- Abdeckung 77/77: 55 ✅, 2 🔶, 13 ❌ (12 Praktikumsseiten E-/B-Feld/Halbleiter/Solarzelle, He-Ne).
-- Ergänzt: Resonanzfrequenz (Skript 1 §3), Lichtgeschwindigkeit (1 §10), Verschränkung (5 §5).
-- `check_figs.py` regeneriert **alle** `build/fig/*.svg` (nur Zeitstempel/IDs ändern sich):
-  vorher gewünschte Dateien nach /tmp kopieren, danach `git checkout -- fig` und zurückkopieren.
-- `check_markdown.py` hält `sqrt`/`\/`/`mu` in `$...$` für Typst-Reste → in Markdown LaTeX
-  (`\sqrt{}`) schreiben.
-- `check_sources.py` muss aus `build/` laufen, sonst `template.typ` nicht gefunden.
-- Typst bricht bei `\Delta` in Formeln ab („unknown variable: elta“) → `Delta` ohne Backslash.
+- Typst-Binary: `/tmp/typst-x86_64-unknown-linux-musl/typst` (0.15.1); `pymupdf`,
+  `matplotlib`, `cairosvg`, `pint`, `sympy` ggf. per pip nachinstallieren.

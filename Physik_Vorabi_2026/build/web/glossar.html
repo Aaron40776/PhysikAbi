@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Glossar – Physik Abitur 2026/2027</title>
+<meta name="description" content="Glossar der Physik für das Abitur 2026/2027: __ANZAHL_GLOSSAR__ Begriffe von Amplitude bis Zählrate, alphabetisch und durchsuchbar.">
+<meta property="og:title" content="Glossar – Physik Abitur 2026/2027">
+<meta property="og:description" content="__ANZAHL_GLOSSAR__ Begriffe von Amplitude bis Zählrate – alphabetisch und durchsuchbar.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1F3864">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3864'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23fff' font-family='Georgia,serif'%3E%CF%86%3C/text%3E%3C/svg%3E">
+<script src="assets/theme.js?v=__V__"></script>
+<link rel="stylesheet" href="assets/style.css?v=__V__">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<div class="leiste">
+  <div class="leiste-inner">
+    <a class="marke" href="./">Physik · Abitur 2026/2027</a>
+    <nav class="seiten-nav" aria-label="Hauptseiten">
+      <a href="./">Übersicht</a>
+      <a href="suche.html">Suche</a>
+      <button class="thema" id="thema" type="button" aria-label="Dunkles Design einschalten" aria-pressed="false" title="Dunkles Design">☾</button>
+    </nav>
+    <div class="suche" role="search">
+      <input id="q" type="search" role="combobox" aria-autocomplete="list"
+             placeholder="Im Volltext suchen: Photoeffekt, Bragg, Compton …"
+             aria-label="Alle Dokumente im Volltext durchsuchen" autocomplete="off"
+             aria-controls="panel" aria-expanded="false">
+      <kbd>/</kbd>
+      <div class="panel" id="panel" hidden></div>
+    </div>
+    <span class="treffer" id="treffer" aria-live="polite"></span>
+  </div>
+</div>
+
+<main id="inhalt" tabindex="-1">
+  <div class="kopf-bereich">
+    <h1>Glossar</h1>
+    <p class="lead">__ANZAHL_GLOSSAR__ Begriffe von Amplitude bis Zählrate, alphabetisch geordnet.
+       Jeder Eintrag nennt die Formelzeichen und verweist auf die Stelle im Skript, an der der Begriff
+       eingeführt wird. Das Filterfeld darunter durchsucht Begriff, Stichworte und Erklärung.</p>
+    <div class="glossar-werkzeuge">
+      <label for="glossar-filter">Im Glossar filtern</label>
+      <input id="glossar-filter" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Begriff oder Stichwort, z. B. Interferenz" aria-describedby="glossar-zaehler">
+      <span id="glossar-zaehler" aria-live="polite">__ANZAHL_GLOSSAR__ Begriffe</span>
+    </div>
+    <nav class="glossar-az" aria-label="Alphabetische Sprungmarken">
+__GLOSSAR_NAV__
+    </nav>
+  </div>
+
+  <div id="glossar-liste">
+__GLOSSAR_INHALT__
+  </div>
+
+  <p class="glossar-leer" id="glossar-leer" hidden>Kein Begriff gefunden. Andere Schreibweise
+     versuchen oder die Volltextsuche oben benutzen.</p>
+
+  <footer>
+    Begriffe und Erklärungen folgen den Skripten dieses Projekts.
+    Quellen und Prüfstand:
+    <a href="https://github.com/Aaron40776/PhysikAbi/blob/main/Physik_Vorabi_2026/06_Qualitaetskontrolle/pruefbericht.md">Prüfbericht</a>
+    ·
+    <a href="https://github.com/Aaron40776/PhysikAbi">Repository</a>
+    <noscript>Das Filterfeld braucht JavaScript; die Liste ist auch ohne vollständig lesbar.</noscript>
+  </footer>
+</main>
+
+<button class="oben" id="oben" aria-label="Nach oben" hidden>↑</button>
+
+<script src="assets/suche.js?v=__V__"></script>
+<script src="assets/glossar.js?v=__V__"></script>
+</body>
+</html>

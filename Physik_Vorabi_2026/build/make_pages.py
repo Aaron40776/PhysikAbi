@@ -17,6 +17,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKRIPTE = ROOT / "03_Lernskripte"
 ZUSATZ = ROOT / "04_Zusatzmaterial"
 WEB = pathlib.Path(__file__).resolve().parent / "web"
+GLOSSAR = pathlib.Path(__file__).resolve().parent / "glossar.json"
 VENDOR = pathlib.Path(__file__).resolve().parent / "vendor" / "pdfjs"
 
 BESCHREIBUNG = {
@@ -36,11 +37,50 @@ BESCHREIBUNG = {
     "Regression_und_Auswertung": ("Regression und Auswertung", "Linearisieren, Steigung, Residuen"),
     "Uebungsheft_20_Aufgaben": ("Übungsheft – 20 Aufgaben", "Aufgaben mit Lösungen, 4 Stunden"),
     "Uebungsheft_Diagrammauswertung": ("Übungsheft – Diagrammauswertung", "5 Messreihen: Steigung, Residuen, Fehlerbalken, 40 Punkte"),
+    "Glossar": ("Glossar", "104 Begriffe von Amplitude bis Zählrate, alphabetisch und durchsuchbar"),
 }
 
 FUSSZEILE = re.compile(r"^(Gymnasium Westerstede\s*Seite \d+|Seite \d+)$")
 KOPFZEILE = re.compile(r"\nPhysik · Vorabi 2026\s*$")
 INHALTSPUNKTE = re.compile(r"(?:\.\s){6,}")
+
+
+def glossar_norm(text):
+    t = text.lower().replace("ä", "a").replace("ö", "o").replace("ü", "u").replace("ß", "ss")
+    t = re.sub(r"[‐‑‒–—−]", "", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def glossar_teile():
+    eintraege = json.loads(GLOSSAR.read_text(encoding="utf-8"))
+    eintraege.sort(key=lambda e: (e["t"].casefold(), e["t"]))
+    gruppen = {}
+    for e in eintraege:
+        b = e["t"][0].upper()
+        b = {"Ä": "A", "Ö": "O", "Ü": "U"}.get(b, b)
+        gruppen.setdefault(b, []).append(e)
+    nav, inhalt = [], []
+    for b, es in gruppen.items():
+        nav.append(f'<a href="#glossar-{b}">{b}</a>')
+        teile = []
+        for e in es:
+            roh = e["t"].lower().replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+            slug = re.sub(r"[^a-z0-9]+", "-", roh).strip("-") or "begriff"
+            aliase = (f'<span class="aliase">auch: {html.escape(e["a"])}</span>'
+                      if e.get("a") else "")
+            ziel = "suche.html?q=" + quote(e["t"], safe="")
+            suche = glossar_norm(e["t"] + " " + e.get("a", "") + " " + e["d"])
+            teile.append(
+                f'      <div class="glossar-eintrag" data-suche="{html.escape(suche, quote=True)}">\n'
+                f'        <dt id="glossar-{slug}">{html.escape(e["t"])}</dt>\n'
+                f'        <dd>{html.escape(e["d"])}{aliase}'
+                f'<a class="glossar-suche" href="{ziel}">im Volltext suchen</a></dd>\n'
+                f'      </div>')
+        inhalt.append(
+            f'  <section class="glossar-gruppe" id="glossar-{b}">\n'
+            f'    <h2>{b}</h2>\n    <dl class="glossar-liste">\n' + "\n".join(teile) +
+            "\n    </dl>\n  </section>")
+    return "\n".join(nav), "\n".join(inhalt), len(eintraege)
 
 
 def saubere(text):
@@ -169,7 +209,8 @@ def main():
     roh = json.dumps({"docs": docs, "seiten": seiten}, ensure_ascii=False, separators=(",", ":"))
     (out / "suche.json").write_text(roh, encoding="utf-8")
     stempel = hashlib.sha256(roh.encode())
-    for name in ("style.css", "suche.js", "index.js", "suche-seite.js"):
+    stempel.update(GLOSSAR.read_bytes())
+    for name in ("style.css", "suche.js", "index.js", "suche-seite.js", "theme.js", "glossar.js"):
         stempel.update((WEB / name).read_bytes())
     version = stempel.hexdigest()[:10]
 
@@ -179,15 +220,19 @@ def main():
             ordner = ROOT / ("03_Lernskripte" if doc["g"] == "skripte" else "04_Zusatzmaterial")
             z.write(ordner / pathlib.Path(doc["f"]).name, f"Physik Vorabi 2026/{doc['t']}.pdf")
 
+    glossar_nav, glossar_inhalt, glossar_anzahl = glossar_teile()
     werte = {
         "__GRUPPE_SKRIPTE__": gruppen[0],
+        "__GLOSSAR_NAV__": glossar_nav,
+        "__GLOSSAR_INHALT__": glossar_inhalt,
+        "__ANZAHL_GLOSSAR__": str(glossar_anzahl),
         "__GRUPPE_ZUSATZ__": gruppen[1],
         "__GESAMT__": str(sum(d["n"] for d in docs)),
         "__ANZAHL__": str(len(docs)),
         "__ZIPMB__": f"{zip_pfad.stat().st_size / 1e6:.1f}".replace(".", ","),
         "__V__": version,
     }
-    for name in ("style.css", "suche.js", "index.js", "suche-seite.js"):
+    for name in ("style.css", "suche.js", "index.js", "suche-seite.js", "theme.js", "glossar.js"):
         shutil.copy2(WEB / name, out / "assets" / name)
 
     if not VENDOR.is_dir():
@@ -197,7 +242,7 @@ def main():
         shutil.rmtree(ziel_viewer)
     shutil.copytree(VENDOR, ziel_viewer)
 
-    for name in ("index.html", "suche.html"):
+    for name in ("index.html", "suche.html", "glossar.html"):
         text = (WEB / name).read_text(encoding="utf-8")
         for k, v in werte.items():
             text = text.replace(k, v)

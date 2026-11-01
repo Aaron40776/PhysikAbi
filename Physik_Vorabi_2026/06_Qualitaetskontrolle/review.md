@@ -3,6 +3,10 @@
 Systematische Durchsicht des gesamten Projekts: Bestand, Themenabdeckung, Zahlen,
 Layout, Abbildungen, Reproduzierbarkeit. Alles hier Genannte wurde geprüft, nicht geschätzt.
 
+> **Nachtrag 01.11.2026:** Aktuell 17 PDFs, 109 Seiten, 104 Glossarbegriffe, Darkmode
+> und korrigierte Abbildungen. Die Zahlen in diesem Review beschreiben den früheren Stand;
+> Einzelheiten in `pruefbericht.md`, Abschnitt 15.
+
 ---
 
 ## 1. Bestandsaufnahme: Was ist im Repo – und wofür?
@@ -186,3 +190,9 @@ Die zwei Textkollisionen in `energieniveaus_h` und `unbestimmtheit` sind behoben
 meldet nur noch Achsentitel außerhalb der Zeichenfläche, die der Tight-Bbox-Lauf mit ausgibt.
 Die übrigen Neufassungen in `redraw_figs.py` bleiben bewusst ungenutzt, weil sie den Stil aller
 Abbildungen ändern würden.
+
+---
+
+**Nachtrag 01.11.2026:** Aktueller Stand nach Darkmode, Glossar und Abbildungskorrektur:
+17 PDFs, 109 Seiten, 21.232 Wörter, 104 Glossarbegriffe; Einzelheiten in
+`pruefbericht.md`, Abschnitt 15. Die Zahlen oben beschreiben den früheren Prüfstand.
