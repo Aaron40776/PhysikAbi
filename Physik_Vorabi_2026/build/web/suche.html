@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suche – Physik Abitur 2026/2027</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1F3864">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3864'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23fff' font-family='Georgia,serif'%3E%CF%86%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css?v=__V__">
+</head>
+<body>
+<a class="skip" href="#ergebnisse">Zu den Ergebnissen</a>
+
+<div class="leiste">
+  <div class="leiste-inner">
+    <a class="marke" href="./">Physik · Abitur 2026/2027</a>
+    <div class="suche" role="search">
+      <input id="q" type="search" placeholder="Im Volltext suchen: Photoeffekt, Bragg, Compton …"
+             aria-label="Alle Dokumente im Volltext durchsuchen" autocomplete="off">
+      <kbd>/</kbd>
+    </div>
+    <span class="treffer" id="treffer" aria-live="polite"></span>
+  </div>
+</div>
+
+<main>
+  <div class="ergebnis-kopf">
+    <h1 style="font-size:1.6rem;margin:0">Suchergebnisse</h1>
+    <span class="meta" id="kopfzeile"></span>
+  </div>
+
+  <div class="chips" role="group" aria-label="Nach Bereich filtern">
+    <button type="button" data-gruppe="" aria-pressed="true">Alle</button>
+    <button type="button" data-gruppe="skripte" aria-pressed="false">Lernskripte</button>
+    <button type="button" data-gruppe="zusatz" aria-pressed="false">Zusatzmaterial</button>
+  </div>
+
+  <div id="ergebnisse"></div>
+
+  <footer>
+    <p><strong>Suchtipps:</strong> Mehrere Wörter werden alle gesucht („Bragg Gitter“).
+      <code>"wörtliche Wendung"</code> sucht die Wortfolge, <code>-wort</code> schließt aus.
+      Griechische Formelzeichen gehen auch als Name: <code>lambda</code>, <code>omega</code>,
+      <code>delta</code>. Groß-/Kleinschreibung und Umlaute spielen keine Rolle.</p>
+    <p><a href="./">Zur Übersicht</a></p>
+  </footer>
+</main>
+
+<script src="assets/suche.js?v=__V__"></script>
+<script src="assets/suche-seite.js?v=__V__"></script>
+</body>
+</html>

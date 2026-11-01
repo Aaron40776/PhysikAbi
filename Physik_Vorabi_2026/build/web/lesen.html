@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textansicht – Physik Abitur 2026/2027</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1F3864">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3864'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23fff' font-family='Georgia,serif'%3E%CF%86%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css?v=__V__">
+</head>
+<body>
+<a class="skip" href="#artikel">Zum Text springen</a>
+
+<div class="leiste">
+  <div class="leiste-inner">
+    <a class="marke" href="./">Physik · Abitur 2026/2027</a>
+    <div class="suche" role="search">
+      <input id="imdok" type="search" placeholder="In diesem Dokument suchen …"
+             aria-label="In diesem Dokument suchen" autocomplete="off">
+      <kbd>/</kbd>
+    </div>
+    <a class="marke" href="suche.html">Alle Dokumente</a>
+  </div>
+</div>
+
+<div class="lese-layout">
+  <aside class="seitenleiste">
+    <label class="meta" for="docwahl">Dokument</label>
+    <select id="docwahl" aria-label="Dokument wählen"></select>
+    <h2>Inhalt</h2>
+    <nav aria-label="Inhaltsverzeichnis">
+      <ul class="toc-liste" id="toc"></ul>
+    </nav>
+  </aside>
+
+  <main class="lesebereich" id="lesebereich">
+    <div class="lese-kopf">
+      <h1 id="doktitel">Lade …</h1>
+      <div class="meta">
+        <span id="dokmeta"></span>
+        <a class="knopf" id="pdfknopf" href="#" target="_blank" rel="noopener">Im PDF öffnen</a>
+        <a class="knopf" id="sucheknopf" href="suche.html">Volltextsuche</a>
+        <button class="knopf" type="button" id="gelesenknopf" aria-pressed="false">gelesen</button>
+      </div>
+    </div>
+    <p class="lese-hinweis" id="hinweis">
+      Textansicht, aus dem PDF extrahiert. Formeln, Brüche und Tabellen können vereinfacht
+      dargestellt sein – verbindlich ist das PDF.
+    </p>
+    <div id="artikel"></div>
+  </main>
+</div>
+
+<div class="treffer-navi" id="treffernavi" hidden>
+  <button id="zurueck" type="button" aria-label="Vorheriger Treffer">‹</button>
+  <span class="zaehler" id="zaehler" aria-live="polite"></span>
+  <button id="vor" type="button" aria-label="Nächster Treffer">›</button>
+</div>
+
+<script src="assets/suche.js?v=__V__"></script>
+<script src="assets/lesen.js?v=__V__"></script>
+</body>
+</html>

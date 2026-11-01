@@ -270,3 +270,19 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Fehler behoben:** `planck.reduce` (ℏ) gibt es in Typst 0.15.1 nicht – Skript 4 brach ab;
   durch `h\/(2 pi)` ersetzt.
 - **Stand:** 16 PDFs, 103 Seiten, 18.380 Wörter, 0 Befunde.
+
+## Nachtrag 12 (01.11.2026) – Lernseite: Volltextsuche, Textansicht, Lernstand
+
+- `build/make_pages.py` baut zusätzlich `suche.json` (185 kB): Text jeder Seite in Blöcken,
+  Inhaltsverzeichnisse, Kennzeichnung der Deckblatt-/Inhaltsseiten. Laufende Kopf- und Fußzeilen
+  sowie weiche Trennstriche werden entfernt, Formelzeichen per NFKC vereinheitlicht (𝜆 → λ).
+- Neue Seite `lesen.html`: Textansicht je Dokument mit Inhaltsverzeichnis, Suche im Dokument,
+  gelb markierten Treffern, Blättern mit `n`/`p`, Sprung auf Abschnitte (`&h=`), „gelesen“-Schalter
+  und PDF-Link auf die betroffene Seite (`#page=N&search=…`).
+- Startseite: Volltextsuche mit Trefferpanel (Ausschnitt, Markierung, Tastatursteuerung),
+  Inhaltsverzeichnis je Karte, Lernstand über `localStorage`, „Weiterlesen“, alle PDFs als ZIP.
+- `suche.html`: alle Treffer mit Filter Skripte/Zusatzmaterial und Suchtipps; Symbolsuche
+  (`lambda` → λ) mit Hinweis, wenn ein Zeichen auf fast jeder Seite steht.
+- Tests: `build/test_pages.py` (Index, Links, ZIP) und `build/test_suche.js` (Ranking, Markierung,
+  Phrasen) – 23 Prüfungen. Der Pages-Workflow testet vor dem Deploy; Trigger um `build/web/**` ergänzt.
+- Quellen der Seite liegen unter `build/web/`; `_site/` ist in `.gitignore`.

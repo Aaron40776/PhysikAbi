@@ -7,6 +7,7 @@ on:
       - "Physik_Vorabi_2026/03_Lernskripte/**"
       - "Physik_Vorabi_2026/04_Zusatzmaterial/**"
       - "Physik_Vorabi_2026/build/make_pages.py"
+      - "Physik_Vorabi_2026/build/web/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -29,6 +30,8 @@ jobs:
           python-version: "3.12"
       - name: PyMuPDF installieren
         run: pip install --quiet pymupdf
+      - name: Index, Links und Suche testen
+        run: python Physik_Vorabi_2026/build/test_pages.py
       - name: Übersicht und PDFs sammeln
         run: python Physik_Vorabi_2026/build/make_pages.py --out _site
       - uses: actions/upload-pages-artifact@v3

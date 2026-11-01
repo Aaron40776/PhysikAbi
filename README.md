@@ -7,6 +7,11 @@ Lernfahrplan und Lernzettel.
 
 ### [→ Skripte online lesen](https://aaron40776.github.io/PhysikAbi/)
 
+Die Seite hat eine Volltextsuche über alle 103 Seiten: Fundstellen werden als Ausschnitt mit
+markiertem Suchwort angezeigt und führen in eine Textansicht, die die Stelle gelb hervorhebt
+und Treffer mit `n`/`p` durchblättert. Dazu Inhaltsverzeichnis je Dokument, Lernstand
+(„gelesen“), zuletzt gelesene Stelle und alle PDFs als ZIP zum Mitnehmen.
+
 ## Inhalt
 
 | Ordner | Was drin ist |
@@ -36,6 +41,19 @@ cd Physik_Vorabi_2026/build
 ./build_all.sh      # baut alle 16 PDFs nach 03_Lernskripte/ und 04_Zusatzmaterial/
 python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
 ```
+
+Website (Übersicht, Volltextindex, Lesetext):
+
+```bash
+cd Physik_Vorabi_2026
+python3 build/make_pages.py --out _site   # braucht pymupdf
+python3 build/test_pages.py               # prüft Index, Links und Suchlogik (node)
+```
+
+Die Quellen der Seite liegen unter `build/web/`: `index.html`, `lesen.html`, `suche.html`,
+`style.css`, `suche.js` (Index, Bewertung, Ausschnitte), `index.js`, `lesen.js`,
+`suche-seite.js`. `make_pages.py` extrahiert den Text aus den PDFs zu `_site/suche.json`
+(≈190 kB) und kopiert die PDFs sowie ein ZIP.
 
 Die Seite unter `aaron40776.github.io/PhysikAbi` wird bei jedem Push auf `main` automatisch aus
 den PDFs neu gebaut (`.github/workflows/pages.yml`, `build/make_pages.py`).

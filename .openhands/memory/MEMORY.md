@@ -23,12 +23,22 @@
 - `PROGRESS.md` wird nur ergänzt (Nachtrag mit Datum), nicht rückwirkend umgeschrieben.
 
 ## Website (GitHub Pages)
-- Pages läuft als **Workflow** (`.github/workflows/pages.yml`), Quelle main, Trigger: Änderungen an
-  `03_Lernskripte/**`, `04_Zusatzmaterial/**`, `build/make_pages.py`.
-- `build/make_pages.py` erzeugt `_site/index.html`; Titel/Kurztext je PDF aus dem dict
-  `BESCHREIBUNG` (fehlender Schlüssel → Dateiname). Kopfzahlen über `__ANZAHL__`/`__GESAMT__`.
-- Lokal testen: `python3 make_pages.py --out /tmp/site`.
-- Neues PDF = Karte erscheint automatisch; nur Kurztext im dict ergänzen.
+- Pages läuft als **Workflow** (`.github/workflows/pages.yml`), Trigger u. a. `build/web/**`; testet
+  vor dem Deploy. `_site/` ist ignoriert.
+- Bauen: `cd Physik_Vorabi_2026 && python3 build/make_pages.py --out _site` (pymupdf);
+  testen: `python3 build/test_pages.py` (baut temporär, prüft Index/Links/ZIP und ruft
+  `node build/test_suche.js` für Ranking/Markierung/Phrasen).
+- Quellen: `build/web/{index,lesen,suche}.html`, `style.css`, `suche.js` (Normalisierung, Bewertung,
+  Ausschnitte, Panel), `index.js` (Lernstand, Weiterlesen), `lesen.js` (Textansicht),
+  `suche-seite.js`. `make_pages.py` erzeugt `suche.json` (~185 kB) + ZIP.
+- Index: Text je Seite blockweise; Kopf-/Fußzeilen und `\xad`-Trennungen entfernt; NFKC macht
+  𝜆→λ und ℎ→h. Deckblatt und gedrucktes Inhaltsverzeichnis stehen in `doc.leer` (nicht durchsucht,
+  im Leser ausgeblendet).
+- Ranking: exakte Abschnittsüberschrift +8 (nur Einzelblock), Fließtext +2, Formelbruchstück −3,
+  Titel/Kurztext +4 je Begriff, Dokumentname exakt +12 (auch auf Gruppen-Max).
+- Assets tragen `?v=<Hash aus JSON+JS+CSS>`; ohne Änderung des Hashs cacht der Browser alte JS-Dateien.
+- Neues PDF = Karte erscheint automatisch; Kurztext in `BESCHREIBUNG` ergänzen. Kopfzahlen über
+  `__ANZAHL__`/`__GESAMT__`.
 
 ## Fallen (teuer gelernt)
 - Typst 0.15.1 kennt **kein** `planck.reduce`/`hbar` → `h\/(2 pi)` schreiben.
