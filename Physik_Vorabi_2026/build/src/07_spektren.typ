@@ -271,6 +271,46 @@ die Anregungsenergie erreichen, in Richtung Gitter – die Leuchtschicht wandert
   Photonen werden *ganz* absorbiert, Elektronen geben *nur den Quantenbetrag* ab.
 ]
 
+= Herleitungen im Zusammenhang
+
+#herleitung[*Von den Bohr-Niveaus zur Rydberg-Formel*]
+  Ausgangspunkt sind die quantisierten Energien $E_n = -13","6 "eV" \/ n^2$. Für einen Übergang
+  $n -> m$ mit $n > m$ gilt
+  $ Delta E = E_n - E_m = 13","6 "eV" (1/m^2 - 1/n^2) $.
+  Mit $Delta E = h c \/ lambda$ folgt
+  $ 1/lambda = (13","6 "eV")/(h c) (1/m^2 - 1/n^2) = R (1/m^2 - 1/n^2) $,
+  wobei $R = 13","6 "eV" \/ (h c) = 13","6 \/ (1240 "eV nm") approx 1","097 dot 10^7 "m"^(-1)$ ist.
+  *Bedeutung:* Die Rydberg-Konstante ist keine unabhängige Messgröße, sondern aus $h$, $c$ und der
+  Ionisierungsenergie berechenbar – ein starkes Argument für das Bohr-Modell.
+
+#herleitung[*Kurzwellige Grenze des Bremsspektrums*]
+  Ein Elektron der Ladung $e$ wird mit der Spannung $U_B$ beschleunigt und besitzt danach die
+  kinetische Energie $E_"kin" = e U_B$. Gibt es diese Energie vollständig an ein einziges Photon ab,
+  so gilt
+  $ e U_B = h f_max = h c/lambda_min quad => quad lambda_min = (h c)/(e U_B) $.
+  *Gültigkeit:* Diese Grenze ist unabhängig vom Targetmaterial, weil sie nur von der
+  Elektronenenergie abhängt. Sie wird nie unterschritten; größere Wellenlängen entstehen, wenn nur
+  ein Teil der Energie übertragen wird.
+
+#herleitung[*Periodizität der Franck-Hertz-Kurve*]
+  Ein Elektron durchläuft die Beschleunigungsstrecke und gewinnt dabei ständig Energie. Erreicht es
+  die Anregungsenergie $Delta E$, kann es bei einem Stoß genau $Delta E$ abgeben und beginnt danach
+  wieder bei (nahezu) null. Damit es ein zweites Mal anregen kann, muss es erneut auf $Delta E$
+  beschleunigt werden. Für $k$ Anregungen ist daher
+  $ e U_k = k dot Delta E + e U_"Kontakt" quad => quad U_k = k dot (Delta E)/e + U_"Kontakt" $.
+  Der Abstand benachbarter Maxima ist $Delta U = Delta E \/ e$ – unabhängig von der
+  Kontaktspannung. *Gültigkeit:* mittlere freie Weglänge groß gegen die Beschleunigungsstrecke,
+  keine Mehrfachstöße innerhalb einer freien Weglänge.
+
+#herleitung[*Wellenlänge einer Spektrallinie aus einem Niveauschema*]
+  Gegeben seien zwei Niveaus mit den Energien $E_a$ (oben) und $E_b$ (unten). Die Energiedifferenz
+  wird als ein Photon abgegeben:
+  $ h f = E_a - E_b quad => quad lambda = (h c)/(E_a - E_b) $.
+  Praktisch rechnet man mit $h c = 1240$ eV nm, sodass
+  $ lambda/["nm"] = 1240 \/ ((E_a - E_b)/["eV"]) $.
+  *Kontrolle:* Die Summe der Teilenergien muss die Gesamtdifferenz ergeben, z. B.
+  $Delta E_(3->1) = Delta E_(3->2) + Delta E_(2->1)$.
+
 = Experimente
 
 == Experiment: Franck-Hertz mit Neon (Auswertung)

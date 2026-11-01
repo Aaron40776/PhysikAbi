@@ -401,7 +401,7 @@ Vergleich braucht eine klassische, langsame Kommunikation.
 #table(
   columns: (1fr, 1fr, 1fr),
   [Experiment], [Beobachtung], [Aussage],
-  [MZI ohne Detektor], [Interferenz, Dunkelheit möglich], [Amplitudenadddition],
+  [MZI ohne Detektor], [Interferenz, Dunkelheit möglich], [Amplitudenaddition],
   [MZI mit Welcher-Weg], [je 50 %], [Komplementarität],
   [Delayed Choice], [Ergebnis folgt der Präparation], [keine vorab festgelegte Bahn],
   [Quanten-Bomben-Test], [Wechselwirkungsfreier Nachweis], [Anwendung der Komplementarität],

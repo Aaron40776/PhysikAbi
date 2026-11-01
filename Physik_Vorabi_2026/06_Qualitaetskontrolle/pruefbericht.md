@@ -25,14 +25,14 @@ Für jede PDF wurden geprüft:
 | 04_Doppelspalt_und_Quantenphysik | 11 | 27 491 | 611 | keine | keiner |
 | 05_MZI_Welcher_Weg_Delayed_Choice_QED | 9 | 27 642 | 239 | keine | keiner |
 | 06_Atommodelle_und_Orbitalmodell | 11 | 24 895 | 440 | keine | keiner |
-| 07_Spektren_und_Franck_Hertz | 10 | 26 412 | 400 | keine | keiner |
+| 07_Spektren_und_Franck_Hertz | 11 | 28 778 | 400 | keine | keiner |
 | Formelblatt | 5 | 7 604 | 171 | keine | keiner |
 | Experimentesammlung | 5 | 15 275 | 44 | keine | keiner |
 | Gesamtuebersicht | 5 | 7 857 | 424 | keine | keiner |
 | Abitur_Analyse | 5 | 9 080 | 76 | keine | keiner |
 | Last_Minute_Lernzettel | 4 | 6 135 | 56 | keine | keiner |
 
-**Summe: 99 Seiten** über 12 Dokumente.
+**Summe: 100 Seiten** über 12 Dokumente.
 
 ## Gefundene und behobene Fehler
 
