@@ -53,7 +53,7 @@
   Titel/Kurztext +4 je Begriff, Dokumentname exakt +12 (auch auf Gruppen-Max).
 - Assets tragen `?v=<Hash aus JSON+JS+CSS>`; ohne Änderung des Hashs cacht der Browser alte JS-Dateien.
 - Neues PDF = Karte erscheint automatisch; Kurztext in `BESCHREIBUNG` ergänzen. Kopfzahlen über
-  `__ANZAHL__`/`__GESAMT__`. Stand: 17 PDFs, 109 Seiten. `test_pages.py`/`test_suche.js`
+  `__ANZAHL__`/`__GESAMT__`. Stand: 17 PDFs, 110 Seiten. `test_pages.py`/`test_suche.js`
   enthalten die Seitenzahl hart (SEITEN, `idx.docs.length`), bei neuen PDFs mitziehen.
 
 ## Figuren

@@ -14,7 +14,7 @@ DATEIEN = ("index.html", "suche.html", "glossar.html", "lesen.html", "suche.json
            "pdfjs/web/viewer.html", "pdfjs/web/viewer.js", "pdfjs/web/viewer.css",
            "pdfjs/web/locale/de/viewer.properties", "pdfjs/web/locale/locale.properties",
            "pdfjs/build/pdf.js", "pdfjs/build/pdf.worker.js", "pdfjs/LICENSE")
-SEITEN = 109
+SEITEN = 110
 
 pruefungen = []
 
@@ -50,7 +50,7 @@ def main():
         docs, seiten = daten["docs"], daten["seiten"]
 
         pruefe("17 Dokumente", len(docs) == 17, len(docs))
-        pruefe("Seitenzahl 109", sum(d["n"] for d in docs) == SEITEN,
+        pruefe("Seitenzahl 110", sum(d["n"] for d in docs) == SEITEN,
                sum(d["n"] for d in docs))
         pruefe("Seitenlisten vollständig", all(len(seiten[i]) == d["n"] for i, d in enumerate(docs)))
         pruefe("Blöcke vorhanden", all(any(s) for s in seiten))

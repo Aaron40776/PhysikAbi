@@ -103,8 +103,10 @@ Energie, weil ein Teil als Wärme abgegeben wird (Stokes-Verschiebung).
   *Aufbau.* Evakuierte Röhre mit Hg-Dampf (oder Ne), Glühkathode, beschleunigende Gitter-
   spannung $U$, Gegenfeld $U_G$ zwischen Gitter und Auffänger, Amperemeter. \
   *Durchführung.* $U$ von 0 auf 30 V erhöhen, Strom $I$ messen. \
-  *Beobachtung.* $I$ steigt, fällt bei etwa 4,9 V, 9,8 V, 14,7 V … wieder ab (Periodizität
-  $Delta U approx 4","9$ V); bei Ne leuchtet das Gas in einer orangeroten Schicht. \
+  *Beobachtung.* Im idealisierten Modell fällt $I$ bei 4,9 V, 9,8 V, 14,7 V … wieder ab
+  (Periodizität $Delta U approx 4","9$ V); im realen Versuch verschiebt die Kontaktspannung
+  die Minima auf 10,4 V, 15,3 V, 20,2 V … – der Abstand bleibt 4,9 V. Bei Ne leuchtet das Gas
+  in einer orangeroten Schicht. \
   *Erklärung.* Elektronen geben bei Stößen genau $Delta E = e dot 4","9$ V an Hg-Atome ab; ihre
   Restenergie reicht nicht mehr über das Gegenfeld. Nach dem Stoß beginnt die Beschleunigung
   erneut – daher die Periodizität. \
@@ -113,11 +115,13 @@ Energie, weil ein Teil als Wärme abgegeben wird (Stokes-Verschiebung).
 
 #figure(
   image("../fig/franckhertz.svg", width: 86%),
-  caption: [Franck-Hertz-Kurve: Der Abstand der Minima ist die Anregungsspannung
-    $Delta U approx 4","9$ V.],
+  caption: [Franck-Hertz-Kurve (idealisiert, ohne Kontaktspannung): Der Abstand der Minima ist
+    die Anregungsspannung $Delta U approx 4","9$ V.],
 )
 
-Die Minima liegen bei 4,9 V, 9,8 V und 14,7 V; der konstante Abstand ist der Beweis, dass die Atome nur feste Energiebeträge aufnehmen.
+Im idealisierten Modell liegen die Minima bei 4,9 V, 9,8 V und 14,7 V; mit der Kontaktspannung
+$U_"K" approx 5","5$ V erscheinen sie bei 10,4 V, 15,3 V und 20,2 V. Der konstante Abstand ist
+der Beweis, dass die Atome nur feste Energiebeträge aufnehmen.
 
 #herleitung[
   *Anregungsenergie und Emissionswellenlänge* \

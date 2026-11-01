@@ -21,7 +21,7 @@ Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 | `04_Doppelspalt_und_Quantenphysik.pdf` | Einzelquanten, Amplituden, Komplementarität, Unbestimmtheit, Wellenfunktion | 6 |
 | `05_MZI_Welcher_Weg_Delayed_Choice_QED.pdf` | Mach-Zehnder, Welcher-Weg, Delayed Choice, Verschränkung, QED | 6 |
 | `06_Atommodelle_und_Orbitalmodell.pdf` | Rutherford, Bohr, Potenzialtopf, Orbitale | 7 |
-| `07_Spektren_und_Franck_Hertz.pdf` | Spektren, Röntgen, Resonanzabsorption, Franck-Hertz | 6 |
+| `07_Spektren_und_Franck_Hertz.pdf` | Spektren, Röntgen, Resonanzabsorption, Franck-Hertz | 7 |
 
 **10 Zusatzdokumente** (`04_Zusatzmaterial/`): Gesamtübersicht (5 S.), Formelblatt (5 S.),
 Experimentesammlung (5 S.), Abitur-Analyse (5 S.), Last-Minute-Lernzettel (4 S.),
@@ -33,7 +33,7 @@ Formeln mit echten Bruchstrichen (statt Schrägstrich), Herleitungen als nummeri
 Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Grafiken mit
 Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
 
-Umfang (01.11.): **7 Skripte 49 Seiten**, gesamt **109 Seiten**, 21.232 Wörter
+Umfang (01.11.): **7 Skripte 50 Seiten**, gesamt **110 Seiten**, 21.279 Wörter
 (vor der Straffung 121 Seiten). Darin enthalten ist das 7-seitige Trainingsheft
 zur Diagrammauswertung.
 

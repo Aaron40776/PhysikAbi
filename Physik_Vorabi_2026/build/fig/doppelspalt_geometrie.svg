@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-01T20:21:31.320256</dc:date>
+    <dc:date>2026-11-01T20:33:51.412947</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -34,32 +34,32 @@ z
     <path d="M 121.064348 108.32256 
 C 121.064348 106.493777 120.926854 104.666208 120.652414 102.847129 
 C 120.377973 101.028049 119.966951 99.219875 119.420983 97.429803 
-" clip-path="url(#p44fd70a074)" style="fill: none; stroke: #0b7285; stroke-linejoin: miter"/>
+" clip-path="url(#p6a2f752d4e)" style="fill: none; stroke: #0b7285; stroke-linejoin: miter"/>
    </g>
    <g id="line2d_1">
     <path d="M 43.429565 182.83392 
 L 43.429565 136.70784 
-" clip-path="url(#p44fd70a074)" style="fill: none; stroke: #333333; stroke-width: 2.4"/>
+" clip-path="url(#p6a2f752d4e)" style="fill: none; stroke: #333333; stroke-width: 2.4"/>
    </g>
    <g id="line2d_2">
     <path d="M 43.429565 129.61152 
 L 43.429565 111.87072 
-" clip-path="url(#p44fd70a074)" style="fill: none; stroke: #333333; stroke-width: 2.4"/>
+" clip-path="url(#p6a2f752d4e)" style="fill: none; stroke: #333333; stroke-width: 2.4"/>
    </g>
    <g id="line2d_3">
     <path d="M 43.429565 104.7744 
 L 43.429565 58.64832 
-" clip-path="url(#p44fd70a074)" style="fill: none; stroke: #333333; stroke-width: 2.4"/>
+" clip-path="url(#p6a2f752d4e)" style="fill: none; stroke: #333333; stroke-width: 2.4"/>
    </g>
    <g id="line2d_4">
     <path d="M 328.090435 177.51168 
 L 328.090435 14.29632 
-" clip-path="url(#p44fd70a074)" style="fill: none; stroke: #1f3864; stroke-width: 3; stroke-linecap: square"/>
+" clip-path="url(#p6a2f752d4e)" style="fill: none; stroke: #1f3864; stroke-width: 3; stroke-linecap: square"/>
    </g>
    <g id="line2d_5">
     <path d="M 43.429565 120.74112 
 L 328.090435 120.74112 
-" clip-path="url(#p44fd70a074)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #666666; stroke-width: 0.8"/>
+" clip-path="url(#p6a2f752d4e)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #666666; stroke-width: 0.8"/>
    </g>
    <g id="text_1">
     <!-- Doppelspalt -->
@@ -742,7 +742,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p44fd70a074">
+  <clipPath id="p6a2f752d4e">
    <rect x="7.2" y="7.2" width="357.12" height="177.408"/>
   </clipPath>
  </defs>

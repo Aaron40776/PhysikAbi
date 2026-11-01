@@ -1,8 +1,8 @@
 # Prüfbericht – inhaltliche Kontrolle
 
 Datum: 01.11.2026 · Prüfer: systematische Dokumentprüfung (Quelltext + PDF)
-Gegenstand: 7 Lernskripte, 9 Zusatzdokumente, Projektverwaltung (`00_…`), Abiturrecherche (`02_…`)
-Aktueller Nachtrag (01.11.2026): 10 Zusatzdokumente, 17 PDFs, 109 Seiten, 104 Glossarbegriffe;
+Gegenstand: 7 Lernskripte, 10 Zusatzdokumente, Projektverwaltung (`00_…`), Abiturrecherche (`02_…`)
+Aktueller Nachtrag (01.11.2026): 10 Zusatzdokumente, 17 PDFs, 110 Seiten, 104 Glossarbegriffe;
 Abbildungen, Glossar und Darkmode in **Abschnitt 15**.
 Werkzeuge: Typst 0.13.1 (Build), PyMuPDF 2.0 (Text-/Layout-/Pfadanalyse), `build/qa_pdf.py`
 
@@ -1095,10 +1095,10 @@ visuell-ästhetisch.
 | Prüfung | Ergebnis |
 |---|---|
 | `./build_all.sh` | „alle gebaut“, 17 PDFs |
-| `qa_pdf.py` | 109 Seiten, 21.232 Wörter, 0 Textüberläufe, 0 Formelreste |
+| `qa_pdf.py` | 110 Seiten, 21.279 Wörter, 0 Textüberläufe, 0 Formelreste |
 | `check_figs.py` | 9 Hinweise „Text außerhalb“, 0 Überlappungen |
 | `check_physics.py` | 14/14 Prüfungen (Konstanten, Photoeffekt, Compton, Rydberg, Doppelspalt, MZI, Potenzialtopf) |
-| `test_pages.py` | 48/48 Prüfungen (17 Dokumente, 109 Seiten, Textansicht, Glossar, Theme, Suche, ZIP) |
+| `test_pages.py` | 48/48 Prüfungen (17 Dokumente, 110 Seiten, Textansicht, Glossar, Theme, Suche, ZIP) |
 | `node test_suche.js` | 18/18 Prüfungen |
 | Glossar-PDF | 104 Einträge, 5 Seiten, keine ungerenderten Zeichen (`$`, `\`, `#`, `[]{}`) |
 

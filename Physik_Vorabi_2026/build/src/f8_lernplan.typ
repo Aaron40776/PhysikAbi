@@ -6,7 +6,7 @@
 #cover(
   "Zusatzmaterial · Planung",
   "Lernfahrplan bis Freitag",
-  "105 Seiten sind ein Nachschlagewerk. Auswendig zu lernen sind etwa acht.",
+  "110 Seiten sind ein Nachschlagewerk. Auswendig zu lernen sind etwa acht.",
   lernziele: (
     "wissen, welche Seiten Erklärung sind und welche Lernstoff",
     "in vier Tagen das Wichtige zuerst bearbeiten",
@@ -30,7 +30,7 @@
   [Last-Minute-Lernzettel], [4 S.], [*Lernstoff – der Kern*],
 )
 
-Von den insgesamt etwa 19.000 Wörtern sind rund *3.000 Wörter tatsächlicher Lernstoff*
+Von den insgesamt etwa 21.000 Wörtern sind rund *3.000 Wörter tatsächlicher Lernstoff*
 (Formelblatt und Lernzettel zusammen). Alles andere ist Erklärung: Text, den man liest, wenn
 etwas unklar ist – und dann wieder zumacht.
 
@@ -49,9 +49,9 @@ etwas unklar ist – und dann wieder zumacht.
   [2 Lichtquanten], [6 S.], [8 Typische Fehler, 9 Wiederholung],
   [3 Elektronenwellen], [7 S.], [8 Typische Fehler, 9 Wiederholung],
   [4 Doppelspalt/Quanten], [6 S.], [7 Typische Fehler, 8 Wiederholung],
-  [5 MZI/QED], [7 S.], [8 Typische Fehler, 9 Wiederholung],
+  [5 MZI/QED], [6 S.], [8 Typische Fehler, 9 Wiederholung],
   [6 Atommodelle], [7 S.], [7 Typische Fehler, 8 Wiederholung],
-  [7 Spektren/Franck-Hertz], [6 S.], [7 Typische Fehler, 8 Wiederholung],
+  [7 Spektren/Franck-Hertz], [7 S.], [7 Typische Fehler, 8 Wiederholung],
 )
 
 Die Abschnittsnummern stehen am linken Rand jeder Überschrift. Wer wenig Zeit hat, liest zuerst
@@ -81,7 +81,7 @@ Heute ist Sonntag, der 1. November; die Prüfung ist Freitag, der 6. November.
 
 #achtung[
   *Die Aufgaben sind wichtiger als die Skripte.* Wer 20 Aufgaben gerechnet hat, kann die
-  Prüfung; wer 50 Seiten gelesen hat, vielleicht. Wenn die Zeit knapp wird: Skripte nur als
+  Prüfung; wer die 50 Skriptseiten gelesen hat, vielleicht. Wenn die Zeit knapp wird: Skripte nur als
   Nachschlagewerk benutzen, wenn eine Aufgabe hakt.
 ]
 
@@ -106,7 +106,7 @@ Heute ist Sonntag, der 1. November; die Prüfung ist Freitag, der 6. November.
   [$Delta p_x Delta x >= h\/(4 pi)$], [was „Unbestimmtheit“ nicht bedeutet],
   [Bohr: $E_n = -13","6 "eV"\/n^2$], [warum das Modell nur für Wasserstoff taugt],
   [Energieübergang $Delta E = h c \/ lambda$], [warum Spektren diskret sind],
-  [Franck-Hertz: $Delta U$ aus dem Maximumabstand], [warum die Kontaktspannung abgezogen wird],
+  [Franck-Hertz: $Delta U$ aus dem Minimumabstand], [warum die Kontaktspannung den Achsenabschnitt verschiebt],
 )
 
 #quelle[

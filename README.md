@@ -1,13 +1,13 @@
 # PhysikAbi
 
 Lernskripte für das Abitur im Fach Physik, Niedersachsen, erhöhtes Anforderungsniveau
-(Vorabitur 2026, Abitur 2027). **17 PDFs, 109 Seiten**: sieben Themenskripte, zwei Übungshefte (20 Aufgaben,
+(Vorabitur 2026, Abitur 2027). **17 PDFs, 110 Seiten**: sieben Themenskripte, zwei Übungshefte (20 Aufgaben,
 Diagrammauswertung), Formelblatt, Experimentesammlung, Abitur-Analyse, Gesamtübersicht,
 Regression, Lernfahrplan, Lernzettel und Glossar.
 
 ### [→ Skripte online lesen](https://aaron40776.github.io/PhysikAbi/)
 
-Die Seite hat eine Volltextsuche über alle 109 Seiten: Fundstellen werden als Ausschnitt mit
+Die Seite hat eine Volltextsuche über alle 110 Seiten: Fundstellen werden als Ausschnitt mit
 markiertem Suchwort angezeigt. Ein Klick öffnet die **echte PDF** im eingebauten PDF.js-Viewer
 an der richtigen Seite und markiert das Suchwort auch dort. Dazu Inhaltsverzeichnis je Dokument
 (springt direkt in die PDF-Seite), eine Textansicht mit Blättern und „Weiterlesen“, Lernstand
