@@ -41,6 +41,8 @@ def lint(path):
             problems.append(f"{path}:{number}: '{{,}}' statt Komma")
         if FREMD.search(raw):
             problems.append(f"{path}:{number}: fremdes Schriftsystem")
+        if "Strommaxima" in raw:
+            problems.append(f"{path}:{number}: Franck-Hertz hat Stromminima, nicht Strommaxima")
     return problems
 
 

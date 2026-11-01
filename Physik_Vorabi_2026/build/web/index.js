@@ -55,6 +55,18 @@
     lernstandZeichnen();
   });
 
+  var weiter = lies("physik.weiter", {});
+  karten.forEach(function (karte) {
+    var link = karte.querySelector(".weiter");
+    var stand = weiter[karte.getAttribute("data-doc")];
+    if (link && stand && stand.seite > 1) {
+      link.href = "lesen.html?doc=" + encodeURIComponent(karte.getAttribute("data-doc")) +
+        "&seite=" + stand.seite;
+      link.textContent = "Weiterlesen (S. " + stand.seite + ")";
+      link.hidden = false;
+    }
+  });
+
   lernstandZeichnen();
   PhysikSuche.panel({ input: "q", panel: "panel", zaehler: "treffer" });
 

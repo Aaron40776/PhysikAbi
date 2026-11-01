@@ -66,6 +66,12 @@
 
 ## Fallen (teuer gelernt)
 - Typst 0.15.1 kennt **kein** `planck.reduce`/`hbar` → `h\/(2 pi)` schreiben.
+- Franck-Hertz: Es sind **Stromminima** (Einbrüche), nicht Maxima. `check_sources.py` meldet
+  „Strommaxima“; Formelblatt/Last-Minute/Übung 18 waren falsch und sind korrigiert.
+- Figuren-Fallen: `np.sinc(u/np.pi)**2` statt `sin(u)/where(u==0,...)` (Mitte sonst 0);
+  `argmax` auf gefiltertem Array nicht mit dem Original indexieren; Regressionssteigung
+  bei x in `10^14 Hz` ist ~0,41, nicht `m*1e14`.
+- `check_physics.py` prüft 14 Konstanten/Formeln (pint/sympy).
 - Regex-Lookbehind wirkt nicht auf `s[i:]`-Slices (Lookbehind sieht Stringanfang) →
   `pattern.match(s, i)` benutzen, sonst werden `\lambda` verdoppelt.
 - `01_Schulwebsite/materialien/**` ist ein 1:1-Spiegel der Schulhomepage: **nie** per sed

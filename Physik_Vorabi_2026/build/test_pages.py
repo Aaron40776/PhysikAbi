@@ -7,9 +7,10 @@ import json, pathlib, re, shutil, subprocess, sys, tempfile, zipfile
 
 BUILD = pathlib.Path(__file__).resolve().parent
 ROOT = BUILD.parent
-DATEIEN = ("index.html", "suche.html", "glossar.html", "suche.json", "physik-vorabi-2026.zip",
+DATEIEN = ("index.html", "suche.html", "glossar.html", "lesen.html", "suche.json",
+           "physik-vorabi-2026.zip",
            "assets/style.css", "assets/suche.js", "assets/index.js", "assets/suche-seite.js",
-           "assets/theme.js", "assets/glossar.js",
+           "assets/theme.js", "assets/glossar.js", "assets/lesen.js",
            "pdfjs/web/viewer.html", "pdfjs/web/viewer.js", "pdfjs/web/viewer.css",
            "pdfjs/web/locale/de/viewer.properties", "pdfjs/web/locale/locale.properties",
            "pdfjs/build/pdf.js", "pdfjs/build/pdf.worker.js", "pdfjs/LICENSE")
@@ -41,7 +42,8 @@ def main():
         index_html = (ziel / "index.html").read_text(encoding="utf-8")
         suche_html = (ziel / "suche.html").read_text(encoding="utf-8")
         glossar_html = (ziel / "glossar.html").read_text(encoding="utf-8")
-        reste = re.findall(r"__[A-Z_]+__", index_html + suche_html + glossar_html)
+        lesen_html = (ziel / "lesen.html").read_text(encoding="utf-8")
+        reste = re.findall(r"__[A-Z_]+__", index_html + suche_html + glossar_html + lesen_html)
         pruefe("keine Platzhalter im HTML", not reste, reste)
 
         daten = json.loads((ziel / "suche.json").read_text(encoding="utf-8"))
@@ -66,8 +68,14 @@ def main():
         pruefe("Karte, PDF-Link und PDF je Dokument", not fehlende_karten, fehlende_karten)
         pruefe("Inhaltsverzeichnis springt in die PDF-Seite",
                '#page=3' in index_html and 'pagemode=none' in index_html)
-        pruefe("keine Textansicht mehr verlinkt",
-               "lesen.html" not in index_html + suche_html + glossar_html)
+        pruefe("Textansicht je Dokument verlinkt",
+               all(f'lesen.html?doc={d["id"]}&seite=1' in index_html for d in docs))
+        pruefe("Textansicht lädt den Seitenindex",
+               "suche.json" in (ziel / "assets" / "lesen.js").read_text(encoding="utf-8"))
+        pruefe("Weiterlesen verbindet Lesen und Startseite",
+               index_html.count('class="weiter"') == len(docs)
+               and "physik.weiter" in (ziel / "assets" / "lesen.js").read_text(encoding="utf-8")
+               and "physik.weiter" in (ziel / "assets" / "index.js").read_text(encoding="utf-8"))
 
         with zipfile.ZipFile(ziel / "physik-vorabi-2026.zip") as z:
             namen = z.namelist()
@@ -94,7 +102,8 @@ def main():
         pruefe("deutsche Oberfläche vollständig", not fehlend, sorted(fehlend))
 
         pruefe("Safe-Area im Viewport",
-               all('viewport-fit=cover' in h for h in (index_html, suche_html, glossar_html)))
+               all('viewport-fit=cover' in h
+                   for h in (index_html, suche_html, glossar_html, lesen_html)))
         pruefe("Glossar verlinkt", 'glossar.html' in index_html + suche_html + glossar_html)
         pruefe("104 Glossarbegriffe", glossar_html.count('class="glossar-eintrag"') == 104,
                glossar_html.count('class="glossar-eintrag"'))
@@ -104,10 +113,10 @@ def main():
                "glossar-filter" in glossar_html and "glossar.js" in glossar_html)
         pruefe("Design-Umschalter auf allen Seiten",
                all('id="thema"' in h and "assets/theme.js" in h
-                   for h in (index_html, suche_html, glossar_html)))
+                   for h in (index_html, suche_html, glossar_html, lesen_html)))
         pruefe("Theme vor dem Stylesheet", all(
             h.index("assets/theme.js") < h.index("assets/style.css")
-            for h in (index_html, suche_html, glossar_html)))
+            for h in (index_html, suche_html, glossar_html, lesen_html)))
 
         node = shutil.which("node")
         if node:

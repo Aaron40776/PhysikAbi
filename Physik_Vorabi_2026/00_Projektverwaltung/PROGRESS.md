@@ -413,3 +413,34 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   Bounding-Boxes sowie über ihre Konstruktionsdaten geprüft. Ein Bildbetrachter, der das
   Bild in den Modellkontext einspielt, steht nicht zur Verfügung; die Prüfung ist daher
   programmatisch, nicht visuell-ästhetisch.
+
+## Nachtrag 22 (01.11.2026) – Inhaltsprüfung, Figurenfehler und Textansicht
+
+- **Franck-Hertz-Inhaltsfehler gefunden und behoben:** Formelblatt (`f1_formelblatt.typ:155`),
+  Last-Minute-Lernzettel (`f4_lastminute.typ:72`) und Übungsaufgabe 18 (`f6_uebungen.typ:287-294`)
+  sprachen von „Strommaxima“ bzw. „Abstand der Maxima“. Die Franck-Hertz-Kurve hat Minima; der
+  Lösungsteil sagte bereits „bis zum nächsten Einbruch“. Jetzt überall „Minima“.
+- **Formelprüfung erweitert:** `check_physics.py` prüft jetzt 14 statt 8 Punkte, u. a.
+  E(600 nm), K_max(400 nm, 2,2 eV), Compton-Δλ(90°), Rydberg 3→2, Doppelspalt-Geometrie und
+  MZI-Wahrscheinlichkeit. Alle Werte stimmen mit den gedruckten Zahlen überein.
+  `check_sources.py` meldet künftig „Strommaxima“ als Fehler.
+- **Vier weitere Figurenfehler behoben:**
+  `doppelspalt_intensitaet` zeigte den Δa-Pfeil nach links bis −30 mm (Indexfehler durch
+  `argmax` auf einem gefilterten Array); jetzt 0 → λ·e/g ≈ 4,2 mm.
+  `einzelspalt_doppelspalt` und `unbestimmtheit` setzten die Mitte durch
+  `sin(u)/where(u==0, 1e-12, u)` auf 0 statt 1; jetzt `np.sinc(u/π)²`.
+  `reflexion_brechung` ließ den einfallenden Strahl vom Lot wegzeigen und zeichnete α zwischen
+  Strahl und Grenzfläche; jetzt zeigt der Pfeil zur Grenzfläche, α liegt zwischen Lot und Strahl.
+  `regression` beschriftete die Steigung mit `m·10^14 = 4,14·10^13` statt mit 0,41 V je 10^14 Hz
+  (Text: 4,11·10^-15 V s).
+- **Textansicht neu, aber bewusst schlank:** `lesen.html`/`lesen.js` nutzen den vorhandenen
+  `suche.json`-Auszug, zeigen eine Seite mit Zurück/Weiter, Seitenauswahl, Pfeiltasten und
+  PDF-Link. Kein nachgebautes Inhaltsverzeichnis, keine Suchmarkierung; die PDF bleibt das
+  Original. Auf der Startseite steht zusätzlich „Weiterlesen (S. N)“ aus `localStorage`.
+  Damit ist die frühere Textansicht nicht einfach zurückgeholt, sondern auf Seiten-Navigation
+  und Lesekopie reduziert.
+- **Prüfstand:** 17 PDFs, 109 Seiten, 21.232 Wörter, 0 Textüberläufe, 0 Formelreste;
+  `check_physics.py` 14/14, `test_pages.py` 48/48, `test_suche.js` 18/18;
+  28 SVGs neu gerendert, `check_figs.py` 0 Überlappungen (9 Hinweise „Text außerhalb“).
+- **Zahlen korrigiert:** 00-README nannte Skript 5 mit 7 Seiten und „7 Skripte 50 Seiten“;
+  tatsächlich 6 Seiten und 49 Skriptseiten (Summe bleibt 109).

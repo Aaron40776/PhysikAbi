@@ -284,14 +284,14 @@ Wer diese Verteilung einmal im Kopf hat, erkennt sie in jeder Aufgabe wieder: ä
 == Block F: Spektren und Franck-Hertz
 
 #aufgabe(18, punkte: 14)[
-  Bei einer Franck-Hertz-Röhre mit Quecksilberdampf werden die Strommaxima bei
+  Bei einer Franck-Hertz-Röhre mit Quecksilberdampf werden die Stromminima bei
   $10","4$ V, $15","3$ V, $20","2$ V und $25","1$ V gefunden.
   #enum(
-    [Bestimmen Sie den Abstand der Maxima und die Anregungsenergie.],
+    [Bestimmen Sie den Abstand der Minima und die Anregungsenergie.],
     [Bestimmen Sie die Kontaktspannung.],
     [Berechnen Sie die Wellenlänge des beim Zurückfallen emittierten Photons und ordnen Sie sie
      dem Spektralbereich zu.],
-    [Erklären Sie, warum der Strom nach jedem Maximum wieder ansteigt.],
+    [Erklären Sie, warum der Strom nach jedem Minimum wieder ansteigt.],
   )
 ]
 

@@ -69,7 +69,7 @@
   [Fotozelle], [Ein Photon löst ein Elektron; $E_"kin" = h f - W_A$; Knick bei $U_B$.],
   [Elektronenbeugung], [Elektronen mit $lambda = h\/p$ werden am Graphitgitter gebeugt; Ringe.],
   [MZI / Welcher-Weg], [Ohne Weginfo Interferenz; mit Weginfo je 50 % – Komplementarität.],
-  [Franck-Hertz], [Elektronen geben genau $Delta E$ ab; Strommaxima im Abstand $Delta U = Delta E\/e$.],
+  [Franck-Hertz], [Elektronen geben genau $Delta E$ ab; Stromminima im Abstand $Delta U = Delta E\/e$.],
 )
 
 = Die acht Prüfungsfallen

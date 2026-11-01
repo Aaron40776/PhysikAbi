@@ -152,7 +152,7 @@
   [$E_n = h^2 n^2\/(8 m_e L^2)$], [Potenzialtopf], [unendlich hohe Wände],
   [$E_(n_x n_y n_z) = h^2\/(8 m_e L^2)(n_x^2+n_y^2+n_z^2)$], [3D-Kasten], [Würfel],
   [$N_n = 2 n^2$], [Elektronen pro Schale], [Pauli],
-  [$Delta E = e dot Delta U$], [Franck-Hertz], [Abstand der Maxima],
+  [$Delta E = e dot Delta U$], [Franck-Hertz], [Abstand der Minima],
   [$lambda_min = h c\/(e U_B)$], [Röntgen], [Bremsspektrum],
 )
 

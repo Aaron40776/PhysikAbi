@@ -4,7 +4,7 @@ Systematische Durchsicht des gesamten Projekts: Bestand, Themenabdeckung, Zahlen
 Layout, Abbildungen, Reproduzierbarkeit. Alles hier Genannte wurde geprüft, nicht geschätzt.
 
 > **Nachtrag 01.11.2026:** Aktuell 17 PDFs, 109 Seiten, 104 Glossarbegriffe, Darkmode
-> und korrigierte Abbildungen. Die Zahlen in diesem Review beschreiben den früheren Stand;
+> korrigierte Abbildungen und geprüfte Franck-Hertz-Formeln. Die Zahlen in diesem Review beschreiben den früheren Stand;
 > Einzelheiten in `pruefbericht.md`, Abschnitt 15.
 
 ---

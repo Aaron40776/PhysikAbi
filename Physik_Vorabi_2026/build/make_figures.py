@@ -109,16 +109,17 @@ ax.set_xlabel("Ort auf dem Schirm a in mm")
 ax.set_ylabel("Intensität I / I$_0$")
 ax.set_xlim(-30, 30); ax.set_ylim(0, 1.15)
 ax.grid(alpha=0.25, lw=0.5)
-ax.annotate("", xy=(a[np.argmax(I[a > 0.001])]*1000, 0.55), xytext=(0, 0.55),
+da_mm = lam * e / g * 1e3
+ax.annotate("", xy=(da_mm, 0.55), xytext=(0, 0.55),
             arrowprops=dict(arrowstyle="<->", color=ORANGE, lw=1))
-ax.text(4.5, 0.62, "Δa = λ·e/g", color=ORANGE, fontsize=8.5)
+ax.text(da_mm + 0.6, 0.62, "Δa = λ·e/g", color=ORANGE, fontsize=8.5)
 save(fig, "doppelspalt_intensitaet")
 
 # ---------------------------------------------------------------- 5 Einzelspalt vs. Doppelspalt
 b = 0.05e-3
 alpha = np.arctan(a/e)
 u = np.pi*b*np.sin(alpha)/lam
-I_single = (np.sin(u)/np.where(u == 0, 1e-12, u))**2
+I_single = np.sinc(u/np.pi)**2
 fig, ax = plt.subplots(figsize=(6.2, 2.5))
 ax.plot(a*1000, I_single, color=TEAL, lw=1.2, label="Einzelspalt (b = 50 µm)")
 ax.plot(a*1000, I, color=BLUE, lw=0.9, alpha=0.8, label="Doppelspalt (g = 300 µm, b = 50 µm)")
@@ -136,7 +137,7 @@ for k, ph in enumerate([0, np.pi/4, np.pi/2]):
     ax.plot(x, np.cos(ph)*np.sin(x), color=[BLUE, ORANGE, TEAL][k], lw=1.3, alpha=0.9)
 nodes = np.arange(0, 3*np.pi+0.01, np.pi)
 ax.plot(nodes, np.zeros_like(nodes), "o", color=RED, ms=5)
-ax.text(np.pi, 0.12, "Knoten (Δs = n·λ/2)", color=RED, ha="center", fontsize=8)
+ax.text(np.pi, 0.12, "Knoten (Abstand λ/2)", color=RED, ha="center", fontsize=8)
 ax.annotate("Bauch", xy=(np.pi/2, 1.0), xytext=(np.pi/2-0.1, 1.25),
             arrowprops=dict(arrowstyle="->", color=GREY, lw=0.8), color=GREY, fontsize=8)
 ax.set_xticks([]); ax.set_yticks([-1, 0, 1]); ax.set_xlabel("Ort x")
@@ -405,7 +406,7 @@ fig, axes = plt.subplots(1, 2, figsize=(6.2, 2.2), sharey=True)
 for ax, b_, t in zip(axes, [0.2, 0.5], ["schmaler Spalt", "breiter Spalt"]):
     th = np.linspace(-0.035, 0.035, 2000)
     u = np.pi*b_*th/(550e-9*1e3)
-    I2 = (np.sin(u)/np.where(u == 0, 1e-12, u))**2
+    I2 = np.sinc(u/np.pi)**2
     ax.plot(th*1000, I2, color=BLUE if b_ == 0.2 else TEAL, lw=1.2)
     ax.set_title(t, fontsize=8)
     ax.set_xlabel("Ort auf dem Schirm in mm")
@@ -465,15 +466,16 @@ fig, ax = plt.subplots(figsize=(4.6, 2.8))
 ax.add_patch(Rectangle((-2, -1.4), 4, 1.4, color="#D6EAF8"))
 ax.plot([-2, 2], [0, 0], color="#333333", lw=1.5)
 ax.plot([0, 0], [-1.2, 1.2], color=GREY, lw=0.7, ls="--")
-ax.annotate("", xy=(-1.0, 1.0), xytext=(0, 0), arrowprops=dict(arrowstyle="->", color=BLUE, lw=1.5))
+ax.annotate("", xy=(0, 0), xytext=(-1.0, 1.0), arrowprops=dict(arrowstyle="->", color=BLUE, lw=1.5))
 ax.annotate("", xy=(1.0, 1.0), xytext=(0, 0), arrowprops=dict(arrowstyle="->", color=TEAL, lw=1.5))
 ax.annotate("", xy=(0.6, -1.1), xytext=(0, 0), arrowprops=dict(arrowstyle="->", color=ORANGE, lw=1.5))
-ax.add_patch(Arc((0, 0), 1.0, 1.0, theta1=135, theta2=180, color=GREY, lw=0.7))
-ax.add_patch(Arc((0, 0), 1.0, 1.0, theta1=0, theta2=45, color=GREY, lw=0.7))
-ax.text(-0.55, 0.22, "α", fontsize=8); ax.text(0.2, 0.28, "α", fontsize=8)
-ax.text(0.66, -0.75, "β", fontsize=8)
-ax.text(0.1, 0.62, "n$_1$", fontsize=8, color=BLUE)
-ax.text(0.1, -1.25, "n$_2$ > n$_1$", fontsize=8, color=BLUE)
+ax.add_patch(Arc((0, 0), 1.0, 1.0, theta1=90, theta2=135, color=GREY, lw=0.7))
+ax.add_patch(Arc((0, 0), 1.0, 1.0, theta1=45, theta2=90, color=GREY, lw=0.7))
+ax.add_patch(Arc((0, 0), 1.0, 1.0, theta1=-90, theta2=-61.4, color=GREY, lw=0.7))
+ax.text(-0.30, 0.60, "α", fontsize=8); ax.text(0.24, 0.60, "α", fontsize=8)
+ax.text(0.20, -0.82, "β", fontsize=8)
+ax.text(-1.90, 0.55, "n$_1$", fontsize=8, color=BLUE, ha="left")
+ax.text(-1.90, -1.25, "n$_2$ > n$_1$", fontsize=8, color=BLUE, ha="left")
 ax.set_xlim(-2, 2); ax.set_ylim(-1.4, 1.4); ax.axis("off")
 save(fig, "reflexion_brechung")
 
@@ -492,7 +494,7 @@ ax1.set_xlabel(r"Frequenz $f$ in $10^{14}$ Hz")
 ax1.set_ylabel(r"Gegenspannung $U_B$ in V")
 ax1.set_title("Messreihe und Regression", fontsize=9)
 ax1.legend(fontsize=7, loc="upper left", frameon=False)
-ax1.annotate(f"Steigung {m_*1e14:.2f} V pro $10^{{14}}$ Hz",
+ax1.annotate(f"Steigung {m_:.2f} V je $10^{{14}}$ Hz",
              xy=(5.6, 0.36), xytext=(5.55, 0.95), fontsize=7, color=RED,
              arrowprops=dict(arrowstyle="->", color=RED, lw=0.7))
 ax1.grid(alpha=0.25)

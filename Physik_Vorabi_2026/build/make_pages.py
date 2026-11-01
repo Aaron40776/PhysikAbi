@@ -144,6 +144,10 @@ def dokument(pdf):
     }, seiten
 
 
+def text_url(doc, seite=1):
+    return "lesen.html?doc=" + quote(doc["id"], safe="") + "&seite=" + str(seite)
+
+
 def pdf_url(doc, seite=None, q=None):
     """PDF.js-Viewer: echte PDF, richtige Seite, Suchwort markiert."""
     datei = "pdfjs/web/viewer.html?file=../../" + quote(doc["f"], safe="/")
@@ -172,6 +176,8 @@ def karte(doc):
         </div>
         <div class="aktionen">
           <a href="{pdf_url(doc)}">Im PDF lesen</a>
+          <a href="{text_url(doc)}">Als Text lesen</a>
+          <a class="weiter" href="{text_url(doc)}" hidden>Weiterlesen</a>
           <details class="toc">
             <summary>Inhalt</summary>
             <ol>{toc}{mehr}</ol>
@@ -210,7 +216,8 @@ def main():
     (out / "suche.json").write_text(roh, encoding="utf-8")
     stempel = hashlib.sha256(roh.encode())
     stempel.update(GLOSSAR.read_bytes())
-    for name in ("style.css", "suche.js", "index.js", "suche-seite.js", "theme.js", "glossar.js"):
+    for name in ("style.css", "suche.js", "index.js", "suche-seite.js", "theme.js",
+                 "glossar.js", "lesen.js"):
         stempel.update((WEB / name).read_bytes())
     version = stempel.hexdigest()[:10]
 
@@ -232,7 +239,8 @@ def main():
         "__ZIPMB__": f"{zip_pfad.stat().st_size / 1e6:.1f}".replace(".", ","),
         "__V__": version,
     }
-    for name in ("style.css", "suche.js", "index.js", "suche-seite.js", "theme.js", "glossar.js"):
+    for name in ("style.css", "suche.js", "index.js", "suche-seite.js", "theme.js",
+                 "glossar.js", "lesen.js"):
         shutil.copy2(WEB / name, out / "assets" / name)
 
     if not VENDOR.is_dir():
@@ -242,7 +250,7 @@ def main():
         shutil.rmtree(ziel_viewer)
     shutil.copytree(VENDOR, ziel_viewer)
 
-    for name in ("index.html", "suche.html", "glossar.html"):
+    for name in ("index.html", "suche.html", "glossar.html", "lesen.html"):
         text = (WEB / name).read_text(encoding="utf-8")
         for k, v in werte.items():
             text = text.replace(k, v)

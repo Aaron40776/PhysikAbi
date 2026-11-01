@@ -319,6 +319,36 @@ footer noscript { display: block; margin-top: 8px; }
   .seiten-nav a { font-size: .78rem; }
 }
 
+/* ---------- Textansicht ---------- */
+.lese-zurueck { margin: 0 0 12px; font-size: .85rem; }
+.lese-zurueck a { text-decoration: none; color: var(--grau); }
+.lese-zurueck a:hover { color: var(--akzent); }
+.lese-kopf { max-width: 72ch; margin: 0 auto 20px; }
+.lese-kopf h1 { margin: 0 0 4px; font-size: 1.55rem; }
+.lese-kopf .meta { margin: 0; color: var(--grau); font-size: .85rem; }
+.lese-wahl { display: inline-flex; gap: 6px; align-items: center; margin-top: 8px;
+  font-size: .8rem; color: var(--grau); }
+.lese-wahl select {
+  padding: 4px 7px; font: inherit; font-size: .82rem; color: inherit;
+  background: var(--karte); border: 1px solid var(--linie); border-radius: 6px;
+}
+.lese-text {
+  max-width: 72ch; margin: 0 auto; font-size: 1.02rem; line-height: 1.75;
+  overflow-wrap: break-word;
+}
+.lese-text p { margin: 0 0 1em; white-space: pre-line; }
+.lese-text p:last-child { margin-bottom: 0; }
+.lese-nav {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  max-width: 72ch; margin: 22px auto; font-size: .86rem;
+}
+.lese-nav a, .lese-nav span {
+  padding: 6px 11px; border: 1px solid var(--linie); border-radius: 8px;
+  text-decoration: none; color: var(--akzent); background: var(--karte);
+}
+.lese-nav a:hover { border-color: var(--akzent); }
+.lese-nav span { color: var(--grau); background: transparent; border-color: transparent; }
+
 /* Ohne Hover (Touch) gibt es keine Tastaturhinweise. */
 @media (hover: none) {
   .suche kbd, .panel-kopf .tasten { display: none; }

@@ -10,8 +10,9 @@ Regression, Lernfahrplan, Lernzettel und Glossar.
 Die Seite hat eine Volltextsuche über alle 109 Seiten: Fundstellen werden als Ausschnitt mit
 markiertem Suchwort angezeigt. Ein Klick öffnet die **echte PDF** im eingebauten PDF.js-Viewer
 an der richtigen Seite und markiert das Suchwort auch dort. Dazu Inhaltsverzeichnis je Dokument
-(springt direkt in die PDF-Seite), Lernstand („gelesen“), ein durchsuchbares Glossar mit
-104 Begriffen, ein Hell-/Dunkel-Umschalter und alle PDFs als ZIP zum Mitnehmen.
+(springt direkt in die PDF-Seite), eine Textansicht mit Blättern und „Weiterlesen“, Lernstand
+(„gelesen“), ein durchsuchbares Glossar mit 104 Begriffen, ein Hell-/Dunkel-Umschalter und alle
+PDFs als ZIP zum Mitnehmen.
 
 ## Inhalt
 
@@ -30,8 +31,9 @@ Jeder Befund im Prüfbericht trägt eine Fundstelle (Datei und Zeile) und ein Zi
 wurden unter anderem: alle Referenzwerte nachgerechnet (h·c, Rydberg, de Broglie, Bragg,
 Doppelspalt, Franck-Hertz), 28 Abbildungen auf Einbindung und Deutung im Text, Formeldarstellung
 in den gerenderten PDFs, Zahlen in 20 Übungsaufgaben samt Lösungen. Gefundene Fehler sind
-behoben; was nicht geprüft werden konnte — NIBIS-Aufgaben, optische Kontrolle der Grafiken —,
-steht begründet in Abschnitt 14.7 des Prüfberichts.
+behoben; was nicht geprüft werden konnte — NIBIS-Aufgaben, eine visuelle Bildbetrachtung der Grafiken —,
+steht begründet in Abschnitt 14.7 des Prüfberichts; die Pixel- und Geometrieprüfung steht in
+Abschnitt 15.
 
 ## Selbst bauen
 
@@ -53,10 +55,10 @@ python3 build/test_pages.py               # prüft Index, Links und Suchlogik (n
 
 Die Quellen der Seite liegen unter `build/web/`: `index.html`, `suche.html`, `glossar.html`,
 `style.css`, `theme.js` (Hell/Dunkel), `suche.js` (Index, Bewertung, Ausschnitte, PDF-Links),
-`glossar.js` (Filter), `index.js`, `suche-seite.js`. Die Glossarbegriffe stehen einmal in
+`glossar.js` (Filter), `lesen.html`/`lesen.js` (Textansicht), `index.js`, `suche-seite.js`. Die Glossarbegriffe stehen einmal in
 `build/glossar.json`; daraus entstehen sowohl `glossar.html` als auch das PDF
 `Glossar.pdf` (Typst-Quelle `build/src/f10_glossar.typ`).
-`make_pages.py` extrahiert den Text aus den PDFs zu `_site/suche.json` (≈190 kB), kopiert die
+`make_pages.py` extrahiert den Text aus den PDFs zu `_site/suche.json` (≈215 kB), kopiert die
 PDFs, das ZIP und den PDF.js-Viewer aus `build/vendor/pdfjs/` (3.11.174, Apache-2.0). Am Viewer
 sind nur Darstellung und Sprache angepasst: `lang="de"`/`locale=de`, eigenes Favicon,
 vervollständigte deutsche Sprachdatei (siehe `build/vendor/pdfjs/VERSION.txt`). Der Viewer

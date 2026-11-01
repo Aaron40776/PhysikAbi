@@ -1088,7 +1088,7 @@ visuell-ästhetisch.
 |---|---|---|---|
 | D1 | `build/web/style.css:17-49` | Darkmode folgte nur `prefers-color-scheme`; manuell umschalten ging nicht. | `:root[data-theme="dark"]` plus Media-Query für „System“, `color-scheme` mitgesetzt. |
 | D2 | `build/web/theme.js` | Kein Umschalter. | Setzt gespeichertes Design vor dem Stylesheet, Knopf in der Kopfzeile aller drei Seiten, `meta[name=theme-color]` wird angepasst. |
-| D3 | `index.html`, `suche.html`, `glossar.html` | Kein Einstieg. | `theme.js` vor `style.css`, `#thema`-Knopf mit `aria-pressed` und wechselnder Beschriftung. |
+| D3 | `index.html`, `suche.html`, `glossar.html`, `lesen.html` | Kein Einstieg. | `theme.js` vor `style.css`, `#thema`-Knopf mit `aria-pressed` und wechselnder Beschriftung. |
 
 ### 15.4 Prüfstand nach dem Nachtrag
 
@@ -1097,9 +1097,41 @@ visuell-ästhetisch.
 | `./build_all.sh` | „alle gebaut“, 17 PDFs |
 | `qa_pdf.py` | 109 Seiten, 21.232 Wörter, 0 Textüberläufe, 0 Formelreste |
 | `check_figs.py` | 9 Hinweise „Text außerhalb“, 0 Überlappungen |
-| `test_pages.py` | 44/44 Prüfungen (17 Dokumente, 109 Seiten, Glossar, Theme, Suche, ZIP) |
+| `check_physics.py` | 14/14 Prüfungen (Konstanten, Photoeffekt, Compton, Rydberg, Doppelspalt, MZI, Potenzialtopf) |
+| `test_pages.py` | 48/48 Prüfungen (17 Dokumente, 109 Seiten, Textansicht, Glossar, Theme, Suche, ZIP) |
 | `node test_suche.js` | 18/18 Prüfungen |
 | Glossar-PDF | 104 Einträge, 5 Seiten, keine ungerenderten Zeichen (`$`, `\`, `#`, `[]{}`) |
+
+### 15.5 Inhalts- und Formelprüfung (01.11.2026)
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| I1 | `build/src/f1_formelblatt.typ:155` | Formelblatt sagte „Abstand der Maxima“ zur Franck-Hertz-Kurve. Die Kurve hat Minima (`07_spektren.typ:116-120`). | „Abstand der Minima“. |
+| I2 | `build/src/f4_lastminute.typ:72` | „Strommaxima im Abstand ΔU“. | „Stromminima“. |
+| I3 | `build/src/f6_uebungen.typ:287-294` | Aufgabe 18 fragte nach Strommaxima und „nach jedem Maximum“; der Lösungsteil beschreibt Einbrüche/Minima. | Frage und Teilaufgabe auf „Minima“ umgestellt; Lösung bleibt konsistent. |
+| I4 | `build/check_physics.py` | Nur 8 Prüfungen; Photoeffekt, Compton, Rydberg und MZI waren nicht numerisch abgesichert. | 14 Prüfungen, u. a. E(600 nm) = 2,07 eV, K_max(400 nm, 2,2 eV) = 0,90 eV, Compton-Δλ(90°) = 2,43 pm, Rydberg 3→2 = 656 nm, Doppelspalt 600 nm, P_D1(90°) = 0,5. Alle bestanden. |
+| I5 | `build/check_sources.py` | Der Fehler „Strommaxima“ konnte wieder eingeschleppt werden. | Lint-Regel meldet „Strommaxima“ als Befund. |
+
+### 15.6 Abbildungen, zweite Runde (01.11.2026)
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| F1 | `build/make_figures.py:112-115` | `doppelspalt_intensitaet`: `a[np.argmax(I[a > 0.001])]` indexiert das gefilterte Array mit dem Index des vollen Arrays. Der Δa-Pfeil zeigte nach links bis −30 mm. | Pfeil von 0 bis `λ·e/g ≈ 4,2 mm`; Beschriftung daneben. |
+| F2 | `build/make_figures.py:122,409` | `einzelspalt_doppelspalt` und `unbestimmtheit`: `sin(u)/where(u==0, 1e-12, u)` ergibt in der Mitte 0 statt 1. | `np.sinc(u/π)**2`; zentrale Intensität 1. |
+| F3 | `build/make_figures.py:468-477` | `reflexion_brechung`: Der einfallende Pfeil zeigte vom Lot weg; die α-Bögen lagen zwischen Strahl und Grenzfläche statt zwischen Strahl und Lot. | Pfeil zeigt zur Grenzfläche; Bögen 90–135° bzw. 45–90°; β zwischen −90° und −61,4°. |
+| F4 | `build/make_figures.py:497` | `regression`: Steigungsannotation `m_*1e14` ergab 4,14·10^13 statt 0,41 V je 10^14 Hz (Text: 4,11·10^-15 V s). | Annotation `m_:.2f` = 0,41 V je 10^14 Hz. |
+
+Alle 28 SVGs neu gerendert, `check_figs.py`: 0 Überlappungen, 9 Hinweise „Text außerhalb“
+(Achsentitel/Tick-Labels, die `bbox_inches="tight"` mit ausgibt). Zusätzlich geprüft:
+Farbmasken und Bounding-Boxes im gerenderten Raster; alle Bauteile und Strahlfarben vorhanden.
+
+### 15.7 Textansicht und „Weiterlesen“
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| L1 | `build/web/lesen.html`, `build/web/lesen.js` | Nach dem Entfernen der alten Textansicht gab es nur die PDF. | Schlanke Textansicht je Seite: Zurück/Weiter, Seitenauswahl, Pfeiltasten, PDF-Link; nutzt `suche.json`. Kein nachgebautes Inhaltsverzeichnis, keine Suchmarkierung. |
+| L2 | `build/make_pages.py:147-180` | Karten verlinkten nur PDF und Textanfang. | „Als Text lesen“ und verstecktes „Weiterlesen (S. N)“ je Karte. |
+| L3 | `build/web/lesen.js` | Kein Lesestand. | `localStorage`-Schlüssel `physik.weiter` speichert Dokument und Seite; `index.js` zeigt den Link. |
 
 **Offen:** Die Prüfbericht-Abschnitte 14.5–14.7 beschreiben den Stand vor diesem Nachtrag
 (16 PDFs, 105 Seiten). Die dort genannten Zahlen sind historisch; aktuell gelten die Werte

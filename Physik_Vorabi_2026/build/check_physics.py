@@ -4,6 +4,7 @@
 Die Sollwerte sind die im Material gedruckten Zahlen. Abweichungen über der
 Toleranz bedeuten: entweder Konstante falsch oder Rechenweg falsch.
 """
+import math
 import sys
 
 import pint
@@ -28,6 +29,18 @@ checks = [
     ("λ(4,9 eV) (Übungsheft: 253 nm)", (EH * C / (4.9 * u.eV)).to(u.nm).magnitude, 253, 1),
     ("λmin(25 kV) (Prüfbericht: 49,6 pm)",
      (EH * C / (25 * u.kV * E)).to(u.pm).magnitude, 49.6, 0.1),
+    ("E(600 nm) (Übungsheft: 2,07 eV)",
+     (EH * C / (600 * u.nm)).to(u.eV).magnitude, 2.07, 0.01),
+    ("Kmax(400 nm, W_A=2,2 eV) (Übungsheft: 0,90 eV)",
+     (EH * C / (400 * u.nm)).to(u.eV).magnitude - 2.2, 0.90, 0.02),
+    ("Compton-Δλ(90°) (Skript: 2,43 pm)",
+     (EH / (ME * C)).to(u.pm).magnitude, 2.426, 0.01),
+    ("Rydberg 3→2 (Skript: 656 nm)",
+     (1 / (R * (1 / 4 - 1 / 9))).to(u.nm).magnitude, 656.1, 0.5),
+    ("Doppelspalt λ (g=0,10 mm, a=6 mm, e=1 m; 600 nm)",
+     (0.10 * u.mm * math.sin(math.atan(6e-3 / 1.0))).to(u.nm).magnitude, 600, 0.5),
+    ("MZI P_D1(Δφ=90°)",
+     math.sin(math.pi / 4) ** 2, 0.5, 1e-12),
 ]
 
 failures = 0
