@@ -3,6 +3,8 @@
 Sammlung eigenständiger Lernskripte für das **Vorabitur Physik am 06.11.2026**, Gymnasium
 Westerstede (Niedersachsen), erhöhtes Anforderungsniveau.
 
+**Online: <https://aaron40776.github.io/PhysikAbi/>** (wird bei jedem Push automatisch neu gebaut)
+
 Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 (https://www.physik.gym-wst.de), Kerncurriculum Physik Niedersachsen 2022, Aufgabenpool der Länder
 (IQB) 2025/2026, Hinweise zur schriftlichen Abiturprüfung 2027.
@@ -13,7 +15,7 @@ Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 
 | Datei | Thema | Seiten |
 |---|---|---|
-| `01_Wellen_und_Interferenz.pdf` | Schwingungen, Welle, Interferenz, Doppelspalt, Gitter, Bragg | 9 |
+| `01_Wellen_und_Interferenz.pdf` | Schwingungen, Welle, Interferenz, Doppelspalt, Gitter, Bragg, Polarisation, Michelson | 10 |
 | `02_Lichtquanten_und_Planck.pdf` | Planck, Photon, Photoeffekt, h-Bestimmung, Compton | 6 |
 | `03_Elektronenwellen_und_Beugung.pdf` | de Broglie, Elektronenkanone, Beugungsröhre | 7 |
 | `04_Doppelspalt_und_Quantenphysik.pdf` | Einzelquanten, Amplituden, Komplementarität, Unbestimmtheit, Wellenfunktion | 6 |
@@ -30,7 +32,7 @@ Formeln ($frac$ statt Schrägstrich), Herleitungen als nummerierte Schritte im K
 Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Grafiken mit
 Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
 
-Umfang nach der Straffung (02.11.): **7 Skripte 48 Seiten** statt 77, gesamt **96 Seiten**
+Umfang nach der Straffung (01.11.): **7 Skripte 48 Seiten** statt 77, gesamt **96 Seiten**
 statt 121; Wortzahl 35.080 statt 60.663.
 
 ## Verzeichnisse
@@ -42,7 +44,7 @@ Physik_Vorabi_2026/
 ├── 02_Abiturrecherche/     abitur_analyse.md, untersuchte_aufgaben.csv, iqb_aufgaben/ (12 PDFs + Text)
 ├── 03_Lernskripte/         7 Themen-PDFs
 ├── 04_Zusatzmaterial/      8 Zusatz-PDFs (Übungsheft, Regression, Lernfahrplan)
-├── 05_Grafiken/            21 eigene SVG-Grafiken (automatisch aus build/fig kopiert)
+├── 05_Grafiken/            23 eigene SVG-Grafiken (automatisch aus build/fig kopiert)
 ├── 06_Qualitaetskontrolle/ pruefbericht.md, review.md
 └── build/                  Typst-Template, Quelltexte, Figuren-Skripte, Build- und Prüfskripte
                             (reproduzierbar: SOURCE_DATE_EPOCH ist gesetzt)
@@ -55,7 +57,7 @@ Voraussetzung: Typst 0.15+, Python 3 mit matplotlib (nur für neue Grafiken).
 ```bash
 cd Physik_Vorabi_2026/build
 python3 make_figures.py     # Grafiken erzeugen (SVG)
-./build_all.sh              # alle 12 PDFs kompilieren
+./build_all.sh              # alle 15 PDFs kompilieren
 python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
 ```
 
