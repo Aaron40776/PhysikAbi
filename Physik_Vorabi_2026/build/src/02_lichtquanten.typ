@@ -278,8 +278,10 @@ ansetzt.
 
 #herleitung[*Energie eines Photons aus der Wellenlänge*]
   $E = h f$, $c = lambda f$ $=> f = c\/lambda$ $=> E = h c\/lambda$. Praktische Einheit:
-  $h c = 1240$ eV nm, also $E/[e V] = 1240\/(lambda\/"nm")$. Diese Kurzform spart im Abitur viel
-  Zeit und ist eine zulässige Umformung.
+  $h c = 1239","8$ eV nm, also $E/[e V] = 1239","8\/(lambda\/"nm")$. Diese Kurzform spart im
+  Abitur viel Zeit und ist eine zulässige Umformung. Im Unterricht wird $h c$ meist auf
+  $1240$ eV nm gerundet; der Unterschied beträgt 0,02 % und ändert bei drei gültigen Ziffern
+  kein Ergebnis. Wer exakt rechnet, nimmt $h$ und $c$ einzeln.
 
 = Abituraufgaben
 

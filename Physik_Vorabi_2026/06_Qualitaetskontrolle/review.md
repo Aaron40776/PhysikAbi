@@ -139,3 +139,29 @@ nicht reproduzierbarer Build), einer inhaltlich geschlossen (Resonanzfrequenz).
 Felder sind für dieses Vorabi abgehakt; die nötigen Formeln stehen als Querverbindung in
 Skript 3. Offen bleibt nur der Atomkern (Jg. 13) – er war nicht Teil der Themenliste und ist
 nur relevant, falls er im Unterricht noch behandelt wird.
+
+---
+
+## Nachtrag 3 – Konstanten und Regression
+
+**Konstanten auf CODATA-Werte geprüft.** $h$, $c$, $e$, $m_e$, $m_p$, $k$, $r_1$, $R$ standen
+bereits in der genauen Form (6,626 / 2,998 / 1,602 / 9,109 / 1,673 / 8,99 / 5,29 / 1,097).
+Einziger gerundeter Wert war $h c = 1240$ eV nm. Jetzt überall $h c = 1239","8$ eV nm mit
+ausdrücklichem Hinweis, dass 1240 die gerundete Rechenform ist (Abweichung 0,02 %, bei drei
+gültigen Ziffern folgenlos). Geändert: Formelblatt, Last-Minute-Zettel, Skript 2 (Herleitung).
+
+**Neues Dokument `04_Zusatzmaterial/Regression_und_Auswertung.pdf` (7 Seiten).**
+Deckt das Auswertungshandwerk ab, das in Prüfungen vorausgesetzt wird:
+- Kette Messgröße → Diagramm → Ausgleichsgerade → Steigung mit Einheit → gesuchte Größe
+- Protokoll in acht Schritten (Tabelle: was tun / was im Heft stehen muss)
+- Zuordnung Auftragung → Gesetz → Bedeutung der Steigung (9 Fälle, u. a. $U_B$ über $f$,
+  $a_n$ über $n$, $T^2$ über $m$, $r^2$ über $1\/U$, $ln s$ über $t$)
+- Steigung, Achsenabschnitt, $R^2$, Residuen – was sie aussagen und was nicht (Abbildung mit
+  Ausgleichsgerade und Residuenplot)
+- vier vollständig durchgerechnete Beispiele (Fotozelle, Doppelspalt, Franck-Hertz, Dämpfung)
+- Fehlertabelle, zwei Übungsaufgaben mit Lösung
+
+Alle Regressionswerte im Dokument wurden mit `numpy.polyfit` berechnet und gegengeprüft:
+Fotozelle $m = 4","11 dot 10^(-15)$ V s, $b = -1","88$ V, $R^2 = 0","99997$;
+Doppelspalt $m = 5","062$ mm, $lambda = 633$ nm; Franck-Hertz $m = 4","90$ V, $b = 5","50$ V;
+Dämpfung $k = 0","200$ 1/s; Übungsaufgaben $D = 9","9$ N/m bzw. $d = 0","212$ nm.

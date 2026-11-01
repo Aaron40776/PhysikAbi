@@ -21,9 +21,9 @@ Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 | `06_Atommodelle_und_Orbitalmodell.pdf` | Rutherford, Bohr, Potenzialtopf, Orbitale | 11 |
 | `07_Spektren_und_Franck_Hertz.pdf` | Spektren, Röntgen, Resonanzabsorption, Franck-Hertz | 10 |
 
-**6 Zusatzdokumente** (`04_Zusatzmaterial/`): Gesamtübersicht (5 S.), Formelblatt (5 S.),
+**7 Zusatzdokumente** (`04_Zusatzmaterial/`): Gesamtübersicht (5 S.), Formelblatt (5 S.),
 Experimentesammlung (5 S.), Abitur-Analyse (5 S.), Last-Minute-Lernzettel (4 S.),
-**Übungsheft mit 20 Aufgaben und Lösungen (13 S.)**.
+**Übungsheft mit 20 Aufgaben und Lösungen (13 S.)**, **Regression und Auswertung (7 S.)**.
 
 Jedes Skript enthält: Grundlagen, vollständige Theorie, Experimente (Aufbau/Durchführung/
 Beobachtung/Erklärung/Bedeutung), Herleitungen, Grafiken mit Erläuterung, 3 Abituraufgaben mit
@@ -37,7 +37,7 @@ Physik_Vorabi_2026/
 ├── 01_Schulwebsite/        website_links.csv + vollständiger Mirror der Unterrichtsseiten (Markdown)
 ├── 02_Abiturrecherche/     abitur_analyse.md, untersuchte_aufgaben.csv, iqb_aufgaben/ (12 PDFs + Text)
 ├── 03_Lernskripte/         7 Themen-PDFs
-├── 04_Zusatzmaterial/      6 Zusatz-PDFs (inkl. Übungsheft)
+├── 04_Zusatzmaterial/      7 Zusatz-PDFs (inkl. Übungsheft, Regression)
 ├── 05_Grafiken/            21 eigene SVG-Grafiken (automatisch aus build/fig kopiert)
 ├── 06_Qualitaetskontrolle/ pruefbericht.md, review.md
 └── build/                  Typst-Template, Quelltexte, Figuren-Skripte, Build- und Prüfskripte

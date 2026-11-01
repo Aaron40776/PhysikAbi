@@ -86,3 +86,12 @@ mit Schwerpunkt auf Diagrammauswertung.
 2. `THEMENSTATUS.md` prüfen (welches Thema hat Lücken?).
 3. Quellen in `01_Schulwebsite/materialien/` liegen vollständig vor – keine erneute Recherche nötig.
 4. Änderungen an Texten in `build/src/*.typ`, dann `./build_all.sh`.
+
+## Nachtrag 3 (02.11.) – Konstanten, Regression
+
+- [x] $h c$ auf 1239,8 eV nm präzisiert (Formelblatt, Last-Minute, Skript 2) mit Hinweis auf
+      die gerundete Rechenform 1240.
+- [x] Neues Dokument `Regression_und_Auswertung.pdf` (7 S.): Protokoll, Linearisierung,
+      Steigungsdeutung, $R^2$/Residuen, vier Beispiele, zwei Übungsaufgaben.
+- [x] Alle Regressionswerte mit numpy nachgerechnet.
+- [x] Gesamtumfang 121 Seiten in 14 PDFs.

@@ -374,3 +374,32 @@ ax.set_xlim(-2, 2); ax.set_ylim(-1.4, 1.4); ax.axis("off")
 save(fig, "reflexion_brechung")
 
 print("fertig")
+
+# ------------------------------------------------- Auswertung/Regression
+f = np.array([7.4025, 6.8761, 5.4908, 5.1869])
+U = np.array([1.16, 0.94, 0.37, 0.25])
+m_, b_ = np.polyfit(f, U, 1)
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.0, 2.8),
+                               gridspec_kw={"width_ratios": [1.35, 1]})
+ax1.plot(f, U, "o", color=BLUE, ms=6, label="Messpunkte")
+xf = np.linspace(5.0, 7.6, 50)
+ax1.plot(xf, m_ * xf + b_, "-", color=RED, lw=1.4, label="Ausgleichsgerade")
+ax1.set_xlabel(r"Frequenz $f$ in $10^{14}$ Hz")
+ax1.set_ylabel(r"Gegenspannung $U_B$ in V")
+ax1.set_title("Messreihe und Regression", fontsize=9)
+ax1.legend(fontsize=7, loc="upper left", frameon=False)
+ax1.annotate(f"Steigung {m_*1e14:.2f} V pro $10^{{14}}$ Hz",
+             xy=(5.6, 0.36), xytext=(5.55, 0.95), fontsize=7, color=RED,
+             arrowprops=dict(arrowstyle="->", color=RED, lw=0.7))
+ax1.grid(alpha=0.25)
+res = (U - (m_ * f + b_)) * 1000
+ax2.axhline(0, color=GREY, lw=0.8)
+ax2.vlines(f, 0, res, color=TEAL, lw=1.2)
+ax2.plot(f, res, "o", color=TEAL, ms=5)
+ax2.set_xlabel(r"Frequenz $f$ in $10^{14}$ Hz")
+ax2.set_ylabel("Residuum in mV")
+ax2.set_title("Residuen: kein Muster erkennbar", fontsize=9)
+ax2.set_ylim(-4, 4)
+ax2.grid(alpha=0.25)
+fig.tight_layout()
+save(fig, "regression")

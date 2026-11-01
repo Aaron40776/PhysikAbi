@@ -22,7 +22,7 @@
   columns: (auto, auto, 1fr),
   [Größe], [Wert], [Bemerkung],
   [Lichtgeschwindigkeit $c_0$], [$2","998 dot 10^8$ m/s], [Vakuum],
-  [Plancksches Wirkungsquantum $h$], [$6","626 dot 10^(-34)$ J s], [$h c = 1240$ eV nm],
+  [Plancksches Wirkungsquantum $h$], [$6","626 dot 10^(-34)$ J s], [$h c = 1239","8$ eV nm],
   [Elementarladung $e$], [$1","602 dot 10^(-19)$ C], [auch $1$ eV $= 1","602 dot 10^(-19)$ J],
   [Elektronenmasse $m_e$], [$9","109 dot 10^(-31)$ kg], [Ruhemasse],
   [Protonenmasse $m_p$], [$1","673 dot 10^(-27)$ kg], [etwa 1836 $m_e$],
@@ -36,7 +36,9 @@
 #merksatz[
   *Einheiten-Faustregeln:* $1$ nm $= 10^(-9)$ m, $1$ µm $= 10^(-6)$ m, $1$ mm $= 10^(-3)$ m,
   $1$ eV $= 1","602 dot 10^(-19)$ J, $1$ keV $= 10^3$ eV.
-  Energien in eV und Wellenlängen in nm: $E = 1240 \/ lambda$.
+  Energien in eV und Wellenlängen in nm: $E = h c \/ lambda = 1239","8 "eV nm" \/ lambda$.
+  Im Unterricht wird $h c$ oft auf $1240$ eV nm gerundet – der Unterschied liegt bei 0,02 %
+  und ändert bei drei gültigen Ziffern kein Ergebnis.
 ]
 
 = Schwingungen
