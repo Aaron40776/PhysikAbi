@@ -194,5 +194,5 @@ Abbildungen ändern würden.
 ---
 
 **Nachtrag 01.11.2026:** Aktueller Stand nach Darkmode, Glossar und Abbildungskorrektur:
-17 PDFs, 110 Seiten, 21.279 Wörter, 104 Glossarbegriffe; Einzelheiten in
+17 PDFs, 110 Seiten, 21.304 Wörter, 104 Glossarbegriffe; Einzelheiten in
 `pruefbericht.md`, Abschnitt 15. Die Zahlen oben beschreiben den früheren Prüfstand.

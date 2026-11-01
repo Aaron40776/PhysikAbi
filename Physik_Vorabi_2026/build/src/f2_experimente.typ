@@ -53,8 +53,8 @@ Federmasse, große Amplituden (nichtlinear).
 *Aufbau.* Laser, Doppelspalt/Gitter, Schirm im Abstand $e$, Maßstab.
 *Durchführung.* $e$ messen, Positionen $a_n$ der Maxima bestimmen.
 *Beobachtung.* Äquidistante Streifen; beim Gitter scharf und bei weißem Licht spektral zerlegt.
-*Erklärung.* Gangunterschied $Delta s = g sin alpha$; Verstärkung bei $n lambda$.
-*Auswertung.* $lambda = g sin(arctan(a_n\/e))\/n$ bzw. $Delta a = lambda e\/g$.
+*Erklärung.* Beim Doppelspalt ist der Gangunterschied $Delta s = d sin alpha$, beim Gitter $Delta s = g sin alpha$; Verstärkung bei $n lambda$.
+*Auswertung.* $lambda = d sin(arctan(a_n\/e))\/n$ bzw. $Delta a = lambda e\/d$ (Doppelspalt); beim Gitter mit $g$ statt $d$.
 *Bedeutung.* Nachweis der Wellennatur; Grenzen: Kleinwinkel, Spaltbreite.
 
 == Michelson-Interferometer

@@ -98,7 +98,7 @@ Heute ist Sonntag, der 1. November; die Prüfung ist Freitag, der 6. November.
   [Wellengleichung $c = lambda f$, $T = 1\/f$], [warum Gangunterschied und Phasendifferenz
     dasselbe beschreiben],
   [Interferenzbedingung $n lambda$, $(2n+1) lambda\/2$], [warum Kohärenz nötig ist],
-  [Doppelspalt $a_n = n lambda e\/g$], [warum die Kleinwinkelnäherung hier zulässig ist],
+  [Doppelspalt $a_n = n lambda e\/d$], [warum die Kleinwinkelnäherung hier zulässig ist],
   [$E = h f$, $h c = 1239","8$ eV nm], [warum $h$ aus dem Knick der $U_B$-$f$-Geraden folgt],
   [$E_"kin" = h f - W_A$], [warum die Intensität die Energie nicht ändert],
   [$lambda = h\/p$, $lambda = 1","226 "nm"\/sqrt(U\/"V")$], [warum schnelle Elektronen kurze

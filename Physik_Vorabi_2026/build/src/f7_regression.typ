@@ -80,7 +80,7 @@ Kern der Auswertungsaufgaben.
   [Gesetz], [x-Achse], [y-Achse], [Steigung bedeutet],
   [$U_B = h\/e dot f - W_A\/e$], [$f$], [$U_B$], [$h\/e$ $arrow$ $h = m e$],
   [$E_"kin" = h f - W_A$], [$f$], [$E_"kin"$], [$h$ direkt],
-  [$a_n = n lambda e\/g$], [$n$], [$a_n$], [$lambda e\/g$ $arrow$ $lambda = m g\/e$],
+  [$a_n = n lambda e\/d$], [$n$], [$a_n$], [$lambda e\/d$ $arrow$ $lambda = m d\/e$],
   [$s_n = n lambda D\/g$ (Gitter)], [$n$], [$s_n$], [$lambda D\/g$],
   [$T^2 = (4 pi^2)\/D dot m$], [$m$], [$T^2$], [$4 pi^2\/D$ $arrow$ $D$],
   [$r = h\/sqrt(2 m_e e U) dot a\/d$], [$1\/U$], [$r^2$], [$(h a \/ d)^2 \/ (2 m_e e)$],
@@ -154,8 +154,8 @@ die lineare Modellannahme ist also gedeckt.
 
 = Durchgerechnetes Beispiel: Doppelspalt
 
-Gesucht ist die Wellenlänge. Erwartet wird $a_n = n lambda e \/ g$, also eine Gerade durch den
-Ursprung mit der Steigung $lambda e\/g$.
+Gesucht ist die Wellenlänge. Erwartet wird $a_n = n lambda e \/ d$, also eine Gerade durch den
+Ursprung mit der Steigung $lambda e\/d$.
 
 #table(
   columns: 6,

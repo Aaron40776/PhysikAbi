@@ -452,7 +452,7 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   17 Textlinks und 17 „Weiterlesen“-Plätze im Live-HTML.
 - **Veraltete Zahlen im Lernfahrplan gefunden:** `f8_lernplan.typ` nannte weiterhin
   105 Seiten, 50 Skriptseiten und 19.000 Wörter; Skript 5 war mit 7 statt 6 Seiten,
-  Skript 7 mit 6 statt 7 Seiten tabelliert. Jetzt 110/50/21.279 und beide Zeilen korrekt.
+  Skript 7 mit 6 statt 7 Seiten tabelliert. Jetzt 110/50/21.304 und beide Zeilen korrekt.
 - **Franck-Hertz-Widerspruch im Skript behoben:** `07_spektren.typ` stellte die idealisierten
   Minima (4,9/9,8/14,7 V) und die realen Minima mit Kontaktspannung (10,4/15,3/20,2 V)
   nebeneinander, ohne den Unterschied zu benennen. Beobachtung, Bildunterschrift und
@@ -461,15 +461,18 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   `led_hbestimmung` „Steigung = h/e“ – bei der Achse in 10^14 Hz ist die Steigung
   aber h·10^14 bzw. (h/e)·10^14. Beschriftungen korrigiert.
 - **Folge der Klarstellung:** Skript 7 hat jetzt 7 statt 6 Seiten; Gesamtstand **110 Seiten,
-  21.279 Wörter, 50 Skriptseiten**. Alle aktuellen Stellen (README, 00-README, Prüfbericht,
+  21.304 Wörter, 50 Skriptseiten**. Alle aktuellen Stellen (README, 00-README, Prüfbericht,
   Review-Kopf, Lernfahrplan, `test_pages.py`, `test_suche.js`, Memory) sind angeglichen;
   historische Stände in PROGRESS/Review bleiben als solche stehen.
+- **Doppelspalt-Symbolik konsistent:** Formelblatt, Experimentesammlung, Last-Minute-Zettel,
+  Übungen und Regression verwendeten `g` für den Doppelspalt, während Skript 1 und die
+  Abbildungen `d` schreiben. Jetzt durchgängig `d` (Doppelspalt) und `g` (Gitter).
 - **Doppelspalt-Abbildungen konsistent:** Die Figuren beschrifteten den Spaltabstand mit
   `g`, während Text und Formeln `d` verwenden; α war am oberen Spalt statt an der
   Mittelachse eingezeichnet. Jetzt `d` und α an der Mittelachse.
 - **Zeigerkette exakt:** Die Beschriftungen T/4, T/2, 3T/4 lagen bei 72°/168°/265° statt
   bei 90°/180°/270°. Die 13 Zeiger rotieren jetzt in exakten Zwölftelschritten; die
   Viertelmarken sitzen genau.
-- **Prüfstand:** `qa_pdf.py` 110 Seiten, 21.279 Wörter, 0 Überläufe/Formelreste;
+- **Prüfstand:** `qa_pdf.py` 110 Seiten, 21.304 Wörter, 0 Überläufe/Formelreste;
   `check_physics.py` 14/14; `test_pages.py` 48/48; `test_suche.js` 18/18;
   `check_figs.py` 0 Überlappungen, 9 Hinweise „Text außerhalb“.

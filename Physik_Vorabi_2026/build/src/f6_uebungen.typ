@@ -67,7 +67,7 @@ Wer diese Verteilung einmal im Kopf hat, erkennt sie in jeder Aufgabe wieder: ä
 == Block A: Wellen und Interferenz
 
 #aufgabe(1, punkte: 14)[
-  Ein Doppelspalt mit Spaltabstand $g = 0","250$ mm wird mit Laserlicht der Wellenlänge
+  Ein Doppelspalt mit Spaltabstand $d = 0","250$ mm wird mit Laserlicht der Wellenlänge
   $lambda = 632","8$ nm beleuchtet. Der Schirm steht $e = 2","00$ m entfernt.
   #enum(
     [Berechnen Sie den Abstand zweier benachbarter Maxima und den Abstand zwischen dem Maximum
@@ -199,7 +199,7 @@ Wer diese Verteilung einmal im Kopf hat, erkennt sie in jeder Aufgabe wieder: ä
 == Block D: Quantenobjekte
 
 #aufgabe(11, punkte: 12)[
-  Ein Doppelspalt ($g = 0","10$ mm) wird mit einzelnen Photonen der Wellenlänge $600$ nm
+  Ein Doppelspalt ($d = 0","10$ mm) wird mit einzelnen Photonen der Wellenlänge $600$ nm
   beleuchtet; der Schirm ist $1","0$ m entfernt.
   #enum(
     [Berechnen Sie den Abstand der Maxima und die Position des Maximums 1. Ordnung.],
@@ -333,7 +333,7 @@ Wer diese Verteilung einmal im Kopf hat, erkennt sie in jeder Aufgabe wieder: ä
 
 #lösung[
   *Zu A1 (Aufgabe 1).*
-  (1.1) $Delta a = lambda e / g = (632","8 dot 10^(-9) "m" dot 2","00 "m")/(0","250 dot 10^(-3) "m")
+  (1.1) $Delta a = lambda e / d = (632","8 dot 10^(-9) "m" dot 2","00 "m")/(0","250 dot 10^(-3) "m")
   = 5","06 dot 10^(-3)$ m $approx 5","1$ mm.
   Abstand zwischen den beiden Maxima 1. Ordnung: $2 Delta a = 10","1$ mm (denn das Maximum
   0. Ordnung liegt in der Mitte).
@@ -516,7 +516,7 @@ Wer diese Verteilung einmal im Kopf hat, erkennt sie in jeder Aufgabe wieder: ä
 
 #lösung[
   *Zu D1 (Aufgabe 11).*
-  (11.1) $Delta a = lambda e\/g = (600 dot 10^(-9) dot 1","0)\/(0","10 dot 10^(-3)) = 6","0$ mm.
+  (11.1) $Delta a = lambda e\/d = (600 dot 10^(-9) dot 1","0)\/(0","10 dot 10^(-3)) = 6","0$ mm.
   Das Maximum 1. Ordnung liegt $6","0$ mm neben dem Maximum 0. Ordnung.
 
   (11.2) Zunächst erscheinen einzelne helle Punkte an zufälligen Orten – der Ort jedes einzelnen
@@ -525,7 +525,7 @@ Wer diese Verteilung einmal im Kopf hat, erkennt sie in jeder Aufgabe wieder: ä
   Bereiche.
 
   (11.3) Jedes Photon hat für beide Spalte eine Wahrscheinlichkeitsamplitude. Am Schirm addieren
-  sich die *Amplituden* (Zeiger) mit dem Gangunterschied $Delta s = g sin alpha$; die
+  sich die *Amplituden* (Zeiger) mit dem Gangunterschied $Delta s = d sin alpha$; die
   Nachweiswahrscheinlichkeit ist das Quadrat der Summenzeigerlänge,
   $P = |Psi_1 + Psi_2|^2$. Bei $Delta s = n lambda$ sind die Zeiger gleichgerichtet (Maximum), bei
   $(2n+1) lambda\/2$ entgegengesetzt (Minimum).
