@@ -17,6 +17,14 @@
 - Terminal-Tool: Heredocs > ~20 KB hängen/verlieren Inhalt. Große Dateien in Blöcken (`cat >>`)
   schreiben und danach mit `wc -l` prüfen.
 
+## Arbeitsweise (Nutzerwunsch)
+- Maximale Eigeninitiative: alle verfügbaren Werkzeuge ausschöpfen, nicht vorschnell
+  „nicht möglich“ sagen. Erst Alternativen prüfen (Rendering, OCR/OpenCV, Screenshot-Datei,
+  ASCII, geometrische Konstruktionsdaten), dann Grenzen benennen.
+- Keine echten Sonderrechte nötig; Sicherheits- und Rechtegrenzen der Umgebung bleiben bestehen.
+- Browser-Screenshots werden nur als Datei gespeichert und nicht als Bild in den Kontext
+  gespielt. Pixelprüfung daher programmatisch (Farbmasken, Bounding-Boxes, CV), nicht visuell.
+
 ## Konventionen im Repo
 - Belege immer als `datei:zeile` + Zitat; Prüfergebnisse gehören in
   `06_Qualitaetskontrolle/pruefbericht.md`, nicht in den Chat.

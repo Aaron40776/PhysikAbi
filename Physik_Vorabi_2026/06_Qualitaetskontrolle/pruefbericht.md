@@ -1067,8 +1067,11 @@ unzugeordnet.
 
 `check_figs.py` meldet weiterhin 9 Hinweise „Text außerhalb“ (Achsentitel und einzelne
 Tick-Labels, die `bbox_inches="tight"` mit ausgibt), aber **0 echte Überlappungen**.
-Eine pixelgenaue Sichtprüfung war in der Umgebung nicht möglich; geprüft wurden die
-Konstruktionsdaten, die Textgeometrie und die Einbindung in die neu gebauten PDFs.
+Die SVGs wurden als Raster gerendert und pixelweise über Farbmasken/Bounding-Boxes
+(z. B. alle vier MZI-Bauteile und alle Strahlfarben nachweisbar) sowie über ihre
+Konstruktionsdaten geprüft. Ein Bildbetrachter, der das Bild in den Modellkontext
+einspielt, steht nicht zur Verfügung; die Prüfung ist deshalb programmatisch, nicht
+visuell-ästhetisch.
 
 ### 15.2 Glossar
 

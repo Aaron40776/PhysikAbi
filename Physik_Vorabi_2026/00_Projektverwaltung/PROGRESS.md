@@ -409,6 +409,7 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Darkmode:** `build/web/theme.js` setzt das gespeicherte Design vor dem Stylesheet,
   Umschalter in der Kopfzeile aller Seiten; Systemeinstellung bleibt Standard.
 - **Stand:** 17 PDFs, 109 Seiten, 21.232 Wörter, `qa_pdf.py` 0 Befunde, Website-Tests 44/44.
-- **Grenze:** Die SVGs wurden anhand ihrer Konstruktionsdaten und der erzeugten
-  Text-/Geometrieprüfung kontrolliert; eine pixelgenaue Sichtprüfung war in der
-  Arbeitsumgebung nicht möglich.
+- **Grenze:** Die SVGs wurden als Raster gerendert und pixelweise über Farbmasken und
+  Bounding-Boxes sowie über ihre Konstruktionsdaten geprüft. Ein Bildbetrachter, der das
+  Bild in den Modellkontext einspielt, steht nicht zur Verfügung; die Prüfung ist daher
+  programmatisch, nicht visuell-ästhetisch.
