@@ -128,7 +128,7 @@ phänomenologischer Einstieg fehlt; die Tabelle „Kenngrößen“ tritt an sein
   Rechenform $h c/\lambda$).* → Beleg: „… Steigung $h$. Bei $\lambda$ in nm ist $h c/\lambda$ die
   praktische Form.“ → *Maßnahme: zweiten Satz streichen (steht in Abschnitt 2).*
 
-### 3.3 Skript 3 – Elektronenwellen und Beugung (`03_elektronenwellen.typ`, 7 S.)
+### 3.3 Skript 3 – Elektronenwellen und Beugung (`03_elektronenwellen.typ`, 6 S.)
 
 - **P2** → `03_elektronenwellen.typ:52-56, 85-88` → *Beide Grafiken ohne Textbezug; die
   Bragg-Grafik ist identisch mit der aus Skript 1 und wird hier nicht neu gedeutet.* → Beleg:
@@ -145,7 +145,7 @@ phänomenologischer Einstieg fehlt; die Tabelle „Kenngrößen“ tritt an sein
   Beugungsbild“ steht in der Spalte „Kennzeichen“ und beginnt mit einem Bauteil.* → Beleg:
   Z. 96. → *Maßnahme: „Leuchtschirm statt Folie; kein Beugungsbild“.*
 
-### 3.4 Skript 4 – Doppelspalt und Quantenphysik (`04_doppelspalt.typ`, 6 S.)
+### 3.4 Skript 4 – Doppelspalt und Quantenphysik (`04_doppelspalt.typ`, 7 S.)
 
 - **P2** → `04_doppelspalt.typ:93` gegen `f1_formelblatt.typ:131` und `f4_lastminute.typ:30, 47`
   → *Die Unbestimmtheitsrelation steht in zwei Fassungen: $h/(4 \pi)$ (Skript 4, Lernfahrplan)
@@ -207,7 +207,7 @@ phänomenologischer Einstieg fehlt; die Tabelle „Kenngrößen“ tritt an sein
   Lehrbuchkonvention, nicht Messwert dieses Aufbaus.* → Beleg: „etwa 1 von 8000 wird um mehr als
   90° gestreut“. → *Maßnahme: „(Lehrbuchwert)“ ergänzen.*
 
-### 3.7 Skript 7 – Spektren und Franck-Hertz (`07_spektren.typ`, 6 S.)
+### 3.7 Skript 7 – Spektren und Franck-Hertz (`07_spektren.typ`, 7 S.)
 
 - **P1** → `07_spektren.typ:162-169` → *Aufgabe 2 ist syntaktisch zerstört: der `#enum(`-Aufruf
   fehlt, die Teilaufgaben erscheinen als Rohtext mit eckigen Klammern und einer überzähligen

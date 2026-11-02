@@ -50,9 +50,8 @@ $ lambda = frac(h, p) = frac(h, m v) $
 
 ]
 #figure(
-  image("../fig/elektronenbeugung_bild.svg", width: 62%),
-  caption: [Beugungsbild am Graphit: zwei Ringe, weil zwei Netzebenenscharen beitragen. Zur
-    Spannung $U$ gehört die Wellenlänge nach der Formel oben.],
+  image("../fig/schule/s3_roehre.png", width: 62%),
+  caption: [Elektronenbeugungsröhre aus dem Schulmaterial.],
 )
 
 Aus Ringradius und bekanntem Netzebenenabstand lässt sich umgekehrt $lambda$ bestimmen; die beiden Ringe gehören zu verschiedenen Netzebenenscharen desselben Graphits.
@@ -85,8 +84,8 @@ Steigung $d$ folgt.
 ]
 
 #figure(
-  image("../fig/bragg.svg", width: 52%),
-  caption: [Bragg-Bedingung: Die zweite Netzebene liefert den Zusatzweg $2 d sin(theta)$.],
+  image("../fig/schule/s3_bragg.png", width: 52%),
+  caption: [Reflexion am Kristall und Bragg-Bedingung aus dem Schulmaterial.],
 )
 
 Bei festem Winkel wächst der Zusatzweg $2 d sin(theta)$ mit dem Netzebenenabstand; genau darauf beruht die Auswertung über die Steigung von $r^2$ über $1\/U$.

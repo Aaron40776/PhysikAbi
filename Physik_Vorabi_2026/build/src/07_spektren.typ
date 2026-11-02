@@ -38,9 +38,8 @@ Das Termschema ist ein Energie-Lineal. Nach oben (Richtung $E = 0$) wird der Abs
 den Niveaus kleiner; $E = 0$ ist die Ionisationsgrenze.
 
 #figure(
-  image("../fig/energieniveaus_h.svg", width: 86%),
-  caption: [Wasserstoff: Pfeile nach unten sind Emissionen. Eingezeichnet sind vier
-    Balmer-Linien ($n = 2$ als Ziel) und die Lyman-$alpha$-Linie $2 -> 1$.],
+  image("../fig/schule/s7_energieniveaus.jpg", width: 86%),
+  caption: [Wasserstoff-Termschema aus dem Schulmaterial.],
 )
 
 Die eingezeichneten Pfeile enden bei $n = 2$; ihre Länge ist die Photonenenergie, und je kürzer der Pfeil, desto größer die Wellenlänge.
@@ -124,9 +123,8 @@ Energie, weil ein Teil als Wärme abgegeben wird (Stokes-Verschiebung).
 ]
 
 #figure(
-  image("../fig/franckhertz.svg", width: 86%),
-  caption: [Franck-Hertz-Kurve (idealisiert, ohne Kontaktspannung): Der Abstand der Minima ist
-    die Anregungsspannung $Delta U approx 4","9$ V.],
+  image("../fig/schule/s7_franckhertz.jpg", width: 86%),
+  caption: [Franck-Hertz-Kennlinie aus dem Schulmaterial.],
 )
 
 Im idealisierten Modell liegen die Minima bei 4,9 V, 9,8 V und 14,7 V; mit der Kontaktspannung

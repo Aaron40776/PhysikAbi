@@ -29,8 +29,8 @@
 ]
 
 #figure(
-  image("../fig/rutherford.svg", width: 72%),
-  caption: [Streubahnhänge vom Winkel: große Ablenkung nur bei sehr kleinem Abstand zum Kern.],
+  image("../fig/schule/s6_rutherford.jpg", width: 72%),
+  caption: [Rutherford-Streuung aus dem Schulmaterial: Bahnen in Abhängigkeit vom Stoßparameter.],
 )
 
 Die Bahnen krümmen sich nur bei kleinem Stoßparameter stark; bei großem Abstand zum Kern bleibt die Bahn fast gerade.
@@ -77,9 +77,8 @@ Die Bahnen krümmen sich nur bei kleinem Stoßparameter stark; bei großem Absta
 
 ]
 #figure(
-  image("../fig/energieniveaus_h.svg", width: 84%),
-  caption: [Termschema des Wasserstoffs. Nach oben rücken die Niveaus zusammen; $n -> infinity$
-    entspricht $E = 0$ (Ionisation). Pfeile nach unten sind Emissionen.],
+  image("../fig/schule/s6_energieniveaus.jpg", width: 84%),
+  caption: [Termschema des Wasserstoffs aus dem Schulmaterial.],
 )
 
 Im Termschema rücken die Niveaus nach oben zusammen und laufen gegen $E = 0$; nach unten werden die Abstände größer.
@@ -124,9 +123,8 @@ Im Termschema rücken die Niveaus nach oben zusammen und laufen gegen $E = 0$; n
 ]
 
 #figure(
-  image("../fig/potenzialtopf.svg", width: 66%),
-  caption: [Energieniveaus im Kasten der Breite $L$: $E_n tilde n^2$, die Abstände wachsen nach
-    oben – das Gegenteil zum Coulomb-Topf.],
+  image("../fig/schule/s6_potentialtopf.jpg", width: 66%),
+  caption: [Energieniveaus im Potenzialtopf aus dem Schulmaterial.],
 )
 
 Die Abstände zwischen den Niveaus wachsen hier mit $n$, während sie beim Coulomb-Topf kleiner werden – das ist der qualitative Unterschied beider Potenziale.
@@ -147,8 +145,8 @@ Die Abstände zwischen den Niveaus wachsen hier mit $n$, während sie beim Coulo
 ]
 
 #figure(
-  image("../fig/orbitale.svg", width: 82%),
-  caption: [s- und p-Orbital als Wahrscheinlichkeitsflächen; Formen folgen aus $l$.],
+  image("../fig/schule/s6_orbitale.jpg", width: 82%),
+  caption: [Orbitale und Aufenthaltswahrscheinlichkeit aus dem Schulmaterial.],
 )
 
 Die Formen folgen aus der Quantenzahl $l$: s-Orbitale sind kugelsymmetrisch, p-Orbitale haben zwei Keulen längs einer Achse.

@@ -22,10 +22,10 @@ Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 | Datei | Thema | Seiten |
 |---|---|---|
 | `01_Wellen_und_Interferenz.pdf` | Schwingungen, Welle, Interferenz, Doppelspalt, Gitter, Bragg, Polarisation, Michelson, Lichtgeschwindigkeit | 12 |
-| `02_Lichtquanten_und_Planck.pdf` | Quantenhypothese, Photon, Photoeffekt, h-Bestimmung, Compton | 6 |
-| `03_Elektronenwellen_und_Beugung.pdf` | de Broglie, Elektronenkanone, Beugungsröhre | 7 |
-| `04_Doppelspalt_und_Quantenphysik.pdf` | Einzelquanten, Amplituden, Komplementarität, Unbestimmtheit, Wellenfunktion | 6 |
-| `05_MZI_Welcher_Weg_Delayed_Choice.pdf` | Mach-Zehnder, Welcher-Weg, Delayed Choice | 5 |
+| `02_Lichtquanten_und_Planck.pdf` | Quantenhypothese, Photon, Photoeffekt, h-Bestimmung | 6 |
+| `03_Elektronenwellen_und_Beugung.pdf` | de Broglie, Elektronenkanone, Beugungsröhre | 6 |
+| `04_Doppelspalt_und_Quantenphysik.pdf` | Einzelquanten, Amplituden, Komplementarität, Unbestimmtheit, Wellenfunktion | 7 |
+| `05_MZI_Welcher_Weg_Delayed_Choice.pdf` | Mach-Zehnder, Welcher-Weg, Delayed Choice | 6 |
 | `06_Atommodelle_und_Orbitalmodell.pdf` | Rutherford, Bohr, Potenzialtopf, Orbitale | 7 |
 | `07_Spektren_und_Franck_Hertz.pdf` | Spektren, Röntgen, Resonanzabsorption, Franck-Hertz | 7 |
 
@@ -52,7 +52,7 @@ Physik_Vorabi_2026/
 ├── 02_Abiturrecherche/     abitur_analyse.md, untersuchte_aufgaben.csv, iqb_aufgaben/ (12 PDFs + Text)
 ├── 03_Lernskripte/         7 Themen-PDFs
 ├── 04_Zusatzmaterial/      Archiv: frühere Zusatz-PDFs, nicht veröffentlicht
-├── 05_Grafiken/            30 eigene SVG-Grafiken (automatisch aus build/fig kopiert)
+├── 05_Grafiken/            Original-Abbildungen der Schulwebsite (`schule/`) und frühere SVGs
 ├── 06_Qualitaetskontrolle/ pruefbericht.md, review.md
 └── build/                  Typst-Template, Quelltexte, Figuren-Skripte, Build- und Prüfskripte
                             (reproduzierbar: SOURCE_DATE_EPOCH ist gesetzt)
@@ -69,8 +69,8 @@ python3 make_figures.py     # Grafiken erzeugen (SVG)
 python3 qa_pdf.py ../03_Lernskripte/*.pdf
 ```
 
-Typst-Binary lag während der Erstellung unter `/tmp/typst-x86_64-unknown-linux-musl/typst`
-(Pfad in `build_all.sh` ggf. anpassen).
+Typst-Binary wird über `TYPST` oder `PATH` gefunden; `build_all.sh` sucht sonst unter
+`/tmp/typst-new/typst`.
 
 ## Arbeitsweise / Belege
 

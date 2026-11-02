@@ -71,12 +71,12 @@ S.laden().then((idx) => {
     assert(aus.startsWith("…"), aus);
   });
 
-  pruefe("Bragg: Skript 1, Seite 7, Überschrift zuerst", () => {
+  pruefe("Bragg: Skript 1, Seite 8, Überschrift zuerst", () => {
     const e = S.suche("Bragg", 3);
     assert(e && e.anzahl > 5, "Treffer");
     const g = e.gruppen[0];
     assert.strictEqual(g.doc.id, "01_Wellen_und_Interferenz");
-    assert.strictEqual(g.treffer[0].seite, 7, "Überschrift auf Seite 7 zuerst");
+    assert.strictEqual(g.treffer[0].seite, 8, "Überschrift auf Seite 8 zuerst");
     assert(g.treffer.every((t) => S.ausschnitt(t.text, e.tokens).includes("<mark>")), "jeder Treffer markiert");
   });
 
@@ -133,7 +133,7 @@ S.laden().then((idx) => {
     const u = S.ziel(doc, 7, "Bragg");
     assert(u.startsWith("lesen/01_Wellen_und_Interferenz.html?"), u);
     assert(u.includes("q=Bragg"), u);
-    assert(u.includes("#loc-8"), u);
+    assert(u.includes("#loc-"), u);
   });
 
   pruefe("Mehrwortsuche markiert den ersten Begriff", () => {

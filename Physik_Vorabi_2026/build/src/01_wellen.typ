@@ -37,9 +37,9 @@ Für eine harmonische Schwingung gilt
 $ s(t) = A sin(omega t + phi_0), quad v(t) = A omega cos(omega t + phi_0) $
 
 #figure(
-  image("../fig/welle_raumzeit.svg", width: 88%),
-  caption: [Momentaufnahme zu zwei Zeiten: Die Welle ist um $c dot Delta t$ gewandert, $A$ und
-    $lambda$ bleiben gleich.],
+  image("../fig/schule/s1_kenngroessen.png", width: 88%),
+  caption: [Momentaufnahme einer Welle aus dem Schulmaterial: Auslenkung, Amplitude und
+    Wellenlänge lassen sich direkt ablesen.],
 )
 
 Nach der Zeit $Delta t$ liegt jeder Wellenberg um $c dot Delta t$ weiter rechts; die Form der Kurve ändert sich dabei nicht, nur ihr Ort.
@@ -59,8 +59,8 @@ $ A_"ges" = sqrt(A_1^2 + A_2^2 + 2 A_1 A_2 cos(delta)), quad delta = 2 pi frac(D
 ]
 
 #figure(
-  image("../fig/zeigerkette.svg", width: 82%),
-  caption: [Zeigerkette längs des Weges: gleichmäßige Drehung erzeugt die Welle.],
+  image("../fig/schule/s1_zeiger.png", width: 82%),
+  caption: [Zeigerdarstellung einer Schwingung aus dem Schulmaterial.],
 )
 
 Ein voller Umlauf des Zeigers entspricht einer Wellenlänge; deshalb liest man den Gangunterschied zweier Wellen direkt als Winkel zwischen ihren Zeigern ab.
@@ -124,9 +124,8 @@ $ s(x,t) = 2 A sin(k x) cos(omega t) $
 Die Amplitude ist ortsfest, die Welle wandert nicht. Knoten bei $x = n lambda\/2$.
 
 #figure(
-  image("../fig/stehende_welle.svg", width: 84%),
-  caption: [Stehende Welle zu drei Zeiten (blau, orange, türkis); die roten Punkte sind Knoten,
-    ihr Abstand ist immer $lambda\/2$, dazwischen liegen die Bäuche.],
+  image("../fig/schule/s1_stehende_welle.jpg", width: 84%),
+  caption: [Stehende Welle aus dem Schulmaterial: Knoten und Bäuche im Abstand $lambda\/2$.],
 )
 
 In der Grundschwingung schwingt die Mitte mit maximaler Amplitude, in der ersten Oberschwingung sitzt dort ein zusätzlicher Knoten; der Abstand zweier Knoten bleibt in beiden Fällen $lambda\/2$.
@@ -141,10 +140,9 @@ In der Grundschwingung schwingt die Mitte mit maximaler Amplitude, in der ersten
 = Doppelspalt
 
 #figure(
-  image("../fig/doppelspalt_geometrie.svg", width: 84%),
-  caption: [Doppelspalt von oben: Die beiden Spaltmitten haben den Abstand $d$, der Schirm steht
-    im Abstand $e$. Die Strahlen laufen zum Punkt $P$; der untere Weg ist um
-    $Delta s approx d sin(alpha)$ länger.],
+  image("../fig/schule/s1_doppelspalt_geometrie.jpg", width: 84%),
+  caption: [Doppelspalt-Anordnung aus dem Schulmaterial: Spaltabstand $d$, Schirmabstand $e$
+    und Strahlweg zum Punkt $P$.],
 )
 
 Der untere Strahl legt bis zum Schirm das zusätzliche Stück $d sin(alpha)$ zurück; dieser Wegunterschied entscheidet, ob sich die Wellen am Punkt $P$ verstärken oder auslöschen.
@@ -162,8 +160,8 @@ Der untere Strahl legt bis zum Schirm das zusätzliche Stück $d sin(alpha)$ zur
 
 ]
 #figure(
-  image("../fig/doppelspalt_intensitaet.svg", width: 86%),
-  caption: [Äquidistante Maxima im Abstand $lambda e \/ d$, dazwischen Minima.],
+  image("../fig/schule/s1_doppelspalt_intensitaet.png", width: 86%),
+  caption: [Interferenzmuster am Doppelspalt aus dem Schulmaterial.],
 )
 
 Weil $a_n$ linear mit $n$ wächst, sind die Maxima gleich weit voneinander entfernt; die Minima liegen jeweils genau dazwischen.
@@ -187,10 +185,8 @@ $ b sin(alpha_m) = m lambda, quad m = 1, 2, dots $
 ]
 
 #figure(
-  image("../fig/einzelspalt_doppelspalt.svg", width: 88%),
-  caption: [Einzelspalt (breites Zentralmaximum), Doppelspalt (schmale Streifen) und Doppelspalt
-    mit Beugungshülle bei gleicher Spaltbreite. Die Kurven sind überlagert, nicht untereinander
-    gestapelt.],
+  image("../fig/schule/s1_gitter.jpg", width: 88%),
+  caption: [Interferenzmuster am Gitter aus dem Schulmaterial.],
 )
 
 Der Vergleich zeigt, dass das Einzelspaltbild die Einhüllende des Doppelspaltmusters ist: Alle Streifen liegen unter dem breiten Zentralmaximum des Einzelspalts.
@@ -202,9 +198,8 @@ An Netzebenen mit Abstand $d$ ist der Zusatzweg der zweiten Welle $2 d sin(theta
 $ 2 d sin(theta) = n lambda $
 
 #figure(
-  image("../fig/bragg.svg", width: 54%),
-  caption: [Bragg-Reflexion an zwei benachbarten Netzebenen im Abstand $d$: Strahl 2 läuft
-    gegenüber Strahl 1 zusätzlich $2 d sin(theta)$; $theta$ ist der Glanzwinkel zur Netzebene.],
+  image("../fig/schule/s1_bragg.png", width: 54%),
+  caption: [Bragg-Reflexion an Netzebenen aus dem Schulmaterial.],
 )
 
 #experiment[
@@ -225,9 +220,8 @@ konstant, $lambda$ ändert sich:
 $ frac(sin(alpha), sin(beta)) = frac(c_1, c_2) = frac(n_2, n_1) $
 
 #figure(
-  image("../fig/reflexion_brechung.svg", width: 58%),
-  caption: [Einfallender (blau), reflektierter (türkis) und gebrochener Strahl (orange). $alpha$
-    wird gegen das Lot gemessen, $beta$ im optisch dichteren Medium; dort ist $beta < alpha$.],
+  image("../fig/schule/s1_reflexion.png", width: 58%),
+  caption: [Reflexion und Brechung am Übergang zwischen zwei Medien aus dem Schulmaterial.],
 )
 
 Im Bild knickt der Strahl beim Eintritt ins optisch dichtere Medium zum Lot; die Ursache ist die kleinere Ausbreitungsgeschwindigkeit, nicht eine Änderung der Frequenz.
@@ -308,10 +302,9 @@ $2 Delta d$ – hin und zurück. Der Gangunterschied ist also
 $ Delta s = 2 Delta d $
 
 #figure(
-  image("../fig/michelson.svg", width: 66%),
-  caption: [Michelson-Aufbau von oben: Laser → Strahlteiler → fester und beweglicher Spiegel →
-    Schirm. Der bewegliche Spiegel verlängert einen Arm um $Delta d$; der Gangunterschied wächst
-    dadurch um $2 Delta d$.],
+  image("../fig/schule/s1_michelson.png", width: 66%),
+  caption: [Michelson-Interferometer aus dem Schulmaterial: Strahlteiler, fester und beweglicher
+    Spiegel, Schirm.],
 )
 
 #experiment[

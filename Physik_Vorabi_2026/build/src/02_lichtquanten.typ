@@ -31,10 +31,9 @@ die Rechnung in eV bequem:
 $ E_"[eV]" = frac(1239","8, lambda_"[nm]") $
 
 #figure(
-  image("../fig/photoeffekt_fE.svg", width: 80%),
-  caption: [Maximale kinetische Energie der Elektronen über der Frequenz: Gerade mit der Steigung
-    $h$ für jedes Metall, verschoben um die Austrittsarbeit. Die Nullstelle liegt bei der
-    Grenzfrequenz $f_G$.],
+  image("../fig/schule/s2_photoeffekt_fE.jpg", width: 80%),
+  caption: [Photoeffekt: Zusammenhang zwischen Frequenz und maximaler kinetischer Energie aus
+    dem Schulmaterial.],
 )
 
 Die Gerade schneidet die Frequenzachse bei $f_G$; erst oberhalb dieser Frequenz verlassen Elektronen das Metall, und die Steigung ist für alle Metalle dieselbe.
@@ -66,9 +65,8 @@ Die Gerade schneidet die Frequenzachse bei $f_G$; erst oberhalb dieser Frequenz 
 
 ]
 #figure(
-  image("../fig/led_hbestimmung.svg", width: 86%),
-  caption: [LED-Methode: Einsatzspannung $U_S$ über der Frequenz. Die Steigung der
-    Ausgleichsgeraden ist $h\/e$, der Achsenabschnitt hängt am Kontaktmaterial.],
+  image("../fig/schule/s2_led_hbestimmung.jpg", width: 86%),
+  caption: [Bestimmung von $h$ mit Leuchtdioden aus dem Schulmaterial.],
 )
 
 Trägt man die gemessenen Einsatzspannungen über der Frequenz auf, liegen die Punkte auf einer Geraden; aus der Steigung folgt $h$, aus dem Achsenabschnitt die Austrittsarbeit des Kontaktmaterials.
@@ -82,28 +80,35 @@ Trägt man die gemessenen Einsatzspannungen über der Frequenz auf, liegen die P
 
 #experiment[
   *Fotozelle mit Gegenfeld (h-Bestimmung).* \
-  Aufbau: Vakuumröhre, Kathode (Cs), Anode, regelbare Spannung, Amperemeter, Monochromator. \
-  Durchführung: $f$ über Farbfilter variieren, $U_B$ so einstellen, dass $I = 0$. \
-  Beobachtung: $U_B$ wächst linear mit $f$; unterhalb $f_G$ kein Strom. \
-  Auswertung: Steigung $m$ der $U_B$-$f$-Geraden, $h = m e$; Achsenabschnitt $b$, $W_A = -b e$. \
-  Bedeutung: erste direkte Messung von $h$ aus dem Photoeffekt.
+  *Aufbau.* Vakuumröhre, Kathode (Cs), Anode, regelbare Spannung, Amperemeter, Monochromator. \
+  *Durchführung.* $f$ über Farbfilter variieren, $U_B$ so einstellen, dass $I = 0$. \
+  *Beobachtung.* $U_B$ wächst linear mit $f$; unterhalb $f_G$ kein Strom. \
+  *Auswertung/Formel.* Steigung $m$ der $U_B$-$f$-Geraden: $h = m e$; Achsenabschnitt $b$:
+  $W_A = -b e$. \
+  *Bedeutung.* Erste direkte Messung von $h$ aus dem Photoeffekt.
 ]
 
 #experiment[
   *Leuchtdioden-Methode.* \
-  LED leuchtet ab einer Schwellenspannung $U_S$; die emittierte Frequenz folgt $h f = e U_S$.
-  Mehrere LEDs (rot bis blau) ergeben eine Gerade im $U_S$-$f$-Diagramm, Steigung $h\/e$.
-  Vorteil: billig, kein Vakuum. Nachteil: $U_S$ ist unscharf, weil die Emissionslinie breit ist.
+  *Aufbau.* Mehrere LEDs (rot bis blau), regelbare Spannungsquelle, Voltmeter, Strombegrenzung. \
+  *Durchführung.* $U$ langsam erhöhen und die Einsatzspannung $U_S$ bestimmen, bei der die LED
+  zu leuchten beginnt; $U_S$ über der bekannten Frequenz $f$ auftragen. \
+  *Beobachtung/Formel.* Es gilt $h f = e U_S$; die Punkte liegen auf einer Geraden. \
+  *Auswertung.* Steigung $h\/e$, daraus $h$. \
+  *Bedeutung.* Einfache Bestimmung von $h$ ohne Vakuum; $U_S$ ist wegen der breiten
+  Emissionslinie nur unscharf messbar.
 ]
 
 #experiment[
   *Röntgenbremsspektrum.* \
-  Elektronen mit $U_B$ erzeugen ein kontinuierliches Spektrum mit scharfer kurzwelliger Grenze
-  $lambda_min$. Dort wird die ganze kinetische Energie in ein Photon umgesetzt:
-
-  $ e U_B = frac(h c, lambda_min) quad => quad lambda_min = frac(h c, e U_B) $
-
-  Bei $U_B = 35$ kV folgt $lambda_min = 35$ pm.
+  *Aufbau.* Röntgenröhre mit Glühkathode und Metallanode, regelbare Hochspannung $U_B$,
+  Kristall-Spektrometer, Detektor. \
+  *Durchführung.* $U_B$ einstellen und das Intensitätsspektrum über der Wellenlänge aufnehmen. \
+  *Beobachtung.* Kontinuierliches Spektrum mit scharfer kurzwelliger Grenze $lambda_min$. \
+  *Auswertung/Formel.* Dort wird die ganze kinetische Energie in ein Photon umgesetzt:
+  $e U_B = h c\/lambda_min$, also $lambda_min = h c\/(e U_B)$. \
+  *Bedeutung.* Bei $U_B = 35$ kV folgt $lambda_min = 35$ pm; aus der Grenze lässt sich $h$
+  bestimmen.
 ]
 
 = Aufgaben

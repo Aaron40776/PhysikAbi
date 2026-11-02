@@ -20,10 +20,9 @@
 = Aufbau
 
 #figure(
-  image("../fig/mzi_clean.svg", width: 88%),
-  caption: [Mach-Zehnder-Aufbau von oben: Laser → ST1; oberer Arm über M1, unterer Arm über M2;
-    beide treffen sich an ST2. D1 sitzt rechts, D2 oben. Das Phasenplättchen im oberen Arm stellt
-    $Delta phi$ ein; die Armlängen sind $2+5=5+2$. Eigene Schemazeichnung nach dem Standardaufbau.],
+  image("../fig/schule/s5_mzi.png", width: 88%),
+  caption: [Mach-Zehnder-Aufbau aus dem Schulmaterial: Laser, Strahlteiler ST1 und ST2, Spiegel
+    M1 und M2 sowie die Detektoren D1 und D2.],
 )
 
 Beide Teilstrahlen legen im Bild gleich lange Wege zurück; jede zusätzliche Phasenverschiebung im oberen Arm wirkt sich deshalb eins zu eins auf den Gangunterschied am zweiten Strahlteiler aus.
@@ -70,9 +69,8 @@ $ I_1 = sin^2 frac(Delta phi, 2), quad I_2 = cos^2 frac(Delta phi, 2) $
 ]
 
 #figure(
-  image("../fig/zeiger_amplituden.svg", width: 62%),
-  caption: [Zeigerbild: Die beiden Amplituden schließen den Winkel $Delta phi$ ein; die
-    Resultierende bestimmt die Zählrate.],
+  image("../fig/schule/s5_zeiger.jpg", width: 62%),
+  caption: [Zeigerbild zur Überlagerung der Amplituden am MZI aus dem Schulmaterial.],
 )
 
 Im Zeigerbild addieren sich die beiden Amplituden vektoriell; bei $Delta phi = 0$ zeigen sie in entgegengesetzte Richtungen und löschen sich aus – das ist D1.

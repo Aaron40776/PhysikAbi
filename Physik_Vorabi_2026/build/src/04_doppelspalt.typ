@@ -26,8 +26,8 @@ $ I(alpha) = I_0 cos^2(frac(pi d sin(alpha), lambda)) $
 Die Minima liegen bei $Delta s = (2n+1) lambda\/2$. Das ist Wellenoptik, kein Quantenproblem.
 
 #figure(
-  image("../fig/doppelspalt_intensitaet.svg", width: 86%),
-  caption: [Klassische Intensitätsverteilung: äquidistante Maxima, dazwischen Nullstellen.],
+  image("../fig/schule/s4_doppelspalt.png", width: 86%),
+  caption: [Interferenzbild am Doppelspalt aus dem Schulmaterial.],
 )
 
 Die Kurve fällt vom Zentralmaximum zu den Nullstellen bei $Delta s = (2n+1) lambda\/2$ ab; die Lage der Maxima hängt nur vom Verhältnis $d\/lambda$ ab.
@@ -110,18 +110,15 @@ als Schwankungsbreite oder als Standardabweichung aufgefasst wird. Für Abschät
 ist die Schulnotation gemeint, für Prinzipaussagen die Lehrbuchform.
 
 #figure(
-  image("../fig/unbestimmtheit.svg", width: 88%),
-  caption: [Einzelspalt: Ein schmaler Spalt (kleine Ortsunschärfe $Delta x$) erzeugt eine breite
-    Intensitätsverteilung (große Impulsunschärfe $Delta p$) – und umgekehrt. Das ist keine
-    Messungenauigkeit, sondern Eigenschaft des Zustands.],
+  image("../fig/schule/s4_unbestimmtheit.jpg", width: 88%),
+  caption: [Einzelspalt und Unbestimmtheit aus dem Schulmaterial.],
 )
 
 Die Spaltbreite entspricht der Ortsunschärfe $Delta x$. Je schmaler der Spalt, desto breiter wird die Beugungsfigur und damit die Impulsunschärfe $Delta p$; bei einem breiten Spalt ist es umgekehrt.
 
 #figure(
-  image("../fig/wellenfunktion.svg", width: 84%),
-  caption: [Wellenfunktion $Psi(x)$ (blau) und Betragsquadrat $|Psi(x)|^2$ (orange Fläche):
-    Nur das Betragsquadrat ist als Aufenthaltswahrscheinlichkeit messbar.],
+  image("../fig/schule/s4_wellenfunktion.jpg", width: 84%),
+  caption: [Wellenfunktion und Aufenthaltswahrscheinlichkeit aus dem Schulmaterial.],
 )
 
 Die obere Kurve ist die Wellenfunktion selbst, die untere ihr Betragsquadrat; nur die untere gibt an, wo das Teilchen mit welcher Wahrscheinlichkeit gefunden wird.
