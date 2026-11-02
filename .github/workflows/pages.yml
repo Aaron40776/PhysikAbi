@@ -15,7 +15,6 @@ on:
       - "Physik_Vorabi_2026/05_Grafiken/**"
       - "Physik_Vorabi_2026/build/glossar.json"
       - "Physik_Vorabi_2026/build/web/**"
-      - "Physik_Vorabi_2026/build/vendor/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -36,12 +35,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Typst installieren
+        run: |
+          curl -fsSL -o /tmp/typst.tar.xz https://github.com/typst/typst/releases/download/v0.15.1/typst-x86_64-unknown-linux-musl.tar.xz
+          tar -xJf /tmp/typst.tar.xz -C /tmp
+          echo "/tmp/typst-x86_64-unknown-linux-musl" >> "$GITHUB_PATH"
       - name: PyMuPDF installieren
         run: pip install --quiet "pymupdf==2.0"
       - name: Playwright installieren
         run: |
           pip install --quiet "playwright==1.64.1"
           python -m playwright install --with-deps chromium
+      - name: PDFs und Leseseiten neu bauen
+        run: ./Physik_Vorabi_2026/build/build_all.sh
+      - name: Build-Artefakte sind aktuell
+        run: git diff --exit-code -- Physik_Vorabi_2026/03_Lernskripte Physik_Vorabi_2026/04_Zusatzmaterial
       - name: Index, Links und Suche testen
         run: python Physik_Vorabi_2026/build/test_pages.py
       - name: Browser-Tests

@@ -107,6 +107,11 @@ Ein Gas absorbiert genau die Wellenlängen, die es auch emittieren kann (Energie
 Resonanz). Fluoreszenz: Absorption im UV, Emission sichtbar – die Emission hat *kleinere*
 Energie, weil ein Teil als Wärme abgegeben wird (Stokes-Verschiebung).
 
+In der Leuchtstoffröhre erzeugt die Gasentladung UV-Licht; die Leuchtstoffschicht an der
+Glaswand absorbiert es und sendet sichtbares Licht aus. Bei der weißen LED wird eine blaue oder
+UV-LED mit einem Leuchtstoff kombiniert; der Leuchtstoff wandelt einen Teil des kurzwelligen
+Lichts in längere Wellenlängen um. Überlagern sich viele Farben, erscheint das Licht weiß.
+
 = Franck-Hertz-Versuch
 
 #experiment[
@@ -114,9 +119,9 @@ Energie, weil ein Teil als Wärme abgegeben wird (Stokes-Verschiebung).
   spannung $U$, Gegenfeld $U_G$ zwischen Gitter und Auffänger, Amperemeter. \
   *Durchführung.* $U$ von 0 auf 30 V erhöhen, Strom $I$ messen. \
   *Beobachtung.* Im idealisierten Modell fällt $I$ bei 4,9 V, 9,8 V, 14,7 V … wieder ab
-  (Periodizität $Delta U approx 4","9$ V); im realen Versuch verschiebt die Kontaktspannung
-  die Minima auf 10,4 V, 15,3 V, 20,2 V … – der Abstand bleibt 4,9 V. Bei Ne leuchtet das Gas
-  in einer orangeroten Schicht. \
+  (Periodizität $Delta U approx 4","9$ V). Die Quellenkurve zeigt das erste Maximum bei
+  ca. 6 V; die weiteren Maxima liegen im Abstand von 4,9 V. Bei 32 V sind sechs Leuchtzonen
+  sichtbar. Bei Ne leuchtet das Gas in einer orangeroten Schicht. \
   *Erklärung.* Elektronen geben bei Stößen genau $Delta E = e dot 4","9$ V an Hg-Atome ab; ihre
   Restenergie reicht nicht mehr über das Gegenfeld. Nach dem Stoß beginnt die Beschleunigung
   erneut – daher die Periodizität. \
@@ -128,14 +133,17 @@ Energie, weil ein Teil als Wärme abgegeben wird (Stokes-Verschiebung).
   caption: [Franck-Hertz-Kennlinie aus dem Schulmaterial.],
 )
 
-Im idealisierten Modell liegen die Minima bei 4,9 V, 9,8 V und 14,7 V; mit der Kontaktspannung
-$U_"K" approx 5","5$ V erscheinen sie bei 10,4 V, 15,3 V und 20,2 V. Der konstante Abstand ist
-der Beweis, dass die Atome nur feste Energiebeträge aufnehmen.
+Im idealisierten Modell liegen die Minima bei 4,9 V, 9,8 V und 14,7 V. Die Quellenkurve ist
+gegenüber diesem Modell um ca. 1,1 V verschoben: Ihr erstes Maximum liegt bei ca. 6 V. Diese
+Verschiebung folgt aus der Gegenspannung von 1 V und dem Kontaktpotenzial; sie wird hier nicht
+als eigene Messgröße verwendet. Der konstante Abstand von 4,9 V ist der Beweis, dass die Atome
+nur feste Energiebeträge aufnehmen.
 
 #herleitung[
   *Anregungsenergie und Emissionswellenlänge* \
-  1. Minima liegen bei $U_n = n dot Delta U + U_"K"$ ($U_"K"$: Kontaktspannung).
-  2. Also $U_n$ gegen $n$ auftragen: Steigung $Delta U$, Achsenabschnitt $U_"K"$.
+  1. Maxima liegen bei $U_n = n dot Delta U + U_0$ ($U_0$: Verschiebung durch Gegenspannung
+     und Kontaktpotenzial).
+  2. Also $U_n$ gegen $n$ auftragen: Steigung $Delta U$, Achsenabschnitt $U_0$.
   3. Anregungsenergie $Delta E = e dot Delta U = 4","90$ eV.
   4. Die beim Zurückfallen emittierte Wellenlänge:
 
@@ -152,21 +160,47 @@ der Beweis, dass die Atome nur feste Energiebeträge aufnehmen.
   [Elektronen], [kinetische Energie $>= Delta E$; Überschuss bleibt als $E_"kin"$],
 )
 
+= Ergänzend: He-Ne-Laser
+
+#achtung[
+  Die Schulbox auf `09henelaser` sagt: „Der Laser wird nicht mehr im Kerncurriculum genannt.“
+  Das KC Physik 2022 nennt auf S. 39 ausdrücklich die „Grundlagen der Funktionsweise eines
+  He-Ne-Lasers“ und eine technische Laseranwendung. Dieser Abschnitt folgt der offiziellen
+  Vorgabe und ist deshalb als *ergänzend* gekennzeichnet.
+]
+
+Im He-Ne-Laser regt eine Hochspannung freie Elektronen an. Sie stoßen mit Helium-Atomen
+zusammen und heben diese auf ein Pumpniveau. Das angeregte Helium gibt die Energie an ein
+Neon-Atom weiter, das dadurch in ein langlebiges Laserniveau gelangt. Weil mehr Neon-Atome im oberen Laserniveau
+angeregt sind als im unteren Niveau des Laserübergangs, liegt eine **Besetzungsinversion** vor.
+
+Ein spontan emittiertes Photon trifft auf ein weiteres angeregtes Neon-Atom und löst
+**stimulierte Emission** aus: Aus einem Photon werden zwei kohärente Photonen mit gleicher
+Frequenz, Phase und Richtung. Zwischen zwei Spiegeln läuft die Lawine hin und her; ein
+teildurchlässiger Spiegel koppelt einen Teil als Strahl aus. Die Wellenlänge ist durch die
+Energiedifferenz der Neon-Niveaus festgelegt:
+
+$ lambda = frac(h c, Delta E) approx 633 "nm" quad ("rotes Licht") $
+
+Damit ist Laserlicht monochromatisch, kohärent und stark gebündelt – Eigenschaften, die
+gewöhnliches Lampenlicht nicht gleichzeitig hat. Technische Anwendungen sind das Schneiden und
+Schweißen, Entfernungsmessung, Barcode-Leser und Augenoperationen.
+
 = Aufgaben
 
-#aufgabe(1, punkte: 12)[
-  Die Franck-Hertz-Kurve mit Quecksilber zeigt Minima bei 10,4 V, 15,3 V, 20,2 V und 25,1 V.
+#aufgabe(1, punkte: 12, afb: "II")[
+  Die Franck-Hertz-Kurve mit Quecksilber zeigt Maxima bei ca. 6,0 V, 10,9 V, 15,8 V und 20,7 V.
 
   #enum(
-    [Bestimmen Sie Anregungsspannung und Kontaktspannung.],
+    [Bestimmen Sie die Anregungsspannung aus dem Abstand der Maxima.],
     [Berechnen Sie die Wellenlänge der emittierten Strahlung.],
-    [Erklären Sie, warum das Gas beim Versuch leuchtet.]
+    [Erklären Sie, warum das Gas beim Versuch leuchtet und warum das erste Maximum nicht
+     bei 4,9 V liegt.]
   )
 ]
 
 #lösung[
-  (1) $U_n$ gegen $n$: Steigung $4","90$ V, Achsenabschnitt $5","50$ V. Also
-  $Delta U = 4","90$ V (Anregung) und $U_"K" = 5","50$ V (Kontaktspannung).
+  (1) $U_n$ gegen $n$: Steigung $4","90$ V. Also $Delta U = 4","90$ V (Anregung).
 
   (2) $Delta E = 4","90$ eV, $lambda = 1239","8\/4","90 = 253$ nm – die bekannte
   Hg-UV-Linie.
@@ -176,7 +210,7 @@ der Beweis, dass die Atome nur feste Energiebeträge aufnehmen.
   Übergänge im Sichtbaren liegen; dort sieht man die Leuchtschicht direkt.
 ]
 
-#aufgabe(2, punkte: 10)[
+#aufgabe(2, punkte: 10, afb: "II")[
   Ein Wasserstoffgas wird mit weißem Licht durchstrahlt.
 
   #enum(
@@ -196,6 +230,20 @@ der Beweis, dass die Atome nur feste Energiebeträge aufnehmen.
   angeregte Atome. Daher sind Balmer-Absorptionen bei Raumtemperatur schwach.
 ]
 
+#aufgabe(3, punkte: 12, afb: "III")[
+  Die Franck-Hertz-Kurve ist gegenüber dem idealisierten Modell um etwa 1,1 V verschoben.
+  Beurteilen Sie, warum man trotzdem die Anregungsenergie 4,9 eV ablesen kann, und erklären
+  Sie den Unterschied zwischen Steigung und Achsenabschnitt.
+]
+
+#lösung[
+  Die Verschiebung addiert zu jedem Maximum denselben Betrag $U_0$ (Gegenspannung plus
+  Kontaktpotenzial). Die Differenz zweier benachbarter Maxima bleibt deshalb $Delta U = 4","9$ V;
+  die Anregungsenergie folgt aus der Steigung, nicht aus dem absoluten Wert eines Maximums.
+  Der Achsenabschnitt $U_0$ ist keine Anregungsspannung und darf nicht als solche gelesen
+  werden. Erst die Steigung $Delta U$ ergibt $Delta E = e Delta U = 4","9$ eV.
+]
+
 = Typische Fehler
 
 #table(
@@ -204,7 +252,7 @@ der Beweis, dass die Atome nur feste Energiebeträge aufnehmen.
   [Seriengrenze = Ionisationsgrenze], [Serie: Ziel $m$ fest, Start $n -> infinity$],
   [Energie in eV und Wellenlänge in m ohne Umrechnung], [$lambda$ in nm mit $h c = 1239","8$],
   [„Franck-Hertz zeigt, dass Elektronen Wellen sind“], [er zeigt diskrete Anregungsenergien],
-  [Minimaabstand als Kontaktspannung gedeutet], [Achsenabschnitt ist $U_"K"$, Steigung $Delta U$],
+  [Maximaabstand als Kontaktspannung gedeutet], [Steigung ist $Delta U$; der Achsenabschnitt $U_0$ ist Gegenspannung plus Kontaktpotenzial],
   [Absorptionslinien als hell beschrieben], [Absorption = dunkle Linien],
 )
 
@@ -217,7 +265,7 @@ der Beweis, dass die Atome nur feste Energiebeträge aufnehmen.
   [Übergang], [$Delta E = E_m - E_n$],
   [Seriengrenze], [$lambda_"min" = 1239","8 \/ |E_"Ziel"|$],
   [Röntgengrenze], [$lambda_min = 1239","8 \/ U_B$],
-  [Franck-Hertz], [$U_n = n Delta U + U_"K"$],
+  [Franck-Hertz], [$U_n = n Delta U + U_0$],
   [Anregungsenergie], [$Delta E = e Delta U$],
   [Photon oder Elektron], [Photon exakt, Elektron mindestens $Delta E$],
 )
@@ -235,9 +283,12 @@ als die Absorption sein kann; warum Linien diskret sind.
 ]
 
 #quelle[
-  *Quellen.*
-  - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 13.
-  - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
+  *Quellen (Abruf 2026-11-02).*
+  - Emissionsspektren: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/05emissionsspektren/docs.md
+  - Absorptionsspektren: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/06absorptionsspektren/docs.md
+  - Röntgenspektrum: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/08roentgenspektrum/docs.md
+  - Franck-Hertz: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/07franckhertz/docs.md
+  - Kerncurriculum Physik Niedersachsen 2022: https://cuvo.nibis.de/
   - CODATA 2018; Rydberg-Konstante $R = 1","097 dot 10^7$ 1/m.
-- Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
+  - Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

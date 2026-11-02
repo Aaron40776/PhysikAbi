@@ -78,7 +78,7 @@ Trägt man die gemessenen Gegenspannungen $U_B$ über der Frequenz auf, liegen d
   *Beobachtung.* $U_B$ wächst linear mit $f$; unterhalb $f_G$ kein Strom. \
   *Auswertung/Formel.* Steigung $m$ der $U_B$-$f$-Geraden: $h = m e$; Achsenabschnitt $b$:
   $W_A = -b e$. \
-  *Bedeutung.* Erste direkte Messung von $h$ aus dem Photoeffekt.
+  *Bedeutung.* Eine der ersten präzisen Messungen von $h$ aus dem Photoeffekt.
 ]
 
 #figure(
@@ -111,8 +111,8 @@ Trägt man die gemessenen Gegenspannungen $U_B$ über der Frequenz auf, liegen d
 
 = Aufgaben
 
-#aufgabe(1, punkte: 10)[
-  Eine Cäsium-Kathode ($W_A = 1","94$ eV) wird mit Licht der Wellenlänge 400 nm beleuchtet.
+#aufgabe(1, punkte: 10, afb: "II")[
+  Eine Cäsium-Kathode ($W_A = 2","14$ eV) wird mit Licht der Wellenlänge 400 nm beleuchtet.
 
   #enum(
     [Berechnen Sie die Photonenenergie in eV.],
@@ -124,14 +124,16 @@ Trägt man die gemessenen Gegenspannungen $U_B$ über der Frequenz auf, liegen d
 #lösung[
   (1) $E = frac(1239","8, 400) = 3","10$ eV.
 
-  (2) $E_"kin,max" = 3","10 - 1","94 = 1","16$ eV, also $U_B = 1","16$ V.
+  (2) $E_"kin,max" = 3","10 - 2","14 = 0","96$ eV, also $U_B = 0","96$ V.
 
-  (3) $lambda_G = frac(1239","8, 1","94) = 639$ nm. Längerwelliges Licht löst keine Elektronen
-  aus, auch bei beliebiger Intensität.
+  (3) $lambda_G = frac(1239","8, 2","14) = 579$ nm. Längerwelliges Licht löst keine Elektronen
+  aus, auch bei beliebiger Intensität. Der Handbuchwert ist 2,14 eV; die Quellenmessung
+  (536 nm, 0,18 V) ergibt 2,13 eV.
 ]
 
-#aufgabe(2, punkte: 12)[
-  Bei der Gegenfeldmethode werden gemessen:
+#aufgabe(2, punkte: 12, afb: "II")[
+  Bei der Gegenfeldmethode werden Beispieldaten einer didaktischen Messreihe verwendet
+  (die Quelle nennt für Cäsium 536 nm/0,18 V und für Platin 201 nm/0,53 V):
 
   #table(
     columns: 4,
@@ -147,13 +149,28 @@ Trägt man die gemessenen Gegenspannungen $U_B$ über der Frequenz auf, liegen d
 ]
 
 #lösung[
-  (1) Die Punkte liegen auf einer Geraden; Steigung $m = 4","11 dot 10^(-15)$ V s,
-  Achsenabschnitt $b = -1","88$ V.
+  (1) Die Punkte liegen auf einer Geraden; Steigung $m = 4","13 dot 10^(-15)$ V s,
+  Achsenabschnitt $b = -1","90$ V.
 
-  (2) $h = m e = 4","11 dot 10^(-15) dot 1","602 dot 10^(-19) = 6","59 dot 10^(-34)$ J s. Der
-  Literaturwert ist 6,626; die Abweichung von 0,6 % ist bei drei Messpunkten normal.
+  (2) $h = m e = 4","13 dot 10^(-15) dot 1","602 dot 10^(-19) = 6","62 dot 10^(-34)$ J s. Der
+  Literaturwert ist 6,626; die Abweichung von 0,1 % ist bei drei Messpunkten normal.
 
-  (3) $W_A = -b e = 1","88$ eV, $f_G = -b\/m = 4","58 dot 10^14$ Hz ($lambda_G = 655$ nm).
+  (3) $W_A = -b e = 1","90$ eV, $f_G = -b\/m = 4","60 dot 10^14$ Hz ($lambda_G = 653$ nm).
+]
+
+#aufgabe(3, punkte: 10, afb: "III")[
+  Eine Fotozelle wird erst mit rotem, dann mit blauem Licht gleicher Intensität beleuchtet.
+  Beurteilen Sie die Aussage: „Mehr Intensität erhöht die Energie der Photoelektronen.“
+  Begründen Sie mit der Einstein-Gleichung und unterscheiden Sie Photonenstrom und
+  Photonenenergie.
+]
+
+#lösung[
+  Die Aussage ist falsch. Die maximale kinetische Energie folgt aus
+  $h f = W_A + E_"kin,max"$; sie hängt nur von $f$ und $W_A$ ab. Mehr Intensität bedeutet mehr
+  Photonen pro Sekunde, also einen größeren Photonenstrom und mehr Elektronen – aber nicht
+  schnellere einzelne Elektronen. Blaues Licht hat eine höhere Frequenz und damit eine größere
+  maximale Energie als rotes.
 ]
 
 = Typische Fehler
@@ -193,10 +210,9 @@ $f$ eine Gerade ist; warum der Photoeffekt sofort einsetzt.
 ]
 
 #quelle[
-  *Quellen.*
-  - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12,
-    „Quantenphysik“.
-  - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
+  *Quellen (Abruf 2026-11-02).*
+  - Photoeffekt/Planck-Konstante: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/05planckkonstante/docs.md
+  - Kerncurriculum Physik Niedersachsen 2022: https://cuvo.nibis.de/
   - CODATA 2018 für $h$, $c$, $e$.
-- Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
+  - Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

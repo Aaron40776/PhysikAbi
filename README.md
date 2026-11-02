@@ -1,17 +1,20 @@
 # PhysikAbi
 
-Lernskripte für das Abitur im Fach Physik, Niedersachsen, erhöhtes Anforderungsniveau
-(Vorabitur 2026, Abitur 2027). **17 PDFs, 112 Seiten**: sieben Themenskripte, zwei Übungshefte (20 Aufgaben,
-Diagrammauswertung), Formelblatt, Experimentesammlung, Abitur-Analyse, Gesamtübersicht,
-Regression, Lernfahrplan, Lernzettel und Glossar.
+Lernskripte für den **Vorabi-Schwerpunkt** im Fach Physik, Niedersachsen, erhöhtes
+Anforderungsniveau (Vorabitur 2026, Abitur 2027): Wellen, Quantenphysik und Atomhülle.
+**Sieben Kernkapitel** bilden die Website; dazu kommen Übungshefte, Formelblatt,
+Experimentesammlung, Lernfahrplan und Glossar als Zusatzmaterial.
+
+Nicht enthalten sind elektrische und magnetische Felder sowie Atomkern und Radioaktivität.
+Dafür bleiben die Unterrichtsmaterialien der Schule maßgeblich.
 
 ### [→ Skripte online lesen](https://aaron40776.github.io/PhysikAbi/)
 
-Die Seite hat eine Volltextsuche über alle 112 Seiten: Fundstellen werden als Ausschnitt mit
+Die Seite hat eine Volltextsuche über die sieben Kernkapitel: Fundstellen werden als Ausschnitt mit
 markiertem Suchwort angezeigt. Ein Klick öffnet die **HTML-Lesefassung** an der richtigen Stelle
 und markiert das Suchwort im Text. Dazu Inhaltsverzeichnis je Dokument (springt direkt zum
 Abschnitt), eine mobile Leseansicht mit einheitlicher Typografie, Abbildungen zum Vergrößern,
-„Weiterlesen“, Lernstand („gelesen“), ein durchsuchbares Glossar mit 104 Begriffen, ein
+„Weiterlesen“, Lernstand („gelesen“), ein durchsuchbares Glossar mit 92 Begriffen, ein
 Hell-/Dunkel-Umschalter und alle PDFs als ZIP zum Mitnehmen.
 
 ## Inhalt
@@ -19,11 +22,24 @@ Hell-/Dunkel-Umschalter und alle PDFs als ZIP zum Mitnehmen.
 | Ordner | Was drin ist |
 |---|---|
 | `Physik_Vorabi_2026/03_Lernskripte/` | 7 Themenskripte: Wellen/Interferenz, Lichtquanten, Elektronenwellen, Doppelspalt, Mach-Zehnder, Atommodelle, Spektren/Franck-Hertz |
-| `Physik_Vorabi_2026/04_Zusatzmaterial/` | Zwei Übungshefte (20 Aufgaben, Diagrammauswertung), Formelblatt, Experimentesammlung, Gesamtübersicht, Abitur-Analyse, Regression und Auswertung, Lernfahrplan, Last-Minute-Lernzettel, Glossar |
+| `Physik_Vorabi_2026/04_Zusatzmaterial/` | Zusatzmaterial, nicht Teil der Website: zwei Übungshefte (20 Aufgaben, Diagrammauswertung), Formelblatt, Experimentesammlung, Gesamtübersicht, Abitur-Analyse, Regression und Auswertung, Lernfahrplan, Last-Minute-Lernzettel, Glossar |
 | `Physik_Vorabi_2026/01_Schulwebsite/` | Spiegel der Unterrichtsmaterialien von [physik.gym-wst.de](https://www.physik.gym-wst.de) als Grundlage der Quellenarbeit |
 | `Physik_Vorabi_2026/02_Abiturrecherche/` | Auswertung von 12 Aufgaben aus dem IQB-Pool 2025/2026 |
-| `Physik_Vorabi_2026/06_Qualitaetskontrolle/` | [Prüfbericht](Physik_Vorabi_2026/06_Qualitaetskontrolle/pruefbericht.md) mit allen Befunden, Belegen und offenen Punkten |
+| `Physik_Vorabi_2026/06_Qualitaetskontrolle/` | [Prüfbericht Website](Physik_Vorabi_2026/06_Qualitaetskontrolle/pruefbericht_website.md) und [Prüfbericht Skripte](Physik_Vorabi_2026/06_Qualitaetskontrolle/pruefbericht.md) mit Befunden, Belegen und offenen Punkten |
 | `Physik_Vorabi_2026/build/` | Typst-Quellen, Layout-Vorlage, Figuren- und Build-Skripte |
+
+## Umfang und Rechte
+
+Die Website ist die geordnete, quellentreue Fassung der Schulseite
+[physik.gym-wst.de](https://www.physik.gym-wst.de). Übernommen werden nur Seiten, die oben eine
+KC-Box (`> **Bezug zum Kerncurriculum:**`) tragen. Der übrige Stoff der Schulseite – besonders
+elektrische/magnetische Felder und Atomkern/Radioaktivität – ist bewusst nicht Teil dieses
+Projekts.
+
+Die Inhalte stammen aus dem Unterricht am Gymnasium Westerstede und dürfen nach Angabe des
+Repository-Inhabers für dieses Lernprojekt verwendet werden; die Quellenangabe steht auf jeder
+Seite. Einzelheiten: [NUTZUNGSERLAUBNIS.md](NUTZUNGSERLAUBNIS.md). Der Quellcode steht unter
+[MIT](LICENSE).
 
 ## Prüfstand
 
@@ -40,9 +56,9 @@ Abschnitt 15.
 Voraussetzung: Typst 0.15+ und Python 3 mit matplotlib (nur für neue Grafiken), pymupdf, cairosvg, pint und sympy für die Prüfskripte.
 
 ```bash
-cd Physik_Vorabi_2026/build
-./build_all.sh      # baut alle 17 PDFs nach 03_Lernskripte/ und 04_Zusatzmaterial/
-python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
+cd Physik_Vorabi_2026
+TYPST=/pfad/zu/typst build/build_all.sh   # baut die Kapitel-PDFs; ohne TYPST wird typst im PATH gesucht
+python3 build/qa_pdf.py 03_Lernskripte/*.pdf 04_Zusatzmaterial/*.pdf
 ```
 
 Website (Übersicht, Volltextindex, PDF-Ansicht):

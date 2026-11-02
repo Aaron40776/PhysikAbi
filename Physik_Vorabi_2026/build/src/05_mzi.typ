@@ -100,6 +100,10 @@ entscheidet, ob Interferenz oder Welcher-Weg sichtbar wird. Das ist keine Signal
 schneller als Licht und keine Änderung der Vergangenheit, sondern die quantenmechanische
 Beschreibung des ganzen Experiments.
 
+Die Anordnung ist zugleich eine Anwendung der Quantenphysik: Sie zeigt, dass Welcher-Weg-
+Information und Interferenz komplementär sind, und sie wird in verschränkten Systemen als
+Quantenradierer genutzt – wird die Markierung gelöscht, erscheint die Interferenz wieder.
+
 #achtung[
   Dabei wird die Vergangenheit *nicht* geändert. Beobachtet wird:
   - Detektor aus: Interferenz.
@@ -113,7 +117,7 @@ Beschreibung des ganzen Experiments.
 
 = Aufgaben
 
-#aufgabe(1, punkte: 10)[
+#aufgabe(1, punkte: 10, afb: "II")[
   In einem MZI wird das Phasenplättchen so gedreht, dass $Delta phi = 60°$ entsteht.
 
   #enum(
@@ -130,7 +134,7 @@ Beschreibung des ganzen Experiments.
   Detektor.
 ]
 
-#aufgabe(2, punkte: 10)[
+#aufgabe(2, punkte: 10, afb: "II")[
   In Weg 1 des MZI steht ein Polarisator, in Weg 2 nicht.
 
   #enum(
@@ -145,6 +149,19 @@ Beschreibung des ganzen Experiments.
 
   (2) Nein. Der Polarisator lässt einen Teil der Amplitude durch; die Interferenz verschwindet
   allein deshalb, weil die Weginformation verfügbar ist.
+]
+
+#aufgabe(3, punkte: 12, afb: "III")[
+  In populären Darstellungen heißt es, das Photon „entscheide sich nachträglich“, ob es Welle
+  oder Teilchen sei. Bewerten Sie diese Formulierung mithilfe des Delayed-Choice-Aufbaus.
+]
+
+#lösung[
+  Die Formulierung ist irreführend. Das Photon hat vor der Messung keinen festen Zustand
+  „Welle“ oder „Teilchen“; der Zustand beschreibt beide Möglichkeiten. Erst die gesamte
+  Anordnung – einschließlich der späteren Wahl des Detektors – legt fest, welche Eigenschaft
+  sichtbar wird. Es gibt keine Signalübertragung in die Vergangenheit und keine nachträgliche
+  Änderung eines schon abgelaufenen Ereignisses.
 ]
 
 = Typische Fehler
@@ -182,8 +199,11 @@ Kausalitätsverletzung ist.
 ]
 
 #quelle[
-  *Quellen.*
-  - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 13.
-  - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
-- Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
+  *Quellen (Abruf 2026-11-02).*
+  - Mach-Zehnder: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/06machzehnderinterferometer/docs.md
+  - MZI-Labor: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/07mzilabor/docs.md
+  - Welcher Weg: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/08welcherweg/docs.md
+  - Delayed Choice: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/10delayedchoice/docs.md
+  - Kerncurriculum Physik Niedersachsen 2022: https://cuvo.nibis.de/
+  - Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

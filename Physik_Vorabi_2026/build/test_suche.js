@@ -30,9 +30,9 @@ function pruefe(name, fn) {
 S.laden().then((idx) => {
   const dok = (id) => idx.docs.findIndex((d) => d.id === id);
 
-  pruefe("7 Kernkapitel, 53 Seiten", () => {
+  pruefe("7 Kernkapitel, 56 Seiten", () => {
     assert.strictEqual(idx.docs.length, 7);
-    assert.strictEqual(idx.docs.reduce((s, d) => s + d.n, 0), 53);
+    assert.strictEqual(idx.docs.reduce((s, d) => s + d.n, 0), 56);
     idx.docs.forEach((d) => {
       assert.strictEqual(idx.seiten[dok(d.id)].length, d.n, "Seitenzahl " + d.id);
     });
@@ -71,12 +71,12 @@ S.laden().then((idx) => {
     assert(aus.startsWith("…"), aus);
   });
 
-  pruefe("Bragg: Skript 1, Seite 8, Überschrift zuerst", () => {
+  pruefe("Bragg: Skript 1, Seite 10, Überschrift zuerst", () => {
     const e = S.suche("Bragg", 3);
     assert(e && e.anzahl > 5, "Treffer");
     const g = e.gruppen[0];
     assert.strictEqual(g.doc.id, "01_Wellen_und_Interferenz");
-    assert.strictEqual(g.treffer[0].seite, 8, "Überschrift auf Seite 8 zuerst");
+    assert.strictEqual(g.treffer[0].seite, 10, "Überschrift auf Seite 10 zuerst");
     assert(g.treffer.every((t) => S.ausschnitt(t.text, e.tokens).includes("<mark>")), "jeder Treffer markiert");
   });
 

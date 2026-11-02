@@ -32,11 +32,12 @@
 #let herleitung(body) = box("Herleitung", rgb("#5B2C87"), col-bg-herl, body)
 #let prüfung(body) = box("Prüfungsrelevanz", col-primary, rgb("#EAEDF5"), body)
 
-#let aufgabe(nr, punkte: none, body) = block(
+#let aufgabe(nr, punkte: none, afb: none, body) = block(
   width: 100%, inset: 8pt, radius: 3pt, above: 12pt, below: 8pt,
   stroke: 0.7pt + col-primary, fill: white, breakable: true,
 )[
   #text(fill: col-primary, weight: "bold")[Aufgabe #nr]
+  #if afb != none [#h(1.2em) #text(fill: col-primary, size: 9pt)[AFB #afb]]
   #if punkte != none [#h(1fr) #text(fill: col-primary, size: 9pt)[#punkte P.]]
   #v(-2pt)
   #body

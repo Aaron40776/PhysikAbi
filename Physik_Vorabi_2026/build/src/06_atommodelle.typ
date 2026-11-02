@@ -21,8 +21,8 @@
 #experiment[
   *Aufbau.* Alphaquelle, dünne Goldfolie, drehbarer Detektor im Vakuum. \
   *Durchführung.* Zählrate unter verschiedenen Winkeln messen. \
-  *Beobachtung.* Die meisten Alpha-Teilchen fliegen fast ungestört durch; etwa 1 von 8000 wird
-  um mehr als 90° gestreut. \
+  *Beobachtung.* Die meisten Alpha-Teilchen fliegen fast ungestört durch; nur sehr wenige werden
+  um mehr als 90° gestreut (die Quelle nennt keine Zahl; die Literatur oft etwa 1 von 8000). \
   *Erklärung.* Der Kern ist klein und trägt fast die ganze Masse und die positive Ladung;
   nahe am Kern wirkt die Coulomb-Abstoßung stark. \
   *Bedeutung.* Kern-Hülle-Modell; Kernradius etwa $10^(-14)$ m, Atomradius etwa $10^(-10)$ m.
@@ -51,9 +51,13 @@ Die Bahnen krümmen sich nur bei kleinem Stoßparameter stark; bei großem Absta
 = Das bohrsche Modell
 
 #definition[
-  *Postulat 1:* Elektronen bewegen sich auf Kreisbahnen ohne Strahlung (stationäre Zustände).
-  *Postulat 2:* Der Drehimpuls ist quantisiert, $L = n h/(2 pi)$.
-  *Postulat 3:* Strahlung entsteht nur beim Wechsel zwischen Zuständen, $h f = E_m - E_n$.
+  *Postulat 1:* Elektronen bewegen sich nur auf bestimmten erlaubten Kreisbahnen; jede Bahn
+  entspricht einem Energieniveau $E_n$ mit $n = 1, 2, 3, dots$ \
+  *Postulat 2:* Auf einer erlaubten Bahn kreist das Elektron strahlungsfrei mit konstanter
+  Bahngeschwindigkeit $v_n$. Die Quantenbedingung $n lambda = 2 pi r_n$ mit $lambda = h/(m_e v_n)$
+  folgt daraus (de Broglie); sie ist kein zusätzliches Postulat. \
+  *Postulat 3:* Energie wird nur beim Übergang zwischen erlaubten Niveaus aufgenommen oder
+  abgegeben (Quantensprung), $h f = |E_m - E_n|$.
 ]
 
 #herleitung[
@@ -62,7 +66,7 @@ Die Bahnen krümmen sich nur bei kleinem Stoßparameter stark; bei großem Absta
 
   $ frac(1, 4 pi epsilon_0) frac(e^2, r^2) = frac(m_e v^2, r) $
 
-  2. Quantisierung: $m_e v r = n h/(2 pi)$.
+  2. Folgerung aus Postulat 2 (de Broglie): $m_e v r = n h/(2 pi)$.
   3. $v$ einsetzen und nach $r$ auflösen:
 
   $ r_n = frac(4 pi epsilon_0 (h/(2 pi))^2, m_e e^2) n^2 = r_1 n^2, quad r_1 = 5","29 dot 10^(-11) "m" $
@@ -166,7 +170,7 @@ einer Achse.
 
 = Aufgaben
 
-#aufgabe(1, punkte: 10)[
+#aufgabe(1, punkte: 10, afb: "II")[
   Ein Wasserstoffatom wird vom Zustand $n = 1$ in $n = 3$ angeregt.
 
   #enum([Berechnen Sie die Anregungsenergie.], [Berechnen Sie die Wellenlänge der
@@ -181,7 +185,7 @@ einer Achse.
   (3) $3 -> 1$: 102,6 nm; $3 -> 2$: 656 nm; $2 -> 1$: 121,6 nm.
 ]
 
-#aufgabe(2, punkte: 12)[
+#aufgabe(2, punkte: 12, afb: "II")[
   Ein Elektron ist in einem Kasten der Breite $L = 1","0$ nm.
 
   #enum(
@@ -194,10 +198,23 @@ einer Achse.
 #lösung[
   (1) $E_1 = frac(h^2, 8 m_e L^2) = 0","376$ eV, $E_2 = 4 E_1 = 1","50$ eV.
 
-  (2) $Delta E = 1","13$ eV, $lambda = frac(1239","8, 1","13) = 1097$ nm.
+  (2) $Delta E = 1","128$ eV, $lambda = frac(1239","8, 1","128) = 1099$ nm.
 
   (3) Im Wasserstoff ist das Potenzial Coulomb-förmig, nicht kastenförmig; dort gilt
   $E_n tilde -1\/n^2$ (Niveaus rücken zusammen) statt $+n^2$.
+]
+
+#aufgabe(3, punkte: 12, afb: "III")[
+  Vergleichen Sie das bohrsche Modell mit dem Orbitalmodell und begründen Sie, warum das
+  bohrsche Modell für Mehrelektronenatome versagt.
+]
+
+#lösung[
+  Bohr beschreibt ein Elektron auf einer definierten Kreisbahn mit quantisiertem Drehimpuls;
+  das erklärt die Wasserstoffniveaus, aber nicht die Aufspaltung in Mehrelektronenatomen. Im
+  Orbitalmodell gibt es keine Bahn, sondern eine Aufenthaltswahrscheinlichkeit $|psi|^2$;
+  Elektronen besetzen Orbitale nach Pauli-Prinzip und Energie. Die Elektron-Elektron-Abstoßung
+  und die Abschirmung des Kerns machen das Einelektronen-Bild unbrauchbar.
 ]
 
 = Typische Fehler
@@ -240,9 +257,12 @@ bleibt.
 ]
 
 #quelle[
-  *Quellen.*
-  - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12/13.
-  - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
+  *Quellen (Abruf 2026-11-02).*
+  - Rutherford: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/01rutherfordmodell/docs.md
+  - Bohr: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/02bohrmodell/docs.md
+  - Quantenmodell: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/03quantenmodell/docs.md
+  - Orbitalmodell: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/04orbitalmodell/docs.md
+  - Kerncurriculum Physik Niedersachsen 2022: https://cuvo.nibis.de/
   - CODATA 2018 für $h$, $m_e$, $e$, $epsilon_0$.
-- Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
+  - Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

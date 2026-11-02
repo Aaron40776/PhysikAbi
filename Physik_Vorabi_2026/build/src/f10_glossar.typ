@@ -6,7 +6,7 @@
 #cover(
   "Zusatzmaterial · Nachschlagen",
   "Glossar Physik",
-  "104 Begriffe von Amplitude bis Zählrate – alphabetisch, mit Formelzeichen und Kurzerklärung",
+  "92 Begriffe von Amplitude bis Zählrate – alphabetisch, mit Formelzeichen und Kurzerklärung",
   lernziele: (
     "Begriffe präzise verwenden statt nur wiedererkennen",
     "Formelzeichen und Einheiten sicher zuordnen",
