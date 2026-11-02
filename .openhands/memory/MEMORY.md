@@ -81,6 +81,7 @@
   `matplotlib`, `cairosvg`, `pint`, `sympy` ggf. per pip nachinstallieren.
 ## Neu 01.11.2026
 - HTML-Leser: `build/make_lesen.py` (Typst-HTML) + `build/lesen/`; `make_pages.py` kopiert nach `_site/lesen/`.
-- MZI-Grafik korrigiert (Würfel-Strahlteiler, Spiegel); `check_figs.py` regeneriert **alle** SVGs → danach nicht geänderte zurücksetzen.
+- MZI: Skript 5 nutzt die Originalabbildung `build/fig/mzi_source.png` (Quelle: Physik gym-wst, `mzi01.png`); das alte `mzi.svg` ist ungenutzt. `check_figs.py` regeneriert **alle** SVGs → danach nicht geänderte zurücksetzen.
+- Browser-E2E: `build/test_browser.py` (Playwright/Chromium) prüft Startseite, Suche, Glossar, Reader, alle 16 Leseseiten mobil/Desktop und ZIP; in `check_all.sh` und Pages-Workflow. Lokal `PHYSIK_CHROMIUM=/usr/bin/chromium` setzen, wenn Playwright-Browser fehlt.
 - `check_sources.py`/`check_markdown.py` aus `build/` starten.
 - Glossar: `glossar.html?q=…` filtert und springt zum exakten Begriff; Suchtreffer nutzen `#glossar-<slug>`. Nie die Klasse `treffer` für Glossareinträge verwenden: global `.treffer` wird mobil per CSS ausgeblendet.
