@@ -3,7 +3,7 @@
 
 Aufruf: python3 build/test_pages.py
 """
-import json, pathlib, re, shutil, subprocess, sys, tempfile, zipfile
+import html, json, pathlib, re, shutil, subprocess, sys, tempfile, urllib.parse, zipfile
 
 BUILD = pathlib.Path(__file__).resolve().parent
 ROOT = BUILD.parent
@@ -15,6 +15,30 @@ DATEIEN = ("index.html", "suche.html", "glossar.html", "lesen.html", "suche.json
 SEITEN = 112
 
 pruefungen = []
+
+
+def pruefe_links(root):
+    fehler = []
+    for datei in root.rglob("*.html"):
+        quelle = datei.read_text(encoding="utf-8")
+        ids = set(re.findall(r'\bid="([^"]+)"', quelle))
+        for roh in re.findall(r'<a\b[^>]*\bhref="([^"]*)"', quelle, re.I):
+            href = html.unescape(roh)
+            ziel = urllib.parse.urlsplit(href)
+            if ziel.scheme or href.startswith("//") or href.startswith("mailto:"):
+                continue
+            pfad = urllib.parse.unquote(ziel.path)
+            zieldatei = datei if not pfad else (datei.parent / pfad).resolve()
+            if zieldatei.is_dir():
+                zieldatei = zieldatei / "index.html"
+            if not zieldatei.exists():
+                fehler.append(f"{datei.relative_to(root)} -> {href} (Datei fehlt)")
+                continue
+            if ziel.fragment and zieldatei.suffix == ".html":
+                zielids = set(re.findall(r'\bid="([^"]+)"', zieldatei.read_text(encoding="utf-8")))
+                if urllib.parse.unquote(ziel.fragment) not in zielids:
+                    fehler.append(f"{datei.relative_to(root)} -> {href} (Anker fehlt)")
+    return fehler
 
 
 def pruefe(name, bedingung, zusatz=""):
@@ -119,9 +143,17 @@ def main():
                all('viewport-fit=cover' in h
                    for h in (index_html, suche_html, glossar_html, lesen_html))
                and all('viewport-fit=cover' in h for h in lese_seiten.values()))
+        pruefe("Alle internen Links und Anker gültig", not pruefe_links(ziel),
+               pruefe_links(ziel)[:5])
         pruefe("Glossar verlinkt", 'glossar.html' in index_html + suche_html + glossar_html)
         pruefe("104 Glossarbegriffe", glossar_html.count('class="glossar-eintrag"') == 104,
                glossar_html.count('class="glossar-eintrag"'))
+        glossar_links = re.findall(r'class="glossar-suche" href="([^"]+)"', glossar_html)
+        glossar_ids = re.findall(r'<dt id="(glossar-[^"]+)">', glossar_html)
+        pruefe("Glossar: 104 eindeutige Einträge und Volltextlinks",
+               len(glossar_links) == 104 and len(set(glossar_ids)) == 104
+               and all(h.startswith("suche.html?q=") for h in glossar_links),
+               (len(glossar_links), len(set(glossar_ids))))
         pruefe("Glossar alphabetisch", all(f'id="glossar-{b}"' in glossar_html
                for b in "ABCDEFGHIKLMNOPQRSTUVWZ"))
         pruefe("Glossar filterbar", 'data-suche=' in glossar_html and

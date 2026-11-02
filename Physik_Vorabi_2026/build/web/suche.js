@@ -253,6 +253,12 @@
     return "";
   }
 
+  function glossarSlug(begriff) {
+    return begriff.toLowerCase()
+      .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+      .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  }
+
   function ziel(doc, seite, q) {
     var basis = doc.id === "Glossar"
       ? "glossar.html"
@@ -267,6 +273,9 @@
       }
       if (ziel < 0) ziel = 0;
       anker = "#loc-" + (ziel + 1);
+    } else if (doc.id === "Glossar") {
+      var voll = (q || "").trim().replace(/^"|"$/g, "");
+      if (voll && !/\s/.test(voll)) anker = "#glossar-" + glossarSlug(voll);
     }
     return basis + (begriff ? "?q=" + encodeURIComponent(begriff) : "") + anker;
   }

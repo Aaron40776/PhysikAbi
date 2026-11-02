@@ -538,3 +538,9 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Prüfstand:** `qa_pdf.py` 17 PDFs/112 Seiten/21.751 Wörter/0 Befunde;
   `check_lesen_vollstaendig.py` 16/16; `test_pages.py` 46/46; `test_suche.js` 18/18;
   `check_physics.py` 14/14; Darkmode und Dialog im Chromium geprüft.
+
+## Nachtrag 28 (01.11.2026) – Glossar-Navigation repariert
+
+- **Fehler:** Links aus der Suche auf `glossar.html?q=…` ignorierten den Suchparameter; Nutzer landeten am Glossaranfang. Zusätzlich kollidierte die Hervorhebungsklasse `treffer` mit der globalen Trefferzahl und blendete den markierten Eintrag auf schmalen Geräten aus.
+- **Fix:** `glossar.js` übernimmt `?q=`, filtert, springt zum exakten Begriff und hebt ihn mit `.glossar-treffer` hervor; A–Z setzt einen aktiven Filter zurück. `suche.js` hängt bei exakten Ein-Wort-Begriffen `#glossar-<slug>` an.
+- **Prüfung:** `test_pages.py` 48/48, `test_suche.js` 19/19; 674 interne Links/Anker ohne Fehler; alle 104 Glossarbegriffe, 104 Volltextlinks und 104 Filter-/Highlight-Fälle im Chromium geprüft; mobil 390 px ohne Überlauf.

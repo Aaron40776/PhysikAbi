@@ -147,6 +147,24 @@ S.laden().then((idx) => {
     assert(S.ziel(idx.docs[dok("Glossar")], 2, "Bragg").startsWith("glossar.html"));
   });
 
+  pruefe("Glossartreffer springen zum richtigen Eintrag", () => {
+    const glossar = idx.docs[dok("Glossar")];
+    assert.strictEqual(S.ziel(glossar, 2, "Intensität"),
+      "glossar.html?q=Intensit%C3%A4t#glossar-intensitaet");
+    assert.strictEqual(S.ziel(glossar, 2, "Bohr-Modell"),
+      "glossar.html?q=Bohr#glossar-bohr-modell");
+    assert(!S.ziel(glossar, 2, "Bohr Modell").includes("#glossar-bohr"), "kein falscher Anker");
+    const ids = new Set(Array.from(
+      fs.readFileSync(path.join(site, "glossar.html"), "utf8")
+        .matchAll(/<dt id="([^"]+)"/g), (m) => m[1]));
+    JSON.parse(fs.readFileSync(path.join(__dirname, "glossar.json"), "utf8")).forEach((e) => {
+      const u = S.ziel(glossar, 2, e.t);
+      const frag = u.split("#")[1] || "";
+      if (frag) assert(ids.has(frag), e.t + " -> " + u);
+      else assert(/\s/.test(e.t), "Anker fehlt: " + e.t);
+    });
+  });
+
   pruefe("Mehrwortsuche markiert den ersten Begriff", () => {
     const doc = idx.docs[0];
     assert(S.ziel(doc, 7, "Bragg Gitter").includes("q=Bragg"));

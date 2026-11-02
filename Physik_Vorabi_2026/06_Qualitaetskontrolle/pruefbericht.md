@@ -1207,3 +1207,21 @@ ST1→M2→ST2 und enden an D1/D2; die Armlängen sind 2+5 und 5+2.
 (polykristalline Graphitschicht, Ringe, innerer Ring \(d_1=2{,}13\cdot10^{-10}\,\mathrm{m}\)) und
 [Die HEISENBERGsche Unbestimmtheitsrelation](https://www.leifiphysik.de/quantenphysik/wesenszuege-quantenphysik/grundwissen/die-heisenbergsche-unbestimmtheitsrelation)
 (schmaler Spalt → große Impulsunbestimmtheit, breiter Spalt → kleine).
+
+### 15.12 Glossar-Navigation und rekursive Bedienprüfung (01.11.2026)
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| G1 | `build/web/glossar.js` | Der Glossar-Link `glossar.html?q=…` aus der Volltextsuche wurde ignoriert. Nutzer landeten auf dem Seitenanfang statt beim gesuchten Begriff. | `glossar.js` liest `?q=`, füllt das Filterfeld, filtert die Einträge und scrollt zum ersten Treffer. Exakte Begriffstreffer werden vor Treffern in Erklärungen bevorzugt. |
+| G2 | `build/web/glossar.js`, `build/web/style.css` | Die zunächst verwendete Hervorhebungsklasse `treffer` kollidierte mit der globalen Trefferzahl `.treffer`; auf schmalen Geräten wurde der markierte Eintrag dadurch ausgeblendet. | Eigene Klasse `.glossar-treffer`; auf Desktop und 390 px sichtbar geprüft. |
+| G3 | `build/web/suche.js` | Treffer der Glossarseite hatten keinen Anker; der Link führte nur auf `glossar.html`. | Exakte Ein-Wort-Begriffe bekommen `#glossar-<slug>`; die Glossarseite filtert zusätzlich über `?q=` und scrollt zum Treffer. |
+| G4 | `build/web/glossar.js` | Nach einem Filter konnte die A–Z-Navigation eine ausgeblendete Gruppe anspringen. | A–Z setzt den Filter zurück und springt dann zur gewählten Gruppe. |
+| G5 | `build/test_pages.py`, `build/test_suche.js` | Die Glossar-Navigation war nicht dauerhaft gegen Regressionen abgesichert. | Link-/Ankerprüfung für alle HTML-Seiten sowie Tests für Glossar-Zielanker, exakte Treffer und alle 104 Begriffe ergänzt. |
+
+**Prüfstand.** `test_pages.py`: **48/48**; `test_suche.js`: **19/19**;
+**674 interne Links und Anker** geprüft, 0 kaputt; **104 Glossarbegriffe**, 104
+Volltextlinks, 104 exakte Filter-/Highlight-Treffer; `check_lesen_vollstaendig.py`
+16/16; `check_physics.py` 14/14. Chromium: Glossar `?q=Intensität` springt zum
+Eintrag „Intensität“, Suchtreffer der Glossarseite führt zu
+`glossar.html?q=… #glossar-intensitaet`, A–Z und Filter funktionieren, Darkmode
+schaltet, 390-px-Ansicht ohne horizontalen Überlauf.

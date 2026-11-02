@@ -47,7 +47,7 @@ INHALTSPUNKTE = re.compile(r"(?:\.\s){6,}")
 
 def glossar_norm(text):
     t = text.lower().replace("ä", "a").replace("ö", "o").replace("ü", "u").replace("ß", "ss")
-    t = re.sub(r"[‐‑‒–—−]", "", t)
+    t = re.sub(r"[‐‑‒–—−-]", " ", t)
     return re.sub(r"\s+", " ", t).strip()
 
 
