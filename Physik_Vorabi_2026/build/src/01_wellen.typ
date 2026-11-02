@@ -5,7 +5,7 @@
 #cover(
   "Skript 1 · Schwingungen und Wellen",
   "Wellen und Interferenz",
-  "Schwingung, Wellengleichung, Interferenz, Doppelspalt, Gitter, Einzelspalt, Bragg",
+  "Schwingung, Wellengleichung, Interferenz, Doppelspalt, Gitter, Bragg, EM-Wellen, Polarisation, Michelson",
   lernziele: (
     "Schwingungen und Wellen mit den fünf Kenngrößen beschreiben",
     "die Wellengleichung aus der Laufzeit herleiten",
@@ -72,7 +72,7 @@ Ein voller Umlauf des Zeigers entspricht einer Wellenlänge; deshalb liest man d
 
 = Gedämpfte Schwingung und Resonanz
 
-$ A(t) = A_0 e^(-k t), quad delta = ln frac(A(t), A(t+T)) = k T $
+$ A(t) = A_0 e^(-k t), quad Lambda = ln frac(A(t), A(t+T)) = k T $
 
 #definition[
   *Resonanz:* Die Amplitude der erzwungenen Schwingung ist maximal, wenn die Erregerfrequenz
@@ -140,7 +140,7 @@ In der Grundschwingung schwingt die Mitte mit maximaler Amplitude, in der ersten
 = Doppelspalt
 
 #figure(
-  image("../fig/schule/s1_doppelspalt_geometrie.jpg", width: 84%),
+  image("../fig/schule/s1_doppelspalt_geometrie.png", width: 84%),
   caption: [Doppelspalt-Anordnung aus dem Schulmaterial: Spaltabstand $d$, Schirmabstand $e$
     und Strahlweg zum Punkt $P$.],
 )
@@ -160,7 +160,7 @@ Der untere Strahl legt bis zum Schirm das zusätzliche Stück $d sin(alpha)$ zur
 
 ]
 #figure(
-  image("../fig/schule/s1_doppelspalt_intensitaet.png", width: 86%),
+  image("../fig/schule/s1_doppelspalt_intensitaet.jpg", width: 86%),
   caption: [Interferenzmuster am Doppelspalt aus dem Schulmaterial.],
 )
 
@@ -189,7 +189,7 @@ $ b sin(alpha_m) = m lambda, quad m = 1, 2, dots $
   caption: [Interferenzmuster am Gitter aus dem Schulmaterial.],
 )
 
-Der Vergleich zeigt, dass das Einzelspaltbild die Einhüllende des Doppelspaltmusters ist: Alle Streifen liegen unter dem breiten Zentralmaximum des Einzelspalts.
+Beim Gitter überlagern sich viele Elementarwellen; dadurch werden die Maxima scharf und die Wellenlänge lässt sich präzise bestimmen.
 
 = Bragg-Reflexion
 
@@ -219,12 +219,7 @@ konstant, $lambda$ ändert sich:
 
 $ frac(sin(alpha), sin(beta)) = frac(c_1, c_2) = frac(n_2, n_1) $
 
-#figure(
-  image("../fig/schule/s1_reflexion.png", width: 58%),
-  caption: [Reflexion und Brechung am Übergang zwischen zwei Medien aus dem Schulmaterial.],
-)
-
-Im Bild knickt der Strahl beim Eintritt ins optisch dichtere Medium zum Lot; die Ursache ist die kleinere Ausbreitungsgeschwindigkeit, nicht eine Änderung der Frequenz.
+Beim Eintritt in ein optisch dichteres Medium knickt der Strahl zum Lot; die Ursache ist die kleinere Ausbreitungsgeschwindigkeit, nicht eine Änderung der Frequenz.
 
 = Messung der Lichtgeschwindigkeit
 
@@ -285,9 +280,9 @@ Stehen Polarisator und Analysator im Winkel $alpha$ zueinander, gilt das Malus-G
 $ I = I_0 cos^2 alpha $
 
 #merksatz[
-  Nur Transversalwellen lassen sich polarisieren. Schall – eine Longitudinalwelle – geht durch
-  einen Polarisator unverändert hindurch. Das ist der experimentelle Unterschied zwischen beiden
-  Wellentypen, und deshalb ist Polarisation der Nachweis, dass Licht transversal schwingt.
+  Nur Transversalwellen lassen sich polarisieren. Schall ist eine Longitudinalwelle und hat keine
+  Polarisationsebene; ein Polarisator hat für ihn keine definierte Wirkung. Deshalb ist
+  Polarisation der Nachweis, dass Licht transversal schwingt.
 ]
 
 = Michelson-Interferometer
@@ -332,7 +327,7 @@ technische Verwendung, die im Kerncurriculum verlangt wird.
 #experiment[
   *Aufbau.* Feder am Stativ, Masse $m$, Lineal, Stoppuhr. \
   *Durchführung.* $m$ variieren, je 10 Schwingungen messen, $T = t\/10$. \
-  *Beobachtung.* $T$ wächst mit $m$; unabhängig von der Amplitude bis etwa 15°. \
+  *Beobachtung.* $T$ wächst mit $m$; bei kleiner Amplitude ist $T$ unabhängig von der Amplitude. \
   *Auswertung.* $T^2$ gegen $m$: Gerade durch den Ursprung, Steigung $4 pi^2 \/ D$. \
   *Erklärung.* Rückstellkraft $-D s$ gegen Trägheit $m$ – siehe Herleitung. \
   *Bedeutung.* Bestätigt $T tilde sqrt(m)$ und liefert $D$ ohne Kraftmessung.
@@ -436,5 +431,5 @@ Ordnung nicht.
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12,
     „Schwingungen und Wellen“.
   - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
-  - Grafiken: eigene Erstellung mit Matplotlib (`build/make_figures.py`).
+  - Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

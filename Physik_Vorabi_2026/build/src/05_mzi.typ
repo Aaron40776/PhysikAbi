@@ -25,7 +25,7 @@
     M1 und M2 sowie die Detektoren D1 und D2.],
 )
 
-Beide Teilstrahlen legen im Bild gleich lange Wege zurück; jede zusätzliche Phasenverschiebung im oberen Arm wirkt sich deshalb eins zu eins auf den Gangunterschied am zweiten Strahlteiler aus.
+Im idealen MZI sind beide Arme gleich lang; jede zusätzliche Phasenverschiebung im oberen Arm wirkt sich deshalb eins zu eins auf den Gangunterschied am zweiten Strahlteiler aus.
 
 #table(
   columns: (auto, 1fr),
@@ -185,4 +185,5 @@ Kausalitätsverletzung ist.
   *Quellen.*
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 13.
   - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
+- Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

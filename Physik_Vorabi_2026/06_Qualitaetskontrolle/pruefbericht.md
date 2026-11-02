@@ -1254,3 +1254,29 @@ horizontalen Überlauf.
 **Prüfstand 15.14.** `check_all.sh` grün: 20 Quellen, 124 Markdown-Dateien,
 `check_physics.py` 13/13, `qa_pdf.py` 7 PDFs/51 Seiten/0 Befunde,
 `check_lesen_vollstaendig.py` 7/7, `test_pages.py` 48/48, `test_browser.py` 7/7.
+
+## Vollprüfung 02.11.2026 – Text, roter Faden und Bildzuordnung
+
+Alle sieben Kernskripte wurden vollständig gegengelesen. Gefundene und behobene Punkte:
+
+| Nr. | Fund | Ort | Korrektur |
+|---|---|---|---|
+| V1 | Wellenlänge bei 4 kV falsch: 0,613 nm statt 19,4 pm; Photonenvergleich dadurch falsch | `03_elektronenwellen.typ`, Aufgabe 1 | Rechnung mit 4000 V, 19,4 pm; Photon 0,31 nm, Elektron etwa 16-mal kürzer; Energie-Impuls-Beziehung ergänzt |
+| V2 | Bild `hbestimmung02.jpg` ist die Photoeffekt-Messreihe für Zink, nicht die LED-Methode | `02_lichtquanten.typ` | Als „Messreihe für Zink“ zur Fotozelle verschoben; LED-Abschnitt bildlos |
+| V3 | Termschema-Bild zeigte Grundzustand = 0 eV, Text rechnete mit Ionisationsgrenze = 0 eV | `06_atommodelle.typ`, `07_spektren.typ` | `energieniveaudiagramm02.jpg` verwendet |
+| V4 | Doppelspalt-Bilder vertauscht: `doppelspalt01.jpg` ist ein Interferenzfeld, `doppelspalt_maximum.png` die Geometrie | `01_wellen.typ` | Geometrie → `doppelspalt_maximum.png`, Muster → `doppelspalt01.jpg` |
+| V5 | `reflexion01.png` zeigt Reflexion am festen Ende einer mechanischen Welle, nicht Brechung am optischen Übergang | `01_wellen.typ` | Bild entfernt; Text beschreibt die Brechung ohne falsches Bild |
+| V6 | `lichtquanten_ds.png` ist eine geometrische Strahlkonstruktion, kein klassisches Intensitätsmuster | `04_doppelspalt.typ` | `dspalt03.jpg` (Doppelspalt-Interferenzbild) eingesetzt; Text von „Kurve“ auf „Streifen“ umgestellt |
+| V7 | `wellenfkt01.jpg` zeigt Real- und Imaginärteil, nicht „oben ψ, unten |ψ|²“ | `04_doppelspalt.typ` | Unterschrift und Text an Real-/Imaginärteil angepasst |
+| V8 | `fh01.jpg` ist eine Niederspannungs-Skizze, keine Franck-Hertz-Kennlinie | `07_spektren.typ` | `fh06.jpg` (vollständige Messkurve) verwendet |
+| V9 | `2dpotentialtopf01.jpg` zeigt nur den Grundzustand, Text sprach von s- und p-Orbitalen | `06_atommodelle.typ` | Zwei Bilder (`n=1`, `n=2`) mit passenden Unterschriften |
+| V10 | `rutherford01.jpg` gehört zum Rosinenkuchen-Modell (gerade Bahnen) | `06_atommodelle.typ` | `rutherford02.jpg` mit abgelenkten Bahnen verwendet |
+| V11 | Dämpfungsdekrement mit `delta` bezeichnet, Kollision mit Phasendifferenz | `01_wellen.typ` | Symbol `Lambda` |
+| V12 | Federpendel: „unabhängig von der Amplitude bis 15°“ (Winkel gehört zum Fadenpendel) | `01_wellen.typ` | „bei kleiner Amplitude“ |
+| V13 | Schall „geht durch einen Polarisator unverändert hindurch“ | `01_wellen.typ` | Longitudinalwelle hat keine Polarisationsebene; Polarisator ohne definierte Wirkung |
+| V14 | MZI: „im Bild gleich lange Wege“ war eine Aussage über die Zeichnung | `05_mzi.typ` | „Im idealen MZI sind beide Arme gleich lang“ |
+| V15 | Koinzidenzdefinition vermischte Koinzidenz und Antikoinzidenz | `04_doppelspalt.typ` | Antikoinzidenz beim einzelnen Photon ergänzt |
+
+Ergebnis: **7 Kapitel, 53 Seiten** (Skript 2: 7, Skript 6: 8). Alle Prüfungen grün:
+`test_pages.py` 48/48, `test_browser.py` 7/7, Suche 16/16, `check_physics.py` 13/13,
+`qa_pdf.py` 7 PDFs/53 Seiten/0 Befunde, Leseseiten 7/7.

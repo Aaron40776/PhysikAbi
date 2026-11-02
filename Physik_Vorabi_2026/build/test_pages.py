@@ -12,7 +12,7 @@ DATEIEN = ("index.html", "suche.html", "glossar.html", "lesen.html", "suche.json
            "assets/style.css", "assets/suche.js", "assets/index.js", "assets/suche-seite.js",
            "assets/theme.js", "assets/glossar.js", "assets/lesen.css",
            "assets/lesen-static.js")
-SEITEN = 51
+SEITEN = 53
 
 pruefungen = []
 
@@ -75,7 +75,7 @@ def main():
         docs, seiten = daten["docs"], daten["seiten"]
 
         pruefe("7 Kernkapitel", len(docs) == 7, len(docs))
-        pruefe("Seitenzahl 51", sum(d["n"] for d in docs) == SEITEN,
+        pruefe("Seitenzahl 53", sum(d["n"] for d in docs) == SEITEN,
                sum(d["n"] for d in docs))
         pruefe("Seitenlisten vollständig", all(len(seiten[i]) == d["n"] for i, d in enumerate(docs)))
         pruefe("Blöcke vorhanden", all(any(s) for s in seiten))

@@ -42,7 +42,7 @@ den Niveaus kleiner; $E = 0$ ist die Ionisationsgrenze.
   caption: [Wasserstoff-Termschema aus dem Schulmaterial.],
 )
 
-Die eingezeichneten Pfeile enden bei $n = 2$; ihre Länge ist die Photonenenergie, und je kürzer der Pfeil, desto größer die Wellenlänge.
+Die eingezeichneten Pfeile markieren Übergänge; ihre Länge ist die Photonenenergie, und je kürzer der Pfeil, desto größer die Wellenlänge.
 
 #table(
   columns: (1fr, 1.6fr),
@@ -86,7 +86,7 @@ Die eingezeichneten Pfeile enden bei $n = 2$; ihre Länge ist die Photonenenergi
   [charakteristische Linien], [Übergänge in den inneren Schalen des Anodenmaterials],
 )
 
-$ lambda_min = frac(h c, e U_B) = frac(1239","8 "eV nm", U_B) $
+$ lambda_min = frac(h c, e U_B) = frac(1239","8 "eV nm", U_B) quad (U_B "in V") $
 
 Mit der Moseley-Beziehung $sqrt(f) tilde (Z - 1)$ lässt sich das Anodenmaterial bestimmen.
 
@@ -238,4 +238,5 @@ als die Absorption sein kann; warum Linien diskret sind.
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 13.
   - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
   - CODATA 2018; Rydberg-Konstante $R = 1","097 dot 10^7$ 1/m.
+- Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

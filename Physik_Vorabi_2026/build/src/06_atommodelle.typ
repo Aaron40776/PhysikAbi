@@ -30,7 +30,7 @@
 
 #figure(
   image("../fig/schule/s6_rutherford.jpg", width: 72%),
-  caption: [Rutherford-Streuung aus dem Schulmaterial: Bahnen in Abhängigkeit vom Stoßparameter.],
+  caption: [Rutherford-Streuung aus dem Schulmaterial: abgelenkte Bahnen bei Annäherung an den Kern.],
 )
 
 Die Bahnen krümmen sich nur bei kleinem Stoßparameter stark; bei großem Abstand zum Kern bleibt die Bahn fast gerade.
@@ -97,7 +97,7 @@ Im Termschema rücken die Niveaus nach oben zusammen und laufen gegen $E = 0$; n
 #table(
   columns: (1fr, 1.3fr),
   [Leistung], [Grenze],
-  [Energieniveaus des H-Atoms exakt], [nur Ein-Elektronen-Systeme],
+  [Energieniveaus des H-Atoms im nichtrelativistischen Modell exakt], [nur Ein-Elektronen-Systeme],
   [Spektrallinien des H], [keine Feinstruktur, kein Zeeman-Effekt],
   [Größenordnung der Atomradien], [keine Aussage über Aufenthaltsorte],
 )
@@ -124,10 +124,13 @@ Im Termschema rücken die Niveaus nach oben zusammen und laufen gegen $E = 0$; n
 
 #figure(
   image("../fig/schule/s6_potentialtopf.jpg", width: 66%),
-  caption: [Energieniveaus im Potenzialtopf aus dem Schulmaterial.],
+  caption: [Wahrscheinlichkeitsdichte im eindimensionalen Potenzialtopf aus dem Schulmaterial
+    (Grundzustand).],
 )
 
-Die Abstände zwischen den Niveaus wachsen hier mit $n$, während sie beim Coulomb-Topf kleiner werden – das ist der qualitative Unterschied beider Potenziale.
+Im Grundzustand ist die Aufenthaltswahrscheinlichkeit in der Mitte am größten; mit steigendem
+$n$ kommen Knoten hinzu. Die Energieniveaus selbst wachsen mit $n^2$, während sie beim
+Coulomb-Topf enger zusammenrücken – das ist der qualitative Unterschied beider Potenziale.
 
 #table(
   columns: (1fr, 1fr),
@@ -145,11 +148,21 @@ Die Abstände zwischen den Niveaus wachsen hier mit $n$, während sie beim Coulo
 ]
 
 #figure(
-  image("../fig/schule/s6_orbitale.jpg", width: 82%),
-  caption: [Orbitale und Aufenthaltswahrscheinlichkeit aus dem Schulmaterial.],
+  image("../fig/schule/s6_orbitale_s.jpg", width: 64%),
+  caption: [Aufenthaltswahrscheinlichkeit im zweidimensionalen Potenzialtopf aus dem Schulmaterial:
+    Grundzustand mit einem Maximum in der Mitte (s-artig).],
 )
 
-Die Formen folgen aus der Quantenzahl $l$: s-Orbitale sind kugelsymmetrisch, p-Orbitale haben zwei Keulen längs einer Achse.
+#figure(
+  image("../fig/schule/s6_orbitale_p.jpg", width: 64%),
+  caption: [Erster angeregter Zustand im zweidimensionalen Potenzialtopf aus dem Schulmaterial:
+    vier Bereiche links und rechts der Mitte (p-artig).],
+)
+
+Im Grundzustand ist die Wahrscheinlichkeit in der Mitte am größten (s-artig), im ersten
+angeregten Zustand gibt es vier Bereiche links und rechts der Mitte (p-artig). So werden die
+Orbitalformen verständlich: s-Orbitale sind kugelsymmetrisch, p-Orbitale haben Keulen längs
+einer Achse.
 
 = Aufgaben
 
@@ -231,4 +244,5 @@ bleibt.
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12/13.
   - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
   - CODATA 2018 für $h$, $m_e$, $e$, $epsilon_0$.
+- Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

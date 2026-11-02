@@ -592,3 +592,17 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   bewusst nicht aufgenommenen Bereiche. Skript 2 wurde dabei auf Photoeffekt und
   h-Bestimmung begrenzt (Compton entfernt); Skript 5 nennt Nichtlokalität als
   Kerncurriculum-Begriff. `check_physics.py` prüft 13 statt 14 Formeln.
+
+## Nachtrag 02.11.2026 – Vollprüfung Text, roter Faden und Bilder
+
+- Alle sieben Skripte vollständig gegengelesen: Formeln, Zahlen, Einheiten, Aufgabenlösungen,
+  Querverweise und die Abfolge der Abschnitte.
+- Jede Abbildung gegen den Kontext auf der Schulwebsite geprüft; mehrere falsche Zuordnungen
+  korrigiert (Details im Prüfbericht, Abschnitt „Vollprüfung 02.11.2026“).
+- Korrigiert u. a.: falsche Elektronenwellenlänge bei 4 kV (0,613 nm → 19,4 pm), falsches
+  Termschema (Grundzustand 0 eV → Ionisationsgrenze 0 eV), Franck-Hertz-Bild (fh01 → fh06),
+  Doppelspalt-Bilder (Geometrie und Muster waren vertauscht), LED-Bild (war Photoeffekt-Messreihe),
+  Rutherford-Bild (Rosinenkuchen → abgelenkte Bahnen), Orbital-Bild (nur Grundzustand → n=1/n=2).
+- Umfang nach den korrigierten Abbildungen: **7 Kapitel, 53 Seiten** (Skript 2: 7, Skript 6: 8).
+- Prüfstand: `test_pages.py` 48/48, `test_browser.py` 7/7, Suche 16/16, `check_physics.py` 13/13,
+  `qa_pdf.py` 7 PDFs/53 Seiten/0 Befunde, Leseseiten 7/7.

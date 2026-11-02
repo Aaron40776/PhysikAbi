@@ -5,7 +5,7 @@
 #cover(
   "Skript 4 · Einzelne Quanten",
   "Doppelspalt und Quantenphysik",
-  "Einzelphotonen, Einzelelektronen, Superposition, Welcher-Weg, Komplementarität",
+  "Einzelphotonen, Einzelelektronen, Superposition, Welcher-Weg, Komplementarität, Unbestimmtheit, Wellenfunktion",
   lernziele: (
     "den Aufbau des Quanten-Doppelspalts beschreiben",
     "das Auftreten einzelner Treffer und das entstehende Muster deuten",
@@ -26,11 +26,11 @@ $ I(alpha) = I_0 cos^2(frac(pi d sin(alpha), lambda)) $
 Die Minima liegen bei $Delta s = (2n+1) lambda\/2$. Das ist Wellenoptik, kein Quantenproblem.
 
 #figure(
-  image("../fig/schule/s4_doppelspalt.png", width: 86%),
+  image("../fig/schule/s4_doppelspalt.jpg", width: 86%),
   caption: [Interferenzbild am Doppelspalt aus dem Schulmaterial.],
 )
 
-Die Kurve fällt vom Zentralmaximum zu den Nullstellen bei $Delta s = (2n+1) lambda\/2$ ab; die Lage der Maxima hängt nur vom Verhältnis $d\/lambda$ ab.
+Vom Zentralmaximum nach außen wechseln sich helle und dunkle Streifen ab; die Nullstellen liegen bei $Delta s = (2n+1) lambda\/2$. Die Lage der Maxima hängt nur vom Verhältnis $d\/lambda$ ab.
 
 = Quanten: ein Quant nach dem anderen
 
@@ -55,10 +55,10 @@ Die Kurve fällt vom Zentralmaximum zu den Nullstellen bei $Delta s = (2n+1) lam
 ]
 
 #definition[
-  *Koinzidenzmethode:* Zwei Detektoren werden gleichzeitig ausgelesen. Signale in einem sehr
-  kurzen Zeitfenster heißen Koinzidenz. Ein Photon ist nicht teilbar – an einem Strahlteiler
-  registriert deshalb immer nur *einer* der beiden Detektoren ein Ereignis, nie beide zugleich.
-  Genau darauf beruht der Nachweis einzelner Photonen.
+  *Koinzidenzmethode:* Zwei Detektoren werden gleichzeitig ausgelesen. Signale im selben kurzen
+  Zeitfenster heißen Koinzidenz. Bei einem einzelnen Photon an einem Strahlteiler registriert
+  immer nur *einer* der beiden Detektoren ein Ereignis, nie beide zugleich. Diese Antikoinzidenz
+  weist einzelne Photonen nach.
 ]
 
 = Superposition und Wahrscheinlichkeit
@@ -118,10 +118,10 @@ Die Spaltbreite entspricht der Ortsunschärfe $Delta x$. Je schmaler der Spalt, 
 
 #figure(
   image("../fig/schule/s4_wellenfunktion.jpg", width: 84%),
-  caption: [Wellenfunktion und Aufenthaltswahrscheinlichkeit aus dem Schulmaterial.],
+  caption: [Real- und Imaginärteil der Wellenfunktion aus dem Schulmaterial.],
 )
 
-Die obere Kurve ist die Wellenfunktion selbst, die untere ihr Betragsquadrat; nur die untere gibt an, wo das Teilchen mit welcher Wahrscheinlichkeit gefunden wird.
+Das Bild zeigt Real- und Imaginärteil der Wellenfunktion. Erst das Betragsquadrat $|psi|^2$ gibt an, wo das Teilchen mit welcher Wahrscheinlichkeit gefunden wird.
 
 #achtung[
   $Delta x$ ist die *Streuung* der Messwerte bei vielen gleichen Präparationen, nicht der Fehler
@@ -210,5 +210,5 @@ Weginformation die Streifen löscht, ohne das Quant zu „treffen“.
   *Quellen.*
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12/13.
   - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
-  - Grafiken: eigene Erstellung (`build/make_figures.py`).
+  - Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

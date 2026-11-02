@@ -10,7 +10,7 @@
     "die de-Broglie-Beziehung begründen und anwenden",
     "die Elektronenwellenlänge aus der Beschleunigungsspannung herleiten",
     "die Beugungsröhre von der Elektronenstrahlröhre unterscheiden",
-    "Ringe und ihre Spannungssabhängigkeit deuten",
+    "Ringe und ihre Spannungsabhängigkeit deuten",
   ),
 )
 
@@ -58,7 +58,7 @@ Aus Ringradius und bekanntem Netzebenenabstand lässt sich umgekehrt $lambda$ be
 
 #table(
   columns: (auto, auto, auto),
-  [$U$], [$lambda$ (nicht relativistisch)], [Kontrolle $1","226 \/ sqrt(U)$],
+  [$U$], [$lambda$ (nicht relativistisch)], [Kontrolle $1","226 \/ sqrt(U/"V")$],
   [1 kV], [38,8 pm], [38,8 pm],
   [4 kV], [19,4 pm], [19,4 pm],
   [10 kV], [12,3 pm], [12,3 pm],
@@ -145,11 +145,12 @@ Bei festem Winkel wächst der Zusatzweg $2 d sin(theta)$ mit dem Netzebenenabsta
 ]
 
 #lösung[
-  (1) $lambda = frac(1","226 "nm", sqrt(4","0)) = 0","613$ nm.
+  (1) $lambda = frac(1","226 "nm", sqrt(4000)) = 0","0194$ nm $= 19","4$ pm.
 
-  (2) $E = e U = 4","0$ keV, also $f = E \/ h = 9","7 dot 10^17$ Hz und $lambda = c / f =
-  0","31$ nm. Das Photon hätte die halbe Wellenlänge: Die Energie eines Elektrons ist
-  $p^2\/(2 m_e)$, die eines Photons $p c$ – bei gleichem Impuls also verschieden.
+  (2) $E = e U = 4","0$ keV, also $f = E \/ h = 9","7 dot 10^17$ Hz und
+  $lambda_"Photon" = c \/ f = 0","31$ nm. Das Elektron ist mit 19,4 pm etwa 16-mal kürzer.
+  Der Unterschied folgt aus den verschiedenen Energie-Impuls-Beziehungen:
+  $E = p^2\/(2 m_e)$ beim Elektron, $E = p c$ beim Photon.
 ]
 
 #aufgabe(2, punkte: 12)[
@@ -216,4 +217,5 @@ gilt.
     „Quantenphysik / Materiewellen“.
   - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
   - CODATA 2018 für $h$, $m_e$, $e$.
+- Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

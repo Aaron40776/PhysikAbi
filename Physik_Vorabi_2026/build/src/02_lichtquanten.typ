@@ -30,12 +30,6 @@ die Rechnung in eV bequem:
 
 $ E_"[eV]" = frac(1239","8, lambda_"[nm]") $
 
-#figure(
-  image("../fig/schule/s2_photoeffekt_fE.jpg", width: 80%),
-  caption: [Photoeffekt: Zusammenhang zwischen Frequenz und maximaler kinetischer Energie aus
-    dem Schulmaterial.],
-)
-
 Die Gerade schneidet die Frequenzachse bei $f_G$; erst oberhalb dieser Frequenz verlassen Elektronen das Metall, und die Steigung ist für alle Metalle dieselbe.
 
 = Der äußere Photoeffekt
@@ -64,12 +58,13 @@ Die Gerade schneidet die Frequenzachse bei $f_G$; erst oberhalb dieser Frequenz 
      Nullstelle bei $f_G = W_A \/ h$ (Grenzfrequenz).
 
 ]
-#figure(
-  image("../fig/schule/s2_led_hbestimmung.jpg", width: 86%),
-  caption: [Bestimmung von $h$ mit Leuchtdioden aus dem Schulmaterial.],
-)
 
-Trägt man die gemessenen Einsatzspannungen über der Frequenz auf, liegen die Punkte auf einer Geraden; aus der Steigung folgt $h$, aus dem Achsenabschnitt die Austrittsarbeit des Kontaktmaterials.
+#figure(
+  image("../fig/schule/s2_photoeffekt_fE.jpg", width: 80%),
+  caption: [Photoeffekt aus dem Schulmaterial: $U_B$ bzw. $E_"kin,max"$ über der Frequenz;
+    die Steigung ist $h\/e$, die Nullstelle $f_G$.],
+)
+Trägt man die gemessenen Gegenspannungen $U_B$ über der Frequenz auf, liegen die Punkte auf einer Geraden; aus der Steigung folgt $h$, aus dem Achsenabschnitt die Austrittsarbeit des Kathodenmaterials.
 
 #achtung[
   Die *Intensität* bestimmt die Zahl der Photonen (den Strom), nicht die Energie der einzelnen
@@ -87,6 +82,11 @@ Trägt man die gemessenen Einsatzspannungen über der Frequenz auf, liegen die P
   $W_A = -b e$. \
   *Bedeutung.* Erste direkte Messung von $h$ aus dem Photoeffekt.
 ]
+
+#figure(
+  image("../fig/schule/s2_messreihe_zink.jpg", width: 76%),
+  caption: [Messreihe für Zink aus dem Schulmaterial: $U_B$ über $f$.],
+)
 
 #experiment[
   *Leuchtdioden-Methode.* \
@@ -200,4 +200,5 @@ $f$ eine Gerade ist; warum der Photoeffekt sofort einsetzt.
     „Quantenphysik“.
   - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
   - CODATA 2018 für $h$, $c$, $e$.
+- Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

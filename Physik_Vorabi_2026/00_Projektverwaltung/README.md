@@ -22,11 +22,11 @@ Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 | Datei | Thema | Seiten |
 |---|---|---|
 | `01_Wellen_und_Interferenz.pdf` | Schwingungen, Welle, Interferenz, Doppelspalt, Gitter, Bragg, Polarisation, Michelson, Lichtgeschwindigkeit | 12 |
-| `02_Lichtquanten_und_Planck.pdf` | Quantenhypothese, Photon, Photoeffekt, h-Bestimmung | 6 |
+| `02_Lichtquanten_und_Planck.pdf` | Quantenhypothese, Photon, Photoeffekt, h-Bestimmung | 7 |
 | `03_Elektronenwellen_und_Beugung.pdf` | de Broglie, Elektronenkanone, Beugungsröhre | 6 |
 | `04_Doppelspalt_und_Quantenphysik.pdf` | Einzelquanten, Amplituden, Komplementarität, Unbestimmtheit, Wellenfunktion | 7 |
 | `05_MZI_Welcher_Weg_Delayed_Choice.pdf` | Mach-Zehnder, Welcher-Weg, Delayed Choice | 6 |
-| `06_Atommodelle_und_Orbitalmodell.pdf` | Rutherford, Bohr, Potenzialtopf, Orbitale | 7 |
+| `06_Atommodelle_und_Orbitalmodell.pdf` | Rutherford, Bohr, Potenzialtopf, Orbitale | 8 |
 | `07_Spektren_und_Franck_Hertz.pdf` | Spektren, Röntgen, Resonanzabsorption, Franck-Hertz | 7 |
 
 **Nicht mehr veröffentlicht:** die früheren 10 Zusatzdokumente (`04_Zusatzmaterial/`).
@@ -38,7 +38,7 @@ Formeln mit echten Bruchstrichen (statt Schrägstrich), Herleitungen als nummeri
 Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Grafiken mit
 Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
 
-Umfang (02.11.): **7 Kernkapitel, 51 Seiten**. Die Zuordnung der Abschnitte zu den
+Umfang (02.11.): **7 Kernkapitel, 53 Seiten**. Die Zuordnung der Abschnitte zu den
 Kerncurriculum-Seiten steht in `KERNCURRICULUM_MAPPING.md`. Die früheren Zusatzhefte sind aus der
 Veröffentlichung herausgenommen.
 
