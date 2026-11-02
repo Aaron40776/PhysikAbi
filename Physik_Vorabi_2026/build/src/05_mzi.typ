@@ -5,12 +5,13 @@
 #cover(
   "Skript 5 · Welcher Weg?",
   "Mach-Zehnder und Welcher Weg",
-  "Strahlteiler, Phasenverschiebung, Weginformation, Delayed Choice",
+  "Strahlteiler, Phasenverschiebung, Weginformation, Komplementarität, Delayed Choice",
   lernziele: (
     "den Aufbau des Mach-Zehnder-Interferometers beschreiben",
     "die Ausgangsintensitäten aus Phasenverschiebung berechnen",
     "Welcher-Weg-Information als Ursache des Interferenzverlusts erklären",
     "das Delayed-Choice-Experiment ohne Fehldeutung darstellen",
+    "Komplementarität und Nichtlokalität am MZI deuten",
   ),
 )
 
@@ -94,6 +95,12 @@ wird dabei nicht „gestört“; entscheidend ist, ob die beiden Möglichkeiten 
 Aufbau nach Wheeler: Die Entscheidung, ob ein Welcher-Weg-Detektor eingeschaltet wird, fällt
 *erst*, wenn das Quant den ersten Strahlteiler längst passiert hat – die Laufzeit ist so lang,
 dass „später“ physikalisch später ist.
+
+*Nichtlokalität.* Die beiden Möglichkeiten gehören zu einem einzigen Quantenzustand. Die
+Weginformation ist nicht einem lokalen Bahnstück zuzuordnen; erst die gesamte Anordnung
+entscheidet, ob Interferenz oder Welcher-Weg sichtbar wird. Das ist keine Signalübertragung
+schneller als Licht und keine Änderung der Vergangenheit, sondern die quantenmechanische
+Beschreibung des ganzen Experiments.
 
 #achtung[
   Dabei wird die Vergangenheit *nicht* geändert. Beobachtet wird:

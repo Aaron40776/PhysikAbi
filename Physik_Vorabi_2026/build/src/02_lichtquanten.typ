@@ -5,7 +5,7 @@
 #cover(
   "Skript 2 · Licht als Quant",
   "Lichtquanten und Planck",
-  "Plancks Quantenhypothese, Photon, äußerer Photoeffekt, Gegenfeld, Compton",
+  "Plancks Quantenhypothese, Photon, äußerer Photoeffekt, Gegenfeld",
   lernziele: (
     "die Quantenhypothese als Grundlage der Lichtquanten erklären",
     "Energie und Impuls eines Photons berechnen",
@@ -77,20 +77,6 @@ Trägt man die gemessenen Einsatzspannungen über der Frequenz auf, liegen die P
   Die *Intensität* bestimmt die Zahl der Photonen (den Strom), nicht die Energie der einzelnen
   Elektronen. Deshalb ändert helleres Licht unterhalb von $f_G$ nichts.
 ]
-
-= Compton-Effekt
-
-Röntgenlicht wird an Elektronen gestreut; die gestreute Strahlung hat größere Wellenlänge.
-Klassisch wäre $lambda$ unverändert. Das Photon gibt Energie und Impuls ab – der Stoß eines
-Teilchens:
-
-$ Delta lambda = lambda_C (1 - cos(phi)), quad lambda_C = frac(h, m_e c) = 2","43 "pm" $
-
-= Welle-Teilchen-Dualismus
-
-Interferenz und Beugung zeigen Welleneigenschaften, Photoeffekt und Compton Teilcheneigenschaften.
-Beide Beschreibungen sind komplementär: Welche Seite man sieht, entscheidet der Versuch, nicht
-das Licht.
 
 = Experimente
 
@@ -189,7 +175,6 @@ das Licht.
   [Photoeffekt], [$h f = W_A + e U_B$],
   [Grenzfrequenz], [$f_G = W_A \/ h$],
   [Steigung der $U_B$-$f$-Geraden], [$h \/ e$],
-  [Compton], [$Delta lambda = lambda_C (1 - cos phi)$],
   [Röntgengrenze], [$lambda_min = h c \/ (e U_B)$],
 )
 
@@ -209,5 +194,5 @@ $f$ eine Gerade ist; warum der Photoeffekt sofort einsetzt.
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12,
     „Quantenphysik“.
   - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
-  - CODATA 2018 für $h$, $c$, $e$, $m_e$.
+  - CODATA 2018 für $h$, $c$, $e$.
 ]

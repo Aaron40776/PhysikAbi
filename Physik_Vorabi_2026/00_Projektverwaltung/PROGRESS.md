@@ -587,3 +587,8 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Prüfstand:** `check_all.sh` grün: 20 Quellen, 124 Markdown-Dateien, 14/14 Physik,
   7 PDFs/51 Seiten/0 Befunde, 7/7 Leseseiten, `test_pages.py` 48/48,
   `test_browser.py` 7/7; ZIP mit 7 PDFs.
+- **Kapitel-Mapping:** `00_Projektverwaltung/KERNCURRICULUM_MAPPING.md` ordnet jeden
+  Abschnitt der Skripte 1–7 einer Seite mit „Bezug zum Kerncurriculum“ zu und benennt die
+  bewusst nicht aufgenommenen Bereiche. Skript 2 wurde dabei auf Photoeffekt und
+  h-Bestimmung begrenzt (Compton entfernt); Skript 5 nennt Nichtlokalität als
+  Kerncurriculum-Begriff. `check_physics.py` prüft 13 statt 14 Formeln.
