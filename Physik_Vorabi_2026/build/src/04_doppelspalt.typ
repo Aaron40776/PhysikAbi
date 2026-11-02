@@ -98,16 +98,14 @@ Wird an den Spalten gemessen, durch welchen Spalt das Quant ging, verschwindet d
 
 Ort und Impuls sind keine gleichzeitig scharfen Größen:
 
-$ Delta x dot Delta p >= frac(h, 4 pi) $
+$ Delta x dot Delta p >= frac(h, 4 pi) = frac(1,2) frac(h, 2 pi) $
 
-Das Schulmaterial rechnet mit der Schulnotation
+Das Schulmaterial verwendet für Abschätzungen die gröbere Schulnotation
 
 $ Delta x dot Delta p_x >= h $
 
-Lehrbücher schreiben stattdessen $Delta x dot Delta p_x >= (h\/(2 pi))\/2$, also mit dem
-reduzierten Wirkungsquantum $h\/(2 pi)$. Der Faktor hängt davon ab, ob $Delta$
-als Schwankungsbreite oder als Standardabweichung aufgefasst wird. Für Abschätzungen in Aufgaben
-ist die Schulnotation gemeint, für Prinzipaussagen die Lehrbuchform.
+Für Prinzipaussagen gilt die exakte Form mit $h\/(2 pi)$; die Schulnotation lässt
+Faktoren der Größenordnung 1 weg.
 
 #figure(
   image("../fig/schule/s4_unbestimmtheit.jpg", width: 88%),

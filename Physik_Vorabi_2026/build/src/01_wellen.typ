@@ -38,11 +38,11 @@ $ s(t) = A sin(omega t + phi_0), quad v(t) = A omega cos(omega t + phi_0) $
 
 #figure(
   image("../fig/schule/s1_kenngroessen.png", width: 88%),
-  caption: [Momentaufnahme einer Welle aus dem Schulmaterial: Auslenkung, Amplitude und
-    Wellenlänge lassen sich direkt ablesen.],
+  caption: [Wellenmaschine aus dem Schulmaterial: Die Kugeln schwingen um ihre Ruhelage,
+    die Störung läuft durch die Kette.],
 )
 
-Nach der Zeit $Delta t$ liegt jeder Wellenberg um $c dot Delta t$ weiter rechts; die Form der Kurve ändert sich dabei nicht, nur ihr Ort.
+Nach der Zeit $Delta t$ ist die Störung um $c dot Delta t$ weitergewandert; ihre Form ändert sich dabei nicht, nur ihr Ort.
 
 = Zeigermodell und Interferenz
 
@@ -91,6 +91,31 @@ $ A(t) = A_0 e^(-k t), quad Lambda = ln frac(A(t), A(t+T)) = k T $
   [Fadenpendel], [$f_0 = frac(1, 2 pi) sqrt(frac(g, l))$], [kleine Auslenkung],
   [Schwingkreis], [$f_0 = frac(1, 2 pi sqrt(L C))$], [Thomsonsche Formel],
 )
+
+= Experiment: Feder-Masse-Pendel
+
+#experiment[
+  *Aufbau.* Feder am Stativ, Masse $m$, Lineal, Stoppuhr. \
+  *Durchführung.* $m$ variieren, je 10 Schwingungen messen, $T = t\/10$. \
+  *Beobachtung.* $T$ wächst mit $m$; bei kleiner Amplitude ist $T$ unabhängig von der Amplitude. \
+  *Auswertung.* $T^2$ gegen $m$: Gerade durch den Ursprung, Steigung $4 pi^2 \/ D$. \
+  *Erklärung.* Rückstellkraft $-D s$ gegen Trägheit $m$ – siehe Herleitung. \
+  *Bedeutung.* Bestätigt $T tilde sqrt(m)$ und liefert $D$ ohne Kraftmessung.
+]
+
+#herleitung[
+  *Periodendauer des Federpendels* \
+  1. Bewegungsgleichung: $m (dif^2 s)/(dif t^2) = -D s$.
+  2. Form einer harmonischen Schwingung mit $omega^2 = D \/ m$.
+  3. Mit $omega = 2 pi \/ T$ folgt $frac(4 pi^2, T^2) = frac(D, m)$.
+  4. Auflösen:
+
+  $ T = 2 pi sqrt(frac(m, D)) $
+
+  5. Gültig für massefreie Feder und kleine Auslenkung. $D$ folgt aus der Steigung der
+     $T^2$-$m$-Geraden.
+
+]
 
 = Von der Schwingung zur Welle
 
@@ -141,8 +166,8 @@ In der Grundschwingung schwingt die Mitte mit maximaler Amplitude, in der ersten
 
 #figure(
   image("../fig/schule/s1_doppelspalt_geometrie.png", width: 84%),
-  caption: [Doppelspalt-Anordnung aus dem Schulmaterial: Spaltabstand $d$, Schirmabstand $e$
-    und Strahlweg zum Punkt $P$.],
+  caption: [Doppelspalt-Geometrie aus dem Schulmaterial: Die beiden Teilstrahlen laufen zum
+    Punkt $P$; ihr Wegunterschied bestimmt das Interferenzbild.],
 )
 
 Der untere Strahl legt bis zum Schirm das zusätzliche Stück $d sin(alpha)$ zurück; dieser Wegunterschied entscheidet, ob sich die Wellen am Punkt $P$ verstärken oder auslöschen.
@@ -322,30 +347,6 @@ $ Delta d = N frac(lambda, 2) $
 Damit lassen sich Längenänderungen von Bruchteilen einer Wellenlänge messen – das ist die
 technische Verwendung, die im Kerncurriculum verlangt wird.
 
-= Experiment: Feder-Masse-Pendel
-
-#experiment[
-  *Aufbau.* Feder am Stativ, Masse $m$, Lineal, Stoppuhr. \
-  *Durchführung.* $m$ variieren, je 10 Schwingungen messen, $T = t\/10$. \
-  *Beobachtung.* $T$ wächst mit $m$; bei kleiner Amplitude ist $T$ unabhängig von der Amplitude. \
-  *Auswertung.* $T^2$ gegen $m$: Gerade durch den Ursprung, Steigung $4 pi^2 \/ D$. \
-  *Erklärung.* Rückstellkraft $-D s$ gegen Trägheit $m$ – siehe Herleitung. \
-  *Bedeutung.* Bestätigt $T tilde sqrt(m)$ und liefert $D$ ohne Kraftmessung.
-]
-
-#herleitung[
-  *Periodendauer des Federpendels* \
-  1. Bewegungsgleichung: $m (dif^2 s)/(dif t^2) = -D s$.
-  2. Form einer harmonischen Schwingung mit $omega^2 = D \/ m$.
-  3. Mit $omega = 2 pi \/ T$ folgt $frac(4 pi^2, T^2) = frac(D, m)$.
-  4. Auflösen:
-
-  $ T = 2 pi sqrt(frac(m, D)) $
-
-  5. Gültig für massefreie Feder und kleine Auslenkung. $D$ folgt aus der Steigung der
-     $T^2$-$m$-Geraden.
-
-]
 = Aufgaben
 
 #aufgabe(1, punkte: 10)[

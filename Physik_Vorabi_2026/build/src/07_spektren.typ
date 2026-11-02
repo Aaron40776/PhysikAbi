@@ -42,7 +42,8 @@ den Niveaus kleiner; $E = 0$ ist die Ionisationsgrenze.
   caption: [Wasserstoff-Termschema aus dem Schulmaterial.],
 )
 
-Die eingezeichneten Pfeile markieren Übergänge; ihre Länge ist die Photonenenergie, und je kürzer der Pfeil, desto größer die Wellenlänge.
+Die Energiedifferenzen zwischen den Niveaus bestimmen die Photonenenergien; je kleiner die
+Differenz, desto größer die Wellenlänge.
 
 #table(
   columns: (1fr, 1.6fr),

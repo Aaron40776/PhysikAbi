@@ -82,7 +82,7 @@ S.laden().then((idx) => {
 
   pruefe("Treffer nennt den richtigen Abschnitt", () => {
     const t = S.suche("Bragg", 3).gruppen[0].treffer[0];
-    assert.strictEqual(t.abschnitt, "8 Bragg-Reflexion");
+    assert.strictEqual(t.abschnitt, "9 Bragg-Reflexion");
     const t2 = S.suche("Rutherford", 3).gruppen[0].treffer[0];
     assert.strictEqual(t2.abschnitt, "1 Rutherford-Streuversuch");
   });

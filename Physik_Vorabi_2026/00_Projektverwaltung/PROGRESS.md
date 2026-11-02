@@ -606,3 +606,18 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - Umfang nach den korrigierten Abbildungen: **7 Kapitel, 53 Seiten** (Skript 2: 7, Skript 6: 8).
 - Prüfstand: `test_pages.py` 48/48, `test_browser.py` 7/7, Suche 16/16, `check_physics.py` 13/13,
   `qa_pdf.py` 7 PDFs/53 Seiten/0 Befunde, Leseseiten 7/7.
+
+## Nachtrag 02.11.2026 – zweite Vollprüfung nach der Korrekturrunde
+
+- Skript 1: Das Feder-Masse-Pendel-Experiment stand am Ende hinter dem Michelson-Interferometer
+  und wurde in den Abschnitt „Gedämpfte Schwingung und Resonanz“ verschoben; damit ist der rote
+  Faden wieder Schwingung → Experiment → Welle.
+- Skript 2: Der satzlos beginnende Satz „Die Gerade schneidet die Frequenzachse …“ aus dem
+  Photon-Abschnitt entfernt; die Aussage steht bereits in der Photoeffekt-Herleitung.
+- Skript 4: Unbestimmtheitsabschnitt entdoppelt: exakte Form $h/(4 pi)$, Schulnotation $h$,
+  Einordnung der Faktoren.
+- Bildunterschriften für die Wellenmaschine und die Doppelspalt-Geometrie an den tatsächlichen
+  Bildinhalt angepasst; keine „Pfeile“ mehr behauptet, wo das Termschema nur Niveaus zeigt.
+- Suchtest an die neue Abschnittsnummer von Bragg angepasst (weiterhin Seite 8).
+- Prüfstand erneut grün: 7 Kapitel/53 Seiten, `test_pages.py` 48/48, Browser 7/7, Suche 16/16,
+  `qa_pdf.py` 0 Befunde, Leseseiten 7/7.

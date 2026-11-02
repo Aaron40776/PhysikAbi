@@ -30,8 +30,6 @@ die Rechnung in eV bequem:
 
 $ E_"[eV]" = frac(1239","8, lambda_"[nm]") $
 
-Die Gerade schneidet die Frequenzachse bei $f_G$; erst oberhalb dieser Frequenz verlassen Elektronen das Metall, und die Steigung ist für alle Metalle dieselbe.
-
 = Der äußere Photoeffekt
 
 #table(

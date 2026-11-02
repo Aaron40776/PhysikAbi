@@ -1280,3 +1280,20 @@ Alle sieben Kernskripte wurden vollständig gegengelesen. Gefundene und behobene
 Ergebnis: **7 Kapitel, 53 Seiten** (Skript 2: 7, Skript 6: 8). Alle Prüfungen grün:
 `test_pages.py` 48/48, `test_browser.py` 7/7, Suche 16/16, `check_physics.py` 13/13,
 `qa_pdf.py` 7 PDFs/53 Seiten/0 Befunde, Leseseiten 7/7.
+
+## Zweite Vollprüfung 02.11.2026
+
+Nach der ersten Korrekturrunde wurden alle sieben Skripte erneut vollständig gelesen. Weitere
+Befunde und Korrekturen:
+
+| Nr. | Fund | Ort | Korrektur |
+|---|---|---|---|
+| N1 | Feder-Masse-Pendel-Experiment stand am Skriptende hinter Michelson; thematischer Bruch | `01_wellen.typ` | Experiment samt Herleitung direkt nach „Gedämpfte Schwingung und Resonanz“ verschoben |
+| N2 | Satz „Die Gerade schneidet die Frequenzachse …“ begann ohne Bezug im Photon-Abschnitt | `02_lichtquanten.typ` | Entfernt; Inhalt steht bereits in der Photoeffekt-Herleitung |
+| N3 | Unbestimmtheitsabschnitt wiederholte die exakte Form und sprach missverständlich von „stattdessen“ | `04_doppelspalt.typ` | Klare Reihenfolge: exakt $h/(4 pi)$, Schulnotation $h$, Einordnung |
+| N4 | Bildunterschrift der Wellenmaschine versprach Amplitude und Wellenlänge, das Bild zeigt die gekoppelten Oszillatoren | `01_wellen.typ` | Unterschrift an den Bildinhalt angepasst |
+| N5 | Bildunterschrift der Doppelspalt-Geometrie behauptete Beschriftungen $d$, $e$, $P$ | `01_wellen.typ` | Auf den tatsächlichen Strahlweg und Wegunterschied reduziert |
+| N6 | Termschema-Text behauptete eingezeichnete Pfeile | `06_atommodelle.typ`, `07_spektren.typ` | Durch Aussagen über Niveaus und Energiedifferenzen ersetzt |
+| N7 | Suchtest erwartete nach der Verschiebung noch die alte Bragg-Abschnittsnummer | `build/test_suche.js` | Abschnittsnummer aktualisiert; Seite 8 bleibt korrekt |
+
+Ergebnis erneut: **7 Kapitel, 53 Seiten**, alle Prüfungen grün.
