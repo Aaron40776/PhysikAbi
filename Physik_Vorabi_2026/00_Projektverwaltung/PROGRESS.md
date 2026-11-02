@@ -226,7 +226,7 @@ Abbildungen im Text gedeutet.
 
 ## Nachtrag 9 (01.11.2026) – Veröffentlichung
 
-Die Skripte stehen jetzt als Seite bereit: **https://aaron40776.github.io/PhysikAbi/**
+Die Skripte stehen jetzt als Seite bereit: **https://anton037.github.io/PhysikAbi/**
 
 - `build/make_pages.py` erzeugt die Übersicht (Titel, Kurzinhalt, Seitenzahl aus den PDFs) und
   kopiert alle 15 Dateien nach `_site`.
@@ -621,3 +621,17 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - Suchtest an die neue Abschnittsnummer von Bragg angepasst (weiterhin Seite 8).
 - Prüfstand erneut grün: 7 Kapitel/53 Seiten, `test_pages.py` 48/48, Browser 7/7, Suche 16/16,
   `qa_pdf.py` 0 Befunde, Leseseiten 7/7.
+
+## Nachtrag 02.11.2026 – Quellenlinks, Fehlerhinweise, Suche und Reflow
+
+- Alle 24 Bildunterschriften tragen jetzt einen direkten Quellenlink auf die zugehörige
+  Schulseite (`05_Grafiken/QUELLEN.md` → `#link(...)`); keine Bildzuordnung erfunden.
+- Alle 18 `#experiment`-Blöcke haben einen Satz zu Hauptfehler, systematischem Fehler und
+  Sicherheit. Eine quantitative Unsicherheitsrechnung bleibt offen.
+- Suche: Levenshtein-Fallback mit „Meinten Sie …?“ (max. 1 bei 4–7 Zeichen, max. 2 ab 8);
+  Test `Fotoeffekt` → `Photoeffekt`.
+- Responsive: 200 % Zoom auf 390 px (195 px CSS) ohne horizontalen Seitenüberlauf; neuer
+  Browser-Test `reflow` prüft Start, Suche, Glossar und alle sieben Leseseiten.
+- KC-Matrix auf Stand §14.4 gebracht: 91 abgedeckt, 22 teilweise, 0 fehlt (in-scope).
+- Prüfstand: 7 Kapitel/**58 Seiten**, `test_pages.py` 48/48, Browser **8/8**, Suche **17/17**,
+  `qa_pdf.py` 0 Befunde, Index 103 kB, ZIP 1,8 MB. Live noch 57 Seiten; Deployment ausstehend.

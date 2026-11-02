@@ -73,7 +73,8 @@ nicht aber, wie viel Energie ein einzelnes Elektron bekommt.
 #figure(
   image("../fig/schule/s2_photoeffekt_fE.jpg", width: 80%),
   caption: [Photoeffekt aus dem Schulmaterial: $U_B$ bzw. $E_"kin,max"$ über der Frequenz;
-    die Steigung ist $h\/e$, die Nullstelle $f_G$.],
+    die Steigung ist $h\/e$, die Nullstelle $f_G$.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/05planckkonstante/hbestimmung04.jpg")[Schulseite].],
 )
 Trägt man die gemessenen Gegenspannungen $U_B$ über der Frequenz auf, liegen die Punkte auf einer Geraden; aus der Steigung folgt $h$, aus dem Achsenabschnitt die Austrittsarbeit des Kathodenmaterials.
 
@@ -98,11 +99,13 @@ kinetische Energie der Elektronen, nicht ihre Zahl.
   *Auswertung/Formel.* Steigung $m$ der $U_B$-$f$-Geraden: $h = m e$; Achsenabschnitt $b$:
   $W_A = -b e$. \
   *Bedeutung.* Eine der ersten präzisen Messungen von $h$ aus dem Photoeffekt.
-]
+
+  *Fehler und Sicherheit.* Gegenfeld und Kathodenmaterial sind die kritischen Größen; die Austrittsarbeit wirkt systematisch. Hochspannung abschalten, Vakuumröhre nicht öffnen und UV-Strahlung abschirmen.]
 
 #figure(
   image("../fig/schule/s2_messreihe_zink.jpg", width: 76%),
-  caption: [Messreihe für Zink aus dem Schulmaterial: $U_B$ über $f$.],
+  caption: [Messreihe für Zink aus dem Schulmaterial: $U_B$ über $f$.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/05planckkonstante/hbestimmung02.jpg")[Schulseite].],
 )
 
 #experiment[
@@ -114,7 +117,8 @@ kinetische Energie der Elektronen, nicht ihre Zahl.
   *Auswertung.* Steigung $h\/e$, daraus $h$. \
   *Bedeutung.* Einfache Bestimmung von $h$ ohne Vakuum; $U_S$ ist wegen der breiten
   Emissionslinie nur unscharf messbar.
-]
+
+  *Fehler und Sicherheit.* Schwellenspannung und Wellenlänge sind die Eingangsgrößen; der Serienwiderstand und die LED-Temperatur wirken systematisch. Immer mit Vorwiderstand betreiben und LEDs nicht überlasten.]
 
 Die Auswertung $h f = e U_S$ setzt voraus, dass die Elektronen ihre elektrische Energie
 vollständig in ein Photon umwandeln und keine Verluste im Halbleiter auftreten. Deshalb ist
@@ -131,7 +135,8 @@ LED-Farben verwendet.
   $e U_B = h c\/lambda_min$, also $lambda_min = h c\/(e U_B)$. \
   *Bedeutung.* Bei $U_B = 35$ kV folgt $lambda_min = 35$ pm; aus der Grenze lässt sich $h$
   bestimmen.
-]
+
+  *Fehler und Sicherheit.* Hochspannung und Wellenlängenablesung tragen die Unsicherheit; die Anodenlinien überlagern das Bremsspektrum systematisch. Röntgenschutz beachten, Strahl nur im abgeschirmten Gerät.]
 
 = Aufgaben
 

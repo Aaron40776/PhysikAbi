@@ -23,11 +23,11 @@
 - `PROGRESS.md` wird nur ergänzt (Nachtrag mit Datum), nicht rückwirkend umgeschrieben.
 
 ## Website (GitHub Pages)
-- **Stand 2026-11-02:** 7 Kernkapitel, **57 Seiten**, Glossar **92**, Suchindex 97 kB, ZIP 1,8 MB.
+- **Stand 2026-11-02:** 7 Kernkapitel, **58 Seiten**, Glossar **92**, Suchindex 103 kB, ZIP 1,8 MB.
 - Prüfkette: `TYPST=/tmp/typst-x86_64-unknown-linux-musl/typst ./build/check_all.sh`;
   braucht `pint` + `sympy` (`python3 -m pip install pint sympy`). Ohne TYPST bricht build_all ab.
 - `build/check_markdown.py` überspringt `06_Qualitaetskontrolle/` (Berichte zitieren Typst-Formeln).
-- Live `aaron40776.github.io/PhysikAbi` ist seit 2026-11-02 neu deployt (57 Seiten, 7 PDFs).
+- Live `anton037.github.io/PhysikAbi` ist seit 2026-11-02 neu deployt (57 Seiten, 7 PDFs).
 - **Rechte:** `NUTZUNGSERLAUBNIS.md` (Repo-Root) dokumentiert die Freigabe des Repo-Inhabers, aber keine
   unterschriebene Freigabe des Schulseiten-Urhebers → P0-Release-Blocker bleibt.
 - **He-Ne-Laser ist nicht im KC 2022.** Schulbox `09henelaser` hat recht. Fallstrick: `upload=306` liefert das

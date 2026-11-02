@@ -68,6 +68,7 @@
 .lese-text ul, .lese-text ol { padding-left: 1.25em; margin: .4em 0 1em; }
 .lese-text li { margin: .18em 0; }
 
+.lese-text { overflow-x: clip; }
 .lese-text math { font-size: 1.08em; max-width: 100%; }
 .lese-text p:has(> math) { overflow-x: auto; overflow-y: hidden; }
 .lese-text math[display="block"] {

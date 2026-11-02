@@ -56,7 +56,8 @@ Interferenzversuche geprüft.
 ]
 #figure(
   image("../fig/schule/s3_roehre.png", width: 62%),
-  caption: [Elektronenbeugungsröhre aus dem Schulmaterial.],
+  caption: [Elektronenbeugungsröhre aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/03elektronenwellen/elektronenbeugungsroehre.png")[Schulseite].],
 )
 
 Aus Ringradius und bekanntem Netzebenenabstand lässt sich umgekehrt $lambda$ bestimmen; die beiden Ringe gehören zu verschiedenen Netzebenenscharen desselben Graphits.
@@ -98,7 +99,8 @@ Steigung $d$ folgt.
 
 #figure(
   image("../fig/schule/s3_bragg.png", width: 52%),
-  caption: [Reflexion am Kristall und Bragg-Bedingung aus dem Schulmaterial.],
+  caption: [Reflexion am Kristall und Bragg-Bedingung aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/03elektronenwellen/reflexion_am_kristall.png")[Schulseite].],
 )
 
 Bei festem Winkel wächst der Zusatzweg $2 d sin(theta)$ mit dem Netzebenenabstand; genau darauf beruht die Auswertung über die Steigung von $r^2$ über $1\/U$.
@@ -157,7 +159,8 @@ also sowohl $lambda tilde 1\/v$ als auch die Bragg-Beziehung.
   kleinere Beugungswinkel. \
   *Auswertung.* $r^2$ gegen $1\/U$: Gerade mit Steigung $a^2 h^2 \/ (2 m_e e d^2)$. \
   *Bedeutung.* Direkter Nachweis der Materiewelle; liefert $h$ bzw. $d$.
-]
+
+  *Fehler und Sicherheit.* Beschleunigungsspannung und Ringradius sind die Messgrößen; der geometrische Aufbau der Röhre wirkt systematisch. Hochspannung nur im geschlossenen Gerät, Röhre nicht öffnen.]
 
 = Aufgaben
 

@@ -266,6 +266,17 @@ class SeitenTest:
                 assert self.p.locator(".glossar-eintrag.glossar-treffer").is_visible()
         self.p.set_viewport_size({"width": 1280, "height": 900})
 
+    def reflow(self):
+        """200 % Zoom auf 390 px: kein horizontaler Seitenüberlauf."""
+        self.p.set_viewport_size({"width": 195, "height": 422})
+        docs = [d["id"] for d in self.site["docs"] if d["id"] != "Glossar"]
+        for pfad in ["", "suche.html?q=Bragg", "glossar.html?q=Intensit%C3%A4t"] + [
+                "lesen/" + d + ".html" for d in docs]:
+            self.goto(pfad)
+            self.p.wait_for_timeout(60)
+            assert not self.js("document.documentElement.scrollWidth > window.innerWidth + 1"), pfad
+        self.p.set_viewport_size({"width": 1280, "height": 900})
+
     def archiv(self):
         antwort = self.p.request.get(self.url("physik-vorabi-2026.zip"))
         assert antwort.ok, "ZIP nicht erreichbar: %s" % antwort.status
@@ -329,6 +340,7 @@ def main():
                 ("Leser: TOC, Markierung, Dialog, Nach-oben, Schriftgröße, Theme", test.leser),
                 ("Alle 7 Leseseiten laden ohne horizontalen Überlauf", test.alle_leseseiten),
                 ("Mobile 390 px: Start, Suche, Glossar, Leser ohne Überlauf", test.mobil),
+                ("200 % Zoom (195 px): alle Seiten ohne horizontalen Überlauf", test.reflow),
                 ("Offline-Archiv: ZIP mit 7 PDFs", test.archiv),
             ):
                 pruefer.lauf(name, fn)

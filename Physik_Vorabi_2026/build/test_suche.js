@@ -70,12 +70,14 @@ S.laden().then((idx) => {
     assert(aus.startsWith("…"), aus);
   });
 
-  pruefe("Bragg: Skript 1, Seite 10, Überschrift zuerst", () => {
+  pruefe("Bragg: Skript 1, Abschnittsüberschrift zuerst", () => {
     const e = S.suche("Bragg", 3);
     assert(e && e.anzahl > 5, "Treffer");
     const g = e.gruppen[0];
     assert.strictEqual(g.doc.id, "01_Wellen_und_Interferenz");
-    assert.strictEqual(g.treffer[0].seite, 10, "Überschrift auf Seite 10 zuerst");
+    const eintrag = g.doc.toc.find((t) => /Bragg/.test(t[1]));
+    assert(eintrag, "TOC-Eintrag Bragg");
+    assert.strictEqual(g.treffer[0].seite, eintrag[2], "Überschrift auf der TOC-Seite zuerst");
     assert(g.treffer.every((t) => S.ausschnitt(t.text, e.tokens).includes("<mark>")), "jeder Treffer markiert");
   });
 
@@ -116,6 +118,13 @@ S.laden().then((idx) => {
   pruefe("Kein Treffer bei Fantasiewort", () => {
     const e = S.suche("xyzzyplugh");
     assert(!e || e.anzahl === 0);
+  });
+
+  pruefe("Tippfehler werden korrigiert", () => {
+    const e = S.suche("Fotoeffekt", 3);
+    assert(e && e.anzahl > 0, "Treffer über Korrektur");
+    assert(e.korrektur, "Korrekturhinweis vorhanden");
+    assert(/photoeffekt/i.test(e.korrektur.vorschlag), e.korrektur.vorschlag);
   });
 
   pruefe("Thema führt zum richtigen Skript", () => {

@@ -6,7 +6,7 @@
 #cover(
   "Zusatzmaterial · Planung",
   "Lernfahrplan bis Freitag",
-  "57 Seiten sind ein Nachschlagewerk. Auswendig zu lernen sind etwa acht.",
+  "58 Seiten sind ein Nachschlagewerk. Auswendig zu lernen sind etwa acht.",
   lernziele: (
     "wissen, welche Seiten Erklärung sind und welche Lernstoff",
     "in vier Tagen das Wichtige zuerst bearbeiten",

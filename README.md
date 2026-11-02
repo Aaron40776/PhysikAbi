@@ -2,13 +2,13 @@
 
 Lernskripte für den **Vorabi-Schwerpunkt** im Fach Physik, Niedersachsen, erhöhtes
 Anforderungsniveau (Vorabitur 2026, Abitur 2027): Wellen, Quantenphysik und Atomhülle.
-**Sieben Kernkapitel** bilden die Website; dazu kommen Übungshefte, Formelblatt,
+**Sieben Kernkapitel mit 58 Seiten** bilden die Website; dazu kommen Übungshefte, Formelblatt,
 Experimentesammlung, Lernfahrplan und Glossar als Zusatzmaterial.
 
 Nicht enthalten sind elektrische und magnetische Felder sowie Atomkern und Radioaktivität.
 Dafür bleiben die Unterrichtsmaterialien der Schule maßgeblich.
 
-### [→ Skripte online lesen](https://aaron40776.github.io/PhysikAbi/)
+### [→ Skripte online lesen](https://anton037.github.io/PhysikAbi/)
 
 Die Seite hat eine Volltextsuche über die sieben Kernkapitel: Fundstellen werden als Ausschnitt mit
 markiertem Suchwort angezeigt. Ein Klick öffnet die **HTML-Lesefassung** an der richtigen Stelle
@@ -45,7 +45,7 @@ Seite. Einzelheiten: [NUTZUNGSERLAUBNIS.md](NUTZUNGSERLAUBNIS.md). Der Quellcode
 
 Jeder Befund im Prüfbericht trägt eine Fundstelle (Datei und Zeile) und ein Zitat. Geprüft
 wurden unter anderem: alle Referenzwerte nachgerechnet (h·c, Rydberg, de Broglie, Bragg,
-Doppelspalt, Franck-Hertz), 28 Abbildungen auf Einbindung und Deutung im Text, Formeldarstellung
+Doppelspalt, Franck-Hertz), 24 Abbildungen auf Einbindung und Deutung im Text, Formeldarstellung
 in den gerenderten PDFs, Zahlen in 20 Übungsaufgaben samt Lösungen. Gefundene Fehler sind
 behoben; was nicht geprüft werden konnte — NIBIS-Aufgaben, eine visuelle Bildbetrachtung der Grafiken —,
 steht begründet in Abschnitt 14.7 des Prüfberichts; die Pixel- und Geometrieprüfung steht in
@@ -75,9 +75,9 @@ Leser), `glossar.js` (Filter), `lesen.css`/`lesen-static.js` (mobile Lesefassung
 `suche-seite.js`. Die Glossarbegriffe stehen einmal in
 `build/glossar.json`; daraus entstehen sowohl `glossar.html` als auch das PDF
 `Glossar.pdf` (Typst-Quelle `build/src/f10_glossar.typ`).
-`make_pages.py` extrahiert den Text aus den PDFs zu `_site/suche.json` (≈218 kB), kopiert die
+`make_pages.py` extrahiert den Text aus den PDFs zu `_site/suche.json` (≈103 kB), kopiert die
 PDFs und das ZIP und erzeugt die statischen Leseseiten. Die Suche öffnet keine PDF mehr, sondern
 die HTML-Lesefassung mit markiertem Suchwort; die PDFs bleiben als Offline-Archiv im ZIP.
 
-Die Seite unter `aaron40776.github.io/PhysikAbi` wird bei jedem Push auf `main` automatisch aus
+Die Seite unter `anton037.github.io/PhysikAbi` wird bei jedem Push auf `main` automatisch aus
 den PDFs neu gebaut (`.github/workflows/pages.yml`, `build/make_pages.py`).

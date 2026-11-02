@@ -4,7 +4,7 @@ Sieben Kernkapitel für das **Vorabitur Physik am 06.11.2026**, Gymnasium Wester
 (Niedersachsen), erhöhtes Anforderungsniveau. Veröffentlicht werden nur Inhalte mit
 *Bezug zum Kerncurriculum*.
 
-**Online: <https://aaron40776.github.io/PhysikAbi/>** (wird bei jedem Push automatisch neu gebaut)
+**Online: <https://anton037.github.io/PhysikAbi/>** (wird bei jedem Push automatisch neu gebaut)
 
 Die Website hat **einen** Leser: Die Karten öffnen direkt die mobile Textfassung mit MathML,
 eingebetteten Abbildungen und Tabellen. Jede Leseseite trägt oben den *Bezug zum

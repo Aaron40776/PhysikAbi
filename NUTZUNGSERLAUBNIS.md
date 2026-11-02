@@ -8,7 +8,7 @@ die Nutzung für dieses Lernprojekt ist erlaubt.
 Die Erlaubnis umfasst nach dieser Angabe:
 
 - die Übernahme in Lernskripte, PDFs, HTML-Lesefassung, Volltextsuche und ZIP-Archive,
-- die Veröffentlichung auf <https://aaron40776.github.io/PhysikAbi/>,
+- die Veröffentlichung auf <https://anton037.github.io/PhysikAbi/>,
 - Kürzen, Umstellen, Zusammenfassen und Vereinheitlichen der Inhalte.
 
 Bedingung: Die Quellenangabe „Unterrichtsmaterialien Gymnasium Westerstede,
