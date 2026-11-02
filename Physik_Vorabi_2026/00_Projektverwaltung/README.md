@@ -38,7 +38,7 @@ Formeln mit echten Bruchstrichen (statt Schrägstrich), Herleitungen als nummeri
 Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Grafiken mit
 Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
 
-Umfang (02.11.): **7 Kernkapitel, 50 Seiten**. Die früheren Zusatzhefte sind aus der
+Umfang (02.11.): **7 Kernkapitel, 51 Seiten**. Die früheren Zusatzhefte sind aus der
 Veröffentlichung herausgenommen.
 
 ## Verzeichnisse

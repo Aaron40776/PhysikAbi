@@ -460,7 +460,7 @@ for k, (ax, delta, titel) in enumerate(zip(
     ax.set_aspect("equal"); ax.axis("off")
     ax.set_title(titel, fontsize=8, color=GREY)
 fig.tight_layout()
-save(fig, "qed_zeiger")
+save(fig, "zeiger_amplituden")
 
 # ---------------------------------------------------------------- 20 Reflexion/Brechung
 fig, ax = plt.subplots(figsize=(4.6, 2.8))

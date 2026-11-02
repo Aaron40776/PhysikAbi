@@ -585,5 +585,5 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   SVG-Schemazeichnung `mzi_clean.svg` ersetzt (Laser, ST1/ST2 als Würfel mit Diagonale,
   M1/M2, D1/D2, Phasenplättchen). Quellenangabe und README wurden bereinigt.
 - **Prüfstand:** `check_all.sh` grün: 20 Quellen, 124 Markdown-Dateien, 14/14 Physik,
-  7 PDFs/50 Seiten/0 Befunde, 7/7 Leseseiten, `test_pages.py` 48/48,
+  7 PDFs/51 Seiten/0 Befunde, 7/7 Leseseiten, `test_pages.py` 48/48,
   `test_browser.py` 7/7; ZIP mit 7 PDFs.

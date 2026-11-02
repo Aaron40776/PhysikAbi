@@ -1248,8 +1248,8 @@ horizontalen Überlauf.
 | K2 | `build/src/02_lichtquanten.typ`, `04_doppelspalt.typ`, `05_mzi.typ` | Einzelne Abschnitte ohne Bezug zum Kerncurriculum (Physikkrise, Quantenradierer, QED, Verschränkung/Nichtlokalität). | Abschnitte entfernt; Skript 5 auf MZI, Amplituden, Welcher Weg und Delayed Choice begrenzt; Dateiname ohne QED. |
 | K3 | `build/glossar.json` | Glossar enthielt Begriffe aus den entfernten Themen und Zusatzheften. | Von 104 auf 92 Begriffe reduziert; Delayed-Choice-Alias bereinigt. |
 | K4 | `build/src/05_mzi.typ`, `build/fig/mzi_clean.svg` | Die übernommene Quellabbildung war unklar; Strahlteiler und Strahlführung waren nicht sauber getrennt. | Eigene SVG-Schemazeichnung mit zwei Strahlteilern, zwei Spiegeln, zwei Detektoren und Phasenplättchen; Quellenangabe angepasst. |
-| K5 | `build/test_pages.py`, `test_browser.py`, `test_suche.js`, `check_lesen_vollstaendig.py` | Tests erwarteten 17 Dokumente, 112 Seiten, 16 Leseseiten und 104 Glossarbegriffe. | Auf 7 Kapitel, 50 Seiten, 7 Leseseiten und 92 Begriffe angepasst; alle Prüfungen grün. |
+| K5 | `build/test_pages.py`, `test_browser.py`, `test_suche.js`, `check_lesen_vollstaendig.py` | Tests erwarteten 17 Dokumente, 112 Seiten, 16 Leseseiten und 104 Glossarbegriffe. | Auf 7 Kapitel, 51 Seiten, 7 Leseseiten und 92 Begriffe angepasst; alle Prüfungen grün. |
 
 **Prüfstand 15.14.** `check_all.sh` grün: 20 Quellen, 124 Markdown-Dateien,
-`check_physics.py` 14/14, `qa_pdf.py` 7 PDFs/50 Seiten/0 Befunde,
+`check_physics.py` 14/14, `qa_pdf.py` 7 PDFs/51 Seiten/0 Befunde,
 `check_lesen_vollstaendig.py` 7/7, `test_pages.py` 48/48, `test_browser.py` 7/7.
