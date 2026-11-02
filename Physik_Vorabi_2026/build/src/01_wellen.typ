@@ -44,6 +44,21 @@ $ s(t) = A sin(omega t + phi_0), quad v(t) = A omega cos(omega t + phi_0) $
 
 Nach der Zeit $Delta t$ ist die Störung um $c dot Delta t$ weitergewandert; ihre Form ändert sich dabei nicht, nur ihr Ort.
 
+== Messwerte, Energie und Diagramme
+
+Ein Oszilloskop zeichnet $s(t)$ auf. Aus dem Abstand zweier Nulldurchgänge in derselben
+Richtung folgt $T$, aus der größten Auslenkung $A$; die Frequenz ist $f = 1\/T$. Bei gedämpfter
+Schwingung nimmt die Amplitude exponentiell ab, $A(t) = A_0 e^(-gamma t)$; die Einhüllende ist
+im $t$-$s$-Diagramm eine fallende Exponentialkurve.
+
+Beim Feder-Masse-Pendel wandelt sich Energie fortlaufend um:
+
+$ E_"pot" = frac(1, 2) D s^2, quad E_"kin" = frac(1, 2) m v^2, quad E_"ges" = E_"pot" + E_"kin" $
+
+In der Ruhelage ist $E_"kin"$ maximal und $E_"pot"$ null; am Umkehrpunkt ist es umgekehrt.
+Das $t$-$v$-Diagramm ist die Ableitung des $t$-$s$-Diagramms: Es eilt um eine Viertelperiode
+voraus und hat bei $s = 0$ seinen größten Betrag.
+
 = Zeigermodell und Interferenz
 
 Ein Zeiger der Länge $A$ rotiert mit $omega$; seine Projektion auf die Hochachse ist $s(t)$.
@@ -72,7 +87,9 @@ Ein voller Umlauf des Zeigers entspricht einer Wellenlänge; deshalb liest man d
 
 = Gedämpfte Schwingung und Resonanz
 
-$ A(t) = A_0 e^(-k t), quad Lambda = ln frac(A(t), A(t+T)) = k T $
+$ A(t) = A_0 e^(-gamma t), quad Lambda = ln frac(A(t), A(t+T)) = gamma T $
+
+Dabei ist $gamma$ die Dämpfungskonstante und $Lambda$ das logarithmische Dekrement.
 
 #definition[
   *Resonanz:* Die Amplitude der erzwungenen Schwingung ist maximal, wenn die Erregerfrequenz
@@ -91,6 +108,17 @@ $ A(t) = A_0 e^(-k t), quad Lambda = ln frac(A(t), A(t+T)) = k T $
   [Fadenpendel], [$f_0 = frac(1, 2 pi) sqrt(frac(g, l))$], [kleine Auslenkung],
   [Schwingkreis], [$f_0 = frac(1, 2 pi sqrt(L C))$], [Thomsonsche Formel],
 )
+
+Im Schwingkreis pendelt die Energie zwischen Kondensator und Spule:
+
+$ E_"el" = frac(1, 2) C U^2, quad E_"mag" = frac(1, 2) L I^2, quad f_0 = frac(1, 2 pi sqrt(L C)) $
+
+Ein Resonanzexperiment: Ein Erreger mit veränderbarer Frequenz $f_A$ regt das System an; man
+misst die Amplitude für jede Frequenz und trägt sie über $f_A$ auf. Das Maximum liegt bei
+$f_R approx f_0$. Ersetzt man im LC-Kreis den Kondensator durch einen mit größerem $C$, sinkt
+$f_0$; die Resonanzkurve verschiebt sich nach links. Das lässt sich mit zwei Kondensatoren
+unterschiedlicher Kapazität prüfen; die Messung bestätigt $f_0 tilde 1\/sqrt(C)$ nur, wenn $L$
+unverändert bleibt.
 
 = Experiment: Feder-Masse-Pendel
 
@@ -162,6 +190,18 @@ In der Grundschwingung schwingt die Mitte mit maximaler Amplitude, in der ersten
   [ein Ende offen], [$L = (2n-1) frac(lambda, 4)$], [$f_n = (2n-1) f_1$],
 )
 
+#experiment[
+  *Ultraschall-Stehwelle im Kundtschen Rohr.* \
+  *Aufbau.* Glasrohr mit Lautsprecher an einem Ende und bewegtem Stempel am anderen Ende;
+  im Rohr liegt Korkmehl oder Styroporgranulat. \
+  *Durchführung.* Lautsprecher mit fester Frequenz $f$ einschalten und den Stempel verschieben,
+  bis das Granulat deutliche Knoten und Bäuche zeigt. Abstand zweier benachbarter Knoten messen. \
+  *Beobachtung.* Das Granulat sammelt sich an den Schwingungsknoten; die Knoten liegen im
+  Abstand $lambda\/2$. \
+  *Auswertung.* $lambda = 2 (x_1 - x_0)$ und $c = lambda f$. \
+  *Bedeutung.* Die stehende Welle macht die Wellenlänge des unsichtbaren Ultraschalls messbar.
+]
+
 = Doppelspalt
 
 #figure(
@@ -189,6 +229,18 @@ Der untere Strahl legt bis zum Schirm das zusätzliche Stück $d sin(alpha)$ zur
   caption: [Interferenzmuster am Doppelspalt aus dem Schulmaterial.],
 )
 
+#experiment[
+  *Doppelspalt mit Licht und mit Schall.* \
+  *Aufbau.* Licht: Laser, Doppelspalt, Schirm. Schall: zwei gleichphasige Lautsprecher im
+  Abstand $d$, Mikrofon als Detektor. \
+  *Durchführung.* Licht: Abstand $a_n$ der Maxima auf dem Schirm messen. Schall: Mikrofon
+  seitlich verschieben und die Orte der Maxima und Minima aufnehmen. \
+  *Auswertung.* Licht: $d sin(alpha_n) = n lambda$ mit $tan(alpha_n) = a_n\/e$. Schall:
+  aus dem Muster $lambda$ bestimmen und mit der bekannten Frequenz $c = lambda f$ prüfen. \
+  *Bedeutung.* Dieselbe Geometrie gilt für Licht und Schall; der Doppelspalt ist kein
+  Sonderfall des Lichts.
+]
+
 Weil $a_n$ linear mit $n$ wächst, sind die Maxima gleich weit voneinander entfernt; die Minima liegen jeweils genau dazwischen.
 
 = Gitter und Einzelspalt
@@ -209,6 +261,41 @@ $ b sin(alpha_m) = m lambda, quad m = 1, 2, dots $
   Bedingungen gleich behandelt, vertauscht hell und dunkel.
 ]
 
+#experiment[
+  *Gitter mit monochromatischem Licht (objektiv und subjektiv).* \
+  *Aufbau.* Laser oder Spektrallampe, Gitter mit bekannter Gitterkonstante $g$, Schirm in
+  bekanntem Abstand; subjektiv ein Fernrohr auf einem drehbaren Arm. \
+  *Durchführung.* Objektiv: Abstand $a_n$ des $n$-ten Maximums auf dem Schirm messen.
+  Subjektiv: das Maximum durch das Fernrohr anvisieren und den Winkel ablesen. \
+  *Auswertung.* $g sin(alpha_n) = n lambda$; objektiv mit $tan(alpha_n) = a_n\/e$, subjektiv
+  direkt mit dem gemessenen Winkel. \
+  *Bedeutung.* Zwei unabhängige Messwege für dieselbe Wellenlänge.
+]
+
+#experiment[
+  *Weißes Licht am Gitter.* \
+  *Beobachtung.* Das zentrale Maximum ist weiß; die Maxima höherer Ordnung sind zu einem
+  Spektrum aufgefächert, weil $sin(alpha_n) = n lambda\/g$ mit $lambda$ wächst. \
+  *Auswertung.* Aus dem Winkel einer bekannten Spektrallinie folgt $lambda$; umgekehrt lässt
+  sich aus dem Spektrum auf die Gitterkonstante schließen.
+]
+
+Eine CD oder DVD wirkt als Reflexionsgitter: Die feinen Spuren reflektieren das Licht unter
+verschiedenen Winkeln. Mit dem gemessenen Beugungswinkel $alpha$, der Ordnung $n$ und der
+Wellenlänge $lambda$ folgt der Spurabstand
+
+$ d = frac(n lambda, sin(alpha)) $
+
+#experiment[
+  *Spurabstand einer CD/DVD.* \
+  *Aufbau.* Laserdiode mit bekannter Wellenlänge, CD oder DVD, Schirm, Winkelmesser. \
+  *Durchführung.* Den Laser schräg auf die reflektierende Oberfläche richten und den Winkel
+  $alpha$ des $n$-ten Beugungsmaximums messen. \
+  *Auswertung.* $d = n lambda \/ sin(alpha)$; bei bekannter Spurzahl pro Millimeter lässt
+  sich das Ergebnis prüfen. \
+  *Bedeutung.* Eine Alltagsanwendung derselben Gittergleichung.
+]
+
 #figure(
   image("../fig/schule/s1_gitter.jpg", width: 88%),
   caption: [Interferenzmuster am Gitter aus dem Schulmaterial.],
@@ -220,7 +307,14 @@ Beim Gitter überlagern sich viele Elementarwellen; dadurch werden die Maxima sc
 
 An Netzebenen mit Abstand $d$ ist der Zusatzweg der zweiten Welle $2 d sin(theta)$:
 
-$ 2 d sin(theta) = n lambda $
+#herleitung[
+  *Bragg-Gleichung* \
+  1. Zwei parallele Strahlen werden an zwei benachbarten Netzebenen im Abstand $d$ reflektiert.
+  2. Der untere Strahl läuft zusätzlich den Weg $Delta s$. Im rechtwinkligen Dreieck mit
+     Hypotenuse $d$ und Gegenkathete $Delta s\/2$ gilt $sin(theta) = (Delta s\/2)\/d$.
+  3. Also $Delta s = 2 d sin(theta)$.
+  4. Konstruktive Interferenz für $Delta s = n lambda$; damit folgt $2 d sin(theta) = n lambda$.
+]
 
 #figure(
   image("../fig/schule/s1_bragg.png", width: 54%),
@@ -239,10 +333,10 @@ Der zweite Strahl dringt eine Netzebene tiefer ein und läuft dadurch den Weg $2
 
 = Elektromagnetische Wellen
 
-$c_0 = 2","998 dot 10^8$ m/s im Vakuum, $c = c_0 \/ n$ im Medium. Beim Übergang bleibt $f$
+$c_0 = 2","998 dot 10^8$ m/s im Vakuum, $c = c_0 \/ n_"Med"$ im Medium. Beim Übergang bleibt $f$
 konstant, $lambda$ ändert sich:
 
-$ frac(sin(alpha), sin(beta)) = frac(c_1, c_2) = frac(n_2, n_1) $
+$ frac(sin(alpha), sin(beta)) = frac(c_1, c_2) = frac(n_"Med,2", n_"Med,1") $
 
 Beim Eintritt in ein optisch dichteres Medium knickt der Strahl zum Lot; die Ursache ist die kleinere Ausbreitungsgeschwindigkeit, nicht eine Änderung der Frequenz.
 
@@ -250,8 +344,9 @@ Beim Eintritt in ein optisch dichteres Medium knickt der Strahl zum Lot; die Urs
 
 Dass Licht sich nicht unendlich schnell ausbreitet, erkannte Ole Rømer 1676 an den
 Jupitermonden: Der Schattenaustritt des Mondes Io verspätet sich im Lauf eines Jahres um bis
-zu etwa 22 Minuten, weil die Erde auf ihrer Bahn unterschiedlich weit von Jupiter entfernt ist.
-Der heutige Wert für die Laufzeit über den Erdbahndurchmesser beträgt knapp 17 Minuten.
+zu etwa 17 Minuten, weil die Erde auf ihrer Bahn unterschiedlich weit von Jupiter entfernt ist.
+Rømer selbst schätzte noch 22 Minuten; der heutige Wert für die Laufzeit über den
+Erdbahndurchmesser beträgt 16,6 Minuten.
 
 Im Labor lässt sich $c$ mit einer stehenden Welle messen. In der Mikrowelle (Frequenz
 $f = 2","45$ GHz) bilden sich zwischen den Wänden Maxima im Abstand $lambda\/2$. Bei einem
@@ -278,7 +373,7 @@ elektromagnetischen Spektrums. Nach steigender Frequenz geordnet: Radiowellen, M
 Infrarot, sichtbares Licht, Ultraviolett, Röntgen- und Gammastrahlung.
 
 Verbindung: Dasselbe Interferenzprinzip wie in der Mikrowelle nutzt das
-Michelson-Interferometer (Abschnitt 12) für Längenmessungen; die Photonenenergie $E = h f$
+Michelson-Interferometer (Abschnitt 13) für Längenmessungen; die Photonenenergie $E = h f$
 behandelt Skript 2.
 
 = Polarisation
@@ -328,6 +423,10 @@ $ Delta s = 2 Delta d $
     Spiegel, Schirm.],
 )
 
+Mit Mikrowellen statt Licht lässt sich dasselbe Interferometer betreiben: Die
+Wellenlänge ist dann Zentimeter statt Nanometer, und die Verschiebung eines Spiegels um
+$lambda\/2$ ergibt wieder einen Hell-Dunkel-Wechsel.
+
 #experiment[
   *Aufbau.* Laser, 45°-Strahlteiler, fester Spiegel M1, auf einer Schiene verschiebbarer Spiegel
   M2 und ein Schirm. Der Strahlteiler erzeugt zwei Teilstrahlen; M1 und M2 werfen sie zurück. \
@@ -350,7 +449,7 @@ technische Verwendung, die im Kerncurriculum verlangt wird.
 
 = Aufgaben
 
-#aufgabe(1, punkte: 10)[
+#aufgabe(1, punkte: 10, afb: "II")[
   Ein Doppelspalt ($d = 0","25$ mm) wird mit Licht der Wellenlänge 633 nm beleuchtet; der
   Schirm steht $e = 2","00$ m entfernt.
 
@@ -367,7 +466,7 @@ technische Verwendung, die im Kerncurriculum verlangt wird.
   Winkeln unterscheiden sich $sin$ und $tan$ um weniger als $10^(-4)$.
 ]
 
-#aufgabe(2, punkte: 10)[
+#aufgabe(2, punkte: 10, afb: "II")[
   Ein Gitter mit 500 Strichen pro Millimeter zeigt das Maximum 2. Ordnung unter $39","2°$.
 
   #enum([Bestimmen Sie $g$.], [Berechnen Sie $lambda$.],
@@ -382,6 +481,30 @@ technische Verwendung, die im Kerncurriculum verlangt wird.
   (3) Fehlt ein Maximum, fällt es mit einem Einzelspalt-Minimum zusammen: Bei endlicher
   Strichbreite $b$ gilt $b sin(alpha) = m lambda$ für dieselbe Richtung. Die Gitterformel
   allein erklärt das nicht.
+]
+
+#aufgabe(3, punkte: 12, afb: "III")[
+  Ein Gitter mit $N$ Spalten wird mit monochromatischem Licht beleuchtet.
+
+  #enum(
+    [Erklären Sie, warum die Hauptmaxima mit wachsendem $N$ schmaler werden.],
+    [Begründen Sie, warum zwischen zwei Hauptmaxima $N-2$ Nebenmaxima liegen.],
+    [Beurteilen Sie, ob ein Doppelspalt für eine Präzisionsmessung der Wellenlänge geeignet ist.]
+  )
+]
+
+#lösung[
+  (1) Im Zeigermodell addieren sich $N$ Zeiger. Im Hauptmaximum zeigen alle in dieselbe
+  Richtung; schon eine kleine Winkeländerung dreht die äußeren Zeiger gegeneinander, sodass die
+  Summe schnell kleiner wird. Die Halbwertsbreite nimmt mit $1\/N$ ab.
+
+  (2) Zwischen zwei Hauptmaxima durchlaufen die $N$ Zeiger relative Phasen von $0$ bis $2 pi$.
+  Bei $N-1$ gleichmäßig verteilten Phasen heben sich die Zeiger auf; das ergibt $N-2$ Minima
+  und dazwischen $N-2$ Nebenmaxima.
+
+  (3) Nur bedingt: Die Maxima sind breit und die Intensität fällt kaum ab; die Lage ist schwer
+  zu messen. Ein Gitter mit vielen Spalten liefert schmale Maxima und damit eine kleinere
+  Unsicherheit.
 ]
 
 = Typische Fehler
@@ -411,7 +534,7 @@ technische Verwendung, die im Kerncurriculum verlangt wird.
   [stehende Welle, fest-fest], [$L = n lambda \/ 2$],
   [Bragg], [$2 d sin(theta) = n lambda$],
   [Federpendel], [$T = 2 pi sqrt(m\/D)$],
-  [Dämpfung], [$A(t) = A_0 e^(-k t)$],
+  [Dämpfung], [$A(t) = A_0 e^(-gamma t)$],
 )
 
 *Verstehen, nicht auswendig:* warum $delta$ und $Delta s$ dasselbe beschreiben; warum Kohärenz
@@ -429,9 +552,15 @@ Ordnung nicht.
 ]
 
 #quelle[
-  *Quellen.*
-  - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12,
-    „Schwingungen und Wellen“.
-  - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
+  *Quellen (Abruf 2026-11-02).*
+  - Schwingungen: https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/01schwingungen/docs.md
+  - Resonanz/Schwingkreis: https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/03resonanz/docs.md
+  - Stehende Wellen/Ultraschall: https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/09stehendewellen/docs.md
+  - Gitter: https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/12doppelspaltgitter/docs.md
+  - Bragg: https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/13bragginterferometer/docs.md
+  - Polarisation: https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/06polarisation/docs.md
+  - Michelson: https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/10michelsoninterferometer/docs.md
+  - Lichtgeschwindigkeit: https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/14messunglichtgeschw/docs.md
+  - Kerncurriculum Physik Niedersachsen 2022: https://cuvo.nibis.de/
   - Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

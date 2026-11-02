@@ -90,6 +90,20 @@ Steigung $d$ folgt.
 
 Bei festem Winkel wächst der Zusatzweg $2 d sin(theta)$ mit dem Netzebenenabstand; genau darauf beruht die Auswertung über die Steigung von $r^2$ über $1\/U$.
 
+== Optische Analogie und $lambda$-$v$-Zusammenhang
+
+Die Ringe am Graphit sind das Analogon zum Beugungsbild von Licht an einem
+Transmissionsgitter: Die Netzebenen wirken wie die Gitterlinien, der Ringradius entspricht dem
+Beugungswinkel. Deshalb lassen sich die optischen Begriffe (Gangunterschied, Maximum,
+Wellenlänge) unverändert auf die Elektronen übertragen.
+
+Aus $e U = frac(1, 2) m_e v^2$ folgt $v = sqrt(2 e U \/ m_e)$ und mit $lambda = h\/(m_e v)$:
+
+$ lambda = frac(h, sqrt(2 m_e e U)) quad => quad lambda tilde frac(1, v) $
+
+Setzt man das in $r = a lambda \/ d$ ein, ergibt sich $r^2 tilde 1\/U$. Die Messung bestätigt
+also sowohl $lambda tilde 1\/v$ als auch die Bragg-Beziehung.
+
 = Zwei Röhren, zwei Zwecke
 
 #table(
@@ -134,7 +148,7 @@ Bei festem Winkel wächst der Zusatzweg $2 d sin(theta)$ mit dem Netzebenenabsta
 
 = Aufgaben
 
-#aufgabe(1, punkte: 10)[
+#aufgabe(1, punkte: 10, afb: "II")[
   Elektronen werden mit 4,0 kV beschleunigt.
 
   #enum(
@@ -153,8 +167,9 @@ Bei festem Winkel wächst der Zusatzweg $2 d sin(theta)$ mit dem Netzebenenabsta
   $E = p^2\/(2 m_e)$ beim Elektron, $E = p c$ beim Photon.
 ]
 
-#aufgabe(2, punkte: 12)[
-  In einer Beugungsröhre ($a = 0","135$ m) wird der innere Ring gemessen:
+#aufgabe(2, punkte: 12, afb: "II")[
+  In einer Beugungsröhre ($a = 0","135$ m) wird der innere Ring gemessen (Beispieldaten
+  einer didaktischen Messreihe; die Quelle nennt keine Zahlen):
 
   #table(
     columns: 5,
@@ -171,6 +186,19 @@ Bei festem Winkel wächst der Zusatzweg $2 d sin(theta)$ mit dem Netzebenenabsta
 
   (2) $d = frac(h a, sqrt(2 m_e e M)) = 2","1 dot 10^(-10)$ m, also $d approx 0","21$ nm – der
   Literaturwert für Graphit.
+]
+
+#aufgabe(3, punkte: 12, afb: "III")[
+  Beurteilen Sie, ob die Elektronenbeugung den Welle-Teilchen-Dualismus „beweist“, und
+  vergleichen Sie sie mit dem Photoeffekt.
+]
+
+#lösung[
+  Die Beugung zeigt die Wellennatur: Elektronen erzeugen ein Interferenzmuster mit
+  $lambda = h\/p$. Der Photoeffekt zeigt die Teilchennatur des Lichts: Energie wird in Portionen
+  $h f$ übertragen. Beide Versuche widerlegen nicht die jeweils andere Seite, sondern zeigen,
+  dass dieselbe Größe je nach Experiment als Welle oder als Teilchen beschrieben werden muss.
+  „Beweis“ ist zu stark; die Experimente sind Belege für ein Modell, das beide Aspekte enthält.
 ]
 
 = Typische Fehler
@@ -212,10 +240,9 @@ gilt.
 ]
 
 #quelle[
-  *Quellen.*
-  - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12,
-    „Quantenphysik / Materiewellen“.
-  - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
+  *Quellen (Abruf 2026-11-02).*
+  - Elektronenwellen/Beugungsröhre: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/03elektronenwellen/docs.md
+  - Kerncurriculum Physik Niedersachsen 2022: https://cuvo.nibis.de/
   - CODATA 2018 für $h$, $m_e$, $e$.
-- Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
+  - Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

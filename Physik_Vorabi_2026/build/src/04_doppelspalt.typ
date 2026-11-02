@@ -69,7 +69,7 @@ $ psi = frac(1, sqrt(2)) (psi_1 + psi_2) $
 
 Die Wahrscheinlichkeitsdichte ist das Betragsquadrat:
 
-$ P(x) = |psi(x)|^2 = frac(1, 2) |psi_1 + psi_2|^2 $
+$ w(x) = |psi(x)|^2 = frac(1, 2) |psi_1 + psi_2|^2 $
 
 #merksatz[
   Amplituden addieren sich, Wahrscheinlichkeiten nicht. Der Mischterm $2 Re(psi_1^* psi_2)$
@@ -90,8 +90,8 @@ Wird an den Spalten gemessen, durch welchen Spalt das Quant ging, verschwindet d
 #definition[
   *Komplementarität:* Wellen- und Teilchenverhalten schließen sich nicht aus, aber sie sind
   nicht gleichzeitig vollständig beobachtbar. Je mehr Weginformation, desto weniger
-  Interferenzkontrast – quantitativ $V^2 + D^2 <= 1$ mit Visibilität $V$ und Unterscheidbarkeit
-  $D$.
+  Interferenzkontrast – quantitativ $V^2 + cal(D)^2 <= 1$ mit Visibilität $V$ und Unterscheidbarkeit
+  $cal(D)$.
 ]
 
 = Unbestimmtheit
@@ -104,8 +104,8 @@ Das Schulmaterial verwendet für Abschätzungen die gröbere Schulnotation
 
 $ Delta x dot Delta p_x >= h $
 
-Für Prinzipaussagen gilt die exakte Form mit $h\/(2 pi)$; die Schulnotation lässt
-Faktoren der Größenordnung 1 weg.
+Die exakte Form ist $Delta x dot Delta p >= h\/(4 pi)$; die Schulnotation
+$Delta x dot Delta p >= h$ lässt den Faktor $1\/(4 pi)$ weg.
 
 #figure(
   image("../fig/schule/s4_unbestimmtheit.jpg", width: 88%),
@@ -129,7 +129,7 @@ Das Bild zeigt Real- und Imaginärteil der Wellenfunktion. Erst das Betragsquadr
 
 = Aufgaben
 
-#aufgabe(1, punkte: 10)[
+#aufgabe(1, punkte: 10, afb: "II")[
   Ein Doppelspalt ($d = 1","0$ µm) wird mit einzelnen Photonen ($lambda = 633$ nm) beleuchtet,
   Schirmabstand $e = 1","0$ m.
 
@@ -147,7 +147,7 @@ Das Bild zeigt Real- und Imaginärteil der Wellenfunktion. Erst das Betragsquadr
   auf ein Maximum – zu wenig für ein erkennbares Bild.
 ]
 
-#aufgabe(2, punkte: 12)[
+#aufgabe(2, punkte: 12, afb: "II")[
   An den beiden Spalten wird mit Polarisatoren markiert, welchen Weg ein Quant genommen hat.
 
   #enum(
@@ -166,6 +166,19 @@ Das Bild zeigt Real- und Imaginärteil der Wellenfunktion. Erst das Betragsquadr
 
   (3) Die Formulierung ist zu grob. Die Messung muss das Quant nicht „anstoßen“; es genügt, dass
   die Weginformation im Prinzip verfügbar ist.
+]
+
+#aufgabe(3, punkte: 12, afb: "III")[
+  Diskutieren Sie die Aussage: „Der Welcher-Weg-Detektor zerstört das Interferenzmuster.“
+  Beziehen Sie die Komplementarität und $V^2 + cal(D)^2 <= 1$ ein.
+]
+
+#lösung[
+  Der Detektor zerstört das Muster nicht mechanisch; er macht die Weginformation verfügbar.
+  Dadurch werden die beiden Möglichkeiten unterscheidbar ($cal(D) > 0$), und der Mischterm
+  $2 Re(psi_1^* psi_2)$ verschwindet. Die Komplementarität beschreibt den Zusammenhang:
+  Je größer die Unterscheidbarkeit, desto kleiner die Visibilität. Ohne Weginformation bleibt
+  $cal(D) = 0$ und $V = 1$; mit vollständiger Information wird $V = 0$.
 ]
 
 = Typische Fehler
@@ -189,7 +202,7 @@ Das Bild zeigt Real- und Imaginärteil der Wellenfunktion. Erst das Betragsquadr
   [Superposition], [$psi_1 + psi_2$, Amplituden addieren],
   [Messbar], [$|psi|^2$],
   [Welcher-Weg], [Information vorhanden $arrow$ keine Streifen],
-  [Komplementarität], [$V^2 + D^2 <= 1$],
+  [Komplementarität], [$V^2 + cal(D)^2 <= 1$],
   [Unbestimmtheit], [$Delta x dot Delta p >= h\/(4 pi)$],
 )
 
@@ -205,8 +218,10 @@ Weginformation die Streifen löscht, ohne das Quant zu „treffen“.
 ]
 
 #quelle[
-  *Quellen.*
-  - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 12/13.
-  - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
+  *Quellen (Abruf 2026-11-02).*
+  - Quanten-Doppelspalt: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/04doppelspaltexperiment/docs.md
+  - Unbestimmtheit: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/13unbestimmtheit/docs.md
+  - Wellenfunktion: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/14wellenfunktion/docs.md
+  - Kerncurriculum Physik Niedersachsen 2022: https://cuvo.nibis.de/
   - Abbildungen: Unterrichtsmaterialien der Schulwebsite (`05_Grafiken/schule/`).
 ]

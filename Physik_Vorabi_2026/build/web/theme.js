@@ -3,6 +3,8 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   var SCHLUESSEL = "physik.theme";
 
   try {

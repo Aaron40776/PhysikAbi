@@ -1,6 +1,11 @@
 #!/bin/bash
-T="${TYPST:-$(command -v typst || echo /tmp/typst-new/typst)}"
 set -euo pipefail
+cd "$(dirname "$0")"
+T="${TYPST:-$(command -v typst || true)}"
+if [ -z "$T" ]; then
+  echo "typst nicht gefunden; TYPST=/pfad/zu/typst setzen" >&2
+  exit 1
+fi
 export SOURCE_DATE_EPOCH=1700000000   # reproduzierbare PDFs (kein Byte-Churn im Repo)
 cp fig/*.svg ../05_Grafiken/   # Grafiken fürs Repo synchronisieren
 mkdir -p ../05_Grafiken/schule
@@ -12,5 +17,15 @@ $T compile --root . src/04_doppelspalt.typ ../03_Lernskripte/04_Doppelspalt_und_
 $T compile --root . src/05_mzi.typ ../03_Lernskripte/05_MZI_Welcher_Weg_Delayed_Choice.pdf
 $T compile --root . src/06_atommodelle.typ ../03_Lernskripte/06_Atommodelle_und_Orbitalmodell.pdf
 $T compile --root . src/07_spektren.typ ../03_Lernskripte/07_Spektren_und_Franck_Hertz.pdf
+$T compile --root . src/f1_formelblatt.typ ../04_Zusatzmaterial/Formelblatt.pdf
+$T compile --root . src/f2_experimente.typ ../04_Zusatzmaterial/Experimentesammlung.pdf
+$T compile --root . src/f3_uebersicht.typ ../04_Zusatzmaterial/Gesamtuebersicht.pdf
+$T compile --root . src/f4_lastminute.typ ../04_Zusatzmaterial/Last_Minute_Lernzettel.pdf
+$T compile --root . src/f5_abitur.typ ../04_Zusatzmaterial/Abitur_Analyse.pdf
+$T compile --root . src/f6_uebungen.typ ../04_Zusatzmaterial/Uebungsheft_20_Aufgaben.pdf
+$T compile --root . src/f7_regression.typ ../04_Zusatzmaterial/Regression_und_Auswertung.pdf
+$T compile --root . src/f8_lernplan.typ ../04_Zusatzmaterial/Lernfahrplan.pdf
+$T compile --root . src/f9_diagramme.typ ../04_Zusatzmaterial/Uebungsheft_Diagrammauswertung.pdf
+$T compile --root . src/f10_glossar.typ ../04_Zusatzmaterial/Glossar.pdf
 TYPST="$T" python3 make_lesen.py
 echo "alle gebaut"

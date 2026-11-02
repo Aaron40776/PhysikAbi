@@ -57,7 +57,8 @@ def lint(path):
 
 
 if __name__ == "__main__":
-    files = [p for p in pathlib.Path("..").rglob("*.md") if ".agents" not in p.parts]
+    files = [p for p in pathlib.Path("..").rglob("*.md")
+             if ".agents" not in p.parts and "06_Qualitaetskontrolle" not in p.parts]
     findings = [problem for path in files for problem in lint(path)]
     for finding in findings[:40]:
         print("  ! " + finding)

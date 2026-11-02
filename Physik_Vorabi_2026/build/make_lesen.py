@@ -38,7 +38,7 @@ DOCS = [
 
 KOPF = """<div class="leiste lese-leiste">
   <div class="leiste-inner">
-    <a class="marke" href="../">Physik · Abitur</a>
+    <a class="marke" href="../">Physik · Vorabi</a>
     <nav class="seiten-nav" aria-label="Hauptseiten">
       <a href="../">Übersicht</a>
       <a href="../suche.html">Suche</a>
@@ -85,6 +85,23 @@ def ausgabe(source: str, tmp: pathlib.Path):
     return stile, body.group(1)
 
 
+def mit_alt(body: str) -> str:
+    """Ergänzt für jedes <img> den Text der zugehörigen <figcaption> als alt-Attribut."""
+    def ersetze(m):
+        tag = m.group(0)
+        if "alt=" in tag:
+            return tag
+        after = body[m.end():m.end() + 6000]
+        cap = re.search(r"<figcaption>(.*?)</figcaption>", after, re.S)
+        if not cap:
+            return tag[:-1] + ' alt="">'
+        text = re.sub(r"<[^>]+>", " ", cap.group(1))
+        text = html.unescape(re.sub(r"\s+", " ", text)).strip()
+        text = re.sub(r"^Abbildung\s*\d+\s*:\s*", "", text)
+        return tag[:-1] + f' alt="{html.escape(text, quote=True)}">'
+    return re.sub(r"<img\b[^>]*>", ersetze, body)
+
+
 def seite(doc_id: str, gruppe: str, titel: str, kc: str,
           stile: str, body: str, vorher, nachher) -> str:
     nav = []
@@ -108,9 +125,10 @@ def seite(doc_id: str, gruppe: str, titel: str, kc: str,
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{html.escape(titel)} – Physik Abitur 2026/2027</title>
+<title>{html.escape(titel)} – Physik Vorabi 2026</title>
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#1F3864">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3864'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23fff' font-family='Georgia,serif'%3E%CF%86%3C/text%3E%3C/svg%3E">
 <script src="../assets/theme.js?v=__V__"></script>
 {stile}
@@ -142,6 +160,7 @@ def main() -> int:
         tmp = pathlib.Path(tmp)
         for i, (source, doc_id, gruppe, titel, kc) in enumerate(DOCS):
             stile, body = ausgabe(source, tmp)
+            body = mit_alt(body)
             vorher = (DOCS[i - 1][1], DOCS[i - 1][3]) if i else None
             nachher = (DOCS[i + 1][1], DOCS[i + 1][3]) if i + 1 < len(DOCS) else None
             (OUT / f"{doc_id}.html").write_text(
