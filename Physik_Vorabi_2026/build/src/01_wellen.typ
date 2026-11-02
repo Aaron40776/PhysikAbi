@@ -362,6 +362,12 @@ Der zweite Strahl dringt eine Netzebene tiefer ein und läuft dadurch den Weg $2
 $c_0 = 2","998 dot 10^8$ m/s im Vakuum, $c = c_0 \/ n_"Med"$ im Medium. Beim Übergang bleibt $f$
 konstant, $lambda$ ändert sich:
 
+Eine elektromagnetische Welle besteht aus einem elektrischen und einem magnetischen Feld. Beide
+schwingen senkrecht zueinander und senkrecht zur Ausbreitungsrichtung; die Felder erzeugen sich
+gegenseitig, sodass die Welle im Vakuum ohne Ladungen existieren kann. Im Vakuum breitet sie sich mit $c_0$ aus, im
+Medium mit $c = c_0\/n_"Med"$. Die Frequenz wird vom Erreger vorgegeben und bleibt beim
+Medienwechsel gleich; weil $c$ kleiner wird, wird $lambda$ kleiner.
+
 $ frac(sin(alpha), sin(beta)) = frac(c_1, c_2) = frac(n_"Med,2", n_"Med,1") $
 
 Beim Eintritt in ein optisch dichteres Medium knickt der Strahl zum Lot; die Ursache ist die kleinere Ausbreitungsgeschwindigkeit, nicht eine Änderung der Frequenz.
