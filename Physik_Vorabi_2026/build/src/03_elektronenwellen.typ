@@ -23,6 +23,11 @@ eine Welle haben – mit derselben Verknüpfung $p = h \/ lambda$:
 
 $ lambda = frac(h, p) = frac(h, m v) $
 
+de Broglie übertrug die Symmetrie des Lichts auf die Materie: Wenn Licht je nach Experiment
+als Welle oder als Teilchen erscheint, dann sollte auch ein Elektron eine Wellenlänge haben.
+Die Hypothese ist nicht aus der klassischen Mechanik ableitbar; sie wird durch Beugungs- und
+Interferenzversuche geprüft.
+
 #merksatz[
   Je größer der Impuls, desto kürzer die Welle. Für makroskopische Körper ist $lambda$ so
   winzig, dass keine Beugung beobachtbar ist (ein 1-g-Körper bei 1 m/s: $lambda approx

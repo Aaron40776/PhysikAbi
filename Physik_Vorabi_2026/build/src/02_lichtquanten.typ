@@ -30,6 +30,12 @@ die Rechnung in eV bequem:
 
 $ E_"[eV]" = frac(1239","8, lambda_"[nm]") $
 
+Ein Photon ist das Energiequant der elektromagnetischen Strahlung. Es hat keine Ruhemasse,
+bewegt sich im Vakuum mit $c$ und trägt die Energie $E = h f$; $f$ ist die Frequenz der Welle,
+$lambda$ ihre Wellenlänge. Für ein masseloses Teilchen gilt $E = p c$, deshalb folgt
+$p = h\/lambda$. Die Konstante $h c = 1239","8$ eV nm ist keine neue Naturkonstante, sondern
+eine Rechenhilfe: Sie verknüpft Energie in eV mit Wellenlänge in nm.
+
 = Der äußere Photoeffekt
 
 #table(

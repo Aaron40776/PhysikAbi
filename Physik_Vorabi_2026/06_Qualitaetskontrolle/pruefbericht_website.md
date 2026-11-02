@@ -821,7 +821,7 @@ Formel-Inseln ohne Ansatz, Zwischenschritt oder Grenzfall wurden als Kürzung ge
 ### 15.1 Ergebnis
 
 Die sieben Skripte sind keine Stichwortzettel: Jedes Kapitel führt vom Phänomen über Aufbau/Durchführung und
-Herleitung zur Auswertung. Es gab aber **zwölf Stellen mit echter Erklärungslücke**, an denen eine Formel oder
+Herleitung zur Auswertung. Es gab aber **siebzehn Stellen mit echter Erklärungslücke**, an denen eine Formel oder
 ein Ergebnis ohne den entscheidenden Zwischenschritt stand. Sie wurden ergänzt; die Physik selbst wurde nicht
 geändert.
 
@@ -854,6 +854,11 @@ Seitenzahl jetzt aus den PDFs statt aus einer Konstante; die frühere Sollzahl 5
 | V-10 | P1 | Didaktik | `build/src/06_atommodelle.typ` | Der 3D-Potenzialtopf, die $p$-Entartung und die maximale Elektronenzahl $N_n=2n^2$ fehlten; KC verlangt „bis $n=2$“. | vorher: nur 1D-Kasten + 2D-Bilder | `04orbitalmodell/docs.md`: 3D-Kasten, Orbitaltabelle, $N_n=2n^2$ | KC-Punkt „maximale Elektronenzahl“ nicht abgedeckt. | 3D-Formel, Entartung, Orbitaltabelle, 10 Elektronen ergänzt. | behoben |
 | V-11 | P2 | Didaktik | `build/src/07_spektren.typ` | Balmerformel begann mit der Rydberg-Formel; der Weg von $E_n=-13{,}6/n^2$ fehlte. | vorher: „Rydberg-Formel“ als Schritt 1 | `02bohrmodell/docs.md` | Formel bleibt extern. | $\Delta E\to1/\lambda\to R$ ergänzt. | behoben |
 | V-12 | P2 | Didaktik | `build/src/07_spektren.typ` (Röntgen) | Charakteristische Linien waren nur eine Tabellenzeile; $K_\alpha/K_\beta$ und Moseley fehlten. | vorher: „Übergänge in den inneren Schalen“ | `08roentgenspektrum/docs.md`: innere Schale, Übergang, Moseley | Linien und Bremsspektrum nicht unterscheidbar. | Mechanismus und Moseley ergänzt. | behoben |
+| V-13 | P2 | Didaktik | `build/src/01_wellen.typ` (EM-Wellen) | Der Abschnitt bestand fast nur aus $c_0$, $c=c_0/n$ und dem Brechungsgesetz; die transversale Feldstruktur fehlte. | vorher: 45 Wörter | `04wellen/docs.md`, `15messinvarianzvonc/docs.md` | Leser weiß nicht, *warum* $c$ und $n$ zusammenhängen. | E- und B-Feld, Existenz ohne Ladungen, $f$ konstant, $\lambda$ kleiner ergänzt. | behoben |
+| V-14 | P2 | Didaktik | `build/src/02_lichtquanten.typ` (Das Photon) | Der Abschnitt war 21 Wörter: nur $E=hf$, $p=h/\lambda$ und $hc$. | vorher: Formelblock ohne Text | `05planckkonstante/docs.md` | Photon bleibt eine Formel. | Ruhemasse, $E=pc$, Bedeutung von $hc$ ergänzt. | behoben |
+| V-15 | P2 | Didaktik | `build/src/03_elektronenwellen.typ` (Hypothese) | de Broglie stand als Behauptung ohne Begründung und Prüfweg. | vorher: 52 Wörter | `03elektronenwellen/docs.md` | Hypothese und Experiment hängen nicht zusammen. | Symmetrieargument und Prüfung durch Beugung ergänzt. | behoben |
+| V-16 | P2 | Didaktik | `build/src/06_atommodelle.typ` (Grenzen) | Die Grenzen-Tabelle war 29 Wörter; warum Mehrelektronenatome versagen, fehlte. | vorher: nur Tabelle | `02bohrmodell/docs.md`, `03quantenmodell/docs.md` | Tabelle wirkt auswendig. | Elektron-Elektron-Abstoßung, Abschirmung, Feinstruktur/Zeeman ergänzt. | behoben |
+| V-17 | P2 | Didaktik | `build/src/07_spektren.typ` (Spektrenarten) | Die Tabelle war 49 Wörter; die Entstehung von kontinuierlich/Linie/Absorption/Bande fehlte. | vorher: nur Tabelle | `05emissionsspektren/docs.md`, `06absorptionsspektren/docs.md` | Spektrenarten nicht unterscheidbar. | Entstehung und Absorptionsumkehr ergänzt. | behoben |
 
 ### 15.3 Bewusst knapp, aber nicht erklärtungslos
 

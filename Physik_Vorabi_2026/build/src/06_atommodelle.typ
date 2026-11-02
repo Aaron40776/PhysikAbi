@@ -106,6 +106,12 @@ Im Termschema rücken die Niveaus nach oben zusammen und laufen gegen $E = 0$; n
   [Größenordnung der Atomradien], [keine Aussage über Aufenthaltsorte],
 )
 
+Bohr rechnet mit *einem* Elektron im Coulomb-Feld des Kerns. Bei mehreren Elektronen kommen
+die Abstoßung zwischen den Elektronen und die Abschirmung des Kerns hinzu; die einfache
+Kreisbahn wird unbrauchbar. Außerdem behandelt Bohr das Elektron als Punkt auf einer Bahn –
+Feinstruktur, Zeeman-Aufspaltung und die räumliche Form der Orbitale liegen außerhalb des
+Modells. Genau diese Lücken füllt das quantenmechanische Modell.
+
 = Quantenmechanisches Modell
 
 #definition[

@@ -27,6 +27,14 @@
   [Bandspektren], [Moleküle], [breite Banden],
 )
 
+Ein kontinuierliches Spektrum entsteht in dichten, heißen Körpern: Die Atome stoßen einander
+und die Energiezustände überlappen, sodass alle Wellenlängen vorkommen. Ein Emissionslinienspektrum
+entsteht in verdünntem Gas: Nur die Differenzen diskreter Niveaus werden als Photonen frei.
+Bei der Absorption durchstrahlt weißes Licht ein kaltes Gas; das Gas entfernt genau die Photonen,
+deren Energie zu einem Übergang passt, und erzeugt dunkle Linien an denselben Wellenlängen.
+Moleküle zeigen zusätzlich Schwingungs- und Rotationsniveaus; viele dicht beieinanderliegende
+Linien erscheinen als Bande.
+
 #merksatz[
   Linienspektren sind der direkteste Beweis für diskrete Energieniveaus: Nur die Differenzen
   $E_m - E_n$ sind als Photonen zugänglich.
