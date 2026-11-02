@@ -134,10 +134,10 @@ class SeitenTest:
         self.p.wait_for_selector(".ergebnis")
         vorher = self.p.locator(".ergebnis").count()
 
-        self.p.fill("#q", "Compton")
-        self.p.wait_for_function("() => location.search.includes('q=Compton')")
+        self.p.fill("#q", "Photoeffekt")
+        self.p.wait_for_function("() => location.search.includes('q=Photoeffekt')")
         self.p.wait_for_selector(".ergebnis")
-        assert self.p.locator(".ergebnis").count() > 0, "Compton ohne Treffer"
+        assert self.p.locator(".ergebnis").count() > 0, "Photoeffekt ohne Treffer"
 
         self.goto("suche.html?q=xyzzyplugh")
         self.p.wait_for_selector(".leer")

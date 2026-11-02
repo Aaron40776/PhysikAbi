@@ -64,7 +64,7 @@ def pruefe():
     for source, doc_id, gruppe, _titel, _kc in lade_docs():
         typ = BUILD / "src" / f"{source}.typ"
         seite = BUILD / "lesen" / f"{doc_id}.html"
-        pdf = ROOT / ("03_Lernskripte" if gruppe == "skripte" else "04_Zusatzmaterial") / f"{doc_id}.pdf"
+        pdf = ROOT / "03_Lernskripte" / f"{doc_id}.pdf"
         if not seite.exists():
             fehler.append(f"{doc_id}: Leseseite fehlt")
             continue

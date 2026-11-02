@@ -15,28 +15,18 @@ import pymupdf
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKRIPTE = ROOT / "03_Lernskripte"
-ZUSATZ = ROOT / "04_Zusatzmaterial"
 BUILD = pathlib.Path(__file__).resolve().parent
 WEB = BUILD / "web"
 GLOSSAR = pathlib.Path(__file__).resolve().parent / "glossar.json"
 
 BESCHREIBUNG = {
     "01_Wellen_und_Interferenz": ("Wellen und Interferenz", "Schwingung, Zeiger, Doppelspalt, Gitter, Bragg, Polarisation, Michelson"),
-    "02_Lichtquanten_und_Planck": ("Lichtquanten und Planck", "Photoeffekt, Photon, Compton, h-Bestimmung"),
+    "02_Lichtquanten_und_Planck": ("Lichtquanten und Planck", "Photoeffekt, Photon, h-Bestimmung"),
     "03_Elektronenwellen_und_Beugung": ("Elektronenwellen und Beugung", "de Broglie, Beugungsröhre, Graphit, Davisson-Germer"),
     "04_Doppelspalt_und_Quantenphysik": ("Doppelspalt und Quantenphysik", "Einzelquanten, Komplementarität, Unbestimmtheit, Wellenfunktion"),
-    "05_MZI_Welcher_Weg_Delayed_Choice": ("Mach-Zehnder und Welcher Weg", "Strahlteiler, Phasenverschiebung, Weginformation, Delayed Choice"),
+    "05_MZI_Welcher_Weg_Delayed_Choice": ("Mach-Zehnder und Welcher Weg", "Strahlteiler, Phasenverschiebung, Weginformation, Komplementarität, Delayed Choice"),
     "06_Atommodelle_und_Orbitalmodell": ("Atommodelle und Orbitalmodell", "Rutherford, Bohr, Grenzen, Potenzialtopf, Orbitale"),
     "07_Spektren_und_Franck_Hertz": ("Spektren und Franck-Hertz", "Spektrenarten, Termschema, Röntgen, Franck-Hertz"),
-    "Abitur_Analyse": ("Abitur-Analyse", "IQB-Pool 2025/2026, Operatoren, Themenverteilung"),
-    "Experimentesammlung": ("Experimentesammlung", "Aufbau, Durchführung, Beobachtung, Deutung"),
-    "Formelblatt": ("Formelblatt", "alle Formeln mit Gültigkeitsbedingung"),
-    "Gesamtuebersicht": ("Gesamtübersicht", "Landkarte der Themen und Querverbindungen"),
-    "Last_Minute_Lernzettel": ("Last-Minute-Lernzettel", "der Kern zum Wiederholen"),
-    "Lernfahrplan": ("Lernfahrplan", "Vier-Tage-Plan und Kurzweg durch die Skripte"),
-    "Regression_und_Auswertung": ("Regression und Auswertung", "Linearisieren, Steigung, Residuen"),
-    "Uebungsheft_20_Aufgaben": ("Übungsheft – 20 Aufgaben", "Aufgaben mit Lösungen, 4 Stunden"),
-    "Uebungsheft_Diagrammauswertung": ("Übungsheft – Diagrammauswertung", "5 Messreihen: Steigung, Residuen, Fehlerbalken, 40 Punkte"),
 }
 
 FUSSZEILE = re.compile(r"^(Gymnasium Westerstede\s*Seite \d+|Seite \d+)$")
@@ -135,8 +125,8 @@ def dokument(pdf):
         "id": stamm,
         "t": titel,
         "k": kurz,
-        "g": "skripte" if pdf.parent == SKRIPTE else "zusatz",
-        "f": f"{'skripte' if pdf.parent == SKRIPTE else 'zusatz'}/{pdf.name}",
+        "g": "skripte",
+        "f": f"skripte/{pdf.name}",
         "n": doc.page_count,
         "toc": toc,
         "leer": leer,
