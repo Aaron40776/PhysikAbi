@@ -7,7 +7,7 @@
   "Lichtquanten und Planck",
   "Plancks Quantenhypothese, Photon, äußerer Photoeffekt, Gegenfeld, Compton",
   lernziele: (
-    "die Quantenhypothese von der Strahlungsformel unterscheiden",
+    "die Quantenhypothese als Grundlage der Lichtquanten erklären",
     "Energie und Impuls eines Photons berechnen",
     "die Einstein-Gleichung aufstellen und mit der Gegenfeldmethode auswerten",
     "Grenzfrequenz und Austrittsarbeit deuten",
@@ -15,24 +15,6 @@
 )
 
 #toc-page()
-
-= Das Versagen der klassischen Physik
-
-Ein Hohlraumstrahler hat ein Intensitätsmaximum bei einer Wellenlänge $lambda_max$. Klassisch
-(Rayleigh-Jeans) müsste die Intensität zu kleinen Wellenlängen hin unbegrenzt wachsen – die
-*Ultraviolettkatastrophe*; gemessen wird dagegen ein Maximum mit steilem Abfall.
-
-Zwei Gesetzmäßigkeiten sind experimentell gesichert:
-
-$ lambda_max dot T = 2","898 dot 10^(-3) "m K" quad "(Wien)" $
-
-$ M(T) = sigma T^4 quad "(Stefan-Boltzmann)" $
-
-#merksatz[
-  Planck 1900: Energie wird von Oszillatoren nur in ganzen Portionen $h f$ aufgenommen oder
-  abgegeben. $h$ ist eine neue Naturkonstante – kein Rechentrick, sondern eine Aussage über die
-  Struktur der Wechselwirkung.
-]
 
 #definition[
   *Quantenhypothese:* Die Energie eines Oszillators der Frequenz $f$ ist $E = n h f$ mit

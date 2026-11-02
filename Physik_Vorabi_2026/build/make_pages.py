@@ -2,11 +2,11 @@
 """Erzeugt die GitHub-Pages-Seite aus den PDFs.
 
 Ergebnis in _site/:
-  index.html        Übersicht mit Volltextsuche, Lernstand und Inhaltsverzeichnissen
+  index.html        Übersicht der sieben Kernkapitel mit Volltextsuche und Lernstand
   suche.html        alle Suchtreffer einer Anfrage
   suche.json        Volltextindex (Seiten, Blöcke, Inhaltsverzeichnisse)
-  lesen/            mobile Lesefassungen mit MathML und eingebetteten SVGs
-  skripte/, zusatz/ die PDFs als Archiv
+  lesen/            mobile Lesefassungen der Kernkapitel mit MathML und eingebetteten SVGs
+  skripte/         die PDFs als Archiv
   physik-vorabi-2026.zip   alle PDFs zum Mitnehmen
 """
 import argparse, hashlib, html, json, pathlib, re, shutil, unicodedata, zipfile
@@ -25,7 +25,7 @@ BESCHREIBUNG = {
     "02_Lichtquanten_und_Planck": ("Lichtquanten und Planck", "Photoeffekt, Photon, Compton, h-Bestimmung"),
     "03_Elektronenwellen_und_Beugung": ("Elektronenwellen und Beugung", "de Broglie, Beugungsröhre, Graphit, Davisson-Germer"),
     "04_Doppelspalt_und_Quantenphysik": ("Doppelspalt und Quantenphysik", "Einzelquanten, Komplementarität, Unbestimmtheit, Wellenfunktion"),
-    "05_MZI_Welcher_Weg_Delayed_Choice_QED": ("MZI, Welcher Weg, Delayed Choice", "Mach-Zehnder, Pfadinformation, QED"),
+    "05_MZI_Welcher_Weg_Delayed_Choice": ("Mach-Zehnder und Welcher Weg", "Strahlteiler, Phasenverschiebung, Weginformation, Delayed Choice"),
     "06_Atommodelle_und_Orbitalmodell": ("Atommodelle und Orbitalmodell", "Rutherford, Bohr, Grenzen, Potenzialtopf, Orbitale"),
     "07_Spektren_und_Franck_Hertz": ("Spektren und Franck-Hertz", "Spektrenarten, Termschema, Röntgen, Franck-Hertz"),
     "Abitur_Analyse": ("Abitur-Analyse", "IQB-Pool 2025/2026, Operatoren, Themenverteilung"),
@@ -37,7 +37,6 @@ BESCHREIBUNG = {
     "Regression_und_Auswertung": ("Regression und Auswertung", "Linearisieren, Steigung, Residuen"),
     "Uebungsheft_20_Aufgaben": ("Übungsheft – 20 Aufgaben", "Aufgaben mit Lösungen, 4 Stunden"),
     "Uebungsheft_Diagrammauswertung": ("Übungsheft – Diagrammauswertung", "5 Messreihen: Steigung, Residuen, Fehlerbalken, 40 Punkte"),
-    "Glossar": ("Glossar", "104 Begriffe von Amplitude bis Zählrate, alphabetisch und durchsuchbar"),
 }
 
 FUSSZEILE = re.compile(r"^(Gymnasium Westerstede\s*Seite \d+|Seite \d+)$")
@@ -194,11 +193,11 @@ def main():
     args = ap.parse_args()
     out = pathlib.Path(args.out)
 
-    for unter in ("skripte", "zusatz", "assets"):
+    for unter in ("skripte", "assets"):
         (out / unter).mkdir(parents=True, exist_ok=True)
 
     docs, seiten, gruppen = [], [], []
-    for ordner, ziel, titel in ((SKRIPTE, "skripte", "Lernskripte"), (ZUSATZ, "zusatz", "Zusatzmaterial")):
+    for ordner, ziel, titel in ((SKRIPTE, "skripte", "Kernkapitel"),):
         pdfs = sorted(ordner.glob("*.pdf"))
         karten = []
         for pdf in pdfs:
@@ -226,7 +225,7 @@ def main():
     zip_pfad = out / "physik-vorabi-2026.zip"
     with zipfile.ZipFile(zip_pfad, "w", zipfile.ZIP_DEFLATED) as z:
         for doc in docs:
-            ordner = ROOT / ("03_Lernskripte" if doc["g"] == "skripte" else "04_Zusatzmaterial")
+            ordner = ROOT / "03_Lernskripte"
             z.write(ordner / pathlib.Path(doc["f"]).name, f"Physik Vorabi 2026/{doc['t']}.pdf")
 
     glossar_nav, glossar_inhalt, glossar_anzahl = glossar_teile()
@@ -235,7 +234,6 @@ def main():
         "__GLOSSAR_NAV__": glossar_nav,
         "__GLOSSAR_INHALT__": glossar_inhalt,
         "__ANZAHL_GLOSSAR__": str(glossar_anzahl),
-        "__GRUPPE_ZUSATZ__": gruppen[1],
         "__GESAMT__": str(sum(d["n"] for d in docs)),
         "__ANZAHL__": str(len(docs)),
         "__ZIPMB__": f"{zip_pfad.stat().st_size / 1e6:.1f}".replace(".", ","),

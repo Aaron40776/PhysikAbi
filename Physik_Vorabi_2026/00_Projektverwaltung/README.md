@@ -1,13 +1,15 @@
-# Physik-Vorabi 2026 – Lernskripte
+# Physik-Vorabi 2026 – Kernkapitel
 
-Sammlung eigenständiger Lernskripte für das **Vorabitur Physik am 06.11.2026**, Gymnasium
-Westerstede (Niedersachsen), erhöhtes Anforderungsniveau.
+Sieben Kernkapitel für das **Vorabitur Physik am 06.11.2026**, Gymnasium Westerstede
+(Niedersachsen), erhöhtes Anforderungsniveau. Veröffentlicht werden nur Inhalte mit
+*Bezug zum Kerncurriculum*.
 
 **Online: <https://aaron40776.github.io/PhysikAbi/>** (wird bei jedem Push automatisch neu gebaut)
 
 Die Website hat **einen** Leser: Die Karten öffnen direkt die mobile Textfassung mit MathML,
-eingebetteten Abbildungen und Tabellen. Es gibt keinen PDF-Editor und keinen zweiten
-„Im PDF / als Text“-Weg; die PDFs bleiben nur als Offline-Archiv erreichbar.
+eingebetteten Abbildungen und Tabellen. Jede Leseseite trägt oben den *Bezug zum
+Kerncurriculum*. Es gibt keinen PDF-Editor und keinen zweiten „Im PDF / als Text“-Weg; die
+PDFs bleiben nur als Offline-Archiv erreichbar.
 
 Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 (https://www.physik.gym-wst.de), Kerncurriculum Physik Niedersachsen 2022, Aufgabenpool der Länder
@@ -19,27 +21,25 @@ Erstellt am 01.11.2026. Grundlagen: Unterrichtsmaterialien der Schule
 
 | Datei | Thema | Seiten |
 |---|---|---|
-| `01_Wellen_und_Interferenz.pdf` | Schwingungen, Welle, Interferenz, Doppelspalt, Gitter, Bragg, Polarisation, Michelson, Lichtgeschwindigkeit | 11 |
-| `02_Lichtquanten_und_Planck.pdf` | Planck, Photon, Photoeffekt, h-Bestimmung, Compton | 6 |
+| `01_Wellen_und_Interferenz.pdf` | Schwingungen, Welle, Interferenz, Doppelspalt, Gitter, Bragg, Polarisation, Michelson, Lichtgeschwindigkeit | 12 |
+| `02_Lichtquanten_und_Planck.pdf` | Quantenhypothese, Photon, Photoeffekt, h-Bestimmung, Compton | 6 |
 | `03_Elektronenwellen_und_Beugung.pdf` | de Broglie, Elektronenkanone, Beugungsröhre | 7 |
 | `04_Doppelspalt_und_Quantenphysik.pdf` | Einzelquanten, Amplituden, Komplementarität, Unbestimmtheit, Wellenfunktion | 6 |
-| `05_MZI_Welcher_Weg_Delayed_Choice_QED.pdf` | Mach-Zehnder, Welcher-Weg, Delayed Choice, Verschränkung, QED | 6 |
+| `05_MZI_Welcher_Weg_Delayed_Choice.pdf` | Mach-Zehnder, Welcher-Weg, Delayed Choice | 5 |
 | `06_Atommodelle_und_Orbitalmodell.pdf` | Rutherford, Bohr, Potenzialtopf, Orbitale | 7 |
 | `07_Spektren_und_Franck_Hertz.pdf` | Spektren, Röntgen, Resonanzabsorption, Franck-Hertz | 7 |
 
-**10 Zusatzdokumente** (`04_Zusatzmaterial/`): Gesamtübersicht (5 S.), Formelblatt (5 S.),
-Experimentesammlung (5 S.), Abitur-Analyse (5 S.), Last-Minute-Lernzettel (4 S.),
-**Übungsheft mit 20 Aufgaben und Lösungen (13 S.)**, **Regression und Auswertung (7 S.)**,
-**Übungsheft Diagrammauswertung (7 S.)**, **Lernfahrplan (4 S.)**, **Glossar (5 S., 104 Begriffe)**.
+**Nicht mehr veröffentlicht:** die früheren 10 Zusatzdokumente (`04_Zusatzmaterial/`).
+Die Quelldateien bleiben als Archiv im Repository, sind aber weder auf der Website noch im
+Offline-Archiv verlinkt. Das Glossar bleibt als reine Web-Nachschlagehilfe erhalten.
 
 Jedes Skript enthält: Kenngrößen/Grundlagen als Tabelle, Theorie in Stichpunkten, abgesetzte
 Formeln mit echten Bruchstrichen (statt Schrägstrich), Herleitungen als nummerierte Schritte im Kasten,
 Experimente kompakt (Aufbau/Durchführung/Beobachtung/Erklärung/Bedeutung), Grafiken mit
 Erläuterung, 2 Abituraufgaben mit Lösung, typische Fehler, Wiederholungstabelle und Quellen.
 
-Umfang (01.11.): **7 Skripte 52 Seiten**, gesamt **112 Seiten**, 21.751 Wörter
-(vor der Straffung 121 Seiten). Darin enthalten ist das 7-seitige Trainingsheft
-zur Diagrammauswertung.
+Umfang (02.11.): **7 Kernkapitel, 50 Seiten**. Die früheren Zusatzhefte sind aus der
+Veröffentlichung herausgenommen.
 
 ## Verzeichnisse
 
@@ -50,8 +50,8 @@ Physik_Vorabi_2026/
 ├── 01_Schulwebsite/        website_links.csv + vollständiger Mirror der Unterrichtsseiten (Markdown)
 ├── 02_Abiturrecherche/     abitur_analyse.md, untersuchte_aufgaben.csv, iqb_aufgaben/ (12 PDFs + Text)
 ├── 03_Lernskripte/         7 Themen-PDFs
-├── 04_Zusatzmaterial/      10 Zusatz-PDFs (Übungshefte, Formelblatt, Sammlung, Analysen, Lernfahrplan, Glossar)
-├── 05_Grafiken/            28 eigene SVG-Grafiken (automatisch aus build/fig kopiert)
+├── 04_Zusatzmaterial/      Archiv: frühere Zusatz-PDFs, nicht veröffentlicht
+├── 05_Grafiken/            30 eigene SVG-Grafiken (automatisch aus build/fig kopiert)
 ├── 06_Qualitaetskontrolle/ pruefbericht.md, review.md
 └── build/                  Typst-Template, Quelltexte, Figuren-Skripte, Build- und Prüfskripte
                             (reproduzierbar: SOURCE_DATE_EPOCH ist gesetzt)
@@ -64,8 +64,8 @@ Voraussetzung: Typst 0.15+, Python 3 mit matplotlib (nur für neue Grafiken), py
 ```bash
 cd Physik_Vorabi_2026/build
 python3 make_figures.py     # Grafiken erzeugen (SVG)
-./build_all.sh              # 17 PDFs + 16 mobile HTML-Leseseiten (build/lesen/)
-python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
+./build_all.sh              # 7 Kernkapitel + 7 mobile HTML-Leseseiten (build/lesen/)
+python3 qa_pdf.py ../03_Lernskripte/*.pdf
 ```
 
 Typst-Binary lag während der Erstellung unter `/tmp/typst-x86_64-unknown-linux-musl/typst`

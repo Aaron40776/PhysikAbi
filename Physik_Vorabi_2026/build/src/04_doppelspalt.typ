@@ -85,7 +85,6 @@ Wird an den Spalten gemessen, durch welchen Spalt das Quant ging, verschwindet d
   [Messung], [Zustand], [Muster],
   [keine Weginformation], [$psi_1 + psi_2$], [Streifen],
   [Weg bekannt (Detektor, Polarisator)], [entweder $psi_1$ oder $psi_2$], [keine Streifen],
-  [Information gelöscht (Quantenradierer)], [$psi_1 + psi_2$ wieder], [Streifen kehren zurück],
 )
 
 #definition[
@@ -154,11 +153,10 @@ Die obere Kurve ist die Wellenfunktion selbst, die untere ihr Betragsquadrat; nu
 ]
 
 #aufgabe(2, punkte: 12)[
-  Ein Quantenradierer-Aufbau wird so verändert, dass eine Polarisationsmessung an den Spalten
-  möglich ist.
+  An den beiden Spalten wird mit Polarisatoren markiert, welchen Weg ein Quant genommen hat.
 
   #enum(
-    [Beschreiben Sie die Beobachtung.],
+    [Beschreiben Sie die Beobachtung auf dem Schirm.],
     [Erklären Sie sie mit dem Superpositionsprinzip.],
     [Beurteilen Sie die Aussage: „Die Messung stört das Quant.“]
   )
@@ -172,8 +170,7 @@ Die obere Kurve ist die Wellenfunktion selbst, die untere ihr Betragsquadrat; nu
   weg.
 
   (3) Die Formulierung ist zu grob. Die Messung muss das Quant nicht „anstoßen“; es genügt, dass
-  die Weginformation im Prinzip verfügbar ist. Wird sie durch einen Quantenradierer wieder
-  gelöscht, kehren die Streifen zurück.
+  die Weginformation im Prinzip verfügbar ist.
 ]
 
 = Typische Fehler

@@ -20,22 +20,20 @@ ROOT = BUILD.parent
 OUT = BUILD / "lesen"
 
 DOCS = [
-    ("01_wellen", "01_Wellen_und_Interferenz", "skripte", "Wellen und Interferenz"),
-    ("02_lichtquanten", "02_Lichtquanten_und_Planck", "skripte", "Lichtquanten und Planck"),
-    ("03_elektronenwellen", "03_Elektronenwellen_und_Beugung", "skripte", "Elektronenwellen und Beugung"),
-    ("04_doppelspalt", "04_Doppelspalt_und_Quantenphysik", "skripte", "Doppelspalt und Quantenphysik"),
-    ("05_mzi", "05_MZI_Welcher_Weg_Delayed_Choice_QED", "skripte", "MZI, Welcher Weg, Delayed Choice"),
-    ("06_atommodelle", "06_Atommodelle_und_Orbitalmodell", "skripte", "Atommodelle und Orbitalmodell"),
-    ("07_spektren", "07_Spektren_und_Franck_Hertz", "skripte", "Spektren und Franck-Hertz"),
-    ("f1_formelblatt", "Formelblatt", "zusatz", "Formelblatt"),
-    ("f2_experimente", "Experimentesammlung", "zusatz", "Experimentesammlung"),
-    ("f3_uebersicht", "Gesamtuebersicht", "zusatz", "Gesamtübersicht"),
-    ("f4_lastminute", "Last_Minute_Lernzettel", "zusatz", "Last-Minute-Lernzettel"),
-    ("f5_abitur", "Abitur_Analyse", "zusatz", "Abitur-Analyse"),
-    ("f6_uebungen", "Uebungsheft_20_Aufgaben", "zusatz", "Übungsheft – 20 Aufgaben"),
-    ("f7_regression", "Regression_und_Auswertung", "zusatz", "Regression und Auswertung"),
-    ("f8_lernplan", "Lernfahrplan", "zusatz", "Lernfahrplan"),
-    ("f9_diagramme", "Uebungsheft_Diagrammauswertung", "zusatz", "Übungsheft – Diagrammauswertung"),
+    ("01_wellen", "01_Wellen_und_Interferenz", "skripte", "Wellen und Interferenz",
+     "Schwingungen, Wellen, Interferenz, Polarisation, Michelson"),
+    ("02_lichtquanten", "02_Lichtquanten_und_Planck", "skripte", "Lichtquanten und Planck",
+     "Quantenhypothese, Photon, Photoeffekt, Compton, Welle-Teilchen-Dualismus"),
+    ("03_elektronenwellen", "03_Elektronenwellen_und_Beugung", "skripte", "Elektronenwellen und Beugung",
+     "de-Broglie-Wellenlänge, Beugungsröhre, Graphit, Davisson-Germer"),
+    ("04_doppelspalt", "04_Doppelspalt_und_Quantenphysik", "skripte", "Doppelspalt und Quantenphysik",
+     "Einzelquanten, Superposition, Welcher-Weg-Information, Unbestimmtheit"),
+    ("05_mzi", "05_MZI_Welcher_Weg_Delayed_Choice", "skripte", "Mach-Zehnder und Welcher Weg",
+     "Mach-Zehnder, Phasenverschiebung, Weginformation, Delayed Choice"),
+    ("06_atommodelle", "06_Atommodelle_und_Orbitalmodell", "skripte", "Atommodelle und Orbitalmodell",
+     "Rutherford, Bohr, Quantenmodell, Orbitale"),
+    ("07_spektren", "07_Spektren_und_Franck_Hertz", "skripte", "Spektren und Franck-Hertz",
+     "Spektrenarten, Termschema, Röntgen, Franck-Hertz"),
 ]
 
 KOPF = """<div class="leiste lese-leiste">
@@ -87,7 +85,7 @@ def ausgabe(source: str, tmp: pathlib.Path):
     return stile, body.group(1)
 
 
-def seite(doc_id: str, gruppe: str, titel: str,
+def seite(doc_id: str, gruppe: str, titel: str, kc: str,
           stile: str, body: str, vorher, nachher) -> str:
     nav = []
     if vorher:
@@ -124,6 +122,7 @@ def seite(doc_id: str, gruppe: str, titel: str,
 {KOPF}
 <main id="inhalt" class="leser">
   <p class="lese-zurueck"><a href="../">← Zur Übersicht</a></p>
+  <p class="kerncurriculum"><strong>Bezug zum Kerncurriculum:</strong> {html.escape(kc)}</p>
   <article class="lese-text typst-html" id="lesetext" tabindex="-1">
 {body}
   </article>
@@ -137,14 +136,16 @@ def seite(doc_id: str, gruppe: str, titel: str,
 
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
+    for alt in OUT.glob("*.html"):
+        alt.unlink()
     with tempfile.TemporaryDirectory(prefix="physik-html-") as tmp:
         tmp = pathlib.Path(tmp)
-        for i, (source, doc_id, gruppe, titel) in enumerate(DOCS):
+        for i, (source, doc_id, gruppe, titel, kc) in enumerate(DOCS):
             stile, body = ausgabe(source, tmp)
             vorher = (DOCS[i - 1][1], DOCS[i - 1][3]) if i else None
             nachher = (DOCS[i + 1][1], DOCS[i + 1][3]) if i + 1 < len(DOCS) else None
             (OUT / f"{doc_id}.html").write_text(
-                seite(doc_id, gruppe, titel, stile, body, vorher, nachher),
+                seite(doc_id, gruppe, titel, kc, stile, body, vorher, nachher),
                 encoding="utf-8",
             )
     print(f"{len(DOCS)} Leseseiten -> {OUT}")

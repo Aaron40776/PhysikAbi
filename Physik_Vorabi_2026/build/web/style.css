@@ -360,3 +360,14 @@ footer noscript { display: block; margin-top: 8px; }
   body { background: #fff; color: #000; }
 }
 
+
+/* Bezug zum Kerncurriculum */
+.kerncurriculum {
+  margin: 0 0 1.1em;
+  padding: 8px 11px;
+  border-left: 3px solid var(--akzent);
+  background: var(--merk);
+  color: var(--fg);
+  font-size: .86em;
+  line-height: 1.45;
+}

@@ -6,8 +6,8 @@ cd "$(dirname "$0")"
 python3 check_sources.py      # Typst-Quellen
 python3 check_markdown.py     # Formeln in .md (LaTeX statt Typst-Syntax)
 python3 check_physics.py      # Konstanten (pint) und Formeln (sympy)
-./build_all.sh                # 17 PDFs + 16 Leseseiten setzen
-python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
+./build_all.sh                # 7 Kernkapitel + 7 Leseseiten setzen
+python3 qa_pdf.py ../03_Lernskripte/*.pdf
 python3 check_lesen_vollstaendig.py  # PDF-Inhalte gegen HTML-Leser
 python3 test_pages.py         # Website, Leser, Suche, Glossar
 python3 test_browser.py       # echte Browserbedienung (Playwright/Chromium)

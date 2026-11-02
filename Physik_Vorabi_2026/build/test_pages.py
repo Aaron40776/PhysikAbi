@@ -12,7 +12,7 @@ DATEIEN = ("index.html", "suche.html", "glossar.html", "lesen.html", "suche.json
            "assets/style.css", "assets/suche.js", "assets/index.js", "assets/suche-seite.js",
            "assets/theme.js", "assets/glossar.js", "assets/lesen.css",
            "assets/lesen-static.js")
-SEITEN = 112
+SEITEN = 50
 
 pruefungen = []
 
@@ -74,8 +74,8 @@ def main():
         daten = json.loads((ziel / "suche.json").read_text(encoding="utf-8"))
         docs, seiten = daten["docs"], daten["seiten"]
 
-        pruefe("17 Dokumente", len(docs) == 17, len(docs))
-        pruefe("Seitenzahl 112", sum(d["n"] for d in docs) == SEITEN,
+        pruefe("7 Kernkapitel", len(docs) == 7, len(docs))
+        pruefe("Seitenzahl 50", sum(d["n"] for d in docs) == SEITEN,
                sum(d["n"] for d in docs))
         pruefe("Seitenlisten vollständig", all(len(seiten[i]) == d["n"] for i, d in enumerate(docs)))
         pruefe("Blöcke vorhanden", all(any(s) for s in seiten))
@@ -106,7 +106,7 @@ def main():
         pruefe("Textansicht je Dokument verlinkt",
                all((f'href="lesen/{d["id"]}.html"' in index_html if d["id"] != "Glossar"
                     else 'href="glossar.html"' in index_html) for d in docs))
-        pruefe("16 statische Leseseiten", len(lese_seiten) == 16, len(lese_seiten))
+        pruefe("7 statische Leseseiten", len(lese_seiten) == 7, len(lese_seiten))
         pruefe("Leseseiten enthalten Artikel und MathML",
                all('<article class="lese-text' in h and "<math" in h
                    for h in lese_seiten.values()))
@@ -131,7 +131,7 @@ def main():
 
         with zipfile.ZipFile(ziel / "physik-vorabi-2026.zip") as z:
             namen = z.namelist()
-        pruefe("ZIP mit allen 17 PDFs", len(namen) == 17 and all(n.endswith(".pdf") for n in namen),
+        pruefe("ZIP mit allen 7 PDFs", len(namen) == 7 and all(n.endswith(".pdf") for n in namen),
                namen)
 
         stempel = re.findall(r"assets/[\w-]+\.(?:css|js)\?v=[0-9a-f]{10}", index_html)
@@ -146,16 +146,16 @@ def main():
         pruefe("Alle internen Links und Anker gültig", not pruefe_links(ziel),
                pruefe_links(ziel)[:5])
         pruefe("Glossar verlinkt", 'glossar.html' in index_html + suche_html + glossar_html)
-        pruefe("104 Glossarbegriffe", glossar_html.count('class="glossar-eintrag"') == 104,
+        pruefe("92 Glossarbegriffe", glossar_html.count('class="glossar-eintrag"') == 92,
                glossar_html.count('class="glossar-eintrag"'))
         glossar_links = re.findall(r'class="glossar-suche" href="([^"]+)"', glossar_html)
         glossar_ids = re.findall(r'<dt id="(glossar-[^"]+)">', glossar_html)
-        pruefe("Glossar: 104 eindeutige Einträge und Volltextlinks",
-               len(glossar_links) == 104 and len(set(glossar_ids)) == 104
+        pruefe("Glossar: 92 eindeutige Einträge und Volltextlinks",
+               len(glossar_links) == 92 and len(set(glossar_ids)) == 92
                and all(h.startswith("suche.html?q=") for h in glossar_links),
                (len(glossar_links), len(set(glossar_ids))))
         pruefe("Glossar alphabetisch", all(f'id="glossar-{b}"' in glossar_html
-               for b in "ABCDEFGHIKLMNOPQRSTUVWZ"))
+               for b in "ABCDEFGHIKLMNOPQRSTUWZ"))
         pruefe("Glossar filterbar", 'data-suche=' in glossar_html and
                "glossar-filter" in glossar_html and "glossar.js" in glossar_html)
         pruefe("Design-Umschalter auf allen Seiten",

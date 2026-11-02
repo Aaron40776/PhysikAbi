@@ -30,9 +30,9 @@ function pruefe(name, fn) {
 S.laden().then((idx) => {
   const dok = (id) => idx.docs.findIndex((d) => d.id === id);
 
-  pruefe("17 Dokumente, 112 Seiten", () => {
-    assert.strictEqual(idx.docs.length, 17);
-    assert.strictEqual(idx.docs.reduce((s, d) => s + d.n, 0), 112);
+  pruefe("7 Kernkapitel, 50 Seiten", () => {
+    assert.strictEqual(idx.docs.length, 7);
+    assert.strictEqual(idx.docs.reduce((s, d) => s + d.n, 0), 50);
     idx.docs.forEach((d) => {
       assert.strictEqual(idx.seiten[dok(d.id)].length, d.n, "Seitenzahl " + d.id);
     });
@@ -119,11 +119,6 @@ S.laden().then((idx) => {
     assert(!e || e.anzahl === 0);
   });
 
-  pruefe("Dokumenttitel schlägt auch ohne Fließtext-Treffer zu", () => {
-    const e = S.suche("Lernfahrplan");
-    assert(e.gruppen.some((g) => g.doc.id === "Lernfahrplan"));
-  });
-
   pruefe("Thema führt zum richtigen Skript", () => {
     [["Rutherford", "06_Atommodelle_und_Orbitalmodell"],
      ["Franck-Hertz", "07_Spektren_und_Franck_Hertz"],
@@ -133,36 +128,12 @@ S.laden().then((idx) => {
     });
   });
 
-  pruefe("Dokumentname steht oben", () => {
-    assert.strictEqual(S.suche("Formelblatt", 3).gruppen[0].doc.id, "Formelblatt");
-    assert.strictEqual(S.suche("Übungsheft 20 Aufgaben", 3).gruppen[0].doc.id, "Uebungsheft_20_Aufgaben");
-  });
-
   pruefe("Ziel-URLs zeigen in die Lesefassung", () => {
     const doc = idx.docs[0];
     const u = S.ziel(doc, 7, "Bragg");
     assert(u.startsWith("lesen/01_Wellen_und_Interferenz.html?"), u);
     assert(u.includes("q=Bragg"), u);
     assert(u.includes("#loc-8"), u);
-    assert(S.ziel(idx.docs[dok("Glossar")], 2, "Bragg").startsWith("glossar.html"));
-  });
-
-  pruefe("Glossartreffer springen zum richtigen Eintrag", () => {
-    const glossar = idx.docs[dok("Glossar")];
-    assert.strictEqual(S.ziel(glossar, 2, "Intensität"),
-      "glossar.html?q=Intensit%C3%A4t#glossar-intensitaet");
-    assert.strictEqual(S.ziel(glossar, 2, "Bohr-Modell"),
-      "glossar.html?q=Bohr#glossar-bohr-modell");
-    assert(!S.ziel(glossar, 2, "Bohr Modell").includes("#glossar-bohr"), "kein falscher Anker");
-    const ids = new Set(Array.from(
-      fs.readFileSync(path.join(site, "glossar.html"), "utf8")
-        .matchAll(/<dt id="([^"]+)"/g), (m) => m[1]));
-    JSON.parse(fs.readFileSync(path.join(__dirname, "glossar.json"), "utf8")).forEach((e) => {
-      const u = S.ziel(glossar, 2, e.t);
-      const frag = u.split("#")[1] || "";
-      if (frag) assert(ids.has(frag), e.t + " -> " + u);
-      else assert(/\s/.test(e.t), "Anker fehlt: " + e.t);
-    });
   });
 
   pruefe("Mehrwortsuche markiert den ersten Begriff", () => {

@@ -3,7 +3,7 @@
 ## Aufbau & Build
 - Typst-Quellen: `Physik_Vorabi_2026/build/src/*.typ`, Layout/Boxen in `build/src/template.typ`.
 - Build: `cd build && ./build_all.sh` (nutzt Typst aus /tmp, `SOURCE_DATE_EPOCH` für reproduzierbare PDFs).
-  Ergebnis: PDFs in `03_Lernskripte/` und `04_Zusatzmaterial/`, SVGs kopiert nach `05_Grafiken/`.
+  Ergebnis: PDFs in `03_Lernskripte/` (nur Kernkapitel), SVGs kopiert nach `05_Grafiken/`; `04_Zusatzmaterial/` ist Archiv.
 - Layout-QA: `python3 build/qa_pdf.py <pdfs>` (Textüberläufe), danach `get_text()` auf `{,`, `frac`, `$`.
 - Grafiken: `build/make_figures.py` ist die Quelle der ausgelieferten `fig/*.svg`.
   `build/redraw_figs.py` enthält bessere Fassungen, die **nie** angewendet wurden – nicht verwechseln.
@@ -53,7 +53,7 @@
   Titel/Kurztext +4 je Begriff, Dokumentname exakt +12 (auch auf Gruppen-Max).
 - Assets tragen `?v=<Hash aus JSON+JS+CSS>`; ohne Änderung des Hashs cacht der Browser alte JS-Dateien.
 - Neues PDF = Karte erscheint automatisch; Kurztext in `BESCHREIBUNG` ergänzen. Kopfzahlen über
-  `__ANZAHL__`/`__GESAMT__`. Stand: 17 PDFs, 110 Seiten. `test_pages.py`/`test_suche.js`
+  `__ANZAHL__`/`__GESAMT__`. Stand: 7 Kernkapitel, 50 Seiten. `test_pages.py`/`test_suche.js`
   enthalten die Seitenzahl hart (SEITEN, `idx.docs.length`), bei neuen PDFs mitziehen.
 
 ## Figuren
@@ -81,7 +81,7 @@
   `matplotlib`, `cairosvg`, `pint`, `sympy` ggf. per pip nachinstallieren.
 ## Neu 01.11.2026
 - HTML-Leser: `build/make_lesen.py` (Typst-HTML) + `build/lesen/`; `make_pages.py` kopiert nach `_site/lesen/`.
-- MZI: Skript 5 nutzt die Originalabbildung `build/fig/mzi_source.png` (Quelle: Physik gym-wst, `mzi01.png`); das alte `mzi.svg` ist ungenutzt. `check_figs.py` regeneriert **alle** SVGs → danach nicht geänderte zurücksetzen.
-- Browser-E2E: `build/test_browser.py` (Playwright/Chromium) prüft Startseite, Suche, Glossar, Reader, alle 16 Leseseiten mobil/Desktop und ZIP; in `check_all.sh` und Pages-Workflow. Lokal `PHYSIK_CHROMIUM=/usr/bin/chromium` setzen, wenn Playwright-Browser fehlt.
+- MZI: Skript 5 nutzt die eigene, korrigierte `build/fig/mzi_clean.svg`; die frühere Quell-PNG ist entfernt. `check_figs.py` regeneriert **alle** SVGs → danach nicht geänderte zurücksetzen.
+- Browser-E2E: `build/test_browser.py` (Playwright/Chromium) prüft Startseite, Suche, Glossar, Reader, alle 7 Leseseiten mobil/Desktop und ZIP; in `check_all.sh` und Pages-Workflow. Lokal `PHYSIK_CHROMIUM=/usr/bin/chromium` setzen, wenn Playwright-Browser fehlt.
 - `check_sources.py`/`check_markdown.py` aus `build/` starten.
 - Glossar: `glossar.html?q=…` filtert und springt zum exakten Begriff; Suchtreffer nutzen `#glossar-<slug>`. Nie die Klasse `treffer` für Glossareinträge verwenden: global `.treffer` wird mobil per CSS ausgeblendet.

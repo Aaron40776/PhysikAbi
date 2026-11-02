@@ -566,3 +566,24 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Prüfstand:** `check_all.sh` grün: 20 Quellen, 123 Markdown-Dateien, 14/14 Physik,
   17 PDFs/112 Seiten/0 Befunde, 16/16 Leseseiten, `test_pages.py` 48/48,
   `test_browser.py` 7/7. Das MZI-PDF hat 7 Seiten, 1287 Wörter und 0 Befunde.
+
+## Nachtrag 30 (02.11.2026) – Nur Kerncurriculum, sieben Kapitel
+
+- **Scope:** Veröffentlicht werden nur noch die sieben Kernkapitel. Die früheren
+  Zusatzdokumente (Formelblatt, Experimentesammlung, Gesamtübersicht, Abitur-Analyse,
+  Last-Minute, Lernfahrplan, Regression, beide Übungshefte, Glossar-PDF) werden nicht mehr
+  gebaut, nicht mehr verlinkt und nicht mehr in Suche oder ZIP aufgenommen. Die Quellen
+  bleiben als Archiv im Repository.
+- **Inhalte:** Entfernt wurden Inhalte ohne ausgewiesenen Kerncurriculum-Bezug:
+  Schwarzkörper-/Physikkrise-Historie in Skript 2, Quantenradierer-Bezüge in Skript 4,
+  QED, Verschränkung/Nichtlokalität und Quantenradierer in Skript 5. Das Glossar wurde
+  von 104 auf 92 Begriffe reduziert.
+- **Kennzeichnung:** Jede Leseseite trägt oben einen Kasten „Bezug zum Kerncurriculum“
+  mit den zugehörigen Themen. Die Startseite heißt „Kernkapitel“; der Zusatzmaterial-Filter
+  und die Zusatzgruppe sind entfernt.
+- **MZI-Abbildung:** Das fehlerhafte Quellbild wurde durch die eigene, klare
+  SVG-Schemazeichnung `mzi_clean.svg` ersetzt (Laser, ST1/ST2 als Würfel mit Diagonale,
+  M1/M2, D1/D2, Phasenplättchen). Quellenangabe und README wurden bereinigt.
+- **Prüfstand:** `check_all.sh` grün: 20 Quellen, 124 Markdown-Dateien, 14/14 Physik,
+  7 PDFs/50 Seiten/0 Befunde, 7/7 Leseseiten, `test_pages.py` 48/48,
+  `test_browser.py` 7/7; ZIP mit 7 PDFs.

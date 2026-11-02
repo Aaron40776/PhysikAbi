@@ -1,15 +1,15 @@
 #import "../template.typ": *
 
-#show: setup.with(title: "Mach-Zehnder und Delayed Choice", kicker: "Skript 5 · Interferometer")
+#show: setup.with(title: "Mach-Zehnder und Welcher Weg", kicker: "Skript 5 · Interferometer")
 
 #cover(
   "Skript 5 · Welcher Weg?",
-  "Mach-Zehnder, QED, Delayed Choice",
-  "Strahlteiler, Phasenverschiebung, Weginformation, nachträgliche Wahl, Zeigerbild",
+  "Mach-Zehnder und Welcher Weg",
+  "Strahlteiler, Phasenverschiebung, Weginformation, Delayed Choice",
   lernziele: (
     "den Aufbau des Mach-Zehnder-Interferometers beschreiben",
     "die Ausgangsintensitäten aus Phasenverschiebung berechnen",
-    "Welcher-Weg-Markierung und ihre Löschung erklären",
+    "Welcher-Weg-Information als Ursache des Interferenzverlusts erklären",
     "das Delayed-Choice-Experiment ohne Fehldeutung darstellen",
   ),
 )
@@ -19,11 +19,10 @@
 = Aufbau
 
 #figure(
-  image("../fig/mzi_source.png", width: 88%),
+  image("../fig/mzi_clean.svg", width: 88%),
   caption: [Mach-Zehnder-Aufbau von oben: Laser → ST1; oberer Arm über M1, unterer Arm über M2;
     beide treffen sich an ST2. D1 sitzt rechts, D2 oben. Das Phasenplättchen im oberen Arm stellt
-    $Delta phi$ ein; die Armlängen sind $2+5=5+2$. Quelle: Physik am Gymnasium Westerstede,
-    „Mach-Zehnder-Interferometer“, mit freundlicher Genehmigung.],
+    $Delta phi$ ein; die Armlängen sind $2+5=5+2$. Eigene Schemazeichnung nach dem Standardaufbau.],
 )
 
 Beide Teilstrahlen legen im Bild gleich lange Wege zurück; jede zusätzliche Phasenverschiebung im oberen Arm wirkt sich deshalb eins zu eins auf den Gangunterschied am zweiten Strahlteiler aus.
@@ -70,7 +69,7 @@ $ I_1 = sin^2 frac(Delta phi, 2), quad I_2 = cos^2 frac(Delta phi, 2) $
 ]
 
 #figure(
-  image("../fig/qed_zeiger.svg", width: 62%),
+  image("../fig/zeiger_amplituden.svg", width: 62%),
   caption: [Zeigerbild: Die beiden Amplituden schließen den Winkel $Delta phi$ ein; die
     Resultierende bestimmt die Zählrate.],
 )
@@ -84,15 +83,11 @@ Im Zeigerbild addieren sich die beiden Amplituden vektoriell; bei $Delta phi = 0
   [Eingriff], [Weg bekannt?], [Beobachtung],
   [nichts], [nein], [Interferenz, Zählraten hängen von $Delta phi$ ab],
   [Markierung in Weg 1 (Polarisator)], [ja], [keine Interferenz, je 50 % pro Detektor],
-  [Markierung + Löscher vor ST2], [nein], [Interferenz kehrt zurück],
   [ein Weg blockiert], [ja], [nur der andere Weg trägt bei, kein Muster],
 )
 
-#definition[
-  *Quantenradierer:* Eine Markierung, die die Weginformation im Prinzip verfügbar macht, wird
-  vor der Überlagerung wieder gelöscht. Dann interferiert das Quant erneut – die Information
-  war zwischenzeitlich vorhanden, aber nicht ausgelesen.
-]
+Wird die Weginformation im Prinzip verfügbar, verschwinden die Interferenzstreifen. Das Quant
+wird dabei nicht „gestört“; entscheidend ist, ob die beiden Möglichkeiten unterscheidbar sind.
 
 = Delayed Choice
 
@@ -109,51 +104,6 @@ dass „später“ physikalisch später ist.
   Falsch ist die Formulierung „das Photon entscheidet sich nachträglich, ob es Welle oder
   Teilchen war“. Richtig ist: Das Quant hat keinen der beiden Zustände vor der Messung; das
   Experiment legt fest, welche Eigenschaft sichtbar wird.
-]
-
-= Nichtlokalität und Verschränkung
-
-Zwei gleiche nichtlineare Kristalle, um 90° gegeneinander verdreht, erzeugen aus einem blauen
-Laser Photonenpaare, deren Polarisation *verschränkt* ist. Welcher Kristall ein Paar erzeugt
-hat, lässt sich bei sehr dünnen Kristallen nicht mehr entscheiden.
-
-#definition[
-  *Verschränkung:* Zwei Quantenobjekte bilden einen gemeinsamen Zustand, der sich nicht als
-  Produkt zweier Einzelzustände schreiben lässt. Die Polarisation ist vor der Messung
-  unbestimmt; erst die Messung legt sie fest – für beide Photonen gleich.
-]
-
-Die Detektoren auf beiden Seiten reagieren synchron: Misst man an einem Photon „horizontal“,
-zeigt auch das andere „horizontal“. Das gilt auch dann, wenn die Messungen weit voneinander
-entfernt sind.
-
-#achtung[
-  Damit lassen sich keine Nachrichten übertragen. Jedes Messergebnis ist für sich zufällig;
-  die Korrelation wird erst sichtbar, wenn man beide Messreihen über einen klassischen Kanal
-  vergleicht. Die Relativitätstheorie bleibt unverletzt.
-]
-
-Weil eine Messung die Eigenschaft des anderen Photons festlegt, spricht man von *nichtlokaler
-Kausalität*. Die Photonen werden an zwei Orten gemessen, bilden aber ein gemeinsames
-Quantensystem.
-
-Verbindung: Dieselbe Komplementarität wie beim Welcher-Weg-Experiment (Abschnitt 3) und in
-Skript 4, Abschnitt 4; die Koinzidenzmethode aus Skript 4, Abschnitt 2 wertet solche Paare aus.
-
-= QED in einem Satz
-
-Die Quantenelektrodynamik beschreibt Licht-Materie-Wechselwirkung mit Wahrscheinlichkeits-
-amplituden für *jeden möglichen Weg*, z. B. „Photon geht von A nach B“:
-
-$ P(A -> B) = |sum_"Wege" psi_"Weg"|^2 $
-
-Feynmans Zeigerbild addiert dazu auch Wege, die klassisch verboten wären (Photon wird kurz zu
-Elektron-Positron-Paar). Für die Schule genügt: Amplituden aller Wege addieren, Betragsquadrat
-bilden, über nicht beobachtete Möglichkeiten summieren.
-
-#merksatz[
-  Zwei Regeln reichen für alle Aufgaben: (1) Amplituden addieren, wenn die Wege nicht
-  unterscheidbar sind. (2) Betragsquadrate addieren, wenn sie unterscheidbar sind.
 ]
 
 = Aufgaben
@@ -175,26 +125,21 @@ bilden, über nicht beobachtete Möglichkeiten summieren.
   Detektor.
 ]
 
-#aufgabe(2, punkte: 12)[
-  Ein MZI wird mit einzelnen Photonen betrieben. In Weg 1 wird ein Polarisator gestellt, in
-  Weg 2 nicht; vor dem zweiten Strahlteiler sitzt ein um 45° gedrehter Analysator.
+#aufgabe(2, punkte: 10)[
+  In Weg 1 des MZI steht ein Polarisator, in Weg 2 nicht.
 
   #enum(
-    [Erklären Sie, welches Verhalten ohne Analysator auftritt.],
-    [Erklären Sie die Wirkung des Analysators.],
-    [Ordnen Sie den Aufbau in das Schema Markierung/Löschung ein.]
+    [Erklären Sie, warum das Interferenzmuster verschwindet.],
+    [Begründen Sie, ob der Polarisator das Photon absorbiert.]
   )
 ]
 
 #lösung[
-  (1) Die Polarisation markiert den Weg; die beiden Möglichkeiten sind unterscheidbar, also
-  keine Interferenz – beide Detektoren zählen etwa gleich viel, unabhängig von $Delta phi$.
+  (1) Die Polarisation markiert den Weg. Die beiden Möglichkeiten sind damit im Prinzip
+  unterscheidbar; die Amplituden addieren sich nicht mehr zu einem streifenförmigen Muster.
 
-  (2) Der Analysator projiziert beide Teilwellen auf dieselbe Polarisationsrichtung. Damit ist
-  die Weginformation gelöscht; es tritt wieder Interferenz auf.
-
-  (3) Markierung durch den Polarisator, Löschung durch den Analysator – ein Quantenradierer.
-  Die Information war vorhanden, wurde aber nicht ausgelesen.
+  (2) Nein. Der Polarisator lässt einen Teil der Amplitude durch; die Interferenz verschwindet
+  allein deshalb, weil die Weginformation verfügbar ist.
 ]
 
 = Typische Fehler
@@ -217,20 +162,17 @@ bilden, über nicht beobachtete Möglichkeiten summieren.
   [Strahlteiler], [halbe Amplitude, Faktor $1\/sqrt(2)$],
   [Ausgänge], [$I_1 = sin^2(Delta phi\/2)$, $I_2 = cos^2(Delta phi\/2)$],
   [Welcher-Weg], [unterscheidbar $arrow$ keine Interferenz],
-  [Quantenradierer], [Löschung der Information $arrow$ Interferenz zurück],
   [Delayed Choice], [späte Messwahl ändert die sichtbare Eigenschaft, nicht die Vergangenheit],
-  [QED-Regel], [Amplituden addieren, dann quadrieren],
 )
 
-*Verstehen, nicht auswendig:* warum $I_1 + I_2 = 1$ gilt; warum Markieren und Löschen dieselbe
-Information betrifft; warum „später entscheiden“ keine Kausalitätsverletzung ist.
+*Verstehen, nicht auswendig:* warum $I_1 + I_2 = 1$ gilt und warum „später entscheiden“ keine
+Kausalitätsverletzung ist.
 
 #prüfung[
   *Das musst du können:*
   - *erklären*, wie Strahlteiler und Spiegel die Phase ändern und warum D1 bei $Delta phi = 0$ dunkel ist;
   - *berechnen*: Detektorwahrscheinlichkeiten aus Phasendifferenz und Amplituden;
   - *begründen*, warum Delayed Choice die Vergangenheit nicht ändert;
-  - *erklären*, warum verschränkte Photonen korreliert sind, ohne Nachrichten zu übertragen;
   - *skizzieren*: Zeigerdiagramm für beide Wege und beide Detektoren.
 ]
 
@@ -238,5 +180,4 @@ Information betrifft; warum „später entscheiden“ keine Kausalitätsverletzu
   *Quellen.*
   - Unterrichtsmaterialien Gymnasium Westerstede: https://www.physik.gym-wst.de, Jahrgang 13.
   - Kerncurriculum Physik Niedersachsen 2022 (https://cuvo.nibis.de/).
-  - R. P. Feynman, QED: The Strange Theory of Light and Matter (Zeigerbild).
 ]

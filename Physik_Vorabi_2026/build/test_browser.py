@@ -84,7 +84,7 @@ class SeitenTest:
     def startseite(self):
         self.goto("")
         self.p.wait_for_selector("article.karte")
-        assert self.p.locator("article.karte").count() == 17, "17 Karten erwartet"
+        assert self.p.locator("article.karte").count() == 7, "7 Karten erwartet"
         assert "Physik" in self.p.title(), "falscher Seitentitel"
 
         self.p.evaluate("localStorage.clear()")
@@ -110,10 +110,10 @@ class SeitenTest:
         karte = self.p.locator('article.karte[data-doc="01_Wellen_und_Interferenz"]')
         karte.locator(".gelesen").click()
         assert karte.locator(".gelesen").get_attribute("aria-pressed") == "true"
-        assert "1 von 17" in self.p.locator("#fortschritt-text").inner_text()
+        assert "1 von 7" in self.p.locator("#fortschritt-text").inner_text()
         self.p.once("dialog", lambda dialog: dialog.accept())
         self.p.click("#fortschritt-reset")
-        assert "0 von 17" in self.p.locator("#fortschritt-text").inner_text()
+        assert "0 von 7" in self.p.locator("#fortschritt-text").inner_text()
 
     def suche(self):
         self.goto("suche.html?q=Bragg")
@@ -133,34 +133,11 @@ class SeitenTest:
         self.goto("suche.html?q=Bragg")
         self.p.wait_for_selector(".ergebnis")
         vorher = self.p.locator(".ergebnis").count()
-        self.p.click('.chips button[data-gruppe="skripte"]')
-        self.p.wait_for_timeout(250)
-        skripte = self.p.locator(".ergebnis").count()
-        assert 0 < skripte <= vorher, (skripte, vorher)
-        self.p.click('.chips button[data-gruppe="zusatz"]')
-        self.p.wait_for_timeout(250)
-        zusatz = self.p.locator(".ergebnis").count()
-        assert 0 <= zusatz <= vorher, (zusatz, vorher)
-        assert skripte < vorher or zusatz < vorher, "Bereichsfilter ändert nichts"
-        assert self.p.locator('.chips button[data-gruppe="zusatz"]').get_attribute("aria-pressed") == "true"
-        self.p.click('.chips button[data-gruppe=""]')
-        self.p.wait_for_timeout(300)
-        assert self.p.locator(".ergebnis").count() == vorher, "Filter setzt Treffer nicht zurück"
 
         self.p.fill("#q", "Compton")
         self.p.wait_for_function("() => location.search.includes('q=Compton')")
         self.p.wait_for_selector(".ergebnis")
         assert self.p.locator(".ergebnis").count() > 0, "Compton ohne Treffer"
-
-        self.p.fill("#q", "Intensität")
-        self.p.wait_for_function("""() => [...document.querySelectorAll('.ergebnis')]
-            .some(a => (a.getAttribute('href') || '').includes('#glossar-intensitaet'))""")
-        glossar_link = self.p.locator('a.ergebnis[href*="glossar.html"]').first.get_attribute("href")
-        assert glossar_link and "#glossar-intensitaet" in glossar_link, glossar_link
-        self.p.locator('a.ergebnis[href*="glossar.html"]').first.click()
-        self.p.wait_for_selector(".glossar-eintrag.glossar-treffer")
-        assert self.p.locator(".glossar-eintrag.glossar-treffer dt").inner_text() == "Intensität"
-        assert self.p.locator("#glossar-zaehler").inner_text().startswith("6 von 104")
 
         self.goto("suche.html?q=xyzzyplugh")
         self.p.wait_for_selector(".leer")
@@ -168,20 +145,20 @@ class SeitenTest:
 
     def glossar(self):
         self.goto("glossar.html")
-        assert self.p.locator(".glossar-eintrag").count() == 104
+        assert self.p.locator(".glossar-eintrag").count() == 92
         assert self.p.locator(".glossar-az a").count() >= 20
-        assert self.js("new Set(Array.from(document.querySelectorAll('.glossar-eintrag dt')).map(e=>e.id)).size") == 104
-        assert self.p.locator("a.glossar-suche").count() == 104
+        assert self.js("new Set(Array.from(document.querySelectorAll('.glossar-eintrag dt')).map(e=>e.id)).size") == 92
+        assert self.p.locator("a.glossar-suche").count() == 92
 
         self.p.fill("#glossar-filter", "Franck")
-        self.p.wait_for_function("() => document.getElementById('glossar-zaehler').textContent.includes('1 von 104')")
+        self.p.wait_for_function("() => document.getElementById('glossar-zaehler').textContent.includes('1 von 92')")
         assert self.p.locator(".glossar-eintrag:not([hidden])").count() == 1
         assert "q=Franck" in self.p.url
         self.p.fill("#glossar-filter", "")
-        self.p.wait_for_function("() => document.getElementById('glossar-zaehler').textContent.includes('104 Begriffe')")
+        self.p.wait_for_function("() => document.getElementById('glossar-zaehler').textContent.includes('92 Begriffe')")
 
         self.p.fill("#glossar-filter", "Amplitude")
-        self.p.wait_for_function("() => document.getElementById('glossar-zaehler').textContent.includes('7 von 104')")
+        self.p.wait_for_function("() => document.getElementById('glossar-zaehler').textContent.includes('7 von 92')")
         self.p.click('.glossar-az a[href="#glossar-Z"]')
         self.p.wait_for_timeout(200)
         assert self.p.locator("#glossar-filter").input_value() == "", "A-Z setzt Filter nicht zurück"
@@ -191,7 +168,7 @@ class SeitenTest:
         self.goto("glossar.html?q=Intensit%C3%A4t#glossar-intensitaet")
         self.p.wait_for_selector(".glossar-eintrag.glossar-treffer")
         assert self.p.locator(".glossar-eintrag.glossar-treffer dt").inner_text() == "Intensität"
-        assert self.p.locator("#glossar-zaehler").inner_text().startswith("6 von 104")
+        assert self.p.locator("#glossar-zaehler").inner_text().startswith("6 von 92")
         assert self.p.locator(".glossar-eintrag:not([hidden])").count() == 6
         assert self.js("""() => { const e=document.querySelector('.glossar-eintrag.glossar-treffer');
             if (!e) return false; const r=e.getBoundingClientRect();
@@ -259,7 +236,7 @@ class SeitenTest:
         self.goto("")
         self.p.evaluate("localStorage.clear()")
         docs = [d for d in self.site["docs"] if d["id"] != "Glossar"]
-        assert len(docs) == 16, len(docs)
+        assert len(docs) == 7, len(docs)
         for doc in docs:
             self.goto("lesen/" + doc["id"] + ".html")
             self.p.wait_for_selector("#lesetext")
@@ -279,7 +256,7 @@ class SeitenTest:
     def mobil(self):
         self.p.set_viewport_size({"width": 390, "height": 844})
         for pfad in ("", "suche.html?q=Bragg", "glossar.html?q=Intensit%C3%A4t#glossar-intensitaet",
-                     "lesen/05_MZI_Welcher_Weg_Delayed_Choice_QED.html"):
+                     "lesen/05_MZI_Welcher_Weg_Delayed_Choice.html"):
             self.goto(pfad)
             self.p.wait_for_timeout(80)
             assert not self.js("document.documentElement.scrollWidth > window.innerWidth + 1"), pfad
@@ -294,7 +271,7 @@ class SeitenTest:
         assert antwort.ok, "ZIP nicht erreichbar: %s" % antwort.status
         with zipfile.ZipFile(io.BytesIO(antwort.body())) as z:
             namen = z.namelist()
-        assert len(namen) == 17 and all(n.endswith(".pdf") for n in namen), namen
+        assert len(namen) == 7 and all(n.endswith(".pdf") for n in namen), namen
 
 
 def browser_starten(p):
@@ -347,12 +324,12 @@ def main():
             test = SeitenTest(page, base, daten)
             for name, fn in (
                 ("Startseite: Karten, Suche, Lernstand, Theme", test.startseite),
-                ("Suche: Treffer, Filter, URL, Glossar-Deeplink, Leerzustand", test.suche),
-                ("Glossar: Filter, A-Z, Deeplink, alle 104 Begriffe, Theme", test.glossar),
+                ("Suche: Treffer, URL, Leerzustand", test.suche),
+                ("Glossar: Filter, A-Z, Deeplink, alle 92 Begriffe, Theme", test.glossar),
                 ("Leser: TOC, Markierung, Dialog, Nach-oben, Schriftgröße, Theme", test.leser),
-                ("Alle 16 Leseseiten laden ohne horizontalen Überlauf", test.alle_leseseiten),
+                ("Alle 7 Leseseiten laden ohne horizontalen Überlauf", test.alle_leseseiten),
                 ("Mobile 390 px: Start, Suche, Glossar, Leser ohne Überlauf", test.mobil),
-                ("Offline-Archiv: ZIP mit 17 PDFs", test.archiv),
+                ("Offline-Archiv: ZIP mit 7 PDFs", test.archiv),
             ):
                 pruefer.lauf(name, fn)
             context.close()

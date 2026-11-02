@@ -34,7 +34,7 @@ Ort = Abschnittsnummer in der aktuellen Fassung (Stand 01.11.2026, nach der Stra
 
 | Thema | Ort | Status |
 |---|---|---|
-| Plancks Quantenhypothese, Schwarzkörper | 1 | ✅ |
+| Quantenhypothese, Photon (ohne Schwarzkörper-Historie) | 1 | ✅ |
 | Photonen/Lichtquanten, $E = h f$ | 2 | ✅ |
 | Welle-Teilchen-Dualismus | 5 | ✅ |
 | Photoelektrischer Effekt, Einstein-Deutung | 3 | ✅ |
@@ -74,7 +74,7 @@ Ort = Abschnittsnummer in der aktuellen Fassung (Stand 01.11.2026, nach der Stra
 | Messung, Quantenzustand | 4 | ✅ |
 | Klassisch vs. quantenmechanisch | 1, 2 | ✅ |
 
-## E. MZI, QED, Delayed Choice → Skript 5 (9 Abschnitte)
+## E. MZI, Welcher Weg, Delayed Choice → Skript 5 (5 Abschnitte)
 
 | Thema | Ort | Status |
 |---|---|---|
@@ -83,11 +83,8 @@ Ort = Abschnittsnummer in der aktuellen Fassung (Stand 01.11.2026, nach der Stra
 | Interferenzbedingungen, Detektorwahrscheinlichkeiten | 2 | ✅ |
 | Welcher-Weg-Experimente | 3 | ✅ |
 | Delayed-Choice-Experiment | 4 | ✅ |
-| Verschränkung, Nichtlokalität, nichtlokale Kausalität | 5 | ✅ |
-| Quantenmechanische Beschreibung / QED | 6 | ✅ |
-| Pfadbeschreibungen, Wahrscheinlichkeitsamplituden | 2, 6 | ✅ |
-| Quantenradierer | Skript 4 §4, Skript 5 §3 | ✅ |
-| Quanten-Bomben-Test | – | ❌ nicht im KC (nur Schulmaterial) |
+| Pfadbeschreibungen, Wahrscheinlichkeitsamplituden | 2 | ✅ |
+| Verschränkung, Nichtlokalität, QED, Quantenradierer | – | ❌ bewusst entfernt (kein KC-Bezug) |
 
 ## F. Unbestimmtheit und Wellenfunktion → Skript 4
 
@@ -122,11 +119,9 @@ Siehe D: Abschnitte 3 und 5. ✅
 
 ## Zusammenfassung
 
-A–H sind abgedeckt. Polarisation/Malus (KC eA Z. 111–112) und das Michelson-Interferometer
-(KC eA Z. 115–117) stehen in Skript 1, Abschnitte 11 und 12. Lichtgeschwindigkeit und
-elektromagnetisches Spektrum folgen in Abschnitt 10; Verschränkung/Nichtlokalität in Skript 5,
-Abschnitt 5. Der Quantenradierer steht in Skript 4 §4 und Skript 5 §3; offen bleibt nur der
-Quanten-Bomben-Test (nur Schulmaterial, nicht im KC als eigene Kompetenz). Der He-Ne-Laser
-wird laut Schulmaterial nicht mehr im Kerncurriculum
-genannt und ist deshalb bewusst nicht als eigener Abschnitt aufgenommen; Atomkern ist nicht
-Teil der vorgegebenen Themenliste.
+A–H sind abgedeckt, soweit sie einen ausgewiesenen Bezug zum Kerncurriculum haben.
+Polarisation/Malus und das Michelson-Interferometer stehen in Skript 1, Abschnitte 11 und 12;
+Lichtgeschwindigkeit und elektromagnetisches Spektrum in Abschnitt 10. Verschränkung,
+Nichtlokalität, QED und Quantenradierer wurden entfernt, weil die zugehörigen Schulseiten
+keinen Bezug zum Kerncurriculum ausweisen. Der He-Ne-Laser wird laut Schulmaterial nicht
+mehr im Kerncurriculum genannt; Atomkern ist nicht Teil der vorgegebenen Themenliste.

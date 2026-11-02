@@ -61,7 +61,7 @@ def formel_text(typ: pathlib.Path) -> str:
 
 def pruefe():
     fehler = []
-    for source, doc_id, gruppe, _titel in lade_docs():
+    for source, doc_id, gruppe, _titel, _kc in lade_docs():
         typ = BUILD / "src" / f"{source}.typ"
         seite = BUILD / "lesen" / f"{doc_id}.html"
         pdf = ROOT / ("03_Lernskripte" if gruppe == "skripte" else "04_Zusatzmaterial") / f"{doc_id}.pdf"
@@ -119,7 +119,7 @@ def main() -> int:
         for f in fehler:
             print(" -", f)
         return 1
-    print("Vollständigkeit: 16/16 Leseseiten enthalten alle Bilder, Tabellen und Textinhalte.")
+    print(f"Vollständigkeit: {len(lade_docs())}/{len(lade_docs())} Leseseiten enthalten alle Bilder, Tabellen und Textinhalte.")
     return 0
 
 

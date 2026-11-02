@@ -1,12 +1,8 @@
 # Bildquellen
 
-## mzi_source.png
+Alle Abbildungen sind eigene Darstellungen aus `build/make_figures.py` bzw. eigene
+SVG-Schemata in `build/fig/`. Die MZI-Abbildung `mzi_clean.svg` folgt dem
+Standardaufbau (Laser, zwei Strahlteiler, zwei Spiegel, zwei Detektoren).
 
-- Titel: Mach-Zehnder-Interferometer, Aufbau (mzi01.png)
-- Quelle: Physik am Gymnasium Westerstede, „Mach-Zehnder-Interferometer“
-- URL: <https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/06machzehnderinterferometer/docs/mzi01.png>
-- Verwendung: mit Erlaubnis; Bildunterschrift im Skript nennt die Quelle.
-- Datei: `build/fig/mzi_source.png`, synchronisiert nach `05_Grafiken/mzi_source.png`.
-
-Weitere Abbildungen in diesem Ordner sind eigene Matplotlib-/Typst-Grafiken aus
-`build/make_figures.py`, `build/redraw_figs.py` oder `build/mk_map.py`.
+Fachliche Grundlage: Kerncurriculum Physik Niedersachsen 2022 und die
+Unterrichtsmaterialien unter <https://www.physik.gym-wst.de>.
