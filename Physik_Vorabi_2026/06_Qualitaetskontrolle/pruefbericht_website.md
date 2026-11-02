@@ -297,7 +297,7 @@ Legende: **P0** = Release-Blocker, **P1** = gravierend, **P2** = wichtig, **P3**
 | Ich kann eine Anregungsenergie anhand einer Franck-Hertz-Kennlinie ermitteln. | KC 2022 eA – Atomhülle | S7 | §5 | `docs/d13/14atomhuelle/07franckhertz/docs.md:5` | abgedeckt |  |
 | Ich kann Unterschiede zwischen einer Anregung mit Photonen und einer Anregung mit Elektronen nennen. | KC 2022 eA – Atomhülle | S7 | §5 | `docs/d13/14atomhuelle/07franckhertz/docs.md:6` | abgedeckt |  |
 | Ich kann quantenhafte Emission anhand von Experimenten zu Linienspektren bei Licht und Röntgenstrahlung erläutern. | KC 2022 eA – Atomhülle | S7 | §3 | `docs/d13/14atomhuelle/08roentgenspektrum/docs.md:3` | teilweise | Nur eine KC-Zeile; charakteristisches Spektrum im Skript knapp. |
-| Der Laser wird nicht mehr im Kerncurriculum genannt. | KC 2022 – Atomhülle | — | — | `docs/d13/14atomhuelle/09henelaser/docs.md:3` | **doch Scope** | KC-Box sagt „nicht mehr“, KC 2022 S. 39 nennt den He-Ne-Laser aber im grundlegenden Niveau. |
+| Der Laser wird nicht mehr im Kerncurriculum genannt. | KC 2022 – Atomhülle | — | — | `docs/d13/14atomhuelle/09henelaser/docs.md:3` | **nicht Scope** | KC 2022, S. 43–44 (Atomhülle) nennt keinen Laser; die Schulbox ist korrekt. Eine frühere Aufnahme beruhte versehentlich auf dem KC 2009. |
 | Ich kann das grundlegende Funktionsprinzip eines Geiger-Müller-Zählrohrs als Messgerät für Zählraten erläutern. | KC 2022 eA – Atomkern | — | — | `docs/d13/15atomkern/03detektor/docs.md:3` | nicht Scope |   Nicht im Skript; `Vorabi=nein` (Scope-Konflikt, siehe P1-01). |
 | Ich kann das grundlegende Funktionsprinzip eines Halbleiterdetektors für die Energiemessung von Kernstrahlung erläutern. | KC 2022 eA – Atomkern | — | — | `docs/d13/15atomkern/03detektor/docs.md:4` | nicht Scope |   Nicht im Skript; `Vorabi=nein` (Scope-Konflikt, siehe P1-01). |
 | Ich kann das Zerfallsgesetz erläutern. | KC 2022 eA – Atomkern | — | — | `docs/d13/15atomkern/04radioaktiverzerfall/docs.md:3` | nicht Scope |   Nicht im Skript; `Vorabi=nein` (Scope-Konflikt, siehe P1-01). |
@@ -616,7 +616,7 @@ Die Website bleibt der **Vorabi-Schwerpunkt Wellen/Quanten/Atome**. Das ist jetz
 | P0-01 | **teilweise** | `NUTZUNGSERLAUBNIS.md` dokumentiert die Freigabe durch den Repository-Inhaber (Lehrkraft) und die Quellenangabe; eine unterschriebene Freigabe des Urhebers liegt weiterhin nicht vor. Ohne sie bleibt das der Release-Blocker. |
 | P1-01 | **behoben (Label), Scope offen** | `README.md:1-10`, `build/web/index.html:42-49`: „Vorabi-Schwerpunkt Wellen/Quanten/Atome“; E/B und Atomkern ausdrücklich ausgeschlossen. |
 | P1-02 | **offen** | 28 Praktikumsseiten `Vorabi=ja` bleiben unveröffentlicht. Die Hinweise 2027 nennen eA-Varianten „mit Experimentieren – Elektrik“ und „– Optik“; das ist eine Produktentscheidung, keine stillschweigende Lücke. |
-| P1-03 | **teilweise behoben** | Ultraschall, Schall-Doppelspalt, Gitter weiß, CD/DVD, Oszilloskop/Energie/t-v, Resonanz, Bragg-Herleitung, optische Analogie, λ-v, Anwendung, Leuchtstoff und Laser ergänzt (Delta-Tabelle 14.4). Einzelne Punkte bleiben „teilweise“. |
+| P1-03 | **teilweise behoben** | Ultraschall, Schall-Doppelspalt, Gitter weiß, CD/DVD, Oszilloskop/Energie/t-v, Resonanz, Bragg-Herleitung, optische Analogie, λ-v, Anwendung und Leuchtstoff ergänzt (Delta-Tabelle 14.4). Einzelne Punkte bleiben „teilweise“. |
 | P1-04 | **behoben** | `build/src/02_lichtquanten.typ:115,127,129`: Cs 2,14 eV, U_B 0,96 V, λ_G 579 nm; Rechnung 1239,8/400 − 2,14 = 0,9596 eV. |
 | P1-05 | **behoben** | `build/src/07_spektren.typ:115-140`: Quellenkurve erstes Maximum 6,0 V, Periodizität 4,9 V, Verschiebung 1,1 V statt erfundener 5,5 V Kontaktspannung. |
 | P1-06 | **behoben** | `build/make_lesen.py` (`mit_alt`) setzt `alt` aus der Bildunterschrift; 24/24 `<img>` in `_site/lesen/*.html` haben nicht-leeren Alt-Text. |
@@ -647,7 +647,7 @@ Die Website bleibt der **Vorabi-Schwerpunkt Wellen/Quanten/Atome**. Das ist jetz
 
 | ID | Severity | Kategorie | Ort | Befund | Beleg | Quelle | Wirkung | Maßnahme | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| N-01 | P1 | Quellenwiderspruch | `01_Schulwebsite/.../09henelaser/docs.md:3-4`; `build/src/07_spektren.typ:163-185` | Die Schulbox sagt „Der Laser wird nicht mehr im Kerncurriculum genannt“. Das offizielle KC 2022 nennt auf S. 39 ausdrücklich „Grundlagen der Funktionsweise eines He-Ne-Lasers“ und eine technische Laseranwendung. | Schulbox wörtlich; KC 2022, PDF S. 39, Abschnitt Atomhülle, Spalte „Kurse auf grundlegendem Anforderungsniveau“: „erläutern die Grundlagen der Funktionsweise eines He-Ne-Lasers“. | KC Physik 2022 (https://cuvo.nibis.de/), S. 39; Schulseite | Ohne Laser fehlt ein KC-Punkt; die Schulbox ist veraltet oder falsch. | Abschnitt „Ergänzend: He-Ne-Laser“ mit Quelleninhalt ergänzt und Widerspruch im Text offengelegt; Lehrkraft soll die Schulbox korrigieren. | teilweise |
+| N-01 | P2 | Quellenprüfung | `01_Schulwebsite/.../09henelaser/docs.md:3`; `build/src/07_spektren.typ` | Die Schulbox „Der Laser wird nicht mehr im Kerncurriculum genannt“ ist **korrekt**. Das KC 2022 (55 S.) enthält im Abschnitt Atomhülle, S. 43–44, keinen He-Ne-Laser. Die frühere Gegenbehauptung stützte sich versehentlich auf das KC 2009. | KC 2022, S. 43–44: „erläutern quantenhafte Emission …“, „erläutern einen Versuch zur Resonanzabsorption“, „beschreiben einen Franck-Hertz-Versuch“; kein „Laser“. | KC 2022, `upload=363` (Abruf 2026-11-02); Schulbox | Ein Nicht-KC-Thema wäre eine Scope-Verletzung. | Laser-Abschnitt aus Skript 7 entfernt; keine KC-Lücke. | behoben |
 | N-02 | P1 | Prüfungsformat | `website_links.csv:86-113`; `_site/` | Die Hinweise 2027 sehen für eA die Varianten „mit Experimentieren – Elektrik“ und „– Optik“ vor; keine der 28 Praktikumsseiten ist auf der Website. | Hinweise 2027, S. 1: „In der schriftlichen Abiturprüfung auf erhöhtem Niveau mit experimentellem Anteil …“; `website_links.csv` alle `ja`. | KMK 2020/KC 2022/Hinweise 2027 | Experimentelle Kompetenz ist nicht trainierbar; das ist eine Lücke, keine falsche Physik. | Praktikumsseiten als „Praktikum“ verlinken oder bewusst als nicht veröffentlicht dokumentieren. | offen |
 | N-03 | P2 | Betrieb | Live-URL | Live-Seite war zu Beginn der alte Stand (Titel „Physik Abitur 2026/2027 – Kernkapitel“), lokal 56 Seiten/7 Kapitel. | `curl` Titelvergleich 2026-11-02; lokal `_site`. | Eigene Prüfung | Nutzer sehen bis zum Deploy die alten Texte/PDFs. | Commit/Push und Pages-Workflow auslösen; Cache-Buster ist vorhanden. | in Arbeit |
 | N-04 | P3 | Wartbarkeit | `build/test_pages.py:15`, `build/test_suche.js:33,74` | Seitenzahlen 56 und Bragg-Seite 10 sind hart codiert; jede Inhaltsänderung bricht die Tests. | Zwei Anpassungen 55→56 und 9→10 in diesem Durchgang. | Eigene Prüfung | Rote CI nach legitimen Inhaltsänderungen. | Erwartung aus `suche.json` ableiten (Summe, erste Bragg-Seite) statt Literale. | offen |
@@ -656,7 +656,7 @@ Die Website bleibt der **Vorabi-Schwerpunkt Wellen/Quanten/Atome**. Das ist jetz
 
 ### 14.4 KC-Delta: was durch die Ergänzungen jetzt abgedeckt ist
 
-Geprüft gegen das **Kerncurriculum Physik 2022**, S. 31–39 (PDF aus `cuvo.nibis.de`, 54 Seiten), Spalte „erhöhtes Anforderungsniveau“. Die wörtlichen KC-Punkte stehen in der ersten Spalte; „Skript/Abschnitt“ nennt die Stelle, an der sie jetzt stehen.
+Geprüft gegen das **Kerncurriculum Physik 2022**, S. 31–44 (PDF aus `cuvo.nibis.de`, 55 Seiten), Spalte „erhöhtes Anforderungsniveau“. Die wörtlichen KC-Punkte stehen in der ersten Spalte; „Skript/Abschnitt“ nennt die Stelle, an der sie jetzt stehen.
 
 | KC-Punkt (wörtlich, Auszug) | Offizielle Quelle | Skript | Abschnitt | Beleg | Status |
 |---|---|---|---|---|---|
@@ -677,10 +677,8 @@ Geprüft gegen das **Kerncurriculum Physik 2022**, S. 31–39 (PDF aus `cuvo.nib
 | „beschreiben die ‚Orbitale‘ bis n = 2“ | KC 2022, S. 38 | S6 | §5 | `06_atommodelle.typ:145-200` | abgedeckt |
 | „erläutern quantenhafte Emission anhand von Experimenten zu Linienspektren bei Licht … und Röntgenstrahlung“ | KC 2022, S. 38 (eA) | S7 | §§1–3 | `07_spektren.typ:19-103` | abgedeckt |
 | „erläutern einen Franck-Hertz-Versuch“ / „bestimmen eine Anregungsenergie anhand einer Franck-Hertz-Kennlinie“ | KC 2022, S. 38 | S7 | §5 | `07_spektren.typ:115-160` | abgedeckt (Quellenwerte 6,0/4,9 V) |
-| „wenden die Balmerformel an“ | KC 2022, S. 39 (eA) | S7 | §2 | `07_spektren.typ:62-79` | abgedeckt |
-| „erläutern und bewerten die Bedeutung von Leuchtstoffen an den Beispielen Energiesparlampe und ‚weiße‘ LED“ | KC 2022, S. 39 | S7 | §4 | `07_spektren.typ:104-112` | abgedeckt |
-| „erläutern die Grundlagen der Funktionsweise eines He-Ne-Lasers“ | KC 2022, S. 39 (gA; Anwendung auch eA) | S7 | §5a | `07_spektren.typ:163-185` | **ergänzend** (Schulbox widerspricht, siehe N-01) |
-| „beschreiben eine technische Anwendung, die auf der Nutzung eines Lasersystems beruht“ | KC 2022, S. 39 (gA + eA) | S7 | §5a | `07_spektren.typ:185` | ergänzend |
+| „wenden die Balmerformel an“ | KC 2022, S. 44 (eA) | S7 | §2 | `07_spektren.typ:62-79` | abgedeckt |
+| „erläutern und bewerten die Bedeutung von Leuchtstoffen an den Beispielen Energiesparlampe und ‚weiße‘ LED“ | KC 2022, S. 44 | S7 | §4 | `07_spektren.typ:104-112` | abgedeckt |
 
 **Nicht Scope, aber offizieller Stoff:** Elektrizität (KC S. 31–33, u. a. Felder, Kondensator, Lorentz-kraft, Hallspannung) und Atomkern (KC S. 40–41, u. a. Zerfallsgesetz, C-14, α-Spektrum). Diese Themen sind 2026/2027 prüfungsrelevant, stehen aber nicht auf dieser Website. Das ist die bewusste Produktentscheidung aus 14.1, keine behauptete Vollständigkeit.
 
@@ -744,7 +742,7 @@ Getestet mit Playwright/Chromium gegen den frisch gebauten `_site`-Stand, jeweil
 | Prüfung | Ergebnis |
 |---|---|
 | `build_all.sh` (Typst 0.15.1, `SOURCE_DATE_EPOCH=1700000000`) | **exit 0**, 7 Kern-PDFs + 10 Zusatz-PDFs, 7 Leseseiten |
-| `make_pages.py --out _site` | **56 Seiten, 7 PDFs, Index 93 kB, ZIP 1,8 MB** |
+| `make_pages.py --out _site` | **56 Seiten, 7 PDFs, Index 91 kB, ZIP 1,8 MB** |
 | `qa_pdf.py` | 7 PDFs, **0 Layoutbefunde** |
 | `test_pages.py` | **48/48** (16 Seiten-, 32 Such-/Logikprüfungen) |
 | `test_browser.py` | **7/7** (Start, Suche, Glossar 92, Leser, 7 Leseseiten, 390 px, ZIP 7 PDFs) |
@@ -767,7 +765,7 @@ Getestet mit Playwright/Chromium gegen den frisch gebauten `_site`-Stand, jeweil
 - `build/src/04_doppelspalt.typ`: exakte Unbestimmtheit, Schulnotation getrennt.
 - `build/src/05_mzi.typ`: Anwendung/Nichtlokalität ergänzt.
 - `build/src/06_atommodelle.typ`: Postulate-Reihenfolge, Orbital-/Potenzialtopf-Grenzen.
-- `build/src/07_spektren.typ`: Franck-Hertz-Quellenwerte, Leuchtstoff, **ergänzend He-Ne-Laser** mit Widerspruchshinweis.
+- `build/src/07_spektren.typ`: Franck-Hertz-Quellenwerte, Leuchtstoff; der Nicht-KC-Abschnitt He-Ne-Laser wurde entfernt.
 - `build/src/f8_lernplan.typ`: 56 Seiten; `f10_glossar.typ`: 92 Begriffe.
 - `build/build_all.sh`: CWD-Fix, TYPST-Fallback, `SOURCE_DATE_EPOCH`, alle 17 PDFs.
 - `build/make_lesen.py`: Alt-Texte aus Bildunterschriften.
@@ -783,7 +781,7 @@ Getestet mit Playwright/Chromium gegen den frisch gebauten `_site`-Stand, jeweil
 ### 14.9 Quellen (Abruf 2026-11-02)
 
 - KMK, Bildungsstandards im Fach Physik für die Allgemeine Hochschulreife (2020): `https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2020/2020_06_18-BildungsstandardsAHR_Physik.pdf` (2 S., geprüft).
-- Niedersachsen, Kerncurriculum Physik 2022: `https://cuvo.nibis.de/cuvo.php?p=download&upload=306` (54 S., geprüft, S. 31–41).
+- Niedersachsen, Kerncurriculum Physik 2022: `https://cuvo.nibis.de/cuvo.php?p=download&upload=363` (55 S., geprüft, S. 31–44).
 - KMK, Hinweise zur Prüfungsdurchführung 2027: `https://www.kmk.org/service/zentrale-abiturpruefungen.html` (2 S., geprüft; eA-Varianten „mit Experimentieren – Elektrik/Optik“).
 - Schulseite, Basis: `https://www.physik.gym-wst.de/`; Kapitelquellen:
   - `.../docs/d12/12schwingungenwellen/09stehendewellen/docs.md`
@@ -809,4 +807,4 @@ Getestet mit Playwright/Chromium gegen den frisch gebauten `_site`-Stand, jeweil
 - Gültigkeit des konkreten Erlasses 2026/2027 (Webseite der Behörde nicht abschließend abrufbar); KC 2022 und KMK-Hinweise 2027 wurden geprüft.
 - Live-Deployment und Cache-Verhalten nach dem Push.
 
-**Stop-Klausel:** Solange P0-01 nicht durch eine schriftliche Freigabe geschlossen ist, darf die Website nicht als öffentlich freigegeben gelten. Die Physik-Inhalte sind nach den obigen Quellen korrigiert; N-01 (Laser) und N-02 (Praktika) brauchen eine Lehrerentscheidung, keine stillschweigende Änderung.
+**Stop-Klausel:** Solange P0-01 nicht durch eine schriftliche Freigabe geschlossen ist, darf die Website nicht als öffentlich freigegeben gelten. Die Physik-Inhalte sind nach den obigen Quellen korrigiert; N-02 (Praktika) braucht eine Lehrerentscheidung, keine stillschweigende Änderung.
