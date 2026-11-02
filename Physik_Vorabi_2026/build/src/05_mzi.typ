@@ -19,10 +19,11 @@
 = Aufbau
 
 #figure(
-  image("../fig/mzi.svg", width: 88%),
+  image("../fig/mzi_source.png", width: 88%),
   caption: [Mach-Zehnder-Aufbau von oben: Laser → ST1; oberer Arm über M1, unterer Arm über M2;
     beide treffen sich an ST2. D1 sitzt rechts, D2 oben. Das Phasenplättchen im oberen Arm stellt
-    $Delta phi$ ein; die Armlängen sind $2+5=5+2$.],
+    $Delta phi$ ein; die Armlängen sind $2+5=5+2$. Quelle: Physik am Gymnasium Westerstede,
+    „Mach-Zehnder-Interferometer“, mit freundlicher Genehmigung.],
 )
 
 Beide Teilstrahlen legen im Bild gleich lange Wege zurück; jede zusätzliche Phasenverschiebung im oberen Arm wirkt sich deshalb eins zu eins auf den Gangunterschied am zweiten Strahlteiler aus.

@@ -10,5 +10,6 @@ python3 check_physics.py      # Konstanten (pint) und Formeln (sympy)
 python3 qa_pdf.py ../03_Lernskripte/*.pdf ../04_Zusatzmaterial/*.pdf
 python3 check_lesen_vollstaendig.py  # PDF-Inhalte gegen HTML-Leser
 python3 test_pages.py         # Website, Leser, Suche, Glossar
+python3 test_browser.py       # echte Browserbedienung (Playwright/Chromium)
 
 echo "Alle Prüfungen bestanden."

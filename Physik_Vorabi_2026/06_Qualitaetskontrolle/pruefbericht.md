@@ -1225,3 +1225,17 @@ Volltextlinks, 104 exakte Filter-/Highlight-Treffer; `check_lesen_vollstaendig.p
 Eintrag „Intensität“, Suchtreffer der Glossarseite führt zu
 `glossar.html?q=… #glossar-intensitaet`, A–Z und Filter funktionieren, Darkmode
 schaltet, 390-px-Ansicht ohne horizontalen Überlauf.
+
+### 15.13 Browserprüfung und MZI-Originalabbildung (01.11.2026)
+
+| # | Stelle | Befund | Maßnahme |
+|---|---|---|---|
+| B1 | `build/test_browser.py`, `build/check_all.sh`, `.github/workflows/pages.yml` | Die Bedienung war nur manuell im Chromium geprüft; ein dauerhafter Browser-E2E-Test fehlte. | Neuer Playwright-Test baut eine temporäre Website, startet einen lokalen HTTP-Server und prüft echte Klicks, Tastatur, Scrollen, Dialoge, Filter, URL-Zustände, Theme-Persistenz, alle 16 Leseseiten auf Desktop und 390 px sowie das ZIP-Archiv. **7/7**; läuft lokal und in CI. |
+| B2 | `build/src/05_mzi.typ`, `build/fig/mzi_source.png`, `05_Grafiken/QUELLEN.md` | Die selbst gezeichnete MZI-Schemaabbildung war trotz Korrektur nicht die Originaldarstellung des Schulmaterials; der Nutzer verlangte die authoritative Vorlage. | `mzi01.png` von „Physik am Gymnasium Westerstede“ übernommen, Quellenangabe in Bildunterschrift und `QUELLEN.md`; das alte SVG bleibt als ungenutztes Asset erhalten. |
+| B3 | Quelleninventur | Die relevanten Schulkapitel enthalten **395 unterschiedliche Bilder** (Fotos, Screenshots, Übungs- und Variantenbilder), nicht 28 1:1-Diagramme. | Kein blindes Kopieren aller Dateien: Originale nur dort, wo sie den Aufbau exakt abbilden; datenbasierte Diagramme bleiben reproduzierbar erzeugt. MZI ist der erste übernommene Fall. |
+
+**Prüfstand 15.13.** `check_all.sh` grün: 20 Quellen, 123 Markdown-Dateien,
+`check_physics.py` 14/14, `qa_pdf.py` 17 PDFs/112 Seiten/0 Befunde,
+`check_lesen_vollstaendig.py` 16/16, `test_pages.py` 48/48, `test_browser.py` 7/7.
+MZI-PDF: 7 Seiten, 1287 Wörter, 0 Befunde; Browser: 16 Leseseiten bei 390 px ohne
+horizontalen Überlauf.

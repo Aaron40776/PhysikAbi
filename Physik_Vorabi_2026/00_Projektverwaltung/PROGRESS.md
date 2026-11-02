@@ -544,3 +544,25 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
 - **Fehler:** Links aus der Suche auf `glossar.html?q=…` ignorierten den Suchparameter; Nutzer landeten am Glossaranfang. Zusätzlich kollidierte die Hervorhebungsklasse `treffer` mit der globalen Trefferzahl und blendete den markierten Eintrag auf schmalen Geräten aus.
 - **Fix:** `glossar.js` übernimmt `?q=`, filtert, springt zum exakten Begriff und hebt ihn mit `.glossar-treffer` hervor; A–Z setzt einen aktiven Filter zurück. `suche.js` hängt bei exakten Ein-Wort-Begriffen `#glossar-<slug>` an.
 - **Prüfung:** `test_pages.py` 48/48, `test_suche.js` 19/19; 674 interne Links/Anker ohne Fehler; alle 104 Glossarbegriffe, 104 Volltextlinks und 104 Filter-/Highlight-Fälle im Chromium geprüft; mobil 390 px ohne Überlauf.
+
+## Nachtrag 29 (01.11.2026) – Echte Browserprüfung und MZI-Quellbild
+
+- **Browserprüfung dauerhaft:** `build/test_browser.py` baut die Website in ein temporäres
+  Verzeichnis, serviert sie lokal und bedient sie mit Playwright/Chromium. Geprüft werden
+  Startseite, Suchpanel, Trefferseite, Bereichsfilter, URL-Zustände, Glossar (inkl. aller
+  104 Begriffe), Reader-TOC, Suchmarkierung, Abbildungsdialog, Nach-oben, Schriftgröße,
+  Theme-Persistenz, alle 16 Leseseiten auf Desktop und 390 px sowie das ZIP-Archiv.
+  Ergebnis: **7/7 Browser-Prüfungen**. Der Test läuft in `check_all.sh` und im
+  Pages-Workflow; bei fehlendem Playwright gibt er eine Installationsanweisung aus.
+- **MZI aus dem Schulmaterial:** Die Schemazeichnung in Skript 5 ist jetzt das Original
+  `mzi01.png` von „Physik am Gymnasium Westerstede“ (mit Quellenangabe in der
+  Bildunterschrift und in `05_Grafiken/QUELLEN.md`). Das vorherige SVG bleibt als
+  generatorisches Asset erhalten, wird im Skript aber nicht mehr verwendet.
+- **Quelleninventur:** Die relevanten Schulkapitel enthalten 395 unterschiedliche Bilder
+  (Fotos, Screenshots, Übungsbilder und mehrere Varianten pro Aufbau). Ein blindes
+  Copy-Paste aller Bilder ist deshalb nicht sinnvoll; übernommen werden nur 1:1 passende
+  Originaldiagramme. Für die übrigen lokalen, datenbasierten Diagramme bleibt die
+  reproduzierbare Matplotlib-Erzeugung.
+- **Prüfstand:** `check_all.sh` grün: 20 Quellen, 123 Markdown-Dateien, 14/14 Physik,
+  17 PDFs/112 Seiten/0 Befunde, 16/16 Leseseiten, `test_pages.py` 48/48,
+  `test_browser.py` 7/7. Das MZI-PDF hat 7 Seiten, 1287 Wörter und 0 Befunde.

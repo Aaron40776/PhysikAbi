@@ -10,6 +10,10 @@ on:
       - "Physik_Vorabi_2026/build/make_lesen.py"
       - "Physik_Vorabi_2026/build/lesen/**"
       - "Physik_Vorabi_2026/build/test_pages.py"
+      - "Physik_Vorabi_2026/build/test_browser.py"
+      - "Physik_Vorabi_2026/build/src/**"
+      - "Physik_Vorabi_2026/build/fig/**"
+      - "Physik_Vorabi_2026/05_Grafiken/**"
       - "Physik_Vorabi_2026/build/glossar.json"
       - "Physik_Vorabi_2026/build/web/**"
       - "Physik_Vorabi_2026/build/vendor/**"
@@ -35,8 +39,14 @@ jobs:
           python-version: "3.12"
       - name: PyMuPDF installieren
         run: pip install --quiet "pymupdf==2.0"
+      - name: Playwright installieren
+        run: |
+          pip install --quiet "playwright==1.64.1"
+          python -m playwright install --with-deps chromium
       - name: Index, Links und Suche testen
         run: python Physik_Vorabi_2026/build/test_pages.py
+      - name: Browser-Tests
+        run: python Physik_Vorabi_2026/build/test_browser.py
       - name: Übersicht und PDFs sammeln
         run: python Physik_Vorabi_2026/build/make_pages.py --out _site
       - uses: actions/upload-pages-artifact@v3
