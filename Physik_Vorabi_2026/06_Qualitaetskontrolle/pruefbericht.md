@@ -1290,7 +1290,7 @@ Befunde und Korrekturen:
 |---|---|---|---|
 | N1 | Feder-Masse-Pendel-Experiment stand am Skriptende hinter Michelson; thematischer Bruch | `01_wellen.typ` | Experiment samt Herleitung direkt nach „Gedämpfte Schwingung und Resonanz“ verschoben |
 | N2 | Satz „Die Gerade schneidet die Frequenzachse …“ begann ohne Bezug im Photon-Abschnitt | `02_lichtquanten.typ` | Entfernt; Inhalt steht bereits in der Photoeffekt-Herleitung |
-| N3 | Unbestimmtheitsabschnitt wiederholte die exakte Form und sprach missverständlich von „stattdessen“ | `04_doppelspalt.typ` | Klare Reihenfolge: exakt $h/(4 pi)$, Schulnotation $h$, Einordnung |
+| N3 | Unbestimmtheitsabschnitt wiederholte die exakte Form und sprach missverständlich von „stattdessen“ | `04_doppelspalt.typ` | Klare Reihenfolge: exakt $h/(4\pi)$, Schulnotation $h$, Einordnung |
 | N4 | Bildunterschrift der Wellenmaschine versprach Amplitude und Wellenlänge, das Bild zeigt die gekoppelten Oszillatoren | `01_wellen.typ` | Unterschrift an den Bildinhalt angepasst |
 | N5 | Bildunterschrift der Doppelspalt-Geometrie behauptete Beschriftungen $d$, $e$, $P$ | `01_wellen.typ` | Auf den tatsächlichen Strahlweg und Wegunterschied reduziert |
 | N6 | Termschema-Text behauptete eingezeichnete Pfeile | `06_atommodelle.typ`, `07_spektren.typ` | Durch Aussagen über Niveaus und Energiedifferenzen ersetzt |

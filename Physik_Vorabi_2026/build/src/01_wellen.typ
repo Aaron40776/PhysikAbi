@@ -250,7 +250,8 @@ Beim Eintritt in ein optisch dichteres Medium knickt der Strahl zum Lot; die Urs
 
 Dass Licht sich nicht unendlich schnell ausbreitet, erkannte Ole Rømer 1676 an den
 Jupitermonden: Der Schattenaustritt des Mondes Io verspätet sich im Lauf eines Jahres um bis
-zu 17 Minuten, weil die Erde auf ihrer Bahn unterschiedlich weit von Jupiter entfernt ist.
+zu etwa 22 Minuten, weil die Erde auf ihrer Bahn unterschiedlich weit von Jupiter entfernt ist.
+Der heutige Wert für die Laufzeit über den Erdbahndurchmesser beträgt knapp 17 Minuten.
 
 Im Labor lässt sich $c$ mit einer stehenden Welle messen. In der Mikrowelle (Frequenz
 $f = 2","45$ GHz) bilden sich zwischen den Wänden Maxima im Abstand $lambda\/2$. Bei einem

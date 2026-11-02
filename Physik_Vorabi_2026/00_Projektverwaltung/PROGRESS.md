@@ -614,7 +614,7 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   Faden wieder Schwingung → Experiment → Welle.
 - Skript 2: Der satzlos beginnende Satz „Die Gerade schneidet die Frequenzachse …“ aus dem
   Photon-Abschnitt entfernt; die Aussage steht bereits in der Photoeffekt-Herleitung.
-- Skript 4: Unbestimmtheitsabschnitt entdoppelt: exakte Form $h/(4 pi)$, Schulnotation $h$,
+- Skript 4: Unbestimmtheitsabschnitt entdoppelt: exakte Form $h/(4\pi)$, Schulnotation $h$,
   Einordnung der Faktoren.
 - Bildunterschriften für die Wellenmaschine und die Doppelspalt-Geometrie an den tatsächlichen
   Bildinhalt angepasst; keine „Pfeile“ mehr behauptet, wo das Termschema nur Niveaus zeigt.
