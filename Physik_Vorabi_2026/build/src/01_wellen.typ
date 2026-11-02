@@ -101,6 +101,12 @@ Dabei ist $gamma$ die Dämpfungskonstante und $Lambda$ das logarithmische Dekrem
   unten.
 ]
 
+Bei kleiner Anregungsfrequenz ($f_A < f_E$) folgt das System der Erregung fast ohne
+Verzögerung; bei $f_A approx f_E$ wächst die Amplitude stark an (Resonanz); bei
+$f_A > f_E$ kann es der Erregung nicht mehr folgen, die Amplitude bleibt klein. Mit
+wachsender Anregungsfrequenz eilt die Schwingung der Erregung immer stärker nach; im
+Resonanzfall beträgt die Phasenverschiebung etwa $pi\/2$.
+
 #table(
   columns: (1fr, auto, 1fr),
   [System], [Eigenfrequenz], [Gültigkeit],
@@ -112,6 +118,14 @@ Dabei ist $gamma$ die Dämpfungskonstante und $Lambda$ das logarithmische Dekrem
 Im Schwingkreis pendelt die Energie zwischen Kondensator und Spule:
 
 $ E_"el" = frac(1, 2) C U^2, quad E_"mag" = frac(1, 2) L I^2, quad f_0 = frac(1, 2 pi sqrt(L C)) $
+
+Im Schwingkreis lädt die Spannungsquelle den Kondensator auf. Beim Entladen treibt die
+Kondensatorspannung einen Strom durch die Spule; die Selbstinduktion der Spule bremst den
+Stromanstieg und baut dabei ein Magnetfeld auf. Ist der Kondensator entladen, hält der Strom
+aufgrund der Induktion an und lädt den Kondensator mit umgekehrter Polarität. So pendelt die
+Energie zwischen elektrischem Feld ($E_"el"$) und magnetischem Feld ($E_"mag"$) hin und her.
+Beim realen Schwingkreis wandelt der ohmsche Widerstand einen Teil der Energie in Wärme um;
+die Schwingung ist gedämpft.
 
 Ein Resonanzexperiment: Ein Erreger mit veränderbarer Frequenz $f_A$ regt das System an; man
 misst die Amplitude für jede Frequenz und trägt sie über $f_A$ auf. Das Maximum liegt bei
@@ -251,10 +265,22 @@ $g sin(alpha)$:
 $ g sin(alpha_n) = n lambda $
 
 Viele Spalte machen die Maxima scharf – deshalb wird mit dem Gitter die Wellenlänge gemessen.
+Im Zeigermodell addieren sich die $N$ Zeiger der Spalte. Im Hauptmaximum zeigen alle in
+dieselbe Richtung; schon eine kleine Winkeländerung dreht die äußeren Zeiger gegeneinander,
+sodass die Summe schnell kleiner wird. Zwischen zwei Hauptmaxima liegen $N-2$ Nebenmaxima;
+mit wachsendem $N$ werden die Hauptmaxima schmaler und die Nebenmaxima schwächer. Deshalb
+lässt sich die Lage eines Hauptmaximums mit einem Gitter viel genauer messen als mit einem
+Doppelspalt.
 
 Beim Einzelspalt (Breite $b$) interferieren Elementarwellen *eines* Spalts. Minima bei
 
 $ b sin(alpha_m) = m lambda, quad m = 1, 2, dots $
+
+Zwischen dem Minimum erster Ordnung links und rechts liegt das zentrale Maximum. Seine
+Winkelbreite ist etwa $2 lambda\/b$; je schmaler der Spalt, desto breiter ist es. Mit
+steigender Ordnung werden die Nebenmaxima schwächer, weil die Intensität der Einhüllenden
+abfällt. Für die Intensität gilt $I(alpha) = I_0 (sin(beta)\/beta)^2$ mit
+$beta = pi b sin(alpha)\/lambda$.
 
 #achtung[
   Die Einzelspalt-*Minima* haben dieselbe Form wie die Doppelspalt-*Maxima*. Wer beide
@@ -399,6 +425,10 @@ einem Laser liegt sie fest.
 Stehen Polarisator und Analysator im Winkel $alpha$ zueinander, gilt das Malus-Gesetz
 
 $ I = I_0 cos^2 alpha $
+
+Das elektrische Feld nach dem Polarisator hat die Amplitude $E_0$. Der Analysator lässt nur
+die Komponente $E_0 cos(alpha)$ durch; die Intensität ist proportional zum Quadrat der
+Amplitude, also $I = I_0 cos^2(alpha)$.
 
 #merksatz[
   Nur Transversalwellen lassen sich polarisieren. Schall ist eine Longitudinalwelle und hat keine

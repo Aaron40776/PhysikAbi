@@ -136,6 +136,29 @@ Im Grundzustand ist die Aufenthaltswahrscheinlichkeit in der Mitte am größten;
 $n$ kommen Knoten hinzu. Die Energieniveaus selbst wachsen mit $n^2$, während sie beim
 Coulomb-Topf enger zusammenrücken – das ist der qualitative Unterschied beider Potenziale.
 
+Im dreidimensionalen Kasten der Kantenlänge $L$ müssen gleichzeitig in $x$, $y$ und $z$
+stehende Wellen passen. Ein Zustand wird durch drei Quantenzahlen $(n_x, n_y, n_z)$ beschrieben;
+die Wellenfunktion ist das Produkt der drei Sinusfunktionen, und die Energie ist die Summe der
+drei Beiträge:
+
+$ E_(n_x,n_y,n_z) = frac(h^2, 8 m_e L^2) (n_x^2 + n_y^2 + n_z^2) $
+
+Für $n_x = n_y = n_z = 1$ gibt es nur einen Zustand. Für $n_x^2+n_y^2+n_z^2 = 6$ gibt es die
+drei Kombinationen $(2,1,1)$, $(1,2,1)$ und $(1,1,2)$: Sie haben dieselbe Energie, aber
+verschiedene Orientierungen – das ist das Analogon zu den drei $p$-Orbitalen.
+
+#table(
+  columns: (auto, auto, 1fr, auto),
+  [$n$], [Orbitale], [Form], [max. Elektronen],
+  [1], [$1s$], [kugelförmig, keine innere Knotenfläche], [2],
+  [2], [$2s$], [kugelförmig, weiter ausgedehnt, eine Knotenfläche], [2],
+  [2], [$2p_x, 2p_y, 2p_z$], [je zwei gegenüberliegende Bereiche, eine Knotenebene], [6],
+)
+
+Damit fasst die $n=1$-Schale 2 Elektronen, die $n=2$-Schale 8 Elektronen; bis einschließlich
+$n=2$ sind es 10. Für das Atom gilt allgemein die maximale Besetzung $N_n = 2 n^2$, weil es $n^2$
+räumliche Zustände gibt und jeder zwei Elektronen mit entgegengesetztem Spin aufnimmt.
+
 #table(
   columns: (1fr, 1fr),
   [Bohr], [Quantenmechanik],

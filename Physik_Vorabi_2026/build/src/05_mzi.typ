@@ -57,9 +57,17 @@ sind
 
 $ psi_(D 1) = frac(1, 2) (1 - e^(i Delta phi)), quad psi_(D 2) = frac(i, 2) (1 + e^(i Delta phi)) $
 
-Damit gilt für die Zählraten
+Die beiden Summanden in der Klammer sind die Amplituden der beiden Wege; ihre relative Phase
+ist $Delta phi$. Für den Betrag gilt
+
+$ |1 - e^(i Delta phi)|^2 = 2 - 2 cos(Delta phi) = 4 sin^2 frac(Delta phi, 2) $
+
+und entsprechend $|1 + e^(i Delta phi)|^2 = 4 cos^2(Delta phi\/2)$. Damit folgen die
+Zählraten
 
 $ I_1 = sin^2 frac(Delta phi, 2), quad I_2 = cos^2 frac(Delta phi, 2) $
+
+und $I_1 + I_2 = 1$: Jedes Photon wird an genau einem der beiden Detektoren registriert.
 
 #merksatz[
   *Konvention:* D1 ist der Ausgang, der bei $Delta phi = 0$ dunkel ist, D2 der helle; bei

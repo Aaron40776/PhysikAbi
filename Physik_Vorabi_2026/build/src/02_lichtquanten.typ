@@ -40,6 +40,13 @@ $ E_"[eV]" = frac(1239","8, lambda_"[nm]") $
   [sofortiger Einsatz, unter 10 ns], [erst nach Energieaufnahme „Anlaufzeit“],
 )
 
+Ein Photon gibt seine Energie $h f$ bei der Wechselwirkung ganz an ein Elektron ab. Ein Teil
+davon, die Austrittsarbeit $W_A$, ist nötig, um das Elektron aus dem Metall zu lösen; der Rest
+bleibt als kinetische Energie. Nur die Elektronen an der Oberfläche verlieren wenig Energie,
+deshalb ist die *maximale* kinetische Energie $h f - W_A$ messbar. Die Intensität legt fest,
+wie viele Photonen pro Sekunde auftreffen und damit, wie viele Elektronen ausgelöst werden –
+nicht aber, wie viel Energie ein einzelnes Elektron bekommt.
+
 #herleitung[
   *Einstein-Gleichung (1905)* \
   1. Ein Photon der Energie $h f$ trifft auf ein Elektron.
@@ -63,6 +70,12 @@ $ E_"[eV]" = frac(1239","8, lambda_"[nm]") $
     die Steigung ist $h\/e$, die Nullstelle $f_G$.],
 )
 Trägt man die gemessenen Gegenspannungen $U_B$ über der Frequenz auf, liegen die Punkte auf einer Geraden; aus der Steigung folgt $h$, aus dem Achsenabschnitt die Austrittsarbeit des Kathodenmaterials.
+
+Bei der Gegenfeldmethode wird die Spannung so eingestellt, dass gerade kein Elektron mehr die
+Anode erreicht. Dann gilt $e U_B = E_"kin,max"$; die Messung erfasst also die schnellsten
+Elektronen. Bei fester Frequenz wächst der Fotostrom mit der Intensität, bis alle ausgelösten
+Elektronen abgesaugt werden (Sättigungsstrom). Die Gegenspannung ändert dagegen nur die
+kinetische Energie der Elektronen, nicht ihre Zahl.
 
 #achtung[
   Die *Intensität* bestimmt die Zahl der Photonen (den Strom), nicht die Energie der einzelnen
@@ -96,6 +109,11 @@ Trägt man die gemessenen Gegenspannungen $U_B$ über der Frequenz auf, liegen d
   *Bedeutung.* Einfache Bestimmung von $h$ ohne Vakuum; $U_S$ ist wegen der breiten
   Emissionslinie nur unscharf messbar.
 ]
+
+Die Auswertung $h f = e U_S$ setzt voraus, dass die Elektronen ihre elektrische Energie
+vollständig in ein Photon umwandeln und keine Verluste im Halbleiter auftreten. Deshalb ist
+$U_S$ eine Näherung; für eine genaue Bestimmung von $h$ wird die Geradensteigung über mehrere
+LED-Farben verwendet.
 
 #experiment[
   *Röntgenbremsspektrum.* \
