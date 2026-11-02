@@ -160,32 +160,6 @@ nur feste Energiebeträge aufnehmen.
   [Elektronen], [kinetische Energie $>= Delta E$; Überschuss bleibt als $E_"kin"$],
 )
 
-= Ergänzend: He-Ne-Laser
-
-#achtung[
-  Die Schulbox auf `09henelaser` sagt: „Der Laser wird nicht mehr im Kerncurriculum genannt.“
-  Das KC Physik 2022 nennt auf S. 39 ausdrücklich die „Grundlagen der Funktionsweise eines
-  He-Ne-Lasers“ und eine technische Laseranwendung. Dieser Abschnitt folgt der offiziellen
-  Vorgabe und ist deshalb als *ergänzend* gekennzeichnet.
-]
-
-Im He-Ne-Laser regt eine Hochspannung freie Elektronen an. Sie stoßen mit Helium-Atomen
-zusammen und heben diese auf ein Pumpniveau. Das angeregte Helium gibt die Energie an ein
-Neon-Atom weiter, das dadurch in ein langlebiges Laserniveau gelangt. Weil mehr Neon-Atome im oberen Laserniveau
-angeregt sind als im unteren Niveau des Laserübergangs, liegt eine **Besetzungsinversion** vor.
-
-Ein spontan emittiertes Photon trifft auf ein weiteres angeregtes Neon-Atom und löst
-**stimulierte Emission** aus: Aus einem Photon werden zwei kohärente Photonen mit gleicher
-Frequenz, Phase und Richtung. Zwischen zwei Spiegeln läuft die Lawine hin und her; ein
-teildurchlässiger Spiegel koppelt einen Teil als Strahl aus. Die Wellenlänge ist durch die
-Energiedifferenz der Neon-Niveaus festgelegt:
-
-$ lambda = frac(h c, Delta E) approx 633 "nm" quad ("rotes Licht") $
-
-Damit ist Laserlicht monochromatisch, kohärent und stark gebündelt – Eigenschaften, die
-gewöhnliches Lampenlicht nicht gleichzeitig hat. Technische Anwendungen sind das Schneiden und
-Schweißen, Entfernungsmessung, Barcode-Leser und Augenoperationen.
-
 = Aufgaben
 
 #aufgabe(1, punkte: 12, afb: "II")[

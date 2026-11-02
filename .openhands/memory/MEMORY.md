@@ -23,16 +23,15 @@
 - `PROGRESS.md` wird nur ergänzt (Nachtrag mit Datum), nicht rückwirkend umgeschrieben.
 
 ## Website (GitHub Pages)
-- **Stand 2026-11-02:** 7 Kernkapitel, **56 Seiten**, Glossar **92**, Suchindex 93 kB, ZIP 1,8 MB.
+- **Stand 2026-11-02:** 7 Kernkapitel, **56 Seiten**, Glossar **92**, Suchindex 91 kB, ZIP 1,8 MB.
 - Prüfkette: `TYPST=/tmp/typst-x86_64-unknown-linux-musl/typst ./build/check_all.sh`;
   braucht `pint` + `sympy` (`python3 -m pip install pint sympy`). Ohne TYPST bricht build_all ab.
 - `build/check_markdown.py` überspringt `06_Qualitaetskontrolle/` (Berichte zitieren Typst-Formeln).
-- Live `aaron40776.github.io/PhysikAbi` war am 2026-11-02 noch der alte Stand; kein Push in dem Durchgang.
+- Live `aaron40776.github.io/PhysikAbi` ist seit 2026-11-02 neu deployt (56 Seiten, 7 PDFs).
 - **Rechte:** `NUTZUNGSERLAUBNIS.md` (Repo-Root) dokumentiert die Freigabe des Repo-Inhabers, aber keine
   unterschriebene Freigabe des Schulseiten-Urhebers → P0-Release-Blocker bleibt.
-- **Quellenwiderspruch:** Schulbox `09henelaser` sagt „Laser nicht mehr im KC“; KC Physik 2022 eA, S. 39
-  verlangt He-Ne-Laser + Laseranwendung. Skript 7 hat deshalb einen als „ergänzend“ markierten Abschnitt.
-- KC 2022 PDF (54 S.) liegt unter `/tmp/kc_physik.pdf`: `cuvo.nibis.de/cuvo.php?p=download&upload=306`.
+- **He-Ne-Laser ist nicht im KC 2022.** Schulbox `09henelaser` hat recht. Fallstrick: `upload=306` liefert das
+  **KC 2009** (54 S., mit Laser); das gültige KC 2022 ist `upload=363` (55 S., S. 43–44 Atomhülle ohne Laser).
 - Pages läuft als **Workflow** (`.github/workflows/pages.yml`), Trigger u. a. `build/web/**`; testet
   vor dem Deploy. `_site/` ist ignoriert.
 - Bauen: `cd Physik_Vorabi_2026 && python3 build/make_pages.py --out _site` (pymupdf);
