@@ -60,15 +60,22 @@ Differenz, desto größer die Wellenlänge.
 
 #herleitung[
   *Balmerformel aus dem Termschema* \
-  1. Rydberg-Formel mit $n > m$:
+  1. Die Energieniveaus des Wasserstoffs sind $E_n = -13","6 "eV" \/ n^2$. Für einen Übergang
+     von $n$ nach $m$ (mit $n > m$) ist
 
-  $ frac(1, lambda) = R (frac(1, m^2) - frac(1, n^2)) $
+  $ Delta E = 13","6 "eV" (frac(1, m^2) - frac(1, n^2)) $
 
-  2. Für $m = 2$ (Balmer) und $n = 3$:
+  2. Mit $Delta E = h c \/ lambda$ folgt
+
+  $ frac(1, lambda) = frac(13","6 "eV", h c) (frac(1, m^2) - frac(1, n^2)) = R (frac(1, m^2) - frac(1, n^2)) $
+
+     mit der Rydberg-Konstante $R = 13","6 "eV" \/(h c) = 1","097 dot 10^7 "m"^(-1)$.
+
+  3. Für $m = 2$ (Balmer) und $n = 3$:
 
   $ frac(1, lambda) = R dot frac(5, 36) quad => quad lambda = 656 "nm" quad "(H-alpha, rot)" $
 
-  3. Seriengrenze $n -> infinity$:
+  4. Seriengrenze $n -> infinity$:
 
   $ frac(1, lambda) = frac(R, 4) quad => quad lambda = 364","6 "nm" $
 
@@ -86,6 +93,13 @@ Differenz, desto größer die Wellenlänge.
   [Bremsspektrum (kontinuierlich)], [Abbremsung der Elektronen, $e U_B = h c \/ lambda_min$],
   [charakteristische Linien], [Übergänge in den inneren Schalen des Anodenmaterials],
 )
+
+Die charakteristischen Linien entstehen, wenn ein schnelles Elektron ein Elektron aus einer
+inneren Schale des Anodenatoms herausschlägt. Fällt ein Elektron aus einer höheren Schale in
+das frei gewordene Niveau, wird die Energiedifferenz als Photon emittiert. Der Übergang von
+$L$ nach $K$ heißt $K_alpha$, der von $M$ nach $K$ heißt $K_beta$. Weil die Energieniveaus
+vom Element abhängen, ist das Linienspektrum für das Anodenmaterial charakteristisch; die
+Moseley-Beziehung $sqrt(f) tilde (Z - 1)$ ordnet die Linien der Kernladungszahl $Z$ zu.
 
 $ lambda_min = frac(h c, e U_B) = frac(1239","8 "eV nm", U_B) quad (U_B "in V") $
 

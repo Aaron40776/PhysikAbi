@@ -808,3 +808,77 @@ Getestet mit Playwright/Chromium gegen den frisch gebauten `_site`-Stand, jeweil
 - Live-Deployment und Cache-Verhalten nach dem Push.
 
 **Stop-Klausel:** Solange P0-01 nicht durch eine schriftliche Freigabe geschlossen ist, darf die Website nicht als öffentlich freigegeben gelten. Die Physik-Inhalte sind nach den obigen Quellen korrigiert; N-02 (Praktika) braucht eine Lehrerentscheidung, keine stillschweigende Änderung.
+
+---
+
+## 15. Letzter Vollständigkeitscheck 2026-11-02 („nirgendwo zu sehr gekürzt“)
+
+**Prüfmaßstab.** Gelesen wurden die sieben Kernskripte vollständig (PDF und Typst-Quelle) sowie die zugehörigen
+KC-Boxen der Schulseite. Geprüft wurde nicht „ist ein Satz vorhanden?“, sondern: Erklärt der Text, *was* das
+Phänomen ist, *wie* der Aufbau funktioniert, *warum* die Formel gilt und *wie* man sie auswertet? Reine
+Formel-Inseln ohne Ansatz, Zwischenschritt oder Grenzfall wurden als Kürzung gewertet.
+
+### 15.1 Ergebnis
+
+Die sieben Skripte sind keine Stichwortzettel: Jedes Kapitel führt vom Phänomen über Aufbau/Durchführung und
+Herleitung zur Auswertung. Es gab aber **zwölf Stellen mit echter Erklärungslücke**, an denen eine Formel oder
+ein Ergebnis ohne den entscheidenden Zwischenschritt stand. Sie wurden ergänzt; die Physik selbst wurde nicht
+geändert.
+
+| Kapitel | vorher | nachher | ergänzt (Kern) | Quelle |
+|---|---:|---:|---|---|
+| S1 Wellen | 14 S. | 14 S. | drei Resonanzfälle, Energiefluss im LC-Kreis, N-Spalten-Zeigerbild, zentrale Breite/Einhüllende des Einzelspalts, Malus als Komponente | `03resonanz/docs.md`, `12doppelspaltgitter/docs.md`, `06polarisation/docs.md` |
+| S2 Lichtquanten | 7 S. | 7 S. | Photon gibt Energie ganz ab; Oberflächenelektronen und $E_{\rm kin,max}$; Gegenfeld vs. Sättigungsstrom; LED-Näherung | `05planckkonstante/docs.md` |
+| S3 Elektronenwellen | 6 S. | 7 S. | Ringgeometrie Schritt für Schritt: $2\theta$, $\tan$, Kleinwinkel, $r=a\lambda/d$ | `03elektronenwellen/docs.md` |
+| S4 Doppelspalt | 7 S. | 7 S. | relative Phase $e^{i\delta}$, Betragsquadrat, Mischterm; Definition von $V$ und $D$ | `04doppelspaltexperiment/docs.md`, `14wellenfunktion/docs.md` |
+| S5 MZI | 6 S. | 6 S. | Betragsrechnung $|1-e^{i\Delta\phi}|^2=4\sin^2(\Delta\phi/2)$ und $I_1+I_2=1$ | `06machzehnderinterferometer/docs.md` |
+| S6 Atommodelle | 9 S. | 9 S. | 3D-Kasten mit $(n_x,n_y,n_z)$, Entartung, Orbitaltabelle $n=1,2$, $N_n=2n^2$, 10 Elektronen | `04orbitalmodell/docs.md` |
+| S7 Spektren | 7 S. | 7 S. | Balmer aus $E_n=-13{,}6/n^2$ statt nur Rydberg-Formel; $K_\alpha/K_\beta$ und Moseley | `02bohrmodell/docs.md`, `08roentgenspektrum/docs.md` |
+
+**Seitenzahl:** 57 statt 56 (S3 ist um eine Seite gewachsen, weil die Geometrie jetzt Schritt für Schritt erklärt wird). Die Tests lesen die
+Seitenzahl jetzt aus den PDFs statt aus einer Konstante; die frühere Sollzahl 56 war eine Wartungsfalle.
+
+### 15.2 Einzelbefunde
+
+| ID | Severity | Kategorie | Ort | Befund | Beleg | Quelle | Wirkung | Maßnahme | Status |
+|---|---|---|---|---|---|---|---|---|---|
+| V-01 | P2 | Didaktik | `build/src/01_wellen.typ` (Resonanz) | Resonanz war nur als „Amplitude maximal“ definiert; die drei Bereiche $f_A<f_E$, $\approx$, $>$ und die Phase fehlten. | vorher: Definition + Tabelle, kein Satz zu $f_A$ | `03resonanz/docs.md`: „Anregungsfrequenz < Eigenfrequenz … folgt … ohne Verzögerung“ | Leser kann Resonanzkurve nicht deuten. | Drei Fälle und Phasenverzögerung ergänzt. | behoben |
+| V-02 | P2 | Didaktik | `build/src/01_wellen.typ` (LC-Kreis) | Energieformeln standen ohne Mechanismus da; unklar, warum der Strom nach dem Entladen weiterläuft. | vorher: nur $E_{\rm el}$, $E_{\rm mag}$, $f_0$ | `03resonanz/docs.md`: Selbstinduktion, Umladen, Energie pendelt | Schwingkreis bleibt Formel. | Energiefluss und Selbstinduktion ergänzt. | behoben |
+| V-03 | P2 | Didaktik | `build/src/01_wellen.typ` (Gitter/Einzelspalt) | „Viele Spalte machen die Maxima scharf“ war eine Behauptung; $N-2$ Nebenmaxima und die zentrale Breite fehlten. | vorher: ein Satz + Minimaformel | `12doppelspaltgitter/docs.md`: N-Sender, Haupt-/Nebenmaxima, $N-2$ | Gitter vs. Doppelspalt nicht verstehbar. | Zeigerbild, $N-2$, zentrale Breite $2\lambda/b$, Einhüllende ergänzt. | behoben |
+| V-04 | P2 | Didaktik | `build/src/01_wellen.typ` (Polarisation) | Malus-Gesetz stand ohne Herleitung. | vorher: $I=I_0\cos^2\alpha$ | `06polarisation/docs.md`: Komponente des E-Felds | Formel wirkt gesetzt. | $E_0\cos\alpha$ → $I\propto E^2$ ergänzt. | behoben |
+| V-05 | P2 | Didaktik | `build/src/02_lichtquanten.typ` | Photoeffekt: Warum nur Oberflächenelektronen die maximale Energie haben und was Sättigungsstrom/Gegenfeld unterscheidet, fehlte. | vorher: Beobachtungstabelle + Einstein-Gleichung | `05planckkonstante/docs.md`: Auslösearbeit, schnellste Elektronen, Strom | $U_B$ und $I$ werden verwechselt. | Absätze zu Energieabgabe und Gegenfeld/Sättigung ergänzt. | behoben |
+| V-06 | P2 | Didaktik | `build/src/02_lichtquanten.typ` (LED) | $h f=eU_S$ stand ohne Annahme und Fehlergrenze. | vorher: „Es gilt“ | `05planckkonstante/docs.md`: LED als Energiewandler | Scheinpräzision. | Annahme (volle Umwandlung, keine Verluste) und Geradensteigung ergänzt. | behoben |
+| V-07 | P2 | Didaktik | `build/src/03_elektronenwellen.typ` | $r=a\lambda/d$ und $r^2\propto1/U$ sprangen ohne Zwischenschritt aus $2d\sin\theta=n\lambda$. | vorher: „Zusammengesetzt“ | `03elektronenwellen/docs.md`: Bragg-Geometrie, Ringradius | Herleitung nicht nachvollziehbar. | $2\theta$, $\tan$, Kleinwinkel, $r=a\lambda/d$ Schritt für Schritt. | behoben |
+| V-08 | P2 | Didaktik | `build/src/04_doppelspalt.typ` | Superposition nannte den Mischterm, zeigte aber nicht, wie er aus der Phase entsteht; $V$ und $D$ waren undefiniert. | vorher: $|\psi_1+\psi_2|^2$ ohne $e^{i\delta}$ | `04doppelspaltexperiment/docs.md`, `14wellenfunktion/docs.md` | „Amplituden addieren“ bleibt Schlagwort. | $e^{i\delta}$, $\cos^2(\delta/2)$, Definitionen von $V$ und $D$. | behoben |
+| V-09 | P2 | Didaktik | `build/src/05_mzi.typ` | $I_1=\sin^2(\Delta\phi/2)$ folgte ohne Betragsrechnung. | vorher: „Damit gilt“ | `06machzehnderinterferometer/docs.md`: Zeiger, Phasendifferenz | Ausgänge nicht prüfbar. | Betragsquadrat und $I_1+I_2=1$ ergänzt. | behoben |
+| V-10 | P1 | Didaktik | `build/src/06_atommodelle.typ` | Der 3D-Potenzialtopf, die $p$-Entartung und die maximale Elektronenzahl $N_n=2n^2$ fehlten; KC verlangt „bis $n=2$“. | vorher: nur 1D-Kasten + 2D-Bilder | `04orbitalmodell/docs.md`: 3D-Kasten, Orbitaltabelle, $N_n=2n^2$ | KC-Punkt „maximale Elektronenzahl“ nicht abgedeckt. | 3D-Formel, Entartung, Orbitaltabelle, 10 Elektronen ergänzt. | behoben |
+| V-11 | P2 | Didaktik | `build/src/07_spektren.typ` | Balmerformel begann mit der Rydberg-Formel; der Weg von $E_n=-13{,}6/n^2$ fehlte. | vorher: „Rydberg-Formel“ als Schritt 1 | `02bohrmodell/docs.md` | Formel bleibt extern. | $\Delta E\to1/\lambda\to R$ ergänzt. | behoben |
+| V-12 | P2 | Didaktik | `build/src/07_spektren.typ` (Röntgen) | Charakteristische Linien waren nur eine Tabellenzeile; $K_\alpha/K_\beta$ und Moseley fehlten. | vorher: „Übergänge in den inneren Schalen“ | `08roentgenspektrum/docs.md`: innere Schale, Übergang, Moseley | Linien und Bremsspektrum nicht unterscheidbar. | Mechanismus und Moseley ergänzt. | behoben |
+
+### 15.3 Bewusst knapp, aber nicht erklärtungslos
+
+- **S1:** Die Herleitung der Dämpfung $A(t)=A_0e^{-\gamma t}$ bleibt eine Definition; die Exponentialform wird
+  nicht aus der Differenzialgleichung gelöst. Das ist für das KC nicht nötig und wird als „ergänzend“ nicht
+  vorgetäuscht.
+- **S2:** Die Herleitung der Planck-Verteilung (UV-Katastrophe) fehlt bewusst; KC verlangt die Quantenhypothese
+  und ihre Anwendung, nicht die Strahlungsformel.
+- **S4:** $V^2+D^2\le1$ ist eine ergänzende quantenmechanische Relation; die Schule führt sie nicht ein. Sie ist
+  jetzt als solche mit Definitionen markiert.
+- **S6:** Die Schrödinger-Gleichung wird nicht gelöst; die 3D-Formel wird aus der stehenden Welle begründet.
+- **S7:** Die Feinstruktur des Wasserstoffs und die Intensitätsverteilung der Linien bleiben außen vor; beides ist
+  nicht KC-Pflichtstoff.
+
+### 15.4 Prüfungen nach den Ergänzungen
+
+| Prüfung | Ergebnis |
+|---|---|
+| `check_all.sh` | alle Quellen-, Markdown-, Physik-, Satz- und PDF-Prüfungen bestanden |
+| `qa_pdf.py` | 7 PDFs, 0 Befunde (kein Textüberlauf) |
+| `check_lesen_vollstaendig.py` | 7/7 Leseseiten enthalten alle Bilder, Tabellen und Textinhalte |
+| `test_pages.py` | 48/48 |
+| `test_browser.py` | 7/7 (Desktop, 390 px, kein horizontaler Überlauf, ZIP mit 7 PDFs) |
+| Seiten | **57** (S1 14, S2 7, S3 7, S4 7, S5 6, S6 9, S7 7) |
+| Suchindex | 97 kB |
+
+**Nicht geprüft:** die zehn `04_Zusatzmaterial`-PDFs inhaltlich; die 28 Praktikumsseiten; die 75 KC-Boxen
+Zeile für Zeile außerhalb von S1–S7. Diese Einschränkung bleibt wie in 14.10.

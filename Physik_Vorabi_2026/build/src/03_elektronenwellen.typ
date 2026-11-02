@@ -66,14 +66,22 @@ Aus Ringradius und bekanntem Netzebenenabstand lässt sich umgekehrt $lambda$ be
 
 = Geometrie der Beugungsröhre
 
-An den Netzebenen des Graphits wird gebeugt (Bragg). Für kleine Winkel und den Ringradius $r$
-auf dem Schirm im Abstand $a$ gilt
+An den Netzebenen des Graphits wird gebeugt (Bragg). Der einfallende Strahl trifft unter dem
+Glanzwinkel $theta$ auf die Netzebene; der gebeugte Strahl läuft unter $2 theta$ zur
+Einfallsrichtung weiter. Auf dem Schirm im Abstand $a$ liegt der Ringradius $r$, also gilt
+$tan(2 theta) = r\/a$. Für kleine Winkel ist $tan(2 theta) approx sin(2 theta) approx 2 theta$,
+damit $2 theta approx r\/a$ und
 
-$ sin(theta) = frac(r, 2 a) quad "und" quad 2 d sin(theta) = n lambda $
+$ sin(theta) approx theta approx frac(r, 2 a) quad "und" quad 2 d sin(theta) = n lambda $
 
-Zusammengesetzt:
+Setzt man $sin(theta)$ in die Bragg-Bedingung ein, folgt für das Maximum erster Ordnung
+($n = 1$)
 
-$ r = frac(a lambda, d) quad => quad r^2 = frac(a^2 h^2, 2 m_e e d^2) dot frac(1, U) $
+$ 2 d dot frac(r, 2 a) = lambda quad => quad r = frac(a lambda, d) $
+
+Mit $lambda = h\/sqrt(2 m_e e U)$ wird daraus
+
+$ r^2 = frac(a^2 h^2, 2 m_e e d^2) dot frac(1, U) $
 
 Das ist die Abituraufgabe in Reinform: $r^2$ über $1\/U$ auftragen ergibt eine Gerade, aus deren
 Steigung $d$ folgt.

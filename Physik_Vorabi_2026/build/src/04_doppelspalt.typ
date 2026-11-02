@@ -67,9 +67,14 @@ Der Zustand „durch Spalt 1 oder Spalt 2“ wird als Summe der beiden Möglichk
 
 $ psi = frac(1, sqrt(2)) (psi_1 + psi_2) $
 
-Die Wahrscheinlichkeitsdichte ist das Betragsquadrat:
+Am Ort $x$ haben die beiden Teilwellen eine Phasendifferenz $delta = 2 pi Delta s\/lambda$.
+Man kann deshalb $psi_2 = psi_1 e^(i delta)$ schreiben. Die Wahrscheinlichkeitsdichte ist das
+Betragsquadrat:
 
-$ w(x) = |psi(x)|^2 = frac(1, 2) |psi_1 + psi_2|^2 $
+$ w(x) = |psi(x)|^2 = frac(1, 2) |psi_1|^2 |1 + e^(i delta)|^2 = |psi_1|^2 cos^2 frac(delta, 2) $
+
+Der Mischterm $2 Re(psi_1^* psi_2)$ steckt in dieser Rechnung; er ist für die Streifen
+verantwortlich. Bei $delta = 0$ ist $w$ maximal, bei $delta = pi$ null.
 
 #merksatz[
   Amplituden addieren sich, Wahrscheinlichkeiten nicht. Der Mischterm $2 Re(psi_1^* psi_2)$
@@ -90,9 +95,13 @@ Wird an den Spalten gemessen, durch welchen Spalt das Quant ging, verschwindet d
 #definition[
   *Komplementarität:* Wellen- und Teilchenverhalten schließen sich nicht aus, aber sie sind
   nicht gleichzeitig vollständig beobachtbar. Je mehr Weginformation, desto weniger
-  Interferenzkontrast – quantitativ $V^2 + cal(D)^2 <= 1$ mit Visibilität $V$ und Unterscheidbarkeit
-  $cal(D)$.
+  Interferenzkontrast – quantitativ $V^2 + cal(D)^2 <= 1$.
 ]
+
+Dabei ist $V = (I_"max" - I_"min")\/(I_"max" + I_"min")$ die Visibilität (Kontrast) und
+$cal(D)$ die Unterscheidbarkeit: $cal(D) = 0$ bedeutet, die Wege sind nicht unterscheidbar;
+$cal(D) = 1$ bedeutet, der Weg ist eindeutig bekannt. Die Ungleichung sagt, dass beide
+Eigenschaften nicht gleichzeitig vollständig ausgeprägt sein können.
 
 = Unbestimmtheit
 

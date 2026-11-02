@@ -5,6 +5,8 @@ Aufruf: python3 build/test_pages.py
 """
 import html, json, pathlib, re, shutil, subprocess, sys, tempfile, urllib.parse, zipfile
 
+import pymupdf
+
 BUILD = pathlib.Path(__file__).resolve().parent
 ROOT = BUILD.parent
 DATEIEN = ("index.html", "suche.html", "glossar.html", "lesen.html", "suche.json",
@@ -12,7 +14,6 @@ DATEIEN = ("index.html", "suche.html", "glossar.html", "lesen.html", "suche.json
            "assets/style.css", "assets/suche.js", "assets/index.js", "assets/suche-seite.js",
            "assets/theme.js", "assets/glossar.js", "assets/lesen.css",
            "assets/lesen-static.js")
-SEITEN = 56
 
 pruefungen = []
 
@@ -74,9 +75,11 @@ def main():
         daten = json.loads((ziel / "suche.json").read_text(encoding="utf-8"))
         docs, seiten = daten["docs"], daten["seiten"]
 
+        pdf_seiten = sum(pymupdf.open(pdf).page_count
+                         for pdf in sorted((ROOT / "03_Lernskripte").glob("0*.pdf")))
         pruefe("7 Kernkapitel", len(docs) == 7, len(docs))
-        pruefe("Seitenzahl 56", sum(d["n"] for d in docs) == SEITEN,
-               sum(d["n"] for d in docs))
+        pruefe("Seitenzahl entspricht den PDFs", sum(d["n"] for d in docs) == pdf_seiten,
+               f'{sum(d["n"] for d in docs)} != {pdf_seiten}')
         pruefe("Seitenlisten vollständig", all(len(seiten[i]) == d["n"] for i, d in enumerate(docs)))
         pruefe("Blöcke vorhanden", all(any(s) for s in seiten))
         pruefe("Inhaltsverzeichnis-Seiten gültig", all(
