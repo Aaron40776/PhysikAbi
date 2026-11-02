@@ -603,7 +603,7 @@ Die Leser laden Bilder als Base64 im HTML; das ist einfach und offlinefähig, ko
 
 ## 14. Nachtrag 2026-11-02: Umsetzung und erneute Prüfung
 
-Dieser Abschnitt ergänzt den Bericht; die Abschnitte 1–13 bleiben als Prüfstand vom ersten Durchgang stehen. Alle Änderungen wurden aus den Quellen neu gebaut und erneut getestet. Der Live-Stand unter `aaron40776.github.io/PhysikAbi` war zu Beginn **noch der alte Stand** (Titel „Physik Abitur 2026/2027 – Kernkapitel“). Das Deployment wird in diesem Durchgang ausgelöst; das Ergebnis wird nach dem Push geprüft.
+Dieser Abschnitt ergänzt den Bericht; die Abschnitte 1–13 bleiben als Prüfstand vom ersten Durchgang stehen. Alle Änderungen wurden aus den Quellen neu gebaut und erneut getestet. Der Live-Stand unter `aaron40776.github.io/PhysikAbi` war zu Beginn **noch der alte Stand** (Titel „Physik Abitur 2026/2027 – Kernkapitel“). Das Deployment wurde ausgelöst und am 2026-11-02 erfolgreich abgeschlossen: Live-Titel „Physik Vorabi 2026 – Wellen, Quanten, Atome“, 7 Karten, 56 Seiten, 7 PDFs, Suchindex 89 KiB, kein He-Ne-Abschnitt mehr in Skript 7.
 
 ### 14.1 Entscheidung zum Umfang
 
@@ -649,7 +649,7 @@ Die Website bleibt der **Vorabi-Schwerpunkt Wellen/Quanten/Atome**. Das ist jetz
 |---|---|---|---|---|---|---|---|---|---|
 | N-01 | P2 | Quellenprüfung | `01_Schulwebsite/.../09henelaser/docs.md:3`; `build/src/07_spektren.typ` | Die Schulbox „Der Laser wird nicht mehr im Kerncurriculum genannt“ ist **korrekt**. Das KC 2022 (55 S.) enthält im Abschnitt Atomhülle, S. 43–44, keinen He-Ne-Laser. Die frühere Gegenbehauptung stützte sich versehentlich auf das KC 2009. | KC 2022, S. 43–44: „erläutern quantenhafte Emission …“, „erläutern einen Versuch zur Resonanzabsorption“, „beschreiben einen Franck-Hertz-Versuch“; kein „Laser“. | KC 2022, `upload=363` (Abruf 2026-11-02); Schulbox | Ein Nicht-KC-Thema wäre eine Scope-Verletzung. | Laser-Abschnitt aus Skript 7 entfernt; keine KC-Lücke. | behoben |
 | N-02 | P1 | Prüfungsformat | `website_links.csv:86-113`; `_site/` | Die Hinweise 2027 sehen für eA die Varianten „mit Experimentieren – Elektrik“ und „– Optik“ vor; keine der 28 Praktikumsseiten ist auf der Website. | Hinweise 2027, S. 1: „In der schriftlichen Abiturprüfung auf erhöhtem Niveau mit experimentellem Anteil …“; `website_links.csv` alle `ja`. | KMK 2020/KC 2022/Hinweise 2027 | Experimentelle Kompetenz ist nicht trainierbar; das ist eine Lücke, keine falsche Physik. | Praktikumsseiten als „Praktikum“ verlinken oder bewusst als nicht veröffentlicht dokumentieren. | offen |
-| N-03 | P2 | Betrieb | Live-URL | Live-Seite war zu Beginn der alte Stand (Titel „Physik Abitur 2026/2027 – Kernkapitel“), lokal 56 Seiten/7 Kapitel. | `curl` Titelvergleich 2026-11-02; lokal `_site`. | Eigene Prüfung | Nutzer sehen bis zum Deploy die alten Texte/PDFs. | Commit/Push und Pages-Workflow auslösen; Cache-Buster ist vorhanden. | in Arbeit |
+| N-03 | P2 | Betrieb | Live-URL | Live-Seite war zu Beginn der alte Stand (Titel „Physik Abitur 2026/2027 – Kernkapitel“), nach Deploy: Titel „Physik Vorabi 2026 – Wellen, Quanten, Atome“, 7 Karten, 56 Seiten, 7 PDFs. | `curl` Titel-, Karten- und `suche.json`-Vergleich 2026-11-02; Cache-Buster. | Eigene Prüfung | Nutzer sahen bis zum Deploy die alten Texte/PDFs. | Pages-Workflow erfolgreich; Live-Stand geprüft. | behoben |
 | N-04 | P3 | Wartbarkeit | `build/test_pages.py:15`, `build/test_suche.js:33,74` | Seitenzahlen 56 und Bragg-Seite 10 sind hart codiert; jede Inhaltsänderung bricht die Tests. | Zwei Anpassungen 55→56 und 9→10 in diesem Durchgang. | Eigene Prüfung | Rote CI nach legitimen Inhaltsänderungen. | Erwartung aus `suche.json` ableiten (Summe, erste Bragg-Seite) statt Literale. | offen |
 | N-05 | P2 | Veröffentlichung | `04_Zusatzmaterial/*.pdf` | Die 10 Zusatz-PDFs werden gebaut, sind aber weder verlinkt noch im ZIP; sie enthalten teils entfernte Inhalte. | `_site`-Index listet nur 7 Kapitel; ZIP 7 PDFs. | Eigene Prüfung | Zwei Produktstände; Nutzer finden Übungsheft/Glossar nicht. | Bewusst als „nicht ausgeliefert“ kennzeichnen oder verlinken. | offen |
 
@@ -753,7 +753,7 @@ Getestet mit Playwright/Chromium gegen den frisch gebauten `_site`-Stand, jeweil
 | Konsole/404 | 0 Console-Errors auf 10 Seiten (Start, Suche, Glossar, 7 Leser); unbekannte Leseseite und Pfad → HTTP 404 |
 | Such-XSS | `<img src=x onerror=…>` escaped, 0 eingefügte Bilder |
 | Performance (390 px, lokal) | LCP 52 ms (Start) / 132 ms (Leser 01), CLS 0, 4 Requests; Leser-HTML inkl. Base64-Bilder 200–450 kB |
-| Live vs. lokal | **nicht identisch**: live alter Titel/Stand; lokal 56 Seiten. Deployment wird in diesem Durchgang ausgelöst. |
+| Live vs. lokal | **identisch**: Live-Titel, 7 Karten, 56 Seiten, 7 PDFs und Suchindex 89 KiB nach Deploy geprüft. |
 
 **Build-Falle:** `check_all.sh` braucht `TYPST=/tmp/typst-x86_64-unknown-linux-musl/typst`; ohne Variable bricht `build_all.sh` mit „typst nicht gefunden“ ab. Das ist eine Umgebungsvariable, kein Repo-Fehler; in CI wird Typst heruntergeladen.
 
