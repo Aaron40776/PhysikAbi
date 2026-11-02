@@ -24,6 +24,10 @@
 
 ## Website (GitHub Pages)
 - **Stand 2026-11-02:** 7 Kernkapitel, **58 Seiten**, Glossar **92**, Suchindex 103 kB, ZIP 1,8 MB.
+- Suche hat Levenshtein-Fallback („Meinten Sie …?“), Test `Fotoeffekt` → `Photoeffekt`.
+- Alle 24 Bildunterschriften verlinken die Schulseite; alle 18 Experimente nennen Fehler/Sicherheit.
+- Browser-Test prüft 200 % Zoom (195 px); `test_pages.py` 48/48, `test_browser.py` 8/8, Suche 17/17.
+- Live war am 2026-11-02 noch 57 Seiten; Deployment des 58-Seiten-Stands stand aus.
 - Prüfkette: `TYPST=/tmp/typst-x86_64-unknown-linux-musl/typst ./build/check_all.sh`;
   braucht `pint` + `sympy` (`python3 -m pip install pint sympy`). Ohne TYPST bricht build_all ab.
 - `build/check_markdown.py` überspringt `06_Qualitaetskontrolle/` (Berichte zitieren Typst-Formeln).
