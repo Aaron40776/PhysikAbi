@@ -39,7 +39,8 @@ $ s(t) = A sin(omega t + phi_0), quad v(t) = A omega cos(omega t + phi_0) $
 #figure(
   image("../fig/schule/s1_kenngroessen.png", width: 88%),
   caption: [Wellenmaschine aus dem Schulmaterial: Die Kugeln schwingen um ihre Ruhelage,
-    die Störung läuft durch die Kette.],
+    die Störung läuft durch die Kette.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/04wellen/welle01.png")[Schulseite].],
 )
 
 Nach der Zeit $Delta t$ ist die Störung um $c dot Delta t$ weitergewandert; ihre Form ändert sich dabei nicht, nur ihr Ort.
@@ -75,7 +76,8 @@ $ A_"ges" = sqrt(A_1^2 + A_2^2 + 2 A_1 A_2 cos(delta)), quad delta = 2 pi frac(D
 
 #figure(
   image("../fig/schule/s1_zeiger.png", width: 82%),
-  caption: [Zeigerdarstellung einer Schwingung aus dem Schulmaterial.],
+  caption: [Zeigerdarstellung einer Schwingung aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/01schwingungen/zeiger01.png")[Schulseite].],
 )
 
 Ein voller Umlauf des Zeigers entspricht einer Wellenlänge; deshalb liest man den Gangunterschied zweier Wellen direkt als Winkel zwischen ihren Zeigern ab.
@@ -143,7 +145,8 @@ unverändert bleibt.
   *Auswertung.* $T^2$ gegen $m$: Gerade durch den Ursprung, Steigung $4 pi^2 \/ D$. \
   *Erklärung.* Rückstellkraft $-D s$ gegen Trägheit $m$ – siehe Herleitung. \
   *Bedeutung.* Bestätigt $T tilde sqrt(m)$ und liefert $D$ ohne Kraftmessung.
-]
+
+  *Fehler und Sicherheit.* Die Zeitmessung über zehn Perioden verringert den Reaktionsfehler; systematisch wirkt die Federkonstante bei großer Auslenkung. Stativ gegen Umkippen sichern und die Feder nicht überdehnen.]
 
 #herleitung[
   *Periodendauer des Federpendels* \
@@ -192,7 +195,8 @@ Die Amplitude ist ortsfest, die Welle wandert nicht. Knoten bei $x = n lambda\/2
 
 #figure(
   image("../fig/schule/s1_stehende_welle.jpg", width: 84%),
-  caption: [Stehende Welle aus dem Schulmaterial: Knoten und Bäuche im Abstand $lambda\/2$.],
+  caption: [Stehende Welle aus dem Schulmaterial: Knoten und Bäuche im Abstand $lambda\/2$.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/09stehendewellen/stehendewelle01.jpg")[Schulseite].],
 )
 
 In der Grundschwingung schwingt die Mitte mit maximaler Amplitude, in der ersten Oberschwingung sitzt dort ein zusätzlicher Knoten; der Abstand zweier Knoten bleibt in beiden Fällen $lambda\/2$.
@@ -214,14 +218,16 @@ In der Grundschwingung schwingt die Mitte mit maximaler Amplitude, in der ersten
   Abstand $lambda\/2$. \
   *Auswertung.* $lambda = 2 (x_1 - x_0)$ und $c = lambda f$. \
   *Bedeutung.* Die stehende Welle macht die Wellenlänge des unsichtbaren Ultraschalls messbar.
-]
+
+  *Fehler und Sicherheit.* Unsicherheit kommt aus der Stempelposition und der Ablesung der Knotenabstände; systematisch aus der Rohrlänge. Lautstärke begrenzen und das Glasrohr gegen Umstoßen sichern.]
 
 = Doppelspalt
 
 #figure(
   image("../fig/schule/s1_doppelspalt_geometrie.png", width: 84%),
   caption: [Doppelspalt-Geometrie aus dem Schulmaterial: Die beiden Teilstrahlen laufen zum
-    Punkt $P$; ihr Wegunterschied bestimmt das Interferenzbild.],
+    Punkt $P$; ihr Wegunterschied bestimmt das Interferenzbild.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/11doppelspalt/doppelspalt_maximum.png")[Schulseite].],
 )
 
 Der untere Strahl legt bis zum Schirm das zusätzliche Stück $d sin(alpha)$ zurück; dieser Wegunterschied entscheidet, ob sich die Wellen am Punkt $P$ verstärken oder auslöschen.
@@ -240,7 +246,8 @@ Der untere Strahl legt bis zum Schirm das zusätzliche Stück $d sin(alpha)$ zur
 ]
 #figure(
   image("../fig/schule/s1_doppelspalt_intensitaet.jpg", width: 86%),
-  caption: [Interferenzmuster am Doppelspalt aus dem Schulmaterial.],
+  caption: [Interferenzmuster am Doppelspalt aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/11doppelspalt/doppelspalt01.jpg")[Schulseite].],
 )
 
 #experiment[
@@ -253,7 +260,8 @@ Der untere Strahl legt bis zum Schirm das zusätzliche Stück $d sin(alpha)$ zur
   aus dem Muster $lambda$ bestimmen und mit der bekannten Frequenz $c = lambda f$ prüfen. \
   *Bedeutung.* Dieselbe Geometrie gilt für Licht und Schall; der Doppelspalt ist kein
   Sonderfall des Lichts.
-]
+
+  *Fehler und Sicherheit.* Beim Licht sind der Abstand Doppelspalt–Schirm und der Streifenabstand die Hauptfehler; beim Schall die Mikrofonposition. Laser nie ins Auge richten, Lautstärke begrenzen.]
 
 Weil $a_n$ linear mit $n$ wächst, sind die Maxima gleich weit voneinander entfernt; die Minima liegen jeweils genau dazwischen.
 
@@ -296,7 +304,8 @@ $beta = pi b sin(alpha)\/lambda$.
   *Auswertung.* $g sin(alpha_n) = n lambda$; objektiv mit $tan(alpha_n) = a_n\/e$, subjektiv
   direkt mit dem gemessenen Winkel. \
   *Bedeutung.* Zwei unabhängige Messwege für dieselbe Wellenlänge.
-]
+
+  *Fehler und Sicherheit.* Gitterkonstante und Winkelablesung bestimmen die Unsicherheit; die Nullage des Gitters wirkt systematisch. Laserstrahl abdecken und nicht in den Strahl blicken.]
 
 #experiment[
   *Weißes Licht am Gitter.* \
@@ -304,7 +313,8 @@ $beta = pi b sin(alpha)\/lambda$.
   Spektrum aufgefächert, weil $sin(alpha_n) = n lambda\/g$ mit $lambda$ wächst. \
   *Auswertung.* Aus dem Winkel einer bekannten Spektrallinie folgt $lambda$; umgekehrt lässt
   sich aus dem Spektrum auf die Gitterkonstante schließen.
-]
+
+  *Fehler und Sicherheit.* Die farbigen Ränder der Maxima begrenzen die Ablesegenauigkeit; die Gitterkonstante wirkt systematisch. Lampe nicht berühren und den Strahlengang abdecken.]
 
 Eine CD oder DVD wirkt als Reflexionsgitter: Die feinen Spuren reflektieren das Licht unter
 verschiedenen Winkeln. Mit dem gemessenen Beugungswinkel $alpha$, der Ordnung $n$ und der
@@ -320,11 +330,13 @@ $ d = frac(n lambda, sin(alpha)) $
   *Auswertung.* $d = n lambda \/ sin(alpha)$; bei bekannter Spurzahl pro Millimeter lässt
   sich das Ergebnis prüfen. \
   *Bedeutung.* Eine Alltagsanwendung derselben Gittergleichung.
-]
+
+  *Fehler und Sicherheit.* Wellenlänge der Laserdiode und Winkel sind die Eingangsgrößen; der Spurabstand folgt mit deren Unsicherheit. Laserlicht nicht direkt ins Auge, CD nicht verkratzen.]
 
 #figure(
   image("../fig/schule/s1_gitter.jpg", width: 88%),
-  caption: [Interferenzmuster am Gitter aus dem Schulmaterial.],
+  caption: [Interferenzmuster am Gitter aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/12doppelspaltgitter/100spalt.jpg")[Schulseite].],
 )
 
 Beim Gitter überlagern sich viele Elementarwellen; dadurch werden die Maxima scharf und die Wellenlänge lässt sich präzise bestimmen.
@@ -344,7 +356,8 @@ An Netzebenen mit Abstand $d$ ist der Zusatzweg der zweiten Welle $2 d sin(theta
 
 #figure(
   image("../fig/schule/s1_bragg.png", width: 54%),
-  caption: [Bragg-Reflexion an Netzebenen aus dem Schulmaterial.],
+  caption: [Bragg-Reflexion an Netzebenen aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/13bragginterferometer/bragg_modell_01.png")[Schulseite].],
 )
 
 #experiment[
@@ -353,7 +366,8 @@ An Netzebenen mit Abstand $d$ ist der Zusatzweg der zweiten Welle $2 d sin(theta
   messen. \
   *Beobachtung.* Nur bei bestimmten Winkeln entsteht ein scharfes Maximum. \
   *Auswertung.* $2 d sin(theta) = n lambda$; bei bekanntem $d$ folgt die Wellenlänge.
-]
+
+  *Fehler und Sicherheit.* Winkel und Netzebenenabstand tragen die Unsicherheit; die Nullage des Detektors wirkt systematisch. Röntgenstrahlung abschirmen, Türkontakt und Dosimeter benutzen.]
 
 Der zweite Strahl dringt eine Netzebene tiefer ein und läuft dadurch den Weg $2 d sin(theta)$ länger; nur wenn dieser Weg ein Vielfaches von $lambda$ ist, verstärken sich die reflektierten Wellen.
 
@@ -426,7 +440,8 @@ einem Laser liegt sie fest.
   *Beobachtung.* Bei paralleler Stellung ist die Intensität maximal, bei gekreuzter Stellung
   praktisch null. \
   *Auswertung.* $I(alpha) = I_0 cos^2(alpha)$ (Malus-Gesetz).
-]
+
+  *Fehler und Sicherheit.* Photodiodenstrom und Winkelstellung sind die Messgrößen; die Nullage von Polarisator und Analysator wirkt systematisch. Nur Laser kleiner Leistung verwenden und den Strahl abdecken.]
 
 Stehen Polarisator und Analysator im Winkel $alpha$ zueinander, gilt das Malus-Gesetz
 
@@ -456,7 +471,8 @@ $ Delta s = 2 Delta d $
 #figure(
   image("../fig/schule/s1_michelson.png", width: 66%),
   caption: [Michelson-Interferometer aus dem Schulmaterial: Strahlteiler, fester und beweglicher
-    Spiegel, Schirm.],
+    Spiegel, Schirm.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/10michelsoninterferometer/michelson01.png")[Schulseite].],
 )
 
 Mit Mikrowellen statt Licht lässt sich dasselbe Interferometer betreiben: Die
@@ -470,7 +486,8 @@ $lambda\/2$ ergibt wieder einen Hell-Dunkel-Wechsel.
   *Beobachtung.* Das Streifenmuster wandert; eine Verschiebung um $lambda\/2$ ergibt einen
   Hell-Dunkel-Wechsel. \
   *Auswertung.* $Delta s = 2 Delta d$ und $Delta d = N lambda\/2$.
-]
+
+  *Fehler und Sicherheit.* Spiegelverschiebung und die Zählung der Helligkeitswechsel bestimmen die Unsicherheit; die Justage wirkt systematisch. Laser nicht ins Auge, optische Bank gegen Verrutschen sichern.]
 
 Am Schirm treffen beide Teilstrahlen wieder zusammen; verschiebt man den beweglichen Spiegel, wandert das Streifenmuster über den Schirm.
 

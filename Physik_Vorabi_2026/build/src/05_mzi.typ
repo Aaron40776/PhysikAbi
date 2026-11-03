@@ -22,7 +22,8 @@
 #figure(
   image("../fig/schule/s5_mzi.png", width: 88%),
   caption: [Mach-Zehnder-Aufbau aus dem Schulmaterial: Laser, Strahlteiler ST1 und ST2, Spiegel
-    M1 und M2 sowie die Detektoren D1 und D2.],
+    M1 und M2 sowie die Detektoren D1 und D2.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/06machzehnderinterferometer/mzi01.png")[Schulseite].],
 )
 
 Im idealen MZI sind beide Arme gleich lang; jede zusätzliche Phasenverschiebung im oberen Arm wirkt sich deshalb eins zu eins auf den Gangunterschied am zweiten Strahlteiler aus.
@@ -46,7 +47,8 @@ Im idealen MZI sind beide Arme gleich lang; jede zusätzliche Phasenverschiebung
   *Beobachtung.* D1 und D2 sind komplementär: Bei $Delta phi = 0$ ist D1 dunkel und D2 hell, bei
   $Delta phi = pi$ umgekehrt. \
   *Auswertung.* $I_1 = sin^2(Delta phi\/2)$, $I_2 = cos^2(Delta phi\/2)$; die Summe ist 1.
-]
+
+  *Fehler und Sicherheit.* Spiegelverschiebung und Kontrast bestimmen die Unsicherheit; die Justage der Strahlteiler wirkt systematisch. Laser nicht ins Auge und die optische Bank gegen Stöße sichern.]
 
 = Rechnung mit Amplituden
 
@@ -78,7 +80,8 @@ und $I_1 + I_2 = 1$: Jedes Photon wird an genau einem der beiden Detektoren regi
 
 #figure(
   image("../fig/schule/s5_zeiger.jpg", width: 62%),
-  caption: [Zeigerbild zur Überlagerung der Amplituden am MZI aus dem Schulmaterial.],
+  caption: [Zeigerbild zur Überlagerung der Amplituden am MZI aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/06machzehnderinterferometer/analyse01.jpg")[Schulseite].],
 )
 
 Im Zeigerbild addieren sich die beiden Amplituden vektoriell; bei $Delta phi = 0$ zeigen sie in entgegengesetzte Richtungen und löschen sich aus – das ist D1.

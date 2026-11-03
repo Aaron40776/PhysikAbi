@@ -2,11 +2,13 @@
 
 **Prüfdatum:** 2026-11-02
 
-**Prüfobjekt:** https://aaron40776.github.io/PhysikAbi/ (Repo `Aaron40776/PhysikAbi`, öffentlich, ohne Lizenz)
+**Prüfobjekt:** https://anton037.github.io/PhysikAbi/ (Repo `Anton037/PhysikAbi`, öffentlich, MIT-Lizenz für den Code)
 
 **Prüfmaßstab:** Schulseite https://www.physik.gym-wst.de/ als verbindliche Unterrichtsquelle; KC Physik Niedersachsen 2022 (eA); KMK-Bildungsstandards 2020; Hinweise zum Abitur 2027 (Niedersachsen, eA); lokale Quellen `build/src/*.typ`, `build/web/*`, `build/make_pages.py`, `03_Lernskripte/*.pdf`, `04_Zusatzmaterial/*.pdf`.
 
-**Prüfart:** unabhängige Inventur und Prüfung. **Es wurden keine inhaltlichen Fixes vorgenommen.** Der Bericht ist die Entscheidungsgrundlage für „FIX“.
+**Prüfart:** unabhängige Inventur und Prüfung. Der Bericht dokumentiert den ersten Prüfstand und die anschließenden Fixes; die Abschnitte 1–13 beschreiben den Zustand vor den Korrekturen. Maßgeblich für den aktuellen Stand sind §14.2 und §15.
+
+> **Aktueller Stand (2026-11-02, nach PR #7):** 58 Seiten, 7 Kern-PDFs, 10 Zusatz-PDFs, Glossar 92 Begriffe, Suchindex 103 kB, ZIP 1,8 MB. `check_all.sh` ist grün (Seiten-, Such-, PDF- und Browserprüfungen). Die Live-Seite liegt unter `anton037.github.io/PhysikAbi`; sie zeigte am 2026-11-02 noch den Stand mit 57 Seiten, während der lokale Build 58 Seiten hat. Ein Deployment wurde in diesem Durchgang nicht ausgelöst. Zahlen wie „56 Seiten“ oder „89 KiB“ in den Abschnitten 1–13 sind historische Messwerte des ersten Durchgangs.
 
 > **Stop-Klausel:** Die Rechte an Text und Bildern sind nicht dokumentiert (P0-01). Solange keine schriftliche Freigabe vorliegt, darf die Seite in dieser Form nicht öffentlich betrieben werden. Außerdem widersprechen sich KC-Box, `Vorabi`-Spalte und offizieller Stoff (P1-01); eine Scope-Änderung ist eine Produktentscheidung, kein stiller Fix.
 
@@ -17,7 +19,7 @@
 **Bilanz:** 29 Befunde — 1 × P0, 9 × P1, 11 × P2, 8 × P3. Die P0/P1 sind Release-Blocker; P2 sind Sachfehler und Konsistenzmängel; P3 sind Betriebs-, Rechts- und Detailmängel.
 
 1. **Technisch ist die Seite gut gebaut.** 7 PDFs, 53 Seiten, 48/48 Seitenprüfungen, 7/7 Browsertests, 0 Layoutüberläufe, 0 interne Linkfehler, LCP 32–108 ms, CLS 0, reproduzierbarer Build. Das ist belastbar.
-2. **Inhaltlich ist die Seite eine starke, aber unvollständige Verdichtung.** Von 113 inhaltlichen KC-Punkten der bearbeiteten Bereiche sind 75 vollständig, 22 teilweise und 16 nicht abgedeckt. Dazu kommen 74 KC-Punkte aus Elektrischen/Magnetischen Feldern und Atomkern, die die Seite gar nicht behandelt.
+2. **Inhaltlich ist die Seite eine starke, aber unvollständige Verdichtung.** Von 113 inhaltlichen KC-Punkten der bearbeiteten Bereiche sind nach den Ergänzungen 91 vollständig und 22 teilweise abgedeckt; kein Punkt fehlt (erster Prüfstand: 75/22/16). Dazu kommen 74 KC-Punkte aus Elektrischen/Magnetischen Feldern und Atomkern, die die Seite gar nicht behandelt.
 3. **Der Titel „Abitur 2026/2027“ ist zu weit.** Die Seite deckt den Vorabi-Schwerpunkt Wellen/Quanten/Atome ab, nicht den gesamten KC-Stoff. 50 % der IQB-Aufgaben 2026 betreffen Elektrische/Magnetische Felder; die Hinweise 2027 sehen für eA eine Experimentalvariante „Elektrik“ vor.
 4. **Es gibt klare Sachfehler.** Cäsium-Austrittsarbeit 1,94 eV statt 2,14 eV (P1-04), Franck-Hertz-Kontaktspannung 5,5 V ohne Quelle und im Widerspruch zur Quellenkurve (P1-05), Rømer 22 min statt 17 min (P2-01), Michelson-Querverweis auf „Abschnitt 12“ statt 13 (P2-02).
 5. **Barrierefreiheit und Recht sind die release-kritischen Punkte.** Alle 24 Abbildungen der Lesefassung haben kein `alt` (P1-06). Die Schulseite ist urheberrechtlich geschützt; eine Freigabe ist nirgends dokumentiert (P0-01).
@@ -81,7 +83,7 @@ Legende: **P0** = Release-Blocker, **P1** = gravierend, **P2** = wichtig, **P3**
 
 | ID | Sev. | Kategorie | Ort | Befund | Beleg | Quelle | Wirkung | Maßnahme | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| P0-01 | P0 | Recht | `03_Lernskripte/*.pdf`, `build/fig/schule/*`, `_site`, ganzes Repo | 24 Schulbilder stammen aus dem Schulmaterial; die geprüften Dateien sind byte-identisch übernommen; der 112-Seiten-Spiegel und die Skripte übernehmen Text, Struktur und Daten. Eine Lizenz, Freigabe oder Rechteübertragung ist nicht dokumentiert. | `01_Schulwebsite/materialien/.../bilder` = `build/fig/schule/*` (SHA-256 gleich); `01_Schulwebsite/README.md` bezeichnet den Ordner als 1:1-Spiegel; Im Repo ist keine Freigabe dokumentiert; die Schulseite enthält keinen Hinweis auf eine Freigabe für diese Übernahme. GitHub-API: `private=false`, `license=null`. | https://www.physik.gym-wst.de (Impressum, Abruf 2026-11-02); https://github.com/Aaron40776/PhysikAbi | Urheberrechtliche Unterlassungs- und Take-down-Gefahr; keine öffentliche Veröffentlichung möglich. | Schriftliche Freigabe des Autors einholen **oder** Bilder/Textübernahmen entfernen; bis dahin Seite offline nehmen bzw. Repo privat stellen; Freigabe im Repo dokumentieren. | offen |
+| P0-01 | P0 | Recht | `03_Lernskripte/*.pdf`, `build/fig/schule/*`, `_site`, ganzes Repo | 24 Schulbilder stammen aus dem Schulmaterial; die geprüften Dateien sind byte-identisch übernommen; der 112-Seiten-Spiegel und die Skripte übernehmen Text, Struktur und Daten. Eine Lizenz, Freigabe oder Rechteübertragung ist nicht dokumentiert. | `01_Schulwebsite/materialien/.../bilder` = `build/fig/schule/*` (SHA-256 gleich); `01_Schulwebsite/README.md` bezeichnet den Ordner als 1:1-Spiegel; Im Repo ist keine Freigabe dokumentiert; die Schulseite enthält keinen Hinweis auf eine Freigabe für diese Übernahme. GitHub-API: `private=false`, `license=null`. | https://www.physik.gym-wst.de (Impressum, Abruf 2026-11-02); https://github.com/Anton037/PhysikAbi | Urheberrechtliche Unterlassungs- und Take-down-Gefahr; keine öffentliche Veröffentlichung möglich. | Schriftliche Freigabe des Autors einholen **oder** Bilder/Textübernahmen entfernen; bis dahin Seite offline nehmen bzw. Repo privat stellen; Freigabe im Repo dokumentieren. | offen |
 | P1-01 | P1 | Scope / Produktversprechen | `build/web/index.html:41`, `README.md:4`, `00_Projektverwaltung/KERNCURRICULUM_MAPPING.md:96-97`, `website_links.csv:26,83` | Die Seite heißt „Abitur 2026/2027“, behandelt aber 15 KC-Seiten nicht: Elektrische Felder (5), Magnetische Felder (6), Atomkern/Radioaktivität (4). Diese sind im KC 2022 und im IQB-Pool 2026 enthalten. | KC-Boxen der 15 Seiten; `KERNCURRICULUM_MAPPING.md:96` „Elektrisches und magnetisches Feld“ und `:97` „Atomkern und Radioaktivität“ als „bewusst nicht aufgenommen“; `website_links.csv:26` `...02efeld...;nein`, `:83` `...04radioaktiverzerfall...;nein`; `02_Abiturrecherche/abitur_analyse.md` 6/12 Aufgaben E/B. | KC 2022 (https://cuvo.nibis.de/); KMK 2020; Hinweise 2027, S. 1 | Schüler können die Seite für vollständig halten und in 50 % der Aufgaben scheitern. | Entweder Scope im Titel/Lead ausdrücklich auf „Vorabi-Schwerpunkt Wellen/Quanten/Atome“ begrenzen **oder** E/B und Atomkern ergänzen. Entscheidung des Auftraggebers nötig. | offen |
 | P1-02 | P1 | Scope / Experimente | `website_links.csv:86-113`, `_site/` | 28 Praktikumsseiten sind `Vorabi=ja`, aber keine ist auf der Website; die eA-Hinweise 2027 verlangen eine Experimentalvariante. | `website_links.csv:90` Ultraschall, `:91` Doppelspalt, `:92` Gitter/LED, `:108` Polarisation, `:110` Michelson, `:112` Photoeffekt – alle `ja`; keine dieser Seiten in `_site/lesen/` oder im ZIP. | Hinweise zum Abitur 2027, S. 1: eA-Varianten „mit Experimentieren – Elektrik“ und „Optik“; Erlass Schülerexperimente 21.6.2018 | Experimentelle Kompetenz und eA-Prüfungsformat nicht vorbereitbar. | Praktikumsseiten als eigene Sektion „Praktikum“ veröffentlichen (oder mindestens die KC-relevanten: Ultraschall, Doppelspalt, Gitter, Polarisation, Michelson, h-LED, Photoeffekt); in ZIP aufnehmen. | offen |
 | P1-03 | P1 | KC-Abdeckung | `build/src/01_wellen.typ`, `03_elektronenwellen.typ`, `05_mzi.typ`, `07_spektren.typ` | 16 KC-Punkte der bearbeiteten Bereiche fehlen ganz, 22 weitere nur teilweise. Beispiele: Ultraschall-Stehwellen-Experiment, Gitter mit weißem/monochromatischem Licht (objektiv/subjektiv), CD/DVD-Spurabstand, Oszilloskop-Ablesen, Energieumwandlungen Federpendel, Schwingkreis, Bragg-Herleitung, optische Analogieversuche, λ-v-Messauswertung, Anwendung der Quantenphysik, Fluoreszenz bei Leuchtstoffröhre/weißer LED. | KC-Boxen: `09stehendewellen/docs.md:5` (Ultraschall), `12doppelspaltgitter/docs.md:4-7` (Gitter, CD/DVD), `01schwingungen/docs.md:6-8` (Oszilloskop, Energie, t-s/t-v), `03resonanz/docs.md:6-9` (Schwingkreis, Resonanzkurve), `13bragginterferometer/docs.md:5` (Herleitung), `03elektronenwellen/docs.md:4,7` (Analogie, λ-v), `10delayedchoice/docs.md:6` (Anwendung), `05emissionsspektren/docs.md:9` (Leuchtstoffe/LED). In den 7 Kapiteln gibt es keinen Abschnitt zu Ultraschall, Oszilloskop, CD/DVD oder Leuchtstoffen (Volltextsuche; „CD“ kommt nur als „CCD“ in S4 vor). | KC 2022 eA, zitiert in den jeweiligen KC-Boxen | Die Seite deckt zentrale Experimentier- und Anwendungskompetenzen nicht ab; Aufgaben können so nicht gelöst werden. | Die fehlenden Punkte aus den Quellseiten übernehmen; wo die Quelle selbst kein Material hat, als Lücke markieren statt erfinden. | offen |
@@ -121,7 +123,7 @@ Legende: **P0** = Release-Blocker, **P1** = gravierend, **P2** = wichtig, **P3**
 
 **Bewertungsmaßstab:** Die Einstufung ist eine prüfende Bewertung nach Textabgleich (ob der Kompetenzpunkt im Skript inhaltlich vorhanden ist), keine mechanische Zählung. Die Begründung steht in der Spalte „Befund“.
 
-**Summe:** 189 Punkte, davon 75 abgedeckt, 22 teilweise, 16 fehlt, 76 nicht Scope (74 in den ausgeschlossenen Bereichen E/B und Atomkern, 2 ohne KC-Punkt). In den bearbeiteten Bereichen (113 Punkte): 75 abgedeckt, 22 teilweise, 16 fehlt.
+**Summe (Stand nach §14.4):** 189 Punkte, davon 91 abgedeckt, 22 teilweise, 0 fehlt, 76 nicht Scope (74 in den ausgeschlossenen Bereichen E/B und Atomkern, 2 ohne KC-Punkt). In den bearbeiteten Bereichen (113 Punkte): 91 abgedeckt, 22 teilweise, 0 fehlt. Die Statusspalte wurde nach den Ergänzungen aus §14.4 aktualisiert; die ursprüngliche Zählung (75/22/16) steht in §1 und ist historisch.
 
 | KC-Punkt (wörtlich) | Offizielle Quelle | Skript | Abschnitt | Beleg (Quelle) | Status | Befund |
 |---|---|---|---|---|---|---|
@@ -186,9 +188,9 @@ Legende: **P0** = Release-Blocker, **P1** = gravierend, **P2** = wichtig, **P3**
 | Ich kann harmonische Schwingungen grafisch darstellen. | KC 2022 eA – Schwingungen und Wellen | S1 | §1–3 | `docs/d12/12schwingungenwellen/01schwingungen/docs.md:5` | teilweise | Oszilloskop-Ablesen, Energieumwandlungen, t-s/t-v-Diagramme fehlen. |
 | Ich kann harmonische Schwingungen mithilfe von Auslenkung, Amplitude, Periodendauer und Frequenz beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §1–3 | `docs/d12/12schwingungenwellen/01schwingungen/docs.md:6` | abgedeckt |  |
 | Ich kann die Zeigerdarstellung oder Sinuskurven zur grafischen Beschreibung verwenden. | KC 2022 eA – Schwingungen und Wellen | S1 | §1–3 | `docs/d12/12schwingungenwellen/01schwingungen/docs.md:7` | abgedeckt |  |
-| Ich kann Werte durch Ablesen an einem registrierenden Messinstrument (Oszilloskop oder geeignetes digitales Werkzeug) ermitteln. | KC 2022 eA – Schwingungen und Wellen | S1 | §1–3 | `docs/d12/12schwingungenwellen/01schwingungen/docs.md:8` | fehlt |  |
-| Ich kann die Schwingung eines Feder-Masse-Pendels mithilfe von Energieumwandlungen beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §1–3 | `docs/d12/12schwingungenwellen/01schwingungen/docs.md:9` | fehlt |  |
-| Ich kann in diesem Zusammenhang die zugehörigen t-s- und t-v-Diagramme auch bei gedämpften Schwingungen im Spezialfall exponentiell abnehmender Amplitude deuten. | KC 2022 eA – Schwingungen und Wellen | S1 | §1–3 | `docs/d12/12schwingungenwellen/01schwingungen/docs.md:10` | fehlt |  |
+| Ich kann Werte durch Ablesen an einem registrierenden Messinstrument (Oszilloskop oder geeignetes digitales Werkzeug) ermitteln. | KC 2022 eA – Schwingungen und Wellen | S1 | §1–3 | `docs/d12/12schwingungenwellen/01schwingungen/docs.md:8` | abgedeckt || nach §14.4 ergänzt |
+| Ich kann die Schwingung eines Feder-Masse-Pendels mithilfe von Energieumwandlungen beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §1–3 | `docs/d12/12schwingungenwellen/01schwingungen/docs.md:9` | abgedeckt || nach §14.4 ergänzt |
+| Ich kann in diesem Zusammenhang die zugehörigen t-s- und t-v-Diagramme auch bei gedämpften Schwingungen im Spezialfall exponentiell abnehmender Amplitude deuten. | KC 2022 eA – Schwingungen und Wellen | S1 | §1–3 | `docs/d12/12schwingungenwellen/01schwingungen/docs.md:10` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann die Gleichung für die Periodendauer eines Feder-Masse-Pendels angeben. | KC 2022 eA – Schwingungen und Wellen | S1 | §3–4 | `docs/d12/12schwingungenwellen/02federmassependel/docs.md:5` | abgedeckt | Fadenpendel nur als Formelzeile; Ausgleichskurve ohne Messdaten. |
 | Ich kann die zugehörigen Abhängigkeiten experimentell untersuchen. | KC 2022 eA – Schwingungen und Wellen | S1 | §3–4 | `docs/d12/12schwingungenwellen/02federmassependel/docs.md:6` | abgedeckt |  |
 | Ich kann geeignete Ausgleichskurven ermitteln. | KC 2022 eA – Schwingungen und Wellen | S1 | §3–4 | `docs/d12/12schwingungenwellen/02federmassependel/docs.md:7` | teilweise |  |
@@ -196,11 +198,11 @@ Legende: **P0** = Release-Blocker, **P1** = gravierend, **P2** = wichtig, **P3**
 | Ich kann ein lineares Kraftgesetz als Bedingung für die Entstehung einer mechanischen harmonischen Schwingung nennen. | KC 2022 eA – Schwingungen und Wellen | S1 | §3–4 | `docs/d12/12schwingungenwellen/02federmassependel/docs.md:9` | abgedeckt |  |
 | Ich kann die Bedingung beschreiben, unter der bei einer erzwungenen Schwingung Resonanz auftritt. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:5` | abgedeckt | Schwingkreis nur Tabellenzeile (Thomson); Aufbau, Energie, Resonanzkurve, C-Abhängigkeit fehlen. |
 | Ich kann das Phänomen Resonanz anhand eines Experiments erläutern. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:6` | teilweise |  |
-| Ich kann Amplitude, Periodendauer bzw. Frequenz aus vorgelegten Messdaten ermitteln. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:7` | fehlt |  |
+| Ich kann Amplitude, Periodendauer bzw. Frequenz aus vorgelegten Messdaten ermitteln. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:7` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann den Aufbau eines elektromagnetischen Schwingkreises beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:8` | teilweise |  |
-| Ich kann in Analogie zum Feder-Masse-Pendel die Energieumwandlungen in einem Schwingkreis qualitativ beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:9` | fehlt |  |
-| Ich kann ein Experiment zur Erzeugung einer Resonanzkurve beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:10` | fehlt |  |
-| Ich kann die Abhängigkeit der Frequenz der Eigenschwingung von der Kapazität experimentell anhand eines Resonanzversuchs ermitteln. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:11` | fehlt |  |
+| Ich kann in Analogie zum Feder-Masse-Pendel die Energieumwandlungen in einem Schwingkreis qualitativ beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:9` | abgedeckt || nach §14.4 ergänzt |
+| Ich kann ein Experiment zur Erzeugung einer Resonanzkurve beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:10` | abgedeckt || nach §14.4 ergänzt |
+| Ich kann die Abhängigkeit der Frequenz der Eigenschwingung von der Kapazität experimentell anhand eines Resonanzversuchs ermitteln. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:11` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann die thomsonsche Schwingungsgleichung nennen. | KC 2022 eA – Schwingungen und Wellen | S1 | §3 | `docs/d12/12schwingungenwellen/03resonanz/docs.md:12` | abgedeckt |  |
 | Ich kann die Ausbreitung harmonischer Wellen beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §5 | `docs/d12/12schwingungenwellen/04wellen/docs.md:5` | abgedeckt | Zeigerkette nur im Zeigermodell, nicht für Wellen. |
 | Ich kann Zeigerketten oder Sinuskurven zur grafischen Darstellung verwenden. | KC 2022 eA – Schwingungen und Wellen | S1 | §5 | `docs/d12/12schwingungenwellen/04wellen/docs.md:6` | teilweise |  |
@@ -218,7 +220,7 @@ Legende: **P0** = Release-Blocker, **P1** = gravierend, **P2** = wichtig, **P3**
 | Ich kann die Zeigerdarstellung oder eine andere geeignete Darstellung zur Beschreibung und Deutung verwenden. | KC 2022 eA – Schwingungen und Wellen | S1 | §2 | `docs/d12/12schwingungenwellen/08interferenz/docs.md:4` | abgedeckt |  |
 | Ich kann Interferenzphänomene für folgende „Zwei-Wege-Situationen“ beschreiben und deuten: stehende Welle. | KC 2022 eA – Schwingungen und Wellen | S1 | §6 | `docs/d12/12schwingungenwellen/09stehendewellen/docs.md:3` | abgedeckt | Kein Ultraschall-/Kundt-Experiment; Zeigerdarstellung nur als Formel. |
 | Ich kann die Zeigerdarstellung oder eine andere geeignete Darstellung zur Beschreibung und Deutung verwenden. | KC 2022 eA – Schwingungen und Wellen | S1 | §6 | `docs/d12/12schwingungenwellen/09stehendewellen/docs.md:4` | teilweise |  |
-| Ich kann ein Experiment zur Bestimmung der Wellenlänge von Ultraschall bei durch Reflexion entstandenen stehenden Wellen beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §6 | `docs/d12/12schwingungenwellen/09stehendewellen/docs.md:5` | fehlt |  |
+| Ich kann ein Experiment zur Bestimmung der Wellenlänge von Ultraschall bei durch Reflexion entstandenen stehenden Wellen beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §6 | `docs/d12/12schwingungenwellen/09stehendewellen/docs.md:5` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann Interferenzphänomene für folgende „Zwei-Wege-Situationen“ beschreiben und deuten: Michelson-Interferometer. | KC 2022 eA – Schwingungen und Wellen | S1 | §13 | `docs/d12/12schwingungenwellen/10michelsoninterferometer/docs.md:3` | abgedeckt | Zeigerdarstellung nicht ausgeführt; Experiment und technische Nutzung vorhanden. |
 | Ich kann die Zeigerdarstellung oder eine andere geeignete Darstellung zur Beschreibung und Deutung verwenden. | KC 2022 eA – Schwingungen und Wellen | S1 | §13 | `docs/d12/12schwingungenwellen/10michelsoninterferometer/docs.md:4` | teilweise |  |
 | Ich kann die technische Verwendung des Michelson-Interferometers zum Nachweis kleiner Längenänderungen erläutern. | KC 2022 eA – Schwingungen und Wellen | S1 | §13 | `docs/d12/12schwingungenwellen/10michelsoninterferometer/docs.md:5` | abgedeckt |  |
@@ -227,21 +229,21 @@ Legende: **P0** = Release-Blocker, **P1** = gravierend, **P2** = wichtig, **P3**
 | Ich kann die Zeigerdarstellung oder eine andere geeignete Darstellung zur Beschreibung und Deutung verwenden. | KC 2022 eA – Schwingungen und Wellen | S1 | §7 | `docs/d12/12schwingungenwellen/11doppelspalt/docs.md:4` | teilweise |  |
 | Ich kann die Gleichung für die Interferenz am Doppelspalt selbstständig und begründet herleiten. | KC 2022 eA – Schwingungen und Wellen | S1 | §7 | `docs/d12/12schwingungenwellen/11doppelspalt/docs.md:5` | abgedeckt |  |
 | Ich kann die Veränderung des Interferenzmusters beim Übergang vom Doppelspalt zum Gitter erläutern. | KC 2022 eA – Schwingungen und Wellen | S1 | §8 | `docs/d12/12schwingungenwellen/12doppelspaltgitter/docs.md:3` | abgedeckt | Gitter-Experiment (objektiv/subjektiv), Auswertung und CD/DVD fehlen. |
-| Ich kann ein Experiment zur Bestimmung der Wellenlänge von weißem und monochromatischem Licht mit einem Gitter (objektiv und subjektiv) beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §8 | `docs/d12/12schwingungenwellen/12doppelspaltgitter/docs.md:4` | fehlt |  |
-| Ich kann entsprechende Experimente auswerten. | KC 2022 eA – Schwingungen und Wellen | S1 | §8 | `docs/d12/12schwingungenwellen/12doppelspaltgitter/docs.md:5` | fehlt |  |
+| Ich kann ein Experiment zur Bestimmung der Wellenlänge von weißem und monochromatischem Licht mit einem Gitter (objektiv und subjektiv) beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §8 | `docs/d12/12schwingungenwellen/12doppelspaltgitter/docs.md:4` | abgedeckt || nach §14.4 ergänzt |
+| Ich kann entsprechende Experimente auswerten. | KC 2022 eA – Schwingungen und Wellen | S1 | §8 | `docs/d12/12schwingungenwellen/12doppelspaltgitter/docs.md:5` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann die Funktion der zugehörigen optischen Bauteile beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §8 | `docs/d12/12schwingungenwellen/12doppelspaltgitter/docs.md:6` | teilweise |  |
-| Ich kann meine Kenntnisse zur Bestimmung des Spurabstandes bei einer CD/DVD anwenden. | KC 2022 eA – Schwingungen und Wellen | S1 | §8 | `docs/d12/12schwingungenwellen/12doppelspaltgitter/docs.md:7` | fehlt |  |
+| Ich kann meine Kenntnisse zur Bestimmung des Spurabstandes bei einer CD/DVD anwenden. | KC 2022 eA – Schwingungen und Wellen | S1 | §8 | `docs/d12/12schwingungenwellen/12doppelspaltgitter/docs.md:7` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann ein Experiment zur Bestimmung der Wellenlänge von Röntgenstrahlung mit Bragg-Reflexion beschreiben. | KC 2022 eA – Schwingungen und Wellen | S1 | §9 | `docs/d12/12schwingungenwellen/13bragginterferometer/docs.md:3` | abgedeckt | Bragg-Gleichung wird gesetzt, nicht hergeleitet; Röntgenspektrum-Verfahren nur skizziert. |
 | Ich kann ein Verfahren zur Aufnahme eines Röntgenspektrums erläutern. | KC 2022 eA – Schwingungen und Wellen | S1 | §9 | `docs/d12/12schwingungenwellen/13bragginterferometer/docs.md:4` | teilweise |  |
-| Ich kann die Bragg-Gleichung selbstständig und begründet herleiten. | KC 2022 eA – Schwingungen und Wellen | S1 | §9 | `docs/d12/12schwingungenwellen/13bragginterferometer/docs.md:5` | fehlt |  |
+| Ich kann die Bragg-Gleichung selbstständig und begründet herleiten. | KC 2022 eA – Schwingungen und Wellen | S1 | §9 | `docs/d12/12schwingungenwellen/13bragginterferometer/docs.md:5` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann den Frequenzbereich des sichtbaren Lichts in das Spektrum elektromagnetischer Wellen einordnen. | KC 2022 eA – Schwingungen und Wellen | S1 | §11 | `docs/d12/12schwingungenwellen/14messunglichtgeschw/docs.md:5` | abgedeckt | Spektrum vorhanden; Rømer/Mikrowelle sind über die KC-Box hinaus „ergänzend“. |
 | Physikalische Allgemeinbildung | KC 2022 eA – Schwingungen und Wellen | S1 | §11 (ergänzend) | `docs/d12/12schwingungenwellen/15messinvarianzvonc/docs.md:3` | nicht Scope | KC-Box enthält keinen Kompetenzpunkt („Physikalische Allgemeinbildung“); Inhalt ergänzend. |
 | Ich kann den äußeren lichtelektrischen Effekt beschreiben. | KC 2022 eA – Quantenobjekte | S2 | §2–3 | `docs/d13/13quantenobjekte/02lichtquanten/docs.md:3` | abgedeckt | — |
 | Ich kann das Experiment mit der Elektronenbeugungsröhre beschreiben. | KC 2022 eA – Quantenobjekte | S3 | §1–4 | `docs/d13/13quantenobjekte/03elektronenwellen/docs.md:3` | abgedeckt | Optische Analogieversuche und λ-v-Messauswertung fehlen. |
-| Ich kann die Beobachtungen mithilfe optischer Analogieversuche an Transmissionsgittern deuten. | KC 2022 eA – Quantenobjekte | S3 | §1–4 | `docs/d13/13quantenobjekte/03elektronenwellen/docs.md:4` | fehlt |  |
+| Ich kann die Beobachtungen mithilfe optischer Analogieversuche an Transmissionsgittern deuten. | KC 2022 eA – Quantenobjekte | S3 | §1–4 | `docs/d13/13quantenobjekte/03elektronenwellen/docs.md:4` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann die Wellenlänge bei Quantenobjekten mit Ruhemasse mithilfe der de-Broglie-Gleichung ermitteln. | KC 2022 eA – Quantenobjekte | S3 | §1–4 | `docs/d13/13quantenobjekte/03elektronenwellen/docs.md:5` | abgedeckt |  |
 | Ich kann in diesem Zusammenhang die Definition des Impulses nennen. | KC 2022 eA – Quantenobjekte | S3 | §1–4 | `docs/d13/13quantenobjekte/03elektronenwellen/docs.md:6` | abgedeckt |  |
-| Ich kann durch Auswertung von Messwerten die Antiproportionalität zwischen Wellenlänge und Geschwindigkeit bestätigen. | KC 2022 eA – Quantenobjekte | S3 | §1–4 | `docs/d13/13quantenobjekte/03elektronenwellen/docs.md:7` | fehlt |  |
+| Ich kann durch Auswertung von Messwerten die Antiproportionalität zwischen Wellenlänge und Geschwindigkeit bestätigen. | KC 2022 eA – Quantenobjekte | S3 | §1–4 | `docs/d13/13quantenobjekte/03elektronenwellen/docs.md:7` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann ein Doppelspaltexperiment zur Interferenz von Quantenobjekten mit Ruhemasse (z. B. kalte Neutronen, Fullerene) beschreiben. | KC 2022 eA – Quantenobjekte | S4 | §1–5 | `docs/d13/13quantenobjekte/04doppelspaltexperiment/docs.md:3` | teilweise | Neutronen/Fullerene nur als Tabellenzeile; Einzelphotonen/Stochastik vorhanden. |
 | Ich kann das Interferenzmuster stochastisch deuten. | KC 2022 eA – Quantenobjekte | S4 | §1–5 | `docs/d13/13quantenobjekte/04doppelspaltexperiment/docs.md:4` | abgedeckt |  |
 | Ich kann zur Deutung der Interferenzmuster die Zeigerdarstellung oder eine andere geeignete Darstellung verwenden. | KC 2022 eA – Quantenobjekte | S4 | §1–5 | `docs/d13/13quantenobjekte/04doppelspaltexperiment/docs.md:5` | abgedeckt |  |
@@ -263,7 +265,7 @@ Legende: **P0** = Release-Blocker, **P1** = gravierend, **P2** = wichtig, **P3**
 | Ich kann ein Experiment mit dem Mach-Zehnder-Interferometer analog zu einem delayed-choice-Experiment beschreiben. | KC 2022 eA – Quantenobjekte | S5 | §4 | `docs/d13/13quantenobjekte/10delayedchoice/docs.md:3` | abgedeckt | Zustand/Präparation nur implizit; Anwendung der Quantenphysik (Quanten-Bomben-Test) fehlt. |
 | Ich kann an diesem Beispiel die Begriffe Nichtlokalität und Kausalität erläutern. | KC 2022 eA – Quantenobjekte | S5 | §4 | `docs/d13/13quantenobjekte/10delayedchoice/docs.md:4` | abgedeckt |  |
 | Ich kann die Begriffe Zustand, Präparation und Superposition am Beispiel eines Experimentes mit polarisiertem Licht erläutern. | KC 2022 eA – Quantenobjekte | S5 | §4 | `docs/d13/13quantenobjekte/10delayedchoice/docs.md:5` | teilweise |  |
-| Ich kann eine Anwendung der Quantenphysik erläutern. | KC 2022 eA – Quantenobjekte | S5 | §4 | `docs/d13/13quantenobjekte/10delayedchoice/docs.md:6` | fehlt |  |
+| Ich kann eine Anwendung der Quantenphysik erläutern. | KC 2022 eA – Quantenobjekte | S5 | §4 | `docs/d13/13quantenobjekte/10delayedchoice/docs.md:6` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann Unbestimmtheit in der Form: die Streuungen der Werte zweier komplementärer Größen können nicht beide beliebig klein sein erläutern. | KC 2022 eA – Quantenobjekte | S4 | §5 | `docs/d13/13quantenobjekte/13unbestimmtheit/docs.md:3` | abgedeckt | — |
 | Ich kann das Konzept der Unbestimmtheit an einem Beispiel veranschaulichen. | KC 2022 eA – Quantenobjekte | S4 | §5 | `docs/d13/13quantenobjekte/13unbestimmtheit/docs.md:4` | abgedeckt |  |
 | Ich kann das Erlernte mit der Lehrbuch-Notierung der Unbestimmtheitsrelation für Ort und Impuls vergleichen. | KC 2022 eA – Quantenobjekte | S4 | §5 | `docs/d13/13quantenobjekte/13unbestimmtheit/docs.md:5` | abgedeckt |  |
@@ -290,7 +292,7 @@ Legende: **P0** = Release-Blocker, **P1** = gravierend, **P2** = wichtig, **P3**
 | Ich kann den Zusammenhang zwischen Spektrallinien und Energieniveauschemata erklären. | KC 2022 eA – Atomhülle | S7 | §1–2 | `docs/d13/14atomhuelle/05emissionsspektren/docs.md:6` | abgedeckt |  |
 | Ich kann vorgelegte Energieniveauschemata zur Berechnung der Wellenlänge von Spektrallinien benutzen und ordne gemessene Wellenlängen Energieübergänge zu. | KC 2022 eA – Atomhülle | S7 | §1–2 | `docs/d13/14atomhuelle/05emissionsspektren/docs.md:7` | abgedeckt |  |
 | Ich kann die Vorgänge der Fluoreszenz an einem einfachen Energieniveauschema beschreiben. | KC 2022 eA – Atomhülle | S7 | §1–2 | `docs/d13/14atomhuelle/05emissionsspektren/docs.md:8` | abgedeckt |  |
-| Ich kann die Bedeutung der Fluoreszenz in Leuchtstoffen an den Beispielen Leuchtstoffröhre und „weiße“ LED erläutern und bewerten. | KC 2022 eA – Atomhülle | S7 | §1–2 | `docs/d13/14atomhuelle/05emissionsspektren/docs.md:9` | fehlt |  |
+| Ich kann die Bedeutung der Fluoreszenz in Leuchtstoffen an den Beispielen Leuchtstoffröhre und „weiße“ LED erläutern und bewerten. | KC 2022 eA – Atomhülle | S7 | §1–2 | `docs/d13/14atomhuelle/05emissionsspektren/docs.md:9` | abgedeckt || nach §14.4 ergänzt |
 | Ich kann einen Versuch zur Resonanzabsorption erläutern. | KC 2022 eA – Atomhülle | S7 | §4 | `docs/d13/14atomhuelle/06absorptionsspektren/docs.md:3` | abgedeckt | — |
 | Ich kann einen Franck-Hertz-Versuch beschreiben. | KC 2022 eA – Atomhülle | S7 | §5 | `docs/d13/14atomhuelle/07franckhertz/docs.md:3` | abgedeckt | Neon-Aussage unbelegt; Kennlinie mit unbelegter Kontaktspannung. |
 | Ich kann einen Zusammenhang zwischen den Leuchterscheinungen in einer mit Neon gefüllten Franck-Hertz-Röhre und der Franck-Hertz-Kennlinie darstellen. | KC 2022 eA – Atomhülle | S7 | §5 | `docs/d13/14atomhuelle/07franckhertz/docs.md:4` | teilweise |  |
@@ -603,7 +605,7 @@ Die Leser laden Bilder als Base64 im HTML; das ist einfach und offlinefähig, ko
 
 ## 14. Nachtrag 2026-11-02: Umsetzung und erneute Prüfung
 
-Dieser Abschnitt ergänzt den Bericht; die Abschnitte 1–13 bleiben als Prüfstand vom ersten Durchgang stehen. Alle Änderungen wurden aus den Quellen neu gebaut und erneut getestet. Der Live-Stand unter `aaron40776.github.io/PhysikAbi` war zu Beginn **noch der alte Stand** (Titel „Physik Abitur 2026/2027 – Kernkapitel“). Das Deployment wurde ausgelöst und am 2026-11-02 erfolgreich abgeschlossen: Live-Titel „Physik Vorabi 2026 – Wellen, Quanten, Atome“, 7 Karten, 56 Seiten, 7 PDFs, Suchindex 89 KiB, kein He-Ne-Abschnitt mehr in Skript 7.
+Dieser Abschnitt ergänzt den Bericht; die Abschnitte 1–13 bleiben als Prüfstand vom ersten Durchgang stehen. Alle Änderungen wurden aus den Quellen neu gebaut und erneut getestet. Der Live-Stand unter `anton037.github.io/PhysikAbi` war zu Beginn **noch der alte Stand** (Titel „Physik Abitur 2026/2027 – Kernkapitel“). Das Deployment wurde ausgelöst und am 2026-11-02 erfolgreich abgeschlossen: Live-Titel „Physik Vorabi 2026 – Wellen, Quanten, Atome“, 7 Karten, 56 Seiten, 7 PDFs, Suchindex 89 KiB, kein He-Ne-Abschnitt mehr in Skript 7.
 
 ### 14.1 Entscheidung zum Umfang
 
@@ -621,7 +623,7 @@ Die Website bleibt der **Vorabi-Schwerpunkt Wellen/Quanten/Atome**. Das ist jetz
 | P1-05 | **behoben** | `build/src/07_spektren.typ:115-140`: Quellenkurve erstes Maximum 6,0 V, Periodizität 4,9 V, Verschiebung 1,1 V statt erfundener 5,5 V Kontaktspannung. |
 | P1-06 | **behoben** | `build/make_lesen.py` (`mit_alt`) setzt `alt` aus der Bildunterschrift; 24/24 `<img>` in `_site/lesen/*.html` haben nicht-leeren Alt-Text. |
 | P1-07 | **teilweise** | Abweichungen sind in 14.3 und in den `#quelle`-Boxen dokumentiert; eine Tabelle „Quellabschnitt → Skriptabschnitt → Art → Grund“ je Kapitel fehlt weiter. |
-| P1-08 | **behoben** | `README.md` 7 Kapitel/92 Begriffe; `f10_glossar.typ` 92; `f8_lernplan.typ` und das PDF nennen 56 Seiten; `f10_glossar.typ` und das PDF nennen 92 Begriffe. |
+| P1-08 | **behoben** | `README.md` 7 Kapitel/92 Begriffe; `f10_glossar.typ` 92; `f8_lernplan.typ` und das PDF nennen 58 Seiten; `f10_glossar.typ` und das PDF nennen 92 Begriffe. |
 | P1-09 | **behoben (Build), Veröffentlichung offen** | `build/build_all.sh` kompiliert jetzt `01`–`07` **und** `f1`–`f10`; CI baut neu. Die 04-PDFs bleiben aber unverlinkt. |
 | P2-01 | **behoben** | `01_wellen.typ:330-335`: Rømer 22 min als historische Schätzung, Quelle/Modell 17 min, heutiger Wert 16,6 min. |
 | P2-02 | **behoben** | `01_wellen.typ:350`: „Michelson-Interferometer (Abschnitt 13)“. |
@@ -629,9 +631,9 @@ Die Website bleibt der **Vorabi-Schwerpunkt Wellen/Quanten/Atome**. Das ist jetz
 | P2-04 | **behoben** | `04_doppelspalt.typ`: exakte Form `h/(4 pi)`, Schulnotation `h`; keine falsche „exakt = h/(2π)“-Aussage. |
 | P2-05 | **behoben** | `06_atommodelle.typ`: Postulate in Quellenreihenfolge; Drehimpuls/de Broglie als Folgerung. |
 | P2-06 | **teilweise** | Messreihen als „Beispieldaten“ gekennzeichnet; „1 von 8000“ als Literaturwert, nicht als Quellenzahl. |
-| P2-07 | **teilweise** | Jedes Kapitel hat `#quelle` mit Seiten-URLs; Abbildungen haben Alt-Text, aber keine URL direkt in der Bildunterschrift. |
+| P2-07 | **teilweise behoben** | Jedes Kapitel hat `#quelle` mit Seiten-URLs; jede Bildunterschrift enthält jetzt einen direkten Quellenlink (`05_Grafiken/QUELLEN.md` → `#link(...)`). Abschnittsnummer und Abrufdatum stehen weiter nur in der Kapitel-Quellenbox. |
 | P2-08 | **behoben** | `.thema` 44×44, `.seiten-nav a` min-height 44, `details.toc a` 44, `#kleiner/#groesser` 44; Browser-Messung bestätigt. |
-| P2-09 | **offen** | Keine Tippfehlertoleranz; „Fotoeffekt“ liefert weiter 0 Treffer. |
+| P2-09 | **behoben** | `build/web/suche.js`: Levenshtein-Fallback (max. 1 bei 4–7 Zeichen, max. 2 ab 8 Zeichen); „Fotoeffekt“ findet „Photoeffekt“ und zeigt „Meinten Sie …?“. Test in `build/test_suche.js`. |
 | P2-10 | **behoben** | `.github/workflows/pages.yml:38-52`: Typst 0.15.1, `build_all.sh`, `git diff --exit-code` für alle 17 PDFs. |
 | P2-11 | **behoben** | 21 Aufgaben (3 je Kapitel), jede mit `afb:`; je Kapitel mindestens eine AFB-III-Aufgabe. |
 | P3-01 | **behoben** | 1099 nm statt 1097; 4,13/−1,90; 253 nm als gerundeter Wert. |
@@ -686,7 +688,7 @@ Geprüft gegen das **Kerncurriculum Physik 2022**, S. 31–44 (PDF aus `cuvo.nib
 
 ### 14.5 Experimente-Inventar (Stand 2026-11-02)
 
-18 `#experiment`-Blöcke in den sieben Skripten: S1 9, S2 3, S3 1, S4 1, S5 1, S6 1, S7 2. Jeder Block hat Name, Aufbau, Durchführung, Beobachtung und Auswertung; **kein** Block hat eine eigene Unsicherheitsrechnung, Fehlerbetrachtung oder Sicherheitshinweise. Das ist ein didaktischer Mangel (P2-06), keine falsche Physik.
+18 `#experiment`-Blöcke in den sieben Skripten: S1 9, S2 3, S3 1, S4 1, S5 1, S6 1, S7 2. Jeder Block hat Name, Aufbau, Durchführung, Beobachtung und Auswertung. Seit dem zweiten Durchgang enthält **jeder** Block zusätzlich einen Satz zu Fehlerquellen und Sicherheit; eine quantitative Unsicherheitsrechnung mit Messwerten bleibt offen (P2-06/V-18). Das ist ein didaktischer Mangel, keine falsche Physik.
 
 | Experiment | Skript/Abschnitt | Quelle | Fehlt |
 |---|---|---|---|
@@ -745,7 +747,7 @@ Getestet mit Playwright/Chromium gegen den frisch gebauten `_site`-Stand, jeweil
 | `make_pages.py --out _site` | **56 Seiten, 7 PDFs, Index 91 kB, ZIP 1,8 MB** |
 | `qa_pdf.py` | 7 PDFs, **0 Layoutbefunde** |
 | `test_pages.py` | **48/48** (16 Seiten-, 32 Such-/Logikprüfungen) |
-| `test_browser.py` | **7/7** (Start, Suche, Glossar 92, Leser, 7 Leseseiten, 390 px, ZIP 7 PDFs) |
+| `test_browser.py` | **8/8** (Start, Suche, Glossar 92, Leser, 7 Leseseiten, 390 px, 200 % Zoom, ZIP 7 PDFs) |
 | `check_all.sh` | 20 Quelldateien 0, 123 Markdown 0, Physikprüfungen ok, **„Alle Prüfungen bestanden“** |
 | Reproduzierbarkeit | 17 PDFs zweimal gebaut: **byte-identisch** (SHA-256) |
 | Links/Anker | 0 interne Fehler; 112/112 Quell-URLs HTTP 200 (CSV, `curl` 2026-11-02) |
@@ -770,7 +772,7 @@ Getestet mit Playwright/Chromium gegen den frisch gebauten `_site`-Stand, jeweil
 - `build/build_all.sh`: CWD-Fix, TYPST-Fallback, `SOURCE_DATE_EPOCH`, alle 17 PDFs.
 - `build/make_lesen.py`: Alt-Texte aus Bildunterschriften.
 - `build/web/style.css`, `theme.js`, `index.html`, `lesen.css`, `lesen.html`, `suche.html`, `glossar.html`: Responsive-, Touch-, No-JS-, CSP- und Textkorrekturen.
-- `build/test_pages.py`, `build/test_suche.js`: 56 Seiten/Bragg-Seite 10.
+- `build/test_pages.py`, `build/test_suche.js`: Seitenzahl aus den PDFs, Bragg-Überschrift aus dem TOC.
 - `build/check_markdown.py`: QC-Berichte (`06_Qualitaetskontrolle/`) vom Markdown-Formellint ausgenommen, weil sie Typst-Formeln zitieren.
 - `.github/workflows/pages.yml`: Typst 0.15.1, vollständiger Build, `git diff --exit-code`.
 - `README.md`, `NUTZUNGSERLAUBNIS.md` (Repo-Root): Scope/Lizenz/Freigabe.
@@ -821,13 +823,13 @@ Formel-Inseln ohne Ansatz, Zwischenschritt oder Grenzfall wurden als Kürzung ge
 ### 15.1 Ergebnis
 
 Die sieben Skripte sind keine Stichwortzettel: Jedes Kapitel führt vom Phänomen über Aufbau/Durchführung und
-Herleitung zur Auswertung. Es gab aber **siebzehn Stellen mit echter Erklärungslücke**, an denen eine Formel oder
+Herleitung zur Auswertung. Es gab aber **achtzehn Stellen mit echter Erklärungslücke**, an denen eine Formel oder
 ein Ergebnis ohne den entscheidenden Zwischenschritt stand. Sie wurden ergänzt; die Physik selbst wurde nicht
 geändert.
 
 | Kapitel | vorher | nachher | ergänzt (Kern) | Quelle |
 |---|---:|---:|---|---|
-| S1 Wellen | 14 S. | 14 S. | drei Resonanzfälle, Energiefluss im LC-Kreis, N-Spalten-Zeigerbild, zentrale Breite/Einhüllende des Einzelspalts, Malus als Komponente | `03resonanz/docs.md`, `12doppelspaltgitter/docs.md`, `06polarisation/docs.md` |
+| S1 Wellen | 14 S. | 15 S. | drei Resonanzfälle, Energiefluss im LC-Kreis, N-Spalten-Zeigerbild, zentrale Breite/Einhüllende des Einzelspalts, Malus als Komponente | `03resonanz/docs.md`, `12doppelspaltgitter/docs.md`, `06polarisation/docs.md` |
 | S2 Lichtquanten | 7 S. | 7 S. | Photon gibt Energie ganz ab; Oberflächenelektronen und $E_{\rm kin,max}$; Gegenfeld vs. Sättigungsstrom; LED-Näherung | `05planckkonstante/docs.md` |
 | S3 Elektronenwellen | 6 S. | 7 S. | Ringgeometrie Schritt für Schritt: $2\theta$, $\tan$, Kleinwinkel, $r=a\lambda/d$ | `03elektronenwellen/docs.md` |
 | S4 Doppelspalt | 7 S. | 7 S. | relative Phase $e^{i\delta}$, Betragsquadrat, Mischterm; Definition von $V$ und $D$ | `04doppelspaltexperiment/docs.md`, `14wellenfunktion/docs.md` |
@@ -835,7 +837,7 @@ geändert.
 | S6 Atommodelle | 9 S. | 9 S. | 3D-Kasten mit $(n_x,n_y,n_z)$, Entartung, Orbitaltabelle $n=1,2$, $N_n=2n^2$, 10 Elektronen | `04orbitalmodell/docs.md` |
 | S7 Spektren | 7 S. | 7 S. | Balmer aus $E_n=-13{,}6/n^2$ statt nur Rydberg-Formel; $K_\alpha/K_\beta$ und Moseley | `02bohrmodell/docs.md`, `08roentgenspektrum/docs.md` |
 
-**Seitenzahl:** 57 statt 56 (S3 ist um eine Seite gewachsen, weil die Geometrie jetzt Schritt für Schritt erklärt wird). Die Tests lesen die
+**Seitenzahl:** 58 statt 56 (S1 ist um eine Seite durch die Fehler-/Sicherheitshinweise gewachsen, S3 um eine Seite durch die Geometrie). Die Tests lesen die
 Seitenzahl jetzt aus den PDFs statt aus einer Konstante; die frühere Sollzahl 56 war eine Wartungsfalle.
 
 ### 15.2 Einzelbefunde
@@ -859,6 +861,8 @@ Seitenzahl jetzt aus den PDFs statt aus einer Konstante; die frühere Sollzahl 5
 | V-15 | P2 | Didaktik | `build/src/03_elektronenwellen.typ` (Hypothese) | de Broglie stand als Behauptung ohne Begründung und Prüfweg. | vorher: 52 Wörter | `03elektronenwellen/docs.md` | Hypothese und Experiment hängen nicht zusammen. | Symmetrieargument und Prüfung durch Beugung ergänzt. | behoben |
 | V-16 | P2 | Didaktik | `build/src/06_atommodelle.typ` (Grenzen) | Die Grenzen-Tabelle war 29 Wörter; warum Mehrelektronenatome versagen, fehlte. | vorher: nur Tabelle | `02bohrmodell/docs.md`, `03quantenmodell/docs.md` | Tabelle wirkt auswendig. | Elektron-Elektron-Abstoßung, Abschirmung, Feinstruktur/Zeeman ergänzt. | behoben |
 | V-17 | P2 | Didaktik | `build/src/07_spektren.typ` (Spektrenarten) | Die Tabelle war 49 Wörter; die Entstehung von kontinuierlich/Linie/Absorption/Bande fehlte. | vorher: nur Tabelle | `05emissionsspektren/docs.md`, `06absorptionsspektren/docs.md` | Spektrenarten nicht unterscheidbar. | Entstehung und Absorptionsumkehr ergänzt. | behoben |
+| V-18 | P2 | Didaktik / Sicherheit | `build/src/0*.typ` (18 `#experiment`-Blöcke) | Kein Experiment nannte eine Unsicherheitsquelle, eine systematische Fehlerbetrachtung oder eine Sicherheitsmaßnahme. | vorher: Aufbau/Durchführung/Beobachtung/Auswertung, kein Fehler-/Sicherheitssatz | Eigene Prüfung; Schulquellen nennen Geräte, aber keine Unsicherheitsrechnung | Lernende können Messunsicherheit und Gefährdung nicht einordnen. | In jedem Block ein Satz zu Hauptfehler, systematischem Fehler und Sicherheit ergänzt; quantitative Rechnung bleibt offen. | teilweise behoben |
+| V-19 | P2 | Responsive / Barrierefreiheit | `build/web/style.css`, `build/web/lesen.css` | Bei 200 % Zoom auf 390 px (195 px CSS-Breite) hatten Suche, Glossar und fünf Leseseiten horizontalen Seitenüberlauf (bis 315 px). | Chromium 195×422: `glossar.html` 315 px, `lesen/05…` 255 px; Suche H1 222 px, Glossar-Eintrag 297 px | Eigene Messung; WCAG 1.4.10 Reflow | Nutzer mit starker Vergrößerung müssen horizontal scrollen. | `min-width:0`, `overflow-wrap:anywhere`, flexible Glossar-Spalte, `overflow-x:clip` unter 280 px; neuer Browser-Test `reflow` (195 px, 10 Seiten). | behoben |
 
 ### 15.3 Bewusst knapp, aber nicht erklärtungslos
 
@@ -881,9 +885,10 @@ Seitenzahl jetzt aus den PDFs statt aus einer Konstante; die frühere Sollzahl 5
 | `qa_pdf.py` | 7 PDFs, 0 Befunde (kein Textüberlauf) |
 | `check_lesen_vollstaendig.py` | 7/7 Leseseiten enthalten alle Bilder, Tabellen und Textinhalte |
 | `test_pages.py` | 48/48 |
-| `test_browser.py` | 7/7 (Desktop, 390 px, kein horizontaler Überlauf, ZIP mit 7 PDFs) |
-| Seiten | **57** (S1 14, S2 7, S3 7, S4 7, S5 6, S6 9, S7 7) |
-| Suchindex | 97 kB |
+| `test_suche.js` | 17/17 (inkl. Tippfehler-Korrektur) |
+| `test_browser.py` | 8/8 (Desktop, 390 px, 200 % Zoom auf 195 px, ZIP mit 7 PDFs) |
+| Seiten | **58** (S1 15, S2 7, S3 7, S4 7, S5 6, S6 9, S7 7) |
+| Suchindex | 103 kB |
 
 **Nicht geprüft:** die zehn `04_Zusatzmaterial`-PDFs inhaltlich; die 28 Praktikumsseiten; die 75 KC-Boxen
 Zeile für Zeile außerhalb von S1–S7. Diese Einschränkung bleibt wie in 14.10.

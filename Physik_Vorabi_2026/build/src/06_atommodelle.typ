@@ -26,11 +26,13 @@
   *Erklärung.* Der Kern ist klein und trägt fast die ganze Masse und die positive Ladung;
   nahe am Kern wirkt die Coulomb-Abstoßung stark. \
   *Bedeutung.* Kern-Hülle-Modell; Kernradius etwa $10^(-14)$ m, Atomradius etwa $10^(-10)$ m.
-]
+
+  *Fehler und Sicherheit.* Zählstatistik und Winkelablesung begrenzen die Messung; Folien- und Detektor-Geometrie wirken systematisch. Alphaquelle abschirmen, Abstand einhalten und Dosimeter tragen.]
 
 #figure(
   image("../fig/schule/s6_rutherford.jpg", width: 72%),
-  caption: [Rutherford-Streuung aus dem Schulmaterial: abgelenkte Bahnen bei Annäherung an den Kern.],
+  caption: [Rutherford-Streuung aus dem Schulmaterial: abgelenkte Bahnen bei Annäherung an den Kern.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/14atomhuelle/01rutherfordmodell/rutherford02.jpg")[Schulseite].],
 )
 
 Die Bahnen krümmen sich nur bei kleinem Stoßparameter stark; bei großem Abstand zum Kern bleibt die Bahn fast gerade.
@@ -82,7 +84,8 @@ Die Bahnen krümmen sich nur bei kleinem Stoßparameter stark; bei großem Absta
 ]
 #figure(
   image("../fig/schule/s6_energieniveaus.jpg", width: 84%),
-  caption: [Termschema des Wasserstoffs aus dem Schulmaterial.],
+  caption: [Termschema des Wasserstoffs aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/14atomhuelle/05emissionsspektren/energieniveaudiagramm02.jpg")[Schulseite].],
 )
 
 Im Termschema rücken die Niveaus nach oben zusammen und laufen gegen $E = 0$; nach unten werden die Abstände größer.
@@ -135,7 +138,8 @@ Modells. Genau diese Lücken füllt das quantenmechanische Modell.
 #figure(
   image("../fig/schule/s6_potentialtopf.jpg", width: 66%),
   caption: [Wahrscheinlichkeitsdichte im eindimensionalen Potenzialtopf aus dem Schulmaterial
-    (Grundzustand).],
+    (Grundzustand).
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/14atomhuelle/03quantenmodell/potentialtopf01.jpg")[Schulseite].],
 )
 
 Im Grundzustand ist die Aufenthaltswahrscheinlichkeit in der Mitte am größten; mit steigendem
@@ -183,13 +187,15 @@ räumliche Zustände gibt und jeder zwei Elektronen mit entgegengesetztem Spin a
 #figure(
   image("../fig/schule/s6_orbitale_s.jpg", width: 64%),
   caption: [Aufenthaltswahrscheinlichkeit im zweidimensionalen Potenzialtopf aus dem Schulmaterial:
-    Grundzustand mit einem Maximum in der Mitte (s-artig).],
+    Grundzustand mit einem Maximum in der Mitte (s-artig).
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/14atomhuelle/03quantenmodell/2dpotentialtopf01.jpg")[Schulseite].],
 )
 
 #figure(
   image("../fig/schule/s6_orbitale_p.jpg", width: 64%),
   caption: [Erster angeregter Zustand im zweidimensionalen Potenzialtopf aus dem Schulmaterial:
-    vier Bereiche links und rechts der Mitte (p-artig).],
+    vier Bereiche links und rechts der Mitte (p-artig).
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/14atomhuelle/03quantenmodell/2dpotentialtopf02.jpg")[Schulseite].],
 )
 
 Im Grundzustand ist die Wahrscheinlichkeit in der Mitte am größten (s-artig), im ersten

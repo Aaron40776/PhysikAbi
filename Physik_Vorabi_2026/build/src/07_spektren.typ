@@ -47,7 +47,8 @@ den Niveaus kleiner; $E = 0$ ist die Ionisationsgrenze.
 
 #figure(
   image("../fig/schule/s7_energieniveaus.jpg", width: 86%),
-  caption: [Wasserstoff-Termschema aus dem Schulmaterial.],
+  caption: [Wasserstoff-Termschema aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/14atomhuelle/05emissionsspektren/energieniveaudiagramm02.jpg")[Schulseite].],
 )
 
 Die Energiedifferenzen zwischen den Niveaus bestimmen die Photonenenergien; je kleiner die
@@ -121,7 +122,8 @@ Mit der Moseley-Beziehung $sqrt(f) tilde (Z - 1)$ lässt sich das Anodenmaterial
   zusätzliche charakteristische Linien des Anodenmaterials. \
   *Auswertung.* $lambda_min = h c\/(e U_B)$; die Linien folgen den Energieniveaus der
   Anodenatome.
-]
+
+  *Fehler und Sicherheit.* Winkel und Ordnung der Reflexe tragen die Unsicherheit; die Apparatefunktion wirkt systematisch. Röntgenschutz beachten und nur im abgeschirmten Gerät messen.]
 
 = Resonanzabsorption und Fluoreszenz
 
@@ -148,11 +150,13 @@ Lichts in längere Wellenlängen um. Überlagern sich viele Farben, erscheint da
   Restenergie reicht nicht mehr über das Gegenfeld. Nach dem Stoß beginnt die Beschleunigung
   erneut – daher die Periodizität. \
   *Bedeutung.* Direkter Nachweis diskreter Anregungsenergien ohne Spektroskopie.
-]
+
+  *Fehler und Sicherheit.* Beschleunigungs- und Gegenfeldspannung sowie der Auffängerstrom sind die Messgrößen; die Kontaktspannung wirkt systematisch. Heizung und Hochspannung langsam regeln, Röhre nicht öffnen.]
 
 #figure(
   image("../fig/schule/s7_franckhertz.jpg", width: 86%),
-  caption: [Franck-Hertz-Kennlinie aus dem Schulmaterial.],
+  caption: [Franck-Hertz-Kennlinie aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/14atomhuelle/07franckhertz/fh06.jpg")[Schulseite].],
 )
 
 Im idealisierten Modell liegen die Minima bei 4,9 V, 9,8 V und 14,7 V. Die Quellenkurve ist

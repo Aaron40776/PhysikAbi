@@ -33,6 +33,12 @@
       return;
     }
     var html = "";
+    if (ergebnis.korrektur) {
+      html += '<p class="lese-hinweis">Meinten Sie <a href="suche.html?q=' +
+        encodeURIComponent(ergebnis.korrektur.vorschlag) + '">' +
+        PhysikSuche.escape(ergebnis.korrektur.vorschlag) + "</a>? " +
+        "Die Treffer beziehen sich auf die korrigierte Schreibweise.</p>";
+    }
     var nurZeichen = ergebnis.tokens.every(function (t) {
       return t.varianten.some(function (v) { return v.length <= 2; });
     });

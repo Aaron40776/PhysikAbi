@@ -100,8 +100,80 @@
     return ladeversprechen;
   }
 
+  var vokabular = null;
+
+  /* Beschränkte Levenshtein-Distanz; > max bedeutet "zu weit". */
+  function distanz(a, b, max) {
+    if (Math.abs(a.length - b.length) > max) return max + 1;
+    var vor = [], i, j;
+    for (j = 0; j <= b.length; j++) vor[j] = j;
+    for (i = 1; i <= a.length; i++) {
+      var curr = [i], min = i;
+      for (j = 1; j <= b.length; j++) {
+        var cost = a.charAt(i - 1) === b.charAt(j - 1) ? 0 : 1;
+        curr[j] = Math.min(vor[j] + 1, curr[j - 1] + 1, vor[j - 1] + cost);
+        if (curr[j] < min) min = curr[j];
+      }
+      if (min > max) return max + 1;
+      vor = curr;
+    }
+    return vor[b.length];
+  }
+
+  function baueVokabular() {
+    if (vokabular) return vokabular;
+    vokabular = new Map();
+    idx.seiten.forEach(function (seiten) {
+      seiten.forEach(function (bloecke) {
+        bloecke.forEach(function (text) {
+          (text.match(/[A-Za-zÄÖÜäöüß0-9]{3,}/g) || []).forEach(function (wort) {
+            var n = norm(wort);
+            if (n.length < 3 || /^[0-9]+$/.test(n)) return;
+            var e = vokabular.get(n);
+            if (e) {
+              e.n++;
+              if (wort.length > e.wort.length) e.wort = wort;
+            } else {
+              vokabular.set(n, { n: 1, wort: wort });
+            }
+          });
+        });
+      });
+    });
+    return vokabular;
+  }
+
+  /* Liefert eine korrigierte Anfrage oder "", wenn nichts sinnvoll passt. */
+  function korrigiere(q) {
+    var teile = q.match(/"[^"]*"|\S+/g) || [];
+    if (!teile.length) return "";
+    var map = baueVokabular(), geaendert = false;
+    var neu = teile.map(function (roh) {
+      if (roh.charAt(0) === "-") return roh;
+      var phrase = /^".*"$/.test(roh);
+      var t = phrase ? roh.slice(1, -1) : roh;
+      var n = norm(t);
+      if (n.length < 4 || map.has(n) || SYMBOLE[t.toLowerCase().replace(/[\s-]/g, "")]) return roh;
+      var max = n.length >= 8 ? 2 : 1, best = null, bestD = max + 1;
+      map.forEach(function (e, k) {
+        if (Math.abs(k.length - n.length) > max) return;
+        var d = distanz(n, k, max);
+        if (d < bestD || (d === bestD && best && e.n > best.n)) {
+          bestD = d;
+          best = { n: e.n, wort: e.wort };
+        }
+      });
+      if (best && bestD <= max) {
+        geaendert = true;
+        return phrase ? '"' + best.wort + '"' : best.wort;
+      }
+      return roh;
+    });
+    return geaendert ? neu.join(" ") : "";
+  }
+
   /* Sucht; proDoc begrenzt die Treffer je Dokument. */
-  function suche(q, proDoc) {
+  function sucheExakt(q, proDoc) {
     if (!idx) return null;
     var tokens = zerlege(q);
     var pos = tokens.filter(function (t) { return !t.neg; });
@@ -180,6 +252,20 @@
     gruppen.sort(function (a, b) { return b.max - a.max || a.di - b.di; });
     var anzahl = gruppen.reduce(function (s, g) { return s + g.gesamt; }, 0);
     return { tokens: tokens, gruppen: gruppen, anzahl: anzahl };
+  }
+
+  function suche(q, proDoc) {
+    if (!idx) return null;
+    var ergebnis = sucheExakt(q, proDoc);
+    if (ergebnis && ergebnis.anzahl) return ergebnis;
+    var korr = korrigiere(q);
+    if (!korr || norm(korr) === norm(q)) return ergebnis;
+    var zweit = sucheExakt(korr, proDoc);
+    if (zweit && zweit.anzahl) {
+      zweit.korrektur = { original: q.trim(), vorschlag: korr };
+      return zweit;
+    }
+    return ergebnis;
   }
 
   function escape(s) {
@@ -343,6 +429,11 @@
       var html = '<div class="panel-kopf"><span><strong>' + ergebnis.anzahl + "</strong> Treffer in " +
         ergebnis.gruppen.length + (ergebnis.gruppen.length === 1 ? " Dokument" : " Dokumenten") +
         '</span><span class="tasten">\u2191\u2193 w\u00e4hlen \u00b7 Enter \u00f6ffnet</span></div>';
+      if (ergebnis.korrektur) {
+        html += '<p class="panel-hinweis">Meinten Sie <a href="suche.html?q=' +
+          encodeURIComponent(ergebnis.korrektur.vorschlag) + '">' +
+          escape(ergebnis.korrektur.vorschlag) + "</a>?</p>";
+      }
       ergebnis.gruppen.forEach(function (g) {
         html += '<div class="panel-gruppe"><h3>' + escape(g.doc.t) +
           " <span>\u00b7 " + g.gesamt + " Treffer</span></h3>";

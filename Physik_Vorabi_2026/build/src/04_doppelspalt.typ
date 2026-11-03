@@ -27,7 +27,8 @@ Die Minima liegen bei $Delta s = (2n+1) lambda\/2$. Das ist Wellenoptik, kein Qu
 
 #figure(
   image("../fig/schule/s4_doppelspalt.jpg", width: 86%),
-  caption: [Interferenzbild am Doppelspalt aus dem Schulmaterial.],
+  caption: [Interferenzbild am Doppelspalt aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/04doppelspaltexperiment/dspalt03.jpg")[Schulseite].],
 )
 
 Vom Zentralmaximum nach außen wechseln sich helle und dunkle Streifen ab; die Nullstellen liegen bei $Delta s = (2n+1) lambda\/2$. Die Lage der Maxima hängt nur vom Verhältnis $d\/lambda$ ab.
@@ -46,7 +47,8 @@ Vom Zentralmaximum nach außen wechseln sich helle und dunkle Streifen ab; die N
   Muster, der einzelne Treffer ist unvorhersagbar. \
   *Bedeutung.* Interferenz ist keine Folge vieler Quanten untereinander, sondern Eigenschaft
   des einzelnen Quants.
-]
+
+  *Fehler und Sicherheit.* Dunkelzählrate und Zählstatistik begrenzen die Aussage; die Detektor-Effizienz wirkt systematisch. Laserleistung niedrig halten und den Strahlengang abschirmen.]
 
 #achtung[
   Das Muster entsteht *nicht*, weil sich Photonen gegenseitig stören. Es entsteht auch mit
@@ -118,14 +120,16 @@ $Delta x dot Delta p >= h$ lässt den Faktor $1\/(4 pi)$ weg.
 
 #figure(
   image("../fig/schule/s4_unbestimmtheit.jpg", width: 88%),
-  caption: [Einzelspalt und Unbestimmtheit aus dem Schulmaterial.],
+  caption: [Einzelspalt und Unbestimmtheit aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/13unbestimmtheit/einfachspalt01.jpg")[Schulseite].],
 )
 
 Die Spaltbreite entspricht der Ortsunschärfe $Delta x$. Je schmaler der Spalt, desto breiter wird die Beugungsfigur und damit die Impulsunschärfe $Delta p$; bei einem breiten Spalt ist es umgekehrt.
 
 #figure(
   image("../fig/schule/s4_wellenfunktion.jpg", width: 84%),
-  caption: [Real- und Imaginärteil der Wellenfunktion aus dem Schulmaterial.],
+  caption: [Real- und Imaginärteil der Wellenfunktion aus dem Schulmaterial.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/14wellenfunktion/wellenfkt01.jpg")[Schulseite].],
 )
 
 Das Bild zeigt Real- und Imaginärteil der Wellenfunktion. Erst das Betragsquadrat $|psi|^2$ gibt an, wo das Teilchen mit welcher Wahrscheinlichkeit gefunden wird.
