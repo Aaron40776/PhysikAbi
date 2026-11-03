@@ -954,7 +954,11 @@ Alle Prüfungen wurden aus den Quellen neu gebaut:
 - **Barrierefreiheit:** kein Test mit NVDA/VoiceOver, kein vollständiger Kontrast-Audit aller
   Zustände (hell/dunkel, Fokus, deaktiviert), kein 400-%-Zoom/Reflow-Test.
 - **Browser:** nur Chromium (Playwright); Safari/Firefox und echte Mobilgeräte nicht geprüft.
-- **Betrieb:** Live-Deployment nach diesem Commit noch nicht verglichen; Lighthouse/LCP/CLS/INP
-  nicht gemessen.
+- **Betrieb:** Die vom Auftrag genannte URL `https://aaron40776.github.io/PhysikAbi/` liefert
+  **404 (Site not found)**. Die tatsächliche Live-Seite ist
+  `https://anton037.github.io/PhysikAbi/` (Repo `Anton037/PhysikAbi`); sie zeigt mit
+  Cache-Buster weiterhin **58 Seiten**, Style-Hash `48e9346451`, während der lokale Build
+  **61 Seiten**, Hash `d1cf4717a7`, hat. Der Unterschied ist der noch nicht gemergte PR #10.
+  Lighthouse/LCP/CLS/INP wurden nicht gemessen.
 - **Inhalt:** keine vollständige Neuprüfung aller 112 Schulseiten; nur die in `#quelle` und
   `abweichungen.md` genannten Abschnitte.
