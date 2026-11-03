@@ -31,6 +31,9 @@
 #let achtung(body) = box("Achtung – typische Fehlerquelle", rgb("#B03A2E"), col-bg-warn, body)
 #let herleitung(body) = box("Herleitung", rgb("#5B2C87"), col-bg-herl, body)
 #let prüfung(body) = box("Prüfungsrelevanz", col-primary, rgb("#EAEDF5"), body)
+#let leitfrage(body) = box("Leitfrage", col-primary, rgb("#EEF2F8"), body)
+#let vorwissen(body) = box("Vorwissen", rgb("#5D6D7E"), rgb("#F4F6F7"), body)
+#let vertiefung(body) = box("Vertiefung – Simulationen der Schulseite", col-accent, rgb("#EAF7F7"), body)
 
 #let aufgabe(nr, punkte: none, afb: none, body) = block(
   width: 100%, inset: 8pt, radius: 3pt, above: 12pt, below: 8pt,

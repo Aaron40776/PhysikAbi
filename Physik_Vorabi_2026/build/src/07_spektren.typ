@@ -16,6 +16,18 @@
 
 #toc-page()
 
+#leitfrage[
+  *Worum geht es?* Wie liest man aus Spektren die Energiestufen von Atomen – und was zeigt
+  der Franck-Hertz-Versuch über die diskreten Anregungen?
+]
+
+#vorwissen[
+  *Das brauchst du:* Photon und $h f$ (Skript 2); Energieniveaus und Termschema (Skript 6);
+  Gitter und Beugung (Skript 1, Abschnitt 8). \
+  *Neu hier:* Spektrenarten, Röntgenspektrum, Resonanzabsorption, Fluoreszenz und
+  Franck-Hertz-Kurve.
+]
+
 = Spektrenarten
 
 #table(
@@ -113,6 +125,14 @@ Moseley-Beziehung $sqrt(f) tilde (Z - 1)$ ordnet die Linien der Kernladungszahl 
 $ lambda_min = frac(h c, e U_B) = frac(1239","8 "eV nm", U_B) quad (U_B "in V") $
 
 Mit der Moseley-Beziehung $sqrt(f) tilde (Z - 1)$ lässt sich das Anodenmaterial bestimmen.
+
+#figure(
+  image("../fig/schule/s7_roentgenspektrum.png", width: 72%),
+  caption: [Röntgenspektrum aus dem Schulmaterial: kontinuierliches Bremsspektrum mit scharfer
+    Grenzwellenlänge und zusätzlichen charakteristischen Linien.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/05planckkonstante/roentgenspektrum.png")[Schulseite].],
+)
+
 
 #experiment[
   *Aufbau.* Röntgenröhre mit Glühkathode und Metallanode, regelbare Hochspannung $U_B$,
@@ -282,7 +302,14 @@ als die Absorption sein kann; warum Linien diskret sind.
   - *skizzieren*: Franck-Hertz-Kurve und Röntgenspektrum mit Grenzwellenlänge.
 ]
 
+#vertiefung[
+  - Emissionsspektren: #link("https://www.physik.gym-wst.de/apps/ap/02b_emissionsspektren/emissionsspektren.html")[Schulseite]
+  - Franck-Hertz: #link("https://www.physik.gym-wst.de/apps/ap/05_franckhertz/franckhertz.html")[Schulseite]
+]
+
 #quelle[
+  *Bearbeitung:* Spektrenarten, Termschema, Röntgen und Franck-Hertz wurden gestrafft; die Franck-Hertz-Kurve folgt den Quellenwerten (erstes Maximum ca. 6,0 V, Abstand 4,9 V). Der He-Ne-Laser entfällt, weil er nicht im KC 2022 steht.
+
   *Quellen (Abruf 2026-11-02).*
   - Emissionsspektren: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/05emissionsspektren/docs.md
   - Absorptionsspektren: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/06absorptionsspektren/docs.md

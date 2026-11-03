@@ -16,6 +16,18 @@
 
 #toc-page()
 
+#leitfrage[
+  *Worum geht es?* Wie wird aus einem Elektron eine Welle – und wie lässt sich ihre
+  Wellenlänge über die Beugung am Graphit messen?
+]
+
+#vorwissen[
+  *Das brauchst du:* Photon und Impuls (Skript 2, Abschnitt 1); Bragg-Bedingung (Skript 1,
+  Abschnitt 9); Beschleunigung im elektrischen Feld ($e U$); Trigonometrie und Kreisgeometrie. \
+  *Neu hier:* de-Broglie-Beziehung, Elektronenbeugungsröhre und die Auswertung über $r^2$ gegen
+  $1/U$.
+]
+
 = Die Hypothese
 
 de Broglie 1924: Wenn Licht als Welle *und* als Teilchen auftritt, dann muss auch ein Elektron
@@ -61,6 +73,14 @@ Interferenzversuche geprüft.
 )
 
 Aus Ringradius und bekanntem Netzebenenabstand lässt sich umgekehrt $lambda$ bestimmen; die beiden Ringe gehören zu verschiedenen Netzebenenscharen desselben Graphits.
+
+#figure(
+  image("../fig/schule/s3_gitterstruktur.png", width: 64%),
+  caption: [Verschiedene Netzebenenscharen im Graphit aus dem Schulmaterial. Jede Schar hat
+    einen eigenen Abstand $d$ und erzeugt ein eigenes Ringsystem.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/03elektronenwellen/gitterstruktur.png")[Schulseite].],
+)
+
 
 #table(
   columns: (auto, auto, auto),
@@ -255,7 +275,14 @@ gilt.
   - *skizzieren*: Bragg-Geometrie an zwei Netzebenen.
 ]
 
+#vertiefung[
+  - Elektronenbeugung: #link("https://www.physik.gym-wst.de/apps/qp/06_elektronenbeugung/elektronenbeugung.html")[Schulseite]
+  - Drehgitter: #link("https://www.physik.gym-wst.de/apps/qp/05_drehgitter/drehgitter.html")[Schulseite]
+]
+
 #quelle[
+  *Bearbeitung:* de-Broglie-Herleitung und Röhrengeometrie wurden gestrafft; die Zuordnung der Ringe zu zwei Netzebenenscharen stammt aus der Quelle. Es wurden keine Messwerte ergänzt.
+
   *Quellen (Abruf 2026-11-02).*
   - Elektronenwellen/Beugungsröhre: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/03elektronenwellen/docs.md
   - Kerncurriculum Physik Niedersachsen 2022: https://cuvo.nibis.de/

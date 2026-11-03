@@ -16,6 +16,19 @@
 
 #toc-page()
 
+#leitfrage[
+  *Worum geht es?* Wie entsteht das Interferenzmuster, wenn immer nur ein einzelnes Quant
+  unterwegs ist – und warum verschwindet es, sobald der Weg bekannt ist?
+]
+
+#vorwissen[
+  *Das brauchst du:* Doppelspalt und Gangunterschied (Skript 1, Abschnitt 7); Zeiger und
+  Amplituden (Skript 1, Abschnitt 2); Photon und Energie (Skript 2); Grundbegriffe der
+  Wahrscheinlichkeit. \
+  *Neu hier:* Einzelphotonen, Superposition von Amplituden, Welcher-Weg-Information und
+  Unbestimmtheit.
+]
+
 = Klassisch: zwei Wellen
 
 Beim Doppelspalt überlagern sich die Feldstärken beider Spalte. Die Intensität ist
@@ -50,6 +63,14 @@ Vom Zentralmaximum nach außen wechseln sich helle und dunkle Streifen ab; die N
 
   *Fehler und Sicherheit.* Dunkelzählrate und Zählstatistik begrenzen die Aussage; die Detektor-Effizienz wirkt systematisch. Laserleistung niedrig halten und den Strahlengang abschirmen.]
 
+#figure(
+  image("../fig/schule/s4_lichtquanten_ds.png", width: 70%),
+  caption: [Erwartung im reinen Teilchenbild aus dem Schulmaterial: Zwei Spaltbilder, keine
+    Streifen. Beobachtet wird nach vielen Einzeltreffern das Interferenzmuster.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/04doppelspaltexperiment/lichtquanten_ds.png")[Schulseite].],
+)
+
+
 #achtung[
   Das Muster entsteht *nicht*, weil sich Photonen gegenseitig stören. Es entsteht auch mit
   einzelnen Quanten. Wer „Interferenz = Wechselwirkung zwischen Wellen“ sagt, verfehlt den
@@ -65,15 +86,24 @@ Vom Zentralmaximum nach außen wechseln sich helle und dunkle Streifen ab; die N
 
 = Superposition und Wahrscheinlichkeit
 
-Der Zustand „durch Spalt 1 oder Spalt 2“ wird als Summe der beiden Möglichkeiten beschrieben:
+Der Zustand „durch Spalt 1 oder Spalt 2“ wird als Summe der beiden Möglichkeiten beschrieben.
+Das ist der entscheidende Schritt: Nicht die Wahrscheinlichkeiten werden addiert, sondern die
+Amplituden.
 
-$ psi = frac(1, sqrt(2)) (psi_1 + psi_2) $
-
-Am Ort $x$ haben die beiden Teilwellen eine Phasendifferenz $delta = 2 pi Delta s\/lambda$.
-Man kann deshalb $psi_2 = psi_1 e^(i delta)$ schreiben. Die Wahrscheinlichkeitsdichte ist das
-Betragsquadrat:
-
-$ w(x) = |psi(x)|^2 = frac(1, 2) |psi_1|^2 |1 + e^(i delta)|^2 = |psi_1|^2 cos^2 frac(delta, 2) $
+#herleitung[
+  *Von den Amplituden zum Streifenmuster* \
+  1. Beide Spalte tragen gleich stark bei; die Summe wird normiert:
+     $ psi = frac(1, sqrt(2)) (psi_1 + psi_2) $
+  2. Am Ort $x$ haben die Teilwellen die Phasendifferenz $delta = 2 pi Delta s\/lambda$.
+     Damit ist $psi_2 = psi_1 e^(i delta)$.
+  3. Ausklammern:
+     $ psi = frac(psi_1, sqrt(2)) (1 + e^(i delta)) $
+  4. Betragsquadrat bilden:
+     $ w(x) = |psi(x)|^2 = frac(1, 2) |psi_1|^2 |1 + e^(i delta)|^2 $
+  5. Mit $|1 + e^(i delta)|^2 = 2 + 2 cos(delta) = 4 cos^2(delta\/2)$ folgt
+     $ w(x) = |psi_1|^2 cos^2 frac(delta, 2) $
+  6. Grenzfälle: $delta = 0$ gibt ein Maximum, $delta = pi$ eine Nullstelle.
+]
 
 Der Mischterm $2 Re(psi_1^* psi_2)$ steckt in dieser Rechnung; er ist für die Streifen
 verantwortlich. Bei $delta = 0$ ist $w$ maximal, bei $delta = pi$ null.
@@ -230,7 +260,14 @@ Weginformation die Streifen löscht, ohne das Quant zu „treffen“.
   - *skizzieren*: Intensitätsverteilung mit und ohne Welcher-Weg-Markierung.
 ]
 
+#vertiefung[
+  - Doppelspalt mit Photonen: #link("https://www.physik.gym-wst.de/apps/qp/04_doppelspaltphoton02/doppelspaltphoton02.html")[Schulseite]
+  - Doppelspalt mit Wellen: #link("https://www.physik.gym-wst.de/apps/qp/03_doppelspaltwelle01/doppelspaltwelle01.html")[Schulseite]
+]
+
 #quelle[
+  *Bearbeitung:* Wellen- und Quanten-Doppelspalt wurden zusammengeführt; die Wahrscheinlichkeitsrechnung ist als Sechs-Schritt-Herleitung ausgeschrieben. Die Quellenbeispiele und Zahlen wurden unverändert übernommen.
+
   *Quellen (Abruf 2026-11-02).*
   - Quanten-Doppelspalt: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/04doppelspaltexperiment/docs.md
   - Unbestimmtheit: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/13unbestimmtheit/docs.md

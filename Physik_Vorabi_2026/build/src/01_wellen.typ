@@ -16,6 +16,19 @@
 
 #toc-page()
 
+#leitfrage[
+  *Worum geht es?* Wie beschreibt man eine Schwingung oder Welle mit wenigen Größen – und wann
+  verstärken sich zwei Wellen, wann löschen sie sich aus?
+]
+
+#vorwissen[
+  *Das brauchst du:* Sinus und Cosinus, Winkel im Bogenmaß, Umstellen von Gleichungen;
+  Energieformen und Energieerhaltung aus der Mittelstufe; sichere Arbeit mit Einheiten und
+  Zehnerpotenzen. \
+  *Neu hier:* Kenngrößen, Zeigermodell, Gangunterschied und die Bedingungen für Doppelspalt,
+  Gitter und Bragg.
+]
+
 = Kenngrößen
 
 #table(
@@ -604,7 +617,16 @@ Ordnung nicht.
   - *skizzieren*: Zeigerbild für konstruktive und destruktive Interferenz.
 ]
 
+#vertiefung[
+  - PhET Pendel-Labor: #link("https://phet.colorado.edu/de/simulation/pendulum-lab")[phet.colorado.edu]
+  - Zeigerprojektion: #link("https://www.physik.gym-wst.de/apps/suw/02_zeigerprojektion/zeigerprojektion.html")[Schulseite]
+  - Wellen-Interferenz: #link("https://phet.colorado.edu/de/simulation/wave-interference")[phet.colorado.edu]
+  - Mehrfachspalte: #link("https://www.physik.gym-wst.de/apps/suw/13_mehrfachspalte/mehrfachspalte.html")[Schulseite]
+]
+
 #quelle[
+  *Bearbeitung:* Quellabschnitte zu Schwingung, Welle, Interferenz und Bragg wurden gestrafft und in eine Lernreihenfolge gebracht; Symbole vereinheitlicht ($y -> s$, $gamma$ für die Dämpfung). Rømer: Die Quelle nennt 17 min, die historische Schätzung von 22 min ist als solche gekennzeichnet.
+
   *Quellen (Abruf 2026-11-02).*
   - Schwingungen: https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/01schwingungen/docs.md
   - Resonanz/Schwingkreis: https://www.physik.gym-wst.de/docs/d12/12schwingungenwellen/03resonanz/docs.md

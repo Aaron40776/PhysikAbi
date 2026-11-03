@@ -17,6 +17,18 @@
 
 #toc-page()
 
+#leitfrage[
+  *Worum geht es?* Wie entscheidet ein Interferometer, an welchem Detektor ein Photon
+  ankommt – und was ändert eine Messung, die erst später stattfindet?
+]
+
+#vorwissen[
+  *Das brauchst du:* Interferenz und Zeiger (Skript 1, Abschnitt 2); Doppelspalt (Skript 1,
+  Abschnitt 7); Photon (Skript 2); Amplituden und Phasen. \
+  *Neu hier:* Strahlteiler, Phasenverschiebung, Welcher-Weg-Information, Komplementarität und
+  Delayed Choice.
+]
+
 = Aufbau
 
 #figure(
@@ -27,6 +39,14 @@
 )
 
 Im idealen MZI sind beide Arme gleich lang; jede zusätzliche Phasenverschiebung im oberen Arm wirkt sich deshalb eins zu eins auf den Gangunterschied am zweiten Strahlteiler aus.
+
+#figure(
+  image("../fig/schule/s5_mzi_st2.png", width: 86%),
+  caption: [Zweiter Strahlteiler vor den Detektoren aus dem Schulmaterial: Er überlagert die
+    beiden Wege; erst dadurch wird das Signal phasenabhängig.
+    Quelle: #link("https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/06machzehnderinterferometer/mzi03.png")[Schulseite].],
+)
+
 
 #table(
   columns: (auto, 1fr),
@@ -209,7 +229,16 @@ Kausalitätsverletzung ist.
   - *skizzieren*: Zeigerdiagramm für beide Wege und beide Detektoren.
 ]
 
+#vertiefung[
+  - MZI mit Photonen: #link("https://www.physik.gym-wst.de/apps/qp/14_machzehnderphoton/machzehnderphoton.html")[Schulseite]
+  - Einzelphotonen-Labor: #link("https://www.physik.gym-wst.de/apps/qp/15_mzi_einzelphotonenlabor/mziphotonenlabor.html")[Schulseite]
+  - Welcher Weg: #link("https://www.physik.gym-wst.de/apps/qp/16_welcherweg/welcherweg.html")[Schulseite]
+  - Delayed Choice: #link("https://www.physik.gym-wst.de/apps/qp/18_delayedchoice/delayedchoice.html")[Schulseite]
+]
+
 #quelle[
+  *Bearbeitung:* Aufbau, Amplitudenrechnung und Welcher-Weg wurden aus drei Quellseiten zusammengeführt; Delayed Choice bleibt eine Beschreibung des Aufbaus, keine neue Messung.
+
   *Quellen (Abruf 2026-11-02).*
   - Mach-Zehnder: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/06machzehnderinterferometer/docs.md
   - MZI-Labor: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/07mzilabor/docs.md
