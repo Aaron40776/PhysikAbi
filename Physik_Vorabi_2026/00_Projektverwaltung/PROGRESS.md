@@ -634,4 +634,4 @@ Im Browser geprüft (lokal und live): „mzi“ → 1 von 15, „bragg“ → nu
   Browser-Test `reflow` prüft Start, Suche, Glossar und alle sieben Leseseiten.
 - KC-Matrix auf Stand §14.4 gebracht: 91 abgedeckt, 22 teilweise, 0 fehlt (in-scope).
 - Prüfstand: 7 Kapitel/**58 Seiten**, `test_pages.py` 48/48, Browser **8/8**, Suche **17/17**,
-  `qa_pdf.py` 0 Befunde, Index 103 kB, ZIP 1,8 MB. Live noch 57 Seiten; Deployment ausstehend.
+  `qa_pdf.py` 0 Befunde, Index 103 kB, ZIP 1,8 MB. PR #8 gemergt, Pages-Deploy erfolgreich; Live liefert 58 Seiten.

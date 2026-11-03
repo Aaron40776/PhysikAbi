@@ -8,7 +8,7 @@
 
 **Prüfart:** unabhängige Inventur und Prüfung. Der Bericht dokumentiert den ersten Prüfstand und die anschließenden Fixes; die Abschnitte 1–13 beschreiben den Zustand vor den Korrekturen. Maßgeblich für den aktuellen Stand sind §14.2 und §15.
 
-> **Aktueller Stand (2026-11-02, nach PR #7):** 58 Seiten, 7 Kern-PDFs, 10 Zusatz-PDFs, Glossar 92 Begriffe, Suchindex 103 kB, ZIP 1,8 MB. `check_all.sh` ist grün (Seiten-, Such-, PDF- und Browserprüfungen). Die Live-Seite liegt unter `anton037.github.io/PhysikAbi`; sie zeigte am 2026-11-02 noch den Stand mit 57 Seiten, während der lokale Build 58 Seiten hat. Ein Deployment wurde in diesem Durchgang nicht ausgelöst. Zahlen wie „56 Seiten“ oder „89 KiB“ in den Abschnitten 1–13 sind historische Messwerte des ersten Durchgangs.
+> **Aktueller Stand (2026-11-02, nach PR #8):** 58 Seiten, 7 Kern-PDFs, 10 Zusatz-PDFs, Glossar 92 Begriffe, Suchindex 103 kB, ZIP 1,8 MB. `check_all.sh` ist grün (Seiten-, Such-, PDF- und Browserprüfungen). PR #8 wurde nach Rebase auf `main` gemergt (Squash `b25e6ad`), der Pages-Workflow lief erfolgreich, und die Live-Seite unter `anton037.github.io/PhysikAbi` liefert im Cache-Buster-Test **58 Seiten**. Zahlen wie „56 Seiten“ oder „89 KiB“ in den Abschnitten 1–13 sind historische Messwerte des ersten Durchgangs.
 
 > **Stop-Klausel:** Die Rechte an Text und Bildern sind nicht dokumentiert (P0-01). Solange keine schriftliche Freigabe vorliegt, darf die Seite in dieser Form nicht öffentlich betrieben werden. Außerdem widersprechen sich KC-Box, `Vorabi`-Spalte und offizieller Stoff (P1-01); eine Scope-Änderung ist eine Produktentscheidung, kein stiller Fix.
 
