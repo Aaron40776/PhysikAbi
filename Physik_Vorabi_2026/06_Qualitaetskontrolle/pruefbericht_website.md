@@ -892,3 +892,73 @@ Seitenzahl jetzt aus den PDFs statt aus einer Konstante; die frühere Sollzahl 5
 
 **Nicht geprüft:** die zehn `04_Zusatzmaterial`-PDFs inhaltlich; die 28 Praktikumsseiten; die 75 KC-Boxen
 Zeile für Zeile außerhalb von S1–S7. Diese Einschränkung bleibt wie in 14.10.
+
+---
+
+## 16. Nachtrag 2026-11-02: Didaktische Nachbesserung und erneute Prüfung
+
+Dieser Abschnitt dokumentiert die Umsetzung nach Abschnitt 14. Er ändert keine physikalische
+Aussage und keine Quellenangabe; alle Ergänzungen sind aus der Schulseite abgeleitet oder als
+didaktische Struktur (Leitfrage, Vorwissen, Vertiefung) gekennzeichnet.
+
+### 16.1 Inhaltliche Änderungen
+
+| Ort | Änderung | Beleg / Quelle |
+|---|---|---|
+| `build/template.typ` | neue Boxen `leitfrage`, `vorwissen`, `vertiefung` | `template.typ`, `#let leitfrage`, `#let vorwissen`, `#let vertiefung` |
+| alle 7 Kapitel | je eine Leitfrage und ein Vorwissen-Kasten nach dem Inhaltsverzeichnis | `build/src/01_wellen.typ` ff., `#leitfrage[`, `#vorwissen[` |
+| alle 7 Kapitel | je ein Vertiefung-Kasten mit **geprüften** Original-Simulationen der Schulseite | `build/src/*.typ`, `#vertiefung[`; URLs am 2026-11-02 mit HTTP 200 geprüft |
+| `04_doppelspalt.typ` | Wahrscheinlichkeitsrechnung als Sechs-Schritt-Herleitung ausgeschrieben | Quelle `d13/.../04doppelspaltexperiment/docs.md`; keine neuen Zahlen |
+| `03_elektronenwellen.typ` | Abbildung `s3_gitterstruktur.png` ergänzt | Quelle `.../03elektronenwellen/gitterstruktur.png` (HTTP 200) |
+| `04_doppelspalt.typ` | Abbildung `s4_lichtquanten_ds.png` ergänzt | Quelle `.../04doppelspaltexperiment/lichtquanten_ds.png` (HTTP 200) |
+| `05_mzi.typ` | Abbildung `s5_mzi_st2.png` ergänzt | Quelle `.../06machzehnderinterferometer/mzi03.png` (HTTP 200) |
+| `07_spektren.typ` | Abbildung `s7_roentgenspektrum.png` ergänzt | Quelle `.../05planckkonstante/roentgenspektrum.png` (HTTP 200) |
+| alle 7 Kapitel | `#quelle` beginnt mit einer Zeile „Bearbeitung“ (gekürzt/umgestellt/vereinheitlicht, konkrete Zahlenabweichungen) | `build/src/*.typ`, `#quelle[` |
+| `06_Qualitaetskontrolle/abweichungen.md` | neue Tabelle „Quellabschnitt → Skriptabschnitt → Art → Grund“ je Kapitel | diese Datei |
+
+Die vier neuen Abbildungen stehen zusätzlich in `05_Grafiken/schule/` und sind in
+`05_Grafiken/QUELLEN.md` mit Quellpfad eingetragen. Jede Bildunterschrift nennt die Schulseite
+und verlinkt das Originalbild.
+
+### 16.2 Statusfortschreibung
+
+| ID | Status 2026-11-02 (nach 15.1) | Beleg |
+|---|---|---|
+| P1-07 | **behoben** | `06_Qualitaetskontrolle/abweichungen.md`: 7 Kapitel, je eine Tabelle; zusätzlich „Bearbeitung“ in jeder `#quelle`-Box |
+| P2-07 | **teilweise behoben** | Jede Bildunterschrift hat einen direkten Quellenlink; Abschnittsnummer und Abrufdatum stehen weiterhin gesammelt in `#quelle` |
+| P2-08 | **behoben (nachgeschärft)** | Zusätzlich 44 px für Skip-Link, Karten-TOC, Chips, Glossar A–Z, Glossar-Filter und Leser-TOC; Messung 320–1440 px ohne Überlauf |
+| N-05 | **offen** | Die 10 Zusatz-PDFs bleiben bewusst unverlinkt; sie sind nicht Teil des 7-Kapitel-Produkts |
+| P0-01 | **offen / Release-Blocker** | Unterschriebene Freigabe des Urhebers liegt weiterhin nicht vor; `NUTZUNGSERLAUBNIS.md` ersetzt sie nicht |
+| P1-02 / N-02 | **offen** | 28 Praktikumsseiten bleiben außerhalb des veröffentlichten Produkts |
+| P3-08 | **offen** | MathML ohne `aria-label`; keine Textalternative für zentrale Formeln |
+
+### 16.3 Prüfergebnisse nach der Änderung
+
+Alle Prüfungen wurden aus den Quellen neu gebaut:
+
+- `build/check_sources.py`: **20 Quelldateien, 0 Befunde**
+- `build/check_markdown.py`: **127 Dateien, 0 Befunde**
+- `build/check_physics.py`: **alle Nachrechnungen ok** (u. a. `hc = 1239,8 eV nm`, `λ(4 kV) = 19,4 pm`, `E1(L=0,5 nm) = 1,50 eV`, `λmin(25 kV) = 49,6 pm`)
+- `build/qa_pdf.py`: **61 Seiten, 0 Befunde** (7 PDFs: 15/7/7/8/7/9/8 Seiten)
+- `build/test_pages.py`: **48/48**
+- `build/test_suche.js`: **17/17**
+- `build/test_browser.py`: **8/8**
+- `build/check_lesen_vollstaendig.py`: **7/7 Leseseiten vollständig**
+- `build/make_pages.py`: **61 Seiten, 7 PDFs, Index 110 kB, ZIP 2,2 MB**
+- Responsive Stichprobe 320/360/390/414/768/1024/1440 px: **kein horizontaler Überlauf** auf Start, Suche, Glossar und zwei Leseseiten.
+
+### 16.4 Nicht geprüft / offen
+
+- **Recht:** unterschriebene Bild-/Textfreigabe der Schulseite (P0-01). Ohne sie keine
+  Veröffentlichung; die Quellenangabe allein ist keine Lizenz.
+- **Barrierefreiheit:** kein Test mit NVDA/VoiceOver, kein vollständiger Kontrast-Audit aller
+  Zustände (hell/dunkel, Fokus, deaktiviert), kein 400-%-Zoom/Reflow-Test.
+- **Browser:** nur Chromium (Playwright); Safari/Firefox und echte Mobilgeräte nicht geprüft.
+- **Betrieb:** Die vom Auftrag genannte URL `https://aaron40776.github.io/PhysikAbi/` liefert
+  **404 (Site not found)**. Die tatsächliche Live-Seite ist
+  `https://anton037.github.io/PhysikAbi/` (Repo `Anton037/PhysikAbi`); sie zeigt mit
+  Cache-Buster weiterhin **58 Seiten**, Style-Hash `48e9346451`, während der lokale Build
+  **61 Seiten**, Hash `d1cf4717a7`, hat. Der Unterschied ist der noch nicht gemergte PR #10.
+  Lighthouse/LCP/CLS/INP wurden nicht gemessen.
+- **Inhalt:** keine vollständige Neuprüfung aller 112 Schulseiten; nur die in `#quelle` und
+  `abweichungen.md` genannten Abschnitte.

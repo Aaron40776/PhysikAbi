@@ -17,6 +17,10 @@ Die in den Skripten verwendeten Abbildungen stammen aus den Unterrichtsseiten
 | `s2_messreihe_zink.jpg` | `docs/d13/13quantenobjekte/05planckkonstante/hbestimmung02.jpg` |
 | `s3_roehre.png` | `docs/d13/13quantenobjekte/03elektronenwellen/elektronenbeugungsroehre.png` |
 | `s3_bragg.png` | `docs/d13/13quantenobjekte/03elektronenwellen/reflexion_am_kristall.png` |
+| `s3_gitterstruktur.png` | `docs/d13/13quantenobjekte/03elektronenwellen/gitterstruktur.png` |
+| `s4_lichtquanten_ds.png` | `docs/d13/13quantenobjekte/04doppelspaltexperiment/lichtquanten_ds.png` |
+| `s5_mzi_st2.png` | `docs/d13/13quantenobjekte/06machzehnderinterferometer/mzi03.png` |
+| `s7_roentgenspektrum.png` | `docs/d13/13quantenobjekte/05planckkonstante/roentgenspektrum.png` |
 | `s4_doppelspalt.jpg` | `docs/d13/13quantenobjekte/04doppelspaltexperiment/dspalt03.jpg` |
 | `s4_unbestimmtheit.jpg` | `docs/d13/13quantenobjekte/13unbestimmtheit/einfachspalt01.jpg` |
 | `s4_wellenfunktion.jpg` | `docs/d13/13quantenobjekte/14wellenfunktion/wellenfkt01.jpg` |

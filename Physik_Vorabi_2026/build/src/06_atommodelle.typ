@@ -16,6 +16,18 @@
 
 #toc-page()
 
+#leitfrage[
+  *Worum geht es?* Warum geben Atome nur bestimmte Energien ab – und was bleibt vom
+  bohrschen Bahnmodell, wenn man die Quantenmechanik ernst nimmt?
+]
+
+#vorwissen[
+  *Das brauchst du:* Photon und Energie (Skript 2); Elektronenbeugung (Skript 3);
+  Coulomb-Kraft und Potenzial aus der Mittelstufe; Energieerhaltung. \
+  *Neu hier:* Rutherford-Streuung, bohrsche Postulate, Quantenzahlen, Potenzialtopf und
+  Orbitale.
+]
+
 = Rutherford-Streuversuch
 
 #experiment[
@@ -291,7 +303,15 @@ bleibt.
   - *skizzieren*: Termschema und die Form eines s- und p-Orbitals.
 ]
 
+#vertiefung[
+  - Rutherford-Streuung: #link("https://phet.colorado.edu/de/simulation/rutherford-scattering")[phet.colorado.edu]
+  - Wasserstoffspektrum: #link("https://www.physik.gym-wst.de/apps/ap/03_hspektrum/hspektrum.html")[Schulseite]
+  - Quantentopf: #link("https://www.physik.gym-wst.de/apps/qp/10_schroeder_qm/squarewell.html")[Schulseite]
+]
+
 #quelle[
+  *Bearbeitung:* Rutherford, Bohr und Orbitalmodell wurden gestrafft; die Bohr-Postulate stehen in der Reihenfolge der Quelle. „1 von 8000“ ist als Literaturwert gekennzeichnet, nicht als Zahl der Quelle.
+
   *Quellen (Abruf 2026-11-02).*
   - Rutherford: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/01rutherfordmodell/docs.md
   - Bohr: https://www.physik.gym-wst.de/docs/d13/14atomhuelle/02bohrmodell/docs.md

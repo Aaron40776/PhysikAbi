@@ -16,6 +16,17 @@
 
 #toc-page()
 
+#leitfrage[
+  *Worum geht es?* Warum hängt die Energie des Lichts an der Frequenz und nicht an der
+  Intensität – und wie misst man diese Energie im Gegenfeldversuch?
+]
+
+#vorwissen[
+  *Das brauchst du:* Welle, Frequenz und Wellenlänge (Skript 1, Abschnitte 1 und 5);
+  elektrische Spannung und Energie; die Einheit Elektronenvolt. \
+  *Neu hier:* Photon, plancksches Wirkungsquantum, Austrittsarbeit und Gegenfeldmethode.
+]
+
 #definition[
   *Quantenhypothese:* Die Energie eines Oszillators der Frequenz $f$ ist $E = n h f$ mit
   $n = 0, 1, 2, dots$. Zwischenwerte kommen nicht vor.
@@ -238,7 +249,14 @@ $f$ eine Gerade ist; warum der Photoeffekt sofort einsetzt.
   - *skizzieren*: $U_B$ über $f$ und die Energiebilanz am Photon.
 ]
 
+#vertiefung[
+  - Photoeffekt-Simulation: #link("https://www.physik.gym-wst.de/apps/qp/01_photoeffekt01/photoeffekt01.html")[Schulseite]
+  - Gegenfeldmethode: #link("https://www.physik.gym-wst.de/apps/qp/02_photoeffekt02a/photoeffekt02a.html")[Schulseite]
+]
+
 #quelle[
+  *Bearbeitung:* Photoeffekt und Gegenfeld aus zwei Quellseiten zusammengeführt; die Cäsium-Austrittsarbeit ist mit dem Handbuchwert 2,14 eV angegeben, die Quellenmessung ergibt 2,13 eV. Die Gegenfeld-Messreihe ist ausdrücklich als Beispieldaten gekennzeichnet.
+
   *Quellen (Abruf 2026-11-02).*
   - Photoeffekt/Planck-Konstante: https://www.physik.gym-wst.de/docs/d13/13quantenobjekte/05planckkonstante/docs.md
   - Kerncurriculum Physik Niedersachsen 2022: https://cuvo.nibis.de/

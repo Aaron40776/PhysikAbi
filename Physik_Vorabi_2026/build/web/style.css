@@ -57,7 +57,7 @@ body {
 :focus-visible { outline: 2px solid var(--akzent); outline-offset: 2px; border-radius: 4px; }
 a { color: var(--akzent); }
 
-.skip { position: absolute; left: -9999px; }
+.skip { position: absolute; left: -9999px; display: inline-flex; align-items: center; min-height: 44px; }
 .skip:focus { left: 8px; top: 8px; z-index: 40; background: var(--karte); padding: 8px 12px; }
 
 /* ---------- Kopfleiste ---------- */
@@ -215,9 +215,11 @@ h2 .zahl { color: var(--grau); opacity: .7; font-weight: 400; }
 
 .aktionen { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; margin-top: 8px;
             font-size: .8rem; border-top: 1px dashed var(--linie); padding-top: 8px; }
-.aktionen > a { color: var(--akzent); text-decoration: none; }
+.aktionen > a { color: var(--akzent); text-decoration: none; min-width: 44px; justify-content: center; }
 .aktionen > a:hover { text-decoration: underline; }
-details.toc summary { cursor: pointer; color: var(--akzent); list-style: none; }
+details.toc summary { cursor: pointer; color: var(--akzent); list-style: none; display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+details.toc[open] { flex-basis: 100%; }
+details.toc[open] ol { width: 100%; }
 details.toc summary::-webkit-details-marker { display: none; }
 details.toc summary::after { content: " ▾"; font-size: .72rem; }
 details.toc[open] summary::after { content: " ▴"; }
@@ -253,7 +255,7 @@ footer noscript { display: block; margin-top: 8px; }
 .ergebnis-kopf h1 { overflow-wrap: anywhere; }
 .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px; }
 .chips button {
-  font: inherit; font-size: .8rem; padding: 4px 12px; border-radius: 99px;
+  font: inherit; font-size: .8rem; padding: 4px 12px; min-height: 44px; border-radius: 99px;
   border: 1px solid var(--linie); background: var(--karte); color: var(--fg); cursor: pointer;
 }
 .chips button[aria-pressed="true"] { background: var(--akzent); border-color: var(--akzent); color: var(--bg); }
@@ -279,12 +281,12 @@ footer noscript { display: block; margin-top: 8px; }
 }
 .glossar-werkzeuge label { font-weight: 600; color: var(--fg); }
 .glossar-werkzeuge input {
-  flex: 1 1 260px; min-width: 0; max-width: 420px; padding: 8px 12px; font: inherit; font-size: .92rem;
+  flex: 1 1 260px; min-width: 0; max-width: 420px; min-height: 44px; padding: 8px 12px; font: inherit; font-size: .92rem;
   color: inherit; background: var(--karte); border: 1px solid var(--linie); border-radius: 8px;
 }
 .glossar-az { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 14px; }
 .glossar-az a {
-  min-width: 30px; padding: 4px 7px; text-align: center; border-radius: 6px;
+  min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 4px 7px; text-align: center; border-radius: 6px;
   border: 1px solid var(--linie); color: var(--fg); text-decoration: none;
   font-size: .8rem; font-variant-numeric: tabular-nums;
 }
